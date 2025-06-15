@@ -22,6 +22,6 @@ pas et sur le site web du cours.
 Vous pouvez débuter dès maintenant. Nous espérons que vous trouverez le cours intéressant et qu’il répondra à vos
 objectifs d’étude.
 
-Permettez-nous de vous souhaiter bon succès dans vos études et dans vos travaux.
+Permettez-moi de vous souhaiter bon succès dans vos études et dans vos travaux.
 
-Les professeurs et toute l'équipe du cours INF 1220.
+Daniel Lemire, professeur
