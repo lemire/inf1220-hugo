@@ -10,6 +10,7 @@ theme = 'hugo-book'
 BookMenuBundle = "book"
 BookToC = true
 BookSearch = true
+javaRunnerEndpoint = "http://localhost:5123/run"
 
 [markup]
   [markup.goldmark]
