@@ -1,0 +1,17 @@
+baseURL = 'https://example.org/'
+languageCode = 'fr'
+defaultContentLanguage = 'fr'
+
+title = "INF 1220 - Introduction à la programmation"
+theme = 'hugo-book'
+
+# --- Paramètres du thème hugo-book ---
+[params]
+BookMenuBundle = "book"
+BookToC = true
+BookSearch = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

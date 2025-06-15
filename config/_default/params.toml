@@ -1,0 +1,5 @@
+# Paramètres pour le thème hugo-book
+# Activation du menu latéral personnalisé
+BookMenuBundle = "book"
+# Forcer l'affichage du menu latéral
+BookToC = true
