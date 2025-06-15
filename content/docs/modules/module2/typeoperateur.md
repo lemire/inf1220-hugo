@@ -1,5 +1,5 @@
 ---
-title: "Activité 2.3"
+title: "Introduction aux types de base et à leurs opérateurs."
 weight: 3
 ---
 

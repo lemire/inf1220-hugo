@@ -1,74 +1,7 @@
 ---
-title: "Activités 1.0 et 1.1"
-weight: 1
+title: "Rappel mathématique"
+weight: 10
 ---
-
-<!-- Ajoutez ici le contenu HTML des activités 1.0 et 1.1 -->
-
-<h1>Organisation du cours</h1>
-
-* a
-* b
-* c
-
-<ol>
-<li><strong>Module 1. Algorithme et pseudocode. Dans ce module, vous verrez comment concevoir des algorithmes simples et comment les présenter de manière précise en français.</strong></li>
-<li>Module 2. Introduction au langage Java. Le concept de programme. Les types, les fonctions, les méthodes, les variables. Les variables de classe et les variables locales.</li>
-<li>Module 3. Les structures de données, de contrôle et d'itération en Java. Manipulation de chaînes de caractères. Mise en oeuvre d'algorithmes avec des boucles.</li>
-<li>Module 4. Les entrées et sorties.</li>
-<li>Module 5. La programmation orientée-objet: héritage et le polymorphisme.</li>
-</ol>
-
-
-<h1>Amélioration continue du cours</h1>
-
-
-<p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références.</p>
-
-
-<p>En tout temps, si vous avez des questions sur les textes du cours, ou si vous trouvez des coquilles ou imprécisions,  vous pouvez communiquer avec <a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable</a>. Si vous écrivez au professeur, ajoutez [INF1220] dans l'objet de votre message.</strong> On reçoit toujours avec plaisir les critiques constructives qui nous aident à améliorer le cours.</p>
-
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site</a>. Nous apprécions toujours vos commentaires constructifs.</p>
-
-<p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.</p>
-
-<p>Il arrive qu'on se trompe! Quand ça se produit, prenez la peine de nous en informer. Nous corrigeons toujours rapidement nos erreurs.</p>
-
-<h1>Navigateur web</h1>
-
-<p>Vous pouvez suivre ce cours avec pratiquement n'importe quel navigateur web. Par contre, pour que les formules mathématiques s'affichent correctement, vous devez utiliser un navigateur supportant la norme MathML. Les navigateurs Firefox et Safari font bien l'affaire.</p>
-
-<p>Il y a peu de formules mathématiques dans ce cours, et il est donc parfaitement possible de travailler sans un support correct des formules mathématiques. Par contre, si vous avez besoin de bien suivre nos consignes et rappels mathématiques, vous devriez sans doute adopter, au moins temporairement, un des navigateurs supportant MathML (par ex., Firefox et Safari).</p>
-
-<h1>Encadrement et suivi</h1>
-
-<p>Prenez connaissance de la documentation fournie par l'université. Vous y trouverez le nom et l'adresse courriel de la personne qui vous encadre. Après avoir fait les lectures, vous pouvez écrire vos questions à cette personne. Assurez-vous de respecter les consignes énoncées dans la présentation du cours : vous devez mettre « [INF1220] » dans l'objet du courriel et vous devez utiliser une adresse de courriel à votre nom afin que nous puissions vous identifier. Vos courriels devraient comprendre des questions précises, bien détaillées. Vous devriez commencer expliquer ce que vous avez fait, ce que vous comprenez. Il peut être utile de faire référence aux lectures que vous avez faites. N'oubliez pas que les lectures au sein du manuel sont obligatoires. Par exemple, si vous avez du mal avec une notion couverte par le manuel, vous devriez faire une référence à cette section. N'hésitez pas à joindre des saisies d'écran pour illustrer vos propos. Nous nous ferons un plaisir de répondre à vos questions par courriel, mais tel qu'expliqué dans la présentation du cours, nous n’offrons pas d’enseignement par vidéoconférence au sein du cours INF 1220. </p>
-
-
-<h1>Réseaux sociaux</h1>
-
-<p>Attention: Il est strictement défendu de demander des  indices aux autres étudiants du cours concernant les travaux
-notés et l'examen. Il est aussi défendu de donner des indices concernant les travaux notés.</p>
-
-
-<h1>Plagiat</h1>
-
-
-<p> Nous mettons bien entendu à jour les travaux notés et les examens.  Dans le cas des travaux notés, vous pouvez toujours remettre la version que vous avez débutée sans pénalité dans le cas où les travaux sont mis à jour pendant votre travail. Par contre, soyez avisé que nous portons une attention particulière au plagiat. Si votre travail ressemble trop à un autre travail remis, nous pourrons alors procéder à un examen oral, pour vérifier si vous avez effectivement fait le travail par vous-même. Dans le cas des examens, nous tentons de les offrir en présence avec surveillance. Quand ce n'est pas possible, nous varions autant que possible le contenu des examens et nous utilisons d'autres mesures à notre disposition pour contrer le plagiat.</p>
-
-<p>Le plagiat peut avoir des conséquences sévères. Une note permanente peut être ajoutée à votre dossier et à votre relevé de notes. Le plagiat peut mener à votre exclusion du programme universitaire où vous avez été admis.</p>
-
-<h1>Préalables du cours</h1>
-
-
-<p>Rappel: ne débutez pas ce cours si vous n'avez pas les préalables mathématiques nécessaires.</p>
-
-<p>Le cours INF 1220 a été développé en prenant pour acquis que vous avez fait les mathématiques avancées au secondaire et au collégial. Il fait partie d'un cursus en informatique de niveau universitaire. Si vous n'étiez pas « fort en math » au secondaire, il est possible que vous trouviez le cours trop difficile. Il est de votre responsabilité de faire une mise à niveau au besoin avant de débuter le cours INF 1220.</p>
-
-
-<h1>Module 1</h1>
-
-<h2>Activité 1.0: Rappel des  notions mathématiques élémentaires</h2>
 
 <div style="margin-left: 10px;">
 
@@ -96,74 +29,17 @@ meilleur cours » n'est pas une proposition mathématique. Dans notre contexte,
 quand nous parlons de proposition, nous parlons de proposition mathématique.</p>
 
 <h5>1.1.1. Table des valeurs de vérités des propositions</h5>
+Tableau 1: Table de vérités et connecteurs logiques
 
-<table border="1" style="width: 50%">
-  <caption>Tableau 1: Table de vérités et connecteurs logiques</caption>
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td>p</td>
-      <td>q</td>
-      <td>non p</td>
-      <td>p ou (inclusif) q</td>
-      <td>p ou (exclusif) q</td>
-      <td>p et q</td>
-      <td>p&#x21d2;q (p implique q)</td>
-      <td>p&#x21d4;q (p équivaut à q)</td>
-    </tr>
-    <tr>
-      <td>V</td>
-      <td>V</td>
-      <td>F</td>
-      <td>V</td>
-      <td>F</td>
-      <td>V</td>
-      <td>V</td>
-      <td>V</td>
-    </tr>
-    <tr>
-      <td>V</td>
-      <td>F</td>
-      <td>F</td>
-      <td>V</td>
-      <td>V</td>
-      <td>F</td>
-      <td>F</td>
-      <td>F</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>V</td>
-      <td>V</td>
-      <td>V</td>
-      <td>V</td>
-      <td>F</td>
-      <td>V</td>
-      <td>F</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>F</td>
-      <td>V</td>
-      <td>F</td>
-      <td>F</td>
-      <td>F</td>
-      <td>V</td>
-      <td>V</td>
-    </tr>
-  </tbody>
-</table>
+| p | q | non p | p ou (inclusif) q | p ou (exclusif) q | p et q | p⇒q (p implique q) | p⇔q (p équivaut à q) |
+|---|---|-------|-------------------|-------------------|--------|--------------------|----------------------|
+| V | V | F     | V                 | F                 | V      | V                  | V                    |
+| V | F | F     | V                 | V                 | F      | F                  | F                    |
+| F | V | V     | V                 | V                 | F      | V                  | F                    |
+| F | F | V     | F                 | F                 | F      | V                  | V                    |
 
 <h2>1.2. Les ensembles</h2>
 
-<p>Définition (intuitive), propriétés et exemples.</p>
 
 <p>Un ensemble est une collection d&#x2019;objets. Si on appelle E cette
 collection, alors pour chacun de ces objets, on peut affirmer qu&#x2019;il
@@ -401,7 +277,7 @@ lettre de l&#x2019;alphabet française, alors L est l&#x2019;ensemble des mots
 possibles de la langue française (si on assimile toutes les voyelles accentuées
 à leur équivalent non accentué, c&#x2019;est-à-dire qu&#x2019;on laisse tomber
 les accents) ; en fait L contient tous les mots de la langue française, mais
-aussi des choses comme rrrrrrrrr sont des mots de L.</p>
+aussi des choses comme rrrrrrrrr sont des mots de&nbsp;L.</p>
 
 <p>Question: Que vaut L si V est l&#x2019;ensemble des chiffres de 0 à 9 ?</p>
 <details>
@@ -453,7 +329,7 @@ définit sur L la relation R par aRb ssi
     <mi>b</mi>
     <mi>n</mi>
   </msub>
-</math>) ou ( <math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) ou (<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>a</mi>
     <mi>m</mi>
@@ -481,7 +357,7 @@ définit sur L la relation R par aRb ssi
       <mn>1</mn>
     </mrow>
   </msub>
-</math>) ou ( <math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) ou (<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>a</mi>
     <mi>m</mi>
@@ -527,7 +403,7 @@ définit sur L la relation R par aRb ssi
       <mn>2</mn>
     </mrow>
   </msub>
-</math>) ou &#x2026;ou ( <math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) ou &#x2026;ou (<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>a</mi>
     <mi>m</mi>
@@ -594,7 +470,7 @@ définit sur L la relation R par aRb ssi
       <mi>p</mi>
     </mrow>
   </msub>
-</math> ) ou ( <math xmlns="http://www.w3.org/1998/Math/MathML">
+</math> ) ou (<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>a</mi>
     <mi>m</mi>
@@ -684,7 +560,7 @@ naturels N.</p>
 <p>Un élément e de E est un élément neutre pour T ssi pour tout élément a de E
 , aTe=eTa=a</p>
 
-<p>Exemples : 0 est l'élément neutre pour l'addition + sur l'ensemble N des
+<p style="border: 2px solid #007BFF; padding: 10px;">Exemples&nbsp;: 0 est l'élément neutre pour l'addition + sur l'ensemble N des
 entiers naturels : Pour tout entier naturel n, on a n+0=0+n=n.</p>
 
 <p>Il en est de même pour 1 qui est l'élément neutre pour la multiplication ×
@@ -711,14 +587,15 @@ des entiers naturels?</p>
 <p>La loi T est associative si pour tous éléments a , b et c de E, (a T b)
 &#x22a4; c = a &#x22a4;( b&#x22a4; c)=a &#x22a4;b&#x22a4; c</p>
 
-<p>Exemple: l'addition + est associative sur N.</p>
+
+<p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;: l'addition + est associative sur N.</p>
 
 <h4>1.4.1.4. Commutativité</h4>
 
 <p>La loi &#x22a4; est commutative si pour tous éléments a et b de E, a
 &#x22a4; b = b &#x22a4; a.</p>
 
-<p>Exemple: l'addition + est commutative sur N.</p>
+<p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;: l'addition + est commutative sur N.</p>
 
 <h4>1.4.1.5. Symétrie</h4>
 
@@ -885,78 +762,13 @@ donc toujours la plus grande priorité. </p>
 
 <p>Le tableau ci-dessous donne les régles de priorité.</p>
 
-<table  style="width: 50%">
-  <tbody>
-    <tr>
-      <td>Règles de priorité</td>
-      <td>Opérations</td>
-      <td>Abréviations</td>
-    </tr>
-    <tr>
-      <td>1. L&#x2019;intérieur des parenthèses doit être calculé.
-        Lorsqu&#x2019;il 
+| Règles de priorité | Opérations | Abréviations |
+|--------------------|------------|--------------|
+| 1. L’intérieur des parenthèses doit être calculé. Lorsqu’il y a parenthèses, crochets et accolades, il faut simplifier prioritairement l’opération en débutant par les parenthèses intérieures : solutionner de l’intérieur vers l’extérieur. | Parenthèses (ou assimilées) | P |
+| 2. Les nombres affectés d’exposants doivent être évalués. | Exponentiation | E |
+| 3. Les divisions et les multiplications doivent être calculées. Ces deux opérations ont la même priorité. Elles sont évaluées dans l’ordre où elles apparaissent dans l’expression numérique établie, en se référant à la convention d’écriture indiquée plus loin. | Divisions<br>Multiplications | D<br>M |
+| 4. Finalement, les additions et les soustractions doivent être calculées. Ces deux opérations ont la même priorité. Elles sont évaluées à partir de la gauche de l’expression numérique en allant vers la droite (convention d’écriture). | Additions<br>Soustractions | A<br>S |
 
-        <p>y a parenthèses, crochets et accolades, il faut</p>
-
-        <p>simplifier prioritairement l&#x2019;opération en débutant par</p>
-
-        <p>les parenthèses intérieures : solutionner de l&#x2019;intérieur</p>
-
-        <p>vers l&#x2019;extérieur.</p>
-      </td>
-      <td>Parenthèses (ou assimilées)</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <td>2. Les nombres affectés d&#x2019;exposants doivent être 
-
-        <p>évalués.</p>
-      </td>
-      <td>Exponentiation</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>3. Les divisions et les multiplications doivent être 
-
-        <p>calculées. Ces deux opérations ont la même priorité.</p>
-
-        <p>Elles sont évaluées dans l&#x2019;ordre où elles apparaissent</p>
-
-        <p>dans l&#x2019;expression numérique établie, en se référant à</p>
-
-        <p>la convention d&#x2019;écriture indiquée plus loin.</p>
-      </td>
-      <td>Divisions 
-
-        <p>Multiplications</p>
-      </td>
-      <td>D 
-
-        <p>M</p>
-      </td>
-    </tr>
-    <tr>
-      <td>4. Finalement, les additions et les soustractions doivent 
-
-        <p>être calculées. Ces deux opérations ont la même</p>
-
-        <p>priorité. Elles sont évaluées à partir de la gauche de</p>
-
-        <p>l&#x2019;expression numérique en allant vers la droite</p>
-
-        <p>(convention d&#x2019;écriture).</p>
-      </td>
-      <td>Additions 
-
-        <p>Soustractions</p>
-      </td>
-      <td>A 
-
-        <p>S</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <p></p>
 
@@ -995,7 +807,7 @@ varie quand on passe d&#x2019;un élément à un autre, on dit qu&#x2019;elle
 parcourt l&#x2019;ensemble de départ, ou plus exactement le domaine de
 définition de la fonction. Il est a noter que ce formalisme permet de décrire f
 et de connaître ses propriétés mathématiques sans avoir besoin de calculer
-l&#x2019;image de chaque élément de E.</p>
+l&#x2019;image de chaque élément de&nbsp;E.</p>
 
 <p>Cette notion de variable en mathématique est assez proche de la notion de
 variable en informatique, tout comme l&#x2019;est aussi la notion de fonction.
@@ -1015,297 +827,17 @@ en informatique.</p>
 
 <h2>2.2. Fonctions numériques élémentaires usuelles.</h2>
 
-<p>Fonctions numériques usuelles et quelques unes de leurs propriétés.</p>
 
-<table border="1" style="width: 90%">
-  <caption>Tableau 3: Fonctions numériques élémentaires usuelles</caption>
-  <col />
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td>Nom</td>
-      <td>Expression</td>
-      <td>Principales propriétés</td>
-      <td>Exemples</td>
-    </tr>
-    <tr>
-      <td>Fonction puissance</td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>x</mi>
-            <mi>a</mi>
-          </msup>
-        </math></td>
-      <td>Partout où <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>et <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>b</mi>
-          </msub>
-        </math>ont à la fois un sens et sont à la fois définies, on a
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mrow>
-              <mi>a</mi>
-              <mo>+</mo>
-              <mi>b</mi>
-            </mrow>
-          </msub>
-        </math>=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>×<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>b</mi>
-          </msub>
-        </math>. 
 
-        <p>Si a&#x2208;N, <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>est définie sur R.</p>
+Tableau 3: Fonctions numériques élémentaires usuelles
 
-        <p>Si a&#x2208;Z, et a&lt;0,
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>est définie sur R*.</p>
-
-        <p>Si a&#x2208;Q, il faut distinguer deux cas: </p>
-
-        <p>- Si a=p/q avec q pair, alors
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>est définie sur R+ si a&#x2265;0 et sur R*+ si a&lt;0;</p>
-
-        <p>- Si a =p/q avec q impair, alors
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>est définie sur R si a &#x2265;0 et sur R* si a&lt;0.</p>
-
-        <p>Pour tout autre cas <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi xmlns="http://www.w3.org/1998/Math/MathML">f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>n'a de sens que si a&#x2265;0 et n'est définie que sur R*+; on
-        alors f(x) = <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>e</mi>
-            <mrow>
-              <mi>a</mi>
-              <mi>ln</mi>
-              <mi>x</mi>
-            </mrow>
-          </msup>
-        </math></p>
-
-        <p></p>
-      </td>
-      <td>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>x</mi>
-            <mrow>
-              <mo>&#x2212;</mo>
-              <mn>2</mn>
-              <mo>/</mo>
-              <mn>3</mn>
-            </mrow>
-          </msup>
-        </math>; 
-
-        <p>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>x</mi>
-            <mn>4</mn>
-          </msup>
-        </math>:</p>
-
-        <p>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>x</mi>
-            <mrow>
-              <mn>1</mn>
-              <mo>/</mo>
-              <mn>2</mn>
-            </mrow>
-          </msup>
-        </math>;</p>
-
-        <p>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>x</mi>
-            <mrow>
-              <mn>1</mn>
-              <mo>/</mo>
-              <mn>3</mn>
-            </mrow>
-          </msup>
-        </math>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Fonction exponentielle</td>
-      <td>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>e</mi>
-            <mi>x</mi>
-          </msup>
-        </math></td>
-      <td>f(x)×f(y)=f(x+y). f est définie sur R.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Fonction exponentielle de base a</td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mi>a</mi>
-            <mi>x</mi>
-          </msup>
-        </math></td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math> n'a de sens que si a&gt;0. On a alors
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-          <mo>(</mo>
-          <mi>x</mi>
-          <mo>)</mo>
-          <mo>×</mo>
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-          <mo>(</mo>
-          <mi>y</mi>
-          <mo>)</mo>
-          <mo>=</mo>
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-          <mo>(</mo>
-          <mi>x</mi>
-          <mo>+</mo>
-          <mi>y</mi>
-          <mo>)</mo>
-        </math> et <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>est définie sur R.</td>
-      <td>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msup>
-            <mn>4</mn>
-            <mi>x</mi>
-          </msup>
-        </math></td>
-    </tr>
-    <tr>
-      <td>Fonction logarithme</td>
-      <td>f(x)=ln(x)</td>
-      <td>f(x×y)=f(x)+f(y). f est définie sur R*+.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Fonction logarithme de base a</td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <munderover>
-            <mo>&#x2212;</mo>
-            <mrow>
-              <mi>ln</mi>
-              <mo>(</mo>
-              <mi>a</mi>
-              <mo>)</mo>
-            </mrow>
-            <mrow>
-              <mi>ln</mi>
-              <mo>(</mo>
-              <mi>x</mi>
-              <mo>)</mo>
-            </mrow>
-          </munderover>
-        </math></td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math> a un sens ssi a&gt;1. Si a=10,
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math> est le logarithme décimal, et noté simplement log.
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math> est définie sur R*+ là où elle a un sens (a&gt;1). On a
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(x×y)=<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(x)+<math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>f</mi>
-            <mi>a</mi>
-          </msub>
-        </math>(y).</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Nom | Expression | Principales propriétés | Exemples |
+|-----|------------|------------------------|----------|
+| Fonction puissance | <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mi>a</mi></msup></math> | Partout où <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> et <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>b</mi></msub></math> ont à la fois un sens et sont à la fois définies, on a <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></msub></math>=<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>×<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>b</mi></msub></math>.<br><br>Si a∈N, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R.<br><br>Si a∈Z, et a<0, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R*.<br><br>Si a∈Q, il faut distinguer deux cas :<br>- Si a=p/q avec q pair, alors <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R+ si a≥0 et sur R*+ si a<0 <br>- Si a=p/q avec q impair, alors <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R si a≥0 et sur R* si a<0.<br><br>Pour tout autre cas <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> n’a de sens que si a≥0 et n’est définie que sur R*+ ; on a alors f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow><mi>a</mi><mi>ln</mi><mi>x</mi></mrow></msup></math>. | f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mrow><mo>-</mo><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></math><br>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>4</mn></msup></math><br>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></math><br>f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></math>. |
+| Fonction exponentielle | f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mi>x</mi></msup></math> | f(x)×f(y)=f(x+y). f est définie sur R. | |
+| Fonction exponentielle de base a | <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>a</mi><mi>x</mi></msup></math> | <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> n’a de sens que si a>0. On a alors <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>×</mo><msub><mi>f</mi><mi>a</mi></msub><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><msub><mi>f</mi><mi>a</mi></msub><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></math> et <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R. | f(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>4</mn><mi>x</mi></msup></math> |
+| Fonction logarithme | f(x)=ln(x) | f(x×y)=f(x)+f(y). f est définie sur R*+. | |
+| Fonction logarithme de base a | <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(x)=<math xmlns="http://www.w3.org/1998/Math/MathML"><munderover><mo>-</mo><mrow><mi>ln</mi><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mrow><mi>ln</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></munderover></math> | <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> a un sens ssi a>1. Si a=10, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est le logarithme décimal, et noté simplement log. <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math> est définie sur R*+ là où elle a un sens (a>1). On a <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(x×y)=<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(x)+<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>f</mi><mi>a</mi></msub></math>(y). | |
 
 <p></p>
 
@@ -1725,9 +1257,7 @@ diagonale sont tous nuls.</p>
   </msub>
 </math>=0 si i&gt;j (respectivement i&lt;j). </p>
 
-<p>Exemples</p>
-
-<p>A=<math xmlns="http://www.w3.org/1998/Math/MathML">
+<p style="border: 2px solid #007BFF; padding: 10px;">Exemples&nbsp;: A=<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>(</mo>
     <mtable>
@@ -1790,7 +1320,7 @@ diagonale sont tous nuls.</p>
     </mtable>
     <mo>)</mo>
   </mrow>
-</math> B=<math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, B=<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>(</mo>
     <mtable>
@@ -1853,7 +1383,7 @@ diagonale sont tous nuls.</p>
     </mtable>
     <mo>)</mo>
   </mrow>
-</math>A est triangulaire supérieure et B est triangulaire inférieure.</p>
+</math>, alors A est triangulaire supérieure et B est triangulaire inférieure.</p>
 
 <p>Une matrice carrée est diagonale si elle est à la fois triangulaire
 supérieure et triangulaire inférieure.
@@ -1950,11 +1480,8 @@ matrice définie par <math xmlns="http://www.w3.org/1998/Math/MathML">
   </msub>
 </math></p>
 
-<p>C&#x2208;Mm,p( R )</p>
 
-<p>Exemple</p>
-
-<p>A=<math xmlns="http://www.w3.org/1998/Math/MathML">
+<p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;:A= <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>(</mo>
     <mtable>
@@ -1994,7 +1521,7 @@ matrice définie par <math xmlns="http://www.w3.org/1998/Math/MathML">
     </mtable>
     <mo>)</mo>
   </mrow>
-</math> A×B=14 et B×A=<math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, A×B=14 et B×A=<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>(</mo>
     <mtable>
@@ -2072,9 +1599,7 @@ de A la matrice <math xmlns="http://www.w3.org/1998/Math/MathML">
   </msub>
 </math>.</p>
 
-<p>Exemple</p>
-
-<p>A=<math xmlns="http://www.w3.org/1998/Math/MathML">
+<p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;:: A=<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>(</mo>
     <mtable>
@@ -2114,7 +1639,7 @@ de A la matrice <math xmlns="http://www.w3.org/1998/Math/MathML">
     </mtable>
     <mo>)</mo>
   </mrow>
-</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, alors <math xmlns="http://www.w3.org/1998/Math/MathML">
   <msup>
     <mi>A</mi>
     <mo>&#x22a5;</mo>
@@ -2204,46 +1729,15 @@ aléatoire X la fonction définie par p : X(&#x3a9;)&#x2192;[0, 1],
     </math>=1</li>
 </ol>
 
-<p>Exemple: Une plante peut avoir de 0 à 4 fleurs avec les probabilités
+<div style="border: 2px solid #007BFF;padding: 10px;">
+<p>Exemple&nbsp;: Une plante peut avoir de 0 à 4 fleurs avec les probabilités
 suivantes :</p>
+Tableau 4: Exemple de distribution de probabilité
 
-<table border="1" style="width: 50%">
-  <caption>Tableau 4: Exemple de distribution de probabilité</caption>
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td>Nombre de fleurs <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>x</mi>
-            <mi>i</mi>
-          </msub>
-        </math></td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>Probabilité <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msub>
-            <mi>p</mi>
-            <mi>i</mi>
-          </msub>
-        </math></td>
-      <td>2k</td>
-      <td>1/8</td>
-      <td>1/8</td>
-      <td>3/8</td>
-      <td>k</td>
-    </tr>
-  </tbody>
-</table>
+| Nombre de fleurs <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub></math> | 0 | 1 | 2 | 3 | 4 |
+|---------------------------------------------------------------------------------------------|---|---|---|---|---|
+| Probabilité <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>p</mi><mi>i</mi></msub></math> | 2k | 1/8 | 1/8 | 3/8 | k |
+</div>
 
 <p>Question: Calculer k pour que ce tableau corresponde à une distribution de
 probabilité.</p>
@@ -2299,7 +1793,7 @@ aléatoire X la fonction F définie par F : X(&#x3a9;)&#x2192;[0,1],
       </msub>
     </mrow>
   </msub>
-</math></p>
+</math>.</p>
 
 <p>Remarque : Certains ouvrages définissent F par
 F(<math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -2317,12 +1811,8 @@ F(<math xmlns="http://www.w3.org/1998/Math/MathML">
   </msub>
 </math>).</p>
 
-<p>Parmi les lois de probabilités discrètes, on peut citer :</p>
-
-<p>La loi uniforme sur [1,n]. elle est données par p(X=x)=1/n avec
-x&#x2208;{1,&#x2026;,n}</p>
-
-<p>La loi de Bernoulli de paramètre p. elle est donnée par
+<p>Parmi les lois de probabilités discrètes, on peut citer :La loi uniforme sur [1,n]. elle est données par p(X=x)=1/n avec
+x&#x2208;{1,&#x2026;,n}, la loi de Bernoulli de paramètre p. elle est donnée par
 p(X=x)=<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msup>
     <mi>p</mi>
@@ -2358,213 +1848,24 @@ les programmes informatiques sont pseudo-aléatoires.</p>
 <p></p>
 
 <h1>4. Annexe</h1>
+Tableau 5: Quelques abréviations et symboles usuels, ainsi que leur signification
 
-<table id="tabannex" border="1" style="width: 100%">
-  <caption>Tableau 5: Quelques abréviations et symboles usuels, ainsi que leur
-  signification</caption>
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td>Symbole</td>
-      <td>Description</td>
-      <td>Exemple</td>
-    </tr>
-    <tr>
-      <td>ssi</td>
-      <td>si et seulement si. Placé après une expression propositionnelle,
-        exprime une condition nécessaire et suffisante pour que cette
-        expression propositionnelle soit vraie.</td>
-      <td>Un nombre entier est pair ssi son dernier chiffre est pair.</td>
-    </tr>
-    <tr>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msubsup>
-            <mo>&#x3a3;</mo>
-            <mrow>
-              <mi>i</mi>
-              <mo>=</mo>
-              <mi>p</mi>
-            </mrow>
-            <mi>n</mi>
-          </msubsup>
-        </math></td>
-      <td>Sommation de n-p+1 termes indexés par i, et i variant de p à n.</td>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msubsup>
-            <mo>&#x3a3;</mo>
-            <mrow>
-              <mi>i</mi>
-              <mo>=</mo>
-              <mn>1</mn>
-            </mrow>
-            <mi>n</mi>
-          </msubsup>
-          <mi>i</mi>
-        </math> désigne la somme des n premiers entiers naturels. Il convient
-        alors de remarquer que le resultat de cette somme est identique à
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <msubsup>
-            <mo>&#x3a3;</mo>
-            <mrow>
-              <mi>i</mi>
-              <mo>=</mo>
-              <mn>0</mn>
-            </mrow>
-            <mi>n</mi>
-          </msubsup>
-          <mi>i</mi>
-        </math> mais la sommation est différente puisque les deux sommations
-        ont un nombre de termes différents. On peut avoir une double, une
-        triple,...sommation avec deux, trois...indices ij, ijk,...chacun des
-        indices variant à son tour.</td>
-    </tr>
-    <tr>
-      <td><math xmlns="http://www.w3.org/1998/Math/MathML">
-          <mo>&#x2264;</mo>
-        </math></td>
-      <td>Placé entre des termes, ce symboles signifie que le membre de gauche
-        est plus petit ou égal au membre de droite (usage restreint). Mais plus
-        généralement, il signifie que le membre de gauche est en relation avec
-        le membre de droite ou lui est égal (usage élargi).</td>
-      <td>Pour l'ordre naturel sur l'ensemble des entiers naturels N 1&#x2264;2
-        et 2&#x2264;2. Pour la relation de divisibilité dans N, c'est à dire a
-        en relation avec b ssi a divise b; 2&#x2264;4 et 2&#x2264;2, mais on ne
-        peut pas comparer 2 et 5.</td>
-    </tr>
-    <tr>
-      <td>&#x2265;</td>
-      <td>Placé entre des termes, ce symboles signifie que le membre de gauche
-        est plus grand ou égal au membre de droite (usage restreint). Mais plus
-        généralement, il signifie que le membre de gauche est en relation avec
-        le membre de droite ou lui est égal (usage élargi).</td>
-      <td>Pour l'ordre naturel sur l'ensemble des entiers naturels N 2&#x2265;1
-        et 2&#x2265;1 . Pour la relation de divisibilité dans N, c'est à dire a
-        en relation avec b ssi a divise b; 4&#x2265;2 et 2&#x2265;2, mais on ne
-        peut pas comparer 5 et 2.</td>
-    </tr>
-    <tr>
-      <td>&lt;</td>
-      <td>Placé entre des termes, ce symboles signifie que le membre de gauche
-        est strictement plus petit que le membre de droite (usage restreint).
-        Mais plus généralement, il signifie que le membre de gauche est en
-        relation avec le membre de droite et lui est différent (usage
-      élargi).</td>
-      <td>Pour l'ordre naturel sur l'ensemble des entiers naturels N 1&lt;2.
-        Pour la relation de divisibilité dans N, c'est à dire a en relation
-        avec b ssi a divise b; 2&lt;4, mais on ne peut pas comparer 2 et 5.</td>
-    </tr>
-    <tr>
-      <td>&gt;</td>
-      <td>Placé entre des termes, ce symboles signifie que le membre de gauche
-        est strictement plus grand que le membre de droite (usage restreint).
-        Mais plus généralement, il signifie que le membre de gauche est en
-        relation avec le membre de droite et lui est différent (usage
-      élargi).</td>
-      <td>Pour l'ordre naturel sur l'ensemble des entiers naturels N 2&gt;1 et
-        2&#x2265;1 . Pour la relation de divisibilité dans N, c'est à dire a en
-        relation avec b ssi a divise b; 4&gt;2, mais on ne peut pas comparer 5
-        et 2.</td>
-    </tr>
-    <tr>
-      <td>&#x2200;</td>
-      <td>Quantificateur universel. &#x2200; a se lit pour tout a...</td>
-      <td>&#x2200; a&#x2208;N,a&#x2265;0 pour tout élément a de l'ensemble N, a
-        est supérieur ou égal à 0.</td>
-    </tr>
-    <tr>
-      <td>&#x2203;</td>
-      <td>Quantificateur existentiel. &#x2203; a se lit il existe au moins un
-        a...</td>
-      <td>&#x2203; a&#x2208;N tel que a&#x2260;0, il existe au moins un élément
-        a de l'ensemble N qui est différent de 0.</td>
-    </tr>
-    <tr>
-      <td>&#x2208;</td>
-      <td>C'est le symbole d'appartenance. a&#x2208;A signifie que a est un
-        élément de l'ensemble A.</td>
-      <td>Utilisé après un quantificateur, et une suite de symbole, il signifie
-        que ces symboles sont éléments de l'ensemble qui suit. Par exemple:
-        &#x2200; a,b,c &#x2208;N signifie pour tous éléments a, b et c de
-      N.</td>
-    </tr>
-    <tr>
-      <td>&#x2209;</td>
-      <td>C'est le symbole de non appartenance. a&#x2209;A signifie que a n'est
-        pas un élément de l'ensemble A.</td>
-      <td>&#x2212;1&#x2209;N.</td>
-    </tr>
-    <tr>
-      <td>&#x2286;</td>
-      <td>Placé entre deux ensembles signifie que l'ensemble de gauche est
-        inclus dans l'ensemble de droite ou lui est égal.</td>
-      <td>Si A et B sont deux ensembles, A&#x2286;A&#x222a;B.</td>
-    </tr>
-    <tr>
-      <td>&#x2282;</td>
-      <td>Placé entre deux ensembles signifie que l'ensemble de gauche est
-        strictement inclus dans l'ensemble de droite (et donc en est
-      différent).</td>
-      <td>N&#x2282;Z.</td>
-    </tr>
-    <tr>
-      <td>&#x21d2;</td>
-      <td>implication logique. Placé entre deux propositions, ce symbole
-        indique que la proposition de gauche implique celle de droite.</td>
-      <td>p&#x21d2;q est faux ssi p est vrai et q faux.</td>
-    </tr>
-    <tr>
-      <td>| |</td>
-      <td>Valeur absolue. Si a est placé entre les deux barres le résultat est
-        le nombre positif a si a est positif et -a si a est négatif. |a|=a si
-        a&#x2265;0 et |a|=&#x2212;a si a&#x2264;0.</td>
-      <td>|-2|=|2|=2.</td>
-    </tr>
-  </tbody>
-</table>
+| Symbole | Description | Exemple |
+|---------|-------------|---------|
+| ssi | Si et seulement si. Placé après une expression propositionnelle, exprime une condition nécessaire et suffisante pour que cette expression propositionnelle soit vraie. | Un nombre entier est pair ssi son dernier chiffre est pair. |
+| <math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mo>Σ</mo><mrow><mi>i</mi><mo>=</mo><mi>p</mi></mrow><mi>n</mi></msubsup></math> | Sommation de n-p+1 termes indexés par i, et i variant de p à n. | <math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mo>Σ</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>i</mi></math> désigne la somme des n premiers entiers naturels. Il convient alors de remarquer que le résultat de cette somme est identique à <math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mo>Σ</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mi>i</mi></math> mais la sommation est différente puisque les deux sommations ont un nombre de termes différents. On peut avoir une double, une triple,... sommation avec deux, trois... indices ij, ijk,... chacun des indices variant à son tour. |
+| <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> | Placé entre des termes, ce symbole signifie que le membre de gauche est plus petit ou égal au membre de droite (usage restreint). Mais plus généralement, il signifie que le membre de gauche est en relation avec le membre de droite ou lui est égal (usage élargi). | Pour l'ordre naturel sur l'ensemble des entiers naturels N, 1≤2 et 2≤2. Pour la relation de divisibilité dans N, c'est-à-dire a en relation avec b ssi a divise b ; 2≤4 et 2≤2, mais on ne peut pas comparer 2 et 5. |
+| ≥ | Placé entre des termes, ce symbole signifie que le membre de gauche est plus grand ou égal au membre de droite (usage restreint). Mais plus généralement, il signifie que le membre de gauche est en relation avec le membre de droite ou lui est égal (usage élargi). | Pour l'ordre naturel sur l'ensemble des entiers naturels N, 2≥1 et 2≥2. Pour la relation de divisibilité dans N, c'est-à-dire a en relation avec b ssi a divise b ; 4≥2 et 2≥2, mais on ne peut pas comparer 5 et 2. |
+| < | Placé entre des termes, ce symbole signifie que le membre de gauche est strictement plus petit que le membre de droite (usage restreint). Mais plus généralement, il signifie que le membre de gauche est en relation avec le membre de droite et lui est différent (usage élargi). | Pour l'ordre naturel sur l'ensemble des entiers naturels N, 1<2. Pour la relation de divisibilité dans N, c'est-à-dire a en relation avec b ssi a divise b ; 2<4, mais on ne peut pas comparer 2 et 5. |
+| > | Placé entre des termes, ce symbole signifie que le membre de gauche est strictement plus grand que le membre de droite (usage restreint). Mais plus généralement, il signifie que le membre de gauche est en relation avec le membre de droite et lui est différent (usage élargi). | Pour l'ordre naturel sur l'ensemble des entiers naturels N, 2>1. Pour la relation de divisibilité dans N, c'est-à-dire a en relation avec b ssi a divise b ; 4>2, mais on ne peut pas comparer 5 et 2. |
+| ∀ | Quantificateur universel. ∀ a se lit pour tout a... | ∀ a∈N, a≥0 pour tout élément a de l'ensemble N, a est supérieur ou égal à 0. |
+| ∃ | Quantificateur existentiel. ∃ a se lit il existe au moins un a... | ∃ a∈N tel que a≠0, il existe au moins un élément a de l'ensemble N qui est différent de 0. |
+| ∈ | C'est le symbole d'appartenance. a∈A signifie que a est un élément de l'ensemble A. | Utilisé après un quantificateur, et une suite de symboles, il signifie que ces symboles sont éléments de l'ensemble qui suit. Par exemple : ∀ a,b,c ∈N signifie pour tous éléments a, b et c de N. |
+| ∉ | C'est le symbole de non-appartenance. a∉A signifie que a n'est pas un élément de l'ensemble A. | −1∉N. |
+| ⊆ | Placé entre deux ensembles, signifie que l'ensemble de gauche est inclus dans l'ensemble de droite ou lui est égal. | Si A et B sont deux ensembles, A⊆A∪B. |
+| ⊂ | Placé entre deux ensembles, signifie que l'ensemble de gauche est strictement inclus dans l'ensemble de droite (et donc en est différent). | N⊂Z. |
+| ⇒ | Implication logique. Placé entre deux propositions, ce symbole indique que la proposition de gauche implique celle de droite. | p⇒q est faux ssi p est vrai et q faux. |
+| \| \| | Valeur absolue. Si a est placé entre les deux barres, le résultat est le nombre positif a si a est positif et -a si a est négatif. \|a\|=a si a≥0 et \|a\|=−a si a≤0. | \|-2\|=\|2\|=2. |
+
 
 </div>
-<h2>Activité 1.1</h2>
-
-
-
-<p><a name="histo"></a></p><h2>Court historique des langages de programmation</h2>
-
-<p>Le concept de programmation remonte à plus de cent ans avec l'arrivée des premières machines de calcul ou d'automatisation des procédés au 19e siècle. Il y a un certain consensus sur le fait que la comtesse <a href="https://fr.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a> (1815-1852) est la première programmeuse informatique grâce à ses travaux sur la <a href="https://fr.wikipedia.org/wiki/Machine_analytique">machine analytique</a> de Charles Babbage. Un langage de programmation, le Ada, tire d'ailleurs son nom de cet événement historique. Il y avait également les <a href="https://fr.wikipedia.org/wiki/M%C3%A9tier_Jacquard">métiers à tisser de type Jacquard</a> qui nécessitait un certain type de programmation via l'utilisation de cartes perforées.</p>
-
-<p>Toutefois, il faut remonter essentiellement aux années 1940-50, avec l'arrivée des premiers ordinateurs "modernes", pour voir l'arrivée des premiers langages de programmation tels que le FORTRAN (1954), le LISP (1958) ou bien le COBOL (1959). Ces langages de programmation viendront inspirer les prochaines générations de langages de programmation pour en arriver aux langages les plus couramment utilisés tels que le C++ (1983), le Java (1995), le Python (1991), le Javascript (1995), le PHP (1995) et bien d'autres encore (<a href="https://spectrum.ieee.org/computing/software/the-2017-top-programming-languages">Top 10 des langages 2017 selon IEEE Spectrum</a>).</p>
-
-<p>Tous ces langages de programmation ont en commun un objectif premier, permettre aux programmeurs de spécifier des solutions à des problèmes spécifiques pour des ordinateurs avec un certain degré d'abstraction du matériel électronique. Il est donc nécessaire d'avoir un résumé du fonctionnement des ordinateurs.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4-h1DEJ2K3o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h3>Résumé de l'architecture des ordinateurs et de l'abstraction des langages de programmation</h3>
-
-<p>Les ordinateurs modernes sont issus des travaux de Alan Turing (<a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machine de Turing</a>) et de John von Neumann (<a href="https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann">architecture de Von Neumann</a>) qui décrivent les ordinateurs comme étant des machines essentiellement composées :
-<ul>
-	<li>d'une mémoire stockant les données et les programmes contenant les étapes permettant de résoudre les problèmes;</li>
-	<li>d'une unité de contrôle s'occupant du séquençage des étapes des programmes</li>
-	<li>l'unité arithmétique et logique s'occupant des opérations de base</li>
-	<li>les entrées et sorties permettant d'interagir avec le monde extérieur</li>
-</ul>
-<p>De nos jours et en des mots plus populaires, les ordinateurs sont composés principalement de plusieurs processeurs, de mémoire de travail (RAM), de mémoire long termes (disques durs), de processeurs graphiques et de cartes entrées/sorties. La carte mère coordonne le travail entre ces périphériques, processeurs et mémoires.</p>
-
-<p>Il y a plusieurs grandes familles de processeurs. Les processeurs dans les PC sont généralement fabriqués par Intel et AMD et sont de type <a href="https://fr.wikipedia.org/wiki/X64">x64</a> (aussi parfois appelé x86, x86-64 ou amd64). Les processeurs dans les appareils mobiles (iPhone, Android) sont généralement de type <a href="https://fr.wikipedia.org/wiki/Architecture_ARM">ARM</a>. La mémoire des ordinateurs prend généralement la forme de puces <a href="https://fr.wikipedia.org/wiki/Mémoire_vive_dynamique">DRAM</a>. Les disques utilisent le plus souvent la technologie <a href="https://fr.wikipedia.org/wiki/Mémoire_flash">flash</a>.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R1jYrBHR8SY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>Les langages de programmation servent principalement à spécifier des opérations à ces composantes de l'ordinateur pour traiter les données. Pour ce faire, elles utiliseront des niveaux d'abstraction plus ou moins élevés par rapport au matériel. </p>
-
-<p>Dans ce cours, nous allons utiliser le langage Java. Il s'agit d'un langage très répandu et utile dans l'industrie logicielle.</p>
-
-<h3>Java pas à pas</h3>
-
-
-<p>Nous vous invitons maintenant à lire le chapitre 1 du manuel  Java Pas à Pas.  Vous devez <a href="https://github.com/RobertGodin/JavaPasAPas/raw/master/JavaPasAPas.pdf">charger le document PDF</a>. </p>
-
-
-<h3>La suite...</h3>
-
-
-<p>Nous vous invitons maintenant à passer à la prochaine activité du cours.</p>

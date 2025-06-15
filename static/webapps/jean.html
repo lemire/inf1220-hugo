@@ -1,0 +1,38 @@
+  <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; max-width: 500px; width: 100%;">
+        <h1 style="font-size: 24px; margin-bottom: 20px; color: #2c3e50;">Problème de logique : qui arrive le premier ?</h1>
+        <p style="font-size: 16px; margin-bottom: 20px;">Jean et Pierre travaillent ensemble. Jean s’assure d’être toujours immédiatement suivi par Pierre quand ils arrivent au travail. Qui arrive le premier au travail ?</p>
+        <div style="margin: 20px 0; font-size: 16px; text-align: left;">
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="answer" value="Jean" style="margin-right: 10px;"> Jean
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="answer" value="Pierre" style="margin-right: 10px;"> Pierre
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="answer" value="Les deux" style="margin-right: 10px;"> Les deux
+            </label>
+        </div>
+        <button id="submitButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Soumettre</button>
+        <p id="result" style="margin-top: 20px; font-size: 16px; color: #333;"></p>
+    </div>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            const resultElement = document.getElementById('result');
+            if (!selectedAnswer) {
+                resultElement.textContent = 'Veuillez sélectionner une réponse.';
+                resultElement.style.color = '#e74c3c';
+                return;
+            }
+            const answer = selectedAnswer.value;
+            if (answer === 'Jean') {
+                resultElement.textContent = 'Correct ! Jean arrive le premier, car il est immédiatement suivi par Pierre.';
+                resultElement.style.color = '#2ecc71';
+            } else {
+                resultElement.textContent = 'Incorrect. Jean arrive le premier, car il s’assure d’être immédiatement suivi par Pierre.';
+                resultElement.style.color = '#e74c3c';
+            }
+            this.style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+            this.disabled = true;
+        });
+    </script>

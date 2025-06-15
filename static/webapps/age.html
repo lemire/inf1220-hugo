@@ -1,0 +1,165 @@
+    <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
+        <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Catégorie d'âge</h1>
+        <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez un âge et exécutez le pseudocode pour déterminer la catégorie d'âge.</p>
+        <div style="margin-bottom: 16px;">
+            <input id="ageInput" type="number" value="25" min="0" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
+        </div>
+        <div style="display: flex; gap: 16px;">
+            <div style="flex: 1; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">Pseudocode</p>
+                <pre id="pseudocode" style="font-size: 14px; color: #374151; text-align: left; background: #fff; padding: 8px; border-radius: 4px;">
+SI age <= 10 ALORS
+    Imprimer à l'écran "Vous êtes un enfant"
+SINON SI age > 10 ET age < 18 ALORS
+    Imprimer à l'écran "Vous êtes un adolescent"
+SINON SI age >= 18 ET age < 65 ALORS
+    Imprimer à l'écran "Vous êtes un adulte"
+SINON
+    Imprimer à l'écran "Vous êtes une personne âgée"
+FIN SI
+                </pre>
+            </div>
+            <div style="flex: 1;">
+                <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">État</p>
+                <div style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 16px;">
+                    <p style="font-size: 14px; color: #374151;">Âge : <span id="age">0</span></p>
+                    <p style="font-size: 14px; color: #374151;">Sortie : <span id="output">-</span></p>
+                </div>
+                <div id="log" style="font-size: 14px; color: #374151; max-height: 150px; overflow-y: auto; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"></div>
+            </div>
+        </div>
+        <div style="margin-top: 16px;">
+            <button id="stepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+            <button id="resetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+        </div>
+    </div>
+    <script>
+        let age = 0;
+        let output = "-";
+        let step = 0;
+        let isRunning = false;
+
+        const pseudocodeLines = [
+            "SI age <= 10 ALORS",
+            "    Imprimer à l'écran \"Vous êtes un enfant\"",
+            "SINON SI age > 10 ET age < 18 ALORS",
+            "    Imprimer à l'écran \"Vous êtes un adolescent\"",
+            "SINON SI age >= 18 ET age < 65 ALORS",
+            "    Imprimer à l'écran \"Vous êtes un adulte\"",
+            "SINON",
+            "    Imprimer à l'écran \"Vous êtes une personne âgée\"",
+            "FIN SI"
+        ];
+
+        function updateDisplay() {
+            document.getElementById('age').textContent = age;
+            document.getElementById('output').textContent = output;
+            const pseudocode = document.getElementById('pseudocode');
+            pseudocode.innerHTML = pseudocodeLines.map((line, i) => 
+                `<span style="display: block; ${i === step ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
+            ).join('');
+            document.getElementById('stepButton').style.cssText = isRunning || step >= pseudocodeLines.length ?
+                'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+                'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+        }
+
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messageDiv.style.cssText = 'opacity: 0; transition: opacity 0.5s ease;';
+            logDiv.appendChild(messageDiv);
+            setTimeout(() => { messageDiv.style.opacity = '1'; }, 10);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function validateInput(input) {
+            const num = Number(input);
+            return !isNaN(num) && Number.isInteger(num) && num >= 0;
+        }
+
+        function updateAge() {
+            const input = document.getElementById('ageInput').value;
+            if (!validateInput(input)) {
+                alert('Veuillez entrer un âge entier positif.');
+                document.getElementById('ageInput').value = age || 25;
+                return false;
+            }
+            age = Number(input);
+            reset();
+            return true;
+        }
+
+        async function runStep() {
+            if (isRunning || step >= pseudocodeLines.length) return;
+            isRunning = true;
+            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+
+            if (step === 0) {
+                age = Number(document.getElementById('ageInput').value);
+                log(`Vérification : age = ${age} <= 10`);
+                if (age <= 10) {
+                    step = 1; // Passe à l'impression
+                } else {
+                    step = 2; // Passe à la condition suivante
+                }
+            } else if (step === 1) {
+                output = "Vous êtes un enfant";
+                log('Affichage : "Vous êtes un enfant"');
+                step = 8; // Passe à FIN SI
+            } else if (step === 2) {
+                log(`Vérification : age = ${age} > 10 et age < 18`);
+                if (age > 10 && age < 18) {
+                    step = 3; // Passe à l'impression
+                } else {
+                    step = 4; // Passe à la condition suivante
+                }
+            } else if (step === 3) {
+                output = "Vous êtes un adolescent";
+                log('Affichage : "Vous êtes un adolescent"');
+                step = 8; // Passe à FIN SI
+            } else if (step === 4) {
+                log(`Vérification : age = ${age} >= 18 et age < 65`);
+                if (age >= 18 && age < 65) {
+                    step = 5; // Passe à l'impression
+                } else {
+                    step = 6; // Passe à SINON
+                }
+            } else if (step === 5) {
+                output = "Vous êtes un adulte";
+                log('Affichage : "Vous êtes un adulte"');
+                step = 8; // Passe à FIN SI
+            } else if (step === 6) {
+                log(`Condition : SINON (aucune condition précédente n’est vraie)`);
+                step = 7; // Passe à l'impression
+            } else if (step === 7) {
+                output = "Vous êtes une personne âgée";
+                log('Affichage : "Vous êtes une personne âgée"');
+                step = 8; // Passe à FIN SI
+            } else if (step === 8) {
+                log(`Fin de l’exécution : résultat = "${output}"`);
+                step++;
+            }
+
+            updateDisplay();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            isRunning = false;
+            updateDisplay();
+        }
+
+        function reset() {
+            age = Number(document.getElementById('ageInput').value) || 25;
+            output = "-";
+            step = 0;
+            document.getElementById('log').innerHTML = '';
+            updateDisplay();
+        }
+
+        document.getElementById('ageInput').addEventListener('change', updateAge);
+        document.getElementById('stepButton').addEventListener('click', runStep);
+        document.getElementById('resetButton').addEventListener('click', () => {
+            if (updateAge()) reset();
+        });
+
+        updateDisplay();
+    </script>

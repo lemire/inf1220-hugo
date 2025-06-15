@@ -1,5 +1,6 @@
 ---
 title: "Le professeur"
+weight: 1
 ---
 
 <!-- Ajoutez ici le contenu HTML des crédits -->

@@ -1,0 +1,124 @@
+
+<div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; max-width: 600px; width: 100%;">
+        <h1 style="font-size: 24px; margin-bottom: 20px; color: #2c3e50;">Simulation de l'algorithme de lecture</h1>
+        <div style="margin: 20px 0; font-size: 18px;">
+            Étape : <span id="step" style="font-weight: bold; color: #e74c3c;">Initialisation</span><br>
+            Calepin : <span id="notepad" style="font-weight: bold; color: #e74c3c;">0</span><br>
+            Pages lues : <span id="pagesRead" style="font-weight: bold; color: #e74c3c;">Aucune</span>
+        </div>
+        <div id="pages" style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;"></div>
+        <button id="stepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+        <button id="resetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+        <div id="log" style="margin-top: 20px; text-align: left; max-height: 150px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background: #f9f9f9; font-size: 14px;"></div>
+    </div>
+    <script>
+        const totalPages = 5;
+        let notepad = 0;
+        let step = 'init';
+        let pagesRead = new Set();
+        let isRunning = false;
+        let hasCrashed = false;
+
+        function initializePages() {
+            const pagesDiv = document.getElementById('pages');
+            pagesDiv.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const page = document.createElement('div');
+                page.style.cssText = 'width: 50px; height: 70px; background: #ecf0f1; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px;';
+                page.textContent = i;
+                pagesDiv.appendChild(page);
+            }
+        }
+
+        function updateDisplay() {
+            const stepNames = {
+                init: 'Initialisation',
+                A: 'Étape A (Incrémenter calepin)',
+                B: 'Étape B (Lire page)',
+                C: 'Étape C (Vérifier fin)',
+                end: 'Terminé',
+                crashed: 'Erreur : Crash'
+            };
+            document.getElementById('step').textContent = stepNames[step] || step;
+            document.getElementById('notepad').textContent = notepad;
+            document.getElementById('pagesRead').textContent = pagesRead.size ? Array.from(pagesRead).join(', ') : 'Aucune';
+            const pageElements = document.querySelectorAll('#pages > div');
+            pageElements.forEach((page, index) => {
+                if (pagesRead.has(index + 1)) {
+                    page.style.cssText = 'width: 50px; height: 70px; background: #2ecc71; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white;';
+                } else {
+                    page.style.cssText = 'width: 50px; height: 70px; background: #ecf0f1; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px;';
+                }
+            });
+            const stepButton = document.getElementById('stepButton');
+            stepButton.style.cssText = step === 'end' || isRunning || hasCrashed ?
+                'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+                'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+        }
+
+        function log(message, isError = false) {
+            const logDiv = document.getElementById('log');
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            if (isError) messageDiv.style.color = '#e74c3c';
+            if (isError) messageDiv.style.fontWeight = 'bold';
+            logDiv.appendChild(messageDiv);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        async function runStep() {
+            if (isRunning || step === 'end' || hasCrashed) return;
+            isRunning = true;
+            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+
+            if (step === 'init') {
+                notepad = 0;
+                log('Initialisation : Écrire 0 sur le calepin.');
+                step = 'A';
+            } else if (step === 'A') {
+                notepad += 1;
+                log(`Étape A : Calepin = ${notepad - 1} + 1 = ${notepad}.`);
+                step = 'B';
+            } else if (step === 'B') {
+                if (notepad < 1 || notepad > totalPages) {
+                    log(`Erreur : Tentative de lecture de la page ${notepad}, qui n'existe pas !`, true);
+                    step = 'crashed';
+                    hasCrashed = true;
+                    alert('Crash ! L\'algorithme a tenté de lire une page invalide (page ' + notepad + ').');
+                } else {
+                    pagesRead.add(notepad);
+                    log(`Étape B : Lire page ${notepad}.`);
+                    step = 'C';
+                }
+            } else if (step === 'C') {
+                if (notepad > totalPages) {
+                    log(`Étape C : Calepin (${notepad}) > ${totalPages}. Terminer.`);
+                    step = 'end';
+                } else {
+                    log(`Étape C : Calepin (${notepad}) ≤ ${totalPages}. Retour à l'étape A.`);
+                    step = 'A';
+                }
+            }
+
+            updateDisplay();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            isRunning = false;
+            updateDisplay();
+        }
+
+        function reset() {
+            notepad = 0;
+            step = 'init';
+            pagesRead.clear();
+            hasCrashed = false;
+            document.getElementById('log').innerHTML = '';
+            initializePages();
+            updateDisplay();
+        }
+
+        document.getElementById('stepButton').addEventListener('click', runStep);
+        document.getElementById('resetButton').addEventListener('click', reset);
+
+        initializePages();
+        updateDisplay();
+    </script>

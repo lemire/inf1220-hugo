@@ -1,0 +1,302 @@
+ <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%; text-align: center;">
+        <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Quiz de mathématiques</h1>
+        <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Répondez à chaque question pour tester vos connaissances. Un retour vous sera fourni après chaque réponse.</p>
+        <div style="font-size: 16px; margin-bottom: 16px; color: #1f2937;">Score : <span id="score">0</span> / <span id="total">0</span></div>
+        <div id="quiz" style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; opacity: 0; transition: opacity 0.5s ease;">
+            <p id="question" style="font-size: 16px; color: #374151; margin-bottom: 16px;"></p>
+            <div id="options" style="margin-bottom: 16px; text-align: left;"></div>
+            <button id="submit" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Soumettre</button>
+            <div id="feedback" style="margin-top: 16px; font-size: 14px; color: #374151; opacity: 0; transition: opacity 0.5s ease;"></div>
+        </div>
+        <button id="reset" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 16px; display: none;">Recommencer</button>
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "Quel est le reste de la division de 111 par 10 ?",
+                answer: "1",
+                explanation: "111 ÷ 10 = 11 reste 1, car 10 × 11 = 110 et 111 – 110 = 1.",
+                type: "input"
+            },
+            {
+                question: "Qu’est-ce qu’un quotient ?",
+                answer: "Le quotient est la partie entière du résultat d’une division.",
+                explanation: "Par exemple, dans 17 ÷ 5, le quotient est 3.",
+                type: "multiple",
+                options: [
+                    "Le quotient est la partie entière du résultat d’une division.",
+                    "Le quotient est le reste d’une division.",
+                    "Le quotient est le diviseur dans une division.",
+                    "Le quotient est la somme des nombres divisés."
+                ]
+            },
+            {
+                question: "Est-ce que le nombre π est un nombre entier, réel, rationnel ou imaginaire ?",
+                answer: "Réel, irrationnel",
+                explanation: "π est un nombre réel irrationnel, car il ne peut pas être exprimé comme une fraction et n’est pas un entier ni imaginaire.",
+                type: "multiple",
+                options: [
+                    "Réel, irrationnel",
+                    "Entier",
+                    "Rationnel",
+                    "Imaginaire"
+                ]
+            },
+            {
+                question: "Expliquez pourquoi (1 + 2) × 4 est différent de 1 + 2 × 4.",
+                answer: "Les parenthèses changent la priorité des opérations.",
+                explanation: "Dans (1 + 2) × 4, les parenthèses donnent 3 × 4 = 12. Dans 1 + 2 × 4, la multiplication a priorité, donc 2 × 4 + 1 = 9.",
+                type: "multiple",
+                options: [
+                    "Les parenthèses changent la priorité des opérations.",
+                    "Les nombres sont différents.",
+                    "L’ordre des opérations est inversé.",
+                    "Les parenthèses n’ont aucun effet."
+                ]
+            },
+            {
+                question: "Quelle est la valeur du logarithme de 8 en base 2 ?",
+                answer: "3",
+                explanation: "log₂(8) = 3, car 2³ = 8.",
+                type: "input"
+            },
+            {
+                question: "Quelle est la valeur de la factorielle de 5 ?",
+                answer: "120",
+                explanation: "5! = 5 × 4 × 3 × 2 × 1 = 120.",
+                type: "input"
+            },
+            {
+                question: "Mettez les nombres 1, 2, 10 en ordre lexicographique.",
+                answer: "1, 10, 2",
+                explanation: "L’ordre lexicographique traite les nombres comme des chaînes. '1' < '10' < '2'.",
+                type: "multiple",
+                options: [
+                    "1, 10, 2",
+                    "1, 2, 10",
+                    "10, 1, 2",
+                    "2, 1, 10"
+                ]
+            },
+            {
+                question: "Quel est le reste de la division si 3 est le diviseur et 8 le numérateur ?",
+                answer: "Reste : 2",
+                explanation: "8 ÷ 3 = 2 reste 2, car 3 × 2 = 6 et 8 – 6 = 2.",
+                type: "input"
+            },
+            {
+                question: "Si le reste de la division de x par y est 1, expliquez pourquoi x – 1 doit être un multiple de y si x et y sont des nombres entiers positifs.",
+                answer: "x – 1 est un multiple de y.",
+                explanation: "Si x ÷ y a un reste de 1, alors x = yq + 1. Ainsi, x – 1 = yq, qui est un multiple de y.",
+                type: "multiple",
+                options: [
+                    "x – 1 est un multiple de y.",
+                    "x – 1 est égal à y.",
+                    "x – 1 est toujours pair.",
+                    "x – 1 est un diviseur de y."
+                ]
+            },
+            {
+                question: "Que vaut a^2 si a est 3 ?",
+                answer: "9",
+                explanation: "3² = 9.",
+                type: "input"
+            },
+            {
+                question: "Si A est une matrice symétrique, quelle est sa transposée ?",
+                answer: "A (elle-même)",
+                explanation: "Une matrice symétrique A satisfait A = Aᵀ, donc sa transposée est elle-même.",
+                type: "multiple",
+                options: [
+                    "A (elle-même)",
+                    "La matrice inverse",
+                    "La matrice nulle",
+                    "Une matrice différente"
+                ]
+            },
+            {
+                question: "Si x est un nombre entier et positif, que représente le reste de la valeur (x ÷ 1000) divisée par 10 ?",
+                answer: "Le chiffre des centaines",
+                explanation: "(x ÷ 1000) donne un quotient q. Alors, q ÷ 10 donne le chiffre des centaines de x.",
+                type: "input"
+            },
+            {
+                question: "Quel est le produit scalaire entre les vecteurs [1, 2, 4] et [4, 3, 1] ?",
+                answer: "14",
+                explanation: "Produit scalaire = 1×4 + 2×3 + 4×1 = 4 + 6 + 4 = 14.",
+                type: "input"
+            },
+            {
+                question: "Quelle est la matrice transposée de [[1, 2], [3, 4], [5, 6]] ?",
+                answer: "[[1, 3, 5], [2, 4, 6]]",
+                explanation: "La transposée échange lignes et colonnes : [[1, 2], [3, 4], [5, 6]] devient [[1, 3, 5], [2, 4, 6]].",
+                type: "multiple",
+                options: [
+                    "[[1, 3, 5], [2, 4, 6]]",
+                    "[[1, 2], [3, 4], [5, 6]]",
+                    "[[2, 4, 6], [1, 3, 5]]",
+                    "[[5, 6], [3, 4], [1, 2]]"
+                ]
+            },
+            {
+                question: "Que vaut le déterminant de la matrice [[1, 2], [3, 4], [5, 6]] ?",
+                answer: "Non défini",
+                explanation: "Le déterminant n’est défini que pour les matrices carrées. [[1, 2], [3, 4], [5, 6]] est 3×2, donc non défini.",
+                type: "multiple",
+                options: [
+                    "Non défini",
+                    "0",
+                    "12",
+                    "-12"
+                ]
+            },
+            {
+                question: "Que vaut x si log x / log 2 = 8 ?",
+                answer: "256",
+                explanation: "log x / log 2 = 8 ⇒ log₂(x) = 8 ⇒ x = 2⁸ = 256.",
+                type: "input"
+            },
+            {
+                question: "Qu’est-ce que la somme des entiers au carré entre 10 et 11 (inclusivement, en incluant 10 et 11) ?",
+                answer: "221",
+                explanation: "Somme des carrés de 10 à 11 : 10² + 11²= 100 + 121 = 221.",
+                type: "input"
+            },
+            {
+                question: "Quelle est la probabilité que la somme de deux dés à 6 faces est 8 ?",
+                answer: "5/36",
+                explanation: "Résultats possibles : 36. Cas favorables pour somme = 8 : (2,6), (3,5), (4,4), (5,3), (6,2) → 5 cas. Probabilité = 5/36.",
+                type: "input"
+            },
+            {
+                question: "Pouvez-vous énoncer le théorème fondamental de l’arithmétique ?",
+                answer: "Tout entier positif > 1 peut être exprimé comme un produit de nombres premiers de manière unique.",
+                explanation: "C’est le théorème fondamental de l’arithmétique, valable à l’ordre près des facteurs.",
+                type: "multiple",
+                options: [
+                    "Tout entier positif > 1 peut être exprimé comme un produit de nombres premiers de manière unique.",
+                    "Tout entier est divisible par 1.",
+                    "Tout entier positif est un nombre premier.",
+                    "Tout entier a un diviseur commun."
+                ]
+            },
+            {
+                question: "Si l’entier x divise le nombre impair y, est-ce que x peut être pair ?",
+                answer: "Non",
+                explanation: "Si x divise y (impair), x doit être impair, car un diviseur pair produirait un quotient pair, rendant y pair.",
+                type: "multiple",
+                options: [
+                    "Non",
+                    "Oui",
+                    "Seulement si x est 2",
+                    "Seulement si y est 1"
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = 0;
+
+        function displayQuestion() {
+            const quizDiv = document.getElementById('quiz');
+            quizDiv.style.opacity = '0';
+            setTimeout(() => {
+                const q = questions[currentQuestion];
+                document.getElementById('question').textContent = `${currentQuestion + 1}. ${q.question}`;
+                const optionsDiv = document.getElementById('options');
+                optionsDiv.innerHTML = '';
+                if (q.type === 'input') {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'answer';
+                    input.style.cssText = 'padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: 100%;';
+                    optionsDiv.appendChild(input);
+                } else {
+                    q.options.forEach(option => {
+                        const label = document.createElement('label');
+                        label.style.cssText = 'display: block; margin: 10px 0; font-size: 16px;';
+                        const radio = document.createElement('input');
+                        radio.type = 'radio';
+                        radio.name = 'answer';
+                        radio.value = option;
+                        radio.style.cssText = 'margin-right: 10px;';
+                        label.appendChild(radio);
+                        label.appendChild(document.createTextNode(option));
+                        optionsDiv.appendChild(label);
+                    });
+                }
+                document.getElementById('feedback').style.opacity = '0';
+                document.getElementById('feedback').textContent = '';
+                document.getElementById('submit').style.cssText = 'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+                document.getElementById('submit').disabled = false;
+                quizDiv.style.opacity = '1';
+            }, 500);
+        }
+
+        function updateScore() {
+            document.getElementById('score').textContent = score;
+            document.getElementById('total').textContent = answered;
+        }
+
+        document.getElementById('submit').addEventListener('click', () => {
+            const q = questions[currentQuestion];
+            let userAnswer;
+            if (q.type === 'input') {
+                userAnswer = document.getElementById('answer').value.trim();
+            } else {
+                const selected = document.querySelector('input[name="answer"]:checked');
+                if (!selected) {
+                    document.getElementById('feedback').textContent = 'Veuillez sélectionner une réponse.';
+                    document.getElementById('feedback').style.color = '#e74c3c';
+                    document.getElementById('feedback').style.opacity = '1';
+                    return;
+                }
+                userAnswer = selected.value;
+            }
+            if (!userAnswer) {
+                document.getElementById('feedback').textContent = 'Veuillez entrer une réponse.';
+                document.getElementById('feedback').style.color = '#e74c3c';
+                document.getElementById('feedback').style.opacity = '1';
+                return;
+            }
+            const normalizedAnswer = userAnswer.toLowerCase().replace(/\s+/g, ' ').trim();
+            const normalizedCorrect = q.answer.toLowerCase().replace(/\s+/g, ' ').trim();
+            const isCorrect = normalizedAnswer === normalizedCorrect;
+            answered++;
+            if (isCorrect) {
+                score++;
+                document.getElementById('feedback').textContent = `Correct ! ${q.explanation}`;
+                document.getElementById('feedback').style.color = '#15803d';
+            } else {
+                document.getElementById('feedback').textContent = `Incorrect. La réponse correcte est : ${q.answer}. ${q.explanation}`;
+                document.getElementById('feedback').style.color = '#e74c3c';
+            }
+            document.getElementById('feedback').style.opacity = '1';
+            document.getElementById('submit').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+            document.getElementById('submit').disabled = true;
+            updateScore();
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                setTimeout(displayQuestion, 1000);
+            } else {
+                document.getElementById('quiz').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('quiz').innerHTML = '<p style="font-size: 16px; color: #374151;">Quiz terminé ! Votre score final est ' + score + ' sur ' + questions.length + '.</p>';
+                    document.getElementById('quiz').style.opacity = '1';
+                    document.getElementById('reset').style.display = 'block';
+                }, 500);
+            }
+        });
+
+        document.getElementById('reset').addEventListener('click', () => {
+            currentQuestion = 0;
+            score = 0;
+            answered = 0;
+            updateScore();
+            document.getElementById('reset').style.display = 'none';
+            displayQuestion();
+        });
+
+        displayQuestion();
+    </script>
