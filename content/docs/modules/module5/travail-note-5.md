@@ -34,129 +34,19 @@ weight: 4
 <p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
 
 # Question #1
-<p>Voici le code suivant :</p>
 
-```java
-abstract public class Animaux {
-   abstract public void greeting();
-}
-public class Chat extends Animaux {
-   @Override
-   public void greeting() {
-      System.out.println("Meow!");
-   }
-}
-public class Chien extends Animaux {
-   @Override
-   public void greeting() {
-      System.out.println("Woof!");
-   }
-   public void greeting(Chien another) {
-      System.out.println("Woooooooooof!");
-   }
-}
-public class GrosChien extends Chien {
-   @Override
-   public void greeting() {
-      System.out.println("Woow!");
-   }
-   @Override
-   public void greeting(Chien another) {
-      System.out.println("Woooooowwwww!");
-   }
-}
-```
+<p>Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes lors de l'utilisation de ces classes dans la classe TestAnimaux.java:</p>
 
-<p>Rappelez-vous qu'une classe publique en Java doit toujours apparaître dans un fichier ayant un nom correspondant.</p>
 
-<p>Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes lors de l'utilisation de ces classes :</p>
+{{< javaMultiRunner files="TestAnimaux.java;Animaux.java;Chat.java;Chien.java;GrosChien.java" >}}
 
-```java
-public class Main {
-   public static void main(String[] args) {
-      Chat cat1 = new Chat();
-      cat1.greeting();
-      Chien dog1 = new Chien();
-      dog1.greeting();
-      GrosChien bigDog1 = new GrosChien();
-      bigDog1.greeting();
-      
-      Animaux animal1 = new Chien ();
-      animal1.greeting();
-      Animaux animal2 = new Chien();
-      animal2.greeting();
-      Animaux animal3 = new GrosChien();
-      animal3.greeting();
-      
-      Chien dog2 = (Chien)animal2;
-      GrosChien bigDog2 = (GrosChien)animal3;
-      Chien dog3 = (Chien)animal3;
-      dog2.greeting(dog3);
-      dog3.greeting(dog2);
-      dog2.greeting(bigDog2);
-      bigDog2.greeting(dog2);
-      bigDog2.greeting(bigDog1);
-      Chat cat2 = (Chat)animal2;
-   }
-}
-```
-
-<iframe height="800px" width="100%" src="https://repl.it/@lemire/dog?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 # Question #2
 
 <p>En tant que programmeur, vous recevez le code suivant. Vous devez appliquer l'héritage afin que Cercle et Carré héritent à la fois de Forme et Resizable. Vous pouvez bien entendu modifier le code reçu. Utilisez votre bon jugement. Votre solution doit comprendre au moins une classe abstraite. Vous devez expliquer vos choix de manière détaillée: un travail remis avec des explications insuffisantes pourra se voir attribué la note de zéro, sans droit de reprise.</p>
 
-```java
-public class Cercle {
-    
-    double diametre = 0;
-    
-    public Cercle(double diametre) {
-        this.diametre = diametre;
-    }
-    
-    public double getPerimeter() {
-        return  Math.PI * diametre;
-    } 
-    
-    public void resize(double diametre) {
-        this.diametre = diametre;
-    }
-    
-}
 
-public class Carre {
-    
-    double taille = 0;
-    
-    public Carre(double taille) {
-        this.taille = taille;
-    }
-    
-    public double getPerimeter() {
-        return taille*4;
-    } 
-    
-     public void resize(double taille) {
-         this.taille = taille;
-     }
-    
-}
-
-public abstract class Resizable {
-    
-    public abstract void resize(double d);
-    
-}
-
-public abstract class Forme {
-    
-    public abstract double getPerimeter();
-}
-```
-
-<p><a href="https://replit.com/@lemire/dog#Main.java">https://replit.com/@lemire/dog#Main.java</a></p>
+{{< javaMultiRunner files="TestCercle.java;Cercle.java;Carre.java;Resizable.java;Forme.java" >}}
 
 # Question #3
 

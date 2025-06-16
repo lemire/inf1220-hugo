@@ -29,10 +29,11 @@ Dans ce cours, nous explorerons le langage Java, largement adopté dans l’indu
 
 
 
-<h3>Java pas à pas</h3>
+## Java pas à pas
 
 
-<p>Nous vous invitons maintenant à lire le chapitre 1 du manuel  Java Pas à Pas.  Vous devez <a href="https://github.com/RobertGodin/JavaPasAPas/raw/master/JavaPasAPas.pdf">charger le document PDF</a>. </p>
+<p>Nous vous invitons maintenant à lire le chapitre 1 du manuel  Java Pas à Pas.  Vous devez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF</a>. </p>
 
 
-<img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" alt="Couverture du manuel Java pas à pas" width="35%">
+<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>

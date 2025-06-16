@@ -5,32 +5,14 @@ weight: 5
 
 <h1><a id="top" name="top"></a>Module 2</h1><h2>Activité 2.4</h2><h2 class="partie2">La conception de méthodes/fonctions et leur appel.</h2>
 
-<p class="sommaire">Sommaire</p>
-<ul>
 
-<li><a href="#section1">Les méthodes</a></li>
 
-<li><a href="#section2">Les constructeurs</a></li>
-
-</ul>
-
-<p><a id="intro" name="section1"></a></p>
-
-<h1>Vidéo suggérée</h1>
-
-<p>Cette vidéo donne une bonne vue d'ensemble de la programmation orientée-objet en Java:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h1qQf1oETXs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h1>Les méthodes</h1>
 
 <p>Dans la plupart des langages de programmation modernes, il est possible de subdiviser le code en plusieurs sections appelées méthodes ou fonctions (le terme méthode est spécifique au langage Java, mais le terme fonction peut-être également utilisé). L'avantage est double, ces méthodes permettent une meilleure lecture du code et permet de généraliser et réutiliser des portions de code fréquent. De plus, en programmation orientée-objet, l'utilisation de méthodes est parfois appelée un passage de message. Ainsi, une classe peut offrir différentes méthodes à l'application qui peuvent être appelées en envoyant à celle-ci un message et des paramètres (ou non). De plus, la bibliothèque de code standard de Java, appelé <em>Application programming interface</em> (API), fournit plusieurs classes utiles telles que des structures de données (ex. ArrayList, Hashmap), des types avancés (ex. les chaînes de caractères String ou StringBuffer), des outils de gestion de flux de données (ex. pour l'écriture et la lecture dans les fichiers (ex. FileReader, FileInputStream). Chacune des classes de l'API offre un ensemble de méthodes pouvant être appelées pour une tâche ou un traitement donné. Voici un exemple d'appel de méthode avec la classe String : </p>
 
-```java
-/** 
- * Quelques exemples d&#39;appel de méthodes
- * @author cgouin
- */
+{{<inlineJava path="ExempleMethode.java" lang="java" >}}
 public class ExempleMethode {
     
     public static void main(String[] args) {
@@ -52,13 +34,14 @@ public class ExempleMethode {
     }
 
 }
-```
+{{</inlineJava>}}
+
 
 <h2>La définition d'une méthode/fonction simple</h2>
 
 <p>Une méthode est une suite d'instructions englobées dans un bloc {} permettant de réaliser une opération donnée. De façon générale, la syntaxe d'une méthode est la suivante :</p> 
 
-```java
+```java  {style=github}
 public static typeretourné nomdelafonction(la liste des paramètrés){
         //instructions 
 }
@@ -67,18 +50,18 @@ public static typeretourné nomdelafonction(la liste des paramètrés){
 
 <p>Vous trouverez ci-dessous la description de la définition de la méthode précédente :</p> 
 <ol>
-	<li><p><em>public</em> : tout programme Java a accès à cette fonction. Nous verrons plus loin d'autres types d'accès (protected, private).</p> </li>
+<li><p><em>public</em> : tout programme Java a accès à cette fonction. Nous verrons plus loin d'autres types d'accès (protected, private).</p> </li>
 
- 	<li> <p><em>static</em> : indique que la fonction que nous avons définie est statique, c'est-à-dire qu'elle peut être appelée sans la création d'une instance de la classe dans laquelle elle est définie. Si le mot-clé static n'est pas utilisé, alors il faut créer une instance de la classe où la méthode est définie. À ce moment, la méthode sera appelée pour l'instance de la classe spécifique. Pour pouvoir appeler une fonction qui n'est pas <em>static</em>, il faut absolument disposer d'une instance de la classe. Une fonction qui est <em>static</em> peut être appelée sans instance de la classe.  </p> </li>
+<li> <p><em>static</em> : indique que la fonction que nous avons définie est statique, c'est-à-dire qu'elle peut être appelée sans la création d'une instance de la classe dans laquelle elle est définie. Si le mot-clé static n'est pas utilisé, alors il faut créer une instance de la classe où la méthode est définie. À ce moment, la méthode sera appelée pour l'instance de la classe spécifique. Pour pouvoir appeler une fonction qui n'est pas <em>static</em>, il faut absolument disposer d'une instance de la classe. Une fonction qui est <em>static</em> peut être appelée sans instance de la classe.  </p> </li>
 
-	<li>  <p><em>typeretourné</em> : c'est le type de la variable retournée par la fonction. Si la fonction ne retourne rien, il faut utiliser le mot clé <em>void.</em></p> </li>
+<li>  <p><em>typeretourné</em> : c'est le type de la variable retournée par la fonction. Si la fonction ne retourne rien, il faut utiliser le mot clé <em>void.</em></p> </li>
 
-	<li>  <p><em>nomdelafonction</em> : Il faut choisir un nom assez explicite pour la fonction. Il faut également uniformiser la nomenclature des fonctions dans tout le programme afin d'en faciliter le débogage. Il est recommandé d'utiliser la convention <em>mixed-Case,</em> selon laquelle il est recommandé d'écrire le premier mot complètement en minuscule. Il existe plusieurs conventions et recommandations pour la nomenclature des différents éléments d'un programme, voici celle de l'entreprise Google pour le langage Java <a href="https://google.github.io/styleguide/javaguide.html#s5-naming">https://google.github.io/styleguide/javaguide.html#s5-naming</a></p> </li>
+<li>  <p><em>nomdelafonction</em> : Il faut choisir un nom assez explicite pour la fonction. Il faut également uniformiser la nomenclature des fonctions dans tout le programme afin d'en faciliter le débogage. Il est recommandé d'utiliser la convention <em>mixed-Case,</em> selon laquelle il est recommandé d'écrire le premier mot complètement en minuscule. Il existe plusieurs conventions et recommandations pour la nomenclature des différents éléments d'un programme, voici celle de l'entreprise Google pour le langage Java <a href="https://google.github.io/styleguide/javaguide.html#s5-naming">https://google.github.io/styleguide/javaguide.html#s5-naming</a></p> </li>
 
-	<li><p><em>la liste des paramètres</em> : La liste peut contenir plusieurs paramètres. Elle permet à Java de savoir quels types de paramètres sont reçus par la fonction, de même que leur nom. Alors, les instructions reçues par la fonction pourront utiliser ces paramètres comme des variables locales. Par contre, si la fonction n'accepte pas de paramètres, elle est définie ainsi :</p> </li>
+<li><p><em>la liste des paramètres</em> : La liste peut contenir plusieurs paramètres. Elle permet à Java de savoir quels types de paramètres sont reçus par la fonction, de même que leur nom. Alors, les instructions reçues par la fonction pourront utiliser ces paramètres comme des variables locales. Par contre, si la fonction n'accepte pas de paramètres, elle est définie ainsi :</p> </li>
 </ol>
 
-```java
+```java  {style=github}
 public static typeretourné nomDeLaFonction(){
         //instructions 
 }
@@ -154,11 +137,12 @@ public class TransformeurTexte {
 <p>Le programme ci-dessous illustre l'utilisation d'une fonction avec type retourné :</p>
 
 
-```java
+{{<inlineJava path="NombreAleatoire.java" lang="java" >}}
 public class NombreAleatoire {
     //déclaration des attributs : variable de classe et variable d&#39;instance  
 
-    /**     * La fonction getNombreAleatoire permet de générer un nombre aléatoire
+    /**     
+     * La fonction getNombreAleatoire permet de générer un nombre aléatoire
      *
      * @return typeRetourné
      */
@@ -170,7 +154,8 @@ public class NombreAleatoire {
         return num;
     }
 
-    /**     * La fonction main
+    /**     
+     * La fonction main
      *
      * @param args tableau d&#39;arguments
      */
@@ -180,13 +165,12 @@ public class NombreAleatoire {
         System.out.println("le nombre est " + nombre);
     }
 }
-```
-<p></p>
-<iframe height="800px" width="100%" src="https://repl.it/@lemire/NombreAleatoire?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+{{</inlineJava>}}
+
 
 <p>L'exemple de code ci-dessous présente une méthode avec plusieurs paramètres:</p>
 
-```java
+{{<inlineJava path="Exercice.java" lang="java" >}}
 public class Exercice {
     
     public static String fusionDeTexte(String texte1, String texte2) {
@@ -205,7 +189,7 @@ public class Exercice {
     }
     
 }
-```
+{{</inlineJava>}}
 
 
 <p>Nous pouvons catégoriser les fonctions de la façon suivante :</p> 

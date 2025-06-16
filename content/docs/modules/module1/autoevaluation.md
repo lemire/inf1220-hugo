@@ -4,7 +4,7 @@ weight: 3
 ---
 
 
-<h2>Est-ce que j'ai ce qu'il faut pour étudier l'informatique à l'Université ?</h2>
+## Est-ce que j'ai ce qu'il faut pour étudier l'informatique à l'Université ?
 
 
 <p>Le cours INF 1220 est souvent le premier cours universitaire d'informatique que certains étudiants suivent. Tous les
@@ -30,7 +30,7 @@ weight: 3
 </ol>
 
 
-<h2>Connaissances technologiques</h2>
+## Connaissances technologiques
 
 <p>Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d'avoir
     une certaine connaissance de base. Vous devriez savoir que les ordinateurs disposent d'un processeur, de mémoire, de
@@ -39,7 +39,7 @@ weight: 3
     questions. Il peut être difficile de suivre ce cours si vous ne savez vraiment pas ce qu'est un processeur ou de la
     mémoire informatique.</p>
 
-<h2>Mathématiques</h2>
+## Mathématiques
 
 
 <p><strong>Si vous n'avez pas fait les mathématiques du collégial ou pris un cours d'appoint équivalent, vous ne pouvez
@@ -72,7 +72,7 @@ weight: 3
 <p><strong>Important</strong>: Si vous n'avez pas les préalables mathématiques, il est possible que vous ne puissiez pas
     réussir le cours. C'est <strong>votre responsabilité</strong> de vous en assurer.</p>
 
-<h2>Autoévaluation (mathématiques)</h2>
+## Autoévaluation (mathématiques)
 
 <p>
     Faites l'autoévaluation mathématique suivante avant de continuer au sein du cours. Ces questions devraient être
@@ -101,7 +101,7 @@ weight: 3
     avertissements. Soyez responsable et évitez donc les ennuis: assurez-vous d'avoir une préparation adéquate avant de
     poursuivre dans le cours !</p>
 
-<h2>Autoévaluation (aptitude en programmation)</h2>
+## Autoévaluation (aptitude en programmation)
 
 
 
@@ -152,7 +152,7 @@ Cette recette est erronée. Si vous êtes incapable de voir l'erreur rapidement,
 
 Si vous n'avez pas les aptitudes requises, le cours peut vous paraître inaccessible. Il est possible que vous deviez consacrer beaucoup plus que 9 heures par semaine pour réussir le cours. Vous devez garder à l'esprit que le cours INF 1220 est un cours d'informatique universitaire offert au sein d'un cursus scientifique menant à des diplômes en informatique.
 
-<h2>Maîtrise de l'anglais</h2>
+## Maîtrise de l'anglais
 
 <p>Le site web du cours, ses travaux, ses vidéos et ses exercices, ainsi que notre manuel (Java pas à pas) et notre
     manuel de référence sont tous en français. Par contre, l'anglais est un incontournable en informatique. De temps en
@@ -169,7 +169,7 @@ Si vous n'avez pas les aptitudes requises, le cours peut vous paraître inaccess
 
 
 
-<h2>Un cours difficile ?</h2>
+## Un cours difficile ?
 
 <p>Le cours est un cours d'informatique universitaire, il conçu de manière à vous préparer à suivre une formation plus
     poussée en informatique. Il ne s'agit donc pas d'un cours technique qui vise à vous former pour un travail pratique

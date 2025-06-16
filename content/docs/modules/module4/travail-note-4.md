@@ -3,7 +3,7 @@ title: "Travail noté 4"
 weight: 4
 ---
 
-<h1>Travail noté 4 - Les flux d'entrées et de sorties</h1>
+# Travail noté 4 - Les flux d'entrées et de sorties
 
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>

@@ -1,0 +1,15 @@
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']], // Inline math delimiters
+      displayMath: [['$$', '$$'], ['\\[', '\\]']], // Block math delimiters
+      processEscapes: true, // Allow \$ to render as $
+      processEnvironments: true // Process LaTeX environments like \begin{equation}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], // Tags to ignore
+      ignoreHtmlClass: 'tex2jax_ignore' // Ignore elements with this class
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" ></script>

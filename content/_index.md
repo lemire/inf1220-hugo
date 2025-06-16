@@ -2,10 +2,31 @@
 title: "Accueil"
 ---
 
-<h2>Mot de bienvenue</h2>
+# Mot de bienvenue
 
 {{< youtube id="sCuxwhZWX0s" >}}
 
+This is an inline \(a^*=x-b^*\) equation.
+
+These are block equations:
+
+\[a^*=x-b^*\]
+
+\[ a^*=x-b^* \]
+
+\[
+a^*=x-b^*
+\]
+
+These are also block equations:
+
+$$a^*=x-b^*$$
+
+$$ a^*=x-b^* $$
+
+$$
+a^*=x-b^*
+$$
 
 C’est avec plaisir que je vous accueille dans ce cours d’introduction à la programmation. J’ai conçu ce cours pour ceux qui souhaitent entamer des études universitaires en informatique. Au terme de ce cours, vous serez familier
 avec tous les concepts essentiels en programmation. Vous aurez aussi acquis une compétence en programmation Java. Si
@@ -57,10 +78,20 @@ Le cours est divisé en 5 modules avec un ensemble d'activités introduisant les
 
 En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.
 
-Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://github.com/RobertGodin/JavaPasAPas/raw/master/JavaPasAPas.pdf) dès maintenant.
+Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf) dès maintenant.
 
 [Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/):
 
-<img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" alt="Couverture du manuel Java pas à pas" width="35%">
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
 Le manuel *Java pas à pas* commence à la base et vous fournit une introduction par étape.
+
+## Intelligence artificielle
+
+
+<p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
+<ul>
+<li>Décrivez votre utilisation de l'IA.  Une utilisation de l'IA sans déclaration peut être considérée comme une forme de faute. Contrairement à ce que vous pourriez croire, déclarer votre utilisation de l'IA vous protège.</li>
+<li>Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA&nbsp;? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.</li> 
+<li>Assurez-vous de bien expliquer vos résultats, en vos propres mots.</li>
+</ul>

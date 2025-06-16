@@ -1,56 +1,10 @@
 ---
-title: "Activité 3.1"
-weight: 1
+title: "Les structures de contrôle"
+weight: 2
 ---
 
-<h1>Organisation du cours</h1>
 
-
-<ol>
-<li>Module 1. Algorithme et pseudocode. Dans ce module, vous verrez comment concevoir des algorithmes simples et comment les présenter de manière précise en français.</li>
-<li>Module 2. Introduction au langage Java. Le concept de programme. Les types, les fonctions, les méthodes, les variables. Les variables de classe et les variables locales.</li>
-<li><strong>Module 3. Les structures de données, de contrôle et d'itération en Java. Manipulation de chaînes de caractères. Mise en oeuvre d'algorithmes avec des boucles.</strong></li>
-<li>Module 4. Les entrées et sorties.</li>
-<li>Module 5. La programmation orientée-objet: héritage et le polymorphisme.</li>
-</ol>
-
-<h1><a id="top" name="top"></a>Module 3</h1>
-<h1>Activité 3.0</h1><h2 class="partie11">GitHub et Stackoverflow (optionnel)</h2>
-
-<p>Maintenant que vous avez un peu plus d'expérience en programmation, vous devriez penser à vous inscrire à des sites populaires chez les programmeurs. C'est strictement optionnel. </p>
-<ul>
-<li><a href="https://stackoverflow.com">Stackoverflow</a> est un site ou des millions de programmeurs posent et répondent à des questions. Quand vous posez de bonnes questions ou répondez à des questions difficiles, vous « gagnez » des points. Malheureusement, tout se déroule en anglais. Ceci étant dit, la maîtrise de l'anglais est de facto essentielle pour être programmeur. Sur stackoverflow, <a href="https://stackoverflow.com/users/73007/daniel-lemire">vous y trouverez le professeur responsable du cours</a>. </li>
-<li><a href="https://github.com">GitHub</a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et <a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git</a>, vous pourrez y partager votre code, ou contribuer au code d'autres projets. C'est une excellente manière de développer un portfolio afin d'impressionner les employeurs potentiels. <a href="https://github.com/lemire">Vous  trouverez le professeur responsable du cours sur GitHub</a>. Encore une fois, tout s'y déroule en anglais, mais si vous ne maîtrisez pas l'anglais, vous aurez du mal à faire carrière en informatique.</li>
-</ul>
-
-<h2>Java pas à pas</h2>
-
-
-<p>Nous vous invitons maintenant à lire le chapitre <em>Structures de contrôle</em> du manuel  Java Pas à Pas par Robert Godin et Daniel Lemire.  Vous devez charger le  <a href="https://github.com/RobertGodin/JavaPasAPas/raw/master/JavaPasAPas.pdf">le document PDF</a>.</p>
-
-<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
-
-<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java Pas à Pas.</p>
-
-
-<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
-
-<h2>Commentaires constructifs</h2>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site</a>. Nous apprécions toujours vos commentaires constructifs.</p>
-
-<h2>Activité 3.1</h2><h2 class="partie2">Les structures de contrôle</h2>
-
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Le bloc d'instructions</a></li>
-
-<li><a href="#section2">La structure de contrôle IF-ELSE</a></li>
-
-<li><a href="#section3">La structure de contrôle SWITCH-CASE</a></li>
-
-</ul>
+# Les structures de contrôle
 
 <p>Les structures de contrôle permettent de contrôler des variables puis d'effectuer des actions basées sur le résultat du contrôle. Dans le langage Java, à l'exception de l'opération de contrôle à trois opérandes (vu précédemment dans le cours), il existe 2 formes de structure de contrôle : le if-else et le switch-case.</p>
 
@@ -74,7 +28,7 @@ weight: 1
 <p>Le branchement conditionnel (<strong>if</strong>) peut apparaître sous deux formes : avec ou sans clause <strong>else</strong>. Dans les deux cas, il s'agit d'un branchement booléen, c'est à dire que selon le contrôle (qui est au final une valeur booléenne, ex. i != 0) ou la valeur vraie permettra d'aller dans la portée de la structure ou non. </p> 
 <p>La forme :</p>
 
-```java
+```java  {style=github}
 if (expression) {
             instruction1;
 }
@@ -85,7 +39,7 @@ if (expression) {
 <p> </p> 
 <p>Considérons maintenant une forme avec <strong>if</strong> et <strong>else</strong>:</p> 
 
-```java
+```java  {style=github}
 if (expression) {
             instruction1;
 } else {
@@ -98,7 +52,7 @@ if (expression) {
 <p>Dans ce dernier cas, la clause <strong>else</strong> se rapporte à l'instruction <strong>if</strong>,  c'est-à-dire que son bloc (instruction2) est exécuté si et seulement si l'expression <strong>expression</strong> est fausse.</p> 
 <p>Ce qui est différent du programme : <br /> 
 
-```java
+```java  {style=github}
 if (expression1) {
             if (expression2) {
                 instruction2;
@@ -113,7 +67,7 @@ if (expression1) {
 <p>&nbsp;</p> 
 <p>Le programme suivant montre comment fonctionnent les instructions <em>if</em> et <em>else</em>. Ce programme montre la note obtenue par des personnes ayant terminé leur premier cours de Java.</p> 
 
-```java
+```java  {style=github}
 class IfElseDemontration {
     public static void main(String[] args) {
         int resultat = 76;
@@ -144,7 +98,7 @@ class IfElseDemontration {
 
 <p>Par exemple, la détermination d'une valeur paire ou impaire peut se faire par l'instruction suivante :</p>
 
-```java
+```java  {style=github}
 switch (i % 2) {
             case 0:
                 System.out.println("C'est un nombre pair");
@@ -158,7 +112,7 @@ switch (i % 2) {
 <p style="text-align: left; ">Le programme suivant montre l'utilisation de l'instruction switch. Il s'agit ici d'une banque qui définit quatre catégories de classes afin de donner des commissions à ses employés. Pour la classe 1, nous avons un taux de commission de 2 %, de 3,5 % pour la classe 2, de 5 % pour la classe 3 et de 0 % pour la classe 4.</p> 
 <p style="text-align: left; ">Voici le programme qui permet de réaliser cette opération :</p> 
 
-```java
+```java  {style=github}
 class SwitchExemple {
     public static void main(String[] args) {
         double TauxCommission;
@@ -183,6 +137,21 @@ class SwitchExemple {
 ```
 
 <br/>
+
+
+##  Java pas à pas
+
+
+<p>Nous vous invitons maintenant à lire le chapitre <em>Structures de contrôle</em> du manuel  Java Pas à Pas par Robert Godin et Daniel Lemire.  Vous devez charger le  <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF</a>.</p>
+
+<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+
+<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java Pas à Pas.</p>
+
+
+<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
+
 
 <h2>Lecture dans le livre de référence</h2>
 

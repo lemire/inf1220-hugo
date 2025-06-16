@@ -1,6 +1,6 @@
 ---
 title: "Travail noté 3"
-weight: 5
+weight: 8
 ---
 
 <h1>Travail noté 3 - Les structures de données, de contrôle et d'itération</h1>

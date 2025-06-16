@@ -17,7 +17,7 @@ weight: 3
 <h2>Question 1</h2>
 <p>Pourquoi le code suivant entraîne t-il une erreur à la compilation?</p>
 
-```java
+```java  {style=github}
 public class Test extends JFrame, Thread {
 
     String test;    
@@ -40,7 +40,7 @@ public class Test extends JFrame, Thread {
 <h2>Question 2</h2>
 <p>Voici ci dessous, une classe permettant de lire une image de type PNG et d'en extraire les occurrences de gradients de couleur :</p>
 
-```java
+```java  {style=github}
 public class PNGGradientExtractor {
 
     int[][] gradientMatrix;
@@ -70,7 +70,7 @@ public class PNGGradientExtractor {
 <details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 public abstract class GradientExtractor {
     
     protected int [][] gradientMatrix;
@@ -118,11 +118,12 @@ public class PNGGradientExtractor extends GradientExtractor {
 ```
 
 </div>
+</details>
 
 <h2>Question 3</h2>
-<p>Voici ci dessous, une classe permettant de calculer la regression linéaire d'une série temporelle d'entier :</p>
+<p>Voici une classe permettant de calculer la regression linéaire d'une série temporelle d'entier&nbsp;:</p>
 
-```java
+```java  {style=github}
 public class SerieTemporelle {
 
     int[] serie;
@@ -204,9 +205,7 @@ public class SerieTemporelle {
 <details><summary>Réponse</summary>
 <div>
 
-<p><a href="https://replit.com/@lemire/GummyCarpalAssembly#Main.java">Version repl.it</a></p>
-
-```java
+{{<inlineJava path="SerieTemporelle.java" lang="java" >}}
 public class SerieTemporelle<T>  {
     
     T[] serie;
@@ -282,12 +281,14 @@ public class SerieTemporelle<T>  {
     }
     
 }
-```
+{{</inlineJava>}}
+
+</details>
 
 <h2>Question 4</h2>
 <p>À partir du code suivant, veuillez en extraire une classe supérieure qui sera héritée et deux interfaces :</p>
 
-```java
+```java  {style=github}
 public class VoitureEssence {
     
     public boolean isRunning() {
@@ -324,7 +325,7 @@ public class VoitureElectrique {
 <details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 public class Voiture {
     
     public boolean isRunning() {
@@ -368,10 +369,13 @@ public interface MoteurEssence {
 }
 ```
 
+</div>
+</details>
+
 <h2>Question 5</h2>
 <p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
 
-```java
+```java  {style=github}
 public class Classe1 {
     
     public void uneMethode(String arg) {
@@ -385,17 +389,14 @@ public class Classe1 {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
+<details><summary>Réponse</summary>
+Il s'agit du polymorphisme ad hoc.
+</details>
 
 <h2>Question 6</h2>
 <p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
 
-```java
+```java  {style=github}
 public class Classe1 {
     
     public void uneMethode() {
@@ -419,18 +420,15 @@ public class Classe2 extends Classe1 {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
+<details><summary>Réponse</summary>
+Il s'agit du polymorphisme par héritage (ou d'héritage).
+</details>
 
 <h2>Question 7</h2>
 
 <p>Considérons la classe Point suivante :</p>
 
-```java
+```java  {style=github}
 public class Point {
     public Point (int abs, int ord) {
         x = abs; y = ord;
@@ -453,7 +451,7 @@ public class Point {
     suivantes ? Expliquez chacun de ces résultats.</li>
 </ol>
 
-```java
+```java  {style=github}
 public class Test1 {
     public static void main (String args[]) {
         int n=1; byte b=1;
@@ -463,7 +461,7 @@ public class Test1 {
 }
 ```
 
-```java
+```java  {style=github}
 public class Test2 {
     public static void main (String args[]) {
         int n=1; byte b=1;
@@ -473,9 +471,7 @@ public class Test2 {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
 <ol>
   <li style="text-align:justify;">Il s’agit de la surdéfinition ou
@@ -489,8 +485,8 @@ public class Test2 {
     réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
     est appelée.</li>
 </ol>
-</div>
-</div>
+
+</details>
 
 <h2>Question 8</h2>
 
@@ -499,7 +495,7 @@ par défaut.</p>
 
 <p>Soient les trois instructions suivantes :</p>
 
-```java
+```java  {style=github}
 A a = new A();
 Object o = new Object();
 o=a;
@@ -512,18 +508,17 @@ o=a;
   <li>deux variables de même type contenant des références différentes ;</li>
   <li>rien de tout cela car une erreur est générée.</li>
 </ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
+
 <p>Bonne réponse : 2. </p>
-</div>
-</div>
+</details>
+
 
 <h2>Question 9</h2>
 
 <p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
 
-```java
+```java  {style=github}
 interface I {
     void methode1();
     void methode2();
@@ -541,7 +536,7 @@ methode3 et methode4 de I.</p>
 
 <p>Un programmeur songe à la solution suivante :</p>
 
-```java
+```java  {style=github}
 abstract class ClasseDeBase {
     abstract public void methodeDifferee();
 }
@@ -573,1859 +568,13 @@ public class ClasseB extends ClasseDeBase implements I {
 }
 ```
 
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-<h2>Question 9</h2>
-
-<p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
-
-```java
-interface I {
-    void methode1();
-    void methode2();
-    void methode3();
-    void methode4();
-}
-```
-
-<p style="text-align:justify;">On voudrait faire partager cette interface par
-deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base
-ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans
-cette classe de base mais non encore définie. De plus, ClasseA ne doit
-implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter
-methode3 et methode4 de I.</p>
-
-<p>Un programmeur songe à la solution suivante :</p>
-
-```java
-abstract class ClasseDeBase {
-    abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-
-    void methode1() {
-        System.out.print("instructions de méthode1 ici");
-    }
-
-    void methode2() {
-        System.out.print("instructions de méthode2 ici");
-    }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-    public void methodeDifferee() {
-        System.out.print("instructions de la méthode différée ici");
-    }
-    void methode3() {
-        System.out.print("instructions de méthode3 ici");
-    }
-    void methode4() {
-        System.out.print("instructions de méthode4 ici");
-    }
-}
-```
-
-<h2>Question 5</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode(String arg) {
-        
-    }
-    
-    public void uneMethode(StringBuffer arg) {
-        
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme ad hoc.
-</div>
-</div>
-
-<h2>Question 6</h2>
-<p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
-
-```java
-public class Classe1 {
-    
-    public void uneMethode() {
-
-    }
-    
-}
-
-public class Classe2 extends Classe1 {
-    
-    public void uneMethode() {
-
-    }
-
-    public static void main(String[] args) {
-             
-        Classe2 uneClase = new Classe2();
-        ((Classe1) uneClase).uneMethode();
-    }
-    
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Il s'agit du polymorphisme par héritage (ou d'héritage).
-</div>
-</div>
-
-<h2>Question 7</h2>
-
-<p>Considérons la classe Point suivante :</p>
-
-```java
-public class Point {
-    public Point (int abs, int ord) {
-        x = abs; y = ord;
-    }
-    public void deplace (int dx, byte dy) {
-        x += dx; y += dy;
-    }
-    public void deplace (byte dx, int dy) {
-        x += dx; y += dy;
-    }
-    int x, y;
-}
-```
-
-<p></p>
-<ol>
-  <li>On voit que la classe Point a deux méthodes qui portent le même nom :
-    Quelle technique est mise en œuvre pour y parvenir ici ?</li>
-  <li>Quel est le résultat de la compilation de chacune des deux classes
-    suivantes ? Expliquez chacun de ces résultats.</li>
-</ol>
-
-```java
-public class Test1 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace(b, b);
-    }
-}
-```
-
-```java
-public class Test2 {
-    public static void main (String args[]) {
-        int n=1; byte b=1;
-        Point a = new Point(n,n);
-        a.deplace (2*b, b);
-    }
-}
-```
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-
-<ol>
-  <li style="text-align:justify;">Il s’agit de la surdéfinition ou
-    surcharge, car les deux méthodes ont des signatures différentes.</li>
-  <li style="text-align:justify;">Test1 génère une erreur de compilation à
-    cause de l’ambiguïté dans le choix de la méthode deplace à appeler.
-    Cette ambiguïté est liée au fait que chacune des deux méthodes peut être
-    appelée, compte tenu des conversions implicites de byte en int. Test2
-    compile normalement, l’ambiguïté soulignée ci-dessus est levée par
-    le fait que 2*b force d’office la conversion du premier paramètre
-    réel en int, et donc c’est la méthode déplace (int dx, byte dy) qui
-    est appelée.</li>
-</ol>
-</div>
-</div>
-
-<h2>Question 8</h2>
-
-<p>On suppose qu’il existe une classe A dotée d’un constructeur
-par défaut.</p>
-
-<p>Soient les trois instructions suivantes :</p>
-
-```java
-A a = new A();
-Object o = new Object();
-o=a;
-```
-
-<p>A l’issue de ces trois instructions, on a :</p>
-<ol>
-  <li>deux variables de même type et contenant les mêmes références ;</li>
-  <li>deux variables de type différent contenant les mêmes références ;</li>
-  <li>deux variables de même type contenant des références différentes ;</li>
-  <li>rien de tout cela car une erreur est générée.</li>
-</ol>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
-<p>Bonne réponse : 2. </p>
-</div>
-</div>
-
-## Question 9
-
-On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit
-
-```java
-interface I {
-  void methode1();
-  void methode2();
-  void methode3();
-  void methode4();
-}
-```
-
-On voudrait faire partager cette interface par deux classes ClasseA et ClasseB pouvant être regroupées dans une classe de base ClasseDeBase et partageant au moins une méthode (methodeDifferee) présente dans cette classe de base mais non encore définie. De plus, ClasseA ne doit implémenter que methode1 et methode2 de I, alors que ClasseB doit implémenter methode3 et methode4 de I.
-
-Un programmeur songe à la solution suivante :
-
-```java
-abstract class ClasseDeBase {
-  abstract public void methodeDifferee();
-}
-
-public class ClasseA extends ClasseDeBase implements I {
-  public void methodeDifferee() {
-       System.out.print("instructions de la méthode différée ici");
-  }
-
-  void methode1() {
-       System.out.print("instructions de méthode1 ici");
-  }
-
-  void methode2() {
-       System.out.print("instructions de méthode2 ici");
-  }
-}
-
-public class ClasseB extends ClasseDeBase implements I {
-  public void methodeDifferee() {
-       System.out.print("instructions de la méthode différée ici");
-  }
-
-  void methode3() {
-       System.out.print("instructions de méthode3 ici");
-  }
-
-  void methode4() {
-       System.out.print("instructions de méthode4 ici");
-  }
-}
-```
-
-Quel est le problème avec cette solution ? Proposer une solution qui corrige ce problème.
-
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
 Le problème avec la solution est que chacune des classes ClasseA et ClasseB doit impérativement implémenter toutes les méthodes de l’interface I, et pas seulement certaines.
 
 Une solution c’est de faire implémenter l’interface plutôt par la classe abstraite ClasseDeBase. C’est-à-dire :
 
-```java
+```java  {style=github}
 abstract class ClasseDeBase implements I {
    abstract public void methodeDifferee();
    void methode1() {
@@ -2467,18 +616,15 @@ public class ClasseB extends ClasseDeBase {
 }
 ```
 
-</div>
-</div>
+</details>
 
 ## Question 10
 
 On dispose de différentes classes d’animaux (Poissons, Reptiles, Oiseaux, Mammifères) qui partagent en commun la méthode seDeplace. On voudrait effectuer un traitement qui consiste juste pour chaque animal d’une classe à afficher comment il se déplace. Ainsi, pour un Poisson p, p.seDeplace doit afficher « je suis un poisson, je nage » ; un Reptile « je suis un reptile, je rampe » ; un Oiseau « je suis un oiseau, je vole » ; un Mammifère « je suis un mammifère, je marche, je vole et je nage ». Proposer une solution en utilisant un seul tableau d’objets.
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 public class Main {
       public static void main(String[] args) {
       Animaux[] tableau = new Animaux[4];
@@ -2520,6 +666,5 @@ class Mammiferes extends Animaux {
 }
 ```
 
-</div>
-</div>
+</details>
 

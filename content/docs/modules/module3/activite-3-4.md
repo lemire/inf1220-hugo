@@ -1,22 +1,9 @@
 ---
-title: "Activité 3.4"
+title: "Les exceptions"
 weight: 6
 ---
 
-<h1><a id="top" name="top"></a>Module 3</h1><h2>Activité 3.4</h2><h2 class="partie2">Les structures Try-Catch</h2>
-
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Les erreurs/exceptions en Java</a></li>
-
-<li><a href="#section2">La structure Try-Catch</a></li>
-
-<li><a href="#section3">Lancer des exceptions</a></li>
-
-</ul>
-
-<p><a id="intro" name="section1"></a></p>
+# Les exceptions
 
 <h1>Les erreurs/exceptions en Java</h1>
 
@@ -31,7 +18,7 @@ weight: 6
 
 <p>La structure try-catch permet "d'enrober" une partie du code dans une structure permettant de récupérer les erreurs ou fautes lancées par la JVM ou l'application et gérer celles-ci. Voici la structure générale d'un try-catch pour une exception et une erreur:</p>
 
-```java
+```java  {style=github}
 try {
     //Code ...
 } catch (Exception e) {
@@ -47,7 +34,7 @@ try {
 
 <p>Dans le code ci-dessus, la partie intérieure de la structure comprend le code susceptible de générer des fautes ou exception. La partie inférieure (après le catch) permet l'ajout de code pour gérer l'erreur ou l'exception. L'exemple ci-dessus présente la gestion d'une erreur système, par contre, comme nous l'avons mentionné auparavant, il est généralement déconseillé "d'attraper" les erreurs (et non les exceptions). Toutefois, il peut être utile d'attraper celles-ci, de les journaliser et d'ensuite cesser l'exécution du programme. Voici quelques exemples de façon de gérer les exceptions ou erreurs :</p>
 
-```java
+```java  {style=github}
 try {
     //Code ...
 } catch (Exception e) {
@@ -89,7 +76,7 @@ try {
 
 <p>Il est également possible d'utiliser plusieurs catchs afin de mieux gérer le type d'exception. Dans l'exemple ci-dessous, l'exception de type NullPointerException sera "attrapée" avant l'Exception générale :</p>
 
-```java
+```java  {style=github}
 try {
     String test = null;
     test.charAt(0);
@@ -109,7 +96,7 @@ try {
 
 <p>Il est possible dans une application de lancer des exceptions dans le code en utilisant le mot-clé "throw" et le faisant suivant par l'instanciation d'un objet de type Exception ou ses sous-classes (l'héritage sera vu dans le prochain module) : NullPointerException, SQLException, etc. : </p>
 
-```java
+```java  {style=github}
 throw new Exception();
 
 // Exemple d'exception pouvant être lié à des requêtes SQL
@@ -118,7 +105,7 @@ throw new SQLException("USER DOESN'T EXIST");
 
 <p>Toutefois, une fois une exception lancée, il est nécessaire de la récupérée à un certain moment, sinon, elle remontera de méthode en méthode jusqu'à la méthode "main" et amènera l'arrêt du programme. Pour ce faire, il faut soit : attraper la faute dans une structure try-catch ou bien lancer l'exception à la méthode ayant invoqué la méthode où l'exception est lancée. Pour ce faire, il faut ajouter à la fin de la description d'une méthode/fonction, le mots-clé "throws". Il y a donc une hiérarchie d'appel de méthode et si l'exception n'est pas attrapée, celle-ci remontera les appels jusqu'au niveau supérieur, soit la méthode main. Voici un exemple pour illustrer cette remontée d'une exception : </p>
 
-```java
+```java  {style=github}
 import java.time.DateTimeException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

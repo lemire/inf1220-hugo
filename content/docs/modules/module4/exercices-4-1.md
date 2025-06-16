@@ -1,9 +1,9 @@
 ---
-title: "Exercices 4.1"
+title: "Exercices sur les flux"
 weight: 3
 ---
 
-<h1><a id="top" name="top"></a>Module 4</h1><h2>Exercices 4.1</h2><h2 class="partie2">Exercices sur les flux</h2>
+# Exercices sur les flux
 
 <h1>Questions/Réponses</h1>
 <p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.</p>
@@ -19,7 +19,7 @@ weight: 3
 <h2>Question 1</h2>
 <p>Le programme suivant permet-il de lire deux lignes entrées au clavier ?</p>
 
-```java
+```java  {style=github}
 import java.util.Scanner;
 class TestIn {
     public static void main(String[] args) {
@@ -34,17 +34,16 @@ class TestIn {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Oui, la classe Scanner avec en paramètre l'entrée de la console, permet de lire des entrées au clavier. Le code fait la lecture de deux lignes de données au clavier.</p>
+<details><summary>Réponse</summary>
+<p>Oui, la classe Scanner avec en paramètre l'entrée de la console, permet de lire des entrées au clavier. Le code fait la lecture de deux lignes de données au clavier.</p>
 
-<p>Notez qu'on évite délibérément d'appeler scanner.close() puisque cela aurait pour conséquence la <em>fermeture</em> de <tt>System.in</tt> ce qui n'est généralement pas souhaitable. La ressource  <tt>System.in</tt> est automatiquement <em>fermée</em> à la fin du programme dans tous les cas, il n'est donc pas nécessaire de s'en préoccuper.</p></div>
-</div>
+<p>Notez qu'on évite délibérément d'appeler scanner.close() puisque cela aurait pour conséquence la <em>fermeture</em> de <tt>System.in</tt> ce qui n'est généralement pas souhaitable. La ressource  <tt>System.in</tt> est automatiquement <em>fermée</em> à la fin du programme dans tous les cas, il n'est donc pas nécessaire de s'en préoccuper.</p>
+</details>
 
 <h2>Question 2</h2>
 <p>Que fait ce programme ?</p>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.util.*;
 class TestFichOut {
@@ -72,20 +71,17 @@ class TestFichOut {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Il prend chaque ligne saisie par l'utilisateur et il l'écrit dans un fichier. Par ailleurs, notez que la variable ligne est inutilisée.</p></div>
-</div>
+<details><summary>Réponse</summary>
+<p>Il prend chaque ligne saisie par l'utilisateur et il l'écrit dans un fichier. Par ailleurs, notez que la variable ligne est inutilisée.</p>
+</details>
 
 <h2>Question 3</h2>
 
 <p>En supposant que vous avez les droits d’écriture et de lecture appropriés, créez un fichier séquentiel binaire (monFichier) dans un répertoire (monRepertoire) sur la racine. On suppose que le fichier et le répertoire n’existent pas déjà. Ecrire dans ce fichier les nombres entiers de 0 à 9.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.nio.file.*;
 public class Exercice1M4{
@@ -116,18 +112,15 @@ public class Exercice1M4{
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 4</h2>
 
 <p>Ecrire un programme qui affiche le contenu du fichier de l’exercice précédent, puis ajoute à ce fichier le double des entiers impairs de 0 à 9. Les noms de répertoire et de fichier devront être fournis par l’utilisateur qui les saisira au clavier.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
@@ -186,8 +179,7 @@ public class Exercice2M4 {
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 5</h2>
 
@@ -195,11 +187,9 @@ public class Exercice2M4 {
 
 <p>Quelle est la différence entre cet exercice et l’exercice précédent du point de vue des types d’accès et des possibilités qui y sont liées?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
@@ -238,7 +228,7 @@ public class Exercice3M4 // Exercice3M4
         entree.close();
         System.out.println("***il va maintenant être modifié si necessaire*** ");
         // DataOutputStream sortie = new DataOutputStream(newBufferedOutputStream(new
-        // FileOutputStream(monFichier, true)));
+        // FileOutputStream(monFichier, true));
         RandomAccessFile sortie = new RandomAccessFile(s + nomRepertoire + s + nomFichier, "rw");
         long taille = sortie.length();
         int i = 0;
@@ -264,18 +254,16 @@ public class Exercice3M4 // Exercice3M4
 ```
 
 <p>La différence réside en ceci que l’accès direct nous facilite la mise à jour du fichier. Si nous devrions faire cette mise à jour lors d’un accès séquentiel, ce serait extrêmement laborieux (une solution consistant à utiliser un flux de sortie et un flux d’entrée en même temps). Il ne faut pas confondre cette mise à jour des données déjà présentes dans le fichier avec l’ajout de nouveaux éléments dans le même fichier tel que ce qui est fait à l’exercice précédent par exemple.</p>
-</div>
-</div>
+
+</details>
 
 <h2>Question 6</h2>
 
 <p>Créez un fichier texte nommé unFichier dans le répertoire courant et écrivez-y  « Bonjour, je suis bien créé ». Ce nom sera fourni par l’utilisateur sous forme chaîne « unFichier.txt ».</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.util.Scanner;
 public class Exercice4M4 { //Exercice4M4
@@ -292,19 +280,16 @@ public class Exercice4M4 { //Exercice4M4
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 7</h2>
 <p>Ecrire un code qui prend en paramètre le nom du fichier de l’exercice précédent (unFichier.txt), et affiche son chemin d’accès (c’est-à-dire le répertoire courant) ainsi que le contenu du fichier.</p>
 
 <p>On suppose dans cet exercice qu’on reste dans le même répertoire courant qu’à l'exercice précédent.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.*;
 import java.util.Scanner;
 public class Exercice5M4 { // Exercice5M4
@@ -330,5 +315,4 @@ public class Exercice5M4 { // Exercice5M4
 }
 ```
 
-</div>
-</div>
+</details>

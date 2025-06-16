@@ -3,10 +3,9 @@ title: "Examen"
 weight: 6
 ---
 
-<h1>Examen final</h1>
+# Examen final
 
 <p>L&rsquo;objectif principal de l&rsquo;examen est de valider le savoir-faire que vous avez intégré tout au long du cours. Comme la question revient sans cesse, soyons clair sur ce point: <strong>l'examen couvre toute la matière du cours.</strong> </p>
-
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors de l'examen</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
 
@@ -16,29 +15,34 @@ weight: 6
 
 
 <div style=" border: 2px solid red; margin: 2em; padding:2em;">
-<h2>Entretien de suivi</h2>
+
+## Entretien de suivi
 
 <p>Vérifiez si vous êtes dans une version du cours qui nécessite un entretien de suivi. <strong>Vous trouverez cette information sur le portail étudiant.</strong> En cas de doute, vous pouvez communiquer avec la personne qui vous encadre au sein du cours.</p>
 
 <p>Si vous êtes inscrits dans un version du cours avec entretien de suivi, cet entretien est est obligatoire. L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen.</p>
 
-<h3>Qu’est-ce que l’entretien de suivi?</h3>
+### Qu’est-ce que l’entretien de suivi?
 <p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
 Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer une réponse.</p>
-<h3>L’entretien de suivi est-il obligatoire?</h3>
+
+### L’entretien de suivi est-il obligatoire?
 <p>Oui. L'entretien de suivi constitue une étape obligatoire.
 Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en mesure de présenter de pièce d’identité avec photo, la note 0 sera attribuée à votre examen.</p>
-<h3>À quel moment se tient-il?</h3>
+
+### À quel moment se tient-il?
 <p>Une fois votre examen corrigé, vous disposez de trois jours ouvrables pour prendre un rendez-vous. Vous pouvez écrire à la personne qui vous encadre ou vous pouvez le faire dans votre portail si cette personne affiche ses disponibilités.</p>
-<h3>Comment se déroule-t-il?</h3>
+
+### Comment se déroule-t-il?
 <p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen.</p>
-<h3>Dois-je me préparer à l'entretien de suivi?</h3>
+
+### Dois-je me préparer à l'entretien de suivi?
 <p>Aucune préparation n’est nécessaire.</p>
-<h3>L’entretien de suivi est-il noté?</h3>
+
+### L’entretien de suivi est-il noté?
 <p>Oui. L’entretien de suivi fait l’objet d’une notation indiquant votre capacité d’expliquer vos réponses à l’examen de vive voix.<p>
 
-
-<h3>Dans quelles conditions est-ce que l’entretien de suivi peut mener à une note de zéro dans le cours?</h3>
+### Dans quelles conditions est-ce que l’entretien de suivi peut mener à une note de zéro dans le cours?
 
 <ul>
 <li>Vous ne vous présentez pas à l'entretien;</li>
@@ -51,18 +55,17 @@ Qui puis-je contacter si j’ai des questions?
 <p>En cas de besoin, n’hésitez pas à communiquer avec la personne responsable de votre encadrement.</p>
 </div>
 
-<h2>Se préparer</h2>
+## Se préparer
 
 <p>Les étudiants qui passent un examen en ligne doivent s'assurer d'avoir un environnement adéquat. Il se peut que vous deviez programmer pendant l'examen en ligne sur votre ordinateur: il est de votre responsabilité d'avoir un ordinateur configuré d'une manière efficace avec un bon clavier et tous les logiciels dont vous avez besoin. Si vous travaillez sur un ordinateur portable, gardez-le sous tension. Assurez-vous de travailler sur un ordinateur stable. Au besoin, prévoyez un second ordinateur. Assurez-vous d'avoir une bonne connection Internet avec une solution de rechange (par exemple, un branchement par l'entremise de votre téléphone cellulaire). Pour les étudiants qui passent l'examen en salle, assurez-vous d'arriver à l'heure et d'être bien reposé.</p>
 
 <p>Nous comprenons que la vie vous réserve des surprises. Parfois un logiciel plante. Parfois il faut redémarrer un ordinateur et ainsi de suite. Néanmoins, vous êtes responsable d'être bien préparé.</p>
 
-<h2>Gestion du temps à l'examen</h2>
+## Gestion du temps à l'examen
 
 <p>L'examen peut comporter plusieurs questions de programmation. Vous devez donc pouvoir fournir en quelques minutes du code fonctionnel ainsi que des explications précises. Vous devez donc pouvoir écrire un programme Java correct et l'expliquer en une trentaine de minutes. Même quand vous avez le droit à de la documentation lors de l'examen, vous n'avez néanmoins pas le temps de faire de la lecture. Vous devez donc arriver bien entraîné et bien préparé.</p>
 
-<h2>Examen factice 1</h2>
-
+## Examen factice 1
 
 <p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux cinq questions suivantes :</p>
 <ol>
@@ -75,8 +78,7 @@ Qui puis-je contacter si j’ai des questions?
 <p>Dans tous les cas, vous devez expliquer vos solutions et produire du code valable.</p>
 <p>Vous devriez arrivez sans mal à produire les solutions attendues en moins de 3 heures. Si vous n'y arrivez pas, c'est que vous manquez de pratique.</p>
 
-
-<h2>Examen factice 2</h2>
+## Examen factice 2
 
 <p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux cinq questions suivantes :</p>
 <ol>
@@ -90,8 +92,7 @@ Qui puis-je contacter si j’ai des questions?
 <p>Dans tous les cas, vous devez expliquer vos solutions et produire du code valable.</p>
 <p>Vous devriez arrivez sans mal à produire les solutions attendues en moins de 3 heures. Si vous n'y arrivez pas, c'est que vous manquez de pratique.</p>
 
-
-<h2>Pour se pratiquer à programmer</h2>
+## Pour se pratiquer à programmer
 
 <p>Si vous avez fait toutes les lectures, les deux examens factices, tous les exercices et tous les travaux du cours honnêtement, alors vous êtes prêt pour l'examen. Certains étudiants souhaitent se pratiquer davantage. </p>
 
@@ -117,23 +118,19 @@ Qui puis-je contacter si j’ai des questions?
 <li><a href="https://www.amazon.ca/Java-Cookbook-Problems-Solutions-Developers/dp/1492072583/">Java Cookbook: Problems and Solutions for Java Developers</a> </li>
 </ol>
 
-<h2>Les reports de la date de fin de cours</h2>
-
+## Les reports de la date de fin de cours
 
 <p><strong>Rappel</strong>: le professeur ne peut pas modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les professeurs n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
 
 
 <p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
 
-
-<h2>Déroulement et le jour de l'examen</h2>
+## Déroulement et le jour de l'examen
 
 <p>Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire au professeur pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.</p>
 
 <p>Le professeur ne peut changer la date, le lieu ou l'heure de votre examen. Il ne contrôle pas l'environnement technologique lors de l'examen. Un service distinct et indépendant au sein de l'Université gère les examens.</p>
 
-
-
-<h2>Résultat et rétroaction sur l'examen</h2>
+## Résultat et rétroaction sur l'examen
 
 <p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. Le professeur ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception).</p>

@@ -1,14 +1,13 @@
 
 ---
-title: "Activité 5.1"
+title: "L'héritage, les classes abstraites et les interfaces"
 weight: 1
 ---
 
 
-<h1><a id="top" name="top"></a>Module 5</h1>
-<h2>Java pas à pas</h2>
+# Java pas à pas
 
-<p>Nous vous invitons maintenant à lire le chapitre <em>Développement de classes</em> du manuel Java pas à pas par Robert Godin et Daniel Lemire. Vous trouverez <a href="https://github.com/RobertGodin/JavaPasAPas/blob/master/JavaPasAPas.pdf">le document PDF sur le site GitHub</a>. Pour enregistrer le PDF sur votre machine, cliquez sur le bouton « Download ».</p>
+<p>Nous vous invitons maintenant à lire le chapitre <em>Traitement de fichiers</em> du manuel Java pas à pas par Robert Godin et Daniel Lemire. Vous trouverez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF</a>.  </p>
 
 <p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
@@ -18,10 +17,8 @@ weight: 1
 
 <p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
 
-<h2>Commentaires constructifs</h2>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site</a>. Nous apprécions toujours vos commentaires constructifs.</p>
 
-<h2>Activité 5.1</h2><h2 class="partie2">L'héritage, les classes abstraites et les interfaces</h2>
+# L'héritage, les classes abstraites et les interfaces
 
 
 
@@ -33,7 +30,7 @@ weight: 1
 <p align="left" style="text-align: justify;">Pour illustrer ce concept, essayons de concevoir un jeu. Tous les jeux ont un nom, un but, un nombre de joueurs requis pour faire une partie, des règles à respecter… Nous pourrions donc envisager de créer une classe Jeu pour représenter les jeux. <br />Toutefois, les règles du jeu Tetris diffèrent de celles de Sudoku, et le nombre de joueurs d'une partie de football n'est pas le même que celui d'une partie de tennis… <br />Supposons que nous implantions une méthode jouer() pour la classe Jeu. Un joueur de tennis ne joue pas de la même façon qu'un joueur de football. Il est par conséquent impossible d'obtenir une implémentation de jouer() qui peut correspondre à tous les jeux.</p> 
 <p align="left" style="text-align: justify;">L'héritage est un mécanisme qui permet de résoudre ce genre de problème. En fait, nous spécifions dans la classe Jeu, appelée superclasse, l'ensemble des comportements communs à tous les jeux sans fournir une implémentation. Nous créons ensuite des sous-classes qui fournissent pour chaque jeu une implémentation appropriée. D'une manière générale, le format de déclaration d'une sous-classe est le suivant :</p> 
 
-```java
+```java  {style=github}
 public class SousClasse extends SuperClasse {
     // les instructions
 
@@ -43,7 +40,7 @@ public class SousClasse extends SuperClasse {
 <p align="left">Pour signifier l'héritage, nous employons le mot clé <em>extends.</em> Nous créons ainsi une classe qui dérive d'une classe existante, qui portera le nom de <em>superclasse,</em> et la nouvelle classe sera nommée <em>sous-classe</em>.</p> 
 <p align="left">Voici maintenant la façon de définir une classe Sudoku qui hérite de la superclasse Jeu :</p> 
 
-```java
+```java  {style=github}
 public class Sudoku extends Jeu {
 
     // ici nous définissons les champs et les méthodes
@@ -68,7 +65,7 @@ public class Sudoku extends Jeu {
 
 <p>Voilà l'exemple pour les AlgorithmeAI en code, avec deux niveaux d'héritage :</p>
 
-```java
+```java  {style=github}
 public class AlgorithmeIA {
     
     /**
@@ -133,7 +130,7 @@ public class FastDynamicTimeWarping extends AnalyseSerieTemporelle {
 <p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui est <em>public</em>, cette méthode sera dite <em>surchargée</em>. Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe.</p> 
 <p style="text-align: justify;">Supposons que nous définissons notre classe Jeu, qui possède une méthode jouer. La superclasse qui représente tous les jeux possibles peut être définie de la manière suivante :</p> 
 
-```java
+```java  {style=github}
 public class Jeu {
 
     public void jouer() {
@@ -144,7 +141,7 @@ public class Jeu {
 
 <p style="text-align: justify;">Nous pouvons déclarer dans la classe Sudoku, une sous-classe qui hérite de la superclasse Jeu, à laquelle nous appliquons une implémentation de la méthode jouer :</p> 
 
-```java
+```java  {style=github}
 public class Sudoku extends Jeu {
     public void jouer() {
         System.out.println("Je viens de commencer le Sudoku niveau 1!");
@@ -171,7 +168,7 @@ public class Sudoku extends Jeu {
 <p align="left" style="text-align: justify;">Nous connaissons déjà les mots clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
 <p align="left" style="text-align: justify;">Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant :</p> 
 
-```java
+```java  {style=github}
 class Jeu {
     private String nomdujeu;
 
@@ -197,7 +194,7 @@ public class Sudoku extends Jeu {
 <h2 style="text-align: justify;">Utilisation des mots clés <em>this</em> et <em>super</em> dans une sous-classe</h2> 
 <p style="text-align: justify;">Nous avons déjà vu dans les leçons précédentes que le mot clé <em>this</em> sert à nous référer à une instance courante de l'objet comme dans l'exemple ci-dessous.</p> 
 
-```java
+```java  {style=github}
 public class Sudoku {
     private int difficulte;
 
@@ -211,7 +208,7 @@ public class Sudoku {
 <p dir="ltr" style="text-align: justify;">Quand nous voulons nous référer à un champ ou à une méthode qui appartient à une classe de base, nous utilisons le mot clé <em>super</em>. Cela fonctionne de la même façon qu'avec <em>this,</em> mais super renvoie à une instance de la classe de base au lieu de celle de la classe courante.</p> 
 <p dir="ltr" style="text-align: justify;">Considérons les deux classes suivantes :</p> 
 
-```java
+```java  {style=github}
 class Jeu {
     public void choixDeJeu() {
         System.out.println(" Niveau expert!");
@@ -234,7 +231,7 @@ public class Sudoku extends Jeu {
 <h2 style="text-align: justify;">Constructeur d'une classe héritée</h2> 
 <p><br />Le constructeur de la classe dérivée (ou héritée) fait appel au constructeur de la superclasse au moment de la création d'un objet. (Le SUDOKU est avant tout un jeu.) Cet appel au constructeur de la superclasse peut être implicite ou explicite. Dans ce dernier cas, le constructeur de la classe héritée exécutera la première instruction.</p> 
 
-```java
+```java  {style=github}
 class Jeu {
     String nom;
     String description;
@@ -265,7 +262,7 @@ public class Sudoku extends Jeu {
 <h2>Utilisation du modificateur <em>final</em></h2> 
 <p>Il arrive que nous ne souhaitions pas offrir une possibilité d'héritage à une certaine classe. Dans ce cas, nous la définissons avec le mot clé <em>final</em>. <br />Si le mot clé <em>final</em> est utilisé dans la définition d'une méthode, celle-ci ne pourra plus être redéfinie par héritage. <br />Enfin, nous définissons une constante en écrivant <em>final</em> dans la déclaration de la variable.<br/> Voici un exemple d'utilisation d'une classe abstraite. Ici, la méthode analyse est abstraite et oblige donc les sous-classes à implémenter celle-ci :</p> 
 
-```java
+```java  {style=github}
 public abstract class AlgorithmeIA {
     
     Object[] data = null;
@@ -301,7 +298,7 @@ public class FastDynamicTimeWarping extends AlgorithmeIA {
 
 <p>Dans le problème du diamant, l'héritage multiple provoque un problème de résolution pour la surcharge de la méthode "equals" à la compilation. Ainsi, le compilateur ne peut savoir quelle méthode surcharger? Rectangle.equals ou bien Clickable.equals ? Pour éviter les problèmes d'héritage multiple, les concepteurs du langage Java ont empêché celui-ci et ils ont créé une autre mécanique, les interfaces (rien à voir les interfaces graphiques). Une interface peut, jusqu'à un certain point, ressembler à une classe abstraite, à la différence que toutes les méthodes sont "abstraites" (elles doivent donc être implémentées) et qu'elle ne possède pas de variables. Voici un exemple de déclaration d'une interface, tout comme les classes, la déclaration d'une interface doit être placée dans un fichier .java du même nom que l'interface : /p>
 
-```java
+```java  {style=github}
 public interface Clickable {
     
     public void clicked();
@@ -311,7 +308,7 @@ public interface Clickable {
 
 <p>La classe qui implémente une interface est forcée d'implémenter la méthode déclarée. En échange, elle peut être "casté" dans l'interface et se faire passer pour l'interface. Il y a donc plusieurs usages aux interfaces tels que: émuler l'héritage multiple et obliger la déclaration de méthodes. Encore là, les interfaces sont régulièrement utilisées dans les API et les bibliothèques de code. Voici un exemple d'usage d'une interface :</p>
 
-```java
+```java  {style=github}
 public abstract class Rectangle {
     
     int largeur;

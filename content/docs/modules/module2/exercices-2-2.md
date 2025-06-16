@@ -3,26 +3,25 @@ title: "Exercices sur les classes et méthodes"
 weight: 6
 ---
 
-<h1>Questions/Réponses</h1>
+# Questions/Réponses
+
 <p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.</p>
 
 <p>Certains étudiants aiment utiliser une <a href="https://cheatography.com/sschaub/cheat-sheets/java-fundamentals/">Java Fundamentals Cheat Sheet</a> (anglais) pour garder à l'esprit la syntaxe.</p>
 
-<h1>Comment faire ces exercices ?</h1>
+# Comment faire ces exercices ?
 
 <p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. </p>
 
 
-<h2>Réponses uniques?</h2>
+## Réponses uniques?
 
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
 
 
 <h2>Question 1</h2>
 <p>Proposez une classe Etudiant dont le constructeur prend en paramètre un identifiant (sous la forme d'un entier) et qui comprend une méthode monIdentifiant retournant l'identifiant en question.</p>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<details><summary>Réponse</summary>
 
 {{<inlineJava path="Etudiant.java">}}
 public class Etudiant {
@@ -37,26 +36,22 @@ public class Etudiant {
 }
 {{</inlineJava>}}
 
-</div>
-</div>
+</details>
 
 
 <h2>Question 2</h2>
 <p>Combien de constructeurs est-ce qu'une classe peut avoir en Java?</p>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div><p>
+<details><summary>Réponse</summary><p>
 Une classe Java peut avoir autant de constructeurs qu'on le souhaite.
 </p>
-</div>
-</div>
+</details>
 
 
 
 <h2>Question 3</h2>
 <p>Soit la classe suivante:</p>
 
-```java
+```java  {style=github}
 public class Patate {
   static int y;
   public Patate(int x) {
@@ -71,35 +66,29 @@ public class Patate {
 
 <p>Que va afficher le code suivant:</p>
 
-```java
+```java  {style=github}
     Patate z1 = new Patate(1);
     Patate z2 = new Patate(2);
     System.out.println(z1.nombre());
 ```
-<div class="accordeon">
-<p class="titre">Réponse</p>
-<div><p>La valeur 2. Le mot-clef <tt>static</tt> indique que la classe Patate n'a qu'une variable y partagée par toutes les instances de la classe.</p></div>
-</div>
+<details><summary>Réponse</summary><p>La valeur 2. Le mot-clef <tt>static</tt> indique que la classe Patate n'a qu'une variable y partagée par toutes les instances de la classe.</p></details>
 
 
 
 <h2>Question 4</h2>
 <p>Écrivez une classe nommée Somme comprenant une méthode nommée additionne qui additionne deux nombres et retourne le résultat.</p>
-<div class="accordeon">
-<p class="titre">Réponse</p>
-<div><pre><code class="language-java">public class Somme {
+<details><summary>Réponse</summary><pre><code class="language-java">public class Somme {
   public int additionne(int a, int b) {
     return a +  b;
   }
 }
-</code></pre></div>
-</div>
+</code></pre></details>
 
 
 <h2>Question 5</h2>
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 2.</p>
 
-```java
+```java  {style=github}
 public class Somme {
   public void ajoute(int a) {
     a = a + 1;
@@ -112,12 +101,8 @@ public class Somme {
 }
 ```
 
-<div class="accordeon">
-
-<p class="titre">Réponse</p>
-<div>La valeur de la variable 'a' est passée à la méthode ajoute par valeur, c'est-à-dire que la méthode ajoute fait une copie de la variable 'a' et c'est cette variable locale qui est modifiée.
-Ainsi donc, la méthode <tt>ajoute</tt> ne sert effectivement à rien.</div>
-</div>
+<details><summary>Réponse</summary><div>La valeur de la variable 'a' est passée à la méthode ajoute par valeur, c'est-à-dire que la méthode ajoute fait une copie de la variable 'a' et c'est cette variable locale qui est modifiée.
+Ainsi donc, la méthode <tt>ajoute</tt> ne sert effectivement à rien.</div></details>
 
 
 
@@ -125,7 +110,7 @@ Ainsi donc, la méthode <tt>ajoute</tt> ne sert effectivement à rien.</div>
 <h2>Question 6</h2>
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 3.</p>
 
-```java
+```java  {style=github}
 public class Variable {
   public int a = 2;
 
@@ -142,11 +127,7 @@ public class Variable {
 ```
 
 
-<div class="accordeon">
-
-<p class="titre">Réponse</p>
-<div>Cette fois-ci, la méthode ajoute reçoit un type qui n'est pas un type primitif (Variable) et va donc le recevoir par référence. C'est-à-dire que la variable 'x' n'est pas copiée. Quand la méthode ajoute modifie un attribut de la variable 'x', cette modification est visible hors de la fonction ajoute.</div>
-</div>
+<details><summary>Réponse</summary><div>Cette fois-ci, la méthode ajoute reçoit un type qui n'est pas un type primitif (Variable) et va donc le recevoir par référence. C'est-à-dire que la variable 'x' n'est pas copiée. Quand la méthode ajoute modifie un attribut de la variable 'x', cette modification est visible hors de la fonction ajoute.</div></details>
 
 
 <h2>Question 7</h2>
@@ -154,23 +135,19 @@ public class Variable {
 
 
 
-<div class="accordeon">
-
-<p class="titre">Réponse</p>
-<div><pre><code class="language-java">public class Puissance {
+<details><summary>Réponse</summary><pre><code class="language-java">public class Puissance {
   public int deux(int a) {
     return a * a;
   }
 }
-</code></pre></div>
-</div>
+</code></pre></details>
 
 
 
 <h2>Question 8</h2>
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 2.</p>
 
-```java
+```java  {style=github}
 public class Variable {
   public int a = 2;
 
@@ -188,11 +165,7 @@ public class Variable {
 ```
 
 
-<div class="accordeon">
-
-<p class="titre">Réponse</p>
-<div>La méthode ajoute reçoit un type qui n'est pas un type primitif (Variable) et va donc le recevoir par référence. Par contre, la référence est immédiatement perdue et réassignée à une instance locale de la classe Variable. La méthode ajoute modifie donc une variable locale.</div>
-</div>
+<details><summary>Réponse</summary><div>La méthode ajoute reçoit un type qui n'est pas un type primitif (Variable) et va donc le recevoir par référence. Par contre, la référence est immédiatement perdue et réassignée à une instance locale de la classe Variable. La méthode ajoute modifie donc une variable locale.</div></details>
 
 
 
@@ -206,14 +179,11 @@ public static float test(){
   return x*n;
   }
 }</textarea>
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<details><summary>Réponse</summary>
 
 <p>Une méthode statique ne peut accéder à un champ non statique comme la
 méthode statique test() tente de le faire avec le champ non statique x.</p>
-</div>
-</div>
+</details>
 
 
 
@@ -227,26 +197,22 @@ l&#x2019;instruction suivante génère une erreur de compilation ayant trait au(
 
 <p>A a = new A () ;</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<details><summary>Réponse</summary>
 
 <p>A dispose d&#x2019;au moins un constructeur (non par défaut) et tous ses
 constructeurs sont des constructeurs avec un argument.</p>
-</div>
-</div>
+</details>
 
 
 
 <h2>Question 11</h2>
 
-<p>Est-ce qu'une méthode peut être à la fois <tt>static</tt> et <tt>private</tt> en java?<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<p>Est-ce qu'une méthode peut être à la fois <tt>static</tt> et <tt>private</tt> en java?</p>
+<details><summary>Réponse</summary>
 
 <p>Oui. La méthode ne peut être appelée que par les autres méthodes de la classe (soit les autres méthodes statiques ou les méthodes non-dynamiques).</p>
 
-```java
+{{<inlineJava path="Main.java" lang="java" >}}
 class Main {
   public static void main(String[] args) {
     joe();
@@ -254,10 +220,9 @@ class Main {
   }
   private static void joe() {}
 }
-```
+{{</inlineJava>}}
 
-</div>
-</div>
+</details>
 
 
 
@@ -265,7 +230,7 @@ class Main {
 
 <p>Quelle est la visibilité des attributs au sein de cette classe :</p>
 
-```java
+```java  {style=github}
 public class Joe {
   public int x = 0;
   protected int y = 0;
@@ -274,23 +239,18 @@ public class Joe {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
-public (accessible de partout), protected (accessible des classes dérivées et des classes du même package), private (accessible seulement par la classe) et default (accessible seulement par les classes du même package).
-</div>
-</div>
+<details><summary>Réponse</summary>
+<div>public (accessible de partout), protected (accessible des classes dérivées et des classes du même package), private (accessible seulement par la classe) et default (accessible seulement par les classes du même package).</div>
+</details>
 
 
 <h2>Question 13</h2>
 
 <p>Écrivez une classe représentant une valeur entière à laquelle je peux ajouter la valeur trois par l'entremise d'une méthode « public » nommée « patate ». La méthode doit retourner la valeur entière modifiée. Le constructeur doit me permettre d'initialiser la valeur entière. La classe doit n'avoir que des attributs «&nbsp;private&nbsp;».</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 public class Entier {
   private int x = 0;
   public Entier(int m) {
@@ -303,19 +263,16 @@ public class Entier {
 }
 ```
 
-</div>
-</div>
+</details>
 
 
 <h2>Question 14</h2>
 
 <p>Écrivez une classe représentant une valeur entière. Cette classe doit n'avoir qu'une seule méthode appelée « additionne » qui prend comme paramètre une instance de la classe et qui retourne une nouvelle instance de la classe. L'instance retournée doit comprendre la somme des deux valeurs entières.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
-<div>
+<details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 public class Entier {
   private int x = 0;
   public Entier(int m) {
@@ -327,9 +284,7 @@ public class Entier {
 }
 ```
 
-</div>
-</div>
-
+</details>
 <h2>Allez plus loin?</h2>
 
 

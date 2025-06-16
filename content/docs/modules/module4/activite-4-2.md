@@ -1,20 +1,9 @@
 ---
-title: "Activité 4.2"
+title: "Les flux de données: lecture dans des fichiers et autres"
 weight: 2
 ---
 
-<h1><a id="top" name="top"></a>Module 4</h1><h2>Activité 4.2</h2><h2 class="partie2">Les flux de données: lecture dans des fichiers et autres</h2>
-
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Utilisation de la classe File</a></li>
-
-<li><a href="#section2">Lire des fichiers</a></li>
-<li><a href="#section3">Écrire dans des fichiers</a></li>
-
-
-</ul>
+# Les flux de données: lecture dans des fichiers et autres
 
 <p>Nous avons couvert la façon d'afficher des données à l'écran et de lire des données à partir du clavier en utilisant les flux de données (streams) dans les leçons précédentes. Quand nous avons utilisé les méthodes System.out.print ou System.out.println pour afficher des données à l'écran, ces dernières ont été envoyées sur un flux de sortie (output stream). Nous nous servirons des flux d'entrée et de sortie pour lire et écrire des données dans un fichier texte. Mais auparavant, il nous faut savoir comment créer le fichier dans lequel ces données seront archivées.</p>
 
@@ -120,7 +109,7 @@ La classe File dispose d'un constructeur qui prend en paramètre l'emplacement d
 
 <p>Pour créer un fichier, nous appelons le constructeur de la classe File de la façon suivante :</p>
 
-```java
+```java  {style=github}
 File exempleFile1= new File ("fichier");
 
 File exempleFile2= new File ("c:\exemple\unFichier.txt");
@@ -128,7 +117,7 @@ File exempleFile2= new File ("c:\exemple\unFichier.txt");
 
 <p>Dans le premier cas, un objet <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a>, agissant comme référence vers le fichier dans l'arborescence du système de fichier, et ce pour un fichier du nom "fichier" dans le répertoire courant ("." dans Linux/Mac OS) sera crée. Dans le deuxième cas, une référence vers le fichier sur le disque "C:", dossier "/exemple", fichier "unFichier.txt" sera créée (exemple pour Windows ...). À ce stade, aucun fichier n'est crée ou ouvert, il ne s'agit que d'une référence vers l'emplacement possible d'un fichier. Pour savoir si le fichier existe ou non, il est possible d'utiliser la méthode exists() :</p>
 
-```java
+```java  {style=github}
 File unFichier = new File("lefichier"); // création d'un objet fichier
 
 if (!unFichier.exists()) {
@@ -138,7 +127,7 @@ if (!unFichier.exists()) {
 
 <p>Pour créer un nouveau fichier sur un disque dur, il faut, dans un premier temps, créer l'objet File avec le nom du fichier voulu et, par la suite, utiliser la méthode createNewFile(), comme le montre le code ci-dessous :</p>
 
-```java
+```java  {style=github}
 File unFichier = new File("lefichier"); // création d'un objet fichier
 if (unFichier.createNewFile()) {
        System.out.println("le fichier est créé!");
@@ -158,7 +147,7 @@ if (unFichier.createNewFile()) {
 
 <p>Pour lire un fichier, nous devons d'abord construire un objet de type File (la classe File), qui prend comme paramètre le nom du fichier à lire. Ici, il s'agit de unfichier, et nous obtenons :</p>
 
-```java
+```java  {style=github}
 try {
     FileReader fichierALire = new FileReader("unfichier");
 
@@ -175,7 +164,7 @@ try {
 
 <p>Nous venons juste de créer une instance de l'objet FileReader permettant de lire le contenu d'un fichier. Cependant, la classe FileReader ne possède que des méthodes pouvant lire « en bas niveau », c'est-à-dire que la méthode read permet de lire caractère par caractère le contenu d'un fichier. Cette méthode peut lever une exception si, par exemple, nous ne pouvons accéder au disque dur ou si le fichier en question est protégé. Voici comment lire un caractère d'un fichier :</p>
 
-```java
+```java  {style=github}
 try {
     FileReader fichierALire = new FileReader("unfichier");
     char caractere = (char) fichierALire.read();
@@ -187,7 +176,7 @@ try {
 
 <p>Avec tout ce que nous avons vu jusqu'à présent, nous ne pouvons écrire qu'un seul caractère à l'écran. À chaque appel de la méthode read, un caractère est lu. Pour lire un fichier en entier, il faut donc vérifier si la méthode read renvoie -1 car c'est cette valeur qui indique la fin d'un fichier. Le code ci-dessous montre comment nous pouvons procéder :</p>
 
-```java
+```java  {style=github}
 try {
     FileReader fichierALire = new FileReader("unfichier");
     int c = fichierALire.read();
@@ -202,7 +191,7 @@ try {
 
 <p>Pour terminer, il ne reste qu'à fermer le FileReader, en effet, lorsqu'un programme effectue une opération d'entrée-sortie, celui-ci doit demander de l'aide au système d'exploitation et ce dernier va mobiliser des ressources comme le disque dur. Une fois l'opération d'entrée-sortie terminée, vous devez le signaler pour que le système d'opération puisse libérer les ressources que vous n'utilisez plus. En Java, il suffit simplement de faire appel à la méthode close comme indiqué ci-dessous.</p>
 
-```java
+```java  {style=github}
 fichierALire.close();
 ```
 
@@ -214,7 +203,7 @@ fichierALire.close();
 
 <p>Pour une lecture de haut niveau d'un fichier avec les fonctions de la classe BufferedReader, il faut créer un objet de type BufferedReader qui doit prendre en paramètre un type Reader et lui donner un objet FileReader. Pour ce faire, il faut d'abord créer le fichier à lire. Le code ci-dessous explique mieux la façon à suivre :</p>
 
-```java
+```java  {style=github}
 try {
     File FichierALire = new File("textfichier");
     FileReader unFichier = new FileReader(FichierALire);
@@ -226,7 +215,7 @@ try {
 
 <p>Pour lire maintenant le fichier créé, nous devons utiliser la méthode readLine, qui le fait ligne par ligne et retourne null à la fin du fichier. Nous pouvons réaliser cela grâce au code ci-dessous :</p>
 
-```java
+```java  {style=github}
 try {
     String uneligne = leBuffer.readLine();
     while (uneligne != null) {
@@ -250,7 +239,7 @@ try {
 
 <p>Pour écrire dans un fichier, nous utilisons la classe FileWriter. Nous commençons par créer un objet File qui sera le fichier vers lequel nous désirons écrire. Par la suite, nous produirons l'objet FileWriter. Le fichier représenté par l'objet File sera créé s'il n'existe pas. Dans le cas contraire, le contenu de ce fichier sera complètement écrasé. La classe FileWriter offre des méthodes de bas niveau pour l'écriture. Nous trouvons plusieurs méthodes dont Write pour écrire un caractère, une partie de String ou enfin un String complet. Le code ci-dessous démontre comment écrire des données dans un fichier :</p>
 
-```java
+```java  {style=github}
 double[] notes = {95.5, 91.5, 78.5, 75.0, 81.50};
 File fichier = new File("notes.txt");
 try {
@@ -272,7 +261,7 @@ try {
 La classe BufferedWriter permet d'avoir une écriture plus performante. Elle propose une méthode supplémentaire, newLine, qui ajoute un retour à la ligne. Le retour à la ligne dans un fichier texte dépend du système d'exploitation ( \r\n sous Windows, \n sous Unix, ...). Alors, il est préférable d'utiliser cette méthode qui peut être portable.</p>
 <p>Il faut donc utiliser une autre classe en plus, par exemple la classe PrintWriter qui se comporte de manière semblable à la classe PrintStream dont l'objet System.out est une instance. Nous pouvons donc réécrire le programme précédent avec ces nouveaux objets pour obtenir une écriture de meilleur rendement.</p>
 
-```java
+```java  {style=github}
 double[] notes = {95.5, 91.5, 78.5, 75.0, 81.50};
 File fichier = new File("notes.txt");
 
@@ -292,7 +281,7 @@ try {
 <p>Nous utilisons donc un PrintWriter (pour les méthodes de haut niveau) par-dessus un BufferedWriter (pour l'écriture rapide) sur un FileWriter (pour l'écriture vers un fichier texte). 
 Il faut noter qu'avec la classe PrintWriter, nous pouvons utiliser des méthodes de haut niveau comme println qui ajoutent une ligne au fichier texte. Cependant, il existe d'autres méthodes très riches comme printf pour les sorties formatées par exemple. Le code ci-dessous montre comment utiliser PrintWriter :</p>
 
-```java
+```java  {style=github}
 PrintWriter sortie = null;
 try {
     System.out.println("Plus grand diviseur commun :" + plusGrandCommunDiviseur(455,322) );
@@ -311,7 +300,7 @@ try {
 
 <p>La gestion des cas d'exception et de la nécessité de fermer les fichiers avant de terminer la fonction est pénible. Heureusement, on peut faire mieux si on dispose d'une version récente de Java (Java 8 ou mieux). Toutes les classes nécessitant d'être fermée ("close") peuvent être déclarée dans le "try" comme ceci:</p>
 
-```java
+```java  {style=github}
 import java.io.*;
 
 class MaClasse {

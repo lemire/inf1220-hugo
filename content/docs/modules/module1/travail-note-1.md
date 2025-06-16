@@ -3,7 +3,7 @@ title: "Travail noté 1"
 weight: 7
 ---
 
-<h1>Travail noté 1 - Les algorithmes</h1>
+# Travail noté 1 - Les algorithmes
 
 <p>Prenez le temps de lire les consignes. Nous expliquons toute la démarche en détail, en répétant même plus d'une fois les informations importantes pour être sûr que tout est clair et limpide.</p>
 
@@ -17,12 +17,12 @@ weight: 7
 
 <p><strong>Important</strong>: En commençant, prenez en note la date de fin de cours. Vous devez avoir remis les travaux d'ici cette date. Si vous avez besoin d'un report de la date de fin de cours, peut-être à cause d'empêchements médicaux ou familiaux, vous devez joindre l'Université (pas le professeur) pour établir votre situation et obtenir un report. Vous ne pouvez pas obtenir un report après la date de fin de cours. Le professeur ne peut modifier votre date de fin de cours.</p>
 
-<h2>Ampleur des travaux</h2>
+## Ampleur des travaux
 
 <p>Dans ce cours, le niveau de difficulté et le travail nécessaire pour compléter les travaux est comparable à ce que nous trouvons au sein des autres universités pour un cours d'introduction à la programmation. Vous devez prévoir plusieurs heures pour compléter chaque travail. Selon votre préparation préalable et vos aptitudes à la programmation, le temps nécessaire pour chaque activité peut varier. Néanmoins, vous devez prévoir une charge de travail de neuf heures par semaine pendant quinze semaines.</p>
 
 
-<h2>Lisez bien, testez et relisez-vous</h2>
+## Lisez bien, testez et relisez-vous
 
 
 <p>Les travaux notés testent en partie votre capacité à comprendre des énoncés logiques. Vous devez lire de manière attentive les consignes et les questions, et vous devez montrer que vous êtes capable de les interpréter et de faire preuve de raisonnement abstrait. Un programmeur doit être à même de lire un énoncé logique et de le traduire en pseudo-code sans qu'on doive lui donner des exemples ou lui expliquer l'énoncé.</p>
@@ -31,17 +31,16 @@ weight: 7
 
 <p>Voici une règle d'or : Vous devez passer plus de temps à vérifier votre solution qu'à la produire.</p>
 
-<h2>Correction des travaux</h2>
+## Correction des travaux
 
 <p>Certains étudiants sont surpris par leurs notes quand après avoir rédigé plusieurs pages de documentation afin de répondre à une question, ils obtiennent une note de zéro. Bien que nous apprécions les efforts des étudiants, vos réponses doivent être correctes pour recevoir des points. Il peut, bien sûr, y avoir des coquilles ou imprécisions dans vos travaux : rien n'est jamais parfait. Par contre, nous ne donnons pas de points « pour l'effort ». Il est donc important pour vous d'arriver essentiellement à la réponse recherchée. Assurez-vous donc que vos réponses sont aussi claires que possible.</p>
 
-<h2>Les reports de la date de fin de cours</h2>
-
+## Les reports de la date de fin de cours
 
 <p  style="border-color:red;border-style: groove;"><strong>Rappel</strong>: le professeur ne peut pas modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps. Si vous n'avez pas d'expérience en programmation, prévoyez neuf heures de travail pendant quinze semaines pour compléter le cours. Il est impératif de faire les exercices et les lectures. L'étudiant moyen ne peut réussir ce cours en ne faisant que les travaux notés. Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les professeurs n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
 
 <p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
-<h2>Instructions de dépôt du travail notés :</h2>
+## Instructions de dépôt du travail notés :</h2>
 <p>Vous devez remettre le fichier pdf contenant votre travail sur le site de dépôt des travaux de la TÉLUQ : <a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant</a></p>
 <p>Il n'y a pas de gabarit ou de modèles pour la mise en forme des travaux notés, mais vous devriez utiliser le sens commun. Rédigez un document lisible, incluez votre nom, le titre du cours et son sigle, identifiez clairement le travail noté. Ne prenez pas en photo un manuscript: rédigez plutôt votre travail en utilisant un traitement de texte ou l'équivalent. Vous pouvez inclure des diagrammes, mais vos explications doivent prendre la forme de prose suivie en français correct. Écrivez des phrases complètes qui débutent par une majuscule et se terminent par un point. Si vous avez du mal avec le français, n'hésitez pas à utiliser un correcteur grammatical comme Antidote. Si nous avons du mal à vous lire, vous pourriez obtenir une note de zéro.</p>
 
@@ -76,7 +75,7 @@ weight: 7
 
 <p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>
 
-<h2>Indices généraux</h2>
+## Indices généraux
 
 <ol>
 <li>Présentez vos solutions clairement. Plusieurs étudiants perdent des points parce que nous n'arrivons pas à les comprendre.</li>

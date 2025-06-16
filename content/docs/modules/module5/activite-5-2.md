@@ -1,21 +1,10 @@
-Voici le document Markdown avec les sections de code formatées en HTML (encapsulées dans des balises `<div>` avec des styles de surlignage) converties en Markdown avec des blocs de code délimités par ```java. Tout le reste du contenu est conservé inchangé, conformément à votre demande. Le français est maintenu impeccable, et les balises HTML inutiles sont supprimées pour adopter le format Markdown standard.
-
-
 ---
-title: "Activité 5.2"
+title: "Le polymorphisme"
 weight: 2
 ---
 
-<h1><a id="top" name="top"></a>Module 5</h1><h2>Activité 5.2</h2><h2 class="partie2">Le polymorphisme</h2>
+# Le polymorphisme
 
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Le polymorphisme ad hoc</a></li>
-<li><a href="#section2">Le polymorphisme d'héritage</a></li>
-<li><a href="#section3">Le polymorphisme paramétrique ou les génériques</a></li>
-
-</ul>
 
 <p>Le polymorphisme est la capacité d'une méthode de se comporter différemment en fonction de l'objet qui s'en sert. Le polymorphisme permet donc de manipuler des objets grâce à leurs méthodes sans que nous nous souciions de leur classe. La JVM se charge d'appeler la méthode adéquate dans la hiérarchie de classes issue de l'héritage. Il existe trois formes de polymorphisme : le polymorphisme ad hoc, le polymorphisme paramètré et le polymorphisme par héritage. Dans les prochaines sections, nous aborderons ces trois types de polymorphisme et leur usage.</p>
 
@@ -28,7 +17,7 @@ weight: 2
 
 <iframe height="1000px" width="100%" src="https://repl.it/@lemire/ex15?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-```java
+```java  {style=github}
 public class MixageCouleur {
     
     int rouge = 0;
@@ -78,7 +67,7 @@ public class MixageCouleur {
 
 <p>Le polymorphisme par héritage est en fait la surcharge de méthode (overriding) que nous avons vu précédemment. Il s'agit donc de re-implémenter une méthode qui a été déclarée dans une classe héritée. Elle peut se faire avec des classes abstraites ou non. Voici un exemple de polymorphisme par héritage :</p>
 
-```java
+```java  {style=github}
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -179,7 +168,7 @@ public class CerclePointille extends JPanel {
 
 <p>Cette classe permet de tracer un cercle en pointillé dans une fenêtre appelée JFrame. Nous viendrons surcharger la méthode dessiner dans une sous-classe afin de permettre de tracer des ovales pointillés :</p>
 
-```java
+```java  {style=github}
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -277,7 +266,7 @@ public class OvalePointille extends CerclePointille {
 
 <p>Le dernier type de polymorphisme abordé est celui paramétrique. En Java, ce type de paramétrique est en fait l'utilisation de génériques passées en paramètre à des fonctions. Pour ce faire, il est nécessaire d'utiliser la mécanique des templates. Les templates en Java permettent de construire des méthodes ou des classes avec des paramètres indéfinis à la conception et qui sont résolu à l'exécution. Par exemple, nous avons vu au début du cours les structures de type ArrayList. Celle-ci utilise les templates en ne définissant pas dès l'implémentation la classe d'objet pouvant être contenu dans la structure, celle-ci est résolu à l'exécution. Ainsi, il est possible de créer une ArrayList ainsi : ArrayList<String> ou bien ArrayList<Double> ou enfin ArrayList<MaClasse>. Les templates/génériques peuvent être utilisés dans la conception des classes ou bien dans la conception des méthodes (paramètres reçus ou retournés). La forme générale pour l'utilisation d'un générique dans une méthode est la suivante :</p>
 
-```java
+```java  {style=github}
 public|protected|private static|final <T> valeurDeRetour|void nomDeMethode(T unParametreGenerique)  {
        //Faire quelque chose avec unParametreGenerique 
 }
@@ -285,7 +274,7 @@ public|protected|private static|final <T> valeurDeRetour|void nomDeMethode(T unP
 
 <p>Un exemple classique de l'utilisation des templates est avec l'implémentation d'une méthode de comparaison (equals), recevant deux paramètres de classes inconnus :</p>
 
-```java
+```java  {style=github}
 public class TestGenerique {
     
     // Méthode equals à deux paramètres. La méthode equals à un paramètre existe déjà et est implémentée dans la SuperClasse Object
@@ -307,7 +296,7 @@ public class TestGenerique {
 
 <p>Dans cet exemple, le type générique est déclaré en début de méthode (<T>). Celui-ci est en quelques sortes un "Joker" auquel on peut appliquer n'importe quelle classe. Toutefois, il faut faire attention, dans l'exemple précédent, comme tout les objets hérites de la superclasse Object, ceux-ci ont tous la méthode equals. Cela ne peut pas être le cas pour des méthodes spécifiques à des implémentations de classe particulière. Il est également possible d'utiliser deux génériques différents :</p>
 
-```java
+```java  {style=github}
 public class TestGenerique {
     
     // Méthode equals à deux paramètres. La méthode equals à un paramètre existe déjà et est implémentée dans la SuperClasse Object
@@ -329,7 +318,7 @@ public class TestGenerique {
 
 <p>Pour ce qui est de l'utilisation des génériques dans la déclaration d'une classe, il est possible de lier l'instance d'une classe à un générique spécifique. Pour ce faire, il faut nommer le générique dans la déclaration de la classe (juste après le nom de la classe). Il est possible alors dans le corps de la déclaration de la classe d'utiliser le générique. La forme générale est : </p>
 
-```java
+```java  {style=github}
 public|protected|private Class NomDeClasse<T> {
 
       //Un exemple de constructeur
@@ -346,7 +335,7 @@ public|protected|private Class NomDeClasse<T> {
 
 <p>Voici un exemple de l'utilisation d'un générique dans l'implémentation d'une classe :</p>
 
-```java
+```java  {style=github}
 public class Chainon<T> {
     
     protected T donnee = null;
@@ -413,7 +402,7 @@ public class Chainon<T> {
 
 <p> Il est possible d'omettre le type. Dans un tel cas, Java va omettre la vérification de la classe, comme dans cet exemple:</p>
 
-```java
+```java  {style=github}
     ArrayList al = new ArrayList();
     al.add(1);
 ```

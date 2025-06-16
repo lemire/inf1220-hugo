@@ -23,7 +23,7 @@ weight: 5
 <p>Il est parfaitement normal de consacrer des dizaines d'heures à compléter un travail noté et les activités préparatoires. Il est de votre responsabilité de trouver le temps nécessaire.</p>
 <p>Si vous trouvez certaines sections du cours plus faciles, n'hésitez pas à avancer plus rapidement. </p>
 
-<h2>Organisation du cours</h2>
+## Organisation du cours
 
 
 <ol>

@@ -3,43 +3,23 @@ title: "Qu’est-ce qu’un langage de programmation orientée-objet?"
 weight: 2
 ---
 
-<h1><a id="top" name="top"></a>Module 2</h1><h2>Activité 2.2</h2><h2 class="partie2">Qu’est-ce qu’un langage de programmation orientée-objet?</h2>
+# Qu’est-ce qu’un langage de programmation orientée-objet?</h2>
 
-<h1>Java pas à pas</h1>
-
-<p>Nous utilisons un manuel d'introduction à la programmation Java intitulé Java pas à pas. Vous devez <a href="https://github.com/RobertGodin/JavaPasAPas/raw/master/JavaPasAPas.pdf">charger le document PDF</a>.</p>
-
-<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
-
-<p>Nous vous invitons maintenant à lire les chapitres <em>Introduction à la programmation Java</em> et <em>Types et expressions Java</em> du manuel  Java pas à pas. Il est normal que vous ne compreniez peut-être pas tout à ce point-ci. Il y aura d'autres lectures, exercices et activités.</p>
-
-<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java pas à pas.</p>
-
-<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
-
-<h3>Lecture dans le livre de référence (optionnel)</h3>
-
-<p>Vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, le premier chapitre. Le manuel de Delannoy  est à son mieux comme manuel de référence. On vous invite à faire les lectures à et garder le manuel avec vous lors que vous étudiez si vous en avez fait l'acquisition. Le manuel de Delannoy n'est pas obligatoire.</p>
-
-<h3>Vidéo suggérée</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5j5z9BJCAW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h1>Un premier programme</h1>
 <p>
 En Java, toutes parties d'un programme informatique doit donc être encapsulée dans une classe. Pour ce faire, il est donc nécessaire de créer un premier fichier de code source qui décrira une première classe et contiendra la description de la méthode "main", la méthode de démarrage (appelé parfois "bootstrap") du programme. Il est possible tout simplement d'utiliser le Bloc-Note avec Windows ou un autre éditeur de texte brut (<strong>ce n'est pas le cas de Microsoft Word!</strong>), d'écrire les lignes de code nécessaire à la création de la classe et de ses fonctions et d'enregistrer ce texte sous l'extension .java (dans l'exemple ci-dessous dans un fichier Main.java).  Voici un exemple d'une première classe qui imprimera dans l'invite de commande un texte de bienvenue.</p>
 
-<details><summary>Réponse</summary>
 
-```java
+{{<inlineJava path="Bienvenue.java" lang="java" >}}
 /* Ma première classe */
 public class Bienvenue {
   public static void main(String args[]) {
     System.out.println("Bienvenue au sein du cours INF1220 !");
   }
 }
-```
+{{</inlineJava>}}
+
 
 </details>
 
@@ -158,7 +138,6 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 <p>L'approche est essentiellement la même pour les autres IDE comme Eclipse et NetBeans. On créé un projet, on écrit son code, et on exécute. Tous les IDE peuvent vous aider à identifier vos erreurs de syntaxe.</p>
 
-<p><a id="intro" name="avecIDE"></a></p>
 
 <h1>Création d'une classe avec NetBeans, sa compilation et son exécution</h1>
 
@@ -176,6 +155,28 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 </ol>
 
 <p>Tout comme IntelliJ, l'utilisation de NetBeans est optionnelle. Ce n'est pas un environnement destiné aux débutants. Si vous choisissez d'utiliser NetBeans, c'est à vous de faire le travail d'assimilation nécessaire.</p>
+
+
+##  Java pas à pas
+
+<p>Nous utilisons un manuel d'introduction à la programmation Java intitulé Java pas à pas. Vous devez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF</a>.</p>
+
+<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+
+<p>Nous vous invitons maintenant à lire les chapitres <em>Introduction à la programmation Java</em> et <em>Types et expressions Java</em> du manuel  Java pas à pas. Il est normal que vous ne compreniez peut-être pas tout à ce point-ci. Il y aura d'autres lectures, exercices et activités.</p>
+
+<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java pas à pas.</p>
+
+<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
+
+<h3>Lecture dans le livre de référence (optionnel)</h3>
+
+<p>Vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, le premier chapitre. Le manuel de Delannoy  est à son mieux comme manuel de référence. On vous invite à faire les lectures à et garder le manuel avec vous lors que vous étudiez si vous en avez fait l'acquisition. Le manuel de Delannoy n'est pas obligatoire.</p>
+
+<h3>Vidéo suggérée</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5j5z9BJCAW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h2>Vidéos suggérées</h2>
 

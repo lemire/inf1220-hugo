@@ -1,20 +1,10 @@
 ---
-title: "Introduction aux types de base et à leurs opérateurs."
+title: "Introduction aux types de base et à leurs opérateurs"
 weight: 3
 ---
 
-<h1><a id="top" name="top"></a>Module 2</h1><h2>Activité 2.3</h2><h2 class="partie2">Introduction aux types de base et à leurs opérateurs.</h2>
+# Introduction aux types de base et à leurs opérateurs
 
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#variableType">Les variables et les types</a></li>
-
-<li><a href="#opérateurs">Les opérateurs de base</a></li>
-
-</ul>
-
-<p><a id="intro" name="variableType"></a></p>
 
 
 <h1>Mise en garde pédagogique</h1>
@@ -33,8 +23,6 @@ weight: 3
 <h1>Environnement de développement (rappel)</h1>
 
 
-<p>Dans ce cours, nous n'offrons pas de soutien technique, notamment en ce qui a trait aux IDE comme IntelliJ ou Eclipse et leur fonctionnement sur votre ordinateur. La configuration de votre PC, l'installation de logiciels, etc. ne fait pas partie du cours. Il n'est pas nécessaire d'installer du logiciel pour suivre ce cours puisqu'on peut développer et exécuter du code Java en ligne (notamment avec repl.it). Pour être clair, cela signifie que le professeur ne vous aidera pas à installer un environnement, et il ne vous donnera pas un cours sur son utilisation. Si vous souhaitez installer un tel environnement, nous vous fournissons des éléments de départ, mais c'est à vous ensuite de vous les approprier. Il faut comprendre qu'il est très difficile de déboguer à distance les difficultés qu'un étudiant peut rencontrer au sein d'un environnement complexe, surtout quand cet étudiant ne fait que débuter. À l'échelle d'un cours entier, c'est tout simplement impossible de faire le travail avec tous les étudiants, tout en couvrant la matière du cours.</p>
-
 <p>Si vous devez compiler des classes Java sur votre PC, faites les choses simplement. Essayez d'utiliser les outils les plus élémentaires. Concentrez-vous sur le Java, et non pas sur les environnements et les outils. Une erreur fréquente des débutants est de perdre beaucoup de temps au sein de systèmes qu'ils ne maîtrisent pas à essayer de programmer dans un langage qu'ils ne maîtrisent pas. Il y faut y aller pas à pas.</p>
 
 <iframe width="672" height="378" src="https://www.youtube.com/embed/1ttHH5MlNug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -43,20 +31,20 @@ weight: 3
 
 <p>Une variable permet de manipuler des données et des valeurs. Elle se caractérise par un nom et un type. Le nom sert à repérer un emplacement mémoire dans lequel la valeur de la variable sera stockée. Quant au type, il permet de déterminer la façon dont la valeur de la variable est traduite en code binaire, ainsi que la taille de son emplacement mémoire. Par exemple, le type "int" permet de stocker une valeur numérique de type entière  (ex. 1, 3, 33, 56, etc.). Une variable peut également stocker en mémoire l'instance d'un objet, par exemple une chaîne de caractères avec une instance de la classe "String" (ex. <tt>String exemple = "Exemple";</tt>). Voici un exemple de déclaration et assignation d'une valeur à une variable dans une classe :</p>
 
-```java
+{{<inlineJava path="Exemple1.java" lang="java" >}}
 public class Exemple1 {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 
-// Création d&#39;une variable de type int
-int entier = 33;
+		// Création d&#39;une variable de type int
+		int entier = 33;
 
-// Création d&#39;une variable de type booléenne
-boolean test = false;
+		// Création d&#39;une variable de type booléenne
+		boolean test = false;
 
+	}
 }
-}
-```
+{{</inlineJava>}}
 
 
 <p>Il est important d'utiliser les guillemets droits (ASCII) <pre>"</pre> pour délimiter les chaînes de caractères. Certains environnements (comme le site Web du cours INF 1220 ou Microsoft Word) peuvent parfois convertir automatiquement les guillemets droits en guillemets à la française (« »). En tant que programmeur, c'est à vous de faire la correction lorsque vous recopiez le code informatique.</p>
@@ -220,7 +208,23 @@ Article <a href="https://fr.wikipedia.org/wiki/Virgule_flottante">Virgule flotta
 
 <p>Quand plusieurs variables sont de même type, il faut les séparer par une virgule (,) (par contre, la norme ne recommande pas cette façon de déclarer les variables). Pour expliquer à l'ordinateur que l'instruction de déclaration est terminée pour le type donné, un point virgule (;) est placé obligatoirement à la fin de la ligne d'instruction.</p> 
 
-<iframe height="800px" width="100%" src="https://replit.com/@lemire/exemple23?v=1&lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups"></iframe>
+{{ <inlineJava path="" lang="java"> }}
+public class Main {
+    
+    // Exemple de déclaration de variable de fonctions
+    public static void main(String[] args) {
+        String messageDeBienvenue = "Bienvenue à INF1220";
+        String ajout = " de la TELUQ";
+        int a,b,c;
+        a = 3;
+        b = 4;
+        c = a + b;
+        System.out.println(messageDeBienvenue + ajout);
+    }
+
+}
+{{ </inlineJava> }}
+
 
 <h1><a id="opérateurs" name="opérateurs"></a>Les opérateurs de base</h1>
 

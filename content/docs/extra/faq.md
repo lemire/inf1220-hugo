@@ -55,7 +55,7 @@ Cela lit une ligne de texte entrée par l'utilisateur et la stocke dans la varia
 
 Réponse: Nous nous ferons un plaisir de répondre à vos questions par courriel, mais nous n'offrons pas d'enseignement par vidéoconférence au sein du cours INF 1220. La plupart des universités québécoises ont offert des cours d'informatique en vidéoconférence (zoom, etc.) lors de la grande pandémie de 2020-2021. L'Université Laval offre plusieurs cours selon ce modèle. Ce n'est pas le modèle de l'Université TÉLUQ. La plupart de nos étudiants ne souhaitent pas se présenter à heure fixe pour une session de cours de trois heures en vidéoconférence. Il est indéniable que l'enseignement par vidéoconférence répond bien aux besoins de certains étudiants, mais il est déjà offert ailleurs et nous ne croyons pas qu'il répond aux besoins de nos étudiants.
 
-### Question: J'ai remis ma solution sans explication. Ma solution était correcte, mais j'ai quand même obtenu zéro, est-ce normal ?
+### Question: J'ai remis ma solution sans explication. Ma solution était correcte, mais j'ai quand même obtenu zéro, est-ce normal&nbsp;?
 
 Réponse: Oui, vous devez expliquer vos solutions.
 

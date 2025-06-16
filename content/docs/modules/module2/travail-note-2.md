@@ -98,16 +98,14 @@ System.out.println(c.perimetre());
 
 <p>Un programmeur souhaite représenter la valeur 10.000000000000001 en Java. Il a écrit le programme suivant. Exécutez le programme et expliquez le résultat. Une explication de deux lignes peut suffire.</p>
 
-```java
+{{<inlineJava path="Main.java" lang="java" >}}
 class Main {
   public static void main(String[] args) {
    double x =  10.000000000000001;
    System.out.println(x);
   }
 }
-```
-
-<iframe height="400px" width="100%" src="https://repl.it/@lemire/Q2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+{{</inlineJava>}}
 
 <p>Indice 1 : La lecture complète des notes de cours est obligatoire comme préparation aux travaux notés.</p>
 
@@ -127,7 +125,7 @@ class Main {
 
 <p>Quelle sera la valeur de 'a' après les lignes de code suivantes et pourquoi :</p>
 
-```java
+```java  {style=github}
 int i = 3;
 int a = i++;
 ```
@@ -137,7 +135,7 @@ int a = i++;
 
 <p>Quelle sera la valeur (de la variable chaine) affichée par la ligne System.out.println(chaine) du code ci-dessous et pourquoi ? Donner une réponse concise en quelques phrases.</p>
 
-```java
+```java  {style=github}
 public class TestMethode {
     
     public static void test(String test)
@@ -162,7 +160,7 @@ public class TestMethode {
 
 <p>Quelle sera la valeur de la variable entier à la fin du code suivant et pourquoi ?</p>
 
-```java
+```java  {style=github}
 boolean a = false;
 boolean b = false;
         
@@ -179,7 +177,7 @@ Expliquez en détail la différence entre les deux mises en oeuvre suivantes. Vo
 
 Premier code:
 
-```java
+```java  {style=github}
 public class Bonhomme {
   public static String nom;
   public Bonhomme(String n) {
@@ -190,7 +188,7 @@ public class Bonhomme {
 
 Second code:
 
-```java
+```java  {style=github}
 public class Bonhomme {
   public String nom;
   public Bonhomme(String n) {

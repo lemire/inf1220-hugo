@@ -1,26 +1,15 @@
 ---
-title: "Activité 3.5"
+title: "La récursivité"
 weight: 7
 ---
 
-<h1><a id="top" name="top"></a>Module 3</h1><h2>Activité 3.5</h2><h2 class="partie2">La récursivité</h2>
-
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Le concept de récursivité</a></li>
-
-<li><a href="#section2">Des exemples d'utilisation de la récursivité</a></li>
-
-</ul>
-
-<p><a id="intro" name="section1"></a></p>
+# La récursivité
 
 <h1>Le concept de récursivité</h1>
 
 <p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :</p>
 
-```java
+```java  {style=github}
 public class ExempleRecursivite {
     
     public static void main(String[] args) {
@@ -54,7 +43,7 @@ public class ExempleRecursivite {
 
 <p>Toutefois, la récursivité est à utiliser avec précaution, car elle peut facilement provoquer une erreur de type StackOverflow ou OutOfMemory. C'est à dire, que l'appel répétitif d'une méthode à l'intérieur de sa propre méthode provoquera la multiplication de structures en mémoire (ex. variables, information sur les appels de méthode en soi, structures de données, etc.) et l'utilisation complète de la mémoire dédiée à la JVM par le système d'exploitation de l'ordinateur. Il faut donc être prudent avec l'appel récursif. Voici deux mauvais exemples, qui provoque l'erreur de type StackOverflowError ou l'erreur de type OutOfMemoryError : </p>
 
-```java
+```java  {style=github}
 public class ExempleRecursivite {
 
     public static void main(String[] args) {
@@ -110,7 +99,7 @@ public class ExempleRecursivite {
 
 <p>La récursivité peut être bien utile dans des cas où il faut appliquer la technique "diviser pour régner", surtout pour le traitement de données. Un exemple bien connu est le tri-fusion (merge sort) qui utilise la récursivité pour diviser un tableau en deux récursivement jusqu'à atteindre des couples. Puis, l'algorithme tri le couple min-max et retourne le résultat plus haut. Ensuite, une fusion des données s'opère pour trier un par un les minimum de chaque sous-tableau dans le tableau original. Voici le tri-fusion : </p>
 
-```java
+```java  {style=github}
 public class ExempleRecursivite {
 
     public static void main(String[] args) {
@@ -177,7 +166,7 @@ public class ExempleRecursivite {
 
 <p>Voici un autre exemple, avec une façon d'utiliser la récursivité pour trouver le plus grand diviseur commun de deux entiers, basée sur l'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide">algorithme d'Euclide</a> :</p>
 
-```java
+```java  {style=github}
 public class ExempleRecursivite {
 
     public static void main(String[] args) {

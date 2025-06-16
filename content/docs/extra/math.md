@@ -5,15 +5,15 @@ weight: 11
 
 <div style="margin-left: 10px;">
 
-<h1 id="h1sect1">1. Les propositions, les ensembles, les relations et les
-nombres.</h1>
+# 1. Les propositions, les ensembles, les relations et les nombres.
 
 <p>Avant de commencer, il est conseillé, pour se familariser avec certaines
 notations, de jeter un coup d'oeil sur le <a href="#tabannex">tableau des
 symboles et abréviations usuels.</a> </p>
 
 <p></p>
-<h2>1.1. Les propositions</h2>
+
+## 1.1. Les propositions
 
 <p>Une proposition mathématique est un énoncé dont on peut dire sans ambiguïté
 si elle est vraie ou si elle fausse. Le processus qui consiste à déterminer si
@@ -22,13 +22,13 @@ propositionnel ou calcul des propositions et fait partie de la logique
 mathématique. Le résultat d&#x2019;un calcul propositionnel est donc
 l&#x2019;attribution d&#x2019;une valeur de vérité à une proposition.</p>
 
-<p>Ainsi, l'énoncé «&nbsp;Le cours INF1220 figure parmi les cours dispensés à la
+<p>Ainsi, l'énoncé « Le cours INF1220 figure parmi les cours dispensés à la
 TELUQ au trimestre d&#x2019;hiver 2021 » est une proposition mathématique et sa
-valeur de vérité est « vrai ». la proposition «&nbsp;Le cours INF1220 est mon
+valeur de vérité est « vrai ». La proposition « Le cours INF1220 est mon
 meilleur cours » n'est pas une proposition mathématique. Dans notre contexte,
 quand nous parlons de proposition, nous parlons de proposition mathématique.</p>
 
-<h5>1.1.1. Table des valeurs de vérités des propositions</h5>
+##### 1.1.1. Table des valeurs de vérités des propositions
 Tableau 1: Table de vérités et connecteurs logiques
 
 | p | q | non p | p ou (inclusif) q | p ou (exclusif) q | p et q | p⇒q (p implique q) | p⇔q (p équivaut à q) |
@@ -38,7 +38,7 @@ Tableau 1: Table de vérités et connecteurs logiques
 | F | V | V     | V                 | V                 | F      | V                  | F                    |
 | F | F | V     | F                 | F                 | F      | V                  | V                    |
 
-<h2>1.2. Les ensembles</h2>
+## 1.2. Les ensembles
 
 
 <p>Un ensemble est une collection d&#x2019;objets. Si on appelle E cette
@@ -122,7 +122,7 @@ INF1220 à la TELUQ à cette date. Cependant, dire que cet ensemble est vide ne
 signifie pas qu&#x2019;il n&#x2019;existe pas. Il existe, mais il n&#x2019;a
 aucun élément. V={}.</p>
 
-<h3>1.2.1. Opération sur les ensembles</h3>
+## 1.2.1. Opération sur les ensembles
 
 <p>Soient deux ensembles A et B.</p>
 
@@ -138,7 +138,7 @@ n&#x2019;appartiennent pas à B . On le note A&#x2216;B.</p>
 <p>Le produit cartésien de A et de B est un ensemble formé de couples (a,b)
 tels que a&#x2208;A et b&#x2208;B. On le note A×B.</p>
 
-<h2>1.3. Relation binaire</h2>
+## 1.3. Relation binaire
 
 <p>Une relation binaire R est un ensemble défini par la donnée de deux
 ensembles A et B et d&#x2019;une règle qui permet d&#x2019;associer certains
@@ -150,7 +150,7 @@ et b}. Au lieu de noter (a,b)&#x2208;R, on note simplement aRb et on lit a en
 relation avec b. b est l&#x2019;image de a par la relation R et a est
 l&#x2019;antécédent de b pour la relation R.</p>
 
-<h3>1.3.1. Propriété d&#x2019;une relation binaire</h3>
+### 1.3.1. Propriété d&#x2019;une relation binaire
 
 <p>Soit R une relation binaire. Lorsque les ensembles de départ et
 d&#x2019;arrivée sont identiques, c&#x2019;est-à-dire tous égaux à A, on dit
@@ -159,7 +159,7 @@ simplement que R est une relation définie sur A.</p>
 <p>Soit A un ensemble et R une relation binaire définie sur A. R peut avoir les
 propriétés suivantes :</p>
 
-<h4>1.3.1.1. Reflexivité</h4>
+#### 1.3.1.1. Reflexivité
 
 <p>Soit A un ensemble et R une relation définie sur A.</p>
 
@@ -174,7 +174,7 @@ réflexive. </p>
   <p>La relation d'ordre naturel R sur N définie par aRb ssi a inférieur ou égal à b est réflexive.</p>
 </details>
 
-<h4>1.3.1.2. Symétrie</h4>
+#### 1.3.1.2. Symétrie
 
 <p>R est symétrique ssi &#x2200;a&#x2208;A, &#x2200;b&#x2208;B,
 aRb&#x21d2;bRa.</p>
@@ -182,7 +182,7 @@ aRb&#x21d2;bRa.</p>
 <p>Exemple : soit m&#x2208;N* . La relation R définie sur N par aRb ssi a et b
 ont le même reste dans la division euclidienne par m est symétrique.</p>
 
-<h4>1.3.1.3. Transitivité</h4>
+#### 1.3.1.3. Transitivité
 
 <p>R est transitive ssi pour a, b, c &#x2208;A, aRb et bRc &#x21d2; aRc. La
 relation d&#x2019;ordre naturel sur N est transitive. </p>
@@ -193,7 +193,7 @@ relation d&#x2019;ordre naturel sur N est transitive. </p>
   <p>La relation de divisibilité R dans N définie par aRb ssi a divise b est transitive.</p>
 </details>
 
-<h4>1.3.1.4. Antisymétrie</h4>
+#### 1.3.1.4. Antisymétrie
 
 <p>R est antisymétrique ssi pour a, b &#x2208; A, aRb et bRa &#x21d2; a=b. par
 exemple soit E un ensemble, et P(E) l&#x2019;ensemble des parties de E. La
@@ -206,7 +206,7 @@ est une relation antisymétrique. </p>
   <p>La relation R de divisibilité dans N définie par aRb ssi a divise b est antisymétrique.</p>
 </details>
 
-<h3>1.3.2. Relation d&#x2019;équivalence</h3>
+### 1.3.2. Relation d&#x2019;équivalence
 
 <p>Soit R une relation définie sur un ensemble A. R est une relation
 d&#x2019;équivalence si R est à la fois réflexive, symétrique et transitive.
@@ -214,7 +214,7 @@ Soit m&#x2208;N*. La relation R définie sur Z par aRb ssi a et b ont le même
 reste dans la division euclidienne par m est une relation
 d&#x2019;équivalence.</p>
 
-<h3>1.3.3. Relation d&#x2019;ordre</h3>
+### 1.3.3. Relation d&#x2019;ordre
 
 <p>Soit R une relation définie sur un ensemble A. R est une relation
 d&#x2019;ordre ssi elle est à la fois réflexive, transitive et
@@ -247,7 +247,7 @@ Dom(f) ou simplement Df) l&#x2019;ensemble des éléments de A ayant une image
 par f. De même on appelle image de f et on note Im(f) l&#x2019;ensemble des
 éléments de B ayant au moins un antécédent dans A.</p>
 
-<h4>1.3.3.1. Ordre lexicographique</h4>
+#### 1.3.3.1. Ordre lexicographique
 
 <p>Soit V un ensemble de symboles et L un ensemble défini par :</p>
 
@@ -526,8 +526,8 @@ l'ensemble N muni de la relation d'ordre "naturelle" (la relation inférieure ou
 
 <p></p>
 
-<h2>1.4. L&#x2019;ensemble des entiers naturels N et les autres ensembles de
-nombre.</h2>
+## 1.4. L&#x2019;ensemble des entiers naturels N et les autres ensembles de
+nombre.
 
 <p>Il faut noter que les entiers naturels forment un ensemble particuliers.
 Pour illustrer le lien étroit qu&#x2019;il y a entre la théorie des ensembles
@@ -538,7 +538,7 @@ c'est à dire 1={0}, 2=successeur de 1, c'est à dire 2={0,1}, etc.</p>
 <p>Commençons par voir de façon générale les lois de composition sur un
 ensemble.</p>
 
-<h3>1.4.1. Lois de composition dans un ensemble</h3>
+## 1.4.1. Lois de composition dans un ensemble
 
 <p>Soit E et G deux ensembles. Une loi de composition T dans l&#x2019;ensemble
 E est une fonction de E×E vers G qui à tout couple ( a, b) d'éléments de E
@@ -546,7 +546,7 @@ associe un unique élément c de G tel que c=aTb.</p>
 
 <p>Soit E un ensemble muni d'une loi T.</p>
 
-<h4>1.4.1.1. Ensemble stable par une loi</h4>
+### 1.4.1.1. Ensemble stable par une loi
 
 <p>Si &#x2200;a,b&#x2208;E, a T b &#x2208; E, alors la loi T est interne sur E.
 On dit aussi que E est stable par la loi T. On note (E,T) pour signifier que E
@@ -555,7 +555,7 @@ est muni de la loi interne T.</p>
 <p>Par exemple l&#x2019;addition est interne à l&#x2019;ensemble des entiers
 naturels N.</p>
 
-<h4>1.4.1.2. Élément neutre pour une loi</h4>
+### 1.4.1.2. Élément neutre pour une loi
 
 <p>Un élément e de E est un élément neutre pour T ssi pour tout élément a de E
 , aTe=eTa=a</p>
@@ -582,7 +582,7 @@ des entiers naturels?</p>
 
 <p>On a les propriétés suivantes :</p>
 
-<h4>1.4.1.3. Associacitivité</h4>
+### 1.4.1.3. Associacitivité
 
 <p>La loi T est associative si pour tous éléments a , b et c de E, (a T b)
 &#x22a4; c = a &#x22a4;( b&#x22a4; c)=a &#x22a4;b&#x22a4; c</p>
@@ -590,21 +590,21 @@ des entiers naturels?</p>
 
 <p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;: l'addition + est associative sur N.</p>
 
-<h4>1.4.1.4. Commutativité</h4>
+### 1.4.1.4. Commutativité
 
 <p>La loi &#x22a4; est commutative si pour tous éléments a et b de E, a
 &#x22a4; b = b &#x22a4; a.</p>
 
 <p style="border: 2px solid #007BFF;padding: 10px;">Exemple&nbsp;: l'addition + est commutative sur N.</p>
 
-<h4>1.4.1.5. Symétrie</h4>
+### 1.4.1.5. Symétrie
 
 <p>Deux éléments a et b sont symétriques pour &#x22a4; si a &#x22a4; b = b
 &#x22a4; a = e ( e étant l'élément neutre de E pour la loi &#x22a4;). Si tout
 élément de e admet un symétrique pour la loi &#x22a4;, on dit que la loi
 &#x22a4; est symétrisable.</p>
 
-<h4>1.4.1.6. Distributivité</h4>
+### 1.4.1.6. Distributivité
 
 <p>&#x22a4; est distributive à gauche par rapport à une autre loi&#x22a5; si
 pour tous éléments a, b, c de E, </p>
@@ -691,7 +691,7 @@ restreindre cette définition à N en remplaçant Z par N. On parle alors de
 division euclidienne dans N. On dit que b divise a ou que b est un diviseur de
 a lorsque r vaut 0.</p>
 
-<h5>1.4.1.6.1. Nombre pair / impair.</h5>
+##### 1.4.1.6. Nombre pair / impair.
 
 <p>Soit n&#x2208;Z. n est un nombre pair ssi n est divisible par 2. 0 est un
 nombre pair. Un nombre qui n'est pas pair est impair. On note parfois 2Z
@@ -703,7 +703,7 @@ qu&#x2019;un entier naturel n&#x2208;N est pair ssi n est divisible par 2. Les
 entiers naturels pairs sont ceux dont le chiffre des unités est pair. Les
 entiers naturels impairs sont ceux dont le chiffre des unités est impair.</p>
 
-<h5>1.4.1.6.2. Nombre premier.</h5>
+##### 1.4.1.6. Nombre premier.
 
 <p>Soit n&#x2208;Z. n est un nombre premier ssi n a exactement quatre diviseurs
 : -1,1, -n et n. 0 et 1 ne sont pas des nombres premiers. 2 est un nombre
@@ -785,9 +785,9 @@ parle d'inverses.</p>
 
 <p>&#x2003;</p>
 
-<h1>2. Notion de variables et fonctions élémentaires sur les nombres</h1>
+# 2. Notion de variables et fonctions élémentaires sur les nombres
 
-<h2>2.1. La notion de variable</h2>
+## 2.1. La notion de variable
 
 <p>Soit E et F deux ensembles, f une fonction de E vers F. En général, f est
 donnée par une expression qui permet de déterminer l&#x2019;image d&#x2019;un
@@ -825,7 +825,7 @@ en informatique.</p>
 
 <p></p>
 
-<h2>2.2. Fonctions numériques élémentaires usuelles.</h2>
+## 2.2. Fonctions numériques élémentaires usuelles.
 
 
 
@@ -843,7 +843,7 @@ Tableau 3: Fonctions numériques élémentaires usuelles
 
 <p></p>
 
-<h2>2.3. Suites et séries numériques réelles</h2>
+## 2.3. Suites et séries numériques réelles
 
 <p>Une suite numérique réelle est une application u : N&#x2192;R,
 n&#x21a6;u(n). On note souvent u(n), l'image par n de u, plus simplement
@@ -1047,7 +1047,7 @@ donnée par une relation entre les termes de la suite. Par exemple
   <mi>k</mi>
 </math>.</p>
 
-<h2>2.4. Matrices réelles</h2>
+## 2.4. Matrices réelles
 
 <p>Soient I et J deux ensembles. On appelle matrice à coefficients réels ou
 encore matrice réelle toute application f : I×J &#x2192; R. Si l&#x2019;on
@@ -1403,7 +1403,7 @@ A=(<math xmlns="http://www.w3.org/1998/Math/MathML">
 <p>Dans la suite, on désigne par Mm,n( R ) l&#x2019;ensemble des matrices à m
 lignes et n colonnes à coefficients réels.</p>
 
-<h3>2.4.1. Adition de deux matrices</h3>
+## 2.4.1. Adition de deux matrices
 
 <p>Soit A=(<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
@@ -1442,7 +1442,7 @@ B=(<math xmlns="http://www.w3.org/1998/Math/MathML">
   </msub>
 </math>. C&#x2208;Mm,n( R ).</p>
 
-<h3>2.4.2. Produit de deux matrices</h3>
+## 2.4.2. Produit de deux matrices
 
 <p>Soient A&#x2208;Mm,n( R ) avec 1&#x2264;i&#x2264;m, 1&#x2264;j&#x2264;n et
 B&#x2208;Mn,p( R ) avec 1&#x2264;i&#x2264;n, 1&#x2264;j&#x2264;p.</p>
@@ -1563,7 +1563,7 @@ matrice définie par <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
 </math></p>
 
-<h3>2.4.3. Transposition</h3>
+## 2.4.3. Transposition
 
 <p>Soit A&#x2208;Mm,n( R ). A=(<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
@@ -1847,7 +1847,7 @@ les programmes informatiques sont pseudo-aléatoires.</p>
 
 <p></p>
 
-<h1>4. Annexe</h1>
+# 4. Annexe
 Tableau 5: Quelques abréviations et symboles usuels, ainsi que leur signification
 
 | Symbole | Description | Exemple |

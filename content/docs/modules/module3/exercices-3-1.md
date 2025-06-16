@@ -1,10 +1,10 @@
 ---
 
-title: "Exercices 3.1"
-weight: 4
+title: "Exercices sur les structures de contrôle, les structures itératives, les structures de données"
+weight: 5
 ---
 
-<h1><a id="top" name="top"></a>Module 3</h1><h2>Exercice 3.1</h2><h2 class="partie2">Exercices sur les Structures de contrôle, les Structures itératives, les Structures de données</h2>
+# Exercices sur les structures de contrôle, les structures itératives, les structures de données
 
 <h1>Questions/Réponses</h1>
 <p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.</p>
@@ -19,7 +19,7 @@ weight: 4
 <h2>Question 1</h2>
 <p>Si x == true et que l'on utilise le code suivant, quel sera la sortie en ligne de commande?</p>
 
-```java
+```java  {style=github}
 if(x != true && x == true) {
     System.out.println("AAA");
 } else {
@@ -27,15 +27,14 @@ if(x != true && x == true) {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Le résultat affiché sera BBB, car x != true donnera Faux et x == true donnera Vrai. Par définition, Faux ET Vrai = FAUX</p></div>
-</div>
+<details><summary>Réponse</summary>
+<p>Le résultat affiché sera BBB, car x != true donnera Faux et x == true donnera Vrai. Par définition, Faux ET Vrai = FAUX</p>
+</details>
 
 <h2>Question 2</h2>
 <p>Le code suivant contient 5 erreurs, veuillez les identifier :</p>
 
-```java
+```java  {style=github}
 int x = 5;
 
 if((x > 1) && (x =< 10) {
@@ -45,9 +44,8 @@ if((x > 1) && (x =< 10) {
 } 
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Voici les erreurs :</p>
+<details><summary>Réponse</summary>
+<p>Voici les erreurs :</p>
 <ul>
 	<li>l'opérateur =< n'existe pas, c'est plutôt <=</li>
 	<li>il manque une parenthèse ")" à la première ligne if (avant le })</li>
@@ -56,7 +54,7 @@ if((x > 1) && (x =< 10) {
 	<li>l'opérateur !!= n'existe pas, c'est plutôt !=</li>
 </ul>
 
-```java
+```java  {style=github}
 int x = 5;
 
 if((x > 1) && (x <= 10)) {
@@ -66,21 +64,19 @@ if((x > 1) && (x <= 10)) {
 } 
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 3</h2>
 <p>Quelle est la différence entre une boucle while et une boucle do-while?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Le contrôle se fait au départ dans la boucle while alors que le contrôle se fait à la fin dans le do-while. Dans la boucle while, il y a donc un contrôle avant même de faire la première itération.</p></div>
-</div>
+<details><summary>Réponse</summary>
+<p>Le contrôle se fait au départ dans la boucle while alors que le contrôle se fait à la fin dans le do-while. Dans la boucle while, il y a donc un contrôle avant même de faire la première itération.</p>
+</details>
 
 <h2>Question 4</h2>
 <p>Quelle sera la sortie d'affichage de ce block switch-case et pourquoi?</p>
 
-```java
+```java  {style=github}
 int index = 10;
 switch (index) {
         case 1:
@@ -98,46 +94,41 @@ switch (index) {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>La sortie sera "Default", car la valeur de la variable index = 10 ne correspond à aucun des cas du switch. C'est donc le sous-bloc "Default" qui est exécuté.</p></div>
-</div>
+<details><summary>Réponse</summary>
+<p>La sortie sera "Default", car la valeur de la variable index = 10 ne correspond à aucun des cas du switch. C'est donc le sous-bloc "Default" qui est exécuté.</p>
+</details>
 
 <h2>Question 5</h2>
 <p>Vrai ou faux: un tableau de type int[10] occupera 40 octets en mémoire parce qu'il y a 10 entiers (int) et que chaque entier occupe 4 octets (32 bits).</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Faux. Il est vrai qu'il y a 10 entiers (int) et que chaque entier occupe 4 octets. Cependant, Java doit aussi garder une trace de la longueur du tableau (10 éléments). Il y a aussi d'autres contraintes. Il serait plus juste de dire que le tableau va utiliser plus de 40 octets. </p> </div>
-</div>
+<details><summary>Réponse</summary>
+<p>Faux. Il est vrai qu'il y a 10 entiers (int) et que chaque entier occupe 4 octets. Cependant, Java doit aussi garder une trace de la longueur du tableau (10 éléments). Il y a aussi d'autres contraintes. Il serait plus juste de dire que le tableau va utiliser plus de 40 octets. </p>
+</details>
 
 <h2>Question 6</h2>
 <p>Supposons que dans un code, nous avons créé un tableau d'une dimension de 10 éléments (int[] tableau = new int[10]) et que nous accédons, suite à son instanciation, au 20e élément du tableau ( int x = tableau[20]), qu'adviendra-t-il?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>À l'exécution l'opération int x = tableau[20] va générer une erreur du type : java.lang.ArrayIndexOutOfBoundsException: 20, car nous tentons d'accéder à des index du tableau qui n'existe pas.</p></div>
-</div>
+<details><summary>Réponse</summary>
+<p>À l'exécution l'opération int x = tableau[20] va générer une erreur du type : java.lang.ArrayIndexOutOfBoundsException: 20, car nous tentons d'accéder à des index du tableau qui n'existe pas.</p>
+</details>
 
 <h2>Question 7</h2>
 <p>Est-ce possible de créer une structure de données de type ArrayList d'entier en utilisant la déclaration suivante : ArrayList<int> = new ArrayList<int>(); ?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Le Java est un langage OO et même si le Java intègre des types de base (int, float, etc.) qui ne sont pas des objets.  L'objet ArrayList ne peut que contenir des objets. Il faut donc utiliser plutôt : ArrayList<Integer> = new ArrayList<Integer>(); où l'objet Integer est la version objet de int. Dans les dernières versions de Java, une mécanique de conversion automatique permet d'assigner des types à leur objet équivalent. Par exemple : Integer i = 5; ou bien :</p>
+<details><summary>Réponse</summary>
+<p>Le Java est un langage OO et même si le Java intègre des types de base (int, float, etc.) qui ne sont pas des objets.  L'objet ArrayList ne peut que contenir des objets. Il faut donc utiliser plutôt : ArrayList<Integer> = new ArrayList<Integer>(); où l'objet Integer est la version objet de int. Dans les dernières versions de Java, une mécanique de conversion automatique permet d'assigner des types à leur objet équivalent. Par exemple : Integer i = 5; ou bien :</p>
 
-```java
+```java  {style=github}
 ArrayList<Integer> list = new ArrayList<Integer>();
 list.add(5);
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 8</h2>
 <p>Votre employeur vous demande créer une fonction en Java qui vous permettra de trouver dans un tableau à deux dimensions, un couple {clé,valeur}. Pour démarrer, vous avez le code suivant, veuillez créer une fonction trouver qui reçoit en paramètre la clé et retourne la valeur :</p>
 
-```java
+```java  {style=github}
 public class Dictionnaire {
     
     int[][] tableau2D = {{5,3},{2,5},{4,3},{8,10},{105,32},{55,34},{12,21},
@@ -155,11 +146,10 @@ public class Dictionnaire {
 }
 ```
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Voici le code</p>
+<details><summary>Réponse</summary>
+<p>Voici le code</p>
 
-```java
+```java  {style=github}
 public class Dictionnaire {
     
     int[][] tableau2D = {{5,3},{2,5},{4,3},{8,10},{105,32},{55,34},{12,21},
@@ -197,17 +187,15 @@ public class Dictionnaire {
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 9</h2>
 <p>Montrer comment on peut trier un tableau d'entiers en Java.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Le plus simple est d'utiliser la méthode Arrays.sort.</p>
+<details><summary>Réponse</summary>
+<p>Le plus simple est d'utiliser la méthode Arrays.sort.</p>
 
-```java
+```java  {style=github}
 import java.util.Arrays;
 class Main {
   public static void main(String[] args) {
@@ -221,17 +209,15 @@ class Main {
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 10</h2>
 <p>Veuillez créer une fonction, recevant un ArrayList en entrée, et qui retourne une nouvelle ArrayList avec les éléments inversés, i.e. le premier élément à la fin, le dernier élément en premier et ainsi de suite.  </p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>Voici une solution possible. Elle est grossièrement inefficace sur le plus du temps de calcul: vous pouvez sans doute faire mieux.</p>
+<details><summary>Réponse</summary>
+<p>Voici une solution possible. Elle est grossièrement inefficace sur le plus du temps de calcul: vous pouvez sans doute faire mieux.</p>
 
-```java
+```java  {style=github}
 import java.util.ArrayList;
 
 public class ArrayListUtils {
@@ -270,7 +256,7 @@ public class ArrayListUtils {
 
 <p>Voici une autre solution (n'oubliez pas 'import java.util.Collections').</p>
 
-```java
+```java  {style=github}
 ArrayList<String> test = new ArrayList<String>();
 test.add("1");
 test.add("2");
@@ -284,17 +270,15 @@ for(String s : test) {
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 11</h2>
 <p>Vous devez créer une méthode supplémentaire au code de la Question #10, permettant de fusionner deux ArrayList ensemble. Cette méthode prend deux ArrayLists en paramètre et retourne le nouvel ArrayList fusionné.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
-<div><p>La méthode addAll de la classe ArrayList permet de rapidement faire cette fusion :</p>
+<details><summary>Réponse</summary>
+<p>La méthode addAll de la classe ArrayList permet de rapidement faire cette fusion :</p>
 
-```java
+```java  {style=github}
 import java.util.ArrayList;
 
 public class ArrayListUtils {
@@ -342,8 +326,7 @@ public class ArrayListUtils {
 }
 ```
 
-</div>
-</div>
+</details>
 
 <h2>Question 12</h2>
 <p>Veuillez écrire le code (classe et méthode(s)) permettant de faire afficher le texte suivant à la console. Vous ne pouvez utiliser qu'une seule fois la méthode System.out.println.</p>
@@ -366,11 +349,10 @@ public class ArrayListUtils {
 ??????????????###??????????????<br/>
 </p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 import java.util.ArrayList;
 // solution par Francis Beauchemin-Côté 
 public class Main {
@@ -422,16 +404,15 @@ public class Main {
 ```
 
 </div>
-</div>
+</details>
 
 <h2>Question 13</h2>
 <p>Écrivez un programme efficace Java qui prend la chaîne de caractère « 124213 » et en extrait les nombres 1, 2, 4, 2, 1, 3.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 class Exemple {
   public static int[] extrait(String s) {
     int[] answer = new int[s.length()];
@@ -450,12 +431,12 @@ class Exemple {
 ```
 
 </div>
-</div>
+</details>
 
 <h2>Question 14</h2>
 <p>Qu’est-ce qui s’affiche à l’exécution du bout de code suivant :</p>
 
-```java
+```java  {style=github}
 public class Main {
   public static void main(String args[]) {
     if (true)
@@ -474,19 +455,18 @@ public class Main {
 
 <p>Expliquer pourquoi.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div> <p>Le code affiche « avant le second else ».</p>
 <p>En effet le second if est évalué à false, et toute l’instruction qui suit (y compris l’évaluation du else qui se rapporte au if de cette instruction) n’est pas exécutée ; l’instruction suivante c’est le tout dernier if, qui est évalué à true, et donc le else qui s’y rapporte n’est pas évalué.</p>
 </div>
-</div>
+</details>
 
 <h2>Question 15</h2>
 <p>Soit les deux bouts de code suivants :</p>
 
 <p>a)</p>
 
-```java
+```java  {style=github}
 for (int j=0; j < 10; j++) {
   if (j>=5) {
     continue;
@@ -497,7 +477,7 @@ for (int j=0; j < 10; j++) {
 
 <p>b)</p>
 
-```java
+```java  {style=github}
 for (int j=0; j < 10;j++) {
   if (j>=5) {
     break;
@@ -508,21 +488,20 @@ for (int j=0; j < 10;j++) {
 
 <p>Que se passe-t-il dans chacun des cas quant à l’exécution de Instruction quand j vaut 5?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 <p>En a) Instruction n’est pas exécutée et on passe au tour suivant, le 7eme tour de la boucle (i=6) où, comme lors des autres tours précédant i=5, Instruction sera exécutée.</p>
 
 <p>En b) on sort de la boucle, Instruction ne sera plus jamais exécutée.</p>
 </div>
-</div>
+</details>
 
 <h2>Question 16</h2>
 <p>Soit les deux bouts de code suivants :</p>
 
 <p>a)</p>
 
-```java
+```java  {style=github}
 label:
 for (int i=0; i < 10;i++) {
   for (int j=0; j < 6; j++) {
@@ -537,7 +516,7 @@ for (int i=0; i < 10;i++) {
 
 <p>b)</p>
 
-```java
+```java  {style=github}
 for (int i=0; i < 10; i++) {
   for(int j=0; j < 6; j++) {
     if(condition) {
@@ -551,19 +530,18 @@ for (int i=0; i < 10; i++) {
 
 <p>Dans quel cas (quel bout de code et quelle condition) Instruction1 n'est pas exécuté? Y'a-t-il une situation où Instruction2 n'est pas exécuté? Si oui laquelle?</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 <p>Instruction1 n’est pas exécuté, dans tous les cas lorsque condition est vraie.</p>
 
 <p>Instruction2 est toujours exécuté.</p>
 </div>
-</div>
+</details>
 
 <h2>Question 17</h2>
 <p>Soit le code suivant :</p>
 
-```java
+```java  {style=github}
 public class Main {
  public static void main(String[] args) {
    final int NBRE = 10;
@@ -581,12 +559,11 @@ public class Main {
 
 <p>Réécrire le même code en utilisant les syntaxes de l’instruction while et de l’instruction do…while.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 <p>Instruction while.</p>
 
-```java
+```java  {style=github}
 public class Main {
  public static void main(String[] args) {
    final int NBRE = 10;
@@ -605,7 +582,7 @@ public class Main {
 
 <p>Instruction do…while</p>
 
-```java
+```java  {style=github}
 public class Main {
  public static void main(String[] args) {
    final int NBRE = 10;
@@ -623,12 +600,12 @@ public class Main {
 ```
 
 </div>
-</div>
+</details>
 
 <h2>Question 18</h2>
 <p>Soit le code suivant :</p>
 
-```java
+```java  {style=github}
 import java.util.Scanner;
 public class Main {
  public static void main(String[] args) {
@@ -650,11 +627,10 @@ public class Main {
 
 <p>Réécrire le même programme avec l'instruction switch.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 import java.util.Scanner;
 public class Main {
 public static void main(String[] args) {
@@ -681,26 +657,24 @@ break;
 ```
 
 </div>
-</div>
+</details>
 
 <h2>Question 19</h2>
 <p>Étant donné le tableau <tt>String[] x = new String[10]</tt>, que vaut <tt>x[0]</tt>.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 <p>En Java, les tableaux sont initialisées à une valeur nulle par défaut. Dans ce cas, <tt>x[0]</tt> prendra donc la valeur <tt>null</tt>. Cette valeur spéciale ne correspond pas à une instance de la classe String. On peut, par contre, assigner une valeur (<tt>x[0]="123"</tt>).</p>
 </div>
-</div>
+</details>
 
 <h2>Question 20</h2>
 <p>Énumérer toutes les paires d'entiers entre 0 et 1000 en ordre lexicographique.</p>
 
-<div class="accordeon">
-<p class="titre">Réponse<span class="iconeEtatAccordeon"> </span></p>
+<details><summary>Réponse</summary>
 <div>
 
-```java
+```java  {style=github}
 public class Liste {
   public static void main(String[] args) {
     for(int i = 0; i <= 1000; i++) {
@@ -713,5 +687,5 @@ public class Liste {
 ```
 
 </div>
-</div>
+</details>
 

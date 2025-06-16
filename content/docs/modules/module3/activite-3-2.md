@@ -1,22 +1,10 @@
 ---
-title: "Activité 3.2"
-weight: 2
+title: "Les structures itératives"
+weight: 3
 ---
 
-<h1><a id="top" name="top"></a>Module 3</h1><h2>Activité 3.2</h2><h2 class="partie2">Les structures itératives</h2>
+# Les structures itératives
 
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">La boucle while</a></li>
-
-<li><a href="#section2">La boucle for</a></li>
-
-<li><a href="#section3">La boucle do-while</a></li>
-
-<li><a href="#section4">Utilisation des structures d'itération</a></li>
-
-</ul>
 
 <p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.</p>
 
@@ -60,7 +48,7 @@ public class ExecutionIteration {
 
 <p>L'instruction for (initialisation; test_fin; itération) permet de répéter les instructions dans la portée en utilisant plusieurs valeurs pour certaines variables. Ces variables sont déclarées et initialisées dans l'expression init (plusieurs variables peuvent être séparées par des virgules). La fin de l'itération est indiquée par l'expression test_fin. L'expression itération est exécutée au début de chaque nouvelle itération (après la première). Voici un exemple de boucle for en réutilisant l'exemple précédent pour la boucle while :</p> 
 
-```java
+```java  {style=github}
 public class ExecutionIteration {
     // affiche 2 et 4
     public static void main(String arg[]) {

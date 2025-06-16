@@ -1,22 +1,9 @@
 ---
-title: "Activité 3.3"
-weight: 3
+title: "Les structures de données de base"
+weight: 4
 ---
 
-<h1><a id="top" name="top"></a>Module 3</h1><h2>Activité 3.3</h2><h2 class="partie2">Les structures de données de base</h2>
-
-<p class="sommaire">Sommaire</p>
-<ul>
-
-<li><a href="#section1">Les tableaux et matrices</a></li>
-
-<li><a href="#section2">Les ArrayLists</a></li>
-
-<li><a href="#section3">Autres structures de données</a></li>
-
-</ul>
-
-<p><a id="intro" name="section1"></a></p>
+# Les structures de données de base
 
 <h1>Les tableaux et matrices</h1>
 
@@ -109,7 +96,7 @@ weight: 3
 
 <p>Pour accéder à une valeur du tableau, nous utilisons le nom du tableau suivi de l'indice entre crochets. Par exemple, pour accéder au cinquième salaire du tableau, il suffit d'écrire : salaire [4]. La valeur sera donc 8. L'expression salaire [4] a donc comme valeur 8. L'indice d'un tableau est un simple entier, il est donc possible d'utiliser des variables ou constantes entre crochets comme dans l'exemple ci-dessous :</p>
 
-```java
+```java  {style=github}
 // Tableau avec une pré-déclaration
 int[] salaire = {12, 74, 88, 22, 8, 78, 28, 44, 47, 78, 81};
 
@@ -120,7 +107,7 @@ System.out.println(salaire[4]);
 
 <p>En Java, les tableaux sont des objets; donc, pour créer un nouveau tableau, il faudra utiliser l'opérateur new. La ligne de code suivante permet de créer un tableau de salaire horaire des 10 employés d'une entreprise.</p>
 
-```java
+```java  {style=github}
 int[] salaire = new int[10];
 ```
 
@@ -135,7 +122,7 @@ Il est donc à remarquer qu'un tableau contient plusieurs valeurs qui doivent to
 <p>Cet exemple montre également une bonne utilisation des constantes. En effet, si nous voulons un tableau de taille 15, il n'y a qu'une ligne de code à changer, à savoir la valeur de la constante MAX. Les crochets utilisés pour accéder à un élément d'un tableau sont un opérateur Java comme + ou =. Cet opérateur a la plus haute priorité et sera donc exécuté en premier. 
 L'opérateur d'indexation de tableau ([]) vérifie automatiquement si l'indice est correct, c'est-à-dire s'il est positif et est plus petit que la taille du tableau - 1. Si tel n'est pas le cas, il se produira une erreur d'exécution.</p>
 
-```java
+```java  {style=github}
 int[] tableau = new int[2];
 tableau [0] = 0;
 tableau [1] = 1;
@@ -148,7 +135,7 @@ System.out.println (tableau [2]);
 <p><em>java.lang.ArrayIndexOutOfBoundsException: 2 at Test.main(Test.java:18)</em> <br /><em>Exception in thread "main"</em></p> 
 <p><br />Étant donné que le premier indice est de 0, il arrive souvent des erreurs d'indice trop élevé d'une position. Le programmeur doit donc être vigilant et s'assurer que les indices restent dans les limites du tableau. <br />La taille d'un tableau est régie par une variable d'instance de l'objet tableau appelée <em>length</em>. Donc, pour connaître la taille d'un tableau, il suffit de consulter le contenu de cette variable à l'aide de l'opérateur d'accès point.</p> 
 
-```java
+```java  {style=github}
 int[] tableau = new int[5];
 System.out.println (tableau.length); // Affiche 5 à la console
 ```
@@ -157,13 +144,13 @@ System.out.println (tableau.length); // Affiche 5 à la console
 
 <p>Nous pouvons instancier autrement un tableau. Il suffit de donner directement les valeurs qu'il contient. Nous affecterons une <em>liste d'initialisation</em> ou <em>initialisateur</em> au tableau. Les éléments du tableau sont repris entre des accolades et séparés par des virgules. Par exemple, pour créer le tableau ci-dessous, nous pourrions écrire :</p> 
 
-```java
+```java  {style=github}
 int[] tableau = {20, 17, 21, 19, 18, 20};
 ```
 
 <p>Initialisateur <br />Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
 
-```java
+```java  {style=github}
 int[] tab = new int[3];
 tab = {1, 2, 3};
 ```
@@ -178,7 +165,7 @@ tab = {1, 2, 3};
 Nous pouvons bien entendu passer en paramètre un seul élément d'un tableau. S'il s'agit d'une donnée primitive, une copie de celle-ci sera passée en paramètre. S'il s'agit d'un objet, une copie de la référence sera passée en paramètre. 
 La méthode ci-dessous déplace tous les éléments du tableau d'une position vers la droite.</p>
 
-```java
+```java  {style=github}
 public class AfficheDeplacer {
     public static void main(String[] args) {
         int[] tableau = {11, 22, 33, 44};
@@ -215,7 +202,7 @@ public class AfficheDeplacer {
 <p>Dans tous les exemples que nous avons vus jusqu'à présent, les tableaux contenaient uniquement des types primitifs. Dans la dernière partie de la section précédente, nous avons vu des tableaux qui pouvaient contenir des objets, ou plus précisément des références vers des objets. 
 Il est possible de stocker des objets dans un tableau. La ligne de code suivant crée un tableau de 20 objets de type String.</p>
 
-```java
+```java  {style=github}
 String[] phrases = new String[20];
 ```
 
@@ -225,7 +212,7 @@ String[] phrases = new String[20];
 
 Nous donnons en fait à la méthode main une chaîne de caractères qui sera découpée en morceaux délimités par des espaces. Il est ensuite possible d'utiliser ces paramètres dans la méthode, comme l'illustre le programme suivant :</p>
 
-```java
+```java  {style=github}
 public static void main(String[] args) {
         if (args.length != 0) {
             System.out.println(args[0]);
@@ -245,7 +232,7 @@ Le tri d'informations fait partie des nombreuses applications en informatique. I
 
 <p>Réalisation de l'algorithme « recherche du minimum » en Java :</p>
 
-```java
+```java  {style=github}
 public static int minimum(int a[]) {
         int min = a[0];
         for (int i = 1; i < a.length; i++) {
@@ -260,7 +247,7 @@ public static int minimum(int a[]) {
 <p>La recherche de la valeur maximale est très similaire : il suffit de changer le critère de comparaison.
 La réalisation sous la forme d'une méthode Java est, par conséquent, aussi similaire :</p>
 
-```java
+```java  {style=github}
 public static int maximum(int a[]) {
         int max = a[0];
         for (int i = 1; i < a.length; i++) {
@@ -377,14 +364,14 @@ public static int maximum(int a[]) {
   <p><em>typededonnées NonDuTableau [nombreDeLignes][nombreDeColonne]</em></p> 
   <p>Plus concrètement, nous pouvons déclarer un tableau à deux dimensions pour inscrire des achats du mois en faisant :</p> 
 
-```java
+```java  {style=github}
 double achats [][]; //achats est ici un tableau à deux dimensions de type double des achats.
 ```
 
   <p>Une fois que le tableau est déclaré, il faut le créer en utilisant le mot clé <em>new.</em></p> 
   <p>Ainsi, pour créer les achats des quatre semaines du mois de juillet des cinq dernières années, nous allons faire :</p> 
 
-```java
+```java  {style=github}
 achats = new double [5][4];
 ```
 
@@ -470,13 +457,13 @@ achats = new double [5][4];
   <p><strong><u>Achats</u></strong></p> 
   <p>Il faut noter ici que rien ne nous empêche de déclarer et de créer en même temps un tableau. Pour cela, il faut simplement faire :</p> 
 
-```java
+```java  {style=github}
 typeDeTableau [][] nomDuTableau = new typeDeTableau [nombreDeLigne][nombreDeColonne];
 ```
 
   <p>Ainsi dans le cas de Achats, nous pouvons écrire :</p> 
 
-```java
+```java  {style=github}
 double[][] Achats = new double [5][4];
 ```
 
@@ -485,7 +472,7 @@ double[][] Achats = new double [5][4];
   <p>Pour accéder à un élément du tableau <em>Achats</em>, il faut écrire, par exemple :</p> 
   <p>Achats [0][0] = 11 pour l'élément à la ligne 0 colonne 0. Il est cependant important de noter que si nous avons des milliers d'éléments, cette façon de faire ne sera pas commode. Ainsi, avec deux boucles <em>for </em>imbriquées, nous pouvons accéder plus facilement aux éléments de Achats. La portion de programme suivant le montre facilement :</p> 
 
-```java
+```java  {style=github}
 int annees = 2010; // initialisation de l'année selon l'indice 0 du tableau Achats
       
 for (int i = 0; i < 5; i++) {
@@ -497,32 +484,32 @@ for (int i = 0; i < 5; i++) {
 
   <p>Pour initialiser un tableau à deux dimensions, nous pouvons simplement écrire :</p> 
 
-```java
+```java  {style=github}
 typeDeTableau nomDuTableau [][] = { { }, {}, {}, etc...};
 ```
 
   <p>Ainsi, pour un tableau composé des noms des étudiants et des cours qu'ils suivent peut être défini de la manière suivante :</p> 
 
-```java
+```java  {style=github}
 String etudiants[][] = { {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"} etc...};
 ```
 
   <h2>Tableaux multidimensionnels</h2> 
   <p>Java ne se limite pas seulement aux tableaux à deux dimensions. Nous pouvons aussi déclarer des tableaux à plus de deux dimensions. Pour déclarer un tableau à trois dimensions, par exemple, il suffit de faire : </p> 
 
-```java
+```java  {style=github}
 typedetableau [][][] nomdutableau = new [taille][taille][taille];
 ```
 
   <p>Plus concrètement, nous pouvons déclarer un tableau d'entiers comme :<br /></p> 
 
-```java
+```java  {style=github}
 int tableauEntier [][][] = new int [5][5][5];
 ```
 
   <p>Nous venons ainsi de créer un tableau d'entiers à trois dimensions. Pour initialiser un tel tableau, nous pouvons utiliser trois boucles <em>for</em>. À titre d'exemples, initialisons tous les éléments du tableau <em>tableauentier à 1 :</em></p> 
 
-```java
+```java  {style=github}
 for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
         for (int k = 0; k < 5; k++) {
@@ -541,7 +528,7 @@ for (int i = 0; i < 5; i++) {
 
 <p>Comme nous l'avions vu lors de la présentation de la structure d'itération while, il est possible d'itérer rapidement parmi les éléments d'une ArrayList. Pour ce faire, voici trois façons d'itérer parmi les éléments : </p>
 
-```java
+```java  {style=github}
 ArrayList<String> list = new ArrayList<String>();                        
 list.add("Valeur1");
 
