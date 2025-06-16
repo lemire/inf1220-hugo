@@ -1,11 +1,8 @@
 ---
 title: "Feuille de route"
-weight: 4
+weight: 5
 ---
 
-<!-- Ajoutez ici le contenu HTML de la feuille de route -->
-
-<!-- Ajoutez ici le contenu HTML de l'évaluation -->
 <h1>Feuille de route</h1>
 
 <p>Prévoyez environ 9 heures de travail pendant quinze semaines. Il n'est pas possible, pour la plupart des étudiants, de réussir ce cours en ne prenant qu'une poignée d'heures par semaine. </p>

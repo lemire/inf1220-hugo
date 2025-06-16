@@ -1,6 +1,6 @@
 ---
 title: "Intelligence artificielle"
-weight: 11
+weight: 12
 ---
 
 <!-- Ajoutez ici le contenu HTML de la présentation -->

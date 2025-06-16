@@ -1,6 +1,6 @@
 ---
 title: "Ressources"
-weight: 5
+weight: 6
 ---
 # Ressources pour apprendre Java
 

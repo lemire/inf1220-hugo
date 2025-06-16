@@ -60,12 +60,14 @@ weight: 5
     <li>Des instructions comme <code>écrire</code> ou <code>lire</code> pour les entrées/sorties.</li>
 </ul>
 <p>Exemple de pseudo-code pour calculer la somme de deux nombres :</p>
-<pre>
+
+```
 lire nombre1
 lire nombre2
 somme ← nombre1 + nombre2
 écrire somme
-        </pre>
+```
+
 <p>Le pseudo-code permet aux programmeurs de planifier la logique avant de la traduire dans un langage comme Python, C++ ou Java.</p>
 
 <p>En résumé, un algorithme est une méthode pour résoudre un problème, tandis que le pseudo-code est un outil pour exprimer cet algorithme de manière claire et universelle. Ces deux concepts sont essentiels pour concevoir des solutions informatiques efficaces.</p>
@@ -434,36 +436,40 @@ FIN TANT QUE
 
 <p>Dans la pratique, un algorithme peut comporter plusieurs structures de contrôle itératives, plusieurs structures de contrôle alternatives et plusieurs opérations. On peut les combiner de diverses manières. Il est possible, par exemple, d'avoir une boucle TANT QUE au sein d'une autre boucle TANT QUE.</p>
 
-<pre style='color:#000000;background:#ffffff;'>TANT QUE x <span style='color:#808030; '>></span> <span style='color:#008c00; '>0</span> FAIRE
-  TANT QUE x <span style='color:#808030; '>></span> <span style='color:#008c00; '>10</span> FAIRE
-     x <span style='color:#808030; '>=</span> x <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span>
+```plaintext
+TANT QUE x > 0 FAIRE
+  TANT QUE x > 10 FAIRE
+     x = x - 1
   FIN TANT QUE
 FIN TANT QUE
-</pre>
+```
 
 <h3> La fin d'un algorithme </h3>
 
 <p>Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudo-code ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demander à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.</p>
 
-<pre style='color:#000000;background:#ffffff;'>x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>
-TANT QUE x <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>10</span> ALORS
+```plaintext
+x = 0
+TANT QUE x < 10 ALORS
    ajoute un à x
-   <span style='color:#000080; '>SI</span> x <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> <span style='color:#008c00; '>5</span> ALORS TERMINE
+   SI x == 5 ALORS TERMINE
 FIN TANT QUE
 AFFICHE x
-</pre>
+```
 
 <p>La valeur x ne sera donc jamais affichée.</p>
 
 <p>Il arrive aussi qu'un pseudo-code doit retourner une valeur. Par convention, dès que la valeur attendue est retournée, l'algorithme prend fin. Ainsi donc, dans le cas suivant, la valeur 5 sera retournée.</p>
 
-<pre style='color:#000000;background:#ffffff;'>x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>
-TANT QUE x <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>10</span> ALORS
+```plaintext
+x = 0
+TANT QUE x < 10 ALORS
    ajoute un à x
-   <span style='color:#000080; '>SI</span> x <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> <span style='color:#008c00; '>5</span> ALORS RETOURNE x
+   SI x == 5 ALORS RETOURNE x
 FIN TANT QUE
 RETOURNE x
-</pre>
+```
+
 <!--Created using ToHtml.com on 2021-06-09 13:05:54 UTC -->
 
 <p><a id="execute" ></a></p>
@@ -566,51 +572,53 @@ On peut être imprécis et incohérent en utilisant une syntaxe formelle, et on 
 
 <li>Au sein d'une boucle (par ex., TANT QUE), les étudiants peuvent mettre par erreur une condition qui termine toujours le programme. Dans un tel cas, la boucle ne peut pas s'exécuter et elle est de facto brisée. Voici un exemple:
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Variable <span style="color: #333333"></span> iterateur <span style="color: #333333">(</span>entier<span style="color: #333333">)</span>
+```java
+Variable iterateur (entier)
 
 
 Variable minimum  = tableau[0] 
 
 
-iterateur = 0</span>
-TANT QUE  iterateur <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">100</span>  FAIRE
-     SI tableau<span style="color: #333333">[</span>iterateur<span style="color: #333333">]</span> <span style="color: #333333">&lt;</span> minimum ALORS
-         retourner tableau<span style="color: #333333">[</span>iterateur<span style="color: #333333">];</span>
+iterateur = 0
+TANT QUE  iterateur < 100  FAIRE
+     SI tableau[iterateur] < minimum ALORS
+         retourner tableau[iterateur];
      SINON
          retourner minimum
      FIN SI
-     iterateur <span style="color: #333333">=</span> iterateur <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span>
+     iterateur = iterateur + 1;
 FIN TANT QUE
-</pre></div>
+```
 
 
-Les instructions « retourner minimum » et « retourner tableau<span style="color: #333333">[</span>iterateur<span style="color: #333333">];</span>» terminent le pseudo-code.
+Les instructions « retourner minimum » et « retourner tableau<span style="color: #333333">[</span>iterateur<span style="color: #333333">]</span>» terminent le pseudo-code.
 
 Assurez-vous de bien comprendre que ce pseudo-code ne va consulter que la première valeur du tableau. Si vous avez une condition ou les deux branches (SI et SINON) retournent une valeur et terminent donc l'algorithme, votre algorithme ne procèdera pas plus loin. </li>
 
 <li>Certains étudiants construisent des boucles qui ne se terminent jamais. Dans une boucle TANT QUE, il faut s'assurer que la condition ne soit plus satisfaite pour ne pas avoir une boucle infinie. Consultez cet exemple :
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
-iterateur = 0</span>
-TANT QUE  iterateur <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">100</span>  FAIRE
-     SI iterateur <span style="color: #333333">&lt;</span> 10 ALORS
+```java
+iterateur = 0
+TANT QUE  iterateur < 100  FAIRE
+     SI iterateur < 10 ALORS
          ajouter un à itérateur
      FIN SI
 FIN TANT QUE
-</pre></div>
+```
 <p>Si vous testez votre pseudo-code, vous saurez éviter de telles erreurs.</p>
 </li>
 <li>Les étudiants vont aussi fréquemment utiliser des variables et des constructions qui ne sont pas définies et dont le sens doit être deviné. Voici un exemple:
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Entier iterateur<span style="color: #333333">[</span>tableau<span style="color: #333333">]</span> <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span>
-TANT QUE  iterateur<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">100</span>  FAIRE
-     SI tableau<span style="color: #333333">[</span>iterateur<span style="color: #333333">]</span> <span style="color: #333333">&lt;</span> minimum ALORS
-         retourner iterateur<span style="color: #333333">[</span>tableau<span style="color: #333333">];</span>
+```java
+Entier iterateur[tableau] = 0;
+TANT QUE  iterateur[i] < 100  FAIRE
+     SI tableau[iterateur] < minimum ALORS
+         retourner iterateur[tableau];
      FIN SI
-     iterateur <span style="color: #333333">=</span> iterateur<span style="color: #333333">[</span>tableau<span style="color: #333333">]</span> <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span>
+     iterateur = iterateur[tableau] + 1;
 FIN POUR TOUT
-</pre></div>
+```
 
 
-<p>Vous constaterez à la lecture de ce pseudo-code qu'il y a plusieurs conventions syntaxiques qui ne sont pas définies. Il y a plusieurs variables, mais il est difficile de connaître leur type et leurs relations. Assurez-vous donc de bien expliquer chaque variable et de bien définir votre syntaxe. Dans ce dernier exemple, que représente iterateur, iterateur[tableau], tableau[iterateur], etc.? Vous devez être précis. Souvent, nous avons un nombre limité de « types » pour les variables: nombres, entiers, chaînes de caractères. Il convient, pour chaque variable, d'en préciser le type. Nous avons aussi des tableaux. On utilise le plus souvent la convention t[i] pour désigner l'élément à l'index i du tableau t. Dans un tel cas, t doit être un tableau, i doit être une valeur entière. Vous être libre de concevoir vos propres conventions, mais vous devez être explicite et précis.</p>
+<p>Vous constaterez à la lecture de ce pseudo-code qu'il y a plusieurs conventions syntaxiques qui ne sont pas définies. Il y a plusieurs variables, mais il est difficile de connaître leur type et leurs relations. Assurez-vous donc de bien expliquer chaque variable et de bien définir votre syntaxe. Dans ce dernier exemple, que représente iterateur, iterateur[tableau], tableau[iterateur], etc.? Vous devez être précis. Souvent, nous avons un nombre limité de « types » pour les variables: nombres, entiers, chaînes de caractères. On utilise le plus souvent la convention t[i] pour désigner l'élément à l'index i du tableau t. Dans un tel cas, t doit être un tableau, i doit être une valeur entière. Vous être libre de concevoir vos propres conventions, mais vous devez être explicite et précis.</p>
 
 <p>Si votre pseudo-code doit retourner une valeur, il faut que le pseudo-code le spécifie explicitement.</p>
 

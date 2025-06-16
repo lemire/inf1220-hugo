@@ -3,4 +3,471 @@ title: "Activité 5.1"
 weight: 1
 ---
 
-<!-- Ajoutez ici le contenu HTML de l'activité 5.1 -->
+
+<h1><a id="top" name="top"></a>Module 5</h1>
+<h2>Java pas à pas</h2>
+
+<p>Nous vous invitons maintenant à lire le chapitre <em>Développement de classes</em> du manuel Java pas à pas par Robert Godin et Daniel Lemire. Vous trouverez <a href="https://github.com/RobertGodin/JavaPasAPas/blob/master/JavaPasAPas.pdf">le document PDF sur le site GitHub</a>. Pour enregistrer le PDF sur votre machine, cliquez sur le bouton « Download ».</p>
+
+<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+
+<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java pas à pas.</p>
+
+
+<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
+
+<h2>Commentaires constructifs</h2>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site</a>. Nous apprécions toujours vos commentaires constructifs.</p>
+
+<h2>Activité 5.1</h2><h2 class="partie2">L'héritage, les classes abstraites et les interfaces</h2>
+
+
+
+<p> <p align="left" style="text-align: justify;">Après avoir présenté les objets et les classes dans les leçons précédentes, nous abordons ici la notion d'héritage, qui est essentielle à la programmation orientée objet, donc à l'apprentissage du langage Java. Cette technique très importante, appliquée à la programmation Java, permet de créer de nouvelles classes fondées sur celles qui existent déjà. Lorsque nous héritons d'une classe, nous réutilisons ses méthodes et champs, auxquels nous pouvons ajouter de nouveaux champs en vue de l'adapter à de nouvelles situations.</p> 
+
+<p><a id="intro" name="section1"></a></p>
+
+<h1>Classe - superclasse - sous-classe</h1> 
+<p align="left" style="text-align: justify;">Pour illustrer ce concept, essayons de concevoir un jeu. Tous les jeux ont un nom, un but, un nombre de joueurs requis pour faire une partie, des règles à respecter… Nous pourrions donc envisager de créer une classe Jeu pour représenter les jeux. <br />Toutefois, les règles du jeu Tetris diffèrent de celles de Sudoku, et le nombre de joueurs d'une partie de football n'est pas le même que celui d'une partie de tennis… <br />Supposons que nous implantions une méthode jouer() pour la classe Jeu. Un joueur de tennis ne joue pas de la même façon qu'un joueur de football. Il est par conséquent impossible d'obtenir une implémentation de jouer() qui peut correspondre à tous les jeux.</p> 
+<p align="left" style="text-align: justify;">L'héritage est un mécanisme qui permet de résoudre ce genre de problème. En fait, nous spécifions dans la classe Jeu, appelée superclasse, l'ensemble des comportements communs à tous les jeux sans fournir une implémentation. Nous créons ensuite des sous-classes qui fournissent pour chaque jeu une implémentation appropriée. D'une manière générale, le format de déclaration d'une sous-classe est le suivant :</p> 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%">    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> SousClasse <span style="color: #000080; font-weight: bold">extends</span> SuperClasse {
+        <span style="color: #008800; font-style: italic">// les instructions</span>
+
+    }
+</pre></td></tr></table></div>
+
+<p align="left">Pour signifier l'héritage, nous employons le mot clé <em>extends.</em> Nous créons ainsi une classe qui dérive d'une classe existante, qui portera le nom de <em>superclasse,</em> et la nouvelle classe sera nommée <em>sous-classe</em>.</p> 
+<p align="left">Voici maintenant la façon de définir une classe Sudoku qui hérite de la superclasse Jeu :</p> 
+ <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%">    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku <span style="color: #000080; font-weight: bold">extends</span> Jeu {
+
+        <span style="color: #008800; font-style: italic">// ici nous définissons les champs et les méthodes</span>
+    }
+</pre></td></tr></table></div>
+
+<p align="left">Dans l'exemple ci-dessus, la superclasse est la classe Jeu tandis que la sous-classe est la classe Sudoku. La sous-classe hérite automatiquement de tous les champs et de toutes méthodes de la superclasse. Voici quelques principes fondamentaux de l'héritage :</p> 
+<ul> 
+  <li>une sous-classe hérite de tous les membres de la superclasse. Les constructeurs n'étant pas considérés comme étant membres d'une classe, la sous-classe ne peut donc pas hériter des constructeurs de la superclasse; </li> 
+  <li>la visibilité (<em>public ou private</em>) de n'importe quels membres de la superclasse est la même dans la sous-classe. Cela voudra dire que si une méthode ou un champ est déclaré <em>private</em> dans la superclasse, la sous-classe ne peut y avoir accès; </li> 
+  <li>nous pouvons surcharger une méthode en réutilisant la même signature (nom de méthode et paramètres) et en utilisant l'annotation @override; </li> 
+  <li>un autre type, <em>protected,</em> permet de cacher les champs et les méthodes de la superclasse, mais ses membres sont accessibles à la sous-classe; </li> 
+  <li>nous pouvons aussi ajouter des méthodes et des champs <em>private</em> et <em>protected</em> à une sous-classe. </li> 
+</ul> 
+
+<p>En programmation OO, l'héritage est une mécanique utilisée régulièrement pour dériver une problématique en plusieurs solutions, dans le développement de bibliothèques de code, etc. Voici d'autres exemples où l'héritage peut être utilisé : </p>
+<ul>
+	<li>une classe LecteurMusique, et des sous-classes dérivées LecteurMP3, LecteurWave, LecteurMidi, etc.</li>
+	<li>une classe AlgorithmeIA, une sous-classe AnalyseSerieTemporelle, puis des sous-sous-classes FuzzyCClustering, FastDynamicTimeWarping, etc.</li>
+	<li>une classe Capteur, avec des sous-classes CapteurIR, CapteurMagnetique, etc.</li>
+</ul>
+
+<p>Voilà l'exemple pour les AlgorithmeAI en code, avec deux niveaux d'héritage :</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">AlgorithmeIA</span> <span style="color: #333333">{</span>
+    
+    <span style="color: #888888">/**</span>
+<span style="color: #888888">     * Constructeur</span>
+<span style="color: #888888">     */</span>
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">AlgorithmeIA</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+        
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> Object<span style="color: #333333">[]</span> <span style="color: #0066BB; font-weight: bold">analyse</span><span style="color: #333333">(</span>Object<span style="color: #333333">[]</span> data<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        
+        <span style="color: #888888">// Faire un traitement ici et retourner des données classifiées ou bien des activités reconnues ...</span>
+        
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+<span style="color: #333333">}</span>
+
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">AnalyseSerieTemporelle</span> <span style="color: #008800; font-weight: bold">extends</span> AlgorithmeIA <span style="color: #333333">{</span>
+    
+    <span style="color: #888888">/**</span>
+<span style="color: #888888">     * Constructeur</span>
+<span style="color: #888888">     */</span>
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">AnalyseSerieTemporelle</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+        
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> Object<span style="color: #333333">[]</span> <span style="color: #0066BB; font-weight: bold">analyse</span><span style="color: #333333">(</span>Object<span style="color: #333333">[]</span> data<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        
+        <span style="color: #888888">// Faire un traitement ici et retourner des données classifiées ou bien des activités reconnues ...</span>
+        
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+<span style="color: #333333">}</span>
+
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">FastDynamicTimeWarping</span> <span style="color: #008800; font-weight: bold">extends</span> AnalyseSerieTemporelle <span style="color: #333333">{</span>
+    
+    Double<span style="color: #333333">[]</span> comparateur <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    
+    <span style="color: #888888">/**</span>
+<span style="color: #888888">     * Constructeur</span>
+<span style="color: #888888">     */</span>
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">FastDynamicTimeWarping</span><span style="color: #333333">(</span>Double<span style="color: #333333">[]</span> comparateur<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">this</span><span style="color: #333333">.</span><span style="color: #0000CC">comparateur</span> <span style="color: #333333">=</span> comparateur<span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> Object<span style="color: #333333">[]</span> <span style="color: #0066BB; font-weight: bold">analyse</span><span style="color: #333333">(</span>Object<span style="color: #333333">[]</span> data<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        
+        <span style="color: #888888">// Faire oici le traitement pour le FastDynamicTimeWarping</span>
+        
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+<span style="color: #333333">}</span>
+</pre></div>
+
+<p>Nous verrons un peu plus loin une meilleure implémentation de cet exemple avec l'utilisation des classes abstraites.</p>
+
+<p><a id="intro" name="section2"></a></p>
+<h1>Surcharge des méthodes</h1> 
+<p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui est <em>public</em>, cette méthode sera dite <em>surchargée</em>. Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe.</p> 
+<p style="text-align: justify;">Supposons que nous définissons notre classe Jeu, qui possède une méthode jouer. La superclasse qui représente tous les jeux possibles peut être définie de la manière suivante :</p> 
+ <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6</pre></td><td><pre style="margin: 0; line-height: 125%">    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Jeu {
+
+        <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> jouer() {
+            <span style="color: #008800; font-style: italic">//...</span>
+        }
+    }
+</pre></td></tr></table></div>
+
+<p style="text-align: justify;">Nous pouvons déclarer dans la classe Sudoku, une sous-classe qui hérite de la superclasse Jeu, à laquelle nous appliquons une implémentation de la méthode jouer :</p> 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6</pre></td><td><pre style="margin: 0; line-height: 125%">    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku <span style="color: #000080; font-weight: bold">extends</span> Jeu {
+        <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> jouer() {
+            System.<span style="color: #FF0000">out</span>.<span style="color: #FF0000">println</span>(<span style="color: #0000FF">&quot;Je viens de commencer le Sudoku niveau 1!&quot;</span>);
+
+        }
+    }
+</pre></td></tr></table></div>
+
+<p style="text-align: justify;">Ici quand nous appelons la méthode jouer avec un objet de la classe Sudoku, le message suivant s'affiche alors :</p> 
+<p style="text-align: justify;">Je viens de commencer le Sudoku niveau 1!</p> 
+<p style="text-align: justify;"><br />Il faut noter qu'il faut trois conditions avant de réaliser cette opération :</p> 
+<ul> 
+  <li> 
+    <div style="text-align: justify;">La méthode à surcharger doit être définie dans la superclasse; </div> 
+  </li> 
+  <li> 
+    <div style="text-align: justify;">Cette méthode doit être définie <em>public</em>. Nous ne pouvons surcharger une méthode <em>private;</em> </div> 
+  </li> 
+  <li> 
+    <div style="text-align: justify;">La méthode de la sous-classe doit avoir la même signature que celle de la superclasse, c'est-à-dire le même nom et les mêmes types de paramètres. </div> 
+  </li> 
+</ul> 
+<h2 style="text-align: justify;">Protection des membres</h2> 
+<p align="left" style="text-align: justify;">Nous connaissons déjà les mots clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
+<p align="left" style="text-align: justify;">Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant :</p> 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">class</span> Jeu {
+    <span style="color: #000080; font-weight: bold">private</span> String nomdujeu;
+
+    <span style="color: #000080; font-weight: bold">protected</span> String getnomdujeu() {
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">nomdujeu</span>;
+    }
+
+    <span style="color: #000080; font-weight: bold">protected</span> <span style="color: #000080; font-weight: bold">void</span> setnomdujeu(String nom) {
+        <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">nomdujeu</span> = nom;
+    }
+}
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku <span style="color: #000080; font-weight: bold">extends</span> Jeu {
+    <span style="color: #000080; font-weight: bold">public</span> Sudoku() {
+        setnomdujeu(<span style="color: #0000FF">&quot;Sudoku&quot;</span>);
+    }
+}
+</pre></td></tr></table></div>
+
+<p style="text-align: justify;">Dans l'exemple ci-dessus, les méthodes <em>getnomdujeu</em> et <em>setnomdujeu</em> sont déclarées <em>protected</em> et donc visibles </p> 
+<p style="text-align: justify;">à la sous-classe SUDOKU. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
+<p style="text-align: justify;"> </p> 
+<h2 style="text-align: justify;">Utilisation des mots clés <em>this</em> et <em>super</em> dans une sous-classe</h2> 
+<p style="text-align: justify;">Nous avons déjà vu dans les leçons précédentes que le mot clé <em>this</em> sert à nous référer à une instance courante de l'objet comme dans l'exemple ci-dessous.</p> 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6
+7</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku {
+    <span style="color: #000080; font-weight: bold">private</span> <span style="color: #000080; font-weight: bold">int</span> difficulte;
+
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> setDifficulte(<span style="color: #000080; font-weight: bold">int</span> diff) {
+        <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">difficulte</span> = diff;
+    }
+}
+</pre></td></tr></table></div>
+
+<blockquote></blockquote> 
+<p dir="ltr" style="text-align: justify;">Quand nous voulons nous référer à un champ ou à une méthode qui appartient à une classe de base, nous utilisons le mot clé <em>super</em>. Cela fonctionne de la même façon qu'avec <em>this,</em> mais super renvoie à une instance de la classe de base au lieu de celle de la classe courante.</p> 
+<p dir="ltr" style="text-align: justify;">Considérons les deux classes suivantes :</p> 
+ <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">class</span> Jeu {
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> choixDeJeu() {
+        System.<span style="color: #FF0000">out</span>.<span style="color: #FF0000">println</span>(<span style="color: #0000FF">&quot; Niveau expert!&quot;</span>);
+    }
+}
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku <span style="color: #000080; font-weight: bold">extends</span> Jeu {
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> choixDeJeu() {
+        System.<span style="color: #FF0000">out</span>.<span style="color: #FF0000">println</span>(<span style="color: #0000FF">&quot;je joue au Sudoku :&quot;</span>);
+        <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">choixDeJeu</span>();
+    }
+}
+</pre></td></tr></table></div>
+
+<blockquote></blockquote> 
+<p dir="ltr" style="text-align: justify;">Après l'exécution de ce programme, nous aurons :</p> 
+<p>je joue au SUDOKU :</p> 
+<p>Niveau expert</p> 
+<p>Ainsi, avec le mot clé <em>super</em>, nous appelons la méthode choixdejeu de la classe de base. Nous pouvons aussi utiliser ce mot clé dans un constructeur.</p> 
+<h2 style="text-align: justify;">Constructeur d'une classe héritée</h2> 
+<p><br />Le constructeur de la classe dérivée (ou héritée) fait appel au constructeur de la superclasse au moment de la création d'un objet. (Le SUDOKU est avant tout un jeu.) Cet appel au constructeur de la superclasse peut être implicite ou explicite. Dans ce dernier cas, le constructeur de la classe héritée exécutera la première instruction.</p> 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">class</span> Jeu {
+    String nom;
+    String description;
+    String but;
+
+    Jeu(String nom, String description, String but) {
+        <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">nom</span> = nom;
+        <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">description</span> = description;
+        <span style="color: #000080; font-weight: bold">this</span>.<span style="color: #FF0000">but</span> = but;
+    }
+}
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> Sudoku <span style="color: #000080; font-weight: bold">extends</span> Jeu {
+    <span style="color: #000080; font-weight: bold">public</span> Sudoku(String nom, String description, String but) {
+        <span style="color: #000080; font-weight: bold">super</span>(nom, description, but);
+
+    }
+}
+</pre></td></tr></table></div>
+
+
+<p>Cet exemple montre comment appeler le constructeur de la superclasse.</p>
+
+<p><a id="intro" name="section2"></a></p>
+<h1>Classes abstraites</h1>
+ 
+<p>Les classes Abstraites permettent de créer des concepts de haut-niveau, ne pouvant être instanciés et rendant obligatoire la conception de sous-classes pour leur utilisation. Les classes abstraites sont donc souvent utilisées dans des API ou autres bibliothèques de code.  Afin de rendre possible la redéfinition de méthode par héritage, les méthodes d'une superclasse doivent être déclarées avec le modificateur <em>abstract</em>. Ainsi, une classe abstraite est une classe qui contient des méthodes abstraites. L'intérêt de ceci est de rendre la classe « héritable ». <br />La sous-classe peut implémenter ou non les méthodes abstraites héritées. Si elles ne les implémentent pas, elle est elle-même une classe abstraite. <br />Une sous-classe dérivant d'une classe non abstraite peut définir des nouvelles méthodes abstraites, et par le fait même, devenir à leur tour abstraite.</p> 
+<p>Remarque : Nous ne pouvons instancier des objets d'une classe abstraite. Ce sont des classes qui sont destinées à subir le processus d'héritage.</p> 
+<h2>Utilisation du modificateur <em>final</em></h2> 
+<p>Il arrive que nous ne souhaitions pas offrir une possibilité d'héritage à une certaine classe. Dans ce cas, nous la définissons avec le mot clé <em>final</em>. <br />Si le mot clé <em>final</em> est utilisé dans la définition d'une méthode, celle-ci ne pourra plus être redéfinie par héritage. <br />Enfin, nous définissons une constante en écrivant <em>final</em> dans la déclaration de la variable.<br/> Voici un exemple d'utilisation d'une classe abstraite. Ici, la méthode analyse est abstraite et oblige donc les sous-classes à implémenter celle-ci :</p> 
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">abstract</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">AlgorithmeIA</span> <span style="color: #333333">{</span>
+    
+    Object<span style="color: #333333">[]</span> data <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">AlgorithmeIA</span><span style="color: #333333">(</span>Object<span style="color: #333333">[]</span> data<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">this</span><span style="color: #333333">.</</span><span style="color: #0000CC">data</span> <span style="color: #333333">=</span> data<span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">abstract</span> Object<span style="color: #333333">[]</span> <span style="color: #0066BB; font-weight: bold">analyse</span><span style="color: #333333">();</span>
+    
+<span style="color: #333333">}</span>
+
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">FastDynamicTimeWarping</span> <span style="color: #008800; font-weight: bold">extends</span> AlgorithmeIA <span style="color: #333333">{</span>
+
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">FastDynamicTimeWarping</span><span style="color: #333333">(</span>Object<span style="color: #333333">[]</span> data<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">super</span><span style="color: #333333">(</span>data<span style="color: #333333">);</span>
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #888888">// Implementation de la méthode abstraite de AlgorithmeIA</span>
+    <span style="color: #555555; font-weight: bold">@Override</span>
+    <span style="color: #008800; font-weight: bold">public</span> Object<span style="color: #333333">[]</span> <span style="color: #0066BB; font-weight: bold">analyse</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+        <span style="color: #888888">//Ajouter le code pour le traitement FDTW</span>
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">null</span><span style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+    
+<span style="color: #333333">}</span>
+</pre></div>
+
+<p><a id="intro" name="section3"></a></p>
+<h1>Les interfaces</h1>
+
+<p>Dans certains langages, l'héritage multiple (quand une classe hérite de plusieurs autres classes) peut amener à des problèmes d'exécution ou de compilation sérieux. Ce problème est bien connu dans le langage C++, avec le problème du diamant :</p>
+
+<img src="http://inf1220-vw2.teluq.ca/files/2017/06/class-multiple-inheritance-diamond.png" alt="class-multiple-inheritance-diamond" width="260" height="280" class="alignnone size-full wp-image-612" />
+
+<p>Dans le problème du diamant, l'héritage multiple provoque un problème de résolution pour la surcharge de la méthode "equals" à la compilation. Ainsi, le compilateur ne peut savoir quelle méthode surcharger? Rectangle.equals ou bien Clickable.equals ? Pour éviter les problèmes d'héritage multiple, les concepteurs du langage Java ont empêché celui-ci et ils ont créé une autre mécanique, les interfaces (rien à voir les interfaces graphiques). Une interface peut, jusqu'à un certain point, ressembler à une classe abstraite, à la différence que toutes les méthodes sont "abstraites" (elles doivent donc être implémentées) et qu'elle ne possède pas de variables. Voici un exemple de déclaration d'une interface, tout comme les classes, la déclaration d'une interface doit être placée dans un fichier .java du même nom que l'interface : /p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">interface</span> <span style="color: #BB0066; font-weight: bold">Clickable</span> <span style="color: #333333">{</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">clicked</span><span style="color: #333333">();</span>
+    
+<span style="color: #333333">}</span>
+</pre></div>
+
+<p>La classe qui implémente une interface est forcée d'implémenter la méthode déclarée. En échange, elle peut être "casté" dans l'interface et se faire passer pour l'interface. Il y a donc plusieurs usages aux interfaces tels que: émuler l'héritage multiple et obliger la déclaration de méthodes. Encore là, les interfaces sont régulièrement utilisées dans les API et les bibliothèques de code. Voici un exemple d'usage d'une interface :</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">abstract</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Rectangle</span> <span style="color: #333333">{</span>
+    
+    <span style="color: #333399; font-weight: bold">int</span> largeur<span style="color: #333333">;</span>
+    <span style="color: #333399; font-weight: bold">int</span> hauteur<span style="color: #333333">;</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">Rectangle</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> largeur<span style="color: #333333">,</span> <span style="color: #333399; font-weight: bold">int</span> hauteur<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        
+    <span style="color: #333333">}</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">abstract</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">draw</span> <span style="color: #333333">();</span>
+    
+    
+<span style="color: #333333">}</span>
+
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">interface</span> <span style="color: #BB0066; font-weight: bold">Clickable</span> <span style="color: #333333">{</span>
+    
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">clicked</span><span style="color: #333333">();</span>
+    
+<span style="color: #333333">}</span>
+
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Button</span> <span style="color: #008800; font-weight: bold">extends</span> Rectangle <span style="color: #008800; font-weight: bold">implements</span> Clickable <span style="color: #333333">{</span>
+
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #0066BB; font-weight: bold">Button</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> largeur<span style="color: #333333">,</span> <span style="color: #333399; font-weight: bold">int</span> hauteur<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">super</span><span style="color: #333333">(</span>largeur<span style="color: #333333">,</span> hauteur<span style="color: #333333">);</span>
+    <span style="color: #333333">}</span>
+
+    <span style="color: #555555; font-weight: bold">@Override</span>
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">clicked</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">throw</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #0066BB; font-weight: bold">UnsupportedOperationException</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Not supported yet.&quot;</span><span style="color: #333333">);</span> <span style="color: #888888">//To change body of generated methods, choose Tools | Templates.</span>
+    <span style="color: #333333">}</span>
+
+    <span style="color: #555555; font-weight: bold">@Override</span>
+    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">draw</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+        <span style="color: #008800; font-weight: bold">throw</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #0066BB; font-weight: bold">UnsupportedOperationException</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Not supported yet.&quot;</span><span style="color: #333333">);</span> <span style="color: #888888">//To change body of generated methods, choose Tools | Templates.</span>
+    <span style="color: #333333">}</span>
+    
+<span style="color: #333333">}</span>
+</pre></div>
+
+<p><a id="intro" name="section4"></a></p>
+<h1>Protection des données héritées</h1> 
+<p>Les trois modificateurs de portée qui réalisent l'encapsulation jouent simultanément un rôle dans la protection des données.</p> 
+<table border="1" cellspacing="0" cellpadding="0" width="745"> 
+  <tbody> 
+    <tr> 
+      <td> 
+        <p>Modificateur</p> 
+      </td> 
+      <td> 
+        <p>Rôles</p> 
+      </td> 
+    </tr> 
+    <tr> 
+      <td> 
+        <p>private</p> 
+      </td> 
+      <td> 
+        <p>C'est le niveau de protection le plus fort. Les composants ne sont visibles qu'à l'intérieur de la classe : ils ne peuvent être modifiés que par des méthodes définies dans la classe prévues à cet effet. Les méthodes déclarées <em>private</em> ne peuvent pas être en même temps déclarée <em>abstract</em>, car elles ne peuvent pas être redéfinies dans les classes filles.</p> 
+      </td> 
+    </tr> 
+    <tr> 
+      <td> 
+        <p>protected</p> 
+      </td> 
+      <td> 
+        <p>Si une méthode ou une variable est déclarée <em>protected</em>, seules les méthodes présentes dans le même package que cette classe ou de ses sous-classes pourront y accéder.</p> 
+      </td> 
+    </tr> 
+    <tr> 
+      <td> 
+        <p>public</p> 
+      </td> 
+      <td> 
+        <p>Ce modificateur stipule que la variable ou la méthode est visible par tous les autres objets.</p> 
+      </td> 
+    </tr> 
+    <tr> 
+      <td> 
+        <p> </p> 
+      </td> 
+      <td> 
+        <p>Lorsqu'un membre de la classe n'est précédé d'aucun modificateur, il est accessible à toutes les classes du même package que la classe qui le définit.</p> 
+      </td> 
+    </tr> 
+  </tbody> 
+</table>
+
+<h2>Lecture dans le livre de référence</h2>
+
+<p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8:</p>
+<ul>
+	<li>Section 1 à 5</li>
+	<li>Section 8 : Les membres protégés</li>
+	<li>Section 10 : Classes et méthodes finales</li>
+	<li>Section 11 : Les classes abstraites</li>
+	<li>Section 12 : Les interfaces</li>
+</ul>
+
+<h2>Vidéos</h2>
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8TSVW7SV0KA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dd0_nYhtaKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M0hkhOoOIHg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PLZbs1ERZ-TGVouVQxf5QAsocS1awCi6d3">Il y a une liste de vidéos sur l'héritage par Sam et al.</a> </li>
+</ol>
