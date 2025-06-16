@@ -6,28 +6,6 @@ title: "Accueil"
 
 {{< youtube id="sCuxwhZWX0s" >}}
 
-This is an inline \(a^*=x-b^*\) equation.
-
-These are block equations:
-
-\[a^*=x-b^*\]
-
-\[ a^*=x-b^* \]
-
-\[
-a^*=x-b^*
-\]
-
-These are also block equations:
-
-$$a^*=x-b^*$$
-
-$$ a^*=x-b^* $$
-
-$$
-a^*=x-b^*
-$$
-
 C’est avec plaisir que je vous accueille dans ce cours d’introduction à la programmation. J’ai conçu ce cours pour ceux qui souhaitent entamer des études universitaires en informatique. Au terme de ce cours, vous serez familier
 avec tous les concepts essentiels en programmation. Vous aurez aussi acquis une compétence en programmation Java. Si
 vous avez déjà une certaine expertise en programmation, ce cours vous permettra d'en approfondir les fondements.
