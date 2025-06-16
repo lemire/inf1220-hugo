@@ -1,6 +1,7 @@
 ---
 title: "Module 4: Les entrées et sorties"
 weight: 4
+bookCollapseSection: true
 ---
 
 # Module 4

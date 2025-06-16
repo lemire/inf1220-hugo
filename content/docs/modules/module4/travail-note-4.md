@@ -35,7 +35,7 @@ weight: 4
 
   <p>Si vous avez des questions sur le travail, vous pouvez communiquer avec <a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable</a>. Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
 
-<p>Pour faire ce travail, vous devez avoir les bases concernant la manipulation des chaînes de caractères et des structures de données en Java. Certains étudiants essaient d'aller trop vite et ils passent outre aux exercices de préparation des modules précédents. <a href="http://inf1220-vw2.teluq.ca/module-3/exercices-3-1/">Vous devez avoir fait tous les exercices et vous assurer des les avoir bien compris</a>. </p>
+<p>Pour faire ce travail, vous devez avoir les bases concernant la manipulation des chaînes de caractères et des structures de données en Java. Certains étudiants essaient d'aller trop vite et ils passent outre aux exercices de préparation des modules précédents. Vous devez avoir fait tous les exercices et vous assurer des les avoir bien compris. </p>
 
 <p> Le cours comprend plusieurs exemples avec solutions. Par contre, les solutions des travaux notés ne sont jamais transmises dans ce cours: si vous avez des questions sur vos résultats, vous pouvez poser des questions au professeur.  Assurez-vous de poser des questions précises, et prenez le temps de consulter la rétroaction du correcteur. (Indice: si vous demandez les solutions suite à la correction de votre travail, vous nous indiquez que vous n'avez pas bien lu les consignes.)</p>
 

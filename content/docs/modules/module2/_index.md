@@ -1,6 +1,7 @@
 ---
 title: "Module 2: Introduction au langage Java"
 weight: 2
+bookCollapseSection: true
 ---
 
 # Module 2

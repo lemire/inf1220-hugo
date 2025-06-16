@@ -1,6 +1,7 @@
 ---
 title: "Module 3: Les structures de données, de contrôle et d'itération en Java"
 weight: 3
+bookCollapseSection: true
 ---
 
 # Module 3

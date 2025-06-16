@@ -3,7 +3,6 @@ title: "Les algorithmes"
 weight: 5
 ---
 
-<!-- Ajoutez ici le contenu HTML de l'activité 1.2 -->
 
 <h2 class="partie2">Les algorithmes</h2>
 
@@ -470,7 +469,6 @@ FIN TANT QUE
 RETOURNE x
 ```
 
-<!--Created using ToHtml.com on 2021-06-09 13:05:54 UTC -->
 
 <p><a id="execute" ></a></p>
 <h2>Exécution d'un pseudo-code</h2>
@@ -524,24 +522,11 @@ retourne test
 <p>Lecture suggérée : <a href="https://fr.wikipedia.org/wiki/Problème_du_voyageur_de_commerce">Problème du voyageur de commerce
 </a></p>
 
-<h2>Vidéos suggérées</h2>
+<h2>Vidéo suggérée</h2>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kk6YbA5I-Iw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ahyfYdRvc3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ae-2hgbiY6s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y-hj8VWs5X8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yHUtYvvvjcc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rSfQgLGeHSI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uXJnIEpMlkk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pXQEF9-tiGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p><a id="erreurs" ></a></p>
 <h2>Erreurs communes</h2>
@@ -596,6 +581,7 @@ Les instructions « retourner minimum » et « retourner tableau<span style="col
 Assurez-vous de bien comprendre que ce pseudo-code ne va consulter que la première valeur du tableau. Si vous avez une condition ou les deux branches (SI et SINON) retournent une valeur et terminent donc l'algorithme, votre algorithme ne procèdera pas plus loin. </li>
 
 <li>Certains étudiants construisent des boucles qui ne se terminent jamais. Dans une boucle TANT QUE, il faut s'assurer que la condition ne soit plus satisfaite pour ne pas avoir une boucle infinie. Consultez cet exemple :
+
 ```java
 iterateur = 0
 TANT QUE  iterateur < 100  FAIRE
@@ -604,9 +590,11 @@ TANT QUE  iterateur < 100  FAIRE
      FIN SI
 FIN TANT QUE
 ```
+
 <p>Si vous testez votre pseudo-code, vous saurez éviter de telles erreurs.</p>
 </li>
 <li>Les étudiants vont aussi fréquemment utiliser des variables et des constructions qui ne sont pas définies et dont le sens doit être deviné. Voici un exemple:
+
 ```java
 Entier iterateur[tableau] = 0;
 TANT QUE  iterateur[i] < 100  FAIRE

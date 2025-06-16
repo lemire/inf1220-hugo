@@ -3,7 +3,6 @@ title: "Exercices sur les classes, les variables, les types et les opérateurs"
 weight: 4
 ---
 
-<!-- Ajoutez ici le contenu HTML des exercices 2.1 -->
 
 
 <h1><a id="top" name="top"></a>Module 2</h1><h2>Exercice 2.1</h2><h2 class="partie2">Exercices sur les classes, les variables, les types et les opérateurs</h2>
@@ -265,6 +264,7 @@ composés comme monEntier.</p>
 <p>Soit les deux codes suivants :</p>
 
 <p>1)</p>
+
 ```java
 public class Main {
   public static void main(String[] args) {
@@ -276,6 +276,7 @@ public class Main {
 
 
 <p>2)</p>
+
 ```java
 public class Main {
   public static void main(String[] args) {
@@ -302,6 +303,7 @@ puisque nous pouvons fixer la valeur d'une constante déclarée finale après da
 <h2>Question 13</h2>
 
 <p>Soit le code suivant :</p>
+
 ```java
 public class Main {
   public static void main(String[] args) {
@@ -311,7 +313,6 @@ public class Main {
   }    
 }
 ```
-<!--Created using ToHtml.com on 2021-04-28 12:50:34 UTC -->
 
 <p>Quel résultat est affiché à la console lors de l&#x2019;exécution ? Pourquoi
 ?</p>
@@ -374,7 +375,6 @@ class Main {
   }
 }
 ```
-<!--Created using ToHtml.com on 2021-04-28 13:08:51 UTC -->
 
 <div class="accordeon">
 <p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
@@ -393,7 +393,6 @@ public static boolean f(int x, int y) {
     return (x^y) < 0;
 }
 ```
-<!--Created using ToHtml.com on 2022-12-05 15:11:08 UTC -->
 
 
 <div class="accordeon">
@@ -468,6 +467,7 @@ class Main {
 <div>
 <p>On peut la calculer avec l'expression <tt>y+(x - y)/2</tt>. Il pourrait être tentant d'utiliser l'expression <tt>(x + y)/2</tt>, mais cette dernière est incorrecte comme vous pouvez le vérifier avec ce programme:
  </p>
+
 ```java
 class Main {
   public static void main(String[] args) {
@@ -479,7 +479,7 @@ class Main {
   }
 }
 ```
-<!--Created using ToHtml.com on 2021-04-28 18:01:19 UTC -->
+
 </div>
 </div>
 

@@ -22,9 +22,9 @@ propositionnel ou calcul des propositions et fait partie de la logique
 mathématique. Le résultat d&#x2019;un calcul propositionnel est donc
 l&#x2019;attribution d&#x2019;une valeur de vérité à une proposition.</p>
 
-<p>Ainsi, l'énoncé « Le cours INF1220 figure parmi les cours dispensés à la
+<p>Ainsi, l'énoncé «&nbsp;Le cours INF1220 figure parmi les cours dispensés à la
 TELUQ au trimestre d&#x2019;hiver 2021 » est une proposition mathématique et sa
-valeur de vérité est « vrai ». la proposition «Le cours INF1220 est mon
+valeur de vérité est « vrai ». la proposition «&nbsp;Le cours INF1220 est mon
 meilleur cours » n'est pas une proposition mathématique. Dans notre contexte,
 quand nous parlons de proposition, nous parlons de proposition mathématique.</p>
 

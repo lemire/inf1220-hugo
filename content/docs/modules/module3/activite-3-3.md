@@ -109,47 +109,25 @@ weight: 3
 
 <p>Pour accéder à une valeur du tableau, nous utilisons le nom du tableau suivi de l'indice entre crochets. Par exemple, pour accéder au cinquième salaire du tableau, il suffit d'écrire : salaire [4]. La valeur sera donc 8. L'expression salaire [4] a donc comme valeur 8. L'indice d'un tableau est un simple entier, il est donc possible d'utiliser des variables ou constantes entre crochets comme dans l'exemple ci-dessous :</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">// Tableau avec une pré-déclaration</span>
-<span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> salaire <span style="color: #333333">=</span> <span style="color: #333333">{</span><span style="color: #0000DD; font-weight: bold">12</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">74</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">88</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">22</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">78</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">28</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">44</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">47</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">78</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">81</span><span style="color: #333333">};</span>
+```java
+// Tableau avec une pré-déclaration
+int[] salaire = {12, 74, 88, 22, 8, 78, 28, 44, 47, 78, 81};
 
-System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>salaire<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">]);</span>
-</pre></div>
+System.out.println(salaire[4]);
+```
 
 <h2>Déclarer et utiliser les tableaux</h2>
 
 <p>En Java, les tableaux sont des objets; donc, pour créer un nouveau tableau, il faudra utiliser l'opérateur new. La ligne de code suivante permet de créer un tableau de salaire horaire des 10 employés d'une entreprise.</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> salaire <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">];</span>
-</pre></div>
+```java
+int[] salaire = new int[10];
+```
 
-<p>Cela signifie simplement que nous déclarons une variable dont le nom est salaire, dont le type est int[] (tableau d'entiers de type primitif int). Dans le cas de tableaux  contenant des nombres en utilisant des types de base (int, float, etc.), le contenu du tableau est initialisé avec des valeurs équivalent au zéro. Nous assignons ensuite un nouvel objet à cette variable. L'objet est un tableau de 10 entiers (int [10]). 
+<p>Cela signifie simplement que nous déclarons une variable dont le nom est salaire, dont le type est int[] (tableau d'entiers de type primitif int). Dans le cas de tableaux contenant des nombres en utilisant des types de base (int, float, etc.), le contenu du tableau est initialisé avec des valeurs équivalent au zéro. Nous assignons ensuite un nouvel objet à cette variable. L'objet est un tableau de 10 entiers (int [10]). 
 Il est donc à remarquer qu'un tableau contient plusieurs valeurs qui doivent toutes avoir le même type. Nous ne pourrions pas créer un tableau qui contiendrait des int et des double par exemple. De plus, la taille du tableau étant décidé et fixée lors de la déclaration, elle ne pourra pas changer. Nous avons par conséquent un tableau statique (rien à voir avec les classes statiques ou le mot réservé static).</p>
 
 <iframe height="800px" width="100%" src="https://repl.it/@lemire/ex4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<!-- <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">AfficheTableau</span> <span style="color: #333333">{</span>
-
-    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span><span style="color: #333333">(</span>String<span style="color: #333333">[]</span> args<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-
-        <span style="color: #008800; font-weight: bold">final</span> <span style="color: #333399; font-weight: bold">int</span> MAX <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">;</span>
-
-        <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> list <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[</span>MAX<span style="color: #333333">];</span>
-
-        <span style="color: #888888">// Remplit le tableau</span>
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> MAX<span style="color: #333333">;</span> i<span style="color: #333333">++)</span> <span style="color: #333333">{</span>
-            list<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">=</span> i <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">20</span><span style="color: #333333">;</span>
-        <span style="color: #333333">}</span>
-
-        <span style="color: #888888">// On change la quatrième valeur</span>
-        list<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">]</span> <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">777</span><span style="color: #333333">;</span>
-
-        <span style="color: #888888">// On affiche le contenu du tableau</span>
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> MAX<span style="color: #333333">;</span> i<span style="color: #333333">++)</span> <span style="color: #333333">{</span>
-            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>list<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot; &quot;</span><span style="color: #333333">);</span>
-        <span style="color: #333333">}</span>
-    <span style="color: #333333">}</span>
-
-<span style="color: #333333">}</span>
-</pre></div>-->
 
 <p>Le résultat de l'exécution donnera ceci :</p> 
 <pre><strong>0 20 40 777 80 100 120 140 160 180 </strong></pre>
@@ -157,35 +135,40 @@ Il est donc à remarquer qu'un tableau contient plusieurs valeurs qui doivent to
 <p>Cet exemple montre également une bonne utilisation des constantes. En effet, si nous voulons un tableau de taille 15, il n'y a qu'une ligne de code à changer, à savoir la valeur de la constante MAX. Les crochets utilisés pour accéder à un élément d'un tableau sont un opérateur Java comme + ou =. Cet opérateur a la plus haute priorité et sera donc exécuté en premier. 
 L'opérateur d'indexation de tableau ([]) vérifie automatiquement si l'indice est correct, c'est-à-dire s'il est positif et est plus petit que la taille du tableau - 1. Si tel n'est pas le cas, il se produira une erreur d'exécution.</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> tableau <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">];</span>
-tableau <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">]</span> <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span>
-tableau <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]</span> <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span>
-System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span> <span style="color: #333333">(</span>tableau <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]);</span>
-<span style="color: #888888">//Appel dans un index hors du tableau</span>
-System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span> <span style="color: #333333">(</span>tableau <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">]);</span>
-</pre></div>
+```java
+int[] tableau = new int[2];
+tableau [0] = 0;
+tableau [1] = 1;
+System.out.println (tableau [1]);
+//Appel dans un index hors du tableau
+System.out.println (tableau [2]);
+```
 
 <p>Erreur d'indice <br />L'exécution de ce code produira la sortie suivante à la console :</p> 
-  <p><em>java.lang.ArrayIndexOutOfBoundsException: 2 at Test.main(Test.java:18)</em> <br /><em>Exception in thread &quot;main&quot;</em></p> 
-  <p><br />Étant donné que le premier indice est de 0, il arrive souvent des erreurs d'indice trop élevé d'une position. Le programmeur doit donc être vigilant et s'assurer que les indices restent dans les limites du tableau. <br />La taille d'un tableau est régie par une variable d'instance de l'objet tableau appelée <em>length</em>. Donc, pour connaître la taille d'un tableau, il suffit de consulter le contenu de cette variable à l'aide de l'opérateur d'accès point.</p> 
+<p><em>java.lang.ArrayIndexOutOfBoundsException: 2 at Test.main(Test.java:18)</em> <br /><em>Exception in thread "main"</em></p> 
+<p><br />Étant donné que le premier indice est de 0, il arrive souvent des erreurs d'indice trop élevé d'une position. Le programmeur doit donc être vigilant et s'assurer que les indices restent dans les limites du tableau. <br />La taille d'un tableau est régie par une variable d'instance de l'objet tableau appelée <em>length</em>. Donc, pour connaître la taille d'un tableau, il suffit de consulter le contenu de cette variable à l'aide de l'opérateur d'accès point.</p> 
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> tableau <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">];</span>
-System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span> <span style="color: #333333">(</span>tableau<span style="color: #333333">.</span><span style="color: #0000CC">length</span><span style="color: #333333">);</span> <span style="color: #888888">// Affiche 5 à la console</span>
-</pre></div>
+```java
+int[] tableau = new int[5];
+System.out.println (tableau.length); // Affiche 5 à la console
+```
 
 <h2>Instanciation d'un tableau</h2>
 
 <p>Nous pouvons instancier autrement un tableau. Il suffit de donner directement les valeurs qu'il contient. Nous affecterons une <em>liste d'initialisation</em> ou <em>initialisateur</em> au tableau. Les éléments du tableau sont repris entre des accolades et séparés par des virgules. Par exemple, pour créer le tableau ci-dessous, nous pourrions écrire :</p> 
- <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">        <span style="color: #000080; font-weight: bold">int</span>[] tableau = {<span style="color: #0000FF">20</span>, <span style="color: #0000FF">17</span>, <span style="color: #0000FF">21</span>, <span style="color: #0000FF">19</span>, <span style="color: #0000FF">18</span>, <span style="color: #0000FF">20</span>};
-</pre></td></tr></table></div>
 
-  <p>Initialisateur <br />Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
-2</pre></td><td><pre style="margin: 0; line-height: 125%">        <span style="color: #000080; font-weight: bold">int</span>[] tab = <span style="color: #000080; font-weight: bold">new</span> <span style="color: #000080; font-weight: bold">int</span>[<span style="color: #0000FF">3</span>];
-        tab = {<span style="color: #0000FF">1</span>, <span style="color: #0000FF">2</span>, <span style="color: #0000FF">3</span>};
-</pre></td></tr></table></div>
+```java
+int[] tableau = {20, 17, 21, 19, 18, 20};
+```
 
-  <p>Initialisateur : erreur de compilation </p> 
+<p>Initialisateur <br />Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
+
+```java
+int[] tab = new int[3];
+tab = {1, 2, 3};
+```
+
+<p>Initialisateur : erreur de compilation </p> 
 <pre>java.lang.Error: Unresolved compilation problem: </pre> 
 <pre>        Array constants can only be used in initializers 
 </pre> 
@@ -194,43 +177,47 @@ System<span style="color: #333333">.</span><span style="color: #0000CC">out</spa
 <p>Nous pouvons passer un tableau complet en paramètre à une méthode, car les tableaux ne sont rien d'autre que des objets. Il ne faut donc pas oublier que ce qui sera donné à la méthode n'est pas le tableau, ni une copie de celui-ci mais bien une copie de la référence vers le tableau. 
 Nous pouvons bien entendu passer en paramètre un seul élément d'un tableau. S'il s'agit d'une donnée primitive, une copie de celle-ci sera passée en paramètre. S'il s'agit d'un objet, une copie de la référence sera passée en paramètre. 
 La méthode ci-dessous déplace tous les éléments du tableau d'une position vers la droite.</p>
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">AfficheDeplacer</span> <span style="color: #333333">{</span>
-    <span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span><span style="color: #333333">(</span>String<span style="color: #333333">[]</span> args<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-        <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> tableau <span style="color: #333333">=</span> <span style="color: #333333">{</span><span style="color: #0000DD; font-weight: bold">11</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">22</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">33</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">44</span><span style="color: #333333">};</span>
 
-        print<span style="color: #333333">(</span>tableau<span style="color: #333333">);</span>
-        deplacerADroite<span style="color: #333333">(</span>tableau<span style="color: #333333">);</span>
-        print<span style="color: #333333">(</span>tableau<span style="color: #333333">);</span>
-    <span style="color: #333333">}</span>
+```java
+public class AfficheDeplacer {
+    public static void main(String[] args) {
+        int[] tableau = {11, 22, 33, 44};
 
-    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">deplacerADroite</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> tableau<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-        <span style="color: #333399; font-weight: bold">int</span> last <span style="color: #333333">=</span> tableau<span style="color: #333333">[</span>tableau<span style="color: #333333">.</span><span style="color: #0000CC">length</span> <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">];</span>
+        print(tableau);
+        deplacerADroite(tableau);
+        print(tableau);
+    }
 
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> tableau<span style="color: #333333">.</span><span style="color: #0000CC">length</span> <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span> i <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i<span style="color: #333333">--)</span> <span style="color: #333333">{</span>
-            tableau<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">=</span> tableau<span style="color: #333333">[</span>i <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">];</span>
-        <span style="color: #333333">}</span>
+    private static void deplacerADroite(int[] tableau) {
+        int last = tableau[tableau.length - 1];
 
-        tableau<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">]</span> <span style="color: #333333">=</span> last<span style="color: #333333">;</span>
-    <span style="color: #333333">}</span>
+        for (int i = tableau.length - 1; i > 0; i--) {
+            tableau[i] = tableau[i - 1];
+        }
 
-    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">print</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> tableau<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        tableau[0] = last;
+    }
 
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> tableau<span style="color: #333333">.</span><span style="color: #0000CC">length</span><span style="color: #333333">;</span> i<span style="color: #333333">++)</span> <span style="color: #333333">{</span>
-            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>tableau<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot; &quot;</span><span style="color: #333333">);</span>
-        <span style="color: #333333">}</span>
+    private static void print(int[] tableau) {
 
-        System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">();</span>
-    <span style="color: #333333">}</span>
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.print(tableau[i] + " ");
+        }
 
-<span style="color: #333333">}</span>
-</pre></div>
+        System.out.println();
+    }
+
+}
+```
+
 <h2>Tableaux d'objets</h2>
 
 <p>Dans tous les exemples que nous avons vus jusqu'à présent, les tableaux contenaient uniquement des types primitifs. Dans la dernière partie de la section précédente, nous avons vu des tableaux qui pouvaient contenir des objets, ou plus précisément des références vers des objets. 
 Il est possible de stocker des objets dans un tableau. La ligne de code suivant crée un tableau de 20 objets de type String.</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">String<span style="color: #333333">[]</span> phrases <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> String<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">20</span><span style="color: #333333">];</span>
-</pre></div>
+```java
+String[] phrases = new String[20];
+```
 
 <h2>Quelques techniques utiles</h2>
 
@@ -238,15 +225,16 @@ Il est possible de stocker des objets dans un tableau. La ligne de code suivant 
 
 Nous donnons en fait à la méthode main une chaîne de caractères qui sera découpée en morceaux délimités par des espaces. Il est ensuite possible d'utiliser ces paramètres dans la méthode, comme l'illustre le programme suivant :</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span><span style="color: #333333">(</span>String<span style="color: #333333">[]</span> args<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-        <span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">(</span>args<span style="color: #333333">.</span><span style="color: #0000CC">length</span> <span style="color: #333333">!=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">)</span> <span style="color: #333333">{</span>
-            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>args<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">]);</span>
-        <span style="color: #333333">}</span> <span style="color: #008800; font-weight: bold">else</span> <span style="color: #333333">{</span>
-            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">();</span>
-            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Aucun argument sur la ligne de commande&quot;</span><span style="color: #333333">);</span>
-        <span style="color: #333333">}</span>
-<span style="color: #333333">}</span>
-</pre></div>
+```java
+public static void main(String[] args) {
+        if (args.length != 0) {
+            System.out.println(args[0]);
+        } else {
+            System.out.println();
+            System.out.println("Aucun argument sur la ligne de commande");
+        }
+}
+```
 
 <h3>Trier un ensemble de données</h3>
 
@@ -257,29 +245,32 @@ Le tri d'informations fait partie des nombreuses applications en informatique. I
 
 <p>Réalisation de l'algorithme « recherche du minimum » en Java :</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">minimum</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> a<span style="color: #333333">[])</span> <span style="color: #333333">{</span>
-        <span style="color: #333399; font-weight: bold">int</span> min <span style="color: #333333">=</span> a<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">];</span>
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> a<span style="color: #333333">.</span><span style="color: #0000CC">length</span><span style="color: #333333">;</span> i<span style="color: #333333">++)</span> <span style="color: #333333">{</span>
-            <span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">(</span>a<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">&lt;</span> min<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-                min <span style="color: #333333">=</span> a<span style="color: #333333">[</span>i<span style="color: #333333">];</span>
-            <span style="color: #333333">}</span>
-        <span style="color: #333333">}</span>
-        <span style="color: #008800; font-weight: bold">return</span> min<span style="color: #333333">;</span>
-<span style="color: #333333">}</span>
-</pre></div>
+```java
+public static int minimum(int a[]) {
+        int min = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] < min) {
+                min = a[i];
+            }
+        }
+        return min;
+}
+```
 
 <p>La recherche de la valeur maximale est très similaire : il suffit de changer le critère de comparaison.
 La réalisation sous la forme d'une méthode Java est, par conséquent, aussi similaire :</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">maximum</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> a<span style="color: #333333">[])</span> <span style="color: #333333">{</span>
-        <span style="color: #333399; font-weight: bold">int</span> max <span style="color: #333333">=</span> a<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">];</span>
-        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> a<span style="color: #333333">.</span><span style="color: #0000CC">length</span><span style="color: #333333">;</span> i<span style="color: #333333">++)</span> <span style="color: #333333">{</span>
-            <span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">(</span>a<span style="color: #333333">[</span>i<span style="color: #333333">]</span> <span style="color: #333333">&gt;</span> max<span style="color: #333333">)</span>
-                max <span style="color: #333333">=</span> a<span style="color: #333333">[</span>i<span style="color: #333333">];</span>
-        <span style="color: #333333">}</span>
-        <span style="color: #008800; font-weight: bold">return</span> max<span style="color: #333333">;</span>
- <span style="color: #333333">}</span>
-</pre></div>
+```java
+public static int maximum(int a[]) {
+        int max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max)
+                max = a[i];
+        }
+        return max;
+}
+```
+
 <h2>Différents algorithmes de tri</h2>
 <p>Les types de tri possibles sont les suivants :</p> 
   <ol type="1"> 
@@ -295,10 +286,10 @@ La réalisation sous la forme d'une méthode Java est, par conséquent, aussi si
 
 <h2>Les tableaux à plusieurs dimensions (Matrices)</h2>
 
-<p>Les tableaux que nous avons utilisés jusqu'à présent sont des tableaux à une seule dimension. Il suffit&nbsp;d'un seul indice pour&nbsp;identifier un&nbsp;élément de ces types de tableaux. Ce sont&nbsp;donc de simples listes de valeurs.</p> 
+<p>Les tableaux que nous avons utilisés jusqu'à présent sont des tableaux à une seule dimension. Il suffit d'un seul indice pour identifier un élément de ces types de tableaux. Ce sont donc de simples listes de valeurs.</p> 
   <h2>Tableau à deux dimensions</h2> 
-  <p>Un tableau à deux dimensions est&nbsp;un tableau avec des lignes et des colonnes. Contrairement à un tableau à une dimension, il faut&nbsp;utiliser deux indices pour accéder aux éléments des tableaux à deux dimensions. Le premier indice représente la ligne et le second, la colonne. La figure ci-dessous, &nbsp;nommée Tableau à deux dimensions, représente un tableau à deux dimensions.</p> 
-  <p style="text-align: left;">&nbsp;Tableau 1. Tableau à deux dimensions</p> 
+  <p>Un tableau à deux dimensions est un tableau avec des lignes et des colonnes. Contrairement à un tableau à une dimension, il faut utiliser deux indices pour accéder aux éléments des tableaux à deux dimensions. Le premier indice représente la ligne et le second, la colonne. La figure ci-dessous, nommée Tableau à deux dimensions, représente un tableau à deux dimensions.</p> 
+  <p style="text-align: left;"> Tableau 1. Tableau à deux dimensions</p> 
   <p> </p> 
   <table dir="ltr" border="1" cellspacing="2" bordercolor="#000000" cellpadding="7" width="538"> 
     <tbody> 
@@ -381,19 +372,23 @@ La réalisation sous la forme d'une méthode Java est, par conséquent, aussi si
   <p>tableau_1[Ligne 4][Colonne 2] = 54</p> 
   <p>tableau_1[Ligne 2][Colonne 1] = 56</p> 
   <p>....</p> 
-  <h2>Création de&nbsp;tableaux à&nbsp;deux dimensions</h2> 
-  <p>Pour&nbsp;déclarer un tableau à deux dimensions, il faut simplement écrire :</p> 
-  <p><em>typededonnées NonDuTableau&nbsp;[nombreDeLignes][nombreDeColonne]</em></p> 
-  <p>Plus concrètement, nous pouvons déclarer un tableau à deux dimensions pour inscrire des achats du mois&nbsp;en faisant :</p> 
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">double</span> achats [][]; <span style="color: #008800; font-style: italic">//achats est ici un tableau à deux dimensions de type double des achats.</span>
-</pre></td></tr></table></div>
+  <h2>Création de tableaux à deux dimensions</h2> 
+  <p>Pour déclarer un tableau à deux dimensions, il faut simplement écrire :</p> 
+  <p><em>typededonnées NonDuTableau [nombreDeLignes][nombreDeColonne]</em></p> 
+  <p>Plus concrètement, nous pouvons déclarer un tableau à deux dimensions pour inscrire des achats du mois en faisant :</p> 
+
+```java
+double achats [][]; //achats est ici un tableau à deux dimensions de type double des achats.
+```
 
   <p>Une fois que le tableau est déclaré, il faut le créer en utilisant le mot clé <em>new.</em></p> 
-  <p>Ainsi, pour&nbsp;créer les achats des quatre semaines du mois de juillet des cinq dernières années, nous allons faire :</p> 
- <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">achats = <span style="color: #000080; font-weight: bold">new</span> <span style="color: #000080; font-weight: bold">double</span> [<span style="color: #0000FF">5</span>][<span style="color: #0000FF">4</span>];
-</pre></td></tr></table></div>
- 
-  <p>La première dimension spécifie que le&nbsp;tableau contient cinq éléments et représente les cinq lignes achats. &nbsp;La seconde dimension spécifie que chacun de ces&nbsp;cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p> 
+  <p>Ainsi, pour créer les achats des quatre semaines du mois de juillet des cinq dernières années, nous allons faire :</p> 
+
+```java
+achats = new double [5][4];
+```
+
+  <p>La première dimension spécifie que le tableau contient cinq éléments et représente les cinq lignes achats.  La seconde dimension spécifie que chacun de ces cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p> 
   <p> </p> 
   <table dir="ltr" border="1" cellspacing="2" bordercolor="#000000" cellpadding="7" width="538"> 
     <tbody> 
@@ -474,97 +469,98 @@ La réalisation sous la forme d'une méthode Java est, par conséquent, aussi si
   <p> </p> 
   <p><strong><u>Achats</u></strong></p> 
   <p>Il faut noter ici que rien ne nous empêche de déclarer et de créer en même temps un tableau. Pour cela, il faut simplement faire :</p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">typeDeTableau [][] nomDuTableau = <span style="color: #000080; font-weight: bold">new</span> typeDeTableau [nombreDeLigne][nombreDeColonne];
-</pre></td></tr></table></div>
 
-  <p>Ainsi dans le&nbsp;cas de Achats, nous pouvons écrire :</p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">double</span>[][] Achats = <span style="color: #000080; font-weight: bold">new</span> <span style="color: #000080; font-weight: bold">double</span> [<span style="color: #0000FF">5</span>][<span style="color: #0000FF">4</span>];<span style="color: #a61717; background-color: #e3d2d2"></span>
-</pre></td></tr></table></div>
+```java
+typeDeTableau [][] nomDuTableau = new typeDeTableau [nombreDeLigne][nombreDeColonne];
+```
+
+  <p>Ainsi dans le cas de Achats, nous pouvons écrire :</p> 
+
+```java
+double[][] Achats = new double [5][4];
+```
 
   <p>Ainsi <em>Achats</em> est déclaré et créé simultanément.</p> 
   <h2>Manipulation d'un tableau à 2 dimensions</h2> 
-  <p>Pour accéder à un élément du tableau <em>Achats</em>, il faut écrire, par exemple&nbsp;:</p> 
-  <p>Achats [0][0] = 11 pour l'élément à la ligne 0 colonne 0. Il est cependant important de noter que si nous avons des milliers d'éléments, cette façon de faire ne sera pas commode. Ainsi, avec deux boucles <em>for </em>imbriquées, nous pouvons accéder plus facilement aux éléments de Achats. La portion de&nbsp;programme suivant le montre facilement :</p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
-2
-3
-4
-5
-6
-7</pre></td><td><pre style="margin: 0; line-height: 125%">       <span style="color: #000080; font-weight: bold">int</span> annees = <span style="color: #0000FF">2010</span>; <span style="color: #008800; font-style: italic">// initialisation de l&#39;année selon l&#39;indice 0 du tableau Achats</span>
-      
-        <span style="color: #000080; font-weight: bold">for</span> (<span style="color: #000080; font-weight: bold">int</span> i = <span style="color: #0000FF">0</span>; i &lt; <span style="color: #0000FF">5</span>; i++) {
-            <span style="color: #000080; font-weight: bold">for</span> (<span style="color: #000080; font-weight: bold">int</span> j = <span style="color: #0000FF">0</span>; j &lt; <span style="color: #0000FF">4</span>; j++) {
-                System.<span style="color: #FF0000">out</span>.<span style="color: #FF0000">println</span>(<span style="color: #0000FF">&quot;Achats [&quot;</span> + i + <span style="color: #0000FF">&quot;][&quot;</span> + j + <span style="color: #0000FF">&quot;] =&quot;</span> + achats[i][j]);
-            }
-        }
-</pre></td></tr></table></div>
+  <p>Pour accéder à un élément du tableau <em>Achats</em>, il faut écrire, par exemple :</p> 
+  <p>Achats [0][0] = 11 pour l'élément à la ligne 0 colonne 0. Il est cependant important de noter que si nous avons des milliers d'éléments, cette façon de faire ne sera pas commode. Ainsi, avec deux boucles <em>for </em>imbriquées, nous pouvons accéder plus facilement aux éléments de Achats. La portion de programme suivant le montre facilement :</p> 
 
-  <p>Pour initialiser un&nbsp;tableau à deux dimensions, nous pouvons simplement&nbsp;écrire :</p> 
- <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">typeDeTableau nomDuTableau [][] =<span style="color: #a61717; background-color: #e3d2d2"> </span>{ { }, {}, {}, etc...};
-</pre></td></tr></table></div>
+```java
+int annees = 2010; // initialisation de l'année selon l'indice 0 du tableau Achats
+      
+for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 4; j++) {
+        System.out.println("Achats [" + i + "][" + j + "] =" + achats[i][j]);
+    }
+}
+```
+
+  <p>Pour initialiser un tableau à deux dimensions, nous pouvons simplement écrire :</p> 
+
+```java
+typeDeTableau nomDuTableau [][] = { { }, {}, {}, etc...};
+```
 
   <p>Ainsi, pour un tableau composé des noms des étudiants et des cours qu'ils suivent peut être défini de la manière suivante :</p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">String<span style="color: #a61717; background-color: #e3d2d2"> </span>etudiants[][] =<span style="color: #a61717; background-color: #e3d2d2"> </span>{ {<span style="color: #0000FF">&quot;nom&quot;</span>, <span style="color: #0000FF">&quot;cours&quot;</span>}, {<span style="color: #0000FF">&quot;nom&quot;</span>, <span style="color: #0000FF">&quot;cours&quot;</span>}, {<span style="color: #0000FF">&quot;nom&quot;</span>, <span style="color: #0000FF">&quot;cours&quot;</span>}, {<span style="color: #0000FF">&quot;nom&quot;</span>, <span style="color: #0000FF">&quot;cours&quot;</span>}<span style="color: #a61717; background-color: #e3d2d2"> </span>etc...};
-</pre></td></tr></table></div>
+
+```java
+String etudiants[][] = { {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"} etc...};
+```
 
   <h2>Tableaux multidimensionnels</h2> 
   <p>Java ne se limite pas seulement aux tableaux à deux dimensions. Nous pouvons aussi déclarer des tableaux à plus de deux dimensions. Pour déclarer un tableau à trois dimensions, par exemple, il suffit de faire : </p> 
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">typedetableau [][][] nomdutableau = <span style="color: #000080; font-weight: bold">new</span> [taille][taille][taille];
-</pre></td></tr></table></div>
+
+```java
+typedetableau [][][] nomdutableau = new [taille][taille][taille];
+```
 
   <p>Plus concrètement, nous pouvons déclarer un tableau d'entiers comme :<br /></p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">int</span> tableauEntier [][][] = <span style="color: #000080; font-weight: bold">new</span> <span style="color: #000080; font-weight: bold">int</span> [<span style="color: #0000FF">5</span>][<span style="color: #0000FF">5</span>][<span style="color: #0000FF">5</span>];
-</pre></td></tr></table></div>
 
-  <p>Nous venons ainsi de créer un tableau d'entiers à trois dimensions. Pour initialiser un tel tableau, nous&nbsp;pouvons utiliser&nbsp;trois&nbsp;boucles <em>for</em>. À titre d'exemples, initialisons tous les éléments&nbsp;du tableau <em>tableauentier à 1 :</em></p> 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
-2
-3
-4
-5
-6
-7</pre></td><td><pre style="margin: 0; line-height: 125%">        <span style="color: #000080; font-weight: bold">for</span> (<span style="color: #000080; font-weight: bold">int</span> i = <span style="color: #0000FF">0</span>; i &lt; <span style="color: #0000FF">5</span>; i++) {
-            <span style="color: #000080; font-weight: bold">for</span> (<span style="color: #000080; font-weight: bold">int</span> j = <span style="color: #0000FF">0</span>; j &lt; <span style="color: #0000FF">5</span>; j++) {
-                <span style="color: #000080; font-weight: bold">for</span> (<span style="color: #000080; font-weight: bold">int</span> k = <span style="color: #0000FF">0</span>; k &lt; <span style="color: #0000FF">5</span>; k++) {
-                    tableauEntier[i][j][k] = <span style="color: #0000FF">1</span>;
-                }
-            }
+```java
+int tableauEntier [][][] = new int [5][5][5];
+```
+
+  <p>Nous venons ainsi de créer un tableau d'entiers à trois dimensions. Pour initialiser un tel tableau, nous pouvons utiliser trois boucles <em>for</em>. À titre d'exemples, initialisons tous les éléments du tableau <em>tableauentier à 1 :</em></p> 
+
+```java
+for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 5; j++) {
+        for (int k = 0; k < 5; k++) {
+            tableauEntier[i][j][k] = 1;
         }
-</pre></td></tr></table></div>
-
-      </blockquote> 
-    </blockquote> 
-  </blockquote>
+    }
+}
+```
 
 <p><a id="intro" name="section2"></a></p>
 <h1>Les ArrayLists</h1>
 
-<p>Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "ArrayList&lt;String&gt;, ArrayList&lt;Double&gt;, ArrayList&lt;ArrayList&lt;Integer&gt;&gt;" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.</p>
+<p>Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "ArrayList<String>, ArrayList<Double>, ArrayList<ArrayList<Integer>>" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.</p>
 
 <iframe height="400px" width="100%" src="https://repl.it/@lemire/ArraysArraysArrays?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>Comme nous l'avions vu lors de la présentation de la structure d'itération while, il est possible d'itérer rapidement parmi les éléments d'une ArrayList. Pour ce faire, voici trois façons d'itérer parmi les éléments : </p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ArrayList<span style="color: #333333">&lt;</span>String<span style="color: #333333">&gt;</span> list <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> ArrayList<span style="color: #333333">&lt;</span>String<span style="color: #333333">&gt;();</span>                        
-list<span style="color: #333333">.</span><span style="color: #0000CC">add</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Valeur1&quot;</span><span style="color: #333333">);</span>
+```java
+ArrayList<String> list = new ArrayList<String>();                        
+list.add("Valeur1");
 
-<span style="color: #888888">//Avec le traditionnel for</span>
-<span style="color: #008800; font-weight: bold">for</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i <span style="color: #333333">&lt;</span> list<span style="color: #333333">.</span><span style="color: #0000CC">size</span><span style="color: #333333">();</span>i<span style="color: #333333">++){</span>
-    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>list<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">));</span>
-<span style="color: #333333">}</span>
+//Avec le traditionnel for
+for(int i = 0; i < list.size();i++){
+    System.out.println(list.get(i));
+}
 
-<span style="color: #888888">//Avec le for est un raccourci du compilateur. La variable s sera chaque élément de la liste</span>
-<span style="color: #008800; font-weight: bold">for</span><span style="color: #333333">(</span>String s <span style="color: #333333">:</span> list<span style="color: #333333">)</span> <span style="color: #333333">{</span>
-    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>s<span style="color: #333333">);</span>
-<span style="color: #333333">}</span>
+//Avec le for est un raccourci du compilateur. La variable s sera chaque élément de la liste
+for(String s : list) {
+    System.out.println(s);
+}
 
-<span style="color: #888888">//La méthode plus ancienne (Java 1.6) avec les itérateurs</span>
-Iterator<span style="color: #333333">&lt;</span>String<span style="color: #333333">&gt;</span> it <span style="color: #333333">=</span> list<span style="color: #333333">.</span><span style="color: #0000CC">iterator</span><span style="color: #333333">();</span>
-<span style="color: #008800; font-weight: bold">while</span><span style="color: #333333">(</span>it<span style="color: #333333">.</span><span style="color: #0000CC">hasNext</span><span style="color: #333333">())</span> <span style="color: #333333">{</span>
-    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>it<span style="color: #333333">.</span><span style="color: #0000CC">next</span><span style="color: #333333">());</span>
-<span style="color: #333333">}</span>
-</pre></div>
+//La méthode plus ancienne (Java 1.6) avec les itérateurs
+Iterator<String> it = list.iterator();
+while(it.hasNext()) {
+    System.out.println(it.next());
+}
+```
 
 <p>En conclusion, les ArrayList sont des structures de données utiles. Vous verrez dans la suite du cours plusieurs utilisations des ArrayList.</p>
 
@@ -592,18 +588,14 @@ Pour chaque élément de l'ensemble {1,...,n}:
 
 <p>On cherche maintenant à regrouper les algorithmes dans de grandes classes. Le principe de base est que n et 5n sont des classes similaires: faire 5 fois plus d'opérations, peu importe la taille de l'ensemble de données initial, importe beaucoup moins que la différence qu'il peut y avoir entre n et n<sup>2</sup>.</p>
 
-<p>Soit f(n) le nombre d'opérations effectuées par un algorithme; on dit que le temps mis par l'algorithme est O(g(n)) (ou bien f(n) est dans O(g(n))) et cela, s'il existe deux nombres M et n0 tels que f(n) &lt; M g(n) pour n &gt; n0.</p>
+<p>Soit f(n) le nombre d'opérations effectuées par un algorithme; on dit que le temps mis par l'algorithme est O(g(n)) (ou bien f(n) est dans O(g(n))) et cela, s'il existe deux nombres M et n0 tels que f(n) < M g(n) pour n > n0.</p>
 
-<p>Si f(n)= 2n+5, on a f(n) est dans O(n). En effet, si on pose M=3 et n0=5, alors f(n)=2n+5 &lt; M n pour n &gt; n0.</p>
-
-
-<p>Si f(n)= 2n+5, on a f(n) est dans O(n<sup>2</sup>). En effet, si on pose M=1 et n0=3, alors f(n)=2n+5 &lt;= M n<sup>2</sup> pour n>n0.</p>
+<p>Si f(n)= 2n+5, on a f(n) est dans O(n). En effet, si on pose M=3 et n0=5, alors f(n)=2n+5 < M n pour n > n0.</p>
 
 
-
+<p>Si f(n)= 2n+5, on a f(n) est dans O(n<sup>2</sup>). En effet, si on pose M=1 et n0=3, alors f(n)=2n+5 <= M n<sup>2</sup> pour n>n0.</p>
 
 <p>Les grandes classes importantes sont O(1),  O(log n), O(n), O(n log n) et O(n<sup>2</sup>).</p>
-
 
 <p>Lecture complémentaire : la <a href="https://fr.wikipedia.org/wiki/Théorie_de_la_complexité_(informatique_théorique)">Théorie de la complexité</a>.</p>
 

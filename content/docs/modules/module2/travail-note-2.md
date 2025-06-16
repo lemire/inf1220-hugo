@@ -97,13 +97,15 @@ System.out.println(c.perimetre());
 
 
 <p>Un programmeur souhaite représenter la valeur 10.000000000000001 en Java. Il a écrit le programme suivant. Exécutez le programme et expliquez le résultat. Une explication de deux lignes peut suffire.</p>
-<pre style='color:#000000;background:#ffffff;'>class Main <span style='color:#800080; '>{</span>
-  public <span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#800000; font-weight:bold; '>void</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#603000; '>String</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> args<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
-   <span style='color:#800000; font-weight:bold; '>double</span> x <span style='color:#808030; '>=</span>  <span style='color:#008000; '>10.000000000000001</span><span style='color:#800080; '>;</span>
-   System<span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>println<span style='color:#808030; '>(</span>x<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span>
-<span style='color:#800080; '>}</span>
-</pre>
+
+```java
+class Main {
+  public static void main(String[] args) {
+   double x =  10.000000000000001;
+   System.out.println(x);
+  }
+}
+```
 
 <iframe height="400px" width="100%" src="https://repl.it/@lemire/Q2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 

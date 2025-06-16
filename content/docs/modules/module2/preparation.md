@@ -30,14 +30,20 @@ weight: 1
 
 <h1>Utilisation d'un environnement de programmation en ligne</h1>
 
-<p>Plusieurs étudiants préfèrent un environnement de développement conventionnel, installé sur leur PC. D'autres étudiants peuvent avoir une préférence pour les environnements en ligne qui ne nécessitent aucune installation. Il y a plusieurs environnements en ligne, nous vous invitons à les explorer, en commençant  par les suggestions suivantes :</p>
+<p>Plusieurs étudiants préfèrent un environnement de développement conventionnel, installé sur leur PC. D'autres étudiants peuvent avoir une préférence pour les environnements en ligne qui ne nécessitent aucune installation.</p>
+
+<p>Au sein même du cours, nous mettons à votre disposition un environnement de développement 
+entièrement en ligne, suffisant pour les travaux du cours. Vous pouvez y avoir accès 
+<a href="docs/environnement/">dès maintenant</a>. Suivez le lien qui se trouve dans le menu du cours.
+</p>
+<p> Il y a plusieurs environnements en ligne, nous vous invitons à les explorer, en commençant  par les suggestions suivantes :</p>
 
 <ol>
 <li><a href="https://repl.it">repl.it</a></li>
 <li><a href="http://ideone.com">ideone</a></li>
 </ol>
 
-<p>Ces outils en ligne vous permettent de saisir votre code, dans le navigateur, et de l'exécuter par la suite. Vous pouvez faire une grande partie du cours en utilisant seulement un outil comme <a href="https://repl.it">repl.it</a>. En effet, le cours se concentre principalement sur la programmation. Les outils d'aide à la programmation sont moins importants. Nous ne ferons pas de grands projets dans ce cours qui nécessitent beaucoup de gestion de code.</p>
+<p>Ces outils en ligne vous permettent de saisir votre code, dans le navigateur, et de l'exécuter par la suite. Vous pouvez faire une grande partie du cours en utilisant seulement un outil comme <a href="https://repl.it">repl.it</a>. En effet, le cours se concentre principalement sur la programmation de base. Les outils d'aide à la programmation sont moins importants. Nous ne ferons pas de grands projets dans ce cours qui nécessitent beaucoup de gestion de code.</p>
 
 <p>La vidéo suivante illustre l'utilisation de <a href="https://repl.it">repl.it</a> (il n'est pas nécessaire d'écouter la narration en anglais pour comprendre): </p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kMqNSZPjBOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -106,7 +112,6 @@ weight: 1
 <li>L'enregistrement du programme d'installation devrait débuter. Suivez ensuite les consignes.</li>
 </ol>
 
-<img src="http://inf1220-vw2.teluq.ca/files/2017/06/Screen-Shot-2020-10-07-at-10.53.35-AM-300x206.png" alt="screen-shot-2020-10-07-at-10-53-35-am" width="600" height="412" class="alignnone size-medium wp-image-1348" />
 
 <p>Nous croyons que IntelliJ IDEA est supérieur aux autres IDE, étant plus élégant et convivial. Cependant, le choix vous appartient.</p>
 

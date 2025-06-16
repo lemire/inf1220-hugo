@@ -42,6 +42,7 @@ Réponse: Une `NullPointerException` se produit quand vous essayez d'utiliser un
 ### Question: Comment lire une entrée utilisateur en Java ?
 
 Réponse: Utilisez la classe `Scanner` pour lire une entrée. Par exemple :
+
 ```java  {style=github}
 import java.util.Scanner;
 Scanner scanner = new Scanner(System.in);

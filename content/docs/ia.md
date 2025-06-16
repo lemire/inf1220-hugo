@@ -3,8 +3,6 @@ title: "Intelligence artificielle"
 weight: 12
 ---
 
-<!-- Ajoutez ici le contenu HTML de la présentation -->
-
 
 
 <p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>

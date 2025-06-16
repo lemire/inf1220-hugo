@@ -167,22 +167,11 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 <ol>
 <li>Pour créer un projet aller dans "File" (ou Fichier) et sélectionner "New Project" (Nouveau projet).</li>
 <li>Choisir dans la fenêtre de type "Wizard", un projet de type Java (liste de gauche) et Java Application (liste de droite). Appuyer sur "Next" (Suivant).</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_wizard_act2-2.png" alt="image_wizard_act2-2" width="400px"  class="alignnone size-medium wp-image-994" />
 <li>Entre le nom du projet, par exemple "Exercice1" et assurer vous que la case "Create Main Class" soit cochée. Ceci va créer automatiquement une classe "Exercice1" avec une méthode "main". Appuyer sur "Finish" (Terminer).</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_ex1_act2-2.png" alt="image_ex1_act2-2" width="400px"  class="alignnone size-medium wp-image-996" />
-
 <li>Une fois le projet crée, celui-ci apparaît dans la liste des projets à gauche. Vous pouvez avoir plusieurs projets à la fois et naviguez entre les classes de ces projets via l'arborescence. La classe "Exercice1", qui a été auto-générée, apparaît dans la partie droite de la fenêtre de l'IDE.</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_IDE_act2-2.png" alt="image_ide_act2-2" width="400px"  class="alignnone size-medium wp-image-992" />
-
 <li>Copier la ligne "System.out.println("Bienvenue au sein du cours INF1220 !");" et l'ajouter dans la portée de la fonction main. Enregistrer le fichier (via le menu) suite à la modification.</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_printin_act2-2.png" alt="image_printin_act2-2" width="400px"  class="alignnone size-medium wp-image-993" />
-
 <li>Nous allons maintenant compiler et exécuter cette classe et cette fonction main. Pour ce faire, faite un clique droit sur le fichier "Exercice1.java" dans le fenêtre de gauche et choisir l'option "Run File". L'IDE Netbeans va alors vérifier si le fichier a été modifié. Si c'est le cas (nous avons ajouté une ligne ...), il va compiler la classe (via javac), puis exécuter celle-ci automatique (via java). Le résultat de l'affichage à la console de l'opération System.out.println("Bienvenue au sein du cours INF1220 !"), apparaît dans la fenêtre de console au bas de l'IDE.</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_compil_act2-2.png" alt="image_compil_act2-2" width="400px" class="alignnone size-medium wp-image-995" />
-
 <li>Vous pouvez également vous créer une seconde classe dans le projet en utilisant l'option du menu "File>New File". Choisir dans le fenêtre de type "Wizard", un fichier de catégorie Java et de type "Java Class". Appuyer sur "Next".</li>
-<img src="http://inf1220-vw2.teluq.ca/files/2019/08/image_ex2_act2-2.png" alt="image_ex2_act2-2" width="400px"  class="alignnone size-full wp-image-997" />
-
 <li>Choisir un nom de classe (différent de Exercice1), par exemple "AutreClasse", puis appuyer sur terminer. Vous pouvez dans la nouvelle classe recopier la fonction main de "Exercice1", puis compiler et exécuter celle-ci.</li>
 </ol>
 

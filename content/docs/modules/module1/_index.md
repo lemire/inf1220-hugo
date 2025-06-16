@@ -1,6 +1,7 @@
 ---
 title: "Module 1: Algorithme et pseudocode"
 weight: 1
+bookCollapseSection: true
 ---
 
 # Module 1

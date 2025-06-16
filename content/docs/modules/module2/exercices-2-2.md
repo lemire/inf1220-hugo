@@ -55,6 +55,7 @@ Une classe Java peut avoir autant de constructeurs qu'on le souhaite.
 
 <h2>Question 3</h2>
 <p>Soit la classe suivante:</p>
+
 ```java
 public class Patate {
   static int y;
@@ -97,6 +98,7 @@ public class Patate {
 
 <h2>Question 5</h2>
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 2.</p>
+
 ```java
 public class Somme {
   public void ajoute(int a) {
@@ -243,6 +245,7 @@ constructeurs sont des constructeurs avec un argument.</p>
 <div>
 
 <p>Oui. La méthode ne peut être appelée que par les autres méthodes de la classe (soit les autres méthodes statiques ou les méthodes non-dynamiques).</p>
+
 ```java
 class Main {
   public static void main(String[] args) {
@@ -252,6 +255,7 @@ class Main {
   private static void joe() {}
 }
 ```
+
 </div>
 </div>
 
@@ -285,6 +289,7 @@ public (accessible de partout), protected (accessible des classes dérivées et 
 <div class="accordeon">
 <p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
 <div>
+
 ```java
 public class Entier {
   private int x = 0;
@@ -297,6 +302,7 @@ public class Entier {
   }
 }
 ```
+
 </div>
 </div>
 
@@ -308,6 +314,7 @@ public class Entier {
 <div class="accordeon">
 <p class="titre">Réponse<span class="iconeEtatAccordeon">&nbsp;</span></p>
 <div>
+
 ```java
 public class Entier {
   private int x = 0;
@@ -319,6 +326,7 @@ public class Entier {
   }
 }
 ```
+
 </div>
 </div>
 
