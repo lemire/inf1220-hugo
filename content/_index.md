@@ -62,7 +62,7 @@ navigateur&nbsp;:
 
 {{<inlineJava path="Main.java" lang="java" >}}
 void main() {
-    String nom = "Alice";
+    var nom = "Alice";
     System.out.println("Bonjour, " + nom + " !");
 }
 {{</inlineJava>}}

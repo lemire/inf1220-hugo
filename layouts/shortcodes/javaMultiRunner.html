@@ -76,17 +76,22 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
         txt_files.push({name:name, content:code});
       }
     });
-    resultDiv.textContent = 'Exécution en cours...';
+    resultDiv.textContent = 'Exécution en cours';
+    var dots = 0;
+    var execAnim = setInterval(function() {
+      dots = (dots + 1) % 4;
+      resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+    }, 500);
     fetch(endpoint, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ java_files: java_files, txt_files: txt_files })
     })
-    .then(r=>r.json())
+    .then(r=>{ clearInterval(execAnim); return r.json(); })
     .then(async function(data){
       // Si la réponse n'est pas déjà un objet, parser le texte
       if (typeof data !== 'object') {
-        try { data = JSON.parse(data); } catch(e) { resultDiv.textContent = data; return; }
+        try { data = JSON.parse(data); } catch(e) { clearInterval(execAnim); resultDiv.textContent = data; return; }
       }
       if (data.status === 'ran_successfully') {
         resultDiv.innerHTML = '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
@@ -139,6 +144,6 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
         resultDiv.textContent = JSON.stringify(data, null, 2);
       }
     })
-    .catch(function(){ resultDiv.textContent = 'Erreur de communication.'; });
+    .catch(function(){ clearInterval(execAnim); resultDiv.textContent = 'Erreur de communication.'; });
   });
 })();</script>

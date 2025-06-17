@@ -101,13 +101,18 @@
           if(name.endsWith('.java')) java_files.push({name: name, content: content});
           else txt_files.push({name: name, content: content});
         });
-        resultDiv.textContent = 'Exécution en cours...';
+        resultDiv.textContent = 'Exécution en cours';
+        var dots = 0;
+        var execAnim = setInterval(function() {
+          dots = (dots + 1) % 4;
+          resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+        }, 500);
         fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ java_files: java_files, txt_files: txt_files })
         })
-        .then(function(r){ return r.text(); })
+        .then(function(r){ clearInterval(execAnim); return r.text(); })
         .then(function(t){
           try {
             var j=JSON.parse(t);
@@ -197,7 +202,7 @@
                 }
               });
             }
-          } catch(e){ console.log(e); resultDiv.textContent=t; }
+          } catch(e){ clearInterval(execAnim); console.log(e); resultDiv.textContent=t; }
         });
       };
       // Gestion des tooltips d'erreur au survol
