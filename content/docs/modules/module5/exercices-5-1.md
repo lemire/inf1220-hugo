@@ -3,18 +3,19 @@ title: "Exercices 5.1"
 weight: 3
 ---
 
-<h1><a id="top" name="top"></a>Module 5</h1><h2>Exercices 5.1</h2><h2 class="partie2">Exercices sur l'héritage et le polymorphisme.</h2>
 
-<h1>Questions/Réponses</h1>
+# Exercices sur l'héritage et le polymorphisme.
+
+## Questions/Réponses
 <p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.</p>
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
 
-<h2>Réponses uniques?</h2>
+## Réponses uniques?
 
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
 
-<h2>Question 1</h2>
+## Question 1
 <p>Pourquoi le code suivant entraîne t-il une erreur à la compilation?</p>
 
 ```java  {style=github}
@@ -37,7 +38,7 @@ public class Test extends JFrame, Thread {
 <p>En Java, il est impossible de faire de l'héritage multiple, il faut donc soit hériter de JFrame ou de Thread, mais pas les deux à la fois. Une façon de contourner le problème serait d'implémenter l'interface Runnable, puis de passer en paramètre cette classe à un thread.</p>
 </details>
 
-<h2>Question 2</h2>
+## Question 2
 <p>Voici ci dessous, une classe permettant de lire une image de type PNG et d'en extraire les occurrences de gradients de couleur :</p>
 
 ```java  {style=github}
@@ -120,7 +121,7 @@ public class PNGGradientExtractor extends GradientExtractor {
 </div>
 </details>
 
-<h2>Question 3</h2>
+## Question 3
 <p>Voici une classe permettant de calculer la regression linéaire d'une série temporelle d'entier&nbsp;:</p>
 
 ```java  {style=github}
@@ -283,7 +284,7 @@ public class SerieTemporelle<T>  {
 
 </details>
 
-<h2>Question 4</h2>
+## Question 4
 <p>À partir du code suivant, veuillez en extraire une classe supérieure qui sera héritée et deux interfaces :</p>
 
 ```java  {style=github}
@@ -370,7 +371,7 @@ public interface MoteurEssence {
 </div>
 </details>
 
-<h2>Question 5</h2>
+## Question 5
 <p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
 
 ```java  {style=github}
@@ -391,7 +392,7 @@ public class Classe1 {
 Il s'agit du polymorphisme ad hoc.
 </details>
 
-<h2>Question 6</h2>
+## Question 6
 <p>Dans le code ci-dessous, quel est le type de polymorphisme utilisé?</p>
 
 ```java  {style=github}
@@ -422,7 +423,7 @@ public class Classe2 extends Classe1 {
 Il s'agit du polymorphisme par héritage (ou d'héritage).
 </details>
 
-<h2>Question 7</h2>
+## Question 7
 
 <p>Considérons la classe Point suivante :</p>
 
@@ -486,7 +487,7 @@ public class Test2 {
 
 </details>
 
-<h2>Question 8</h2>
+## Question 8
 
 <p>On suppose qu’il existe une classe A dotée d’un constructeur
 par défaut.</p>
@@ -512,7 +513,7 @@ o=a;
 </details>
 
 
-<h2>Question 9</h2>
+## Question 9
 
 <p>On dispose d’une interface I mettant en œuvre plusieurs méthodes. Soit</p>
 

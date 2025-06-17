@@ -4,7 +4,7 @@ weight: 6
 ---
 
 
-## Exercices sur les algorithmes et problèmes
+# Exercices sur les algorithmes et problèmes
 
 La notion d'algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l'algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.
 
@@ -21,7 +21,7 @@ Comment procéder pour les exercices :
 
 Ces exercices sont obligatoires et ne doivent pas être survolés ou omis.
 
-Pour lire les formules mathématiques sur le site du cours, utilisez un navigateur compatible avec MathML, comme Firefox ou Safari.
+Pour lire les formules mathématiques sur le site du cours, utilisez un navigateur compatible avec MathML, comme Chrome, Edge, Firefox ou Safari.
 
 Ces exercices sont conçus pour l’autoévaluation ; ils ne sont pas corrigés. Nous répondons cependant à vos questions sur la matière.
 

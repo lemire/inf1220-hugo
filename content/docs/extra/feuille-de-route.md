@@ -7,7 +7,7 @@ weight: 5
 
 <p>Prévoyez environ 9 heures de travail pendant quinze semaines. Il n'est pas possible, pour la plupart des étudiants, de réussir ce cours en ne prenant qu'une poignée d'heures par semaine. </p>
 
-<p>Chaque étudiant a sa propre date de départ et date de fin de cours personnalisée. La date à laquelle l'étudiant doit passer son examen est déterminé par l'Université: celle-ci vous fera parvenir les détails en temps opportun. Le professeur ne peut pas changer vos dates de départ, de fin ou d'examen: vous devez joindre l'Université si vous souhaitez les modifier. </p>
+<p>Chaque étudiant a sa propre date de départ et date de fin de cours personnalisée. La date à laquelle l'étudiant doit passer son examen est déterminé par l'Université: celle-ci vous fera parvenir les détails en temps opportun. Vous devez joindre l'Université si vous souhaitez les modifier. </p>
 <p>Il n'y a pas de dates fixes pour la remise des travaux, mais il est recommandé de prévoir une semaine de travail pour la réalisation de chacun de ceux-ci et de les remettre selon l'ordre de présentation du cours. Tous les étudiants ne vont pas avancer au même rythme dans le cours. Nous vous suggérons cependant de remettre vos travaux notés lors de la semaine indiquée par le tableau suivant :</p>
 
 

@@ -37,7 +37,6 @@ try {
     //Code ...
 } catch (Exception e) {
     
-    // Vient imprimer l'erreur dans la console/terminal. Il est d'usage d'imprimer l'exception lorsque celle-ci est attrapée.
     e.printStackTrace();
 }
 
@@ -45,9 +44,7 @@ try {
     //Code ...
 } catch (Exception e) {
     
-    // Vient imprimer l'erreur dans la console/terminal. Il est d'usage d'imprimer l'exception lorsque celle-ci est attrapée.
     e.printStackTrace();
-    // Relance l'erreur à l'extérieur de la portée du try-catch. Peut-être utile dans certaines occcasions.
     throw e;
 }
 
@@ -55,9 +52,7 @@ try {
     //Code ...
 } catch (Exception e) {
     
-    // Vient imprimer l'erreur dans la console/terminal. Il est d'usage d'imprimer l'exception lorsque celle-ci est attrapée.
     e.printStackTrace();
-    // Permet d'arrêter l'exécution du programme par la JVM. Le paramètre 1 indique en général l'arrêt par une faute, alors que System.exit(0) est l'arrêt normal d'un programme.
     System.exit(1);
     
 }
@@ -66,7 +61,6 @@ try {
     //Code ...
 } catch (Exception e) {
     
-    // Vient imprimer l'erreur dans un journal nommé "Erreur.log".
     Logger.getLogger("Erreur.log").severe(e.getMessage());
 
 }

@@ -3,12 +3,12 @@ title: "Travail noté 3"
 weight: 8
 ---
 
-<h1>Travail noté 3 - Les structures de données, de contrôle et d'itération</h1>
+# Travail noté 3 - Les structures de données, de contrôle et d'itération
 
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
 
-<h2>Directives </h2>
+## Directives 
 <ul>
   <li>Les travaux notés testent en partie votre capacité à comprendre des énoncés logiques. Vous devez lire de manière attentive les consignes et les questions, et vous devez montrer que vous êtes capable de les interpréter et de faire preuve de raisonnement abstrait. En tant que programmeur Java, vous devez être capable de lire un énoncé et de le convertir en code Java sans nécessairement qu'on doive vous expliquer l'énoncé ou vous fournir des exemples. L'examen à la fin de ce cours peut contenir des questions qui comprennent un énoncé formel et logique que vous devez transcrire en code Java. </li>
   <li>On s'attend à ce que vous fassiez des recherches sur le Web afin de réaliser ce travail. La recherche sur le Web est une activité essentielle en développement logiciel.</li>
@@ -20,17 +20,18 @@ weight: 8
 <li>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</li>
 </ul>
 
-  <p>Si vous avez des questions sur le travail, vous pouvez communiquer avec <a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable</a>. Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
+  <p>Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
 
 
-<h2>Les reports de la date de fin de cours</h2>
+## Les reports de la date de fin de cours
 
 
-<p><strong>Rappel</strong>: le professeur ne peut pas modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les professeurs n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
+<p><strong>Rappel</strong>: L'enseignant ne peut modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les enseignants n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
 
 
 <p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
-<h1>Question #1</h1>
+
+## Question #1
 <p>Écrivez un programme Java qui calcule la somme des nombres de 1 jusqu'à 10,000 (incluant 1 et 10,000) mais en omettant les nombres qui sont divisibles par trois et en omettant aussi les nombres dont le chiffre de la centaine est 2 ou 3 (par exemple 1201 ou 3313). Expliquez votre solution. Un travail remis sans explications suffisantes peut se voir attribué la note de zéro, sans droit de reprise. Vous devez justifier tous les qualifiants utilisés (private, public, protected, static): vous ne pouvez pas utiliser le mot-clé « static » sans le justifier.</p>
 
 <p>Vous devez tester votre solution. Vous devez inclure la sortie (affichage) du code dans votre solution. Si remettez du code non-fonctionnel, vous pourrez recevoir la note de zéro!</p>
@@ -48,7 +49,7 @@ weight: 8
 
 <p>Pour faciliter la correction, assurez-vous qu'on puisse copier-coller votre code à partir du document PDF. N'utilisez pas des saisies d'écran.Si le code de votre solution n'est pas du Java valable, s'il ne compile pas, une note de zéro pourra être attribuée. Pour réussir ce cours, vous devez être capable d'écrire du code Java fonctionnel et correct.</p>
 
-<h1>Question #2</h1>
+## Question #2
 
 <p>Écrivez un programme Java qui affiche à l'écran toutes les chaînes de 4 caractères en ordre lexicographique (aussi appelé l'ordre du dictionnaire). Il doit afficher une chaîne de 4 caractères par ligne. Seuls les caractères a, b, c, d sont permis au sein des chaînes de caractères, mais vous pouvez réutiliser plus d'une fois un même caractère au sein d'une même chaîne. Au sein d'une même chaîne, le caractère 'b' doit toujours être immédiatement suivi du caractère 'a'. Une même chaîne ne peut comporter à la fois le caractère 'd' et le caractère 'a'. Votre programme doit se terminer en affichant à l'écran le nombre de chaînes de caractères affichées. Votre programme ne reçoit rien en entrée. Le code de votre programme ne doit pas comprendre les chaînes de caractères pré-calculées: il doit les générer lors de l'exécution. Votre programme ne devrait pas contenir plus de 200 courtes lignes de code.</p>
 
@@ -75,10 +76,10 @@ weight: 8
 </ol>
 
 
-<p> <strong> Attention</strong> : Il n'y aura pas « d'indices » ou « d'exemples » personnalisés fournis à quiconque par le professeur concernant cette question ou toute autre question notée. Il est inutile de nous écrire pour demander des indices, des exemples, des bouts de code, etc.</p>
+<p> <strong> Attention</strong> : Il n'y aura pas  d'indices  ou  d'exemples  personnalisés fournis à quiconque concernant cette question ou toute autre question notée. </p>
 
 
-<h1>Question-boni</h1>
+## Question-boni
 <p>Un point supplémentaire est octroyé aux étudiants qui réussissent cette question. Notez qu'il n'est pas possible d'avoir plus que 100% sur le travail noté. Elle est principalement destinée aux étudiants qui cherchent à relever un défi.</p>
 <p>Écrivez une classe Java qui génère aléatoirement <a href="https://fr.wikipedia.org/wiki/Sudoku">un tableau de Sudoku</a>. Vous pouvez utiliser la méthode <tt>Random.nextInt</tt> et votre tableau doit avoir le type <tt>int[][]</tt>. Votre tableau doit compter 9 rangées et 9 colonnes. Dans chaque colonne, chacun des chiffres de 1 à 9 doit apparaître (une seule fois). Dans chaque rangée, chacun des chiffres de 1 à 9 doit apparaître une seule fois. Expliquez votre solution. Pour les fins de ce travail, nous n’exigeons pas que  chaque sous-grille de 3×3 contienne tous les chiffres de 1 à 9.</p>
 

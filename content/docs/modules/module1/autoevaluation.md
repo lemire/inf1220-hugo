@@ -3,7 +3,10 @@ title: "Autoévaluation"
 weight: 3
 ---
 
+# Autoévaluation
 
+Avant de débuter le cours, il est important de faire le point sur votre préparation.
+Je vous invite donc à faire une autoévaluation.
 
 
 ## Connaissances technologiques

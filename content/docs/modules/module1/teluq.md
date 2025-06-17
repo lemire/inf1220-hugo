@@ -5,6 +5,14 @@ title: "Modèle du cours"
 weight: 1
 ---
 
+# Le modèle pédagogique du cours
+
+Le cours INF 1220 est autoportant. Cela signifie que vous êtes capable, de manière
+autonome, de réaliser toutes les activités du cours. Il est important de bien 
+comprendre ce modèle avant de débuter si vous n'êtes pas familier avec les cours
+en ligne de ce type.
+
+
 ## Le modèle de l’Université TÉLUQ
 
 Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.
@@ -49,7 +57,7 @@ Si ce n’est pas déjà fait, [prenez le temps de lire la description du cours 
 
 Nous vous rappelons que lorsque vous suivez un cours, vous devez lire les courriels de l’Université. L’information pertinente concernant le cours, votre inscription, etc. peut y être acheminée. Si vous ne prenez pas vos messages dans votre boîte courriel TÉLUQ, il peut vous manquer des informations importantes.
 
-Important: En commençant, prenez en note la date de fin de cours. Vous devez avoir remis les travaux d’ici cette date. Si vous avez besoin d’un report de la date de fin de cours, peut-être à cause d’empêchements médicaux ou familiaux, vous devez joindre l’Université (pas le professeur) pour établir votre situation et obtenir un report. Vous ne pouvez pas obtenir un report après la date de fin de cours. En aucun cas est-ce que le professeur peut modifier votre date de fin de cours.
+Important: En commençant, prenez en note la date de fin de cours. Vous devez avoir remis les travaux d’ici cette date. Si vous avez besoin d’un report de la date de fin de cours, peut-être à cause d’empêchements médicaux ou familiaux, vous devez joindre l’Université (pas le professeur) pour établir votre situation et obtenir un report. Vous ne pouvez pas obtenir un report après la date de fin de cours. En aucun cas est-ce que l'enseignant peut modifier votre date de fin de cours.
 
 Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu’on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n’est pas remis après votre date de fin de cours, même si vous n’avez pas encore passé l’examen.
 
@@ -87,24 +95,24 @@ Le cours INF 1220 n'est pas un cours facile.
 
 <p>Le cours INF 1220 a été développé en prenant pour acquis que vous avez fait les mathématiques avancées au secondaire et au collégial. Il fait partie d'un cursus en informatique de niveau universitaire. Si vous n'étiez pas « fort en math » au secondaire, il est possible que vous trouviez le cours trop difficile. Il est de votre responsabilité de faire une mise à niveau au besoin avant de débuter le cours INF 1220.</p>
 
-<h1>Navigateur web</h1>
+## Navigateur web
 
-<p>Vous pouvez suivre ce cours avec pratiquement n'importe quel navigateur web. Par contre, pour que les formules mathématiques s'affichent correctement, vous devez utiliser un navigateur supportant la norme MathML. Les navigateurs Firefox et Safari font bien l'affaire.</p>
+<p>Vous pouvez suivre ce cours avec pratiquement n'importe quel navigateur web. Par contre, pour que les formules mathématiques s'affichent correctement, vous devez utiliser un navigateur supportant la norme MathML. Les navigateurs Chrome, Edge, Firefox et Safari font bien l'affaire.</p>
 
-<p>Il y a peu de formules mathématiques dans ce cours, et il est donc parfaitement possible de travailler sans un support correct des formules mathématiques. Par contre, si vous avez besoin de bien suivre nos consignes et rappels mathématiques, vous devriez sans doute adopter, au moins temporairement, un des navigateurs supportant MathML (par ex., Firefox et Safari).</p>
+<p>Il y a peu de formules mathématiques dans ce cours, et il est donc parfaitement possible de travailler sans un support correct des formules mathématiques. Par contre, si vous avez besoin de bien suivre nos consignes et rappels mathématiques, vous devriez sans doute adopter, au moins temporairement, un des navigateurs supportant MathML (par ex., Chrome, Edge, Firefox et Safari).</p>
 
-<h1>Encadrement et suivi</h1>
+## Encadrement et suivi
 
 <p>Prenez connaissance de la documentation fournie par l'université. Vous y trouverez le nom et l'adresse courriel de la personne qui vous encadre. Après avoir fait les lectures, vous pouvez écrire vos questions à cette personne. Assurez-vous de respecter les consignes énoncées dans la présentation du cours : vous devez mettre « [INF1220] » dans l'objet du courriel et vous devez utiliser une adresse de courriel à votre nom afin que nous puissions vous identifier. Vos courriels devraient comprendre des questions précises, bien détaillées. Vous devriez commencer expliquer ce que vous avez fait, ce que vous comprenez. Il peut être utile de faire référence aux lectures que vous avez faites. N'oubliez pas que les lectures au sein du manuel sont obligatoires. Par exemple, si vous avez du mal avec une notion couverte par le manuel, vous devriez faire une référence à cette section. N'hésitez pas à joindre des saisies d'écran pour illustrer vos propos. Nous nous ferons un plaisir de répondre à vos questions par courriel, mais tel qu'expliqué dans la présentation du cours, nous n’offrons pas d’enseignement par vidéoconférence au sein du cours INF 1220. </p>
 
 
-<h1>Réseaux sociaux</h1>
+## Réseaux sociaux
 
 <p>Attention: Il est strictement défendu de demander des  indices aux autres étudiants du cours concernant les travaux
 notés et l'examen. Il est aussi défendu de donner des indices concernant les travaux notés.</p>
 
 
-<h1>Plagiat</h1>
+## Plagiat
 
 
 <p> Nous mettons bien entendu à jour les travaux notés et les examens.  Dans le cas des travaux notés, vous pouvez toujours remettre la version que vous avez débutée sans pénalité dans le cas où les travaux sont mis à jour pendant votre travail. Par contre, soyez avisé que nous portons une attention particulière au plagiat. Si votre travail ressemble trop à un autre travail remis, nous pourrons alors procéder à un examen oral, pour vérifier si vous avez effectivement fait le travail par vous-même. Dans le cas des examens, nous tentons de les offrir en présence avec surveillance. Quand ce n'est pas possible, nous varions autant que possible le contenu des examens et nous utilisons d'autres mesures à notre disposition pour contrer le plagiat.</p>

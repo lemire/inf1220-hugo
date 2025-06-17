@@ -6,7 +6,7 @@ weight: 3
 
 
 
-<h1>Amélioration continue du cours</h1>
+# Amélioration continue du cours
 
 
 <p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 

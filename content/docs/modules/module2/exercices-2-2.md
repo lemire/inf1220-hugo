@@ -9,7 +9,7 @@ weight: 6
 
 <p>Certains étudiants aiment utiliser une <a href="https://cheatography.com/sschaub/cheat-sheets/java-fundamentals/">Java Fundamentals Cheat Sheet</a> (anglais) pour garder à l'esprit la syntaxe.</p>
 
-# Comment faire ces exercices ?
+## Comment faire ces exercices ?
 
 <p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. </p>
 
@@ -19,7 +19,8 @@ weight: 6
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
 
 
-<h2>Question 1</h2>
+## Question 1
+
 <p>Proposez une classe Etudiant dont le constructeur prend en paramètre un identifiant (sous la forme d'un entier) et qui comprend une méthode monIdentifiant retournant l'identifiant en question.</p>
 <details><summary>Réponse</summary>
 
@@ -39,7 +40,8 @@ public class Etudiant {
 </details>
 
 
-<h2>Question 2</h2>
+## Question 2
+
 <p>Combien de constructeurs est-ce qu'une classe peut avoir en Java?</p>
 <details><summary>Réponse</summary><p>
 Une classe Java peut avoir autant de constructeurs qu'on le souhaite.
@@ -48,7 +50,8 @@ Une classe Java peut avoir autant de constructeurs qu'on le souhaite.
 
 
 
-<h2>Question 3</h2>
+## Question 3
+
 <p>Soit la classe suivante:</p>
 
 ```java  {style=github}
@@ -75,7 +78,8 @@ public class Patate {
 
 
 
-<h2>Question 4</h2>
+## Question 4
+
 <p>Écrivez une classe nommée Somme comprenant une méthode nommée additionne qui additionne deux nombres et retourne le résultat.</p>
 <details><summary>Réponse</summary><pre><code class="language-java">public class Somme {
   public int additionne(int a, int b) {
@@ -85,7 +89,8 @@ public class Patate {
 </code></pre></details>
 
 
-<h2>Question 5</h2>
+## Question 5
+
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 2.</p>
 
 ```java  {style=github}
@@ -107,7 +112,8 @@ Ainsi donc, la méthode <tt>ajoute</tt> ne sert effectivement à rien.</div></de
 
 
 
-<h2>Question 6</h2>
+## Question 6
+
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 3.</p>
 
 ```java  {style=github}
@@ -130,7 +136,8 @@ public class Variable {
 <details><summary>Réponse</summary><div>Cette fois-ci, la méthode ajoute reçoit un type qui n'est pas un type primitif (Variable) et va donc le recevoir par référence. C'est-à-dire que la variable 'x' n'est pas copiée. Quand la méthode ajoute modifie un attribut de la variable 'x', cette modification est visible hors de la fonction ajoute.</div></details>
 
 
-<h2>Question 7</h2>
+## Question 7
+
 <p>Écrivez une classe Puissance qui comprend une méthode nommée deux qui prend un entier et retourne l'entier mis au carré.</p>
 
 
@@ -144,7 +151,8 @@ public class Variable {
 
 
 
-<h2>Question 8</h2>
+## Question 8
+
 <p>Expliquez pourquoi la méthode donne de cette classe va toujours retourner la valeur 2.</p>
 
 ```java  {style=github}
@@ -169,7 +177,7 @@ public class Variable {
 
 
 
-<h2>Question 9</h2>
+## Question 9
 
 <p>Pourquoi le bout de code suivant va générer une erreur à la compilation ?</p>
 
@@ -190,7 +198,7 @@ méthode statique test() tente de le faire avec le champ non statique x.</p>
 
 
 
-<h2>Question 10</h2>
+## Question 10
 
 
 <p>On admet que la classe A existe.</p>
@@ -208,7 +216,7 @@ constructeurs sont des constructeurs avec un argument.</p>
 
 
 
-<h2>Question 11</h2>
+## Question 11
 
 <p>Est-ce qu'une méthode peut être à la fois <tt>static</tt> et <tt>private</tt> en java?</p>
 <details><summary>Réponse</summary>
@@ -229,7 +237,7 @@ class Main {
 
 
 
-<h2>Question 12</h2>
+## Question 12
 
 <p>Quelle est la visibilité des attributs au sein de cette classe :</p>
 
@@ -247,7 +255,7 @@ public class Joe {
 </details>
 
 
-<h2>Question 13</h2>
+## Question 13
 
 <p>Écrivez une classe représentant une valeur entière à laquelle je peux ajouter la valeur trois par l'entremise d'une méthode « public » nommée « patate ». La méthode doit retourner la valeur entière modifiée. Le constructeur doit me permettre d'initialiser la valeur entière. La classe doit n'avoir que des attributs «&nbsp;private&nbsp;».</p>
 
@@ -269,7 +277,7 @@ public class Entier {
 </details>
 
 
-<h2>Question 14</h2>
+## Question 14
 
 <p>Écrivez une classe représentant une valeur entière. Cette classe doit n'avoir qu'une seule méthode appelée « additionne » qui prend comme paramètre une instance de la classe et qui retourne une nouvelle instance de la classe. L'instance retournée doit comprendre la somme des deux valeurs entières.</p>
 
@@ -288,7 +296,7 @@ public class Entier {
 ```
 
 </details>
-<h2>Allez plus loin?</h2>
+## Allez plus loin?
 
 
 <p>Plusieurs étudiants apprécient la plateforme <a href="https://www.jetbrains.com/academy/">Jetbrains Academy</a> pour aller plus loin et se pratiquer (en anglais seulement). Bien que Jetbrains Academy soit un service commercial, ils offrent une période d'essai sans frais. C'est sans aucune doute un excellent complément à notre cours.</p>

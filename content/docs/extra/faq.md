@@ -25,7 +25,7 @@ Réponse: Une variable stocke des données, comme des nombres ou du texte. Pour 
 
 ### Question: Comment afficher du texte dans la console en Java ?
 
-Réponse: Utilisez la méthode `System.out.println()` pour afficher du texte dans la console. Par exemple, `System.out.println("Bonjour le monde !");` affiche "Bonjour le monde !" suivi d'un saut de ligne.
+Réponse: Utilisez la méthode `System.out.println()` pour afficher du texte dans la console. Par exemple, `System.out.println("Bonjour le monde !");` affiche "Bonjour le monde&nbsp;!" suivi d'un saut de ligne.
 
 ### Question: Qu'est-ce qu'une boucle en Java et à quoi sert-elle ?
 
@@ -61,7 +61,7 @@ Réponse: Oui, vous devez expliquer vos solutions.
 
 ### Question: J'ai terminé l'examen et je suis déçu de ma note. Est-ce que je peux avoir une explication de mon résultat ?
 
-Réponse: Oui, suivez les consignes fournies par l'Université. Le professeur ne va pas transmettre la correction, vous devez passer par les moyens sécurisés de l'Université.
+Réponse: Oui, suivez les consignes fournies par l'Université. Vous devez passer par les moyens sécurisés de l'Université.
 
 ### Question: Ma date de fin de cours était hier, et aujourd'hui, je n'arrive pas à déposer mon travail noté. Est-ce que je peux le transmettre par courriel ?
 
@@ -81,11 +81,11 @@ Réponse: Dans ce cas, vous n'êtes pas reconnu comme étant inscrit au cours. V
 
 ### Question: J'ai besoin de plus de temps que prévu pour terminer le cours, on m'a dit que le professeur pouvait m'arranger ?
 
-Réponse: Non. La date de fin de cours ainsi que le moment où votre dossier est fermé sont déterminés par l'Université et non pas par le professeur.
+Réponse: Non. La date de fin de cours ainsi que le moment où votre dossier est fermé sont déterminés par l'Université.
 
 ### Question: J'ai été très malade et j'ai pris du retard, est-ce que vous pouvez me donner plus de temps ?
 
-Réponse: Non. La date de fin de cours ainsi que le moment où votre dossier est fermé sont déterminés par l'Université et non pas par le professeur.
+Réponse: Non. La date de fin de cours ainsi que le moment où votre dossier est fermé sont déterminés par l'Université.
 
 ### Question: Combien de temps faut-il investir dans ce cours ?
 
@@ -93,15 +93,15 @@ Réponse: Le temps nécessaire dépend de votre préparation individuelle, mais 
 
 ### Question: J'ai eu des difficultés personnelles, j'ai manqué de temps, est-ce que le professeur peut modifier ma date de fin de cours ?
 
-Réponse: Non. Le professeur ne peut modifier votre date de fin de cours. Si vous devez reporter votre date de fin de cours, vous devez joindre l'Université.
+Réponse: Non. Si vous devez reporter votre date de fin de cours, vous devez joindre l'Université.
 
 ### Question: J'ai du mal avec une question dans un des travaux, est-ce que je peux avoir un indice, une partie de la solution ?
 
-Réponse: Non. Le professeur se fera un plaisir de répondre aux questions ayant trait à la matière, mais les travaux notés sont des travaux individuels. Assurez-vous de bien compléter les exercices et les lectures avant d'entreprendre les travaux notés.
+Réponse: Non. Les travaux notés sont des travaux individuels. Assurez-vous de bien compléter les exercices et les lectures avant d'entreprendre les travaux notés.
 
 ### Question: Je dois passer l'examen le X, mais j'ai un empêchement, est-ce que vous pouvez déplacer l'examen ?
 
-Réponse: Non. Le professeur ne gère pas le déroulement de l'examen. Vous devez joindre l'Université.
+Réponse: Vous devez joindre l'Université.
 
 ### Question: Je viens de passer 35 heures sur la question X du travail noté Y, est-ce que vous pouvez me donner un indice ?
 

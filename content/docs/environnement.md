@@ -4,7 +4,7 @@ weight: 2
 ---
 
 
-## Programmation Java en ligne
+# Programmation Java en ligne
 
 Pour commencer à programmer dans cet environnement Java en ligne, familiarisez-vous avec son interface intuitive. La page principale affiche une zone où vous pouvez ajouter des fichiers Java ou texte. Cliquez sur « Ajouter un fichier Java » pour créer un fichier avec l'extension .java, ou « Ajouter un fichier texte » pour un fichier .txt. Chaque fichier apparaît dans une boîte avec un champ pour le nom et un éditeur de texte. Pour les fichiers Java, l'éditeur CodeMirror offre une coloration syntaxique et des numéros de ligne, facilitant la lecture et l'écriture du code. Vous pouvez aussi sélectionner des exemples prédéfinis (comme « Bonjour le monde » ou « Fibonacci ») via le menu déroulant « Exemples » pour charger automatiquement des fichiers modèles. Une fois vos fichiers prêts, cliquez sur « Exécuter » pour compiler et exécuter le code.
 
