@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://lemire.github.io/inf1220-hugo/'
 languageCode = 'fr'
 defaultContentLanguage = 'fr'
 
@@ -10,7 +10,7 @@ theme = 'hugo-book'
 BookMenuBundle = "book"
 BookToC = true
 BookSearch = true
-javaRunnerEndpoint = "http://localhost:5123/run"
+javaRunnerEndpoint = "https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"
 math = true
 
 [markup]
