@@ -150,13 +150,20 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           txt_files.push({ name: nameInput.value, content });
         }
       });
-      document.getElementById('result').textContent = 'Exécution en cours...';
+      let resultDiv = document.getElementById('result');
+      resultDiv.textContent = 'Exécution en cours';
+      let dots = 0;
+      let execAnim = setInterval(function() {
+        dots = (dots + 1) % 4;
+        resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+      }, 500);
       const resp = await fetch('{{<endpoint>}}', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ java_files, txt_files })
       });
       let resultText = await resp.text();
+      clearInterval(execAnim);
       let displayDiv = document.getElementById('result');
       try {
         const resultJson = JSON.parse(resultText);
@@ -247,6 +254,7 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           displayDiv.textContent = JSON.stringify(resultJson, null, 2);
         }
       } catch (e) {
+        clearInterval(execAnim);
         displayDiv.textContent = resultText;
       }
     };
