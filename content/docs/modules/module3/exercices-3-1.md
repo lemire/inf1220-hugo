@@ -710,3 +710,35 @@ public class Liste {
 </div>
 </details>
 
+## Question 21
+
+<p>Écrivez un programme Java qui trie le tableau de chaînes de caractères suivant : {"Pomme", "banane", "Cerise", "abricot", "Datte"}, en ignorant la casse (par exemple, "Pomme" et "pomme" doivent être traités de manière identique). Utilisez la méthode Arrays.sort avec une expression lambda pour effectuer un tri alphabétique insensible à la casse.</p>
+
+<p>Une expression lambda est une fonctionnalité introduite dans Java 8 qui permet d'écrire du code plus concis pour représenter des fonctions anonymes. Elle est particulièrement utile lorsqu'une méthode attend une interface fonctionnelle (une interface avec une seule méthode abstraite). Dans le contexte du tri avec Arrays.sort, la lambda remplace une implémentation explicite d'un Comparator.Une lambda a la forme générale suivante : (paramètres) -> expression
+La lambda (s1, s2) -> s1.compareToIgnoreCase(s2) signifie : s1 et s2 sont deux chaînes de caractères à comparer, la méthode compareToIgnoreCase est appelée pour déterminer l'ordre alphabétique sans tenir compte de la casse, le résultat de cette comparaison est retourné directement.</p>
+
+<details><summary>Réponse</summary>
+<div>
+
+{{<inlineJava path="TriChainesSansCasse.java" lang="java" >}}
+import java.util.Arrays;
+
+public class TriChainesSansCasse {
+    public static void main(String[] args) {
+        String[] tableau = {"Pomme", "banane", "Cerise", "abricot", "Datte"};
+
+        // Tri du tableau en ignorant la casse avec une lambda
+        Arrays.sort(tableau, (s1, s2) -> s1.compareToIgnoreCase(s2));
+
+        // Affichage du tableau trié
+        System.out.println("Tableau trié :");
+        for (String s : tableau) {
+            System.out.println(s);
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+</div>
+</details>

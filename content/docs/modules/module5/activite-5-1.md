@@ -1,11 +1,12 @@
-
 ---
 title: "L'héritage, les classes abstraites et les interfaces"
 weight: 1
 ---
 
 
-# Java pas à pas
+# L'héritage, les classes abstraites et les interfaces
+
+## Java pas à pas
 
 <p>Nous vous invitons maintenant à lire le chapitre <em>Traitement de fichiers</em> du manuel Java pas à pas par Robert Godin et Daniel Lemire. Vous trouverez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF</a>.  </p>
 
@@ -18,7 +19,6 @@ weight: 1
 <p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
 
 
-# L'héritage, les classes abstraites et les interfaces
 
 
 
@@ -26,7 +26,7 @@ weight: 1
 
 <p><a id="intro" name="section1"></a></p>
 
-<h1>Classe - superclasse - sous-classe</h1> 
+## Classe - superclasse - sous-classe
 <p align="left" style="text-align: justify;">Pour illustrer ce concept, essayons de concevoir un jeu. Tous les jeux ont un nom, un but, un nombre de joueurs requis pour faire une partie, des règles à respecter… Nous pourrions donc envisager de créer une classe Jeu pour représenter les jeux. <br />Toutefois, les règles du jeu Tetris diffèrent de celles de Sudoku, et le nombre de joueurs d'une partie de football n'est pas le même que celui d'une partie de tennis… <br />Supposons que nous implantions une méthode jouer() pour la classe Jeu. Un joueur de tennis ne joue pas de la même façon qu'un joueur de football. Il est par conséquent impossible d'obtenir une implémentation de jouer() qui peut correspondre à tous les jeux.</p> 
 <p align="left" style="text-align: justify;">L'héritage est un mécanisme qui permet de résoudre ce genre de problème. En fait, nous spécifions dans la classe Jeu, appelée superclasse, l'ensemble des comportements communs à tous les jeux sans fournir une implémentation. Nous créons ensuite des sous-classes qui fournissent pour chaque jeu une implémentation appropriée. D'une manière générale, le format de déclaration d'une sous-classe est le suivant :</p> 
 
@@ -126,7 +126,7 @@ public class FastDynamicTimeWarping extends AnalyseSerieTemporelle {
 <p>Nous verrons un peu plus loin une meilleure implémentation de cet exemple avec l'utilisation des classes abstraites.</p>
 
 <p><a id="intro" name="section2"></a></p>
-<h1>Surcharge des méthodes</h1> 
+## Surcharge des méthodes
 <p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui est <em>public</em>, cette méthode sera dite <em>surchargée</em>. Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe.</p> 
 <p style="text-align: justify;">Supposons que nous définissons notre classe Jeu, qui possède une méthode jouer. La superclasse qui représente tous les jeux possibles peut être définie de la manière suivante :</p> 
 
@@ -164,7 +164,7 @@ public class Sudoku extends Jeu {
     <div style="text-align: justify;">La méthode de la sous-classe doit avoir la même signature que celle de la superclasse, c'est-à-dire le même nom et les mêmes types de paramètres. </div> 
   </li> 
 </ul> 
-<h2 style="text-align: justify;">Protection des membres</h2> 
+### Protection des membres
 <p align="left" style="text-align: justify;">Nous connaissons déjà les mots clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
 <p align="left" style="text-align: justify;">Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant :</p> 
 
@@ -191,7 +191,8 @@ public class Sudoku extends Jeu {
 <p style="text-align: justify;">Dans l'exemple ci-dessus, les méthodes <em>getnomdujeu</em> et <em>setnomdujeu</em> sont déclarées <em>protected</em> et donc visibles </p> 
 <p style="text-align: justify;">à la sous-classe SUDOKU. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
 <p style="text-align: justify;"> </p> 
-<h2 style="text-align: justify;">Utilisation des mots clés <em>this</em> et <em>super</em> dans une sous-classe</h2> 
+
+## Utilisation des mots clés this et super dans une sous-classe
 <p style="text-align: justify;">Nous avons déjà vu dans les leçons précédentes que le mot clé <em>this</em> sert à nous référer à une instance courante de l'objet comme dans l'exemple ci-dessous.</p> 
 
 ```java  {style=github}
@@ -228,7 +229,8 @@ public class Sudoku extends Jeu {
 <p>je joue au SUDOKU :</p> 
 <p>Niveau expert</p> 
 <p>Ainsi, avec le mot clé <em>super</em>, nous appelons la méthode choixdejeu de la classe de base. Nous pouvons aussi utiliser ce mot clé dans un constructeur.</p> 
-<h2 style="text-align: justify;">Constructeur d'une classe héritée</h2> 
+
+## Constructeur d'une classe héritée
 <p><br />Le constructeur de la classe dérivée (ou héritée) fait appel au constructeur de la superclasse au moment de la création d'un objet. (Le SUDOKU est avant tout un jeu.) Cet appel au constructeur de la superclasse peut être implicite ou explicite. Dans ce dernier cas, le constructeur de la classe héritée exécutera la première instruction.</p> 
 
 ```java  {style=github}
@@ -255,11 +257,12 @@ public class Sudoku extends Jeu {
 <p>Cet exemple montre comment appeler le constructeur de la superclasse.</p>
 
 <p><a id="intro" name="section2"></a></p>
-<h1>Classes abstraites</h1>
- 
+
+## Classes abstraites
 <p>Les classes Abstraites permettent de créer des concepts de haut-niveau, ne pouvant être instanciés et rendant obligatoire la conception de sous-classes pour leur utilisation. Les classes abstraites sont donc souvent utilisées dans des API ou autres bibliothèques de code.  Afin de rendre possible la redéfinition de méthode par héritage, les méthodes d'une superclasse doivent être déclarées avec le modificateur <em>abstract</em>. Ainsi, une classe abstraite est une classe qui contient des méthodes abstraites. L'intérêt de ceci est de rendre la classe « héritable ». <br />La sous-classe peut implémenter ou non les méthodes abstraites héritées. Si elles ne les implémentent pas, elle est elle-même une classe abstraite. <br />Une sous-classe dérivant d'une classe non abstraite peut définir des nouvelles méthodes abstraites, et par le fait même, devenir à leur tour abstraite.</p> 
 <p>Remarque : Nous ne pouvons instancier des objets d'une classe abstraite. Ce sont des classes qui sont destinées à subir le processus d'héritage.</p> 
-<h2>Utilisation du modificateur <em>final</em></h2> 
+
+## Utilisation du modificateur final
 <p>Il arrive que nous ne souhaitions pas offrir une possibilité d'héritage à une certaine classe. Dans ce cas, nous la définissons avec le mot clé <em>final</em>. <br />Si le mot clé <em>final</em> est utilisé dans la définition d'une méthode, celle-ci ne pourra plus être redéfinie par héritage. <br />Enfin, nous définissons une constante en écrivant <em>final</em> dans la déclaration de la variable.<br/> Voici un exemple d'utilisation d'une classe abstraite. Ici, la méthode analyse est abstraite et oblige donc les sous-classes à implémenter celle-ci :</p> 
 
 ```java  {style=github}
@@ -292,7 +295,8 @@ public class FastDynamicTimeWarping extends AlgorithmeIA {
 ```
 
 <p><a id="intro" name="section3"></a></p>
-<h1>Les interfaces</h1>
+
+## Les interfaces
 
 <p>Dans certains langages, l'héritage multiple (quand une classe hérite de plusieurs autres classes) peut amener à des problèmes d'exécution ou de compilation sérieux. Ce problème est bien connu dans le langage C++, avec le problème du diamant.</p>
 
@@ -349,7 +353,8 @@ public class Button extends Rectangle implements Clickable {
 ```
 
 <p><a id="intro" name="section4"></a></p>
-<h1>Protection des données héritées</h1> 
+
+## Protection des données héritées
 <p>Les trois modificateurs de portée qui réalisent l'encapsulation jouent simultanément un rôle dans la protection des données.</p> 
 
 
@@ -362,7 +367,97 @@ public class Button extends Rectangle implements Clickable {
 |              | Lorsqu'un membre de la classe n'est précédé d'aucun modificateur, il est accessible à toutes les classes du même package que la classe qui le définit. |
 
 
-<h2>Lecture dans le livre de référence</h2>
+## Classes scellées
+
+
+Les classes scellées permettent de contrôler précisément quelles classes peuvent étendre une classe ou implémenter une interface. Voici deux exemples concrets pour illustrer leur utilisation.
+
+### Exemple 1 : hiérarchie de formes géométriques
+
+Dans cet exemple, une classe abstraite Forme est scellée et ne peut être étendue que par Cercle, Rectangle et Triangle.
+
+```java  {style=github}
+public abstract sealed class Forme permits Cercle, Rectangle, Triangle {
+    public abstract double calculerAire();
+}
+
+public final class Cercle extends Forme {
+    private final double rayon;
+
+    public Cercle(double rayon) {
+        this.rayon = rayon;
+    }
+
+    @Override
+    public double calculerAire() {
+        return Math.PI * rayon * rayon;
+    }
+}
+
+public final class Rectangle extends Forme {
+    private final double longueur;
+    private final double largeur;
+
+    public Rectangle(double longueur, double largeur) {
+        this.longueur = longueur;
+        this.largeur = largeur;
+    }
+
+    @Override
+    public double calculerAire() {
+        return longueur * largeur;
+    }
+}
+
+public non-sealed class Triangle extends Forme {
+    private final double base;
+    private final double hauteur;
+
+    public Triangle(double base, double hauteur) {
+        this.base = base;
+        this.hauteur = hauteur;
+    }
+
+    @Override
+    public double calculerAire() {
+        return (base * hauteur) / 2;
+    }
+}
+```
+
+### Exemple 2 : interface scellée pour types de véhicules
+
+```java  {style=github}
+public sealed interface Vehicule permits Voiture, Moto {
+    String getType();
+}
+
+public final class Voiture implements Vehicule {
+    @Override
+    public String getType() {
+        return "Voiture";
+    }
+}
+
+public final class Moto implements Vehicule {
+    @Override
+    public String getType() {
+        return "Moto";
+    }
+}
+
+public class TestVehicule {
+    public static void main(String[] args) {
+        Vehicule voiture = new Voiture();
+        Vehicule moto = new Moto();
+        System.out.println(voiture.getType()); // Affiche : Voiture
+        System.out.println(moto.getType());   // Affiche : Moto
+    }
+}
+```
+
+
+## Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8:</p>
 <ul>
@@ -373,7 +468,7 @@ public class Button extends Rectangle implements Clickable {
 	<li>Section 12 : Les interfaces</li>
 </ul>
 
-<h2>Vidéos</h2>
+## Vidéos
 
 
 

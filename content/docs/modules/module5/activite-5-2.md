@@ -10,7 +10,7 @@ weight: 2
 
 <p><a id="intro" name="section1"></a></p>
 
-<h1>Le polymorphisme ad hoc</h1>
+## Le polymorphisme ad hoc
 
 <p>Le polymorphisme ad hoc est une technique de programmation OO où plusieurs méthodes avec le même nom sont créées, mais possède des paramètres de méthode différents. Nous avons vu le polymorphisme ad hoc dans le cadre du module 2 sous un autre nom: surdéfinition des méthodes. La signature de la méthode est donc différente pour chacune d'elle. Ainsi, c'est la JVM à l'exécution du code qui redirige l'appel vers la bonne méthode de l'objet selon les types ou les objets passés en paramètres. Ce type de polymorphisme, appelé régulièrement polymorphisme overloading, est utile pour concevoir plusieurs mises en oeuvre d'un même algorithme avec des entrées de données de différents types. Par exemple, des méthodes "calculMoyenne" qui pourrait prendre un tableau d'entier ou bien un tableau de double en entrée. Dans d'autres langages que le Java tels que le C++, ce type de polymorphisme est utilisé pour construire des opérateurs pour une classe particulière. Par exemple, redéfinir l'opérateur égal (==) pour comparer deux cercles. Voici un exemple de polymorphisme ad hoc et son utilisation en Java:</p>
 
@@ -62,7 +62,7 @@ public class MixageCouleur {
 
 <p><a id="intro" name="section2"></a></p>
 
-<h1>Le polymorphisme par héritage</h1>
+## Le polymorphisme par héritage
 
 <p>Le polymorphisme par héritage est en fait la surcharge de méthode (overriding) que nous avons vu précédemment. Il s'agit donc de re-implémenter une méthode qui a été déclarée dans une classe héritée. Elle peut se faire avec des classes abstraites ou non. Voici un exemple de polymorphisme par héritage :</p>
 
@@ -255,7 +255,7 @@ public class OvalePointille extends CerclePointille {
 
 <p><a id="intro" name="section3"></a></p>
 
-<h1>Le polymorphisme paramétrique ou les génériques (templates)</h1>
+## Le polymorphisme paramétrique ou les génériques (templates)
 
 <p>Le dernier type de polymorphisme abordé est celui paramétrique. En Java, ce type de paramétrique est en fait l'utilisation de génériques passées en paramètre à des fonctions. Pour ce faire, il est nécessaire d'utiliser la mécanique des templates. Les templates en Java permettent de construire des méthodes ou des classes avec des paramètres indéfinis à la conception et qui sont résolu à l'exécution. Par exemple, nous avons vu au début du cours les structures de type ArrayList. Celle-ci utilise les templates en ne définissant pas dès l'implémentation la classe d'objet pouvant être contenu dans la structure, celle-ci est résolu à l'exécution. Ainsi, il est possible de créer une ArrayList ainsi : ArrayList<String> ou bien ArrayList<Double> ou enfin ArrayList<MaClasse>. Les templates/génériques peuvent être utilisés dans la conception des classes ou bien dans la conception des méthodes (paramètres reçus ou retournés). La forme générale pour l'utilisation d'un générique dans une méthode est la suivante :</p>
 
@@ -400,7 +400,96 @@ public class Chainon<T> {
 
 <p>Dans un tel cas, Java peut émettre un avertissement à la compilation.</p>
 
-<h2>Lecture dans le livre de référence</h2>
+## Classes scellées
+
+
+Les classes scellées permettent de contrôler précisément quelles classes peuvent étendre une classe ou implémenter une interface. Voici deux exemples concrets pour illustrer leur utilisation.
+
+### Exemple 1 : hiérarchie de formes géométriques
+
+Dans cet exemple, une classe abstraite Forme est scellée et ne peut être étendue que par Cercle, Rectangle et Triangle.
+
+```java  {style=github}
+public abstract sealed class Forme permits Cercle, Rectangle, Triangle {
+    public abstract double calculerAire();
+}
+
+public final class Cercle extends Forme {
+    private final double rayon;
+
+    public Cercle(double rayon) {
+        this.rayon = rayon;
+    }
+
+    @Override
+    public double calculerAire() {
+        return Math.PI * rayon * rayon;
+    }
+}
+
+public final class Rectangle extends Forme {
+    private final double longueur;
+    private final double largeur;
+
+    public Rectangle(double longueur, double largeur) {
+        this.longueur = longueur;
+        this.largeur = largeur;
+    }
+
+    @Override
+    public double calculerAire() {
+        return longueur * largeur;
+    }
+}
+
+public non-sealed class Triangle extends Forme {
+    private final double base;
+    private final double hauteur;
+
+    public Triangle(double base, double hauteur) {
+        this.base = base;
+        this.hauteur = hauteur;
+    }
+
+    @Override
+    public double calculerAire() {
+        return (base * hauteur) / 2;
+    }
+}
+```
+
+### Exemple 2 : interface scellée pour types de véhicules
+
+```java  {style=github}
+public sealed interface Vehicule permits Voiture, Moto {
+    String getType();
+}
+
+public final class Voiture implements Vehicule {
+    @Override
+    public String getType() {
+        return "Voiture";
+    }
+}
+
+public final class Moto implements Vehicule {
+    @Override
+    public String getType() {
+        return "Moto";
+    }
+}
+
+public class TestVehicule {
+    public static void main(String[] args) {
+        Vehicule voiture = new Voiture();
+        Vehicule moto = new Moto();
+        System.out.println(voiture.getType()); // Affiche : Voiture
+        System.out.println(moto.getType());   // Affiche : Moto
+    }
+}
+```
+
+## Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8 et 21:</p>
 <ul>
@@ -411,7 +500,7 @@ public class Chainon<T> {
 	<li>Chapitre 21 - Section 5 : Héritage et programmation générique</li>
 </ul>
 
-<h2>Vidéos</h2>
+## Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CPxrEntMxsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
