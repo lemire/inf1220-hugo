@@ -52,9 +52,15 @@ Faisons-en rapidement le tour.&lt;/p>
  Le concept de récursivité
  &lt;a class="anchor" href="#le-concept-de-r%c3%a9cursivit%c3%a9">#&lt;/a>
 &lt;/h2>
-&lt;p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1>Travail noté 3 - Les structures de données, de contrôle et d'itération&lt;/h1>
+&lt;p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1 id="travail-noté-3---les-structures-de-données-de-contrôle-et-ditération">
+ Travail noté 3 - Les structures de données, de contrôle et d&amp;rsquo;itération
+ &lt;a class="anchor" href="#travail-not%c3%a9-3---les-structures-de-donn%c3%a9es-de-contr%c3%b4le-et-dit%c3%a9ration">#&lt;/a>
+&lt;/h1>
 &lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
-&lt;h2>Directives &lt;/h2>
+&lt;h2 id="directives">
+ Directives
+ &lt;a class="anchor" href="#directives">#&lt;/a>
+&lt;/h2>
 &lt;ul>
  &lt;li>Les travaux notés testent en partie votre capacité à comprendre des énoncés logiques. Vous devez lire de manière attentive les consignes et les questions, et vous devez montrer que vous êtes capable de les interpréter et de faire preuve de raisonnement abstrait. En tant que programmeur Java, vous devez être capable de lire un énoncé et de le convertir en code Java sans nécessairement qu'on doive vous expliquer l'énoncé ou vous fournir des exemples. L'examen à la fin de ce cours peut contenir des questions qui comprennent un énoncé formel et logique que vous devez transcrire en code Java. &lt;/li>
  &lt;li>On s'attend à ce que vous fassiez des recherches sur le Web afin de réaliser ce travail. La recherche sur le Web est une activité essentielle en développement logiciel.&lt;/li>
@@ -65,4 +71,4 @@ Faisons-en rapidement le tour.&lt;/p>
 &lt;li>Le niveau de difficulté et l'ampleur des travaux est comparable aux autres cours d'introduction à la programmation offert au sein des universités québécoises.&lt;/li>
 &lt;li>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.&lt;/li>
 &lt;/ul>
- &lt;p>Si vous avez des questions sur le travail, vous pouvez communiquer avec &lt;a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable&lt;/a>. Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).&lt;/p></description></item></channel></rss>
+ &lt;p>Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).&lt;/p></description></item></channel></rss>

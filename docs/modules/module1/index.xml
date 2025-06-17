@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 1: Algorithme et pseudocode on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/</link><description>Recent content in Module 1: Algorithme et pseudocode on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module1/index.xml" rel="self" type="application/rss+xml"/><item><title>Modèle du cours</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</guid><description>&lt;h2 id="le-modèle-de-luniversité-téluq">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 1: Algorithme et pseudocode on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/</link><description>Recent content in Module 1: Algorithme et pseudocode on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module1/index.xml" rel="self" type="application/rss+xml"/><item><title>Modèle du cours</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</guid><description>&lt;h1 id="le-modèle-pédagogique-du-cours">
+ Le modèle pédagogique du cours
+ &lt;a class="anchor" href="#le-mod%c3%a8le-p%c3%a9dagogique-du-cours">#&lt;/a>
+&lt;/h1>
+&lt;p>Le cours INF 1220 est autoportant. Cela signifie que vous êtes capable, de manière
+autonome, de réaliser toutes les activités du cours. Il est important de bien
+comprendre ce modèle avant de débuter si vous n&amp;rsquo;êtes pas familier avec les cours
+en ligne de ce type.&lt;/p>
+&lt;h2 id="le-modèle-de-luniversité-téluq">
  Le modèle de l’Université TÉLUQ
  &lt;a class="anchor" href="#le-mod%c3%a8le-de-luniversit%c3%a9-t%c3%a9luq">#&lt;/a>
 &lt;/h2>
@@ -6,7 +14,13 @@
  Robot conversationnel et intelligence artificielle
  &lt;a class="anchor" href="#robot-conversationnel-et-intelligence-artificielle">#&lt;/a>
 &lt;/h1>
-&lt;p>L&amp;rsquo;intelligence artificielle (IA) transforme profondément le domaine de la programmation, redéfinissant la manière dont les développeurs conçoivent, écrivent et maintiennent le code. Les outils basés sur l&amp;rsquo;IA, comme les assistants de codage (par exemple, GitHub Copilot), permettent d&amp;rsquo;automatiser des tâches répétitives, telles que la génération de code boilerplate ou la complétion automatique de fonctions. Ces outils s&amp;rsquo;appuient sur des modèles de langage avancés, entraînés sur d&amp;rsquo;immenses bases de données de code, pour proposer des suggestions contextuelles précises. Cette assistance accélère le processus de développement, permettant aux programmeurs de se concentrer sur des aspects plus créatifs et complexes de leurs projets, tout en réduisant les erreurs humaines.&lt;/p></description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</guid><description>&lt;h2 id="connaissances-technologiques">
+&lt;p>L&amp;rsquo;intelligence artificielle (IA) transforme profondément le domaine de la programmation, redéfinissant la manière dont les développeurs conçoivent, écrivent et maintiennent le code. Les outils basés sur l&amp;rsquo;IA, comme les assistants de codage (par exemple, GitHub Copilot), permettent d&amp;rsquo;automatiser des tâches répétitives, telles que la génération de code boilerplate ou la complétion automatique de fonctions. Ces outils s&amp;rsquo;appuient sur des modèles de langage avancés, entraînés sur d&amp;rsquo;immenses bases de données de code, pour proposer des suggestions contextuelles précises. Cette assistance accélère le processus de développement, permettant aux programmeurs de se concentrer sur des aspects plus créatifs et complexes de leurs projets, tout en réduisant les erreurs humaines.&lt;/p></description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</guid><description>&lt;h1 id="autoévaluation">
+ Autoévaluation
+ &lt;a class="anchor" href="#auto%c3%a9valuation">#&lt;/a>
+&lt;/h1>
+&lt;p>Avant de débuter le cours, il est important de faire le point sur votre préparation.
+Je vous invite donc à faire une autoévaluation.&lt;/p>
+&lt;h2 id="connaissances-technologiques">
  Connaissances technologiques
  &lt;a class="anchor" href="#connaissances-technologiques">#&lt;/a>
 &lt;/h2>
@@ -24,14 +38,14 @@
  &lt;a class="anchor" href="#les-algorithmes">#&lt;/a>
 &lt;/h1>
 &lt;blockquote>
-&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h2 id="exercices-sur-les-algorithmes-et-problèmes">
+&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
  Exercices sur les algorithmes et problèmes
  &lt;a class="anchor" href="#exercices-sur-les-algorithmes-et-probl%c3%a8mes">#&lt;/a>
-&lt;/h2>
+&lt;/h1>
 &lt;p>La notion d&amp;rsquo;algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l&amp;rsquo;algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.&lt;/p></description></item><item><title>Travail noté 1</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</guid><description>&lt;h1 id="travail-noté-1---les-algorithmes">
  Travail noté 1 - Les algorithmes
  &lt;a class="anchor" href="#travail-not%c3%a9-1---les-algorithmes">#&lt;/a>
 &lt;/h1>
 &lt;p>Prenez le temps de lire les consignes. Nous expliquons toute la démarche en détail, en répétant même plus d'une fois les informations importantes pour être sûr que tout est clair et limpide.&lt;/p>
 &lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
-&lt;p>Dans ce cours, nous visons à corriger les travaux dans les cinq jours ouvrables suivant leur dépôt. Si vous n'avez pas reçu la correction après 10 jours ouvrables, vous pouvez joindre le professeur pour voir où nous en sommes avec la correction. Tenez cependant compte du fait que nos correcteurs prennent souvent des vacances durant l'été et pendant la période des fêtes de Noël.&lt;/p></description></item></channel></rss>
+&lt;p>Dans ce cours, nous visons à corriger les travaux dans les cinq jours ouvrables suivant leur dépôt. Si vous n'avez pas reçu la correction après 10 jours ouvrables, vous pouvez joindre la personne qui vous encadre (son nom apparaît dans le portail étudiant) pour voir où nous en sommes avec la correction. Tenez cependant compte du fait que nos correcteurs prennent souvent des vacances durant l'été et pendant la période des fêtes de Noël.&lt;/p></description></item></channel></rss>
