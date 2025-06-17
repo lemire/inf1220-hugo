@@ -1,6 +1,6 @@
 ---
 title: Exercices sur les algorithmes
-weight: 6
+weight: 8
 ---
 
 

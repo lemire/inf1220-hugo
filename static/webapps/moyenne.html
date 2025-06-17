@@ -1,13 +1,13 @@
-  <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
+<div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
         <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Calcul de la moyenne</h1>
         <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez un tableau de nombres rationnels séparés par des virgules et exécutez le pseudocode pour calculer la moyenne.</p>
         <div style="margin-bottom: 16px;">
-            <input id="arrayInput" type="text" value="10.4, 12.6, 18.7, 5.0" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
+            <input id="moyenneArrayInput" type="text" value="10.4, 12.6, 18.7, 5.0" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
         </div>
         <div style="display: flex; gap: 16px;">
             <div style="flex: 1; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
                 <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">Pseudocode</p>
-                <pre id="pseudocode" style="font-size: 14px; color: #374151; text-align: left; background: #fff; padding: 8px; border-radius: 4px;">
+                <pre id="moyennePseudocode" style="font-size: 14px; color: #374151; text-align: left; background: #fff; padding: 8px; border-radius: 4px;">
 Tableau de quatre nombres rationnels : notes
 Variables :
   Nombre entier : iterateur = 0
@@ -24,26 +24,26 @@ moyenne = moyenne / la longueur de notes
             <div style="flex: 1;">
                 <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">État</p>
                 <div style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 16px;">
-                    <p style="font-size: 14px; color: #374151;">Tableau : <span id="array">[]</span></p>
-                    <p style="font-size: 14px; color: #374151;">Itérateur : <span id="iterator">0</span></p>
-                    <p style="font-size: 14px; color: #374151;">Moyenne : <span id="average">0</span></p>
+                    <p style="font-size: 14px; color: #374151;">Tableau : <span id="moyenneArray">[]</span></p>
+                    <p style="font-size: 14px; color: #374151;">Itérateur : <span id="moyenneIterator">0</span></p>
+                    <p style="font-size: 14px; color: #374151;">Moyenne : <span id="moyenneAverage">0</span></p>
                 </div>
-                <div id="log" style="font-size: 14px; color: #374151; max-height: 150px; overflow-y: auto; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"></div>
+                <div id="moyenneLog" style="font-size: 14px; color: #374151; max-height: 150px; overflow-y: auto; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"></div>
             </div>
         </div>
         <div style="margin-top: 16px;">
-            <button id="stepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
-            <button id="resetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+            <button id="moyenneStepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+            <button id="moyenneResetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
         </div>
     </div>
     <script>
-        let notes = [10.4, 12.6, 18.7, 5.0];
-        let iterator = 0;
-        let average = 0;
-        let step = 0;
-        let isRunning = false;
+        let moyenneNotes = [10.4, 12.6, 18.7, 5.0];
+        let moyenneIterator = 0;
+        let moyenneAverage = 0;
+        let moyenneStep = 0;
+        let moyenneIsRunning = false;
 
-        const pseudocodeLines = [
+        const moyennePseudocodeLines = [
             "Tableau de quatre nombres rationnels : notes",
             "Variables :",
             "  Nombre entier : iterateur = 0",
@@ -57,21 +57,21 @@ moyenne = moyenne / la longueur de notes
             "moyenne = moyenne / la longueur de notes"
         ];
 
-        function updateDisplay() {
-            document.getElementById('array').textContent = `[${notes.join(', ')}]`;
-            document.getElementById('iterator').textContent = iterator;
-            document.getElementById('average').textContent = average.toFixed(2);
-            const pseudocode = document.getElementById('pseudocode');
-            pseudocode.innerHTML = pseudocodeLines.map((line, index) => 
-                `<span style="display: block; ${index === step ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
+        function moyenneUpdateDisplay() {
+            document.getElementById('moyenneArray').textContent = `[${moyenneNotes.join(', ')}]`;
+            document.getElementById('moyenneIterator').textContent = moyenneIterator;
+            document.getElementById('moyenneAverage').textContent = moyenneAverage.toFixed(2);
+            const pseudocode = document.getElementById('moyennePseudocode');
+            pseudocode.innerHTML = moyennePseudocodeLines.map((line, index) => 
+                `<span style="display: block; ${index === moyenneStep ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
             ).join('');
-            document.getElementById('stepButton').style.cssText = isRunning || step >= pseudocodeLines.length ?
+            document.getElementById('moyenneStepButton').style.cssText = moyenneIsRunning || moyenneStep >= moyennePseudocodeLines.length ?
                 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
                 'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
         }
 
-        function log(message) {
-            const logDiv = document.getElementById('log');
+        function moyenneLog(message) {
+            const logDiv = document.getElementById('moyenneLog');
             const messageDiv = document.createElement('div');
             messageDiv.textContent = message;
             messageDiv.style.cssText = 'opacity: 0; transition: opacity 0.5s ease;';
@@ -80,75 +80,75 @@ moyenne = moyenne / la longueur de notes
             logDiv.scrollTop = logDiv.scrollHeight;
         }
 
-        function validateInput(input) {
+        function moyenneValidateInput(input) {
             const values = input.split(',').map(v => v.trim());
             return values.every(v => !isNaN(v) && v !== '' && Number.isFinite(Number(v)));
         }
 
-        function updateArray() {
-            const input = document.getElementById('arrayInput').value;
-            if (!validateInput(input)) {
+        function moyenneUpdateArray() {
+            const input = document.getElementById('moyenneArrayInput').value;
+            if (!moyenneValidateInput(input)) {
                 alert('Veuillez entrer des nombres rationnels valides séparés par des virgules.');
-                document.getElementById('arrayInput').value = notes.join(', ');
+                document.getElementById('moyenneArrayInput').value = moyenneNotes.join(', ');
                 return false;
             }
-            notes = input.split(',').map(v => Number(v.trim()));
-            reset();
+            moyenneNotes = input.split(',').map(v => Number(v.trim()));
+            moyenneReset();
             return true;
         }
 
-        async function runStep() {
-            if (isRunning || step >= pseudocodeLines.length) return;
-            isRunning = true;
-            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+        async function moyenneRunStep() {
+            if (moyenneIsRunning || moyenneStep >= moyennePseudocodeLines.length) return;
+            moyenneIsRunning = true;
+            document.getElementById('moyenneStepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
 
-            if (step === 2) {
-                iterator = 0;
-                log('Initialisation : itérateur = 0');
-            } else if (step === 3) {
-                average = 0;
-                log('Initialisation : moyenne = 0');
-            } else if (step === 6) {
-                if (iterator < notes.length) {
-                    log(`Vérification : itérateur (${iterator}) < longueur de notes (${notes.length})`);
+            if (moyenneStep === 2) {
+                moyenneIterator = 0;
+                moyenneLog('Initialisation : itérateur = 0');
+            } else if (moyenneStep === 3) {
+                moyenneAverage = 0;
+                moyenneLog('Initialisation : moyenne = 0');
+            } else if (moyenneStep === 6) {
+                if (moyenneIterator < moyenneNotes.length) {
+                    moyenneLog(`Vérification : itérateur (${moyenneIterator}) < longueur de notes (${moyenneNotes.length})`);
                 } else {
-                    log(`Vérification : itérateur (${iterator}) >= longueur de notes (${notes.length}), sortie de la boucle`);
-                    step = 9; // Passe à FIN TANT QUE
+                    moyenneLog(`Vérification : itérateur (${moyenneIterator}) >= longueur de notes (${moyenneNotes.length}), sortie de la boucle`);
+                    moyenneStep = 9; // Passe à FIN TANT QUE
                 }
-            } else if (step === 7) {
-                const oldAverage = average;
-                average += notes[iterator];
-                log(`Moyenne = ${oldAverage.toFixed(2)} + notes[${iterator}] = ${average.toFixed(2)}`);
-            } else if (step === 8) {
-                iterator++;
-                log(`Itérateur = ${iterator - 1} + 1 = ${iterator}`);
-                step = 5; // Retour à TANT QUE
-            } else if (step === 10) {
-                const oldAverage = average;
-                average /= notes.length;
-                log(`Moyenne = ${oldAverage.toFixed(2)} / ${notes.length} = ${average.toFixed(2)}`);
+            } else if (moyenneStep === 7) {
+                const oldAverage = moyenneAverage;
+                moyenneAverage += moyenneNotes[moyenneIterator];
+                moyenneLog(`Moyenne = ${oldAverage.toFixed(2)} + notes[${moyenneIterator}] = ${moyenneAverage.toFixed(2)}`);
+            } else if (moyenneStep === 8) {
+                moyenneIterator++;
+                moyenneLog(`Itérateur = ${moyenneIterator - 1} + 1 = ${moyenneIterator}`);
+                moyenneStep = 5; // Retour à TANT QUE
+            } else if (moyenneStep === 10) {
+                const oldAverage = moyenneAverage;
+                moyenneAverage /= moyenneNotes.length;
+                moyenneLog(`Moyenne = ${oldAverage.toFixed(2)} / ${moyenneNotes.length} = ${moyenneAverage.toFixed(2)}`);
             }
 
-            step++;
-            updateDisplay();
+            moyenneStep++;
+            moyenneUpdateDisplay();
             await new Promise(resolve => setTimeout(resolve, 500));
-            isRunning = false;
-            updateDisplay();
+            moyenneIsRunning = false;
+            moyenneUpdateDisplay();
         }
 
-        function reset() {
-            iterator = 0;
-            average = 0;
-            step = 0;
-            document.getElementById('log').innerHTML = '';
-            updateDisplay();
+        function moyenneReset() {
+            moyenneIterator = 0;
+            moyenneAverage = 0;
+            moyenneStep = 0;
+            document.getElementById('moyenneLog').innerHTML = '';
+            moyenneUpdateDisplay();
         }
 
-        document.getElementById('arrayInput').addEventListener('change', updateArray);
-        document.getElementById('stepButton').addEventListener('click', runStep);
-        document.getElementById('resetButton').addEventListener('click', () => {
-            if (updateArray()) reset();
+        document.getElementById('moyenneArrayInput').addEventListener('change', moyenneUpdateArray);
+        document.getElementById('moyenneStepButton').addEventListener('click', moyenneRunStep);
+        document.getElementById('moyenneResetButton').addEventListener('click', () => {
+            if (moyenneUpdateArray()) moyenneReset();
         });
 
-        updateDisplay();
+        moyenneUpdateDisplay();
     </script>

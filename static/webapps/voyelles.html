@@ -1,13 +1,13 @@
 <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
-        <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Compteur de voyelles</h1>
-        <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez une chaîne de caractères et exécutez le pseudocode pour compter les voyelles.</p>
-        <div style="margin-bottom: 16px;">
-            <input id="stringInput" type="text" value="bonjour" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
-        </div>
-        <div style="display: flex; gap: 16px;">
-            <div style="flex: 1; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
-                <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">Pseudocode</p>
-                <pre id="pseudocode" style="font-size: 14px; color: #374151; text-align: left; background: #fff; padding: 8px; border-radius: 4px;">
+    <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Compteur de voyelles</h1>
+    <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez une chaîne de caractères et exécutez le pseudocode pour compter les voyelles.</p>
+    <div style="margin-bottom: 16px;">
+        <input id="voyelStringInput" type="text" value="bonjour" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
+    </div>
+    <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+        <div style="flex: 1; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+            <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">Pseudocode</p>
+            <pre id="voyelPseudocode" style="font-size: 14px; color: #374151; text-align: left; background: #fff; padding: 8px; border-radius: 4px;">
 Entrées :
   Chaîne de caractères : chaine = ""
 Sorties :
@@ -19,158 +19,158 @@ POUR TOUT caractère c dans chaine FAIRE
         nbVoyelle = nbVoyelle + 1
     FIN SI
 FIN POUR
-                </pre>
-            </div>
-            <div style="flex: 1;">
-                <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">État</p>
-                <div style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 16px;">
-                    <p style="font-size: 14px; color: #374151;">Chaîne : <span id="string">""</span></p>
-                    <p style="font-size: 14px; color: #374151;">Caractère courant : <span id="currentChar">-</span></p>
-                    <p style="font-size: 14px; color: #374151;">Nombre de voyelles : <span id="vowelCount">0</span></p>
-                </div>
-                <div id="log" style="font-size: 14px; color: #374151; max-height: 150px; overflow-y: auto; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"></div>
-            </div>
-        </div>
-        <div style="margin-top: 16px;">
-            <button id="stepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
-            <button id="resetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+            </pre>
         </div>
     </div>
-    <script>
-        let chaine = "bonjour";
-        let nbVoyelle = 0;
-        let currentChar = "-";
-        let index = 0;
-        let step = 0;
-        let isRunning = false;
+    <div style="margin-top: 16px;">
+        <button id="voyelStepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+        <button id="voyelResetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+    </div>
+    <div style="margin-top: 16px;">
+        <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">État</p>
+        <div style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 16px;">
+            <p style="font-size: 14px; color: #374151;">Chaîne : <span id="voyelString">""</span></p>
+            <p style="font-size: 14px; color: #374151;">Caractère courant : <span id="voyelCurrentChar">-</span></p>
+            <p style="font-size: 14px; color: #374151;">Nombre de voyelles : <span id="voyelVowelCount">0</span></p>
+        </div>
+        <div id="voyelLog" style="font-size: 14px; color: #374151; max-height: 150px; overflow-y: auto; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"></div>
+    </div>
+</div>
+<script>
+    let voyelChaine = "bonjour";
+    let voyelNbVoyelle = 0;
+    let voyelCurrentChar = "-";
+    let voyelIndex = 0;
+    let voyelStep = 0;
+    let voyelIsRunning = false;
 
-        const pseudocodeLines = [
-            "Entrées :",
-            "  Chaîne de caractères : chaine = \"\"",
-            "Sorties :",
-            "  Entier : nbVoyelle = 0",
-            "Imprimer à l'écran \"Veuillez entrer un mot au clavier suivi de la touche entrée\"",
-            "Saisir le mot au clavier et assigner à la variable chaine",
-            "POUR TOUT caractère c dans chaine FAIRE",
-            "    SI c == 'a' OU c == 'e' OU c == 'i' OU c == 'o' OU c == 'u' OU c == 'y' ALORS",
-            "        nbVoyelle = nbVoyelle + 1",
-            "    FIN SI",
-            "FIN POUR"
-        ];
+    const voyelPseudocodeLines = [
+        "Entrées :",
+        "  Chaîne de caractères : chaine = \"\"",
+        "Sorties :",
+        "  Entier : nbVoyelle = 0",
+        "Imprimer à l'écran \"Veuillez entrer un mot au clavier suivi de la touche entrée\"",
+        "Saisir le mot au clavier et assigner à la variable chaine",
+        "POUR TOUT caractère c dans chaine FAIRE",
+        "    SI c == 'a' OU c == 'e' OU c == 'i' OU c == 'o' OU c == 'u' OU c == 'y' ALORS",
+        "        nbVoyelle = nbVoyelle + 1",
+        "    FIN SI",
+        "FIN POUR"
+    ];
 
-        function updateDisplay() {
-            document.getElementById('string').textContent = `"${chaine}"`;
-            document.getElementById('currentChar').textContent = currentChar === "-" ? "-" : `'${currentChar}'`;
-            document.getElementById('vowelCount').textContent = nbVoyelle;
-            const pseudocode = document.getElementById('pseudocode');
-            pseudocode.innerHTML = pseudocodeLines.map((line, i) => 
-                `<span style="display: block; ${i === step ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
-            ).join('');
-            document.getElementById('stepButton').style.cssText = isRunning || step >= pseudocodeLines.length ?
-                'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
-                'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+    function voyelUpdateDisplay() {
+        document.getElementById('voyelString').textContent = `"${voyelChaine}"`;
+        document.getElementById('voyelCurrentChar').textContent = voyelCurrentChar === "-" ? "-" : `'${voyelCurrentChar}'`;
+        document.getElementById('voyelVowelCount').textContent = voyelNbVoyelle;
+        const pseudocode = document.getElementById('voyelPseudocode');
+        pseudocode.innerHTML = voyelPseudocodeLines.map((line, i) => 
+            `<span style="display: block; ${i === voyelStep ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
+        ).join('');
+        document.getElementById('voyelStepButton').style.cssText = voyelIsRunning || voyelStep >= voyelPseudocodeLines.length ?
+            'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+            'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+    }
+
+    function voyelLog(message) {
+        const logDiv = document.getElementById('voyelLog');
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = message;
+        messageDiv.style.cssText = 'opacity: 0; transition: opacity 0.5s ease;';
+        logDiv.appendChild(messageDiv);
+        setTimeout(() => { messageDiv.style.opacity = '1'; }, 10);
+        logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    function voyelValidateInput(input) {
+        return input.trim() !== '';
+    }
+
+    function voyelUpdateString() {
+        const input = document.getElementById('voyelStringInput').value;
+        if (!voyelValidateInput(input)) {
+            alert('Veuillez entrer une chaîne de caractères non vide.');
+            document.getElementById('voyelStringInput').value = voyelChaine;
+            return false;
         }
+        voyelChaine = input.trim();
+        voyelReset();
+        return true;
+    }
 
-        function log(message) {
-            const logDiv = document.getElementById('log');
-            const messageDiv = document.createElement('div');
-            messageDiv.textContent = message;
-            messageDiv.style.cssText = 'opacity: 0; transition: opacity 0.5s ease;';
-            logDiv.appendChild(messageDiv);
-            setTimeout(() => { messageDiv.style.opacity = '1'; }, 10);
-            logDiv.scrollTop = logDiv.scrollHeight;
-        }
+    async function voyelRunStep() {
+        if (voyelIsRunning || voyelStep >= voyelPseudocodeLines.length) return;
+        voyelIsRunning = true;
+        document.getElementById('voyelStepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
 
-        function validateInput(input) {
-            return input.trim() !== '';
-        }
-
-        function updateString() {
-            const input = document.getElementById('stringInput').value;
-            if (!validateInput(input)) {
-                alert('Veuillez entrer une chaîne de caractères non vide.');
-                document.getElementById('stringInput').value = chaine;
-                return false;
-            }
-            chaine = input.trim();
-            reset();
-            return true;
-        }
-
-        async function runStep() {
-            if (isRunning || step >= pseudocodeLines.length) return;
-            isRunning = true;
-            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
-
-            if (step === 1) {
-                chaine = "";
-                log('Initialisation : chaine = ""');
-                step++;
-            } else if (step === 3) {
-                nbVoyelle = 0;
-                log('Initialisation : nbVoyelle = 0');
-                step++;
-            } else if (step === 4) {
-                log('Affichage : "Veuillez entrer un mot au clavier suivi de la touche entrée"');
-                step++;
-            } else if (step === 5) {
-                chaine = document.getElementById('stringInput').value.trim();
-                log(`Saisie : chaine = "${chaine}"`);
-                step++;
-            } else if (step === 6) {
-                if (index < chaine.length) {
-                    currentChar = chaine[index];
-                    log(`Début de boucle : traitement du caractère '${currentChar}' à l’index ${index}`);
-                    step++;
-                } else {
-                    log('Fin de la boucle : tous les caractères ont été traités');
-                    currentChar = "-";
-                    step = 10; // Passe à FIN POUR
-                }
-            } else if (step === 7) {
-                const isVowel = ['a', 'e', 'i', 'o', 'u', 'y'].includes(currentChar.toLowerCase());
-                log(`Condition : '${currentChar}' ${isVowel ? 'est' : 'n’est pas'} une voyelle`);
-                if (isVowel) {
-                    step = 8; // Passe à l’incrémentation
-                } else {
-                    step = 9; // Passe à FIN SI
-                }
-            } else if (step === 8) {
-                nbVoyelle++;
-                log(`Incrémentation : nbVoyelle = ${nbVoyelle - 1} + 1 = ${nbVoyelle}`);
-                step = 9; // Passe à FIN SI
-            } else if (step === 9) {
-                index++;
-                log(`Retour à la boucle : passage au caractère suivant`);
-                step = 6; // Retour à POUR TOUT
-            } else if (step === 10) {
-                log(`Résultat final : nbVoyelle = ${nbVoyelle}`);
-                step++;
+        if (voyelStep === 1) {
+            voyelChaine = "";
+            voyelLog('Initialisation : chaine = ""');
+            voyelStep++;
+        } else if (voyelStep === 3) {
+            voyelNbVoyelle = 0;
+            voyelLog('Initialisation : nbVoyelle = 0');
+            voyelStep++;
+        } else if (voyelStep === 4) {
+            voyelLog('Affichage : "Veuillez entrer un mot au clavier suivi de la touche entrée"');
+            voyelStep++;
+        } else if (voyelStep === 5) {
+            voyelChaine = document.getElementById('voyelStringInput').value.trim();
+            voyelLog(`Saisie : chaine = "${voyelChaine}"`);
+            voyelStep++;
+        } else if (voyelStep === 6) {
+            if (voyelIndex < voyelChaine.length) {
+                voyelCurrentChar = voyelChaine[voyelIndex];
+                voyelLog(`Début de boucle : traitement du caractère '${voyelCurrentChar}' à l’index ${voyelIndex}`);
+                voyelStep++;
             } else {
-                step++;
+                voyelLog('Fin de la boucle : tous les caractères ont été traités');
+                voyelCurrentChar = "-";
+                voyelStep = 10; // Passe à FIN POUR
             }
-
-            updateDisplay();
-            await new Promise(resolve => setTimeout(resolve, 500));
-            isRunning = false;
-            updateDisplay();
+        } else if (voyelStep === 7) {
+            const isVowel = ['a', 'e', 'i', 'o', 'u', 'y'].includes(voyelCurrentChar.toLowerCase());
+            voyelLog(`Condition : '${voyelCurrentChar}' ${isVowel ? 'est' : 'n’est pas'} une voyelle`);
+            if (isVowel) {
+                voyelStep = 8; // Passe à l’incrémentation
+            } else {
+                voyelStep = 9; // Passe à FIN SI
+            }
+        } else if (voyelStep === 8) {
+            voyelNbVoyelle++;
+            voyelLog(`Incrémentation : nbVoyelle = ${voyelNbVoyelle - 1} + 1 = ${voyelNbVoyelle}`);
+            voyelStep = 9; // Passe à FIN SI
+        } else if (voyelStep === 9) {
+            voyelIndex++;
+            voyelLog(`Retour à la boucle : passage au caractère suivant`);
+            voyelStep = 6; // Retour à POUR TOUT
+        } else if (voyelStep === 10) {
+            voyelLog(`Résultat final : nbVoyelle = ${voyelNbVoyelle}`);
+            voyelStep++;
+        } else {
+            voyelStep++;
         }
 
-        function reset() {
-            chaine = document.getElementById('stringInput').value.trim();
-            nbVoyelle = 0;
-            currentChar = "-";
-            index = 0;
-            step = 0;
-            document.getElementById('log').innerHTML = '';
-            updateDisplay();
-        }
+        voyelUpdateDisplay();
+        await new Promise(resolve => setTimeout(resolve, 500));
+        voyelIsRunning = false;
+        voyelUpdateDisplay();
+    }
 
-        document.getElementById('stringInput').addEventListener('change', updateString);
-        document.getElementById('stepButton').addEventListener('click', runStep);
-        document.getElementById('resetButton').addEventListener('click', () => {
-            if (updateString()) reset();
-        });
+    function voyelReset() {
+        voyelChaine = document.getElementById('voyelStringInput').value.trim();
+        voyelNbVoyelle = 0;
+        voyelCurrentChar = "-";
+        voyelIndex = 0;
+        voyelStep = 0;
+        document.getElementById('voyelLog').innerHTML = '';
+        voyelUpdateDisplay();
+    }
 
-        updateDisplay();
-    </script>
+    document.getElementById('voyelStringInput').addEventListener('change', voyelUpdateString);
+    document.getElementById('voyelStepButton').addEventListener('click', voyelRunStep);
+    document.getElementById('voyelResetButton').addEventListener('click', () => {
+        if (voyelUpdateString()) voyelReset();
+    });
+
+    voyelUpdateDisplay();
+</script>
