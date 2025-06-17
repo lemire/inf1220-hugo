@@ -1,12 +1,12 @@
 ---
-title: "Qu’est-ce qu’un langage de programmation orientée-objet?"
+title: "Langage de programmation orientée-objet"
 weight: 2
 ---
 
-# Qu’est-ce qu’un langage de programmation orientée-objet?</h2>
+# Langage de programmation orientée-objet
 
+## Un premier programme
 
-<h1>Un premier programme</h1>
 <p>
 En Java, toutes parties d'un programme informatique doit donc être encapsulée dans une classe. Pour ce faire, il est donc nécessaire de créer un premier fichier de code source qui décrira une première classe et contiendra la description de la méthode "main", la méthode de démarrage (appelé parfois "bootstrap") du programme. Il est possible tout simplement d'utiliser le Bloc-Note avec Windows ou un autre éditeur de texte brut (<strong>ce n'est pas le cas de Microsoft Word!</strong>), d'écrire les lignes de code nécessaire à la création de la classe et de ses fonctions et d'enregistrer ce texte sous l'extension .java (dans l'exemple ci-dessous dans un fichier Main.java).  Voici un exemple d'une première classe qui imprimera dans l'invite de commande un texte de bienvenue.</p>
 
@@ -44,7 +44,7 @@ public class Bienvenue {
 
 <p><a id="intro" name="sansIDE"></a></p>
 
-<h1>Création d'une classe sans IDE</h1>
+## Création d'une classe sans IDE
 
 <p>Créez un fichier au format texte nommé Bienvenue.java et contenant le code suggéré. Le fichier source étant créé et enregistré, nous pouvons passer aux phases de compilation et d'exécution.</p>
 
@@ -52,7 +52,7 @@ public class Bienvenue {
 
 <iframe width="672" height="378" src="https://www.youtube.com/embed/1ttHH5MlNug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h4>Compilation</h4>
+#### Compilation
 
 <p>Le compilateur Java est le programme javac.exe (ou simplement javac sous OSX et Linux) contenu dans le dossier bin du JDK. Pour compiler Bienvenue.java, il faut :</p>
 
@@ -84,10 +84,12 @@ public class Bienvenue {
 <li>Beaucoup des exemples dans le cours peuvent être recopiés et exécutés, mais vous devez choisir le bon nom de fichier (correspondant à la classe). Si vous modifiez du code, même très légèrement, et qu'il ne fonctionne plus, revenez en arrière. Il faut avoir beaucoup de rigueur pour programmer, vous ne pouvez pas juste modifier du code en suivant votre instinct et espérer que tout fonctionne. Vous devez apprendre et comprendre avant de pouvoir modifier du code.</li>
 <li>Vous ne devez en aucun cas copier du code au sein d'autre code en espérant que tout fonctionne. Le copier-coller sans comprendre ce que l'on fait ne fonctionnera pas. Pour commencer, ne changez absolument rien, rien, au code. Copiez le code à l'identique, caractère par caractère.Tout doit être identique. Le nom de fichier, le nom de la classe, le nom des méthodes, etc.</li>
 </ol>
-<h4>Exécution</h4>
+
+#### Exécution
+
 <p>Après la réussite de la compilation et la création du fichier Bienvenue.class, il faut l'exécuter avec l'interpréteur (la JVM) java.exe (java sous OSX et Linux). À partir de la console/invite de commande, il suffit d'exécuter la commande "java Bienvenue". Si tout se passe bien, on voit apparaître le message prévu : Bienvenue au cours INF 1220!  Sinon, il y a sans doute un problème de répertoire actif ou de chemin d'accès à java.exe</p>
 
-<h1>Création d'une classe avec repl.it</h1>
+## Création d'une classe avec repl.it
 
 <p>Vous pouvez aussi utiliser repl.it. Dans ce cas, il suffit d'aller en ligne et d'utiliser l'interface graphique.</p>
 <p>En général, vous pouvez créez vos propres programmes sur repl.it. Repl.it est une plateforme en ligne pour écrire et tester du code Java sans installation. Cliquez sur les liens Repl.it du cours pour ouvrir les projets Java. </p>
@@ -97,18 +99,18 @@ public class Bienvenue {
 
 <p>Si vous utilisez <tt>repl.it</tt>, vous devez tenir compte que la classe contenant la fonction exécutable (<tt>main</tt>) doit être nommée <tt>Main</tt>, mais c'est un détail technique spécifique à <tt>repl.it</tt> qui ne change pas la nature de l'exercice.</p>
 
-<h2>Vidéo suggérée</h2>
+## Vidéo suggérée
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8nXAvKzqbw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p><a id="intro" name="avecideone"></a></p>
-<h1>Création d'une classe avec ideone.com </h1>
+# Création d'une classe avec ideone.com 
 
 <p><a href="https://ideone.com/kWZuP3">Vous pouvez aussi utiliser ideone.com</a>. Le fonctionnement est similaire à repl.it. Encore une fois, vous devrez créer un compte gratuit.</p>
 
 <p><a id="intro" name="avecIDEa"></a></p>
 
-<h1>Création d'une classe avec IntelliJ IDEA, sa compilation et son exécution</h1>
+## Création d'une classe avec IntelliJ IDEA, sa compilation et son exécution
 
 <p>Si vous avez installé l'IDE IntelliJ IDEA lors de l'activité précédente, vous pouvez maintenant l'utiliser pour écrire et exécuter du code Java.</p>
 
@@ -130,7 +132,7 @@ remplaçant la ligne qui débute par <tt>//</tt>, entre les deux accolades.</li>
 <p>Tout comme les autres IDE, IntelliJ est difficile d'utilisation pour les débutants. Il expose le débutant à un environnement inutilement complexe. Néanmoins, plusieurs étudiants insistent pour utiliser des IDE. Nous
 donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez apprendre à vous retrouver dans un environnement complexe qui n'est pas destiné aux débutants. Nous vous rappelons que nous n'offrons pas de soutien technique. Si vous avez du mal avec IntelliJ, c'est votre responsabilité de trouver l'information pertinente. L'utilisation IntelliJ est purement optionnelle.</p>
 
-<h2>Vidéo suggérée</h2>
+### Vidéo suggérée
 
 <p>(YouTube offre des sous-titres en français.)
 
@@ -139,7 +141,7 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 <p>L'approche est essentiellement la même pour les autres IDE comme Eclipse et NetBeans. On créé un projet, on écrit son code, et on exécute. Tous les IDE peuvent vous aider à identifier vos erreurs de syntaxe.</p>
 
 
-<h1>Création d'une classe avec NetBeans, sa compilation et son exécution</h1>
+## Création d'une classe avec NetBeans, sa compilation et son exécution
 
 <p>Si vous avez installé l'IDE Netbeans lors de l'activité précédente, il est maintenant le temps d'utiliser cet outil de développement très utile, permettant d'accélérer et de simplifier les étapes dans le développement d'une application. Voici les étapes pour réaliser l'équivalent de l'activité précédente.</p>
 
@@ -157,6 +159,11 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 <p>Tout comme IntelliJ, l'utilisation de NetBeans est optionnelle. Ce n'est pas un environnement destiné aux débutants. Si vous choisissez d'utiliser NetBeans, c'est à vous de faire le travail d'assimilation nécessaire.</p>
 
 
+### Vidéo suggérée
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5j5z9BJCAW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ##  Java pas à pas
 
 <p>Nous utilisons un manuel d'introduction à la programmation Java intitulé Java pas à pas. Vous devez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF</a>.</p>
@@ -170,15 +177,11 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 <p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
 
-<h3>Lecture dans le livre de référence (optionnel)</h3>
+### Lecture dans le livre de référence (optionnel)
 
 <p>Vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, le premier chapitre. Le manuel de Delannoy  est à son mieux comme manuel de référence. On vous invite à faire les lectures à et garder le manuel avec vous lors que vous étudiez si vous en avez fait l'acquisition. Le manuel de Delannoy n'est pas obligatoire.</p>
 
-<h3>Vidéo suggérée</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5j5z9BJCAW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h2>Vidéos suggérées</h2>
+## Vidéos suggérées
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_l4pJ7HCrl4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -4,10 +4,6 @@ weight: 12
 ---
 
 
+Dans le cadre de ce cours, l’utilisation d’outils d’intelligence artificielle (tels que Claude, ChatGPT, Copilot, Grok, ou autres) est autorisée, mais demeure facultative. Ces outils peuvent servir de soutien pour approfondir votre compréhension, structurer vos idées ou générer des contenus préliminaires. Toutefois, leur usage doit être responsable, transparent et rigoureusement documenté. L’objectif est de garantir que votre travail reflète vos compétences et votre compréhension personnelle, tout en tirant parti des possibilités offertes par ces technologies. Une utilisation non déclarée ou inappropriée de l’IA peut être considérée comme une faute académique, tandis qu’une déclaration claire de son usage renforce la crédibilité de votre démarche.
 
-<p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
-<ul>
-<li>Décrivez votre utilisation de l'IA.  Une utilisation de l'IA sans déclaration peut être considérée comme une forme de faute. Contrairement à ce que vous pourriez croire, déclarer votre utilisation de l'IA vous protège.</li>
-<li>Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA&nbsp;? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.</li> 
-<li>Assurez-vous de bien expliquer vos résultats, en vos propres mots.</li>
-</ul>
+Pour utiliser l’IA de manière conforme, vous devez décrire précisément comment vous l’avez employée. Par exemple, indiquez si l’IA a été utilisée pour générer des idées, rédiger un brouillon, résoudre un problème ou vérifier des informations. Incluez, dans la mesure du possible, des extraits ou des copies des résultats obtenus à partir de vos interactions avec l’outil d’IA, et expliquez en vos propres mots comment vous avez intégré ces résultats dans votre travail. Cette transparence permet non seulement de démontrer votre engagement éthique, mais aussi de protéger l’intégrité de votre contribution. Assurez-vous d’expliquer vos démarches et vos conclusions de manière claire et personnelle, en mettant en évidence votre réflexion critique et votre appropriation des concepts étudiés.

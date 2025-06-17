@@ -351,50 +351,16 @@ public class Button extends Rectangle implements Clickable {
 <p><a id="intro" name="section4"></a></p>
 <h1>Protection des données héritées</h1> 
 <p>Les trois modificateurs de portée qui réalisent l'encapsulation jouent simultanément un rôle dans la protection des données.</p> 
-<table border="1" cellspacing="0" cellpadding="0" width="745"> 
-  <tbody> 
-    <tr> 
-      <td> 
-        <p>Modificateur</p> 
-      </td> 
-      <td> 
-        <p>Rôles</p> 
-      </td> 
-    </tr> 
-    <tr> 
-      <td> 
-        <p>private</p> 
-      </td> 
-      <td> 
-        <p>C'est le niveau de protection le plus fort. Les composants ne sont visibles qu'à l'intérieur de la classe : ils ne peuvent être modifiés que par des méthodes définies dans la classe prévues à cet effet. Les méthodes déclarées <em>private</em> ne peuvent pas être en même temps déclarée <em>abstract</em>, car elles ne peuvent pas être redéfinies dans les classes filles.</p> 
-      </td> 
-    </tr> 
-    <tr> 
-      <td> 
-        <p>protected</p> 
-      </td> 
-      <td> 
-        <p>Si une méthode ou une variable est déclarée <em>protected</em>, seules les méthodes présentes dans le même package que cette classe ou de ses sous-classes pourront y accéder.</p> 
-      </td> 
-    </tr> 
-    <tr> 
-      <td> 
-        <p>public</p> 
-      </td> 
-      <td> 
-        <p>Ce modificateur stipule que la variable ou la méthode est visible par tous les autres objets.</p> 
-      </td> 
-    </tr> 
-    <tr> 
-      <td> 
-        <p> </p> 
-      </td> 
-      <td> 
-        <p>Lorsqu'un membre de la classe n'est précédé d'aucun modificateur, il est accessible à toutes les classes du même package que la classe qui le définit.</p> 
-      </td> 
-    </tr> 
-  </tbody> 
-</table>
+
+
+
+| Modificateur | Rôles |
+|--------------|-------|
+| private      | C'est le niveau de protection le plus fort. Les composants ne sont visibles qu'à l'intérieur de la classe : ils ne peuvent être modifiés que par des méthodes définies dans la classe prévues à cet effet. Les méthodes déclarées _private_ ne peuvent pas être en même temps déclarée _abstract_, car elles ne peuvent pas être redéfinies dans les classes filles. |
+| protected    | Si une méthode ou une variable est déclarée _protected_, seules les méthodes présentes dans le même package que cette classe ou de ses sous-classes pourront y accéder. |
+| public       | Ce modificateur stipule que la variable ou la méthode est visible par tous les autres objets. |
+|              | Lorsqu'un membre de la classe n'est précédé d'aucun modificateur, il est accessible à toutes les classes du même package que la classe qui le définit. |
+
 
 <h2>Lecture dans le livre de référence</h2>
 

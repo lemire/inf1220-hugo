@@ -3,12 +3,12 @@ title: "Méthodes et constructeurs"
 weight: 5
 ---
 
-<h1><a id="top" name="top"></a>Module 2</h1><h2>Activité 2.4</h2><h2 class="partie2">La conception de méthodes/fonctions et leur appel.</h2>
+# La conception de méthodes/fonctions et leur appel
 
 
 
 
-<h1>Les méthodes</h1>
+## Les méthodes
 
 <p>Dans la plupart des langages de programmation modernes, il est possible de subdiviser le code en plusieurs sections appelées méthodes ou fonctions (le terme méthode est spécifique au langage Java, mais le terme fonction peut-être également utilisé). L'avantage est double, ces méthodes permettent une meilleure lecture du code et permet de généraliser et réutiliser des portions de code fréquent. De plus, en programmation orientée-objet, l'utilisation de méthodes est parfois appelée un passage de message. Ainsi, une classe peut offrir différentes méthodes à l'application qui peuvent être appelées en envoyant à celle-ci un message et des paramètres (ou non). De plus, la bibliothèque de code standard de Java, appelé <em>Application programming interface</em> (API), fournit plusieurs classes utiles telles que des structures de données (ex. ArrayList, Hashmap), des types avancés (ex. les chaînes de caractères String ou StringBuffer), des outils de gestion de flux de données (ex. pour l'écriture et la lecture dans les fichiers (ex. FileReader, FileInputStream). Chacune des classes de l'API offre un ensemble de méthodes pouvant être appelées pour une tâche ou un traitement donné. Voici un exemple d'appel de méthode avec la classe String : </p>
 
@@ -16,28 +16,37 @@ weight: 5
 public class ExempleMethode {
     
     public static void main(String[] args) {
-        
-        // Définition d&#39;une chaîne de caractères
-        String texte = "Veni, vidi";
-        
-        // Appel de la méthode de concaténation qui revient à faire l&#39;opération "&quot;+&quot;.
+        String texte = "Veni, vidi";        
         texte = texte.concat(", vici");
-        
-        // Appel de la méthode permettant d&#39;imprimer dans la console
         System.out.println(texte);
-        
         String autreTexte =  "J&#39;aime les patates";
-        
-        // Appel de la méthode equals qui permet de vérifier si les deux string sont égaux
-        System.out.println("Textes égaux ? :" + texte.equals(autreTexte));               
+        System.out.println("Textes égaux ? :" 
+          + texte.equals(autreTexte));               
 
     }
 
 }
 {{</inlineJava>}}
 
+Avec les versions plus récentes de Java (Java 26 et mieux), il est possible d'omettre le nom
+de la classe comme ceci:
 
-<h2>La définition d'une méthode/fonction simple</h2>
+
+{{<inlineJava path="ExempleMethode.java" lang="java" >}}
+void main() {
+    System.out.println("Bonjour, le monde !");
+    int x = 5;
+    int y = 10;
+    int sum = x + y;
+    System.out.println("La somme de " + x + " et " 
+      + y + " est : " + sum);
+}
+{{</inlineJava>}}
+
+Par contre, cette nouvelle syntaxe ne s'applique que dans des cas simples. En pratique,
+il est quasiment toujours nécessaire de spécifier le nom de la classe.
+
+### La définition d'une méthode/fonction simple
 
 <p>Une méthode est une suite d'instructions englobées dans un bloc {} permettant de réaliser une opération donnée. De façon générale, la syntaxe d'une méthode est la suivante :</p> 
 
@@ -80,7 +89,6 @@ public class TransformeurTexte {
         
         String texteRenverse = new String();
         
-        // Utilisation d&#39;une boucle itérative, à voir dans le prochain module.
         for (char c : texte.toCharArray()) {
             texteRenverse = c + texteRenverse;
         }
@@ -89,19 +97,17 @@ public class TransformeurTexte {
         
     }
 
-    // Méthode &quot;get&quot; permettant d&#39;accéder à la variable texteInstance
     public String getTexte() {
         return texte;
     }
     
-    // Méthode &quot;set&quot; permettant de modifier la variable texteInstance
     public void setTexte(String texteInstance) {
         this.texte = texteInstance;
     }
     
     public void transformerTexteEnHTML() {
         
-        texte =  "&lt;html&gt;&lt;body&gt;&lt;p&gt;&quot;" + texte + "&quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;";
+        texte =  "&lt;html&gt;&lt;body&gt;&lt;p&gt;" + texte + "&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;";
         
     }
     
@@ -109,10 +115,8 @@ public class TransformeurTexte {
         
         String test = "ohohoh";
         
-        // Appel d&#39;une méthode static
         System.out.println(inverserTexte(test));
         
-        // Appel d&#39;une méthode non-static de la classe
         TransformeurTexte transformeur = new TransformeurTexte();
         transformeur.setTexte("Bonjour le monde!");
         transformeur.transformerTexteEnHTML();
@@ -128,7 +132,8 @@ public class TransformeurTexte {
 
 <p>Peu importe l'environnement que vous utilisez pour tester nos exemples, prenez la peine de vous familiariser avec celui-ci.</p>
 <p>Prenez note que sur repl.it, la méthode <tt>main</tt> est définie dans une classe distincte appelée Main. La classe TransformateurTexte doit apparaître dans un fichier nommé TransformateurTexte.java selon les conventions propres au Java.</p>
-<h2>La structure d'une méthode</h2>
+
+### La structure d'une méthode
 
 <p>Nous avons appris précédemment que la définition d'une fonction suivait le modèle général : typeretourné nomdelafonction(arg1,arg2…)</p>
 
@@ -139,28 +144,12 @@ public class TransformeurTexte {
 
 {{<inlineJava path="NombreAleatoire.java" lang="java" >}}
 public class NombreAleatoire {
-    //déclaration des attributs : variable de classe et variable d&#39;instance  
-
-    /**     
-     * La fonction getNombreAleatoire permet de générer un nombre aléatoire
-     *
-     * @return typeRetourné
-     */
     public static int getNombreAleatoire() {
-        // Utilisation de la fonction Math.random qui retourne un nombre aléatoire de type &quot;double&quot; 
-        // (donc nombre à virgule flottante de 64 bits) entre 0 et 1. Utilisation d&#39;un &quot;cast&quot; en int pour convertir
-        // le double en int.
         int num = (int)(Math.random() * 10) + 1;
         return num;
     }
 
-    /**     
-     * La fonction main
-     *
-     * @param args tableau d&#39;arguments
-     */
     public static void main(String[] args) {
-        //corps de la fonction  
         int nombre = getNombreAleatoire();
         System.out.println("le nombre est " + nombre);
     }
@@ -172,20 +161,14 @@ public class NombreAleatoire {
 
 {{<inlineJava path="Exercice.java" lang="java" >}}
 public class Exercice {
-    
     public static String fusionDeTexte(String texte1, String texte2) {
-        
-        return texte1 + "::" + texte2;
-              
+        return texte1 + "::" + texte2;   
     }
        
     public static void main(String[] args) {
-        
         String bonjourTexte = "Bonjour";
         String hiTexte = "Hi";
-        
         System.out.println(fusionDeTexte(bonjourTexte, hiTexte));
-        
     }
     
 }
@@ -219,15 +202,12 @@ public class Exercice {
    
     public static void main(String[] args) {
         
-        // Utilisation du StringBuffer, une chaîne de caractère &quot;mutable&quot; (donc pouvant être modifié grâce à des méthodes offertes par l&#39;API).
         StringBuffer test = new StringBuffer("Bonjour");
         
-        //Affichage avant de l&#39;appel de méthode
         System.out.println(test);
         
         mettreDesPointsExclamations(test);
         
-        //Affichage après l&#39;appel de méthode avec le test de paramètre par référence.
         System.out.println(test);
         
     }
@@ -248,7 +228,6 @@ public class Exercice {
         
         StringBuffer copieLocal = new StringBuffer(texte.toString());
         
-        // On modifie le texte
         copieLocal.insert(0, "!!!");
         copieLocal.append("!!!");
         
@@ -258,15 +237,12 @@ public class Exercice {
    
     public static void main(String[] args) {
         
-        // Utilisation du StringBuffer, une chaîne de caractère &quot;mutable&quot; (donc pouvant être modifié grâce à des méthodes offertes par l&#39;API).
         StringBuffer test = new StringBuffer("Bonjour");
         
-        //Affichage avant de l&#39;appel de méthode
         System.out.println(test);
         
         StringBuffer texteModifie = mettreDesPointsExclamations(test);
         
-        //Affichage après l&#39;appel de méthode avec le test de paramètre par référence.
         System.out.println(texteModifie);
         
     }
@@ -274,7 +250,7 @@ public class Exercice {
 }
 {{</inlineJava>}}
 
-<h2>Surdéfinition de méthodes</h2>
+### Surdéfinition de méthodes
 
 <p>Ce qui distingue les méthodes dans une classe sont : le nom de la méthode, le type de retour (void ou autres) et ses paramètres. Il peut être utile d'avoir plusieurs méthodes avec le même nom, ayant sensiblement le même comportement/action mais dont les paramètres en entrées sont différents. Ceci permet de spécialiser certaines méthodes pour le traitement de certains types de données. Voici un exemple de surdéfinition de méthodes :</p>
 
@@ -299,7 +275,6 @@ public class FusionDonnees {
     }
     
     public String fusion(int entier) {
-        // ou bien texte + &quot;|i|&quot; + entier; fait la même chose ...
         return texte + "|+i|" + Integer.toString(entier);
     }
     
@@ -319,7 +294,7 @@ public class FusionDonnees {
 {{</inlineJava>}}
 
 
-<h2>Vidéos</h2>
+### Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IZ8wKErw0_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -330,7 +305,7 @@ public class FusionDonnees {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zM_Qf07fEyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2>Lecture dans le livre de référence</h2>
+### Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les méthodes/fonctions. Veuillez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>
@@ -341,7 +316,8 @@ public class FusionDonnees {
 </ul>
 
 <p><a id="intro" name="section2"></a></p>
-<h1>Les constructeurs</h1>
+
+## Les constructeurs
 
 
 <p>Pour les types élémentaires comme int et float, on peut créer une nouvelle instance, une nouvelle valeur directement par assignation: « float x = 1.0f; ». Les autres types (c'est-à-dire les instances de classe) sont définis par une classe Java et doivent être créés avec une fonction particulière appelée <em>constructeur</em>. Ces fonctions prennent le nom de la classe comme nom, ne possèdent pas de type de retour (void ou autre) et peuvent posséder plusieurs paramètres ou aucun. Il est également possible pour une même classe d'avoir plusieurs constructeurs avec des paramètres différents.  Les constructeurs sont appelées par la JVM lors de la création d'une instance d'une classe à l'aide du mot-clé « new ». L'appel du mot-clé « new » retourne une nouvelle instance de la classe créée par l'entremise de l'appel d'un constructeur: par exemple, l'appel « MaClasse x = new MaClasse(1) » pourra appeler le constructeur « public MaClasse(int x) ». Toute instance d'une classe doit avoir été créée par l'appel d'un constructeur. Si une classe ne comprend aucun constructeur explicite, Java va y ajouter un constructeur implicite qui ne prend aucun paramètre. Le constructeur par défaut ne va pas apparaître dans votre code, Java s'en charge. Le constructeur doit initialiser (donner une valeur) aux attributs de la classe. Une fois que le constructeur s'est exécuté, l'instance de classe doit être utilisable. Voici un exemple de constructeurs et leur utilisation :</p>
@@ -352,11 +328,9 @@ public class FusionDonnees {
 {{<inlineJava path="Client.java" lang="java" >}}
 public class Client {
     
-    //Constantes static, donc une seule représentation en mémoire
     public static final String DEBUTLOG = "Client :";
     public static final String SEPARATEUR = "|*|";
     
-    //Variable déclaré public, nous verrons plus loins à quoi ça sert ...
     public int id;
     public String prenom;
     public String nom;
@@ -378,16 +352,18 @@ public class Client {
     
     public static void main(String[] args) {
         
-        // Création d&#39;une instance de la classe Client avec le constructeur sans paramètre;
         Client unClient = new Client();
    
-        // Création d&#39;une deuxième instance de la classe avec le constructeur à 3 paramètre);
         Client unAutreClient = new Client(44, "Charlie", "Chaplin");
 
         
-        System.out.println(Client.DEBUTLOG + unClient.id + Client.SEPARATEUR + unClient.prenom + Client.SEPARATEUR + unClient.nom);
+        System.out.println(Client.DEBUTLOG + unClient.id 
+        + Client.SEPARATEUR + unClient.prenom 
+        + Client.SEPARATEUR + unClient.nom);
         
-        System.out.println(DEBUTLOG + unAutreClient.id + Client.SEPARATEUR + unAutreClient.prenom + Client.SEPARATEUR + unAutreClient.nom);
+        System.out.println(DEBUTLOG + unAutreClient.id 
+        + Client.SEPARATEUR + unAutreClient.prenom 
+        + Client.SEPARATEUR + unAutreClient.nom);
         
     }
     
@@ -397,14 +373,14 @@ public class Client {
 <p> À moins de ne programmer qu'avec des types de base (int, float, etc.), vous n'avez pas le choix en Java: il faut appeler des constructeurs, ne serait-ce que les constructeurs par défaut.
 Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la classe et ils  ne renvoient aucune valeur explicitement. Pour une même instance de classe, le constructeur n’est appelé qu’une seule fois alors que les méthodes peuvent être appelées plusieurs fois.</p>
 
-<h2>Lecture optionnelle </h2>
+### Lecture optionnelle
 
 <ul>
 <li><a href="https://fr.wikipedia.org/wiki/Constructeur_(programmation)">Constructeur (programmation)</a> (Wikipédia)</li>
 
 </ul>
 
-<h2>Est-ce qu'on doit toujours construire ses propres classes en Java?</h2>
+### Est-ce qu'on doit toujours construire ses propres classes en Java?
 
 <p>Le langage de programmation java vous incite à créer vos propres classes, avec des méthodes et des attributs correspondants à votre problème. Est-ce toujours nécessaire ou souhaitable?</p>
 
@@ -416,7 +392,7 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 
 <p>Concrètement, dans ce cours, vous ne serez jamais pénalisé si vous écrivez des programmes Java qui répondent aux consignes sans nécessairement créer plus de classes que nécessaire. Par contre, il est probable que vous ne pourrez pas réussir le cours si vous ne comprenez pas les notions de classe, constructeur et méthode.</p>
 
-<h2>Vidéos</h2>
+### Vidéos
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cGpJ0o9z5GQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -425,7 +401,7 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 <li><a href="https://www.youtube.com/playlist?list=PLZbs1ERZ-TGWeJa5CqDPpNNmLhsIFEmkl">Il y a une liste de vidéos sur le sujet des constructeurs par Sam et al.</a></li>
 </ol>
 
-<h2>Lecture dans le livre de référence</h2>
+### Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les constructeurs (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>

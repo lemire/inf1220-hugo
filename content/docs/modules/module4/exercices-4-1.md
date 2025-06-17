@@ -93,8 +93,6 @@ public class Exercice1M4{
      File monFichier = new File(monRepertoire, "monFichier");
      if (monFichier.createNewFile()) {
        System.out.println("***fichier créé correctement***");
-        // DataOutputStream sortie = new DataOutputStream ( new FileOutputStream
-        // (monFichier)) ;
         DataOutputStream sortie = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(monFichier)));
         for (int i = 0; i < 10; i++) {
           sortie.writeInt(i);

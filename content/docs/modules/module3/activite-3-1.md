@@ -10,7 +10,7 @@ weight: 2
 
 <p><a id="intro" name="section1"></a></p>
 
-<h1>Le bloc d'instructions</h1>
+## Le bloc d'instructions
 
 <p dir="ltr" style="margin-right: 0px; ">Un bloc d'instructions est un groupe d'instructions rédigées entre deux accolades (<strong>{ }</strong>). Il exprime l'ordre d'exécution des différentes instructions. Il définit également le domaine de visibilité des variables incluses dans la déclaration. Un bloc d'instructions peut apparaître partout dans l'instruction. <br />Les instructions, comme les blocs d'instructions, peuvent être identifiées par une étiquette. Cette étiquette précédera l'instruction, ou fera partie du bloc d'instructions, et sera suivie du caractère <strong>:</strong></p> 
 <blockquote dir="ltr" style="margin-right: 0px; "> 
@@ -23,8 +23,8 @@ weight: 2
 
 <p><a id="intro" name="section2"></a></p>
 
-<h1>La structure de contrôle IF-ELSE</h1>
- 
+## La structure de contrôle IF-ELSE
+
 <p>Le branchement conditionnel (<strong>if</strong>) peut apparaître sous deux formes : avec ou sans clause <strong>else</strong>. Dans les deux cas, il s'agit d'un branchement booléen, c'est à dire que selon le contrôle (qui est au final une valeur booléenne, ex. i != 0) ou la valeur vraie permettra d'aller dans la portée de la structure ou non. </p> 
 <p>La forme :</p>
 
@@ -88,9 +88,7 @@ class IfElseDemontration {
 }
 ```
 
-<br/>
-<p><a id="intro" name="section3"></a></p>
-<h1>La structure de contrôle SWITCH-CASE</h1>
+## La structure de contrôle SWITCH-CASE
 
 <p>L'instruction de choix multiples <strong>switch</strong> permet d'effectuer un aiguillage sur plusieurs instructions, suivant la valeur retournée par une expression d'un des types suivants : <strong>char</strong>, <strong>byte</strong>, <strong>short</strong> ou <strong>int</strong>. Lorsque la valeur de l'expression est connue, elle est comparée à chacune des valeurs indiquées par les clauses <strong>case</strong>, en séquence dans l'ordre d'apparition des clauses. Dès qu'une valeur indiquée par une clause est égale à la valeur calculée, le contrôle d'exécution est donné à la séquence d'instructions qui suit cette clause. Si aucune valeur ne correspond, le contrôle est donné à la clause <strong>default,</strong> si celle-ci existe, ou bien, l'instruction de choix multiples est considérée comme terminée.</p> 
 <p>L'instruction <strong>break</strong> permet d'arrêter l'instruction de choix multiples. Elle sera en général utilisée à la fin de la séquence d'instructions de chaque clause.</p> 
@@ -136,10 +134,38 @@ class SwitchExemple {
 } 
 ```
 
-<br/>
+La nouvelle syntaxe des expressions switch en Java, introduite avec Java 12 (JEP 325) et finalisée dans Java 14 (JEP 361), permet d'utiliser des flèches (->) pour rendre les instructions switch plus concises et de les transformer en expressions qui renvoient une valeur. Cette syntaxe améliore la lisibilité et réduit la verbosité par rapport au switch traditionnel.
 
+{{<inlineJava path="SwitchExpressionExample.java" lang="java">}}
+public class SwitchExpressionExample {
+    public static void main(String[] args) {
+        String mois = "Février";
+        
+        int jours = switch (mois) {
+            case "Janvier", "Mars", "Mai", "Juillet", "Août", 
+              "Octobre", "Décembre" -> 31;
+            case "Avril", "Juin", "Septembre", "Novembre" -> 30;
+            case "Février" -> {
+                int annee = 2024; // Exemple d'année
+                if (annee % 4 == 0 && (annee % 100 != 0 
+                  || annee % 400 == 0)) {
+                    yield 29; // Année bissextile
+                } else {
+                    yield 28;
+                }
+            }
+            default -> 
+              throw new IllegalArgumentException("Mois invalide : " + mois);
+        };
+        
+        System.out.println("Le mois de " + mois + " a " + jours + " jours.");
+    }
+}
+{{</inlineJava>}}
 
-##  Java pas à pas
+Observez le mot-clé `yield` utilisé dans les expressions switch  pour spécifier la valeur renvoyée par une branche d’un bloc switch lorsqu’une logique complexe nécessite plusieurs instructions.
+
+## Java pas à pas
 
 
 <p>Nous vous invitons maintenant à lire le chapitre <em>Structures de contrôle</em> du manuel  Java Pas à Pas par Robert Godin et Daniel Lemire.  Vous devez charger le  <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF</a>.</p>
@@ -153,7 +179,7 @@ class SwitchExemple {
 <p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
 
 
-<h2>Lecture dans le livre de référence</h2>
+### Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les structures de contrôle (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 5:</p>
 <ul>
@@ -161,7 +187,7 @@ class SwitchExemple {
 	<li>Section 2 : L'instruction switch</li>
 
 </ul>
-<h2>Vidéos suggérées</h2>
+### Vidéos suggérées
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0rANfWRfc_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

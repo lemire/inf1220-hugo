@@ -1,22 +1,24 @@
 ---
 
-title: "Exercices sur les structures de contrôle, les structures itératives, les structures de données"
+title: "Exercices sur les structures de contrôle, les structures de données, les structures itératives"
 weight: 5
 ---
 
-# Exercices sur les structures de contrôle, les structures itératives, les structures de données
+# Exercices sur les structures de contrôle, les structures de données, les structures itératives
 
-<h1>Questions/Réponses</h1>
+## Questions/Réponses
+
 <p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.</p>
 <p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.</p>
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
 
-<h2>Réponses uniques?</h2>
+## Réponses uniques?
 
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
 
-<h2>Question 1</h2>
+## Question 1
+
 <p>Si x == true et que l'on utilise le code suivant, quel sera la sortie en ligne de commande?</p>
 
 ```java  {style=github}
@@ -31,7 +33,8 @@ if(x != true && x == true) {
 <p>Le résultat affiché sera BBB, car x != true donnera Faux et x == true donnera Vrai. Par définition, Faux ET Vrai = FAUX</p>
 </details>
 
-<h2>Question 2</h2>
+## Question 2
+
 <p>Le code suivant contient 5 erreurs, veuillez les identifier :</p>
 
 ```java  {style=github}
@@ -66,14 +69,16 @@ if((x > 1) && (x <= 10)) {
 
 </details>
 
-<h2>Question 3</h2>
+## Question 3
+
 <p>Quelle est la différence entre une boucle while et une boucle do-while?</p>
 
 <details><summary>Réponse</summary>
 <p>Le contrôle se fait au départ dans la boucle while alors que le contrôle se fait à la fin dans le do-while. Dans la boucle while, il y a donc un contrôle avant même de faire la première itération.</p>
 </details>
 
-<h2>Question 4</h2>
+## Question 4
+
 <p>Quelle sera la sortie d'affichage de ce block switch-case et pourquoi?</p>
 
 ```java  {style=github}
@@ -98,21 +103,24 @@ switch (index) {
 <p>La sortie sera "Default", car la valeur de la variable index = 10 ne correspond à aucun des cas du switch. C'est donc le sous-bloc "Default" qui est exécuté.</p>
 </details>
 
-<h2>Question 5</h2>
+## Question 5
+
 <p>Vrai ou faux: un tableau de type int[10] occupera 40 octets en mémoire parce qu'il y a 10 entiers (int) et que chaque entier occupe 4 octets (32 bits).</p>
 
 <details><summary>Réponse</summary>
 <p>Faux. Il est vrai qu'il y a 10 entiers (int) et que chaque entier occupe 4 octets. Cependant, Java doit aussi garder une trace de la longueur du tableau (10 éléments). Il y a aussi d'autres contraintes. Il serait plus juste de dire que le tableau va utiliser plus de 40 octets. </p>
 </details>
 
-<h2>Question 6</h2>
+## Question 6
+
 <p>Supposons que dans un code, nous avons créé un tableau d'une dimension de 10 éléments (int[] tableau = new int[10]) et que nous accédons, suite à son instanciation, au 20e élément du tableau ( int x = tableau[20]), qu'adviendra-t-il?</p>
 
 <details><summary>Réponse</summary>
 <p>À l'exécution l'opération int x = tableau[20] va générer une erreur du type : java.lang.ArrayIndexOutOfBoundsException: 20, car nous tentons d'accéder à des index du tableau qui n'existe pas.</p>
 </details>
 
-<h2>Question 7</h2>
+## Question 7
+
 <p>Est-ce possible de créer une structure de données de type ArrayList d'entier en utilisant la déclaration suivante : ArrayList<int> = new ArrayList<int>(); ?</p>
 
 <details><summary>Réponse</summary>
@@ -125,7 +133,8 @@ list.add(5);
 
 </details>
 
-<h2>Question 8</h2>
+## Question 8
+
 <p>Votre employeur vous demande créer une fonction en Java qui vous permettra de trouver dans un tableau à deux dimensions, un couple {clé,valeur}. Pour démarrer, vous avez le code suivant, veuillez créer une fonction trouver qui reçoit en paramètre la clé et retourne la valeur :</p>
 
 ```java  {style=github}
@@ -189,7 +198,8 @@ public class Dictionnaire {
 
 </details>
 
-<h2>Question 9</h2>
+## Question 9
+
 <p>Montrer comment on peut trier un tableau d'entiers en Java.</p>
 
 <details><summary>Réponse</summary>
@@ -211,7 +221,8 @@ class Main {
 
 </details>
 
-<h2>Question 10</h2>
+## Question 10
+
 <p>Veuillez créer une fonction, recevant un ArrayList en entrée, et qui retourne une nouvelle ArrayList avec les éléments inversés, i.e. le premier élément à la fin, le dernier élément en premier et ainsi de suite.  </p>
 
 <details><summary>Réponse</summary>
@@ -272,7 +283,8 @@ for(String s : test) {
 
 </details>
 
-<h2>Question 11</h2>
+## Question 11
+
 <p>Vous devez créer une méthode supplémentaire au code de la Question #10, permettant de fusionner deux ArrayList ensemble. Cette méthode prend deux ArrayLists en paramètre et retourne le nouvel ArrayList fusionné.</p>
 
 <details><summary>Réponse</summary>
@@ -328,7 +340,8 @@ public class ArrayListUtils {
 
 </details>
 
-<h2>Question 12</h2>
+## Question 12
+
 <p>Veuillez écrire le code (classe et méthode(s)) permettant de faire afficher le texte suivant à la console. Vous ne pouvez utiliser qu'une seule fois la méthode System.out.println.</p>
 
 <p>
@@ -406,7 +419,8 @@ public class Main {
 </div>
 </details>
 
-<h2>Question 13</h2>
+## Question 13
+
 <p>Écrivez un programme efficace Java qui prend la chaîne de caractère « 124213 » et en extrait les nombres 1, 2, 4, 2, 1, 3.</p>
 
 <details><summary>Réponse</summary>
@@ -433,7 +447,8 @@ class Exemple {
 </div>
 </details>
 
-<h2>Question 14</h2>
+## Question 14
+
 <p>Qu’est-ce qui s’affiche à l’exécution du bout de code suivant :</p>
 
 ```java  {style=github}
@@ -461,7 +476,8 @@ public class Main {
 </div>
 </details>
 
-<h2>Question 15</h2>
+## Question 15
+
 <p>Soit les deux bouts de code suivants :</p>
 
 <p>a)</p>
@@ -496,7 +512,8 @@ for (int j=0; j < 10;j++) {
 </div>
 </details>
 
-<h2>Question 16</h2>
+## Question 16
+
 <p>Soit les deux bouts de code suivants :</p>
 
 <p>a)</p>
@@ -538,7 +555,8 @@ for (int i=0; i < 10; i++) {
 </div>
 </details>
 
-<h2>Question 17</h2>
+## Question 17
+
 <p>Soit le code suivant :</p>
 
 ```java  {style=github}
@@ -602,7 +620,8 @@ public class Main {
 </div>
 </details>
 
-<h2>Question 18</h2>
+## Question 18
+
 <p>Soit le code suivant :</p>
 
 ```java  {style=github}
@@ -633,33 +652,34 @@ public class Main {
 ```java  {style=github}
 import java.util.Scanner;
 public class Main {
-public static void main(String[] args) {
-System.out.println("Donnez un nombre entier");
-Scanner scan = new Scanner(System.in);
-int n = scan.nextInt();
-switch(n)
-{
-case 10 :
-System.out.println("Le nombre vaut 10");
-break;
-case 100 :
-System.out.println("Le nombre vaut 100");
-break;
-case 1000 :
-System.out.println("Le nombre vaut 1000");
-break;
-default:
-System.out.println("Le nombre n'est pas une puissance de 10 ou il est plus grand que 1000");
-break;
-}
-}
+  public static void main(String[] args) {
+    System.out.println("Donnez un nombre entier");
+    Scanner scan = new Scanner(System.in);
+    int n = scan.nextInt();
+    switch(n)
+    {
+      case 10 :
+      System.out.println("Le nombre vaut 10");
+      break;
+      case 100 :
+      System.out.println("Le nombre vaut 100");
+      break;
+      case 1000 :
+      System.out.println("Le nombre vaut 1000");
+      break;
+      default:
+      System.out.println("Le nombre n'est pas une puissance de 10 ou il est plus grand que 1000");
+      break;
+    }
+  }
 }
 ```
 
 </div>
 </details>
 
-<h2>Question 19</h2>
+## Question 19
+
 <p>Étant donné le tableau <tt>String[] x = new String[10]</tt>, que vaut <tt>x[0]</tt>.</p>
 
 <details><summary>Réponse</summary>
@@ -668,7 +688,8 @@ break;
 </div>
 </details>
 
-<h2>Question 20</h2>
+## Question 20
+
 <p>Énumérer toutes les paires d'entiers entre 0 et 1000 en ordre lexicographique.</p>
 
 <details><summary>Réponse</summary>

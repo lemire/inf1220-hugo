@@ -3,21 +3,23 @@ title: "Travail noté 2"
 weight: 7
 ---
 
-<h1>Travail noté 2 - Les types, opérateurs et méthodes</h1>
+# Travail noté 2 - Les types, opérateurs et méthodes
 
 <p>Avant de faire le travail, assurez-vous d'avoir fait tous les exercices et toutes les lectures. Posez des questions au besoin. Ne commencez le travail que lorsque vous êtes certain de bien maîtriser la matière.</p>
 
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
 
-<h2>Les reports de la date de fin de cours</h2>
+## Les reports de la date de fin de cours
 
 
 <p><strong>Rappel</strong>: le professeur ne peut pas modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les professeurs n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
 
 
 <p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
-<h2>Instructions de dépôt du travail noté :</h2>
+
+## Instructions de dépôt du travail noté
+
 <p>Vous devez remettre ce travail dans un fichier PDF et déposer celui-ci sur le site de dépôt des travaux de la TÉLUQ : <a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant</a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été  inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais  est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. </p>
 
 
@@ -41,7 +43,7 @@ weight: 7
 
 <p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>
 
-<h1>Question #1</h1>
+## Question #1
 
 <p>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer <tt>Cercle</tt>.</p>
 
@@ -84,7 +86,7 @@ System.out.println(c.perimetre());
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em> ».</p>
 
 
-<h2>Mettre en forme votre code Java</h2>
+### Mettre en forme votre code Java
 
 
 <p>Certains étudiants souhaitent publier leur code au sein de site web ou au sein de documents. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java. Certains éditeurs vous permettent aussi d'enjoliver votre code. </p>
@@ -92,7 +94,7 @@ System.out.println(c.perimetre());
 
 
 
-<h1>Question #2</h1>
+## Question #2
 
 
 
@@ -120,7 +122,7 @@ class Main {
 
 
 
-<h1>Question #3</h1>
+## Question #3
 
 
 <p>Quelle sera la valeur de 'a' après les lignes de code suivantes et pourquoi :</p>
@@ -130,7 +132,7 @@ int i = 3;
 int a = i++;
 ```
 
-<h1>Question #4</h1>
+## Question #4
 
 
 <p>Quelle sera la valeur (de la variable chaine) affichée par la ligne System.out.println(chaine) du code ci-dessous et pourquoi ? Donner une réponse concise en quelques phrases.</p>
@@ -156,7 +158,7 @@ public class TestMethode {
 }
 ```
 
-<h1>Question #5</h1>
+## Question #5
 
 <p>Quelle sera la valeur de la variable entier à la fin du code suivant et pourquoi ?</p>
 
@@ -170,7 +172,7 @@ int entier = (!a && (b | !a)) ? 10 : 20;
 
 <p>Indice: Assurez-vous de bien lire sur les opérateurs en Java avant de faire cette question.</p>
 
-<h1>Question #6</h1>
+## Question #6
 
 Expliquez en détail la différence entre les deux mises en oeuvre suivantes. Votre explication doit inclure un exemple de code illustrant la différence entre les deux morceaux de code.
 
@@ -198,5 +200,6 @@ public class Bonhomme {
 ```
 
 
-<h2>En terminant</h2>
+## En terminant
+
 <p>Dans plusieurs cas, vos travaux sont corrigés par un « correcteur ». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>

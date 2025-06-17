@@ -134,7 +134,6 @@ public class SerieTemporelle {
     
     public void calculerRegressionLineaire() {
         
-        //Calcul de la regression basé sur le code de : https://introcs.cs.princeton.edu/java/97data/LinearRegression.java.html
         int MAXN = 1000;
         double[] x = new double[MAXN];
         double[] y = new double[MAXN];
@@ -216,7 +215,6 @@ public class SerieTemporelle<T>  {
     
     public void calculerRegressionLineaire() {
         
-        //Calcul de la regression basé sur le code de : https://introcs.cs.princeton.edu/java/97data/LinearRegression.java.html
         int MAXN = 1000;
         double[] x = new double[MAXN];
         double[] y = new double[MAXN];

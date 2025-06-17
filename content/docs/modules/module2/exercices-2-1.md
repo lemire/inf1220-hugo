@@ -4,14 +4,8 @@ weight: 4
 ---
 
 
+# Exercices sur les classes, les variables, les types et les opérateurs
 
-# Module 2
-
-## Exercice 2.1
-
-## Exercices sur les classes, les variables, les types et les opérateurs
-
-# Comment faire ces exercices ?
 
 <p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.</p>
 
@@ -469,8 +463,7 @@ class Main {
 ```
 
 </details>
-</div>
-</div>
+
 
 
 

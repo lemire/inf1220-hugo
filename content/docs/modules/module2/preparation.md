@@ -20,7 +20,7 @@ weight: 1
 
 
 
-# Utilisation d'un environnement de programmation en ligne
+## Utilisation d'un environnement de programmation en ligne
 
 <p>Plusieurs étudiants préfèrent un environnement de développement conventionnel, installé sur leur PC. D'autres étudiants peuvent avoir une préférence pour les environnements en ligne qui ne nécessitent aucune installation.</p>
 
@@ -29,7 +29,7 @@ entièrement en ligne, suffisant pour les travaux du cours. Vous pouvez y avoir 
 [dès maintenant]({{< ref "/docs/environnement" >}}). Suivez le lien qui se trouve dans le menu du cours. Vous y trouverez
 des instructions. 
 
-## Autres systèmes en ligne
+### Autres systèmes en ligne
 
 <p>Outre le système inclut dans le cours, il y a plusieurs autres environnements en ligne, nous vous invitons à les explorer, en commençant  par les suggestions suivantes :</p>
 
@@ -52,7 +52,7 @@ des instructions.
 
 <p>Notez bien: Certains des exemples <a href="https://repl.it">repl.it</a> comprennent plusieurs fichiers. Comme dans plusieurs interfaces, repl.it ne permet de voir le contenu que d'un seul fichier à la fois. Par contre, il vous permet de naviguer entre différents fichiers. Nous verrons dans ce cours que Java exige que les "classes" soient définies au sein de fichiers du même nom, ce qui implique souvent que nous utilisions plusieurs fichiers avec des noms prédéterminés. Cette contrainte en ce qui a trait aux fichiers n'est pas spécifique à repl.it. En Java, il y a un lien direct entre le nom des fichiers et leur contenu. Dans ce cours, vous devez faire preuve de débrouillardise et nous supposons que vous trouverez comment faire pour naviguer et voir les différents fichiers.  </p>
 
-## Instructions détaillées pour Repl.it
+### Instructions détaillées pour Repl.it
 
 <p>Repl.it est une plateforme en ligne qui permet d’écrire, d’exécuter et de tester du code Java directement dans votre navigateur, sans avoir besoin d’installer un environnement de développement sur votre ordinateur. Pour commencer, accédez aux liens Repl.it fournis dans le cours. Cliquez sur un lien pour ouvrir le projet Java correspondant. Vous verrez une interface avec un éditeur de code à gauche, où le code est déjà chargé, et une console à droite pour afficher les résultats. Si vous n’êtes pas encore inscrit, créez un compte gratuit sur Repl.it en utilisant votre adresse e-mail ou un compte Google. Une fois connecté, vous pouvez modifier le code directement dans l’éditeur. Pour exécuter votre programme, cliquez sur le bouton vert « Run » en haut de la page. La console affichera les sorties ou les erreurs, ce qui vous permettra de vérifier si votre code fonctionne comme prévu.</p>
 
@@ -60,7 +60,7 @@ des instructions.
 
 
 
-# Installation du *Java Development Kit* (JDK)
+## Installation du *Java Development Kit* (JDK)
 
 
 
@@ -89,7 +89,7 @@ des instructions.
 
 
 
-# Utilisation d'un éditeur de texte
+## Utilisation d'un éditeur de texte
 
 <p>La plupart des langages de programmation s'utilisent avec des fichiers de texte. Le fichier n'est qu'une séquence de caractères sans autre structure particulière. L'outil le plus simple en programmation est donc le simple éditeur de texte. Comme le nom l'indique, l'éditeur de texte vise principalement à éditer des fichiers de texte. Notons que les traitements de texte (comme Word) ne sont pas fait pour éditer  des fichiers de texte. Par ailleurs, un éditeur de texte ne peut pas, par lui-même, compiler et exécuter des programmes. Il sert surtout à écrire le code.</p>
 
@@ -97,7 +97,7 @@ des instructions.
 
 <p>Nous recommandons Visual Studio Code plutôt que l'utilisation d'un environnement comme IDEA, Eclipse ou NetBeans. L'utilisation d'un éditeur de texte combiné avec le JDK vous met davantage en charge du développement.</p>
 
-<p><a id="intro" name="IDEA"></a></p><h1>Installation de l'IDE IntelliJ IDEA</h1>
+### Installation de l'IDE IntelliJ IDEA
 
 <p>Lecture suggérée : <a href="https://fr.wikipedia.org/wiki/Environnement_de_développement">Environnement de développement</a></p>
 
@@ -117,7 +117,7 @@ des instructions.
 
 <p>Les IDE ont la fâcheuse habitude d'automatiser plusieurs opérations ce qui ne pose pas de problème aux programmeurs expérimentés, mais qui est souvent déroutant pour les débutants. Les IDE vont souvent créer des répertoires, des « paquetages » et avoir différentes attentes quant à l'endroit où les différentes fonctions et classes doivent être. Le résultat net est que les étudiants sont souvent confrontés à des messages d'erreur qui les laissent perplexes après des modifications faites en utilisant l'interface graphique (par exemple, après le déplacement d'un fichier). Si vous utilisez un IDE, il faut apprendre à travailler selon les attentes de l'IDE. À terme, certains programmeurs trouvent que l'utilisation d'un IDE les rend plus productifs, mais quand on débute, l'IDE est un obstacle supplémentaire pour certains étudiants.</p>
 
-<p><a id="intro" name="Netbeans"></a></p><h1>Installation de l'IDE Netbeans</h1>
+### Installation de l'IDE Netbeans
 
 <p>Si vous avez installé IntelliJ IDEA, il n'est sans doute pas nécessaire d'installer aussi Netbeans. Cependant, vous pouvez installer les deux, pour comparer.</p> 
 <p>Cet IDE possède un éditeur visuel bien fait, stable et complet. Pour installer Netbeans (lors de la dernière mise à jour du cours, il s'agissait de la version Apache Netbeans 11; Depuis Janvier 2019, la gestion du projet Netbeans a passé de Oracle vers l'organisation Apache, vous pouvez utiliser les versions plus récentes sous Apache ainsi que la dernière version d'Oracle 8.2), vous devez suivre les étapes suivantes :</p><ol><li>Suivre le lien suivant: <a href="https://netbeans.apache.org/download/index.html">https://netbeans.apache.org/download/index.html</a></li><li>Télécharger la version "binaries" (déjà compilée).</li><li>Une fois le fichier .zip téléchargé, veuillez le décompresser dans un répertoire personnel. Ouvrez le répertoire ./netbeans/bin, les exécutables pour lancer Netbeans s'y trouvent.</li><li>Vous pouvez démarrer maintenant Netbeans. Au démarrage, vous pouvez spécifier dans quel répertoire vous voulez que vos projets de programmation soient « sauvegardés ». Par défaut, il s'agit de « C:\Users\VotreNomUtilisateur\Documents\NetBeansProjects ».</li></ol>
@@ -140,13 +140,13 @@ des instructions.
 <p>Si vous optez pour Eclipse, vous devrez vous en remettre au soutien technique et à la documentation de l'entreprise qui fournit le produit.</p>
 
 
-# Erreurs et avertissements
+## Erreurs et avertissements
 
 <p>Java pourra émettre certains messages lors de la compilation et de l'exécution de vos programmes. Il y a d'une part les messages d'erreur. Dans un tel cas, le programme ne peut être compilé ou exécuté. Il y a d'autre part les messages d'avertissement. Le plus souvent, on peut ignorer les messages d'avertissement. Ils servent avant tout à attirer l'attention du programmeur sur des problèmes potentiels, mais ils ne nuisent pas à la compilation et à l'exécution.</p>
 
 <p>Il est important de faire la différence entre une erreur et un avertissement. Vous ne devez pas confondre les deux concepts lorsque vous programmez. Soyez précis!</p>
 
-<p><a id="intro" name="Prof"></a></p><h1>Les choix du professeur</h1>
+## Les choix du professeur
 
 
 <p>S'il faut que je développe du code, j'utilise Visual Studio Code. <a href="https://github.com/lemire">Je suis actif au sein de plusieurs projets</a> et Visual Studio Code a plusieurs avantages. Il fonctionne pratiquement partout. Visual Studio Code me permet de "programmer" dans une multitude de langages, de LaTeX à Go en passant par Haskell, Markdown, C++, etc. Je peux facilement combiner Visual Studio Code a plusieurs autres outils. Je peux développer aussi bien sous docker qu'avec ssh, etc.  </p>

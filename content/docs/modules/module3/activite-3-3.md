@@ -5,94 +5,21 @@ weight: 4
 
 # Les structures de données de base
 
-<h1>Les tableaux et matrices</h1>
+Le langage Java possède toutes les stuctures de données nécessaires.
+Faisons-en rapidement le tour.
+
+## Les tableaux et matrices
 
 <p>Jusqu'à présent, lorsque nous avons créé une variable, elle ne contenait qu'une seule donnée qui pouvait être une donnée primitive ou une référence vers un objet. En effet, dans la programmation orientée objet, certaines structures ont un nombre fixe d'objets : il s'agit des tableaux. Il en existe deux types : les tableaux à une dimension et les matrices à deux ou trois dimensions.</p>
 <p>Les tableaux (array en anglais) sont très courants en programmation, car ils permettent d'organiser les données. À partir du moment où nous devons concevoir un programme devant manipuler un grand nombre de données, il devient intéressant pour nous de les rassembler dans des tableaux. Par exemple, pour un programme chargé d'organiser les nom et prénom des étudiants d'un cours, il ne serait pas efficace de déclarer une variable de type String pour chaque étudiant, car cela serait trop long. Par contre, les tableaux pourront nous aider à accélérer ce travail.</p>
-<h2>Indices</h2>
+
+### Indices
+
 <p>Un tableau est donc une liste de valeurs. Chacune d'entre elles est stockée dans le tableau à une position bien précise, appelée indice. Le tableau ci-dessous, nommé salaires, contient des nombres entiers. En Java, la première position dans le tableau est celle de l'indice 0. Le tableau des salaires possède 11 valeurs dont les indices vont de 0 à 10.</p>
- <table border="1" cellspacing="0" cellpadding="0"> 
-    <tbody> 
-      <tr> 
-        <td width="37"> 
-          <p style="text-align: center;">12</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">74</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">88</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">22</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">8</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">78</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">28</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">44</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">47</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">78</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">81</p> 
-        </td> 
-        <td width="60"><br /></td> 
-        <td width="60"> 
-          <p style="text-align: center;">Valeurs</p> 
-        </td> 
-      </tr> 
-      <tr> 
-        <td width="37"> 
-          <p style="text-align: center;">0</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">1</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">2</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">3</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">4</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">5</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">6</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">7</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">8</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">9</p> 
-        </td> 
-        <td width="37"> 
-          <p style="text-align: center;">10</p> 
-        </td> 
-        <td width="60"><br /></td> 
-        <td width="60"> 
-          <p style="text-align: center;">Indices</p> 
-        </td> 
-      </tr> 
-    </tbody> 
-  </table> 
+
+| 12 | 74 | 88 | 22 | 8 | 78 | 28 | 44 | 47 | 78 | 81 |   | Valeurs |
+|----|----|----|----|---|----|----|----|----|----|----|---|---------|
+| 0  | 1  | 2  | 3  | 4 | 5  | 6  | 7  | 8  | 9  | 10 |   | Indices |
 
 <p>Pour accéder à une valeur du tableau, nous utilisons le nom du tableau suivi de l'indice entre crochets. Par exemple, pour accéder au cinquième salaire du tableau, il suffit d'écrire : salaire [4]. La valeur sera donc 8. L'expression salaire [4] a donc comme valeur 8. L'indice d'un tableau est un simple entier, il est donc possible d'utiliser des variables ou constantes entre crochets comme dans l'exemple ci-dessous :</p>
 
@@ -103,7 +30,7 @@ int[] salaire = {12, 74, 88, 22, 8, 78, 28, 44, 47, 78, 81};
 System.out.println(salaire[4]);
 ```
 
-<h2>Déclarer et utiliser les tableaux</h2>
+### Déclarer et utiliser les tableaux
 
 <p>En Java, les tableaux sont des objets; donc, pour créer un nouveau tableau, il faudra utiliser l'opérateur new. La ligne de code suivante permet de créer un tableau de salaire horaire des 10 employés d'une entreprise.</p>
 
@@ -114,7 +41,33 @@ int[] salaire = new int[10];
 <p>Cela signifie simplement que nous déclarons une variable dont le nom est salaire, dont le type est int[] (tableau d'entiers de type primitif int). Dans le cas de tableaux contenant des nombres en utilisant des types de base (int, float, etc.), le contenu du tableau est initialisé avec des valeurs équivalent au zéro. Nous assignons ensuite un nouvel objet à cette variable. L'objet est un tableau de 10 entiers (int [10]). 
 Il est donc à remarquer qu'un tableau contient plusieurs valeurs qui doivent toutes avoir le même type. Nous ne pourrions pas créer un tableau qui contiendrait des int et des double par exemple. De plus, la taille du tableau étant décidé et fixée lors de la déclaration, elle ne pourra pas changer. Nous avons par conséquent un tableau statique (rien à voir avec les classes statiques ou le mot réservé static).</p>
 
-<iframe height="800px" width="100%" src="https://repl.it/@lemire/ex4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+{{<inlineJava path="Main.java" lang="java">}}
+public class Main {
+
+    public static void main(String[] args) {
+
+        final int MAX = 10;
+
+        int[] list = new int[MAX];
+
+        // Remplit le tableau
+        for (int i = 0; i < MAX; i++) {
+            list[i] = i * 20;
+        }
+
+        // On change la quatrième valeur
+        list[3] = 777;
+
+        // On affiche le contenu du tableau
+        for (int i = 0; i < MAX; i++) {
+            System.out.print(list[i] + " ");
+        }
+    }
+
+}
+{{</inlineJava>}}
+
+
 
 <p>Le résultat de l'exécution donnera ceci :</p> 
 <pre><strong>0 20 40 777 80 100 120 140 160 180 </strong></pre>
@@ -140,7 +93,7 @@ int[] tableau = new int[5];
 System.out.println (tableau.length); // Affiche 5 à la console
 ```
 
-<h2>Instanciation d'un tableau</h2>
+## Instanciation d'un tableau
 
 <p>Nous pouvons instancier autrement un tableau. Il suffit de donner directement les valeurs qu'il contient. Nous affecterons une <em>liste d'initialisation</em> ou <em>initialisateur</em> au tableau. Les éléments du tableau sont repris entre des accolades et séparés par des virgules. Par exemple, pour créer le tableau ci-dessous, nous pourrions écrire :</p> 
 
@@ -148,7 +101,10 @@ System.out.println (tableau.length); // Affiche 5 à la console
 int[] tableau = {20, 17, 21, 19, 18, 20};
 ```
 
-<p>Initialisateur <br />Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
+### Initialisateur
+
+
+Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
 
 ```java  {style=github}
 int[] tab = new int[3];
@@ -160,7 +116,8 @@ tab = {1, 2, 3};
 <pre>        Array constants can only be used in initializers 
 </pre> 
 
-<h2>Passer des tableaux en paramètre</h2>
+### Passer des tableaux en paramètre
+
 <p>Nous pouvons passer un tableau complet en paramètre à une méthode, car les tableaux ne sont rien d'autre que des objets. Il ne faut donc pas oublier que ce qui sera donné à la méthode n'est pas le tableau, ni une copie de celui-ci mais bien une copie de la référence vers le tableau. 
 Nous pouvons bien entendu passer en paramètre un seul élément d'un tableau. S'il s'agit d'une donnée primitive, une copie de celle-ci sera passée en paramètre. S'il s'agit d'un objet, une copie de la référence sera passée en paramètre. 
 La méthode ci-dessous déplace tous les éléments du tableau d'une position vers la droite.</p>
@@ -197,7 +154,7 @@ public class AfficheDeplacer {
 }
 ```
 
-<h2>Tableaux d'objets</h2>
+### Tableaux d'objets
 
 <p>Dans tous les exemples que nous avons vus jusqu'à présent, les tableaux contenaient uniquement des types primitifs. Dans la dernière partie de la section précédente, nous avons vu des tableaux qui pouvaient contenir des objets, ou plus précisément des références vers des objets. 
 Il est possible de stocker des objets dans un tableau. La ligne de code suivant crée un tableau de 20 objets de type String.</p>
@@ -206,7 +163,7 @@ Il est possible de stocker des objets dans un tableau. La ligne de code suivant 
 String[] phrases = new String[20];
 ```
 
-<h2>Quelques techniques utiles</h2>
+### Quelques techniques utiles
 
 <p>Nous sommes maintenant davantage en mesure de comprendre la signature de la méthode main. Nous voyons en paramètre un tableau de String. En réalité, lorsque nous lançons un programme Java, nous savons déjà que la méthode main sera automatiquement appelée, mais qu'il est possible de lui passer des paramètres. En fait, nous pouvons lui passer un tableau de String.
 
@@ -223,7 +180,7 @@ public static void main(String[] args) {
 }
 ```
 
-<h3>Trier un ensemble de données</h3>
+### Trier un ensemble de données
 
 <p>L'atout principal de l'ordinateur est sa capacité de traiter très rapidement une immense quantité de données (par exemple, la recherche d'éléments dans un ensemble selon des contraintes choisies par l'utilisateur ou encore le tri d'éléments en fonction d'un critère déterminé). 
 Le tri d'informations fait partie des nombreuses applications en informatique. Il y a n! (factoriel n) façons d'ordonner une collection de n éléments. Les données triées permettent une recherche d'informations plus efficace. Le choix d'un algorithme de tri est par conséquent un critère plus pertinent que la vitesse intrinsèque de l'ordinateur.</p>
@@ -258,7 +215,8 @@ public static int maximum(int a[]) {
 }
 ```
 
-<h2>Différents algorithmes de tri</h2>
+#### Différents algorithmes de tri
+
 <p>Les types de tri possibles sont les suivants :</p> 
   <ol type="1"> 
     <li>le <em>tri bulles (bubble sort);</em> </li> 
@@ -271,191 +229,72 @@ public static int maximum(int a[]) {
 
 <p>On peut trier un tableau facilement avec la méthode « sort » de la classe java.util.Arrays. <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html">La classe Arrays comprend plusieurs autres fonctions utiles</a>.</p>
 
-<h2>Les tableaux à plusieurs dimensions (Matrices)</h2>
+## Les tableaux à plusieurs dimensions (Matrices)
 
 <p>Les tableaux que nous avons utilisés jusqu'à présent sont des tableaux à une seule dimension. Il suffit d'un seul indice pour identifier un élément de ces types de tableaux. Ce sont donc de simples listes de valeurs.</p> 
-  <h2>Tableau à deux dimensions</h2> 
-  <p>Un tableau à deux dimensions est un tableau avec des lignes et des colonnes. Contrairement à un tableau à une dimension, il faut utiliser deux indices pour accéder aux éléments des tableaux à deux dimensions. Le premier indice représente la ligne et le second, la colonne. La figure ci-dessous, nommée Tableau à deux dimensions, représente un tableau à deux dimensions.</p> 
-  <p style="text-align: left;"> Tableau 1. Tableau à deux dimensions</p> 
-  <p> </p> 
-  <table dir="ltr" border="1" cellspacing="2" bordercolor="#000000" cellpadding="7" width="538"> 
-    <tbody> 
-      <tr> 
-        <td bgcolor="#ffffff" height="18" width="19%"> </td>
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">Colonne 0</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">Colonne 1</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">Colonne 2</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">Colonne 3</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p style="text-align: center;">Ligne 0</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">11</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">12</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">12</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">4</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p style="text-align: center;">Ligne 1</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">87</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">45</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">32</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">6</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p style="text-align: center;">Ligne 2</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">64</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">56</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">22</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%" style="text-align: center;">55</td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p style="text-align: center;">Ligne 3</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">37</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">32</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">91</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">33</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p style="text-align: center;">Ligne 4</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center" style="text-align: center;">93</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">35</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">54</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">43</p></font></font></td> 
-      </tr> 
-    </tbody> 
-  </table> 
-  <p> </p> 
-  <p align="left"><br /></p> 
-  <p>Pour avoir accès à un élément du tableau 1, il faut écrire tableau_1[Ligne][Colonne]. Ainsi :</p> 
-  <p>tableau_1[Ligne 0][Colonne 0] = 11</p> 
-  <p>tableau_1[Ligne 4][Colonne 2] = 54</p> 
-  <p>tableau_1[Ligne 2][Colonne 1] = 56</p> 
-  <p>....</p> 
-  <h2>Création de tableaux à deux dimensions</h2> 
-  <p>Pour déclarer un tableau à deux dimensions, il faut simplement écrire :</p> 
-  <p><em>typededonnées NonDuTableau [nombreDeLignes][nombreDeColonne]</em></p> 
-  <p>Plus concrètement, nous pouvons déclarer un tableau à deux dimensions pour inscrire des achats du mois en faisant :</p> 
+
+### Tableau à deux dimensions
+
+<p>Un tableau à deux dimensions est un tableau avec des lignes et des colonnes. Contrairement à un tableau à une dimension, il faut utiliser deux indices pour accéder aux éléments des tableaux à deux dimensions. Le premier indice représente la ligne et le second, la colonne. La figure ci-dessous, nommée Tableau à deux dimensions, représente un tableau à deux dimensions.</p>
+<p style="text-align: left;"> Tableau 1. Tableau à deux dimensions</p>
+
+|        | Colonne 0 | Colonne 1 | Colonne 2 | Colonne 3 |
+|--------|-----------|-----------|-----------|-----------|
+| Ligne 0| 11        | 12        | 12        | 4         |
+| Ligne 1| 87        | 45        | 32        | 6         |
+| Ligne 2| 64        | 56        | 22        | 55        |
+| Ligne 3| 37        | 32        | 91        | 33        |
+| Ligne 4| 93        | 35        | 54        | 43        |
+
+<p>Pour avoir accès à un élément du tableau 1, il faut écrire tableau_1[Ligne][Colonne]. Ainsi :</p> 
+<p>tableau_1[Ligne 0][Colonne 0] = 11</p> 
+<p>tableau_1[Ligne 4][Colonne 2] = 54</p> 
+<p>tableau_1[Ligne 2][Colonne 1] = 56</p> 
+<p>....</p> 
+
+### Création de tableaux à deux dimensions
+
+<p>La première dimension spécifie que le tableau contient cinq éléments et représente les cinq lignes achats.  La seconde dimension spécifie que chacun de ces cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p>
+
+|       | semaine 1 | semaine 2 | semaine 3 | semaine 4 |
+|-------|-----------|-----------|-----------|-----------|
+| 2010  | 11        | 123       | 455       | 4         |
+| 2009  | 87        | 45        | 32        | 6         |
+| 2008  | 64        | 56        | 22        | 55        |
+| 2007  | 37        | 32        | 91        | 33        |
+| 2006  | 93        | 35        | 54        | 43        |
+
+<p>Pour déclarer un tableau à deux dimensions, il faut simplement écrire :</p> 
+<p><em>typededonnées NonDuTableau [nombreDeLignes][nombreDeColonne]</em></p> 
+<p>Plus concrètement, nous pouvons déclarer un tableau à deux dimensions pour inscrire des achats du mois en faisant :</p> 
 
 ```java  {style=github}
 double achats [][]; //achats est ici un tableau à deux dimensions de type double des achats.
 ```
 
-  <p>Une fois que le tableau est déclaré, il faut le créer en utilisant le mot clé <em>new.</em></p> 
-  <p>Ainsi, pour créer les achats des quatre semaines du mois de juillet des cinq dernières années, nous allons faire :</p> 
+<p>Une fois que le tableau est déclaré, il faut le créer en utilisant le mot clé <em>new.</em></p> 
+<p>Ainsi, pour créer les achats des quatre semaines du mois de juillet des cinq dernières années, nous allons faire :</p> 
 
 ```java  {style=github}
 achats = new double [5][4];
 ```
 
-  <p>La première dimension spécifie que le tableau contient cinq éléments et représente les cinq lignes achats.  La seconde dimension spécifie que chacun de ces cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p> 
-  <p> </p> 
-  <table dir="ltr" border="1" cellspacing="2" bordercolor="#000000" cellpadding="7" width="538"> 
-    <tbody> 
-      <tr> 
-        <td bgcolor="#ffffff" height="18" width="19%"> </td>
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">semaine 1</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">semaine 2</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">semaine 3</p></font></font></td> 
-        <td bgcolor="#ffffff" height="18" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">semaine 4</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p>2010</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">11</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">123</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">455</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">4</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p>2009</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">87</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">45</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">32</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">6</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p>2008</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">64</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">56</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">22</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"> 
-          <p align="center">55</p> 
-        </td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p>2007</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">37</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">32</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">91</p></font></font></td> 
-        <td width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">33</p></font></font></td> 
-      </tr> 
-      <tr> 
-        <td bgcolor="#ffffff" width="19%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p>2006</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">93</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">35</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">54</p></font></font></td> 
-        <td bgcolor="#c0c0c0" width="20%"><font size="3" face="Calibri"><font size="3" face="Calibri"> 
-              <p align="center">43</p></font></font></td> 
-      </tr> 
-    </tbody> 
-  </table> 
-  <p> </p> 
-  <p><strong><u>Achats</u></strong></p> 
-  <p>Il faut noter ici que rien ne nous empêche de déclarer et de créer en même temps un tableau. Pour cela, il faut simplement faire :</p> 
+<p>La première dimension spécifie que le tableau contient cinq éléments et représente les cinq lignes achats.  La seconde dimension spécifie que chacun de ces cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p> 
+<p> </p> 
+
+
+
+|       | Semaine 1 | Semaine 2 | Semaine 3 | Semaine 4 |
+|-------|-----------|-----------|-----------|-----------|
+| 2010  | 11        | 123       | 455       | 4         |
+| 2009  | 87        | 45        | 32        | 6         |
+| 2008  | 64        | 56        | 22        | 55        |
+| 2007  | 37        | 32        | 91        | 33        |
+| 2006  | 93        | 35        | 54        | 43        |
+
+<p> </p> 
+<p><strong><u>Achats</u></strong></p> 
+<p>Il faut noter ici que rien ne nous empêche de déclarer et de créer en même temps un tableau. Pour cela, il faut simplement faire :</p> 
 
 ```java  {style=github}
 typeDeTableau [][] nomDuTableau = new typeDeTableau [nombreDeLigne][nombreDeColonne];
@@ -468,7 +307,9 @@ double[][] Achats = new double [5][4];
 ```
 
   <p>Ainsi <em>Achats</em> est déclaré et créé simultanément.</p> 
-  <h2>Manipulation d'un tableau à 2 dimensions</h2> 
+ 
+### Manipulation d'un tableau à 2 dimensions
+
   <p>Pour accéder à un élément du tableau <em>Achats</em>, il faut écrire, par exemple :</p> 
   <p>Achats [0][0] = 11 pour l'élément à la ligne 0 colonne 0. Il est cependant important de noter que si nous avons des milliers d'éléments, cette façon de faire ne sera pas commode. Ainsi, avec deux boucles <em>for </em>imbriquées, nous pouvons accéder plus facilement aux éléments de Achats. La portion de programme suivant le montre facilement :</p> 
 
@@ -494,7 +335,8 @@ typeDeTableau nomDuTableau [][] = { { }, {}, {}, etc...};
 String etudiants[][] = { {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"} etc...};
 ```
 
-  <h2>Tableaux multidimensionnels</h2> 
+### Tableaux multidimensionnels
+
   <p>Java ne se limite pas seulement aux tableaux à deux dimensions. Nous pouvons aussi déclarer des tableaux à plus de deux dimensions. Pour déclarer un tableau à trois dimensions, par exemple, il suffit de faire : </p> 
 
 ```java  {style=github}
@@ -520,11 +362,51 @@ for (int i = 0; i < 5; i++) {
 ```
 
 <p><a id="intro" name="section2"></a></p>
-<h1>Les ArrayLists</h1>
+
+## Les ArrayLists
 
 <p>Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "ArrayList<String>, ArrayList<Double>, ArrayList<ArrayList<Integer>>" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.</p>
 
-<iframe height="400px" width="100%" src="https://repl.it/@lemire/ArraysArraysArrays?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    	
+    	
+    	ArrayList<String> list = new ArrayList<String>();
+        
+    	//Permet d'ajout un élément
+    	list.add("Valeur1");
+
+    	//Permet de modifier une valeur à un index particulier
+    	list.set(0, "Valeur2");
+    	            
+    	//Permet d'accéder à un élément
+    	System.out.println(list.get(0));
+    	            
+    	//Permet de vérifier si la structure est vide ou non
+    	System.out.println(list.isEmpty());
+    	            
+    	//Permet de retirer un élément
+    	list.remove(0);
+    	            
+    	//Permet de retourner une version tableau de l'ArrayList. 
+    	String[] tableau = new String[list.size()];
+      for(int i = 0; i < list.size(); i++) {
+        tableau[i] = (String)list.get(i);
+      } 
+      // Attention: list.toArray() retourne 
+      // un object de type Object[]. The type
+      // String[] n'est pas un sous-type du 
+      // type Object[]. On ne peut donc pas faire:
+      //
+      // String[] tableau = list.toArray(); // Non!!!
+  }
+}
+{{</inlineJava>}}
 
 <p>Comme nous l'avions vu lors de la présentation de la structure d'itération while, il est possible d'itérer rapidement parmi les éléments d'une ArrayList. Pour ce faire, voici trois façons d'itérer parmi les éléments : </p>
 
@@ -552,7 +434,8 @@ while(it.hasNext()) {
 <p>En conclusion, les ArrayList sont des structures de données utiles. Vous verrez dans la suite du cours plusieurs utilisations des ArrayList.</p>
 
 <p><a id="intro" name="section3"></a></p>
-<h1>Autres structures de données</h1>
+
+## Autres structures de données
 
 <p>Un algorithme est une «procédure systématique visant à résoudre un problème ou à atteindre une fin donnée, en particulier par un ordinateur».  La programmation de la solution d'un programme passe généralement par la conception (implicite ou explicite) d'un algorithme. Pour un problème comme celui du tri en ordre alphabétique d'une liste de termes, on peut recourir à plusieurs algorithmes différents. Certains algorithmes seront plus rapides, d'autres plus lents.</p>
 
@@ -592,11 +475,33 @@ Pour chaque élément de l'ensemble {1,...,n}:
 	<li>HashMap. Permet de créer une structure de données liant une clé (key) à une valeur (value). Très utile pour la recherche d'information en temps constant O(1), donc pas besoin d'itérer dans toute une liste (O(N) si en désordre, sinon O(log n) si classé). Cette structure de données utilise des fonctions de <a href="https://fr.wikipedia.org/wiki/Fonction_de_hachage">hachage</a> pour convertir la clé en un index dans un tableau : <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html</a> et <a href="https://www.tutorialspoint.com/java/java_hashmap_class.htm">https://www.tutorialspoint.com/java/java_hashmap_class.htm</a></li>
 </ul>
 
-<h2>Lecture dans le livre de référence</h2>
+## Lambdas
+
+Une fonction lambda, ou expression lambda, est une fonction anonyme concise définie sans nom, souvent utilisée pour des opérations simples et ponctuelles. Elle permet d'écrire du code plus compact, notamment dans des contextes où une fonction est passée en argument, comme pour des opérations de filtrage ou de tri. En Java, par exemple, les lambdas s'appuient sur les interfaces fonctionnelles, qui possèdent une unique méthode abstraite. Leur syntaxe est de la forme (paramètres) -> expression ou (paramètres) -> { instructions; } pour des blocs plus complexes.
+
+Voici un exemple de code Java avec une méthode main utilisant une lambda pour trier une liste de chaînes par longueur :
+
+{{<inlineJava path="RecordExample.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.Comparator;
+
+public class ExempleLambda {
+    public static void main(String[] args) {
+        List<String> mots = Arrays.asList("chat", "éléphant", "chien", "girafe");
+        mots.sort((a, b) -> a.length() - b.length());
+        System.out.println("Mots triés par longueur : " + mots);
+    }
+}
+{{</inlineJava>}}
+
+Ce code définit une liste de mots, utilise une lambda pour trier les éléments par longueur croissante, puis affiche le résultat. La lambda (a, b) -> a.length() - b.length() remplace une implémentation complète de Comparator.
+
+## Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les structures de données(optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
 
-<h2>Vidéos</h2>
+## Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VdvUYGs17Ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

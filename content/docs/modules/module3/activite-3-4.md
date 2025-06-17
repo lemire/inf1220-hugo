@@ -5,16 +5,14 @@ weight: 6
 
 # Les exceptions
 
-<h1>Les erreurs/exceptions en Java</h1>
+## Les erreurs/exceptions en Java
 
 <p>La grande majorité des langages de programmation modernes peuvent générer des fautes à la compilation (par exemple l'oubli d'un ; à la fin d'une ligne de code) et à l'exécution. Dans le langage Java, lorsqu'il y a une faute à l'exécution, une exception ou une erreur particulière est générée par la machine virtuelle Java (JVM) : StackOverflowError, DataFormatException, etc. Il faut distinguer d'abord ce qu'est une exception et une erreur. Une erreur (les classes dérivées de <a href="https://docs.oracle.com/javase/8/docs/api/?java/lang/Error.html">Error</a>) est un événement grave que tout "bon" logiciel ne devrait pas "attraper" (avec le try-catch) et amener la fin de l'exécution du programme. Une exception (les classes dérivées de <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">Exception</a>) est une faute qui peut être gérée, ou non, par le programme et que l'on peut qualifier de moins grave. 
 </p>
 
 <p>La gestion des erreurs et des exceptions par un programme permet d'ajouter de la fiabilité et de permettre à un programme à continuer de fonctionner malgré des erreurs internes ou externes. Cette gestion permet également de notifier les utilisateurs ou les développeurs de la génération d'une faute. Par exemple, si une application nécessite l'ouverture d'une communication TCP/IP entre le programme et un serveur externe, et que cette communication est coupée pour une raison externe à l'application (ex. perte du réseau). Il est alors raisonnable d'informer l'utilisateur et/ou de gérer cette exception, par exemple, en tentant après un certain délai une nouvelle connexion au serveur.</p>
 
-<p><a id="intro" name="section2"></a></p>
-
-<h1>La structure Try-Catch</h1>
+## La structure Try-Catch
 
 <p>La structure try-catch permet "d'enrober" une partie du code dans une structure permettant de récupérer les erreurs ou fautes lancées par la JVM ou l'application et gérer celles-ci. Voici la structure générale d'un try-catch pour une exception et une erreur:</p>
 
@@ -91,8 +89,7 @@ try {
 <p>Les erreurs et exceptions peuvent être causées par les développeurs ayant introduit des "bugs" dans leur logiciel, par exemple l'accès à un index hors de la taille d'un tableau ou bien une division par zéro. Elles peuvent également être lancées volontairement par les programmeurs dans certaines conditions (voir section suivante). Enfin, comme nous l'avions introduit plus tôt, les exceptions ou erreurs peuvent également être produites par des événements externes au programme et sont hors de contrôle des développeurs, par exemple un lien réseau perdu, l'entrée d'un caractère inconnu ou non géré par l'utilisateur (ex. symbole chinois), fichier corrompu, etc.</p>
 
 
-<p><a id="intro" name="section3"></a></p>
-<h1>Lancer des exceptions</h1>
+## Lancer des exceptions
 
 <p>Il est possible dans une application de lancer des exceptions dans le code en utilisant le mot-clé "throw" et le faisant suivant par l'instanciation d'un objet de type Exception ou ses sous-classes (l'héritage sera vu dans le prochain module) : NullPointerException, SQLException, etc. : </p>
 
@@ -105,7 +102,9 @@ throw new SQLException("USER DOESN'T EXIST");
 
 <p>Toutefois, une fois une exception lancée, il est nécessaire de la récupérée à un certain moment, sinon, elle remontera de méthode en méthode jusqu'à la méthode "main" et amènera l'arrêt du programme. Pour ce faire, il faut soit : attraper la faute dans une structure try-catch ou bien lancer l'exception à la méthode ayant invoqué la méthode où l'exception est lancée. Pour ce faire, il faut ajouter à la fin de la description d'une méthode/fonction, le mots-clé "throws". Il y a donc une hiérarchie d'appel de méthode et si l'exception n'est pas attrapée, celle-ci remontera les appels jusqu'au niveau supérieur, soit la méthode main. Voici un exemple pour illustrer cette remontée d'une exception : </p>
 
-```java  {style=github}
+
+
+{{<inlineJava path="ExempleTryCatch.java" lang="java">}}
 import java.time.DateTimeException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -119,18 +118,21 @@ public class ExempleTryCatch {
         try {   
             ex.deuxiemeMethode();
         } catch (Exception ex1) {
-            Logger.getLogger(ExempleTryCatch.class.getName()).log(Level.SEVERE, null, ex1);
+            Logger.getLogger(
+                ExempleTryCatch.class.getName()).log(
+                    Level.SEVERE, null, ex1);
         }
         
         try {
             ex.quatriemeMethode();
         } catch (Exception ex1) {
-            Logger.getLogger(ExempleTryCatch.class.getName()).log(Level.SEVERE, null, ex1);
+            Logger.getLogger(
+                ExempleTryCatch.class.getName()).log(
+                    Level.SEVERE, null, ex1);
         }
     }
     
     public void premiereMethode() throws NullPointerException {
-        // Création d'une faute
         String test = null;
         test.charAt(0);
     }
@@ -148,15 +150,13 @@ public class ExempleTryCatch {
     }  
 
 }
-```
+{{</inlineJava>}}
 
-<iframe height="1000px" width="100%" src="https://repl.it/@lemire/ex5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-<h2>Lecture dans le livre de référence</h2>
+### Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.</p>
 </ul>
 
-<h2>Vidéos</h2>
+### Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UEISfoJaOyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

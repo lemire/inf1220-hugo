@@ -55,22 +55,20 @@ weight: 4
 
 <strong>Exemples&nbsp;:</strong>
 <p>Contenu du fichier partie1.txt<br />
-<code style="width:50%;white-space:pre-wrap">
-001 012 023 034 045 056 067 078 089 102 113 124 135 146 157 168 179 181 203 214 225 236 247 258 269 271 282 304 315 326 337 348 359 361 372 383 405 416 427 438 449 451 462 473 484 506 517 528 539 541 552 563 574 585 607 618 629 631 642 653 664 675 686 708 719 721 732 743 754 765 776 787 809 811 822 833 844 855 866 877 888 
+<code style="width:50%;white-space:pre-wrap">001 012 023 034 045 056 067 078 089 102 113 124 135 146 157 168 179 181 203 214 225 236 247 258 269 271 282 304 315 326 337 348 359 361 372 383 405 416 427 438 449 451 462 473 484 506 517 528 539 541 552 563 574 585 607 618 629 631 642 653 664 675 686 708 719 721 732 743 754 765 776 787 809 811 822 833 844 855 866 877 888 
 </code>
 <p>Contenu du fichier partie2.txt<br />
-<code style="width:50%;white-space:pre-wrap">
-016 112 214 319 417 511 618 713 815 027 129 221 328 425 523 626 722 824 033 138 235 332 436 534 631 737 839 048 141 243 347 449 545 644 746 842 059 157 252 351 454 556 655 758 853 065 164 266 363 462 568 667 769 861 074 173 279 376 471 577 672 775 878 081 186 288 385 483 582 689 784 887 092 195 297 394 498 599 693 791 89
+<code style="width:50%;white-space:pre-wrap">016 112 214 319 417 511 618 713 815 027 129 221 328 425 523 626 722 824 033 138 235 332 436 534 631 737 839 048 141 243 347 449 545 644 746 842 059 157 252 351 454 556 655 758 853 065 164 266 363 462 568 667 769 861 074 173 279 376 471 577 672 775 878 081 186 288 385 483 582 689 784 887 092 195 297 394 498 599 693 791 89
 </code>
 
 <p>Contenu du fichier partie3.txt<br />
-<code style="width:50%;white-space:pre-wrap">
-014 116 218 313 411 517 615 712 819 022 127 225 324 428 529 623 726 821 031 133 239 335 436 532 637 734 838 045 148 246 349 447 541 642 743 844 057 159 252 356 454 553 651 758 855 063 161 264 362 465 568 669 767 866 079 174 273 371 472 576 678 775 877 086 182 287 388 489 585 684 781 883 098 195 291 397 493 594 696 799 892
+<code style="width:50%;white-space:pre-wrap">014 116 218 313 411 517 615 712 819 022 127 225 324 428 529 623 726 821 031 133 239 335 436 532 637 734 838 045 148 246 349 447 541 642 743 844 057 159 252 356 454 553 651 758 855 063 161 264 362 465 568 669 767 866 079 174 273 371 472 576 678 775 877 086 182 287 388 489 585 684 781 883 098 195 291 397 493 594 696 799 892
 </code>
 
 <p>Dans ces exemples, les données ne sont pas nécessairement correctes. C'est votre travail de créer un programme qui peut traiter les erreurs.</p>
 
-<p>Vous pouvez créer un tel fichier sur votre machine avec un éditeur de texte ou vous pouvez utiliser <a href="https://repl.it/@lemire/hw?lite=true">le projet repl.it préconfiguré</a> où ces fichiers apparaissent déjà.</p>
+<p>Vous pouvez créer un tel fichier sur votre machine avec un éditeur de texte, vous pouvez
+utiliser le système du site du cours,  ou vous pouvez utiliser <a href="https://repl.it/@lemire/hw?lite=true">le projet repl.it préconfiguré</a> où ces fichiers apparaissent déjà.</p>
 
 <strong>Fonctionnalités/classes demandées</strong>
 
@@ -88,6 +86,13 @@ Votre programme doit faire trois opérations spécifiques:
 
 
 <p>Si le code de votre solution n'est pas du Java valable, s'il ne compile pas, une note de zéro pourra être attribuée. Pour réussir ce cours, vous devez être capable d'écrire du code Java fonctionnel et correct.</p>
+
+
+## En ligne sur le site du cours
+
+Vous pouvez écrire votre programme directement sur le site du cours.
+
+{{<javaMultiRunner files="Travail4.java;partie1.txt;partie2.txt;partie3.txt">}}
 
 <h2>Repl.it</h2>
 <p>Vous pouvez écrire votre programme en ligne avec repl.it.</p>

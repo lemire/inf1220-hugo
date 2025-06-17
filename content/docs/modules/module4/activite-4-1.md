@@ -23,11 +23,9 @@ System.out.print("Imprimer des chaînes de caractères");
 
 System.out.print("On peut additionner des String et d'autres types grâce à l'auto-boxing" + 5 + "-" + 'a');
 
-// Permet d'ajouter un caractère à une sortie. Reviens à faire un print
 System.out.append('c');
 
 try {
-    // Permet d'imprimer un tableau de byte dans le flux. Peut provoquer une exception, si il y a un problème avec le flux (fichier fermé).
     // Ici ça fonctionne
     System.out.write("Ça marche".getBytes());
 

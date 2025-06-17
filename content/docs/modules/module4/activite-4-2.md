@@ -9,97 +9,15 @@ weight: 2
 
 <p>Pour manipuler les flux d'entrée et de sortie, nous utilisons les classes du package java.io. Les données sont manipulées suivant deux principes : la lecture/écriture en flux binaire ou en flux texte. Le tableau ci-dessous représente les différents flux que nous pouvons manipuler ainsi que les classes abstraites de base, l'implémentation, les fichiers et les tampons d'entrée-sortie qui leur sont associés.</p>
 
-<table border="1" cellpadding="0" width="538"> 
-      <tbody> 
-        <tr> 
-          <td width="14%"><br /></td> 
-          <td width="21%"> 
-            <p style="text-align: center;"><strong>flux texte (lecture)</strong></p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;"><strong>flux texte (ecriture )</strong></p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;"><strong>flux binaire (lecture )</strong></p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;"><strong>flux binaire (ecriture)</strong></p> 
-          </td> 
-        </tr> 
-        <tr> 
-          <td width="14%"> 
-            <p style="text-align: center;"><strong>classe Abstraite <br />de base</strong></p> 
-          </td> 
-          <td width="21%"> 
-            <p style="text-align: center;">Reader</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">Writer</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">InputStream</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">OutputStream</p> 
-          </td> 
-        </tr> 
-        <tr> 
-          <td width="14%"> 
-            <p style="text-align: center;"><strong>Implémentation</strong></p> 
-          </td> 
-          <td width="21%"> 
-            <p style="text-align: center;">InputStreamReader</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">PrintWriter</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">DataInputStream</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">DataOutputStream</p> 
-          </td> 
-        </tr> 
-        <tr> 
-          <td width="14%"> 
-            <p style="text-align: center;"><strong>Fichier</strong></p> 
-          </td> 
-          <td width="21%"> 
-            <p style="text-align: center;">FileReader</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">FileWriter</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">FileInputStream</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">FileOutputStream</p> 
-          </td> 
-        </tr> 
-        <tr> 
-          <td width="14%"> 
-            <p style="text-align: center;"><strong>Buffer E/S</strong></p> 
-          </td> 
-          <td width="21%"> 
-            <p style="text-align: center;">BufferedReader</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">BufferedWriter</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">BufferedInputStream</p> 
-          </td> 
-          <td> 
-            <p style="text-align: center;">BufferedOutputStream</p> 
-          </td> 
-        </tr> 
-      </tbody> 
-    </table> 
+|                      | Flux texte (lecture) | Flux texte (écriture) | Flux binaire (lecture) | Flux binaire (écriture) |
+|----------------------|----------------------|-----------------------|------------------------|-------------------------|
+| Classe abstraite de base | Reader               | Writer                | InputStream            | OutputStream            |
+| Implémentation       | InputStreamReader    | PrintWriter           | DataInputStream        | DataOutputStream        |
+| Fichier              | FileReader           | FileWriter            | FileInputStream        | FileOutputStream        |
+| Buffer E/S           | BufferedReader       | BufferedWriter        | BufferedInputStream    | BufferedOutputStream    |
 
-<p><a id="intro" name="section1"></a></p>
 
-<h1>La classe File</h1>
+## La classe File
 
 <p>Pour travailler avec les fichiers et les répertoires, nous utilisons la classe File. Un objet de cette classe peut représenter un fichier ou un répertoire.
 
@@ -136,8 +54,7 @@ if (unFichier.createNewFile()) {
 }
 ```
 
-<p><a id="intro" name="section2"></a></p>
-<h1> Lecture d'un fichier</p>
+## Lecture d'un fichier
 
 <h2>Lecture dans un fichier de bas niveau</h2>
 
@@ -230,8 +147,7 @@ try {
 }
 ```
 
-<p><a id="intro" name="section3"></a></p>
-<h1>Écriture d'un fichier texte</h1>
+## Écriture d'un fichier texte
 
 <p>Nous aborderons maintenant l'écriture de données vers un fichier texte. Cette dernière sert à les stocker lorsque le programme ne s'exécute plus et en vue de pouvoir les récupérer plus tard ou les envoyer à d'autres personnes. Comme vous le verrez, l'écriture de fichiers texte est assez similaire à leur lecture. Pour écrire, nous allons utiliser les trois classes suivantes FileWriter, BufferedWriter et PrintWriter.</p>
 
@@ -317,9 +233,31 @@ class MaClasse {
 }
 ```
 
+## Path et Files
+
+La lecture de fichiers en Java est une tâche courante qui a évolué avec les versions modernes du langage, notamment à partir de Java 7 avec l’introduction de l’API java.nio.file. Cette API, plus robuste et flexible que l’ancienne java.io, simplifie la gestion des fichiers et des répertoires. À partir de Java 21, les développeurs bénéficient d’une syntaxe encore plus concise grâce aux flux (Stream) et aux améliorations des performances, tout en conservant une gestion efficace des erreurs.
+
+Un concept clé ici est l’utilisation de Path et Files. Un objet Path, créé via Path.of, représente un chemin dans le système de fichiers de manière portable, compatible avec différents systèmes d’exploitation. La classe Files, quant à elle, propose des méthodes statiques pour manipuler les fichiers, comme Files.lines, qui lit un fichier sous forme de flux de lignes. Ce flux permet de traiter les données de manière fonctionnelle, en utilisant des lambdas pour des opérations comme le filtrage ou la transformation.
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+
+void main() {
+  try {
+    Path chemin = Path.of("Main.java");
+    Files.lines(chemin)
+          .forEach(ligne -> System.out.println("Lue : " + ligne));
+  } catch (IOException e) {
+    System.out.println("Erreur de lecture : " + e.getMessage());
+  }
+}
+
+{{</inlineJava>}}
 
 
-<h2>Lecture dans le livre de référence</h2>
+## Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur les flux de fichier (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 20:</p>
 <ul>
@@ -329,6 +267,6 @@ class MaClasse {
         <li>Section 6 : La gestion des fichiers avec la classe File</li>
 </ul>
 
-<h2>Vidéo</h2>
+## Vidéo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7hZVRDxpbCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

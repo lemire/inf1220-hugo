@@ -4,30 +4,6 @@ weight: 3
 ---
 
 
-## Est-ce que j'ai ce qu'il faut pour étudier l'informatique à l'Université ?
-
-
-<p>Le cours INF 1220 est souvent le premier cours universitaire d'informatique que certains étudiants suivent. Tous les
-    étudiants ne réussissent pas. Il est important de s'auto-évaluer. Voici quelques questions que vous devriez vous
-    poser :</p>
-
-<ol>
-    <li>Est-ce que je dispose de 9 heures par semaine pour travailler sur ce cours ? Est-ce que je suis prêt à investir
-        des dizaines d'heures afin de compléter un module du cours ?</li>
-    <li>Est-ce que je suis disposé à lire des dizaines de pages par semaine dans un manuel ?</li>
-    <li>Est-ce que quand j'ai une question, j'arrive facilement à faire des recherches et comprendre l'information que
-        je trouve ? Est-ce que je suis intellectuellement débrouillard ?</li>
-    <li>Est-ce que je suis quelqu'un de consciencieux, quelqu'un qui aime suivre exactement des consignes précises ?
-    </li>
-    <li>Est-ce que j'ai de fortes affinités pour les mathématiques, la logique, les raisonnements formels, les preuves
-        mathématiques ?</li>
-    <li>Est-ce que je trouve facile de suivre des consignes logiques complexes, par exemple des règles comptables ou les
-        règles de jeux avancés ?</li>
-    <li>Est-ce que je m'intéresse de longue date aux ordinateurs et à leur fonctionnement ?</li>
-    <li>Est-ce que j'aime utiliser des outils informatiques (par ex., des pages web, des chiffriers électroniques, etc.)
-        ?</li>
-    <li>Est-ce que je me suis intéressé par le passé à la programmation informatique ?</li>
-</ol>
 
 
 ## Connaissances technologiques
@@ -40,6 +16,19 @@ weight: 3
     mémoire informatique.</p>
 
 ## Mathématiques
+
+Pour pouvoir faire de l'informatique, il convient de connaître un peu les mathématiues. Ces notions, loin d’être de simples outils, forment un réseau de significations qui structurent le raisonnement mathématique.
+
+La division euclidienne, par exemple, offre une perspective fondamentale sur la décomposition des nombres. Elle ne se limite pas à un calcul, mais exprime une relation entre un dividende, un diviseur, un quotient et un reste. Considérons \( 75 \div 8 \) : le quotient est \( 9 \) et le reste \( 3 \), car \( 8 \times 9 = 72 \) et \( 75 - 72 = 3 \). De même, pour \( 20 \div 6 \), le quotient est \( 3 \) et le reste \( 2 \). Le reste, toujours inférieur au diviseur, capture l’excédent d’une division imparfaite. Cette idée devient puissante lorsqu’on remarque, par exemple, que si \( x \div y \) laisse un reste de \( 1 \), alors \( x - 1 \) est un multiple de \( y \), révélant une propriété intrinsèque de divisibilité.
+
+Les nombres se déclinent en catégories – entiers, réels, rationnels, irrationnels – chacune porteuse de propriétés distinctes. Le nombre \( \sqrt{2} \), réel et irrationnel, défie toute représentation fractionnaire, incarnant une rupture avec les nombres rationnels. Le théorème fondamental de l’arithmétique, quant à lui, établit que tout entier positif supérieur à \( 1 \) se factorise de manière unique en nombres premiers. Ainsi, \( 28 = 2^2 \times 7 \). Les propriétés des diviseurs enrichissent cette vision : si \( x \) divise un nombre impair \( z \), alors \( x \) est nécessairement impair, car un diviseur pair engendrerait un résultat pair, contredisant l’hypothèse.
+
+Les opérations algébriques, régies par un ordre de priorité, reflètent une logique de structuration des calculs. Les parenthèses redéfinissent cet ordre, comme dans \( (2 + 3) \times 5 = 25 \), où l’addition prime, contrairement à \( 2 + 3 \times 5 = 17 \), où la multiplication domine. Les exposants et les logarithmes explorent des relations de transformation : pour \( b^3 = 27 \) avec \( b = 3 \), et \( \log_3(81) = 4 \) car \( 3^4 = 81 \), on perçoit une interplay entre croissance et réduction. La propriété \( \frac{\log x}{\log 3} = \log_3 x \) facilite la résolution d’équations comme \( \log x / \log 3 = 5 \).
+
+Les probabilités et la combinatoire introduisent une approche de l’incertain et de l’organisation. La factorielle, comme \( 4! = 4 \times 3 \times 2 \times 1 = 24 \), quantifie les arrangements possibles. Pour la probabilité d’obtenir une somme de \( 7 \) avec deux dés, on recense les cas favorables \( (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) \), soit 6, sur 36 résultats, donnant \( \frac{6}{36} = \frac{1}{6} \). 
+
+
+On peut trier les objects selon différents orders. L’ordre lexicographique, appliqué à des nombres comme \( 3, 30, 4 \), les trie comme des chaînes \( 3, 30, 4 \), illustrant une logique de classement importée du langage.
 
 
 <p><strong>Si vous n'avez pas fait les mathématiques du collégial ou pris un cours d'appoint équivalent, vous ne pouvez
@@ -104,6 +93,9 @@ weight: 3
 ## Autoévaluation (aptitude en programmation)
 
 
+Pour se préparer au cours INF 1220, il est crucial de développer une rigueur intellectuelle et une capacité à raisonner de manière abstraite, deux qualités indispensables à la programmation. Programmer ne se limite pas à écrire des lignes de code : c’est un exercice de pensée structurée qui exige de décomposer un problème en étapes logiques, de les traduire en instructions précises et de vérifier méticuleusement leur exactitude. Un programme fonctionne ou échoue sans demi-mesure, ce qui impose une discipline constante : écrire, tester, corriger, puis tester à nouveau. La patience et l’attention aux détails sont essentielles, car une simple erreur, comme une virgule mal placée, peut compromettre un programme entier. S’entraîner à résoudre des problèmes logiques, comme déterminer qui de Jean ou Pierre arrive en premier au travail dans un énoncé où Jean est immédiatement suivi par Pierre, aide à affûter cette précision. Si de tels énoncés semblent opaques ou exigent un effort disproportionné, il peut être utile de renforcer ses bases en logique avant d’aborder le cours.
+
+Le cours INF 1220 s’adresse à des étudiants prêts à s’engager dans un parcours universitaire en informatique, où la maîtrise du raisonnement logique et mathématique est non négociable. Au-delà des concepts mathématiques, comme la division euclidienne ou les propriétés des nombres, le cours demande une aisance à manipuler des énoncés formels et à en extraire des implications logiques pour les traduire en code. Par exemple, analyser une recette algorithmique, comme celle décrite pour lire les pages d’un livre, nécessite de suivre mentalement chaque étape, d’identifier les boucles et les conditions, et de repérer les erreurs, telle une boucle infinie ou une condition mal définie. Si repérer l’erreur dans cette recette – par exemple, l’absence d’une vérification que la page existe avant de la lire – demande un effort considérable, cela peut indiquer un besoin de préparation supplémentaire. Pour réussir, il faut s’exercer à lire des algorithmes, à en simuler l’exécution mentalement, et à traduire des problèmes abstraits en solutions programmées, tout en acceptant que ce cours, conçu pour un public scientifique, exigera un investissement significatif en temps et en effort.
 
 
 <p>Pour plusieurs personnes, programmer n'est pas naturel. Cela exige de penser différemment. Il faut beaucoup de
@@ -122,6 +114,8 @@ weight: 3
     devez être capable de lire des énoncés logiques et mathématiques, vous devez être capable de les comprendre et d'en
     déduire les conséquences logiques. Par exemple, vous devez vous attendre à ce que l'examen de ce cours comporte des
     énoncés formels que vous devrez transcrire en code informatique. </p>
+
+
 
 # Question 1
 

@@ -172,13 +172,16 @@ public class Variable {
 <h2>Question 9</h2>
 
 <p>Pourquoi le bout de code suivant va générer une erreur à la compilation ?</p>
-<textarea rows="6" cols="56" style="margin-left:2em;">class T {
-private float x ;
-private static int n ;
-public static float test(){
-  return x*n;
+
+```java {style=github}
+class T {
+  private float x ;
+  private static int n ;
+  public static float test(){
+    return x*n;
   }
-}</textarea>
+}
+```
 <details><summary>Réponse</summary>
 
 <p>Une méthode statique ne peut accéder à un champ non statique comme la

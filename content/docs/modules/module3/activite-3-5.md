@@ -5,7 +5,7 @@ weight: 7
 
 # La récursivité
 
-<h1>Le concept de récursivité</h1>
+## Le concept de récursivité
 
 <p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :</p>
 
@@ -94,8 +94,9 @@ public class ExempleRecursivite {
 }
 ```
 
-<p><a id="intro" name="section2"></a></p>
-<h1>Des exemples d'utilisation de la récursivité</h1>
+<br/>
+
+## Des exemples d'utilisation de la récursivité
 
 <p>La récursivité peut être bien utile dans des cas où il faut appliquer la technique "diviser pour régner", surtout pour le traitement de données. Un exemple bien connu est le tri-fusion (merge sort) qui utilise la récursivité pour diviser un tableau en deux récursivement jusqu'à atteindre des couples. Puis, l'algorithme tri le couple min-max et retourne le résultat plus haut. Ensuite, une fusion des données s'opère pour trier un par un les minimum de chaque sous-tableau dans le tableau original. Voici le tri-fusion : </p>
 
@@ -141,19 +142,14 @@ public class ExempleRecursivite {
         int ai = 0;                                
         int bi = 0;                                
         
-        // Fusionner les deux tableau. En itérant dans les deux moitiés de tableau et en classant alternativement le minimum de chaque moitié
         while (ai + bi < data.length) {            
-            // Si a[ai] est inférieur à b[bi] on place a[ai] dans le tableau original
             if (bi >= b.length || (ai < a.length && a[ai] < b[bi])) {
                 data[ai + bi] = a[ai]; 
                 
-                //incrémentation du compter ai
                 ai++;
                 
-            // sinon c'est b[bi]
             } else {
                 data[ai + bi] = b[bi]; 
-                //incrémentation du compter bi
                 bi++;
             }
         }
@@ -166,46 +162,35 @@ public class ExempleRecursivite {
 
 <p>Voici un autre exemple, avec une façon d'utiliser la récursivité pour trouver le plus grand diviseur commun de deux entiers, basée sur l'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide">algorithme d'Euclide</a> :</p>
 
-```java  {style=github}
-public class ExempleRecursivite {
 
+
+
+{{<inlineJava path="ExempleRecursivite.java" lang="java">}}
+public class ExempleRecursivite {
     public static void main(String[] args) {
-        
-  
-        System.out.println("Plus grand diviseur commun :" + plusGrandCommunDiviseur(455,322) );
-      
+        System.out.println("Plus grand diviseur commun :" 
+          + plusGrandCommunDiviseur(455,322) );
     }
 
-    /**
-     * Fonction pour trouver le plus grand commun diviseur. Il s'agit de l'algorithme d'Euclide
-     * @param p
-     * @param q
-     * @return 
-     */
     public static int plusGrandCommunDiviseur(int p, int q) {
-        // Si q est 0, il n'y a pas de diviseur commun
         if (q == 0) {
-            return p;
-            
-        // Sinon, essayons avec le diviseur et le reste de la division de p et q (le modulo)
+            return p;            
         } else {         
             return plusGrandCommunDiviseur(q, p % q);
         }
     }
-
 }
-```
+{{</inlineJava>}}
 
-<iframe height="800px" width="100%" src="https://repl.it/@lemire/ex6?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<h2>Lecture dans le livre de référence</h2>
+### Lecture dans le livre de référence
 
 <p>Pour aller plus en profondeur sur la récursivité (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>
 	<li>Section 10 : La récursivité des méthodes</li>
 </ul>
 
-<h2>Vidéos</h2>
+### Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o0sfEUuqy40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

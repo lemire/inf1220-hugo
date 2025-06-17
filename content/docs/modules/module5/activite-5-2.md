@@ -15,9 +15,9 @@ weight: 2
 <p>Le polymorphisme ad hoc est une technique de programmation OO où plusieurs méthodes avec le même nom sont créées, mais possède des paramètres de méthode différents. Nous avons vu le polymorphisme ad hoc dans le cadre du module 2 sous un autre nom: surdéfinition des méthodes. La signature de la méthode est donc différente pour chacune d'elle. Ainsi, c'est la JVM à l'exécution du code qui redirige l'appel vers la bonne méthode de l'objet selon les types ou les objets passés en paramètres. Ce type de polymorphisme, appelé régulièrement polymorphisme overloading, est utile pour concevoir plusieurs mises en oeuvre d'un même algorithme avec des entrées de données de différents types. Par exemple, des méthodes "calculMoyenne" qui pourrait prendre un tableau d'entier ou bien un tableau de double en entrée. Dans d'autres langages que le Java tels que le C++, ce type de polymorphisme est utilisé pour construire des opérateurs pour une classe particulière. Par exemple, redéfinir l'opérateur égal (==) pour comparer deux cercles. Voici un exemple de polymorphisme ad hoc et son utilisation en Java:</p>
 
 
-<iframe height="1000px" width="100%" src="https://repl.it/@lemire/ex15?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+{{<inlineJava path="MixageCouleur.java" lang="java">}}
+import java.awt.Color;
 
-```java  {style=github}
 public class MixageCouleur {
     
     int rouge = 0;
@@ -52,14 +52,13 @@ public class MixageCouleur {
         
         MixageCouleur mixeur = new MixageCouleur(100, 100, 100);
         
-        // Appel de deux méthodes avec le même nom mais avec des paramètres différents
         mixeur.ajouterGradient(10, 5, 15);
         mixeur.ajouterGradient(Color.PINK);
         
     }
     
 }
-```
+{{</inlineJava>}}
 
 <p><a id="intro" name="section2"></a></p>
 
@@ -124,7 +123,6 @@ public class CerclePointille extends JPanel {
         
         g2d.setColor(Color.BLACK);
         
-        // Dessiner les points en calculant la rotation des points selon le centre de l'axe avec x1 = x + rayon*cos(t) et y1 = y + rayon*cost(t);
         for (int i = 0; i < nbPoint; i++) {
             
             double t = 2 * Math.PI * i / nbPoint;
@@ -149,8 +147,6 @@ public class CerclePointille extends JPanel {
         f.pack();
         f.setVisible(true);
         
-        
-        //panel.paintAll(panel.getGraphics());
     }
     
     public static void main(String[] args) {
@@ -215,7 +211,6 @@ public class OvalePointille extends CerclePointille {
         
         g2d.setColor(Color.BLACK);
         
-        // Dessiner les points en calculant la rotation des points selon le centre de l'axe avec x1 = x + rayon*cos(t) et y1 = y + rayon*cost(t);
         for (int i = 0; i < nbPoint; i++) {
             
             double t = 2 * Math.PI * i / nbPoint;
@@ -242,8 +237,6 @@ public class OvalePointille extends CerclePointille {
         f.pack();
         f.setVisible(true);
         
-        
-        //panel.paintAll(panel.getGraphics());
     }
     
     public static void main(String[] args) {
@@ -277,7 +270,6 @@ public|protected|private static|final <T> valeurDeRetour|void nomDeMethode(T unP
 ```java  {style=github}
 public class TestGenerique {
     
-    // Méthode equals à deux paramètres. La méthode equals à un paramètre existe déjà et est implémentée dans la SuperClasse Object
     public static <T> boolean equals(T a, T b) {
         return a.equals(b);
     }
@@ -299,7 +291,6 @@ public class TestGenerique {
 ```java  {style=github}
 public class TestGenerique {
     
-    // Méthode equals à deux paramètres. La méthode equals à un paramètre existe déjà et est implémentée dans la SuperClasse Object
     public static <T,U> boolean equals(T a, U b) {
         return a.equals(b);
     }

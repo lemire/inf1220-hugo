@@ -33,7 +33,7 @@ Quand on rédige un pseudo-code, il faut tout spécifier, comme si on s'adressai
 
 Le pseudocode est destiné à être lu par l'humain, et il peut être écrit de diverses manières tant que l'humain le comprend. Le cours ne vise pas à vous permettre de comprendre une syntaxe particulière de pseudocode,  mais bien le pseudocode en général.
 
-### En résumé: Qu'est-ce qu'un algorithme ?
+### Qu'est-ce qu'un algorithme ?
 Un **algorithme** est une suite finie et ordonnée d'instructions permettant de résoudre un problème ou d'accomplir une tâche spécifique. Il s'agit d'une méthode systématique, exprimée de manière précise, qui garantit un résultat correct lorsqu'elle est exécutée. Les algorithmes sont au cœur de l'informatique, car ils décrivent comment un programme doit fonctionner pour atteindre un objectif.
 
 Exemples d'algorithmes dans la vie quotidienne :
@@ -42,7 +42,7 @@ Exemples d'algorithmes dans la vie quotidienne :
 
 En informatique, un algorithme peut, par exemple, trier une liste de nombres ou calculer le chemin le plus court entre deux points.
 
-### En résumé: Qu'est-ce que le pseudo-code ?
+### Qu'est-ce que le pseudo-code ?
 Le **pseudo-code** est une manière d'écrire un algorithme en utilisant un langage simplifié, proche du langage naturel, mais structuré comme un programme informatique. Il n'est pas destiné à être exécuté directement par un ordinateur, mais sert à décrire la logique d'un algorithme de manière claire et compréhensible, indépendamment d'un langage de programmation spécifique.
 
 Le pseudo-code utilise des conventions comme :
@@ -345,6 +345,6 @@ Si votre pseudo-code doit retourner une valeur, il faut que le pseudo-code le sp
 
 5. Si vous avez bien défini le type de vos variables, et toutes vos conventions syntaxiques, il vous reste maintenant à vous assurer que les valeurs de vos variables sont toujours spécifiées. Si vous dites que x est un nombre et que vous posez ensuite l'inéquation x > 1, nous ne pouvons en connaître la valeur que si x a reçu une valeur. Assurez-vous donc de donner une valeur initiale à toutes vos variables. En tout temps, dans votre pseudo-code, le lecteur doit pouvoir déterminer la valeur d'une variable donnée.
 
-6. Parfois les étudiants manquent tout simplement de rigueur. Pour vérifiez si votre pseudo-code est rigoureux, appliquez-le sur un exemple concret comme si vous étiez un robot. Par exemple, si quelqu'un écrit le pseudo-code suivant « je prend chacune des valeurs du tableau, et je l'additionne à la valeur suivante dans le tableau »... vous pourriez alors prendre un tableau à titre d'exemple, comme [1,2,3] et tester l'instruction. Qu'est-ce que ça donnerait ? Je prend les valeurs une à une et je l'additionne à la valeur suivante dans le tableau. Je prend donc 1 et sa valeur suivante (1 + 2), ensuite 2 et sa valeur suivante (2 + 3), et ensuite 3 et sa valeur suivante... ? Je me rend compte que l'expression « la valeur suivante » n'est pas bien définie. Voici un autre exemple. Quelqu'un pourrait avoir comme pseudo-code « j'initialise la variable comme ayant comme valeur le premier élément du tableau ». Testons ce pseudo-code sur le tableau vide (de taille zéro). Nous constatons qu'il n'y a pas de premier élément ! Donc si le tableau vide n'est pas exclu, nous avons un problème de rigueur. Voici un truc: testez toujours votre pseudo-code avec plusieurs exemples concrets. Prenez le temps d'appliquer les instructions de votre pseudo-code ligne par ligne, comme si vous étiez un robot. Pensez comme un ordinateur!
+6. Parfois les étudiants manquent tout simplement de rigueur. Pour vérifiez si votre pseudo-code est rigoureux, appliquez-le sur un exemple concret comme si vous étiez un robot. Par exemple, si quelqu'un écrit le pseudo-code suivant « je prend chacune des valeurs du tableau, et je l'additionne à la valeur suivante dans le tableau »... vous pourriez alors prendre un tableau à titre d'exemple, comme [1,2,3] et tester l'instruction. Qu'est-ce que ça donnerait ? Je prend les valeurs une à une et je l'additionne à la valeur suivante dans le tableau. Je prend donc 1 et sa valeur suivante (1 + 2), ensuite 2 et sa valeur suivante (2 + 3), et ensuite 3 et sa valeur suivante... ? Je me rend compte que l'expression « la valeur suivante » n'est pas bien définie. Voici un autre exemple. Quelqu'un pourrait avoir comme pseudo-code « j'initialise la variable comme ayant comme valeur le premier élément du tableau ». Testons ce pseudo-code sur le tableau vide (de taille zéro). Nous constatons qu'il n'y a pas de premier élément&nbsp;! Donc si le tableau vide n'est pas exclu, nous avons un problème de rigueur. Voici un truc: testez toujours votre pseudo-code avec plusieurs exemples concrets. Prenez le temps d'appliquer les instructions de votre pseudo-code ligne par ligne, comme si vous étiez un robot. Pensez comme un ordinateur!
 
 Nous vous invitons maintenant à passez aux premiers exercices du cours!
