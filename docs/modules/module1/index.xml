@@ -38,7 +38,24 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  &lt;a class="anchor" href="#les-algorithmes">#&lt;/a>
 &lt;/h1>
 &lt;blockquote>
-&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
+&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
+ Les algorithmes : conception et syntaxe
+ &lt;a class="anchor" href="#les-algorithmes--conception-et-syntaxe">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="concevoir-un-algorithme">
+ Concevoir un algorithme
+ &lt;a class="anchor" href="#concevoir-un-algorithme">#&lt;/a>
+&lt;/h2>
+&lt;p>Afin de concevoir un algorithme, il s&amp;rsquo;agit de bien analyser le problème en identifiant les entrées, les sorties et le traitement des données pour en arriver aux résultats escomptés. Il faut voir l&amp;rsquo;algorithme comme une solution pas à pas que n&amp;rsquo;importe quel programmeur pourrait reprendre et implémenter dans un langage spécifique tel que le Java, le C++ ou le Python. En général, pour concevoir un algorithme, il faut suivre les étapes suivantes :&lt;/p></description></item><item><title>Les algorithmes: les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+ Les structures de contrôle
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
+&lt;/h1>
+&lt;h3 id="les-structures-de-contrôle-alternatives-lembranchement">
+ Les structures de contrôle alternatives (l&amp;rsquo;embranchement)
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le-alternatives-lembranchement">#&lt;/a>
+&lt;/h3>
+&lt;p>On peut concevoir un algorithme qui ne comprend qu&amp;rsquo;une liste d&amp;rsquo;opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d&amp;rsquo;éléments, et on risque de devoir répéter beaucoup d&amp;rsquo;opérations.
+Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d&amp;rsquo;autres composantes de l&amp;rsquo;ordinateur. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non. En pratique, ces structures correspondent à poser des questions avec la syntaxe suivante : SI conditions ALORS opérations FIN SI. Il peut y avoir plusieurs conditions dans une structure de contrôle et la logique booléenne est utilisée pour les construire. Par exemple, SI a est égal 0 ET b est égal 1 ALORS faire c FIN SI.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
  Exercices sur les algorithmes et problèmes
  &lt;a class="anchor" href="#exercices-sur-les-algorithmes-et-probl%c3%a8mes">#&lt;/a>
 &lt;/h1>

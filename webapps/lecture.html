@@ -1,4 +1,3 @@
-
 <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; max-width: 600px; width: 100%;">
         <h1 style="font-size: 24px; margin-bottom: 20px; color: #2c3e50;">Simulation de l'algorithme de lecture</h1>
         <div style="margin: 20px 0; font-size: 18px;">
@@ -12,17 +11,17 @@
         <div id="log" style="margin-top: 20px; text-align: left; max-height: 150px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background: #f9f9f9; font-size: 14px;"></div>
     </div>
     <script>
-        const totalPages = 5;
-        let notepad = 0;
-        let step = 'init';
-        let pagesRead = new Set();
-        let isRunning = false;
-        let hasCrashed = false;
+        const lectureTotalPages = 5;
+        let lectureNotepad = 0;
+        let lectureStep = 'init';
+        let lecturePagesRead = new Set();
+        let lectureIsRunning = false;
+        let lectureHasCrashed = false;
 
         function initializePages() {
             const pagesDiv = document.getElementById('pages');
             pagesDiv.innerHTML = '';
-            for (let i = 1; i <= totalPages; i++) {
+            for (let i = 1; i <= lectureTotalPages; i++) {
                 const page = document.createElement('div');
                 page.style.cssText = 'width: 50px; height: 70px; background: #ecf0f1; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px;';
                 page.textContent = i;
@@ -39,19 +38,19 @@
                 end: 'Terminé',
                 crashed: 'Erreur : Crash'
             };
-            document.getElementById('step').textContent = stepNames[step] || step;
-            document.getElementById('notepad').textContent = notepad;
-            document.getElementById('pagesRead').textContent = pagesRead.size ? Array.from(pagesRead).join(', ') : 'Aucune';
+            document.getElementById('step').textContent = stepNames[lectureStep] || lectureStep;
+            document.getElementById('notepad').textContent = lectureNotepad;
+            document.getElementById('pagesRead').textContent = lecturePagesRead.size ? Array.from(lecturePagesRead).join(', ') : 'Aucune';
             const pageElements = document.querySelectorAll('#pages > div');
             pageElements.forEach((page, index) => {
-                if (pagesRead.has(index + 1)) {
+                if (lecturePagesRead.has(index + 1)) {
                     page.style.cssText = 'width: 50px; height: 70px; background: #2ecc71; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white;';
                 } else {
                     page.style.cssText = 'width: 50px; height: 70px; background: #ecf0f1; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px;';
                 }
             });
             const stepButton = document.getElementById('stepButton');
-            stepButton.style.cssText = step === 'end' || isRunning || hasCrashed ?
+            stepButton.style.cssText = lectureStep === 'end' || lectureIsRunning || lectureHasCrashed ?
                 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
                 'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
         }
@@ -67,50 +66,50 @@
         }
 
         async function runStep() {
-            if (isRunning || step === 'end' || hasCrashed) return;
-            isRunning = true;
+            if (lectureIsRunning || lectureStep === 'end' || lectureHasCrashed) return;
+            lectureIsRunning = true;
             document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
 
-            if (step === 'init') {
-                notepad = 0;
+            if (lectureStep === 'init') {
+                lectureNotepad = 0;
                 log('Initialisation : Écrire 0 sur le calepin.');
-                step = 'A';
-            } else if (step === 'A') {
-                notepad += 1;
-                log(`Étape A : Calepin = ${notepad - 1} + 1 = ${notepad}.`);
-                step = 'B';
-            } else if (step === 'B') {
-                if (notepad < 1 || notepad > totalPages) {
-                    log(`Erreur : Tentative de lecture de la page ${notepad}, qui n'existe pas !`, true);
-                    step = 'crashed';
-                    hasCrashed = true;
-                    alert('Crash ! L\'algorithme a tenté de lire une page invalide (page ' + notepad + ').');
+                lectureStep = 'A';
+            } else if (lectureStep === 'A') {
+                lectureNotepad += 1;
+                log(`Étape A : Calepin = ${lectureNotepad - 1} + 1 = ${lectureNotepad}.`);
+                lectureStep = 'B';
+            } else if (lectureStep === 'B') {
+                if (lectureNotepad < 1 || lectureNotepad > lectureTotalPages) {
+                    log(`Erreur : Tentative de lecture de la page ${lectureNotepad}, qui n'existe pas !`, true);
+                    lectureStep = 'crashed';
+                    lectureHasCrashed = true;
+                    alert('Crash ! L\'algorithme a tenté de lire une page invalide (page ' + lectureNotepad + ').');
                 } else {
-                    pagesRead.add(notepad);
-                    log(`Étape B : Lire page ${notepad}.`);
-                    step = 'C';
+                    lecturePagesRead.add(lectureNotepad);
+                    log(`Étape B : Lire page ${lectureNotepad}.`);
+                    lectureStep = 'C';
                 }
-            } else if (step === 'C') {
-                if (notepad > totalPages) {
-                    log(`Étape C : Calepin (${notepad}) > ${totalPages}. Terminer.`);
-                    step = 'end';
+            } else if (lectureStep === 'C') {
+                if (lectureNotepad > lectureTotalPages) {
+                    log(`Étape C : Calepin (${lectureNotepad}) > ${lectureTotalPages}. Terminer.`);
+                    lectureStep = 'end';
                 } else {
-                    log(`Étape C : Calepin (${notepad}) ≤ ${totalPages}. Retour à l'étape A.`);
-                    step = 'A';
+                    log(`Étape C : Calepin (${lectureNotepad}) ≤ ${lectureTotalPages}. Retour à l'étape A.`);
+                    lectureStep = 'A';
                 }
             }
 
             updateDisplay();
             await new Promise(resolve => setTimeout(resolve, 500));
-            isRunning = false;
+            lectureIsRunning = false;
             updateDisplay();
         }
 
         function reset() {
-            notepad = 0;
-            step = 'init';
-            pagesRead.clear();
-            hasCrashed = false;
+            lectureNotepad = 0;
+            lectureStep = 'init';
+            lecturePagesRead.clear();
+            lectureHasCrashed = false;
             document.getElementById('log').innerHTML = '';
             initializePages();
             updateDisplay();
