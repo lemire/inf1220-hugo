@@ -25,6 +25,36 @@ Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, 
 Tous ces langages partagent un objectif commun : permettre aux programmeurs de décrire des solutions à des problèmes en s’éloignant progressivement des contraintes du matériel. Pour comprendre leur rôle, il est essentiel de se pencher sur le fonctionnement des ordinateurs.
 
 
+| Version | Changement principal        | Année de sortie |
+|---------|----------------------------|------------------|
+| JDK 1.0 | Lancement initial          | 1996             |
+| JDK 1.1 | Classes internes            | 1997             |
+| J2SE 1.2 | API Swing                  | 1998             |
+| J2SE 1.3 | Améliorations HotSpot      | 2000             |
+| J2SE 1.4 | Assertions                 | 2002             |
+| J2SE 5.0 | Génériques                 | 2004             |
+| Java SE 6 | Performance JVM            | 2006             |
+| Java SE 7 | Syntaxe try-with-resources | 2011             |
+| Java SE 8 | Expressions lambda         | 2014             |
+| Java SE 9 | Système de modules         | 2017             |
+| Java SE 10 | Inférence de types         | 2018             |
+| Java SE 11 | Client HTTP standard       | 2018             |
+| Java SE 12 | Switch expressions         | 2019             |
+| Java SE 13 | Blocs de texte             | 2019             |
+| Java SE 14 | Records (aperçu)           | 2020             |
+| Java SE 15 | Classes scellées           | 2020             |
+| Java SE 16 | Records finalisés          | 2021             |
+| Java SE 17 | Pattern matching           | 2021             |
+| Java SE 18 | API vectorielle (aperçu)   | 2022             |
+| Java SE 19 | Threads virtuels           | 2022             |
+| Java SE 20 | Structured Concurrency     | 2023             |
+| Java SE 21 | Sequenced Collections      | 2023             |
+| Java SE 22 | Foreign Function API       | 2024             |
+| Java SE 23 | Module import simplifié    | 2024             |
+| Java SE 24 | Améliorations Loom         | 2025             |
+| Java SE 25 | Finalisation Valhalla      | 2025             |
+| Java SE 26 | Optimisations Leyden       | 2026             |
+
 ## Résumé de l’architecture des ordinateurs et de l’abstraction des langages
 
 Les ordinateurs modernes s’appuient sur deux concepts fondamentaux : la machine de Turing, théorisée par Alan Turing, qui définit une machine capable d’exécuter n’importe quel algorithme, et l’architecture de von Neumann, qui structure les ordinateurs autour de quatre composantes principales. Premièrement, la mémoire stocke à la fois les données et les programmes, une innovation clé par rapport aux machines antérieures où les instructions étaient fixes. Deuxièmement, l’unité de contrôle orchestre l’exécution des instructions en suivant un séquençage précis. Troisièmement, l’unité arithmétique et logique effectue les calculs de base, comme les additions ou les comparaisons. Enfin, les interfaces d’entrée/sortie permettent d’interagir avec l’utilisateur ou d’autres systèmes, via des périphériques comme les claviers, écrans ou réseaux.
