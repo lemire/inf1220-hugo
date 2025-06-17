@@ -150,6 +150,28 @@ Expliquez l'erreur et offrez une version corrigée. Exécutez votre pseudo-code 
 
 Votre explication de l'erreur doit être claire et limpide. Si vous ne montrez pas que vous avez bien compris l'erreur et que vous êtes capable de l'expliquez clairement, vous pourrez recevoir une note de zéro pour cette question.
 
+```
+Entrées :
+Valeur maximale :  100;
+
+Variables :
+Nombre entier : iterateur = 0;
+
+Sorties : à l'écran
+
+
+TANT QUE iterateur < 100 FAIRE
+       affiche la valeur de iterateur à l'écran
+       SI iterateur est divisible par 3 ALORS
+         affiche " Fizz"  à l'écran
+       SINON SI iterateur est divisible par 5 ALORS
+         affiche " Buzz"  à l'écran
+       FIN SI
+       change de ligne à l'écran
+       iterateur = iterateur + 1
+FIN TANT QUE
+```
+
 
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em> ».</p>
 
