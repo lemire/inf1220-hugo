@@ -5,41 +5,11 @@ weight: 4
 
 # Travail noté 4 - Les flux d'entrées et de sorties
 
+Ce travail noté du cours INF1220 requiert de lire un fichier, valider ses données selon des règles spécifiques et afficher les résultats dans un autre format, exigeant une maîtrise des entrées/sorties, des chaînes de caractères et des structures de données en Java. Avant de commencer, il est impératif d’avoir complété et compris les lectures et exercices préparatoires, car sans cette préparation, la réussite du travail et des questions d’examen est compromise. L’utilisation du robot conversationnel du cours est permise, mais les réponses et analyses doivent être personnelles. Les étudiants doivent planifier leur temps rigoureusement, car la manipulation des entrées/sorties peut être complexe, et les travaux doivent être soumis avant la date de fin de cours, disponible sur le portail étudiant, sans possibilité de report sauf validation par l’Université pour des raisons exceptionnelles (maladie, deuil, etc.).
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
+Les travaux doivent être soumis sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le PDF doit permettre le copier-coller du code, être exempt de saisies d’écran ou de contenu manuscrit, et inclure du code testé et fonctionnel, car un code non fonctionnel peut entraîner une note de zéro. Les recherches sur Internet sont encouragées, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La date de fin de cours, non négociable par les enseignants, marque la limite pour les soumissions, et tout travail remis tardivement risque une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.
 
-<p>Dans ce travail, nous allons vous demander d'accéder à un fichier, le lire les données que nous y trouvons, de valider les données lues selon des règles, et d'ensuite afficher le résultat sous un autre format.</p>
-
-<p>Attention: Il est obligatoire, avant d'entreprendre ce travail, d'avoir fait les lectures et les exercices préparatoires. Une maîtrise des entrées et des sorties est nécessaire pour faire ce travail. Si vous n'avez pas fait les lectures et les exercices suggérés, en prenant le temps de relire autant de fois que nécessaire, et de travailler sur les exercices de manière sérieuse, il est possible que vous n'arriviez pas à faire ce travail et que vous ne réussissiez pas les questions d'examen.</p>
-
-
-<h2>Planifiez bien votre temps !</h2>
-
-<p>Certains étudiants trouvent difficile de travailler avec des entrées et des sorties dans un langage de programmation. Réservez-vous suffisamment de temps pour faire ce travail noté.</p>
-
-<h2>Les reports de la date de fin de cours</h2>
-
-
-<p><strong>Rappel</strong>: L'enseignant ne peut modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les enseignants n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
-
-
-<p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
-
-<strong>Instructions de dépôt du travail notés :</strong>
-<p>Vous devez absolument tester votre code et vous assurez qu'il fonctionne. Si vous remettez du code qui ne fonctionne pas, vous pourrez obtenir la note de zéro.</p>
-<p>Vous devez remettre un fichier pdf contenant votre code et le déposer le travail sur le site de dépôt des travaux de la TÉLUQ : <a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant</a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été  inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais  est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. </p>
-<p>Vous ne devez pas remettre votre code sous la forme de fichiers Java. Pour faciliter la correction, assurez-vous qu'on puisse copier-coller du texte à partir du document PDF.  Si votre document ne permet pas de copier-coller du texte, il pourra être refusé ou une note de zéro pourra être attribuée. Les travaux écrits à la main seront refusés. N'utilisez pas des saisies d'écran. Si vous avez beaucoup de code, répartissez-le en plusieurs pages de manière à rendre la lecture aisée. </p>
-
-<p>On s'attend à ce que vous fassiez des recherches Internet pour réaliser ce travail. Les recherches en ligne font partie intégrante du développement logiciel.</p>
-
-
-  <p>Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
-
-<p>Pour faire ce travail, vous devez avoir les bases concernant la manipulation des chaînes de caractères et des structures de données en Java. Certains étudiants essaient d'aller trop vite et ils passent outre aux exercices de préparation des modules précédents. Vous devez avoir fait tous les exercices et vous assurer des les avoir bien compris. </p>
-
-
-
-<p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>
+Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, constitue une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Les étudiants doivent répartir leur code sur plusieurs pages si nécessaire pour en faciliter la lecture et accompagner celui-ci d’explications claires. La responsabilité du dépôt dans les délais et de la résolution des problèmes techniques avec l’outil de dépôt incombe à l’étudiant, qui doit contacter l’Université en cas de difficulté. Une préparation sérieuse et une vérification rigoureuse du travail avant soumission sont essentielles pour éviter les erreurs et maximiser la réussite.
 
 <strong>Problème</strong>
 <p>Dans un jeu de Sudoku, nous devons re-construire une grille comprenant 9 rangées et 9 colonnes. Chaque rangée et chaque colonne doit contenir tous les entiers de 1 à 9.</p>

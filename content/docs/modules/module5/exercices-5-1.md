@@ -1,5 +1,5 @@
 ---
-title: "Exercices 5.1"
+title: "Exercices sur l’héritage et le polymorphisme"
 weight: 3
 ---
 
