@@ -1,7 +1,0 @@
-{{ $path := .Get "path" }}
-{{ $filePath := printf "static/webapps/%s" $path }}
-{{ if fileExists $filePath }}
-  <div>{{ $filePath | readFile | safeHTML }}</div>
-{{ else }}
-  <p>Error: Code file not found at {{ $filePath }}</p>
-{{ end }}

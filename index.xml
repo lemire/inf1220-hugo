@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accueil on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/</link><description>Recent content in Accueil on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
+ GitHub (optionnel)
+ &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
+&lt;/h1>
+&lt;p>&lt;a href="https://github.com">GitHub&lt;/a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git&lt;/a>, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire">Vous trouverez le professeur responsable du cours sur GitHub&lt;/a>. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p></description></item><item><title>L'héritage, les classes abstraites et les interfaces</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</guid><description>&lt;h1 id="java-pas-à-pas">
+ Java pas à pas
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
+&lt;/h1>
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Traitement de fichiers&lt;/em> du manuel Java pas à pas par Robert Godin et Daniel Lemire. Vous trouverez &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF&lt;/a>. &lt;/p>
+&lt;p>&lt;a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon&lt;/a>:&lt;/p>
+&lt;div>&lt;a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">&lt;img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;">&lt;/a>&lt;/div>
+&lt;p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Le professeur</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/credits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/credits/</guid><description>&lt;p>Daniel Lemire est professeur d&amp;rsquo;informatique à l&amp;rsquo;Université du Québec (TELUQ). Il est classé dans les 2 % des meilleurs scientifiques (classement Stanford University/Elsevier, 2024). Il fait partie des 1000 programmeurs les plus suivis au monde sur GitHub; GitHub compte plus de 100 millions de développeurs. Il a publié plus de 85 articles de recherche évalués par des pairs. Ses travaux se retrouvent dans de nombreuses bibliothèques standard (.NET, Rust, GCC/glibc++, LLVM/libc, Go, Node.js, etc.) et dans les principaux navigateurs web (Safari, Chrome, etc.). Il est rédacteur de la revue Software : Practice and Experience (Wiley, créée en 1971). En 2020, il a reçu le Prix d&amp;rsquo;excellence 2020 de l&amp;rsquo;Université du Québec pour ses travaux sur l&amp;rsquo;accélération de l&amp;rsquo;analyse JSON. Ses recherches portent notamment sur la programmation haute performance. Il est &lt;a href="https://x.com/lemire">@lemire sur X&lt;/a> et tient un blog hebdomadaire à l&amp;rsquo;adresse &lt;a href="https://lemire.me/blog">https://lemire.me/blog&lt;/a>. &lt;a href="https://github.com/lemire">On peut aussi le trouver sur GitHub&lt;/a>.&lt;/p></description></item><item><title>Les flux de console</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-1/</guid><description>&lt;h1 id="les-flux-de-console">
+ Les flux de console
+ &lt;a class="anchor" href="#les-flux-de-console">#&lt;/a>
+&lt;/h1>
+&lt;h1>La bibliothèque System&lt;/h1>
+&lt;p>Les bibliothèques responsables de la gestion des éléments de bas niveau (écran, clavier, etc.), lesquelles nécessitent donc le système de l'ordinateur, s'appellent bibliothèques System. Dans les exemples précédents, nous avons utilisé amplement l'affichage à la console avec la méthode System.out.println(). Ainsi, la gestion de l'affichage d'un message à l'écran ou la saisie de valeurs au clavier font partie des fonctions requérant le système de l'ordinateur. C'est pourquoi leur nom commence toujours par « System ».&lt;/p></description></item><item><title>Modèle du cours</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/teluq/</guid><description>&lt;h2 id="le-modèle-de-luniversité-téluq">
+ Le modèle de l’Université TÉLUQ
+ &lt;a class="anchor" href="#le-mod%c3%a8le-de-luniversit%c3%a9-t%c3%a9luq">#&lt;/a>
+&lt;/h2>
+&lt;p>Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.&lt;/p></description></item><item><title>Préparation de l’espace de travail</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</guid><description>&lt;h1 id="préparation-de-lespace-de-travail">
+ Préparation de l&amp;rsquo;espace de travail
+ &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail">#&lt;/a>
+&lt;/h1>
+&lt;p>Comme langage de support à l'introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l'introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d'instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d'exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d'exploitation et aux processeurs spécifiques de l'ordinateur.&lt;/p></description></item><item><title>Langage de programmation orientée-objet</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="langage-de-programmation-orientée-objet">
+ Langage de programmation orientée-objet
+ &lt;a class="anchor" href="#langage-de-programmation-orient%c3%a9e-objet">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="un-premier-programme">
+ Un premier programme
+ &lt;a class="anchor" href="#un-premier-programme">#&lt;/a>
+&lt;/h2>
+&lt;p>
+En Java, toutes parties d'un programme informatique doit donc être encapsulée dans une classe. Pour ce faire, il est donc nécessaire de créer un premier fichier de code source qui décrira une première classe et contiendra la description de la méthode "main", la méthode de démarrage (appelé parfois "bootstrap") du programme. Il est possible tout simplement d'utiliser le Bloc-Note avec Windows ou un autre éditeur de texte brut (&lt;strong>ce n'est pas le cas de Microsoft Word!&lt;/strong>), d'écrire les lignes de code nécessaire à la création de la classe et de ses fonctions et d'enregistrer ce texte sous l'extension .java (dans l'exemple ci-dessous dans un fichier Main.java). Voici un exemple d'une première classe qui imprimera dans l'invite de commande un texte de bienvenue.&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
+ Le polymorphisme
+ &lt;a class="anchor" href="#le-polymorphisme">#&lt;/a>
+&lt;/h1>
+&lt;p>Le polymorphisme est la capacité d'une méthode de se comporter différemment en fonction de l'objet qui s'en sert. Le polymorphisme permet donc de manipuler des objets grâce à leurs méthodes sans que nous nous souciions de leur classe. La JVM se charge d'appeler la méthode adéquate dans la hiérarchie de classes issue de l'héritage. Il existe trois formes de polymorphisme : le polymorphisme ad hoc, le polymorphisme paramètré et le polymorphisme par héritage. Dans les prochaines sections, nous aborderons ces trois types de polymorphisme et leur usage.&lt;/p></description></item><item><title>Les flux de données: lecture dans des fichiers et autres</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-2/</guid><description>&lt;h1 id="les-flux-de-données-lecture-dans-des-fichiers-et-autres">
+ Les flux de données: lecture dans des fichiers et autres
+ &lt;a class="anchor" href="#les-flux-de-donn%c3%a9es-lecture-dans-des-fichiers-et-autres">#&lt;/a>
+&lt;/h1>
+&lt;p>Nous avons couvert la façon d'afficher des données à l'écran et de lire des données à partir du clavier en utilisant les flux de données (streams) dans les leçons précédentes. Quand nous avons utilisé les méthodes System.out.print ou System.out.println pour afficher des données à l'écran, ces dernières ont été envoyées sur un flux de sortie (output stream). Nous nous servirons des flux d'entrée et de sortie pour lire et écrire des données dans un fichier texte. Mais auparavant, il nous faut savoir comment créer le fichier dans lequel ces données seront archivées.&lt;/p></description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+ Les structures de contrôle
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures de contrôle permettent de contrôler des variables puis d'effectuer des actions basées sur le résultat du contrôle. Dans le langage Java, à l'exception de l'opération de contrôle à trois opérandes (vu précédemment dans le cours), il existe 2 formes de structure de contrôle : le if-else et le switch-case.&lt;/p>
+&lt;p>&lt;a id="intro" name="section1">&lt;/a>&lt;/p>
+&lt;h2 id="le-bloc-dinstructions">
+ Le bloc d&amp;rsquo;instructions
+ &lt;a class="anchor" href="#le-bloc-dinstructions">#&lt;/a>
+&lt;/h2>
+&lt;p dir="ltr" style="margin-right: 0px; ">Un bloc d'instructions est un groupe d'instructions rédigées entre deux accolades (&lt;strong>{ }&lt;/strong>). Il exprime l'ordre d'exécution des différentes instructions. Il définit également le domaine de visibilité des variables incluses dans la déclaration. Un bloc d'instructions peut apparaître partout dans l'instruction. &lt;br />Les instructions, comme les blocs d'instructions, peuvent être identifiées par une étiquette. Cette étiquette précédera l'instruction, ou fera partie du bloc d'instructions, et sera suivie du caractère &lt;strong>:&lt;/strong>&lt;/p></description></item><item><title>Programmation Java en ligne</title><link>https://lemire.github.io/inf1220-hugo/docs/environnement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/environnement/</guid><description>&lt;h2 id="programmation-java-en-ligne">
+ Programmation Java en ligne
+ &lt;a class="anchor" href="#programmation-java-en-ligne">#&lt;/a>
+&lt;/h2>
+&lt;p>Pour commencer à programmer dans cet environnement Java en ligne, familiarisez-vous avec son interface intuitive. La page principale affiche une zone où vous pouvez ajouter des fichiers Java ou texte. Cliquez sur « Ajouter un fichier Java » pour créer un fichier avec l&amp;rsquo;extension .java, ou « Ajouter un fichier texte » pour un fichier .txt. Chaque fichier apparaît dans une boîte avec un champ pour le nom et un éditeur de texte. Pour les fichiers Java, l&amp;rsquo;éditeur CodeMirror offre une coloration syntaxique et des numéros de ligne, facilitant la lecture et l&amp;rsquo;écriture du code. Vous pouvez aussi sélectionner des exemples prédéfinis (comme « Bonjour le monde » ou « Fibonacci ») via le menu déroulant « Exemples » pour charger automatiquement des fichiers modèles. Une fois vos fichiers prêts, cliquez sur « Exécuter » pour compiler et exécuter le code.&lt;/p></description></item><item><title>Robot conversationnel et intelligence artificielle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/robot/</guid><description>&lt;h1 id="robot-conversationnel-et-intelligence-artificielle">
+ Robot conversationnel et intelligence artificielle
+ &lt;a class="anchor" href="#robot-conversationnel-et-intelligence-artificielle">#&lt;/a>
+&lt;/h1>
+&lt;p>L&amp;rsquo;intelligence artificielle (IA) transforme profondément le domaine de la programmation, redéfinissant la manière dont les développeurs conçoivent, écrivent et maintiennent le code. Les outils basés sur l&amp;rsquo;IA, comme les assistants de codage (par exemple, GitHub Copilot), permettent d&amp;rsquo;automatiser des tâches répétitives, telles que la génération de code boilerplate ou la complétion automatique de fonctions. Ces outils s&amp;rsquo;appuient sur des modèles de langage avancés, entraînés sur d&amp;rsquo;immenses bases de données de code, pour proposer des suggestions contextuelles précises. Cette assistance accélère le processus de développement, permettant aux programmeurs de se concentrer sur des aspects plus créatifs et complexes de leurs projets, tout en réduisant les erreurs humaines.&lt;/p></description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/autoevaluation/</guid><description>&lt;h2 id="connaissances-technologiques">
+ Connaissances technologiques
+ &lt;a class="anchor" href="#connaissances-technologiques">#&lt;/a>
+&lt;/h2>
+&lt;p>Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d'avoir
+ une certaine connaissance de base. Vous devriez savoir que les ordinateurs disposent d'un processeur, de mémoire, de
+ disques, etc. et qu'ils fonctionnent à l'aide d'un système d'exploitation. Si vous ne vous êtes jamais intéressés à
+ ces concepts de base, il peut être utile que vous preniez un peu de votre temps pour faire des recherches sur ces
+ questions. Il peut être difficile de suivre ce cours si vous ne savez vraiment pas ce qu'est un processeur ou de la
+ mémoire informatique.&lt;/p></description></item><item><title>Exercices 5.1</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</guid><description>&lt;h1>&lt;a id="top" name="top">&lt;/a>Module 5&lt;/h1>&lt;h2>Exercices 5.1&lt;/h2>&lt;h2 class="partie2">Exercices sur l'héritage et le polymorphisme.&lt;/h2>
+&lt;h1>Questions/Réponses&lt;/h1>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p>
+&lt;h2>Réponses uniques?&lt;/h2>
+&lt;p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.&lt;/p></description></item><item><title>Exercices sur les flux</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</guid><description>&lt;h1 id="exercices-sur-les-flux">
+ Exercices sur les flux
+ &lt;a class="anchor" href="#exercices-sur-les-flux">#&lt;/a>
+&lt;/h1>
+&lt;h1>Questions/Réponses&lt;/h1>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n'arriviez pas alors à faire les travaux notés et les examens.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
+ Introduction aux types de base et à leurs opérateurs
+ &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="mise-en-garde-pédagogique">
+ Mise en garde pédagogique
+ &lt;a class="anchor" href="#mise-en-garde-p%c3%a9dagogique">#&lt;/a>
+&lt;/h2>
+&lt;p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+ Les structures itératives
+ &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1>Amélioration continue du cours&lt;/h1>
+&lt;p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 
+nous trouvons des erreurs.&lt;/p>
+&lt;p>&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site&lt;/a>. Nous apprécions toujours vos commentaires constructifs.&lt;/p>
+&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
+ Exercices sur les classes, les variables, les types et les opérateurs
+ &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
+&lt;/h1>
+&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
+&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
+ Court historique des langages de programmation
+ &lt;a class="anchor" href="#court-historique-des-langages-de-programmation">#&lt;/a>
+&lt;/h1>
+&lt;p>L’idée de programmer des machines remonte au 19e siècle, époque marquée par l’émergence des premières machines de calcul et d’automatisation. Dès 1801, les métiers à tisser Jacquard utilisaient des cartes perforées pour programmer des motifs textiles, préfigurant les concepts de codage. Cependant, c’est au milieu du 19e siècle qu’un jalon historique est posé avec les travaux d’Ada Lovelace (1815-1852) sur la machine analytique de Charles Babbage. Considérée comme la première programmeuse, elle rédigea des notes détaillées incluant un algorithme pour calculer les nombres de Bernoulli, démontrant qu’une machine pouvait exécuter des instructions complexes. Le langage Ada, créé dans les années 1980, rend hommage à cette contribution pionnière.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+ Les structures de données de base
+ &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
+&lt;/h1>
+&lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
+Faisons-en rapidement le tour.&lt;/p>
+&lt;h2 id="les-tableaux-et-matrices">
+ Les tableaux et matrices
+ &lt;a class="anchor" href="#les-tableaux-et-matrices">#&lt;/a>
+&lt;/h2>
+&lt;p>Jusqu'à présent, lorsque nous avons créé une variable, elle ne contenait qu'une seule donnée qui pouvait être une donnée primitive ou une référence vers un objet. En effet, dans la programmation orientée objet, certaines structures ont un nombre fixe d'objets : il s'agit des tableaux. Il en existe deux types : les tableaux à une dimension et les matrices à deux ou trois dimensions.&lt;/p></description></item><item><title>Travail noté 4</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</guid><description>&lt;h1 id="travail-noté-4---les-flux-dentrées-et-de-sorties">
+ Travail noté 4 - Les flux d&amp;rsquo;entrées et de sorties
+ &lt;a class="anchor" href="#travail-not%c3%a9-4---les-flux-dentr%c3%a9es-et-de-sorties">#&lt;/a>
+&lt;/h1>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;p>Dans ce travail, nous allons vous demander d'accéder à un fichier, le lire les données que nous y trouvons, de valider les données lues selon des règles, et d'ensuite afficher le résultat sous un autre format.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
+ Travail noté 5 - Héritage et polymorphisme
+ &lt;a class="anchor" href="#travail-not%c3%a9-5---h%c3%a9ritage-et-polymorphisme">#&lt;/a>
+&lt;/h1>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;p>Vous devez remettre ce travail dans 1 (seul) document pdf et déposer celui-ci sur le site de dépôt des travaux de la TÉLUQ : &lt;a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant&lt;/a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. &lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+ Exercices sur les structures de contrôle, les structures de données, les structures itératives
+ &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h2>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.&lt;/p></description></item><item><title>Feuille de route</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/feuille-de-route/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/feuille-de-route/</guid><description>&lt;h1>Feuille de route&lt;/h1>
+&lt;p>Prévoyez environ 9 heures de travail pendant quinze semaines. Il n'est pas possible, pour la plupart des étudiants, de réussir ce cours en ne prenant qu'une poignée d'heures par semaine. &lt;/p>
+&lt;p>Chaque étudiant a sa propre date de départ et date de fin de cours personnalisée. La date à laquelle l'étudiant doit passer son examen est déterminé par l'Université: celle-ci vous fera parvenir les détails en temps opportun. Le professeur ne peut pas changer vos dates de départ, de fin ou d'examen: vous devez joindre l'Université si vous souhaitez les modifier. &lt;/p></description></item><item><title>Les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</guid><description>&lt;h1 id="les-algorithmes">
+ Les algorithmes
+ &lt;a class="anchor" href="#les-algorithmes">#&lt;/a>
+&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Méthodes et constructeurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</guid><description>&lt;h1 id="la-conception-de-méthodesfonctions-et-leur-appel">
+ La conception de méthodes/fonctions et leur appel
+ &lt;a class="anchor" href="#la-conception-de-m%c3%a9thodesfonctions-et-leur-appel">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="les-méthodes">
+ Les méthodes
+ &lt;a class="anchor" href="#les-m%c3%a9thodes">#&lt;/a>
+&lt;/h2>
+&lt;p>Dans la plupart des langages de programmation modernes, il est possible de subdiviser le code en plusieurs sections appelées méthodes ou fonctions (le terme méthode est spécifique au langage Java, mais le terme fonction peut-être également utilisé). L'avantage est double, ces méthodes permettent une meilleure lecture du code et permet de généraliser et réutiliser des portions de code fréquent. De plus, en programmation orientée-objet, l'utilisation de méthodes est parfois appelée un passage de message. Ainsi, une classe peut offrir différentes méthodes à l'application qui peuvent être appelées en envoyant à celle-ci un message et des paramètres (ou non). De plus, la bibliothèque de code standard de Java, appelé &lt;em>Application programming interface&lt;/em> (API), fournit plusieurs classes utiles telles que des structures de données (ex. ArrayList, Hashmap), des types avancés (ex. les chaînes de caractères String ou StringBuffer), des outils de gestion de flux de données (ex. pour l'écriture et la lecture dans les fichiers (ex. FileReader, FileInputStream). Chacune des classes de l'API offre un ensemble de méthodes pouvant être appelées pour une tâche ou un traitement donné. Voici un exemple d'appel de méthode avec la classe String : &lt;/p></description></item><item><title>Examen</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</guid><description>&lt;h1 id="examen-final">
+ Examen final
+ &lt;a class="anchor" href="#examen-final">#&lt;/a>
+&lt;/h1>
+&lt;p>L&amp;rsquo;objectif principal de l&amp;rsquo;examen est de valider le savoir-faire que vous avez intégré tout au long du cours. Comme la question revient sans cesse, soyons clair sur ce point: &lt;strong>l'examen couvre toute la matière du cours.&lt;/strong> &lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors de l'examen&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;p>Si vous ne maîtrisez pas la matière du cours, vous ne réussirez probablement pas l'examen. Prenez le temps d'étudier, de réviser et de poser des questions le cas échéant. Pratiquez-vous à programmer.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h2 id="exercices-sur-les-algorithmes-et-problèmes">
+ Exercices sur les algorithmes et problèmes
+ &lt;a class="anchor" href="#exercices-sur-les-algorithmes-et-probl%c3%a8mes">#&lt;/a>
+&lt;/h2>
+&lt;p>La notion d&amp;rsquo;algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l&amp;rsquo;algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.&lt;/p></description></item><item><title>Exercices sur les classes et méthodes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</guid><description>&lt;h1 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h1>
+&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Certains étudiants aiment utiliser une &lt;a href="https://cheatography.com/sschaub/cheat-sheets/java-fundamentals/">Java Fundamentals Cheat Sheet&lt;/a> (anglais) pour garder à l'esprit la syntaxe.&lt;/p>
+&lt;h1 id="comment-faire-ces-exercices-">
+ Comment faire ces exercices ?
+ &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
+&lt;/h1>
+&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions">
+ Les exceptions
+ &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="les-erreursexceptions-en-java">
+ Les erreurs/exceptions en Java
+ &lt;a class="anchor" href="#les-erreursexceptions-en-java">#&lt;/a>
+&lt;/h2>
+&lt;p>La grande majorité des langages de programmation modernes peuvent générer des fautes à la compilation (par exemple l'oubli d'un ; à la fin d'une ligne de code) et à l'exécution. Dans le langage Java, lorsqu'il y a une faute à l'exécution, une exception ou une erreur particulière est générée par la machine virtuelle Java (JVM) : StackOverflowError, DataFormatException, etc. Il faut distinguer d'abord ce qu'est une exception et une erreur. Une erreur (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/?java/lang/Error.html">Error&lt;/a>) est un événement grave que tout "bon" logiciel ne devrait pas "attraper" (avec le try-catch) et amener la fin de l'exécution du programme. Une exception (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">Exception&lt;/a>) est une faute qui peut être gérée, ou non, par le programme et que l'on peut qualifier de moins grave. 
+&lt;/p></description></item><item><title>Ressources</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/ressources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/ressources/</guid><description>&lt;h1 id="ressources-pour-apprendre-java">
+ Ressources pour apprendre Java
+ &lt;a class="anchor" href="#ressources-pour-apprendre-java">#&lt;/a>
+&lt;/h1>
+&lt;p>Ce document regroupe des ressources variées pour apprendre Java, des livres aux tutoriels en ligne, en passant par des vidéos et des conseils pratiques. Il s’adresse aux débutants comme aux apprenants intermédiaires souhaitant approfondir leurs compétences en programmation.&lt;/p>
+&lt;h2 id="ouvrages-de-référence">
+ Ouvrages de référence
+ &lt;a class="anchor" href="#ouvrages-de-r%c3%a9f%c3%a9rence">#&lt;/a>
+&lt;/h2>
+&lt;p>Les livres suivants offrent une introduction ou un approfondissement en Java, adaptés à différents niveaux :&lt;/p>
+&lt;ul>
+&lt;li>Claude Delannoy, &lt;em>Programmer en Java&lt;/em>, Eyrolles : un ouvrage complet pour les débutants et intermédiaires.&lt;/li>
+&lt;li>Barry Burd, &lt;em>Java pour les nuls&lt;/em>, 4e édition (environ 25 $) : une approche conviviale, idéale pour les novices.&lt;/li>
+&lt;li>Cyrille Herby, &lt;em>Apprenez à programmer en Java&lt;/em> (environ 11 $) : un manuel axé sur la programmation professionnelle.&lt;/li>
+&lt;/ul>
+&lt;h2 id="documentation-officielle">
+ Documentation officielle
+ &lt;a class="anchor" href="#documentation-officielle">#&lt;/a>
+&lt;/h2>
+&lt;p>La documentation d’Oracle est une référence incontournable pour comprendre les bases et explorer les fonctionnalités avancées :&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+ La récursivité
+ &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="le-concept-de-récursivité">
+ Le concept de récursivité
+ &lt;a class="anchor" href="#le-concept-de-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h2>
+&lt;p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :&lt;/p></description></item><item><title>Travail noté 1</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</guid><description>&lt;h1 id="travail-noté-1---les-algorithmes">
+ Travail noté 1 - Les algorithmes
+ &lt;a class="anchor" href="#travail-not%c3%a9-1---les-algorithmes">#&lt;/a>
+&lt;/h1>
+&lt;p>Prenez le temps de lire les consignes. Nous expliquons toute la démarche en détail, en répétant même plus d'une fois les informations importantes pour être sûr que tout est clair et limpide.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;p>Dans ce cours, nous visons à corriger les travaux dans les cinq jours ouvrables suivant leur dépôt. Si vous n'avez pas reçu la correction après 10 jours ouvrables, vous pouvez joindre le professeur pour voir où nous en sommes avec la correction. Tenez cependant compte du fait que nos correcteurs prennent souvent des vacances durant l'été et pendant la période des fêtes de Noël.&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
+ Travail noté 2 - Les types, opérateurs et méthodes
+ &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
+&lt;/h1>
+&lt;p>Avant de faire le travail, assurez-vous d'avoir fait tous les exercices et toutes les lectures. Posez des questions au besoin. Ne commencez le travail que lorsque vous êtes certain de bien maîtriser la matière.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p></description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/evaluation/</guid><description>&lt;h1>Évaluation&lt;/h1>
+&lt;p>Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d'un examen final à réaliser à la fin du cours. Voici la grille de pondération des travaux :&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Évaluations&lt;/th>
+ &lt;th>Sujets&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Travail Noté #1&lt;/td>
+ &lt;td>Les algorithmes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Travail Noté #2&lt;/td>
+ &lt;td>Types, opérateurs et méthodes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Travail Noté #3&lt;/td>
+ &lt;td>Structures de contrôle, itérations et données&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Travail Noté #4&lt;/td>
+ &lt;td>Les flux d&amp;rsquo;entrée et de sortie&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Travail Noté #5&lt;/td>
+ &lt;td>Héritage et polymorphismes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Examen&lt;/td>
+ &lt;td>L&amp;rsquo;ensemble du cours&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Avant de faire les travaux, il faut avoir fait les lectures et les exercices de préparation. Essayez d'aller directement aux travaux notés est une stratégie perdante pour la plupart des étudiants. Prenez le temps d'étudier la matière! &lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1>Travail noté 3 - Les structures de données, de contrôle et d'itération&lt;/h1>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;h2>Directives &lt;/h2>
+&lt;ul>
+ &lt;li>Les travaux notés testent en partie votre capacité à comprendre des énoncés logiques. Vous devez lire de manière attentive les consignes et les questions, et vous devez montrer que vous êtes capable de les interpréter et de faire preuve de raisonnement abstrait. En tant que programmeur Java, vous devez être capable de lire un énoncé et de le convertir en code Java sans nécessairement qu'on doive vous expliquer l'énoncé ou vous fournir des exemples. L'examen à la fin de ce cours peut contenir des questions qui comprennent un énoncé formel et logique que vous devez transcrire en code Java. &lt;/li>
+ &lt;li>On s'attend à ce que vous fassiez des recherches sur le Web afin de réaliser ce travail. La recherche sur le Web est une activité essentielle en développement logiciel.&lt;/li>
+ &lt;li>Vous devez remettre un fichier PDF contenant votre code. Vous ne devez pas inclure votre code Java en fichiers distincts. Pour faciliter la correction, assurez-vous qu'on puisse copier-coller du texte à partir du document PDF. Si votre document ne permet pas de copier-coller du texte, il pourra être refusé ou une note de zéro pourra être attribuée. Les travaux écrits à la main seront refusés. N'utilisez pas des saisies d'écran. &lt;/li>
+&lt;li>Vous devez remettre ce travail sur le site de dépôt des travaux de la TÉLUQ : &lt;a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant&lt;/a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. &lt;/li>
+&lt;li>Dans certains cas, vous n'arrivez pas à résoudre complètement le problème. Ce n'est pas grave! Tentez de vous rendre aussi loin que possible, et expliquez le mieux possible votre solution et ce qui vous embête.&lt;/li>
+&lt;li>Notez que nous ne fournissons pas les solutions suite à la remise du travail noté.&lt;/li>
+&lt;li>Le niveau de difficulté et l'ampleur des travaux est comparable aux autres cours d'introduction à la programmation offert au sein des universités québécoises.&lt;/li>
+&lt;li>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.&lt;/li>
+&lt;/ul>
+ &lt;p>Si vous avez des questions sur le travail, vous pouvez communiquer avec &lt;a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable&lt;/a>. Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).&lt;/p></description></item><item><title>FAQ</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</guid><description>&lt;h3 id="question-quest-ce-que-java-et-pourquoi-est-il-utilisé-">
+ Question: Qu&amp;rsquo;est-ce que Java et pourquoi est-il utilisé ?
+ &lt;a class="anchor" href="#question-quest-ce-que-java-et-pourquoi-est-il-utilis%c3%a9-">#&lt;/a>
+&lt;/h3>
+&lt;p>Réponse: Java est un langage de programmation orienté objet, populaire pour sa portabilité et sa robustesse. Il est utilisé pour développer des applications web, mobiles (comme Android), des logiciels d&amp;rsquo;entreprise et des jeux, car il fonctionne sur de nombreuses plateformes grâce à la machine virtuelle Java (JVM).&lt;/p>
+&lt;h3 id="question-comment-installer-java-sur-mon-ordinateur-">
+ Question: Comment installer Java sur mon ordinateur ?
+ &lt;a class="anchor" href="#question-comment-installer-java-sur-mon-ordinateur-">#&lt;/a>
+&lt;/h3>
+&lt;p>Réponse: Pour installer Java, téléchargez le JDK (Java Development Kit) depuis le site officiel d&amp;rsquo;Oracle ou adoptez une version open-source comme OpenJDK. Suivez les instructions d&amp;rsquo;installation pour votre système (Windows, macOS ou Linux). Vérifiez l&amp;rsquo;installation en tapant &lt;code>java -version&lt;/code> dans une invite de commande.&lt;/p></description></item><item><title>Manuel</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</guid><description>&lt;p>Nous utilisons un manuel d&amp;rsquo;introduction à la programmation Java intitulé &lt;em>Java pas à pas&lt;/em> par Robert Godin et Daniel Lemire. Vous pouvez &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF&lt;/a> dès maintenant.&lt;/p>
+&lt;blockquote>
+&lt;p>Cet ouvrage présente les concepts de base de la programmation et du langage Java. Le livre s’adresse à un auditoire très large, aussi bien un débutant qui désire apprendre la programmation pour le plaisir qu’à un étudiant qui entreprend une carrière d’informaticien. L’approche proposée introduit graduellement les concepts de base de la programmation et leur incarnation dans le langage Java à l’aide d’une série d’exemples et d’exercices.&lt;/p></description></item><item><title>Rappel mathématique</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/math/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/math/</guid><description>&lt;h1 id="rappel-mathématique">
+ Rappel mathématique
+ &lt;a class="anchor" href="#rappel-math%c3%a9matique">#&lt;/a>
+&lt;/h1>
+&lt;p>Avant de commencer, il est conseillé, pour se familiariser avec certaines notations, de jeter un coup d&amp;rsquo;œil sur le &lt;a href="#annexe">tableau des symboles et abréviations usuels&lt;/a>.&lt;/p>
+&lt;h2 id="1-les-propositions-les-ensembles-les-relations-et-les-nombres">
+ 1. Les propositions, les ensembles, les relations et les nombres
+ &lt;a class="anchor" href="#1-les-propositions-les-ensembles-les-relations-et-les-nombres">#&lt;/a>
+&lt;/h2>
+&lt;p>Pour aborder les concepts mathématiques fondamentaux, il est essentiel de comprendre les notions de base qui sous-tendent la logique et la théorie des ensembles. Cette section introduit les propositions, les ensembles, les relations et les nombres, en posant les fondations nécessaires à une étude rigoureuse.&lt;/p></description></item><item><title>Intelligence artificielle</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</guid><description>&lt;p>Dans le cadre de ce cours, l’utilisation d’outils d’intelligence artificielle (tels que Claude, ChatGPT, Copilot, Grok, ou autres) est autorisée, mais demeure facultative. Ces outils peuvent servir de soutien pour approfondir votre compréhension, structurer vos idées ou générer des contenus préliminaires. Toutefois, leur usage doit être responsable, transparent et rigoureusement documenté. L’objectif est de garantir que votre travail reflète vos compétences et votre compréhension personnelle, tout en tirant parti des possibilités offertes par ces technologies. Une utilisation non déclarée ou inappropriée de l’IA peut être considérée comme une faute académique, tandis qu’une déclaration claire de son usage renforce la crédibilité de votre démarche.&lt;/p></description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/courriel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/courriel/</guid><description>&lt;p>Lors de l&amp;rsquo;écriture d&amp;rsquo;un courriel, être bref est important. Omettez les formules de salutation, les signatures surfaites,
+etc.&lt;/p>
+&lt;p>Attention aux émotions : Il est facile quand on reçoit ou transmet un courriel de s&amp;rsquo;emporter ou de lire dans les
+messages reçus des sentiments. Dans un contexte professionnel, évitez d&amp;rsquo;écrire un courriel alors que vous êtes énervé.&lt;/p>
+&lt;p>Choisissez les destinataires de votre courriel avec soin. Il est pratiquement toujours mal avisé de transmettre un
+courriel à un grand groupe, à moins que le courriel soit une communication formelle. Dans le doute, écrivez un courriel
+à un seul destinataire.&lt;/p></description></item></channel></rss>

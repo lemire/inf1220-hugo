@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/</link><description>Recent content in Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module3/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
+ GitHub (optionnel)
+ &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
+&lt;/h1>
+&lt;p>&lt;a href="https://github.com">GitHub&lt;/a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git&lt;/a>, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire">Vous trouverez le professeur responsable du cours sur GitHub&lt;/a>. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p></description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+ Les structures de contrôle
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures de contrôle permettent de contrôler des variables puis d'effectuer des actions basées sur le résultat du contrôle. Dans le langage Java, à l'exception de l'opération de contrôle à trois opérandes (vu précédemment dans le cours), il existe 2 formes de structure de contrôle : le if-else et le switch-case.&lt;/p>
+&lt;p>&lt;a id="intro" name="section1">&lt;/a>&lt;/p>
+&lt;h2 id="le-bloc-dinstructions">
+ Le bloc d&amp;rsquo;instructions
+ &lt;a class="anchor" href="#le-bloc-dinstructions">#&lt;/a>
+&lt;/h2>
+&lt;p dir="ltr" style="margin-right: 0px; ">Un bloc d'instructions est un groupe d'instructions rédigées entre deux accolades (&lt;strong>{ }&lt;/strong>). Il exprime l'ordre d'exécution des différentes instructions. Il définit également le domaine de visibilité des variables incluses dans la déclaration. Un bloc d'instructions peut apparaître partout dans l'instruction. &lt;br />Les instructions, comme les blocs d'instructions, peuvent être identifiées par une étiquette. Cette étiquette précédera l'instruction, ou fera partie du bloc d'instructions, et sera suivie du caractère &lt;strong>:&lt;/strong>&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+ Les structures itératives
+ &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+ Les structures de données de base
+ &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
+&lt;/h1>
+&lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
+Faisons-en rapidement le tour.&lt;/p>
+&lt;h2 id="les-tableaux-et-matrices">
+ Les tableaux et matrices
+ &lt;a class="anchor" href="#les-tableaux-et-matrices">#&lt;/a>
+&lt;/h2>
+&lt;p>Jusqu'à présent, lorsque nous avons créé une variable, elle ne contenait qu'une seule donnée qui pouvait être une donnée primitive ou une référence vers un objet. En effet, dans la programmation orientée objet, certaines structures ont un nombre fixe d'objets : il s'agit des tableaux. Il en existe deux types : les tableaux à une dimension et les matrices à deux ou trois dimensions.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+ Exercices sur les structures de contrôle, les structures de données, les structures itératives
+ &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h2>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.&lt;/p></description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions">
+ Les exceptions
+ &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="les-erreursexceptions-en-java">
+ Les erreurs/exceptions en Java
+ &lt;a class="anchor" href="#les-erreursexceptions-en-java">#&lt;/a>
+&lt;/h2>
+&lt;p>La grande majorité des langages de programmation modernes peuvent générer des fautes à la compilation (par exemple l'oubli d'un ; à la fin d'une ligne de code) et à l'exécution. Dans le langage Java, lorsqu'il y a une faute à l'exécution, une exception ou une erreur particulière est générée par la machine virtuelle Java (JVM) : StackOverflowError, DataFormatException, etc. Il faut distinguer d'abord ce qu'est une exception et une erreur. Une erreur (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/?java/lang/Error.html">Error&lt;/a>) est un événement grave que tout "bon" logiciel ne devrait pas "attraper" (avec le try-catch) et amener la fin de l'exécution du programme. Une exception (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">Exception&lt;/a>) est une faute qui peut être gérée, ou non, par le programme et que l'on peut qualifier de moins grave. 
+&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+ La récursivité
+ &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="le-concept-de-récursivité">
+ Le concept de récursivité
+ &lt;a class="anchor" href="#le-concept-de-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h2>
+&lt;p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1>Travail noté 3 - Les structures de données, de contrôle et d'itération&lt;/h1>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
+&lt;h2>Directives &lt;/h2>
+&lt;ul>
+ &lt;li>Les travaux notés testent en partie votre capacité à comprendre des énoncés logiques. Vous devez lire de manière attentive les consignes et les questions, et vous devez montrer que vous êtes capable de les interpréter et de faire preuve de raisonnement abstrait. En tant que programmeur Java, vous devez être capable de lire un énoncé et de le convertir en code Java sans nécessairement qu'on doive vous expliquer l'énoncé ou vous fournir des exemples. L'examen à la fin de ce cours peut contenir des questions qui comprennent un énoncé formel et logique que vous devez transcrire en code Java. &lt;/li>
+ &lt;li>On s'attend à ce que vous fassiez des recherches sur le Web afin de réaliser ce travail. La recherche sur le Web est une activité essentielle en développement logiciel.&lt;/li>
+ &lt;li>Vous devez remettre un fichier PDF contenant votre code. Vous ne devez pas inclure votre code Java en fichiers distincts. Pour faciliter la correction, assurez-vous qu'on puisse copier-coller du texte à partir du document PDF. Si votre document ne permet pas de copier-coller du texte, il pourra être refusé ou une note de zéro pourra être attribuée. Les travaux écrits à la main seront refusés. N'utilisez pas des saisies d'écran. &lt;/li>
+&lt;li>Vous devez remettre ce travail sur le site de dépôt des travaux de la TÉLUQ : &lt;a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant&lt;/a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. &lt;/li>
+&lt;li>Dans certains cas, vous n'arrivez pas à résoudre complètement le problème. Ce n'est pas grave! Tentez de vous rendre aussi loin que possible, et expliquez le mieux possible votre solution et ce qui vous embête.&lt;/li>
+&lt;li>Notez que nous ne fournissons pas les solutions suite à la remise du travail noté.&lt;/li>
+&lt;li>Le niveau de difficulté et l'ampleur des travaux est comparable aux autres cours d'introduction à la programmation offert au sein des universités québécoises.&lt;/li>
+&lt;li>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.&lt;/li>
+&lt;/ul>
+ &lt;p>Si vous avez des questions sur le travail, vous pouvez communiquer avec &lt;a href="https://www.teluq.ca/siteweb/univ/dlemire.html">le professeur responsable&lt;/a>. Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).&lt;/p></description></item></channel></rss>

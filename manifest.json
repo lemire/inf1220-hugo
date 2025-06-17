@@ -1,0 +1,15 @@
+{
+  "name": "INF 1220 - Introduction à la programmation",
+  "short_name": "INF 1220 - Introduction à la programmation",
+  "start_url": "/inf1220-hugo/",
+  "scope": "/inf1220-hugo/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/inf1220-hugo/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}
