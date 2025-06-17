@@ -22,7 +22,6 @@ L’avènement des ordinateurs modernes dans les années 1940-1950 marque un tou
 
 Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, de flexibilité et d’accessibilité. Dans les années 1980 et 1990, des langages comme C++ (1983), Python (1991), Java (1995), JavaScript (1995) et PHP (1995) voient le jour, chacun répondant à des besoins spécifiques : performance pour C++, simplicité pour Python, portabilité pour Java, interactivité web pour JavaScript, ou développement web dynamique pour PHP. Aujourd’hui, ces langages dominent l’industrie, comme le montre le classement 2017 de l’IEEE Spectrum, qui reflète leur popularité et leur polyvalence.
 
-Tous ces langages partagent un objectif commun : permettre aux programmeurs de décrire des solutions à des problèmes en s’éloignant progressivement des contraintes du matériel. Pour comprendre leur rôle, il est essentiel de se pencher sur le fonctionnement des ordinateurs.
 
 
 | Version | Changement principal        | Année de sortie |
@@ -55,7 +54,11 @@ Tous ces langages partagent un objectif commun : permettre aux programmeurs de d
 | Java SE 25 | Finalisation Valhalla      | 2025             |
 | Java SE 26 | Optimisations Leyden       | 2026             |
 
+
 ## Résumé de l’architecture des ordinateurs et de l’abstraction des langages
+
+
+Tous ces langages partagent un objectif commun : permettre aux programmeurs de décrire des solutions à des problèmes en s’éloignant progressivement des contraintes du matériel. Pour comprendre leur rôle, il est essentiel de se pencher sur le fonctionnement des ordinateurs.
 
 Les ordinateurs modernes s’appuient sur deux concepts fondamentaux : la machine de Turing, théorisée par Alan Turing, qui définit une machine capable d’exécuter n’importe quel algorithme, et l’architecture de von Neumann, qui structure les ordinateurs autour de quatre composantes principales. Premièrement, la mémoire stocke à la fois les données et les programmes, une innovation clé par rapport aux machines antérieures où les instructions étaient fixes. Deuxièmement, l’unité de contrôle orchestre l’exécution des instructions en suivant un séquençage précis. Troisièmement, l’unité arithmétique et logique effectue les calculs de base, comme les additions ou les comparaisons. Enfin, les interfaces d’entrée/sortie permettent d’interagir avec l’utilisateur ou d’autres systèmes, via des périphériques comme les claviers, écrans ou réseaux.
 
