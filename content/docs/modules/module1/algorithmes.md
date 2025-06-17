@@ -143,6 +143,7 @@ Dans la notion de pseudo-code, il est également possible de faire une suite de 
 Il arrive régulièrement dans la résolution d'un problème qu'il est nécessaire de réaliser à plusieurs reprises une ou des opérations sur un ensemble de données. Par exemple, supposons qu'il est nécessaire de trouver le plus petit nombre dans un tableau d'entiers. Il sera forcément nécessaire d'itérer dans le tableau, une ligne à la fois, et de comparer les nombres entre eux. Pour ce faire, nous utiliserons deux éléments de syntaxe, soit le TANT QUE _ FAIRE ou bien le POUR TOUT _ FAIRE. Voici deux exemples de l'utilisation de ces deux approches :
 
 <div style="max-width: 800px; margin: 0 auto; background-color: #ffffff; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
         # Exécution des Pseudocodes de Recherche du Minimum
         
         Cette page décrit l'exécution détaillée de deux pseudocodes qui trouvent le minimum dans un tableau d'entiers. Pour l'exemple, nous utilisons le tableau `tableau = [7, 3, 9, 1, 5]`.

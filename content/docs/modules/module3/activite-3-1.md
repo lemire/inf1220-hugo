@@ -187,6 +187,7 @@ Observez le mot-clé `yield` utilisé dans les expressions switch  pour spécifi
 	<li>Section 2 : L'instruction switch</li>
 
 </ul>
+
 ### Vidéos suggérées
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0rANfWRfc_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

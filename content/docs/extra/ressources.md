@@ -2,6 +2,7 @@
 title: "Ressources"
 weight: 6
 ---
+
 # Ressources pour apprendre Java
 
 Ce document regroupe des ressources variées pour apprendre Java, des livres aux tutoriels en ligne, en passant par des vidéos et des conseils pratiques. Il s’adresse aux débutants comme aux apprenants intermédiaires souhaitant approfondir leurs compétences en programmation.

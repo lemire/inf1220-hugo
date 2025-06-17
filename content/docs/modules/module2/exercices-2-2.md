@@ -296,6 +296,7 @@ public class Entier {
 ```
 
 </details>
+
 ## Allez plus loin?
 
 
