@@ -37,7 +37,6 @@ weight: 4
 
 <p>Pour faire ce travail, vous devez avoir les bases concernant la manipulation des chaînes de caractères et des structures de données en Java. Certains étudiants essaient d'aller trop vite et ils passent outre aux exercices de préparation des modules précédents. Vous devez avoir fait tous les exercices et vous assurer des les avoir bien compris. </p>
 
-<p> Le cours comprend plusieurs exemples avec solutions. Par contre, les solutions des travaux notés ne sont jamais transmises dans ce cours: si vous avez des questions sur vos résultats, vous pouvez poser des questions au professeur.  Assurez-vous de poser des questions précises, et prenez le temps de consulter la rétroaction du correcteur. (Indice: si vous demandez les solutions suite à la correction de votre travail, vous nous indiquez que vous n'avez pas bien lu les consignes.)</p>
 
 
 <p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>

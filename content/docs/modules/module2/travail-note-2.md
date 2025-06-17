@@ -5,44 +5,11 @@ weight: 7
 
 # Travail noté 2 - Les types, opérateurs et méthodes
 
-<p>Avant de faire le travail, assurez-vous d'avoir fait tous les exercices et toutes les lectures. Posez des questions au besoin. Ne commencez le travail que lorsque vous êtes certain de bien maîtriser la matière.</p>
+Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.
 
+Les travaux doivent être remis sous forme de fichier PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le document doit être clair, lisible, permettre le copier-coller du code, et inclure des explications détaillées en français sous forme de texte suivi, en évitant les saisies d’écran ou les travaux manuscrits. Les réponses doivent être précises, personnelles, et accompagnées d’analyses, sans se limiter à du code ou à des extraits recopiés. Une fois soumis, le travail ne peut être modifié, d’où l’importance de le relire attentivement.
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
-
-## Les reports de la date de fin de cours
-
-
-<p><strong>Rappel</strong>: L'enseignant ne peut modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les enseignants n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc.</p>
-
-
-<p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
-
-## Instructions de dépôt du travail noté
-
-<p>Vous devez remettre ce travail dans un fichier PDF et déposer celui-ci sur le site de dépôt des travaux de la TÉLUQ : <a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant</a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été  inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais  est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. </p>
-
-
-<p>Attention: une fois le travail remis dans l'outil de dépôt, vous ne pourrez pas le modifier. Vérifiez bien votre travail avec soin avant de le remettre. Relisez-vous deux fois plutôt qu'une.</p>
-
-<p>Vous ne devez pas remettre des fichiers distincts Java. Vous devez inclure votre code dans le fichier PDF. Pour faciliter la correction, assurez-vous qu'on puisse copier-coller votre code à partir du document PDF. Si votre document ne permet pas de copier-coller le code, il pourra être refusé ou une note de zéro pourra être attribuée. Les travaux écrits à la main seront refusés. N'utilisez pas des saisies d'écran. </p>
-
-<p>On veut que vous présentiez et expliquiez votre code. On ne veut pas que lire votre code, on ne veut pas lire que du Java... on veut du texte suivi en lien avec le code.  Il est important de comprendre que nous ne corrigeons pas en premier à partir de votre code Java. Nous voulons vraiment lire vos explications en français. La présentation de votre code est importante. Votre analyse de votre code et du problème est essentielle. Vos réponses aux questions doivent être précises et claires.</p>
-
-<p>Vous devez donc rédiger du texte pour vous expliquer en utilisant des phrases complètes, des paragraphes, et ainsi de suite. Si vous ne remettez que du code informatique comme réponse à une question, une note de zéro pourra être accordée.</p>
-
-<p> Vous devez rédiger des réponses personnelles. Vous ne pouvez pas, par exemple, vous contenter de recopier une partie des notes de cours ou du texte trouvé sur Internet.</p>
-
-<p>Ceci dit, vous n’avez pas à utiliser Microsoft Word pour générer votre document PDF. Tout outil logiciel qui génère des fichiers PDF de qualité fera le travail.</p>
-  <p>On s'attend à ce que vous fassiez des recherches sur le Web afin de réaliser ce travail. La recherche sur le Web est une activité essentielle en développement logiciel.</p>
-
-
-  <p>Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
-
-<p> Le cours comprend plusieurs exemples avec solutions. Par contre, les solutions des travaux notés ne sont jamais transmises dans ce cours: si vous avez des questions sur vos résultats, vous pouvez poser des questions au professeur.  Assurez-vous de poser des questions précises, et prenez le temps de consulter la rétroaction du correcteur. (Indice: si vous demandez les solutions suite à la correction de votre travail, vous nous indiquez que vous n'avez pas bien lu les consignes.)</p>
-
-<p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>
-
+Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant mener à une note de zéro ou à une exclusion. La recherche sur le web est encouragée, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La présentation, l’analyse et la clarté des explications sont prioritaires lors de la correction, qui valorise le raisonnement et la qualité du texte en français, plus que le code seul.
 ## Question #1
 
 <p>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer <tt>Cercle</tt>.</p>

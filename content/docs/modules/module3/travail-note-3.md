@@ -44,7 +44,6 @@ weight: 8
 <li>Est-ce que la somme peut être représentée par une variable de type <tt>int</tt>? Assurez-vous de discuter ce point dans votre solution.</li>
 </ol>
 
-<p> Le cours comprend plusieurs exemples avec solutions. Par contre, les solutions des travaux notés ne sont jamais transmises dans ce cours: si vous avez des questions sur vos résultats, vous pouvez poser des questions au professeur.  Assurez-vous de poser des questions précises, et prenez le temps de consulter la rétroaction du correcteur. (Indice: si vous demandez les solutions suite à la correction de votre travail, vous nous indiquez que vous n'avez pas bien lu les consignes.)</p>
 
 
 <p>Pour faciliter la correction, assurez-vous qu'on puisse copier-coller votre code à partir du document PDF. N'utilisez pas des saisies d'écran.Si le code de votre solution n'est pas du Java valable, s'il ne compile pas, une note de zéro pourra être attribuée. Pour réussir ce cours, vous devez être capable d'écrire du code Java fonctionnel et correct.</p>

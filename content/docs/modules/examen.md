@@ -127,7 +127,7 @@ Qui puis-je contacter si j’ai des questions?
 
 ## Déroulement et le jour de l'examen
 
-<p>Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire au professeur pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.</p>
+<p>Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire à l'enseignant pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.</p>
 
 <p>L'enseignant ne peut changer la date, le lieu ou l'heure de votre examen. Il ne contrôle pas l'environnement technologique lors de l'examen. Un service distinct et indépendant au sein de l'Université gère les examens.</p>
 

@@ -5,32 +5,11 @@ weight: 4
 
 # Travail noté 5 - Héritage et polymorphisme
 
+Pour le cours INF1220, les travaux notés doivent être soumis sous forme d’un unique fichier PDF via l’outil de dépôt officiel de la TÉLUQ, avant la date de fin de cours indiquée sur le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code Java. L’utilisation du robot conversationnel du cours est autorisée, mais les réponses et analyses doivent être personnelles. Avant de commencer, il est crucial d’avoir complété toutes les lectures et exercices préparatoires et de maîtriser la matière, en posant des questions si nécessaire.
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des travaux notés</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
+La date de fin de cours, fixée par l’Université, est non négociable par les enseignants, et tout travail soumis tardivement risque une note de zéro ou un « incomplet », même si l’examen a lieu plus tard. En cas de difficultés personnelles (maladie, deuil, etc.), les étudiants doivent contacter l’Université pour demander un report. Les problèmes techniques avec l’outil de dépôt doivent également être résolus via l’Université. Aucun indice supplémentaire ne sera fourni au-delà de l’énoncé pour garantir l’équité, et les étudiants sont responsables de planifier leur temps et de vérifier soigneusement leur travail avant soumission.
 
-<p>Vous devez remettre ce travail dans 1 (seul) document pdf  et déposer celui-ci sur le site de dépôt des travaux de la TÉLUQ : <a href="https://www.teluq.ca/depot-travaux-etudiant">http://www.teluq.ca/depot-travaux-etudiant</a>. Vous ne pouvez utiliser l'outil de dépôt qu'après le début de votre cours et avant la fin de votre cours, et seulement si vous avez été  inscript au cours. En aucun cas est-ce que nous pouvons recevoir vos travaux par courriel. Les travaux transmis par courriel au sein du cours INF 1220 ne seront pas corrigés et recevrons une note de zéro. Il pourrait n'y avoir aucun avertissement : le dépôt du travail dans les délais  est votre responsabilité. Si vous éprouvez des difficultés techniques avec l'outil de dépôt, vous devez joindre l'Université pour obtenir de l'aide. </p>
-
-<p>Avant de faire le travail, assurez-vous d'avoir fait tous les exercices et toutes les lectures. Posez des questions au besoin. Ne commencez le travail que lorsque vous êtes certain de bien maîtriser la matière.</p>
-
-<p>Vous  devez remettre un fichier PDF contenant votre code. Vous ne devez pas inclure votre code Java en fichiers distincts.  Pour faciliter la correction, assurez-vous qu'on puisse copier-coller du texte à partir du document PDF.  Si votre document ne permet pas de copier-coller, il pourra être refusé ou une note de zéro pourra être attribuée. Les travaux écrits à la main seront refusés. N'utilisez pas des saisies d'écran.</p>
-
-
-
-<p>Attention: nous ne donnons jamais d'indice (à quiconque) sur les travaux notés au-delà de ce qui est déjà dans l'énoncé (ce serait inéquitable).</p>
-
-
-<p> Le cours comprend plusieurs exemples avec solutions. Par contre, les solutions des travaux notés ne sont jamais transmises dans ce cours: si vous avez des questions sur vos résultats, vous pouvez poser des questions au professeur.  Assurez-vous de poser des questions précises, et prenez le temps de consulter la rétroaction du correcteur. (Indice: si vous demandez les solutions suite à la correction de votre travail, vous nous indiquez que vous n'avez pas bien lu les consignes.)</p>
-
-
-
-<p>Les travaux au sein de ce cours sont des travaux individuels. Il est strictement défendu de discuter du travail noté avec quiconque. En particulier, des échanges au sein de réseaux sociaux (Facebook, etc.) concernant ce travail peuvent constituer une faute académique. Vous pourriez obtenir la note de zéro ou recevoir une sanction allant jusqu'à l'exclusion du programme dans lequel vous êtes inscrit si vous avez des discussions en ligne au sujet des travaux notés de ce cours.</p>
-
-## Les reports de la date de fin de cours
-
-
-<p><strong>Rappel</strong>: L'enseignant ne peut modifier votre date de fin de cours  peu importe votre situation. Le moment après la date de fin de cours où votre dossier est fermé et où vous recevez (éventuellement) un incomplet est géré par l'Université. Il est de votre responsabilité de bien planifier votre temps.  Si vous avez des problèmes personnels qui limitent vos progrès (maladie, deuil, etc.), il faut voir avec l'Université: les enseignants n'ont aucune prise sur les dates de fin, sur les dates d'examen, etc. </p>
-
-<p>Votre date de fin de cours est inscrite dans votre dossier et vous pouvez la trouver sur le portail étudiant et sur la documentation qu'on vous a remise lors de votre inscription. Il est possible que votre examen ait lieu des semaines ou même des mois après votre date de fin de cours: cela ne constitue pas une extension de votre date de fin de cours. Tout travail remis après votre date de fin de cours pourra recevoir la note de zéro. En tout temps, la note « incomplet » peut être attribuée à un travail qui n'est pas remis après votre date de fin de cours, même si vous n'avez pas encore passé l'examen.</p>
+Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Le fichier PDF doit contenir le code Java, intégré de manière à faciliter la correction, sans fichiers séparés. La préparation rigoureuse, incluant la maîtrise des concepts et la vérification du travail, est essentielle pour éviter les erreurs et répondre aux attentes du cours.
 
 # Question #1
 
