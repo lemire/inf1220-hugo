@@ -5,41 +5,29 @@ weight: 6
 
 # Les algorithmes : conception et syntaxe
 
-
-
+Un algorithme est une méthode structurée pour résoudre un problème de manière systématique et efficace. Comparable à une recette culinaire, il fournit des instructions précises, exécutables pas à pas, pour transformer des données d’entrée en résultats attendus. Comprendre la conception et la syntaxe des algorithmes est essentiel pour tout programmeur souhaitant traduire une solution abstraite en code fonctionnel, quel que soit le langage utilisé.
 
 ## Concevoir un algorithme
 
-Afin de concevoir un algorithme, il s'agit de bien analyser le problème en identifiant les entrées, les sorties et le traitement des données pour en arriver aux résultats escomptés. Il faut voir l'algorithme comme une solution pas à pas que n'importe quel programmeur pourrait reprendre et implémenter dans un langage spécifique tel que le Java, le C++ ou le Python. En général, pour concevoir un algorithme, il faut suivre les étapes suivantes :
+Pour concevoir un algorithme, il convient d’analyser minutieusement le problème en identifiant les entrées, les sorties et les étapes de traitement nécessaires pour obtenir les résultats souhaités. Un algorithme se présente comme une suite logique d’instructions qu’un programmeur peut adapter à un langage comme Java, C++ ou Python. La démarche de conception suit généralement ces étapes :
 
-Étape 1
-- Lire et bien comprendre l’énoncé du problème à résoudre.
-Étape 2
-- Définir les résultats du problème, c'est-à-dire les sorties.
-- Définir les données du problème, c'est-à-dire les entrées.
-- Définir le traitement, c'est-à-dire les relations permettant d’obtenir les résultats à partir des données.
-Étape 3
-- Écrire l’algorithme en respectant la structure pseudo-code.
+Étape 1 : lire et comprendre l’énoncé du problème à résoudre.  
+Étape 2 : définir les sorties (résultats attendus), les entrées (données initiales) et le traitement (relations permettant de passer des entrées aux sorties).  
+Étape 3 : rédiger l’algorithme en pseudo-code, en respectant une structure claire et compréhensible.
 
-## Syntaxe d'un algorithme
+## Syntaxe d’un algorithme
 
-Voici un aperçu des différents éléments pouvant être utilisés pour proposer une résolution à un problème sous la forme d'algorithme. Comme nous l'avions spécifié précédemment, il n'y a pas de normes strictes dans l'écriture d'un pseudo-code (en comparaison à un langage de programmation qui est stricte). L'essentiel est d'utiliser les structures présentées ci-bas, d'être concis et exact dans les instructions. S'il y a un doute sur la concision ou bien la compréhension d'une étape de l'algorithme, c'est peut-être que cette étape doit être subdivisée en plusieurs sous-étapes.
+La syntaxe d’un algorithme repose sur des conventions souples, contrairement aux langages de programmation qui imposent des règles strictes. Le pseudo-code privilégie la clarté et la précision des instructions, en s’appuyant sur des structures standardisées. Si une étape semble ambiguë ou trop complexe, il est souvent préférable de la décomposer en sous-étapes pour en faciliter la compréhension.
 
-### Les Entrées, Variables et Sorties
+### Les entrées, variables et sorties
 
-Un algorithme commence par la déclaration des données en entrées, c'est à dire les données qui sont soit fournies d'emblée à l'algorithme (ex. un texte à déchiffrer, des données financières à analyser) ou bien fournies par un utilisateur (ex. via le clavier, souris, etc.).
-Par la suite, il est nécessaire de déclarer les variables de travail de l'algorithme. Une variable a un nom et une valeur. Par exemple, la variable x peut avoir la valeur 1. La valeur d'une variable peut changer dans le temps. Ces variables sont utilisées essentiellement pour conserver des informations nécessaires au traitement effectué par l'algorithme. Les variables peuvent avoir plusieurs types... par exemple, une variable peut contenir des chaînes de caractères, d'autres variables peuvent ne contenir que des entiers, etc. 
-Enfin, les sorties sont les données qui sont les résultats du traitement effectué par l'algorithme. Ces sorties sont retournées soit à l'utilisateur, soit à d'autres algorithmes. En effet, il est possible de diviser la résolution de problèmes complexes en plusieurs algorithmes qui peuvent "s'appeler" entre eux. Nous ferons plus tard le parallèle entre un algorithme et une fonction dans un langage de programmation.
+Un algorithme débute par la déclaration des entrées, c’est-à-dire les données fournies directement (comme un texte à analyser ou des données financières) ou saisies par un utilisateur (via un clavier, une souris, etc.). Viennent ensuite les variables, qui portent un nom et une valeur, comme une variable `x` valant 1. Ces valeurs peuvent évoluer au fil du traitement. Les variables, utilisées pour stocker des informations intermédiaires, se déclinent en divers types : chaînes de caractères, entiers, nombres décimaux, etc. Enfin, les sorties correspondent aux résultats finaux du traitement, transmis à l’utilisateur ou à d’autres algorithmes. Un problème complexe peut en effet être résolu par plusieurs algorithmes interconnectés, un concept que nous relierons plus tard aux fonctions dans les langages de programmation.
 
 ### Les opérations
 
-On décrit généralement un algorithme comme une liste d'opérations. Par exemple, on peut prendre deux nombres et les additionner. On peut ajouter 1 à la valeur d'une variable. Les opérations permises dépendent de notre modèle de calcul. On fait cependant souvent certaines hypothèses: on suppose que la plupart des opérations mathématique de bases sont supportées (addition, comparaison, multiplication, soustraction, etc.). 
+Un algorithme se décrit comme une séquence d’opérations, par exemple additionner deux nombres ou incrémenter une variable. Les opérations disponibles dépendent du modèle de calcul adopté, mais on presume généralement que les opérations mathématiques de base (addition, soustraction, multiplication, comparaison) sont prises en charge. 
 
-Il y a plusieurs manières d'exprimer les opérations. Par exemple, la multiplication de deux variables peut s'exprimer avec les expressions `x * y`, *x y*, `x × y`, *x* × *y*, etc. Il y a plusieurs manières de noter ces opérations. Par exemple, l'expression `x ← 1` peut être utilisée pour assigner la valeur 1 à la variable `x`. On peut aussi tout simplement écrire `x = 1`. Dans un autre contexte, l'expression `x = 1` pourrait aussi désigner la comparaison (« est-ce que x vaut 1 ? »). 
-En s'inspirant de certains langages de programmation, on peut aussi utiliser une expression telle que `x == 1` pour indiquer que nous faisons une comparaison avec la valeur 1 (et non une assignation).
-L'important est que l'intention soit claire et précise pour l'être humain qui vous lit.
-
-
+Les notations varient selon les conventions. Une multiplication peut s’écrire `x * y`, `x × y` ou simplement `x y`. De même, pour assigner la valeur 1 à une variable `x`, on peut utiliser `x ← 1` ou `x = 1`. Cependant, dans certains contextes, `x = 1` pourrait indiquer une comparaison (« x vaut-il 1 ? »). Pour lever l’ambiguïté, une notation comme `x == 1` est parfois préférée pour les comparaisons, en s’inspirant de langages de programmation. L’essentiel reste que chaque opération soit exprimée de manière claire et sans équivoque pour le lecteur.
 
 
 ## Compter le nombre de voyelles d'un mot entrées au clavier

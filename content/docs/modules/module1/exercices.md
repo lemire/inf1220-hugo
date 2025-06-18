@@ -1,6 +1,6 @@
 ---
 title: Exercices sur les algorithmes
-weight: 8
+weight: 10
 ---
 
 
@@ -35,7 +35,7 @@ Les exercices incluent une solution pour comparer votre approche à la nôtre. I
 
 ### Exercice 1 : La somme d’un tableau
 
-Dans la plupart des langages informatiques, un tableau correspond à un vecteur en algèbre linéaire, soit une série de nombres, comme <1,6,4,10>. Dans cet exercice, vous devez proposer un algorithme pour calculer la somme des nombres entiers d’un tableau à une dimension de longueur quelconque (de 0 à plus d’un million de nombres). Utilisez une structure d’itération (boucle) pour parcourir chaque nombre du tableau.
+Dans la plupart des langages informatiques, un tableau correspond à un vecteur en algèbre linéaire, soit une série de nombres, comme \(\langle 1,6,4,10 \rangle\). Dans cet exercice, vous devez proposer un algorithme pour calculer la somme des nombres entiers d’un tableau à une dimension de longueur quelconque (de 0 à plus d’un million de nombres). Utilisez une structure d’itération (boucle) pour parcourir chaque nombre du tableau.
 
 Pour manipuler le tableau, vous pouvez écrire « Récupérer le nombre à l’index i » (où i est une variable contenant l’index) ou utiliser une syntaxe proche des langages de programmation, par exemple : `Entier e = monTableau[i]`. Pour obtenir la longueur du tableau, utilisez « la taille de monTableau ».
 
@@ -73,7 +73,7 @@ retourne somme
 
 ### Exercice 2 : La recherche d’un entier
 
-La recherche d’information dans une structure de données (tableau, graphe, arbre, etc.) est un domaine clé en informatique. Bien que les bases de données comme MySQL simplifient la recherche, il est souvent nécessaire de concevoir ses propres solutions. À partir de l’exercice 1, proposez un algorithme en pseudo-code pour vérifier si un entier (par exemple, un numéro de téléphone) est présent dans un tableau et retourner son index, ou -1 s’il est absent. Utilisez une structure itérative et une structure de contrôle (SI _ ALORS _ FINSI).
+La recherche d’information dans une structure de données (tableau, graphe, arbre, etc.) est un domaine clé en informatique. Bien que les bases de données comme MySQL simplifient la recherche, il est souvent nécessaire de concevoir ses propres solutions. À partir de l’exercice 1, proposez un algorithme en pseudo-code pour vérifier si un entier (par exemple, un numéro de téléphone) est présent dans un tableau et retourner son index, ou -1 s’il est absent. Utilisez une structure itérative et une structure de contrôle (SI _ ALORS _ FIN SI).
 
 <details>
 <summary>Réponse</summary>
@@ -105,7 +105,7 @@ retourner -1 // Nombre non trouvé
 
 ### Exercice 3
 
-Additionnez tous les nombres naturels inférieurs à 1000 qui sont multiples de 3 ou de 5.
+Additionnez tous les nombres naturels inférieurs à \(1000\) qui sont multiples de \(3\) ou de \(5\).
 
 <details>
 <summary>Réponse</summary>
@@ -127,7 +127,7 @@ Retourne somme
 
 ### Exercice 4
 
-Trouvez le plus grand nombre premier qui divise 317584931803.
+Trouvez le plus grand nombre premier qui divise \(317584931803\).
 
 <details>
 <summary>Réponse</summary>
@@ -179,7 +179,7 @@ Vous pouvez supprimer la ligne `print(i, " est premier")` pour n’obtenir que l
 
 ### Exercice 5
 
-Pour un entier positif x, trouvez le chiffre occupant la position des dizaines.
+Pour un entier positif \(x\), trouvez le chiffre occupant la position des dizaines.
 
 <details>
 <summary>Réponse</summary>
@@ -227,11 +227,11 @@ L’itérateur i prend les valeurs de 0 à N, accédant ainsi à N+1 éléments 
 
 ### Exercice 7
 
-Soit P(x) = ax² + bx + c un polynôme du second degré à coefficients réels. Les racines se calculent via le discriminant A = b² - 4ac.
+Soit \(P(x) = ax^2 + bx + c\) un polynôme du second degré à coefficients réels. Les racines se calculent via le discriminant \(A = b^2 - 4ac\).
 
-- Si A < 0, il n’y a pas de racine.
-- Si A > 0, il existe deux racines : X1 = (-b - √A)/(2a) et X2 = (-b + √A)/(2a).
-- Si A = 0, il existe une racine double : X1 = X2 = -b/(2a).
+- Si \(A < 0\), il n’y a pas de racine.
+- Si \(A > 0\), il existe deux racines : \(X_1 = \frac{-b - \sqrt{A}}{2a}\) et \(X_2 = \frac{-b + \sqrt{A}}{2a}\).
+- Si \(A = 0\), il existe une racine double : \(X_1 = X_2 = \frac{-b}{2a}\).
 
 Écrivez un algorithme qui, pour un polynôme donné par ses coefficients, calcule le discriminant, affiche « ce polynôme n’a pas de racine dans R » si A < 0, et calcule les racines sinon.
 
@@ -266,7 +266,7 @@ Fin
 
 ### Exercice 8
 
-Exécutez l’algorithme de l’exercice 7 pour P(x) = x² - 5x + 6, en présentant les résultats dans un tableau.
+Exécutez l’algorithme de l’exercice 7 pour \(P(x) = x^2 - 5x + 6\), en présentant les résultats dans un tableau.
 
 <details>
 <summary>Réponse</summary>
@@ -285,9 +285,9 @@ Exécutez l’algorithme de l’exercice 7 pour P(x) = x² - 5x + 6, en présent
 
 ### Exercice 9
 
-Pour un entier B > 1 et un nombre M, la représentation en base B de M s’obtient par division successive : M = B × Q₁ + R₁, puis Q₁ = B × Q₂ + R₂, jusqu’à un quotient inférieur à B. La représentation est Qₙ₋₁Rₙ…R₁. Si B > 10, les chiffres de 10 à B-1 sont notés A, B, C, etc. (par exemple, pour B = 16, 10 = A, 11 = B, etc.).
+Pour un entier \(B > 1\) et un nombre \(M\), la représentation en base \(B\) de \(M\) s’obtient par division successive : \(M = B \times Q_1 + R_1\), puis \(Q_1 = B \times Q_2 + R_2\), jusqu’à un quotient inférieur à \(B\). La représentation est \(Q_{n-1}R_n\ldots R_1\). Si \(B > 10\), les chiffres de \(10\) à \(B-1\) sont notés \(A, B, C, \ldots\) (par exemple, pour \(B = 16\), \(10 = A\), \(11 = B\), etc.).
 
-Écrivez un algorithme pour convertir un nombre M dans une base B ≥ 2 (B < 17). Affichez un message d’erreur si B < 2.
+Écrivez un algorithme pour convertir un nombre \(M\) dans une base \(B ≥ 2\) (\(B < 17\)). Affichez un message d’erreur si \(B < 2\).
 
 <details>
 <summary>Réponse</summary>
@@ -351,7 +351,7 @@ def f(M, B):
 
 ### Exercice 10
 
-En utilisant l’algorithme Algo_base, qui retourne la représentation en base B d’un nombre M (S = Algo_base(B, M)), écrivez un algorithme qui teste la parité d’un nombre M et affiche « pair » ou « impair ».
+En utilisant l’algorithme Algo_base, qui retourne la représentation en base \(B\) d’un nombre \(M\) (\(S = \text{Algo\_base}(B, M)\)), écrivez un algorithme qui teste la parité d’un nombre \(M\) et affiche « pair » ou « impair ».
 
 <details>
 <summary>Réponse</summary>
@@ -383,7 +383,7 @@ Ce cours se concentre sur les bases de l’algorithmique et du pseudo-code. Si v
 
 1. Dans un tableau, vérifiez si le nombre 3 est immédiatement suivi du nombre 2.
 2. Pour un tableau donné, vérifiez s’il est trié en ordre croissant.
-3. Pour deux entiers positifs a et b, comptez les entiers dans l’intervalle [a, b] divisibles par 3.
+3. Pour deux entiers positifs \(a\) et \(b\), comptez les entiers dans l’intervalle \([a, b]\) divisibles par \(3\).
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme celles de Loïc & Julien ([voir ici](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ)) ou d’autres auteurs.
 
