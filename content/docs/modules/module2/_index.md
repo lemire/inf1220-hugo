@@ -19,3 +19,13 @@ Ce programme Java, appelé HelloWorld, est un petit exemple qui affiche le messa
 
 Vous devriez pouvoir exécuter le code et prendre connnaissance du résultat. Vous pouvez aussi 
 modifier le code, etc. À la fin du cours, vous serez capable de réaliser des tâches complexes avec la programmation Java.
+
+## Conseils génériques
+
+Pour devenir un bon programmeur...
+
+- Il faut comprendre les bases : maîtriser les concepts fondamentaux comme les variables, les boucles et les fonctions avant de passer à des sujets complexes.
+- Il faut pratiquer régulièrement : il faut coder tous les jours pendant des mois afin de renforcer ses compétences et de gagner en aisance.
+- Il faut lire du code : il faut explorer des exemples pour comprendre comment les autres structurent leurs programmes.
+- Il faut écrire un code lisible : Il faut utiliser des noms de variables clairs et il faut commenter son code pour qu’il soit facile à comprendre.
+- Il faut accepter les erreurs : les échecs sont des opportunités d’apprentissage, car ils font partie intégrante du processus.

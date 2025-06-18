@@ -7,8 +7,6 @@ weight: 1
 
 # Préparation de l'espace de travail
 
-
-
 <p>Comme langage de support à l'introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l'introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d'instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d'exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d'exploitation et aux processeurs spécifiques de l'ordinateur.</p>
 
 <p>Si ce n'est pas déjà fait, il est maintenant temps de configurer un environnement de développement Java. Dans ce cours, vous pouvez utiliser l'environnement de programmation qui vous convient le mieux ou qui fonctionne bien pour vous. Vous n'avez pas à utiliser une approche spécifique.</p>
@@ -86,7 +84,6 @@ des instructions.
 #### Linux Debian
 
 <p>Si vous êtes un utilisateur de Linux et plus particulièrement de Debian (ou Ubuntu), vous savez probablement déjà utiliser les Debian Packages! Pour installer la JDK, il faut ouvrir l'invite de commande (la console...), se mettre en mode super-utilisateur (su) et exécuter la commande « apt-get install default-jdk ».</p>
-
 
 
 ## Utilisation d'un éditeur de texte

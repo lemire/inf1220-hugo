@@ -1,6 +1,6 @@
 ---
 title: "Travail noté 2"
-weight: 7
+weight: 8
 ---
 
 # Travail noté 2 - Les types, opérateurs et méthodes
@@ -16,12 +16,15 @@ Les travaux sont strictement individuels, et tout échange, notamment sur les r�
 
 <p>On devrait pouvoir utiliser votre classe comme ceci :
 </p>
-<pre>
+
+
+```java {style=github}
 Cercle c = new Cercle(1);
 System.out.println(c.aire());
 System.out.println(c.perimetre());
-</pre>
-<p>(Le nom des méthodes aire et perimetre peut être différent si vous le souhaitez.)</p>
+```
+
+Le nom des méthodes aire et perimetre peut être différent si vous le souhaitez.
 
 
 
