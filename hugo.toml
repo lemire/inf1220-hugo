@@ -12,6 +12,7 @@ BookToC = true
 BookSearch = true
 javaRunnerEndpoint = "https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"
 math = true
+BookLogo = "livre.jpg"
 
 [markup]
   [markup.goldmark]

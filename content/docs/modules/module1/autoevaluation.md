@@ -140,7 +140,11 @@ Vous disposez d'un calepin (effaçable) où vous pouvez écrire un nombre entier
 - Étape B : Vous prenez le calepin, vous consultez le nombre qui y est écrit, vous allez à la page correspondante au nombre lu dans le livre, vous lisez la page en question. Vous passez ensuite à l'étape C.
 - Étape C : Vous prenez le calepin, vous consultez le nombre qui y est écrit. Si le nombre lu excède le nombre de pages du livre, vous terminez la recette et vous fermez définitivement le livre. Autrement, vous retournez à l'étape A.
 
-Indice : Essayez d'appliquer cette recette avec un livre comptant cinq pages. Que constatez-vous ?
+
+{{% hint info %}}
+
+Essayez d'appliquer cette recette avec un livre comptant cinq pages. Que constatez-vous ?
+{{% /hint %}}
 
 {{< webapp path="lecture.html" >}}
 

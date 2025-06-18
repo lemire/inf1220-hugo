@@ -38,6 +38,8 @@ En cas d’incapacité à résoudre complètement un problème, les étudiants s
 
 <p>Vous devriez avoir vérifié que votre programme fonctionne. Si remettez du code non-fonctionnel, vous pourrez recevoir la note de zéro! Si le code de votre solution n'est pas du Java valable, s'il ne compile pas, une note de zéro pourra être attribuée. Pour réussir ce cours, vous devez être capable d'écrire du code Java fonctionnel et correct.</p>
 
+{{% hint info %}}
+
 <p>Il y a plusieurs façons de résoudre ce problème. Il n'y a pas de solution unique. Par contre, à partir de l'énoncé, vous devez être capable de calculer dans votre esprit la solution (celle-ci est unique) et vous devez donc être capable de vérifier que votre programme donne la solution correcte.</p>
 
 
@@ -56,6 +58,8 @@ En cas d’incapacité à résoudre complètement un problème, les étudiants s
 
 
 <p> <strong> Attention</strong> : Il n'y aura pas  d'indices  ou  d'exemples  personnalisés fournis à quiconque concernant cette question ou toute autre question notée. </p>
+
+{{% /hint %}}
 
 
 ## Question-boni

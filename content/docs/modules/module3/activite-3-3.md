@@ -30,6 +30,7 @@ int[] salaire = {12, 74, 88, 22, 8, 78, 28, 44, 47, 78, 81};
 System.out.println(salaire[4]);
 ```
 
+
 ### Déclarer et utiliser les tableaux
 
 <p>En Java, les tableaux sont des objets; donc, pour créer un nouveau tableau, il faudra utiliser l'opérateur new. La ligne de code suivante permet de créer un tableau de salaire horaire des 10 employés d'une entreprise.</p>

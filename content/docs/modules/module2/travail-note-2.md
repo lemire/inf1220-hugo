@@ -48,9 +48,11 @@ System.out.println(c.perimetre());
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NXo2Pc1t2so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+{{% hint info %}}
 
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em> ».</p>
+
+{{% /hint %}}
 
 
 ### Mettre en forme votre code Java
@@ -76,12 +78,16 @@ class Main {
 }
 {{</inlineJava>}}
 
+
+{{% hint info %}}
+
 <p>Indice 1 : La lecture complète des notes de cours est obligatoire comme préparation aux travaux notés.</p>
 
 <p>Indice 2 : On vous invite à consulter l'article Wikipédia concernant <a href="https://fr.wikipedia.org/wiki/IEEE_754">la norme IEEE 754</a>.</p>
 
 <p>Indice 3 : Essayez différentes valeurs pour voir ce qui se produit.</p>
 
+{{% /hint %}}
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gi-LtqUTfFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -137,7 +143,14 @@ boolean b = false;
 int entier = (!a && (b | !a)) ? 10 : 20;
 ```
 
+
+{{% hint info %}}
+
 <p>Indice: Assurez-vous de bien lire sur les opérateurs en Java avant de faire cette question.</p>
+
+
+{{% /hint %}}
+
 
 ## Question #6
 

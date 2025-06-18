@@ -79,7 +79,12 @@ Vous pouvez écrire votre programme directement sur le site du cours.
 
 <p><strong>Note</strong> : En programmation, il est considéré comme étant disgracieux d'inclure directement dans votre code une adresse ou un chemin.</p>
 
+
+{{% hint info %}}
+
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Dans un jeu de Sudoku, nous devons re-construire une grille comprenant 9 rangées et 9 colonnes. Chaque rangée et chaque colonne doit contenir tous les entiers de 1 à 9. Vous devez créer un logiciel qui permet de charger des grilles de Sudoku à partir de fichiers, de manipuler les grilles (placements, vérifications), puis enfin de reproduire de nouveau les grilles soit à l'écran soit dans des fichiers. Les fichiers de Sudoku comportent une suite de triplets de chiffres séparés par des espaces, où chaque triplet correspond à : x: numéro de la ligne, y: numéro de la colonne, z: valeur. Charger un fichier contenant des données selon le format spécifié (une suite de triplets de chiffres séparés par des espaces). Vous pouvez choisir l'approche que vous préférez. Le fichier peut être récupéré en ligne, par l'ouverture d'un fichier sur votre disque ou par l'entrée standard (stdin). Votre code doit gérer les erreurs de lecture. Valider que le fichier correspond à un tableau Sudoku valable. C'est-à-dire qu'il doit correspondre à un tableau 9x9 où chaque chiffre de 1 à 9 apparaît une seule fois par colonne et une seule fois par rangée. Pour les fins de ce travail, nous n’exigeons pas que chaque sous-grille de 3×3 contienne tous les chiffres de 1 à 9 (vous pouvez cependant faire cette vérification supplémentaire si vous le souhaitez). En cas d'erreur, votre programme doit générer une exception. Votre programme doit ensuite appliquer une transposition au tableau correspondant à un calcul de matrice transposée et afficher le résultat à l'écran.</em> ».</p>
+
+{{% /hint %}}
 
 <h2>En terminant</h2>
 <p>Dans plusieurs cas, vos travaux sont corrigés par un « correcteur ». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>

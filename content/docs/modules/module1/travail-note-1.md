@@ -21,6 +21,7 @@ Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tab
 
 <p>Si vous produisez un algorithme logiquement incorrect, vous pourrez obtenir la note de zéro pour cette question. Si vous omettez d'inclure un compte-rendu détaillé de l'exécution, vous pouvez obtenir la note de zéro.</p>
 
+{{% hint info %}}
 
 ### Indices concernant le premier problème
 
@@ -54,6 +55,7 @@ FIN TANT QUE
 <li><strong>Indice 7.</strong> Ce n'est pas un problème de programmation Java, C#, C++ ou Python. Vous devez produire du pseudo-code qui est destiné à être lu et compris par un être humain. Il n'est pas nécessaire d'utiliser les constructions et types propres Java, C#, C++ ou Python. </li>
 <li><strong>Indice 8.</strong> Beaucoup trop d'étudiants essaient de faire ce travail sans avoir fait tous les exercices sérieusement. Si vous avez analysé et compris les exercices préparatoires pour ce problème, vous ne devriez avoir aucune difficulté. Il est pratiquement impossible de ne pas arriver à faire ce problème en ayant fait tous les exercices solutionnés et en ayant bien compris toutes les solutions. Il est de votre responsabilité de faire tous les exercices.</li>
 </ol>
+{{% /hint %}}
 
 
 ## Second problème
@@ -98,8 +100,13 @@ TANT QUE iterateur < 100 FAIRE
 FIN TANT QUE
 ```
 
+{{% hint info %}}
+
 
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em> ».</p>
+
+{{% /hint %}}
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4jReEOCImds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
