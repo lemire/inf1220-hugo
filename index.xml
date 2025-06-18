@@ -231,11 +231,7 @@ Faisons-en rapidement le tour.&lt;/p>
  La récursivité
  &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
 &lt;/h1>
-&lt;h2 id="le-concept-de-récursivité">
- Le concept de récursivité
- &lt;a class="anchor" href="#le-concept-de-r%c3%a9cursivit%c3%a9">#&lt;/a>
-&lt;/h2>
-&lt;p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :&lt;/p></description></item><item><title>Les algorithmes: les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Les algorithmes: les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes3/</guid><description>&lt;h1 id="les-structures-de-contrôle">
  Les structures de contrôle
  &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
 &lt;/h1>
