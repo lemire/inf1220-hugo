@@ -201,6 +201,7 @@ public static int minimum(int a[]) {
 }
 ```
 
+
 <p>La recherche de la valeur maximale est très similaire : il suffit de changer le critère de comparaison.
 La réalisation sous la forme d'une méthode Java est, par conséquent, aussi similaire :</p>
 
@@ -214,6 +215,111 @@ public static int maximum(int a[]) {
         return max;
 }
 ```
+
+
+
+
+En Java, le tri est une opération courante pour ordonner des collections d’objets, comme des listes ou des tableaux. La bibliothèque standard propose plusieurs méthodes de tri, notamment via la classe Collections (pour les collections) et la classe Arrays (pour les tableaux). Ces méthodes s’appuient souvent sur l’interface Comparator pour définir un ordre personnalisé, surtout lorsque les objets ne suivent pas un ordre naturel (comme les chaînes ou les nombres) ou lorsque l’ordre par défaut ne convient pas.
+
+L’interface Comparator définit une méthode abstraite, compare(T o1, T o2), qui retourne :
+
+- Une valeur négative si o1 doit précéder o2.
+- Zéro si o1 et o2 sont équivalents dans l’ordre.
+- Une valeur positive si o1 doit suivre o2.
+
+
+Ce cas montre comment trier une liste de chaînes en utilisant un comparator pour inverser l’ordre alphabétique naturel.
+
+{{<inlineJava path="TriInverse.java" lang="java">}}
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class TriInverse {
+    public static void main(String[] args) {
+        String[] mots = {"banane", "pomme", "ananas", "cerise"};
+        Arrays.sort(mots, Comparator.reverseOrder());
+        System.out.println("Mots triés en ordre alphabétique inverse : " + Arrays.toString(mots));
+    }
+}
+{{</inlineJava>}}
+
+
+
+Le prochain code Java illustre une manière simple et claire de trier une liste de mots en fonction de leur longueur, de la plus courte à la plus longue. Le programme commence par importer des outils Java essentiels : Arrays pour créer des listes, List pour gérer une collection de données, et Comparator pour définir une règle de tri personnalisée. Une classe spéciale, LongueurComparator, est créée pour comparer deux mots en soustrayant la longueur du premier mot de celle du second, ce qui permet de les classer par ordre de taille. Dans la méthode principale (main), une liste de mots ("chat", "éléphant", "chien", "girafe") est initialisée, puis triée à l’aide de cette règle de comparaison. Enfin, le programme affiche la liste triée, montrant les mots dans l’ordre suivant : "chat", "chien", "girafe", "éléphant".
+
+{{<inlineJava path="ExempleLongueur.java" lang="java">}}
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ExempleLongueur {
+    // Nouvelle classe Comparator
+    static class LongueurComparator implements Comparator<String> {
+        @Override
+        public int compare(String a, String b) {
+            return a.length() - b.length();
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] mots = {"chat", "éléphant", "chien", "girafe"};
+        Arrays.sort(mots, new LongueurComparator());
+        System.out.println("Mots triés par longueur : " + Arrays.toString(mots));
+    }
+}
+{{</inlineJava>}}
+
+
+Cet exemple illustre la notion de classe statique. Une classe statique en Java est une classe imbriquée (définie à l'intérieur d'une autre classe) déclarée avec le mot-clé static. Elle est associée à la classe englobante plutôt qu'à une instance spécifique de cette classe. Cela signifie qu'elle peut être utilisée sans instancier la classe englobante, et elle ne peut accéder qu'aux membres statiques (variables ou méthodes) de la classe englobante.
+
+{{<inlineJava path="Voiture.java" lang="java">}}
+public class Voiture {
+    private static String marque = "Toyota";
+    
+    // Classe statique imbriquée
+    public static class Moteur {
+        private int puissance;
+        
+        public Moteur(int puissance) {
+            this.puissance = puissance;
+        }
+        
+        public void afficherDetails() {
+            System.out.println("Marque de la voiture : " + marque);
+            System.out.println("Puissance du moteur : " + puissance + " chevaux");
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Création d'une instance de la classe statique sans instancier Voiture
+        Voiture.Moteur moteur = new Voiture.Moteur(150);
+        moteur.afficherDetails();
+    }
+}
+{{</inlineJava>}}
+
+On peut aussi régler ce problème avec une classe anonyme. Une classe anonyme en Java est une classe sans nom, définie et instanciée en une seule expression. Elle est généralement utilisée pour fournir une implémentation ponctuelle d'une interface ou pour étendre une classe, souvent dans des situations où une implémentation unique et temporaire est nécessaire. Les classes anonymes sont couramment utilisées avec des interfaces comme Comparator, Runnable, ou des écouteurs d'événements. En voici un exemple&nbsp;:
+
+{{<inlineJava path="ExempleLongueur.java" lang="java">}}
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ExempleLongueur {
+    public static void main(String[] args) {
+        String[] mots = {"chat", "éléphant", "chien", "girafe"};
+        
+        // Utilisation d'une classe anonyme pour implémenter Comparator
+        Arrays.sort(mots, new Comparator<String>() {
+            @Override
+            public int compare(String a, String b) {
+                return a.length() - b.length();
+            }
+        });
+        
+        System.out.println("Mots triés par longueur : " + Arrays.toString(mots));
+    }
+}
+{{</inlineJava>}}
+
 
 #### Différents algorithmes de tri
 
@@ -335,6 +441,108 @@ typeDeTableau nomDuTableau [][] = { { }, {}, {}, etc...};
 String etudiants[][] = { {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"} etc...};
 ```
 
+
+Considérons l'exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d'un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.
+
+{{<inlineJava path="ModeleLangue.java" lang="java">}}
+
+import java.util.Random;
+
+public class ModeleLangue {
+    private static final int ASCII_SIZE = 128; // Taille de la table ASCII (0-127)
+    private double[][] transitions; // Matrice des probabilités de transition
+    private Random random;
+
+    // Constructeur qui calcule les probabilités de transition à partir d'une chaîne
+    public ModeleLangue(String texte) {
+        transitions = new double[ASCII_SIZE][ASCII_SIZE];
+        random = new Random();
+        calculerTransitions(texte);
+    }
+
+    // Calcule les probabilités de transition
+    private void calculerTransitions(String texte) {
+        // Compter les transitions
+        int[][] compte = new int[ASCII_SIZE][ASCII_SIZE];
+        int[] totalParCaractere = new int[ASCII_SIZE];
+
+        // Parcourir la chaîne pour compter les transitions
+        for (int i = 0; i < texte.length() - 1; i++) {
+            char courant = texte.charAt(i);
+            char suivant = texte.charAt(i + 1);
+            // Vérifier que les caractères sont dans la plage ASCII
+            if (courant < ASCII_SIZE && suivant < ASCII_SIZE) {
+                compte[courant][suivant]++;
+                totalParCaractere[courant]++;
+            }
+        }
+
+        // Calculer les probabilités
+        for (int i = 0; i < ASCII_SIZE; i++) {
+            if (totalParCaractere[i] > 0) {
+                for (int j = 0; j < ASCII_SIZE; j++) {
+                    transitions[i][j] = (double) compte[i][j] / totalParCaractere[i];
+                }
+            }
+        }
+    }
+
+    // Génère un caractère suivant basé sur les probabilités
+    private char genererCaractereSuivant(char courant) {
+        if (courant >= ASCII_SIZE) {
+            return (char) random.nextInt(ASCII_SIZE); // Caractère hors plage
+        }
+
+        double somme = 0.0;
+        for (double prob : transitions[courant]) {
+            somme += prob;
+        }
+
+        // Si aucune transition n'existe, choisir un caractère aléatoire
+        if (somme == 0.0) {
+            return (char) random.nextInt(ASCII_SIZE);
+        }
+
+        // Sélection aléatoire basée sur les probabilités
+        double r = random.nextDouble();
+        double cumul = 0.0;
+        for (int i = 0; i < ASCII_SIZE; i++) {
+            cumul += transitions[courant][i];
+            if (r <= cumul) {
+                return (char) i;
+            }
+        }
+        // En cas d'erreur (arrondi), retourner le dernier caractère possible
+        return (char) (ASCII_SIZE - 1);
+    }
+
+    // Génère une séquence de longueur donnée à partir d'un caractère initial
+    public String genererSequence(char debut, int longueur) {
+        StringBuilder sequence = new StringBuilder();
+        sequence.append(debut);
+        char courant = debut;
+
+        for (int i = 0; i < longueur - 1; i++) {
+            courant = genererCaractereSuivant(courant);
+            sequence.append(courant);
+        }
+
+        return sequence.toString();
+    }
+
+    public static void main(String[] args) {
+        // Exemple de texte d'entraînement
+        String texte = "bonjour le monde c'est un test simple pour modeller une langue en java";
+        ModeleLangue modele = new ModeleLangue(texte);
+        
+        // Générer une séquence de 100 caractères à partir du caractère 'b'
+        String sequence = modele.genererSequence('b', 100);
+        System.out.println("Séquence générée : " + sequence);
+    }
+}
+{{</inlineJava>}}
+
+
 ### Tableaux multidimensionnels
 
   <p>Java ne se limite pas seulement aux tableaux à deux dimensions. Nous pouvons aussi déclarer des tableaux à plus de deux dimensions. Pour déclarer un tableau à trois dimensions, par exemple, il suffit de faire : </p> 
@@ -365,7 +573,7 @@ for (int i = 0; i < 5; i++) {
 
 ## Les ArrayLists
 
-<p>Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "ArrayList<String>, ArrayList<Double>, ArrayList<ArrayList<Integer>>" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.</p>
+Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "`ArrayList<String>`, `ArrayList<Double>`, `ArrayList<ArrayList<Integer>>`" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.
 
 
 
@@ -481,7 +689,7 @@ Une fonction lambda, ou expression lambda, est une fonction anonyme concise déf
 
 Voici un exemple de code Java avec une méthode main utilisant une lambda pour trier une liste de chaînes par longueur :
 
-{{<inlineJava path="RecordExample.java" lang="java">}}
+{{<inlineJava path="ExempleLambda.java" lang="java">}}
 import java.util.Arrays;
 import java.util.List;
 import java.util.Comparator;
@@ -496,6 +704,33 @@ public class ExempleLambda {
 {{</inlineJava>}}
 
 Ce code définit une liste de mots, utilise une lambda pour trier les éléments par longueur croissante, puis affiche le résultat. La lambda (a, b) -> a.length() - b.length() remplace une implémentation complète de Comparator.
+
+
+Les lambdas sont utilisés à de multiples fins en Java. L’API Stream en Java pour effectuer un filtrage fonctionnel sur une liste de nombres. Considérons le prochain exemple. Le premier concept clé est la création d’une liste immuable avec Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8). Cette méthode transforme un tableau de nombres en une List fixe, qui ne peut pas être modifiée (par exemple, pas d’ajout ou de suppression d’éléments). Cette liste, nommée nombres, sert de point de départ pour le traitement. Ensuite, l’opération de filtrage repose sur l’API Stream, introduite en Java 8, qui permet de manipuler des collections de manière déclarative, en exprimant ce qu’on veut obtenir (ici, les nombres pairs) plutôt que comment le faire (comme avec une boucle traditionnelle). Ce paradigme fonctionnel rend le code plus concis et expressif.
+
+{{<inlineJava path="ExempleLambdaFiltre.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ExempleLambdaFiltre {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        List<Integer> nombresPairs = nombres.stream()
+                                           .filter(n -> n % 2 == 0)
+                                           .collect(Collectors.toList());
+        System.out.println("Nombres pairs : " + nombresPairs);
+    }
+}
+{{</inlineJava>}}
+
+
+La programmation fonctionnelle est un paradigme de programmation qui met l'accent sur l'utilisation de fonctions pures, l'immutabilité des données et l'évitement des effets secondaires. Une fonction pure produit toujours le même résultat pour les mêmes entrées et n'altère pas l'état externe, ce qui facilite la prédiction et le débogage du code. En Java, bien que le langage soit principalement orienté objet, l'introduction de l'API Stream et des expressions lambda en Java 8 a permis d'intégrer des concepts fonctionnels. Ces outils permettent de manipuler des collections de données de manière déclarative, en exprimant ce que l'on veut accomplir (par exemple, filtrer ou transformer des données) plutôt que comment le faire étape par étape, comme dans une approche impérative. Cette approche améliore la lisibilité et la modularité du code, tout en favorisant des opérations comme le parallélisme sans effort explicite.
+
+Le rôle des lambdas et de l'API Stream dans Java illustre bien l'influence de la programmation fonctionnelle. Les lambdas permettent de définir des fonctions anonymes concises, souvent utilisées pour implémenter des interfaces fonctionnelles (comme Predicate ou Function) dans des opérations comme le filtrage, le mappage ou le tri. Par exemple, dans une opération comme list.stream().filter(x -> x > 0).map(x -> x * 2).collect(Collectors.toList()), chaque étape est une transformation fonctionnelle qui ne modifie pas la liste initiale, respectant ainsi le principe d'immutabilité. L'API Stream prend en charge ces transformations en traitant les données comme un flux, où les opérations sont enchaînées et évaluées de manière paresseuse (lazy evaluation), ne s'exécutant qu'à la demande d'un résultat final. Cela réduit les calculs inutiles et permet une optimisation automatique, comme le traitement parallèle avec parallelStream().
+
+Cependant, l'intégration de la programmation fonctionnelle en Java reste partielle, car le langage conserve une forte orientation objet. Les développeurs doivent être conscients des compromis : les lambdas et les streams rendent le code plus expressif, mais une utilisation excessive ou inappropriée peut nuire à la performance ou à la lisibilité, notamment dans des cas complexes. De plus, Java impose des contraintes, comme l'absence de fonctions de première classe (les lambdas sont des implémentations d'interfaces) et une gestion explicite de l'immutabilité. Malgré ces limitations, la programmation fonctionnelle en Java, via les streams et les lambdas, a transformé la manière dont les développeurs manipulent les données, encourageant des pratiques plus modernes et alignées sur les paradigmes fonctionnels tout en restant ancrées dans l'écosystème Java.
+
 
 ## Lecture dans le livre de référence
 

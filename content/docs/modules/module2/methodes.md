@@ -191,27 +191,19 @@ public class Exercice {
     
     protected int compteur = 0;
    
-    
     public static void mettreDesPointsExclamations(StringBuffer texte) {
-        
         // On modifie le texte
         texte.insert(0, "!!!");
         texte.append("!!!");
         
     }
    
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {     
         StringBuffer test = new StringBuffer("Bonjour");
-        
         System.out.println(test);
-        
         mettreDesPointsExclamations(test);
-        
         System.out.println(test);
-        
     }
-    
 }
 {{</inlineJava>}}
 
@@ -225,28 +217,18 @@ public class Exercice {
    
     
     public static StringBuffer mettreDesPointsExclamations(StringBuffer texte) {
-        
         StringBuffer copieLocal = new StringBuffer(texte.toString());
-        
         copieLocal.insert(0, "!!!");
         copieLocal.append("!!!");
-        
-        return copieLocal;
-           
+        return copieLocal;      
     }
    
     public static void main(String[] args) {
-        
         StringBuffer test = new StringBuffer("Bonjour");
-        
         System.out.println(test);
-        
         StringBuffer texteModifie = mettreDesPointsExclamations(test);
-        
         System.out.println(texteModifie);
-        
     }
-    
 }
 {{</inlineJava>}}
 
