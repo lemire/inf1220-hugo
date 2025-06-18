@@ -42,7 +42,23 @@ En Java, toutes parties d'un programme informatique doit donc être encapsulée 
  Comment faire ces exercices ?
  &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
 &lt;/h2>
-&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
+&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+ Recommandations
+ &lt;a class="anchor" href="#recommandations">#&lt;/a>
+&lt;/h1>
+&lt;p>Il est important d&amp;rsquo;écrire du code lisible et bien documenté. Il s&amp;rsquo;agit d&amp;rsquo;un compétence
+nécessaire pour développer du logiciel en pratique.&lt;/p>
+&lt;h2 id="importance-de-la-lisibilité-du-code-en-java">
+ Importance de la lisibilité du code en Java
+ &lt;a class="anchor" href="#importance-de-la-lisibilit%c3%a9-du-code-en-java">#&lt;/a>
+&lt;/h2>
+&lt;p>La lisibilité du code est essentielle en Java pour faciliter la maintenance et la collaboration.
+Un code lisible réduit les erreurs et permet à d&amp;rsquo;autres développeurs (ou à vous-même dans le
+futur) de comprendre rapidement l&amp;rsquo;intention du programme. Pour y parvenir, il faut adopter
+des conventions de nommage claires et commenter judicieusement. Les normes de codage,
+comme celles définies par Oracle ou Google, standardisent la structure du code, rendant
+les projets cohérents. Une variable bien nommée, comme &lt;code>nombreEtudiants&lt;/code> au lieu de &lt;code>n&lt;/code>,
+et des commentaires explicatifs améliorent la compréhension.&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
  Travail noté 2 - Les types, opérateurs et méthodes
  &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
 &lt;/h1>
