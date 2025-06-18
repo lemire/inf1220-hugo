@@ -457,7 +457,7 @@ public class TestVehicule {
 ```
 
 
-## Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8:</p>
 <ul>

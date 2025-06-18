@@ -42,6 +42,14 @@ Git excelle dans la gestion des branches, permettant à plusieurs développeurs 
 
 Git et GitHub incarnent une évolution majeure dans la gestion de code. Git, né d’une nécessité pratique pour Linux, a introduit un modèle décentralisé robuste, contrastant avec les systèmes centralisés comme SVN. GitHub, en ajoutant une couche sociale et collaborative, a transformé Git en un outil universel, utilisé bien au-delà du développement logiciel, par exemple pour des projets d’écriture ou de données. Théoriquement, Git repose sur des principes de cryptographie (hachages) et de théorie des graphes, garantissant traçabilité et cohérence. Ensemble, ils ont redéfini la collaboration, rendant les contributions transparentes et traçables, comme le montrent des projets emblématiques comme TensorFlow ou Linux.
 
+
+# Site du manuel
+
+
+Si ce n'est pas déjà fait, vous pouvez consulter le [code source des exemples du manuel
+sur GitHub](https://github.com/RobertGodin/JavaPasAPas). Prenez en connaissance. Pouvez-vous
+naviguer dans les fichiers? Pouvez-vous charger le code sur votre machine&nbsp;?
+
 # Exercice pratique
 
 Pour consolider vos connaissances, essayez cet exercice : créez un compte GitHub, configurez Git localement, puis créez un dépôt nommé « mon-premier-projet ». Ajoutez un fichier README.md avec une brève description. Clonez le dépôt, créez une branche appelée « feature », ajoutez un fichier texte avec un court message, commitez et poussez la branche vers GitHub. Enfin, ouvrez une pull request pour fusionner vos changements dans la branche principale. Si vous rencontrez des difficultés, consultez la documentation officielle de GitHub ou les tutoriels disponibles sur leur site.

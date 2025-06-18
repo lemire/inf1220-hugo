@@ -146,7 +146,7 @@ public class ExempleTryCatch {
 }
 {{</inlineJava>}}
 
-### Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.</p>
 </ul>

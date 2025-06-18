@@ -287,7 +287,7 @@ public class FusionDonnees {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zM_Qf07fEyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les méthodes/fonctions. Veuillez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>
@@ -383,7 +383,7 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 <li><a href="https://www.youtube.com/playlist?list=PLZbs1ERZ-TGWeJa5CqDPpNNmLhsIFEmkl">Il y a une liste de vidéos sur le sujet des constructeurs par Sam et al.</a></li>
 </ol>
 
-### Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les constructeurs (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>

@@ -152,7 +152,7 @@ public class ExempleRecursivite {
 {{</inlineJava>}}
 
 
-### Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur la récursivité (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>

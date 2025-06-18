@@ -70,6 +70,41 @@ Les langages de programmation jouent un rôle crucial en traduisant des instruct
 
 Dans ce cours, nous explorerons le langage Java, largement adopté dans l’industrie pour sa portabilité, sa robustesse et sa polyvalence. Utilisé dans des domaines variés, des applications mobiles Android aux systèmes d’entreprise, Java illustre parfaitement comment un langage de haut niveau peut répondre à des besoins modernes tout en s’appuyant sur les principes fondamentaux de l’informatique.
 
+## Unités de mesures
+
+Les ordinateurs et leurs composants sont caractérisés par différentes unités de mesure :
+
+### Fréquence (vitesse du processeur)
+- **Hertz (Hz)** : unité de fréquence, correspond à un cycle par seconde.
+- **Kilohertz (kHz)** : 1 000 Hz.
+- **Mégahertz (MHz)** : 1 000 000 Hz (un million de cycles/seconde).
+- **Gigahertz (GHz)** : 1 000 000 000 Hz (un milliard de cycles/seconde).
+
+La fréquence d’un processeur (ex : 3,2 GHz) indique combien d’opérations il peut effectuer par seconde.
+
+### Temps
+- **Seconde (s)** : unité de base du temps.
+- **Milliseconde (ms)** : 1/1 000 de seconde (\(10^{-3}\) s).
+- **Microseconde (µs)** : 1/1 000 000 de seconde (\(10^{-6}\) s).
+- **Nanoseconde (ns)** : 1/1 000 000 000 de seconde (\(10^{-9}\) s).
+
+Les temps d’accès à la mémoire ou d’exécution d’instructions sont souvent mesurés en nanosecondes ou microsecondes.
+
+### Stockage et mémoire
+- **Octet (B)** : unité de base, correspond à 8 bits.
+- **Kilooctet (ko)** : 1 000 octets (notation décimale, SI).
+- **Mégaoctet (Mo)** : 1 000 000 octets.
+- **Gigaoctet (Go)** : 1 000 000 000 octets.
+- **Téraoctet (To)** : 1 000 000 000 000 octets.
+
+#### Préfixes binaires (norme IEC)
+- **Kibioctet (Kio)** : 1 024 octets (\(2^{10}\)).
+- **Mebioctet (Mio)** : 1 048 576 octets (\(2^{20}\)).
+- **Gibioctet (Gio)** : 1 073 741 824 octets (\(2^{30}\)).
+
+> **Remarque :** Les systèmes d’exploitation et les fabricants utilisent parfois les préfixes kilo, méga, giga pour désigner soit des puissances de 10 (décimal), soit des puissances de 2 (binaire). Par exemple, 1 Go peut désigner 1 000 000 000 octets (décimal) ou 1 073 741 824 octets (binaire). Les préfixes Kio, Mio, Gio sont utilisés pour lever cette ambiguïté.
+
+Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 
 ## Java pas à pas
 

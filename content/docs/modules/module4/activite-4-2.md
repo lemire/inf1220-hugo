@@ -305,7 +305,90 @@ public class SimpleHttpReader {
 }
 {{</inlineJava>}}
 
-## Lecture dans le livre de référence
+## Performance
+
+La performance est un enjeu crucial lorsqu’on manipule des fichiers ou des flux de données, surtout avec de grands volumes ou des opérations répétées. Un code inefficace peut entraîner des ralentissements importants, une consommation excessive de mémoire ou des blocages inutiles.
+
+Lire ou écrire un fichier caractère par caractère est très lent. Il vaut mieux utiliser des tampons (buffers) pour traiter plusieurs caractères ou octets à la fois. C'est un peu comme essayer d'envoyer un message texte par quelqu'un caractère par caractère.
+
+Les requêtes HTTP ou les accès à des fichiers distants sont beaucoup plus lents que les accès en mémoire. Il faut donc limiter leur nombre et traiter les données efficacement.
+
+
+
+Dans cet exemple, `BufferedReader` lit le fichier par blocs (c'est-à-dire plusieurs caractères à la fois), ce qui réduit considérablement le nombre d'accès disque et accélère la lecture, surtout pour les gros fichiers. Plutôt que de lire un caractère à la fois (ce qui serait très lent), le tampon (buffer) permet de charger une portion du fichier en mémoire, puis de traiter cette portion ligne par ligne ou caractère par caractère en mémoire vive, ce qui est bien plus efficace.
+
+De la même façon, pour l'écriture, la classe `BufferedWriter` permet d'écrire dans un fichier par blocs, en accumulant les caractères dans un tampon avant de les écrire d'un coup sur le disque. Cela réduit le nombre d'opérations d'écriture physiques, ce qui améliore la performance.
+
+Voici un exemple complet de lecture et d'écriture performantes avec `BufferedReader` et `BufferedWriter` :
+
+```java {style=github}
+import java.io.*;
+
+public class ExempleBuffer {
+    public static void main(String[] args) {
+        // Lecture performante
+        try (BufferedReader reader = new BufferedReader(new FileReader("entree.txt"))) {
+            String ligne;
+            while ((ligne = reader.readLine()) != null) {
+                System.out.println(ligne);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur de lecture : " + e.getMessage());
+        }
+
+        // Écriture performante
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("sortie.txt"))) {
+            writer.write("Ceci est une ligne écrite rapidement grâce au buffer.\n");
+            writer.write("Une autre ligne.\n");
+        } catch (IOException e) {
+            System.err.println("Erreur d'écriture : " + e.getMessage());
+        }
+    }
+}
+```
+
+Utiliser `BufferedReader` et `BufferedWriter` est essentiel pour la performance lors de la lecture et l'écriture de fichiers texte en Java. Cela permet de traiter efficacement de grands volumes de données tout en minimisant les accès disque, ce qui accélère significativement les opérations d'entrée/sortie.
+
+### Données binaires et performance
+
+Pour les fichiers binaires (images, sons, vidéos, données structurées, etc.), le principe de la lecture/écriture en bloc reste tout aussi important. En Java, on utilise alors `BufferedInputStream` et `BufferedOutputStream` pour optimiser les opérations sur les flux binaires. Ces classes fonctionnent de façon similaire à leurs équivalents pour le texte, mais traitent des octets au lieu de caractères.
+
+L'utilisation de buffers permet de lire ou d'écrire plusieurs kilo-octets d'un coup, ce qui réduit le nombre d'accès disque et améliore la rapidité, surtout pour les gros fichiers binaires.
+
+Voici un exemple de copie performante d'un fichier binaire :
+
+```java {style=github}
+import java.io.*;
+
+public class CopieBinaire {
+    public static void main(String[] args) {
+        try (
+            BufferedInputStream in = new BufferedInputStream(new FileInputStream("source.bin"));
+            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("destination.bin"));
+        ) {
+            byte[] buffer = new byte[8192]; // 8 Ko
+            int bytesRead;
+            while ((bytesRead = in.read(buffer)) != -1) {
+                out.write(buffer, 0, bytesRead);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la copie : " + e.getMessage());
+        }
+    }
+}
+```
+
+Pour les fichiers binaires, il est essentiel d'utiliser des buffers pour garantir des performances optimales. Cela permet de manipuler efficacement de grandes quantités de données, tout en minimisant la sollicitation du disque dur.
+
+### Conseils génériques
+
+Il faut privilégier les lectures/écritures en bloc (bufferisées). Il faut limiter les accès réseau (en réduire le nombre). 
+
+En contrepartie, il vaut mieux éviter de charger de très gros fichiers en une seule fois si ce n’est pas nécessaire (privilégier le traitement ligne par ligne ou par bloc). Votre ordinateur
+est plus rapide s'il ne traite que de petites quantités de données à la fois (ex. 10 Ko plutôt que 10 Mo).
+
+
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les flux de fichier (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 20:</p>
 <ul>

@@ -646,42 +646,10 @@ while(it.hasNext()) {
 
 ## Autres structures de données
 
-<p>Un algorithme est une «procédure systématique visant à résoudre un problème ou à atteindre une fin donnée, en particulier par un ordinateur».  La programmation de la solution d'un programme passe généralement par la conception (implicite ou explicite) d'un algorithme. Pour un problème comme celui du tri en ordre alphabétique d'une liste de termes, on peut recourir à plusieurs algorithmes différents. Certains algorithmes seront plus rapides, d'autres plus lents.</p>
-
-<p>Comment alors comparer, dans l'absolu, les algorithmes entre eux? On pourrait, bien sûr, mettre en oeuvre différentes approches et comparer leur vitesse relative, une méthode parfaitement valable que l'on doit souvent adopter. Cependant, cette approche a ses limites sur le plan scientifique: on sait que différents programmeurs peuvent être plus ou moins astucieux ou expérimentés et adopter une approche plutôt qu'une autre. Il est tout simplement très difficile de comparer des algorithmes sur la base d'implémentations parce qu'elles peuvent varier en qualité.</p>
-
-<p>On désire donc une approche mathématique qui nous dise, avec précision, si tel ou tel algorithme est plus lent ou plus rapide qu'un autre. En pratique, la vitesse, au sens strict du terme, n'est pas une quantité qu'on peut mesurer sans implémentation. Par contre, on peut compter le nombre d'opérations que fait un algorithme. Par exemple, l'algorithme suivant fait exactement <i>n</i> opérations:</p>
-
-<code>
-Pour chaque élément de l'ensemble {1,...,n}:
-  afficher l'élément
-</code>
-
-<p>On associera donc cet algorithme avec la fonction f(n) = n, c'est-à-dire qu'on compte le nombre d'opérations effectuées en fonction de la taille de l'ensemble sur lequel on travaille. </p>
-
-<p>Ce qui nous intéresse c'est le comportement de l'algorithme lorsque la taille de l'ensemble augmente; il faut alors se rappeler le principe selon lequel les algorithmes doivent surtout être rapides lorsque les ensembles de données sont importants. Par exemple, pour n petit, faire 5n opérations est plus lent que faire n<sup>2</sup> opérations, mais pour n grand, le contraire est vrai. En pratique, on va sans doute préférer l'algorithme qui ne fait que 5n opérations parce que pour n=100, on fait alors 500 opérations contre 10000 opérations pour l'algorithme menant au calcul de n<sup>2</sup> opérations.</p>
-
-<p>La stratégie généralement employée est donc de comparer les algorithmes lorsque n est très grand et de ne retenir que celui qui fait le moins d'opérations.</p>
-
-<p>Malheureusement, la taille de l'ensemble n'est pas le seul facteur qui détermine le nombre d'opérations que va effectuer un algorithme. Par exemple, si on demande de trier les valeurs dans un vaste tableau dont les valeurs ont déjà été ordonnées, un algorithme de tri pourra s'exécuter plus rapidement que si les données sont pêle-mêle. Mais pour simplifier les choses dans ce cours, nous choisirons toujours le pire cas possible. Soyons pessimistes!</p>
-
-<p>On cherche maintenant à regrouper les algorithmes dans de grandes classes. Le principe de base est que n et 5n sont des classes similaires: faire 5 fois plus d'opérations, peu importe la taille de l'ensemble de données initial, importe beaucoup moins que la différence qu'il peut y avoir entre n et n<sup>2</sup>.</p>
-
-<p>Soit f(n) le nombre d'opérations effectuées par un algorithme; on dit que le temps mis par l'algorithme est O(g(n)) (ou bien f(n) est dans O(g(n))) et cela, s'il existe deux nombres M et n0 tels que f(n) < M g(n) pour n > n0.</p>
-
-<p>Si f(n)= 2n+5, on a f(n) est dans O(n). En effet, si on pose M=3 et n0=5, alors f(n)=2n+5 < M n pour n > n0.</p>
-
-
-<p>Si f(n)= 2n+5, on a f(n) est dans O(n<sup>2</sup>). En effet, si on pose M=1 et n0=3, alors f(n)=2n+5 <= M n<sup>2</sup> pour n>n0.</p>
-
-<p>Les grandes classes importantes sont O(1),  O(log n), O(n), O(n log n) et O(n<sup>2</sup>).</p>
-
-<p>Lecture complémentaire : la <a href="https://fr.wikipedia.org/wiki/Théorie_de_la_complexité_(informatique_théorique)">Théorie de la complexité</a>.</p>
-
 <p>L'API standard du langage Java offre plusieurs autres types de structure de données. D'ailleurs, la plupart des langages OO ou autres langages modernes offrent également le même genre de structure de données : C++ avec la STL, API .net de C#, Python, etc. Voici quelques exemples de structures de données utiles en Java et des tutoriaux (sites externes en anglais) sur leur utilisation:</p>
 <ul>
 	<li>Stack (ou pile en français). Permet d'empiler des items du genre "dernier ajouté, premier enlevé" : <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html">https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html</a> et <a href="https://www.tutorialspoint.com/java/java_stack_class.htm">https://www.tutorialspoint.com/java/java_stack_class.htm</a></li>
-	<li>HashMap. Permet de créer une structure de données liant une clé (key) à une valeur (value). Très utile pour la recherche d'information en temps constant O(1), donc pas besoin d'itérer dans toute une liste (O(N) si en désordre, sinon O(log n) si classé). Cette structure de données utilise des fonctions de <a href="https://fr.wikipedia.org/wiki/Fonction_de_hachage">hachage</a> pour convertir la clé en un index dans un tableau : <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html</a> et <a href="https://www.tutorialspoint.com/java/java_hashmap_class.htm">https://www.tutorialspoint.com/java/java_hashmap_class.htm</a></li>
+	<li>HashMap. Permet de créer une structure de données liant une clé (key) à une valeur (value). Très utile pour la recherche d'information en temps constant \(O(1)\), donc pas besoin d'itérer dans toute une liste (\(O(N)\) si en désordre, sinon \(O(\log n)\) si classé). Cette structure de données utilise des fonctions de <a href="https://fr.wikipedia.org/wiki/Fonction_de_hachage">hachage</a> pour convertir la clé en un index dans un tableau : <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html</a> et <a href="https://www.tutorialspoint.com/java/java_hashmap_class.htm">https://www.tutorialspoint.com/java/java_hashmap_class.htm</a></li>
 </ul>
 
 ## Lambdas
@@ -733,7 +701,41 @@ Le rôle des lambdas et de l'API Stream dans Java illustre bien l'influence de l
 Cependant, l'intégration de la programmation fonctionnelle en Java reste partielle, car le langage conserve une forte orientation objet. Les développeurs doivent être conscients des compromis : les lambdas et les streams rendent le code plus expressif, mais une utilisation excessive ou inappropriée peut nuire à la performance ou à la lisibilité, notamment dans des cas complexes. De plus, Java impose des contraintes, comme l'absence de fonctions de première classe (les lambdas sont des implémentations d'interfaces) et une gestion explicite de l'immutabilité. Malgré ces limitations, la programmation fonctionnelle en Java, via les streams et les lambdas, a transformé la manière dont les développeurs manipulent les données, encourageant des pratiques plus modernes et alignées sur les paradigmes fonctionnels tout en restant ancrées dans l'écosystème Java.
 
 
-## Lecture dans le livre de référence
+## Complexité algorithmique 
+
+La complexité algorithmique mesure le coût (en temps ou en espace) des opérations selon la taille des données manipulées. Voici un survol de la complexité des principales opérations sur les structures de données abordées dans ce module :
+
+### Tableaux (array)
+- **Accès à un élément** : \(O(1)\) (accès direct par indice)
+- **Modification d’un élément** : \(O(1)\)
+- **Recherche d’une valeur** : \(O(n)\) dans le pire cas (il faut parcourir tout le tableau)
+- **Insertion/Suppression** : \(O(n)\) (il faut déplacer les éléments suivants)
+
+### ArrayList
+- **Accès à un élément** : \(O(1)\)
+- **Ajout à la fin** : \(O(1)\) en moyenne (amortie), mais \(O(n)\) lors d’un redimensionnement
+- **Insertion/Suppression à une position donnée** : \(O(n)\) (déplacement des éléments)
+- **Recherche d’une valeur** : \(O(n)\)
+
+### Stack (Pile)
+- **Ajout (push) ou retrait (pop) d’un élément** : \(O(1)\)
+- **Accès au sommet** : \(O(1)\)
+
+### HashMap
+- **Insertion, suppression, recherche par clé** : \(O(1)\) en moyenne, \(O(n)\) dans le pire cas (rare)
+
+### Opérations sur les streams et lambdas
+- **Filtrage, transformation (map, filter, etc.)** : \(O(n)\), car chaque élément est traité une fois
+- **Tri d’une liste** : \(O(n \log n)\) (par exemple, avec `Collections.sort()` ou `List.sort()`)
+
+### Remarques pédagogiques
+- Les opérations en \(O(1)\) sont dites « en temps constant » : leur durée ne dépend pas de la taille des données.
+- Les opérations en \(O(n)\) sont « linéaires » : leur durée croît proportionnellement à la taille des données.
+- Les opérations en \(O(n \log n)\) sont typiques des algorithmes de tri efficaces.
+- Les structures comme HashMap sont très performantes pour la recherche par clé, mais moins adaptées pour le parcours ordonné.
+
+En résumé, le choix de la structure de données influence fortement la performance des algorithmes. Il est essentiel de comprendre la complexité des opérations pour écrire du code efficace, surtout lorsque les ensembles de données deviennent volumineux.
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures de données(optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
 

@@ -199,7 +199,7 @@ public class Main {
 {{</inlineJava>}}
 
 
-### Lecture dans le livre de référence
+### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures d'itération (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy le chapitre 5.</p>
 

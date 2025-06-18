@@ -178,7 +178,7 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 <p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
 
-### Lecture dans le livre de référence (optionnel)
+### Lecture optionnelle dans le livre de référence (Delannoy) (optionnel)
 
 <p>Vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, le premier chapitre. Le manuel de Delannoy  est à son mieux comme manuel de référence. On vous invite à faire les lectures à et garder le manuel avec vous lors que vous étudiez si vous en avez fait l'acquisition. Le manuel de Delannoy n'est pas obligatoire.</p>
 
