@@ -256,6 +256,54 @@ void main() {
 
 {{</inlineJava>}}
 
+## Accès à l'Internet
+
+Java permet aussi d'avoir accès à des ressources sur le web. Grâce à ses bibliothèques modernes, comme l'API HttpClient introduite dans Java 11, il est possible d'effectuer des requêtes HTTP de manière simple et efficace, facilitant la récupération de données depuis des serveurs distants.
+
+L'API HttpClient offre une approche fluide pour interagir avec des ressources en ligne. Dans l'exemple fourni, la classe SimpleHttpReader utilise cette API pour envoyer une requête GET à l'URL http://worldtimeapi.org/api/timezone/Etc/UTC. Cette URL renvoie des informations sur l'heure universelle coordonnée (UTC) au format JSON. La méthode HttpClient.newHttpClient() crée une instance du client HTTP, qui est ensuite utilisée pour construire et envoyer la requête. Cette approche est non seulement concise, mais aussi adaptée aux applications modernes nécessitant des interactions fréquentes avec des services web.
+
+La gestion des requêtes dans l'exemple est robuste grâce à la vérification du code de statut HTTP. Si le serveur renvoie un code différent de 200 (indiquant une réussite), une exception est levée avec un message clair, permettant une gestion d'erreur appropriée. De plus, l'utilisation de StandardCharsets.UTF_8 garantit que les données textuelles sont correctement décodées, évitant les problèmes liés aux encodages de caractères. Ce mécanisme illustre comment Java combine simplicité et fiabilité pour accéder aux ressources web.
+
+Un aspect notable de ce code est sa structure orientée objet et sa facilité d'exécution. La méthode main ne prend aucun paramètre, rendant le programme immédiatement exécutable sans configuration supplémentaire. En cas d'erreur, un message précis est affiché, indiquant une "Erreur lors de la requête HTTP" accompagnée de détails sur l'exception. Cette clarté est essentielle pour le débogage et la maintenance, en particulier dans des applications plus complexes intégrant de multiples appels réseau.
+
+Enfin, l'exemple démontre la puissance de Java pour intégrer des services web dans des applications. En récupérant des données d'une API publique comme worldtimeapi.org, le programme montre comment Java peut être utilisé pour consommer des services RESTful. Cette capacité est cruciale dans le développement d'applications modernes, qu'il s'agisse de microservices, d'applications mobiles ou de systèmes de monitoring, où l'accès aux données en temps réel est souvent une exigence clé.
+
+{{<inlineJava path="SimpleHttpReader.java" lang="java">}}
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+
+public class SimpleHttpReader {
+    public static void main(String[] args) {
+        try {
+            String content = readHttpFile();
+            System.out.println(content);
+        } catch (Exception e) {
+            System.err.println("Erreur lors de la requête HTTP : " + e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    public static String readHttpFile() throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("http://worldtimeapi.org/api/timezone/Etc/UTC"))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, 
+                HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+
+        if (response.statusCode() != 200) {
+            throw new RuntimeException("Échec de la requête HTTP : " + response.statusCode());
+        }
+
+        return response.body();
+    }
+}
+{{</inlineJava>}}
 
 ## Lecture dans le livre de référence
 
