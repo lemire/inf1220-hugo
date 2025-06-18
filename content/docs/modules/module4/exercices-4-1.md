@@ -314,3 +314,90 @@ public class Exercice5M4 { // Exercice5M4
 ```
 
 </details>
+
+
+
+## Question 8
+
+<p>Écrivez un programme Java qui compte le nombre de voyelles dans une chaîne de caractères saisie par l’utilisateur.</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.util.Scanner;
+public class CompteVoyelles {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int compteur = 0;
+        for (char c : s.toLowerCase().toCharArray()) {
+            if ("aeiouy".indexOf(c) != -1) compteur++;
+        }
+        System.out.println("Nombre de voyelles : " + compteur);
+    }
+}
+```
+
+</details>
+
+## Question 9
+
+<p>Écrivez un programme Java qui lit un fichier texte ligne par ligne et affiche chaque ligne précédée de son numéro (exemple : 1: première ligne, 2: deuxième ligne, etc.).</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.io.*;
+public class LireFichier {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("monfichier.txt"));
+        String ligne;
+        int num = 1;
+        while ((ligne = br.readLine()) != null) {
+            System.out.println(num + ": " + ligne);
+            num++;
+        }
+        br.close();
+    }
+}
+```
+
+</details>
+
+## Question 10
+
+<p>Écrivez un programme Java qui demande à l’utilisateur un nom de fichier, puis affiche le nombre de caractères dans ce fichier.</p>
+<details><summary>Réponse</summary>
+
+Il est possible de procéder caractère par caractère&nbsp;:
+```java  {style=github}
+import java.io.*;
+import java.util.Scanner;
+public class CompteCaracteres {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nom du fichier : ");
+        String nom = sc.nextLine();
+        FileReader fr = new FileReader(nom);
+        int compteur = 0;
+        while (fr.read() != -1) compteur++;
+        fr.close();
+        System.out.println("Nombre de caractères : " + compteur);
+    }
+}
+```
+
+Il est possible de procéder plus rapidement&nbsp;:
+```java  {style=github}
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
+
+public class FileSize {
+    public static void main(String[] args) throws IOException {
+        String filePath = "monfichier.txt";
+        long size = Files.size(Paths.get(filePath));
+        System.out.println("Nombre de caractères : " + size);
+    }
+}
+```
+
+</details>

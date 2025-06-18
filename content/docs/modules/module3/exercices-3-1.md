@@ -742,3 +742,63 @@ public class TriChainesSansCasse {
 
 </div>
 </details>
+
+## Question 22
+
+<p>Écrivez un programme Java qui affiche la somme des éléments d’un tableau d’entiers donné.</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+int[] t = {1, 2, 3, 4, 5};
+int somme = 0;
+for (int v : t) {
+    somme += v;
+}
+System.out.println("Somme : " + somme);
+```
+
+</details>
+
+## Question 23
+
+<p>Expliquez la différence entre une boucle <tt>for</tt> et une boucle <tt>while</tt> en Java, et donnez un exemple pour chacune.</p>
+<details><summary>Réponse</summary>
+<p>La boucle <tt>for</tt> est généralement utilisée quand on connaît le nombre d’itérations à l’avance ; la boucle <tt>while</tt> est utilisée quand on ne le connaît pas.</p>
+
+```java  {style=github}
+// Boucle for
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+// Boucle while
+int j = 0;
+while (j < 5) {
+    System.out.println(j);
+    j++;
+}
+```
+
+</details>
+
+
+## Question 24
+
+<p>Quelle est la différence entre un tableau et une ArrayList en Java ?</p>
+<details><summary>Réponse</summary>
+<p>Un tableau a une taille fixe et ne peut pas être redimensionné après sa création. Une ArrayList est une structure de données dynamique qui peut changer de taille et offre des méthodes pratiques pour ajouter, supprimer ou rechercher des éléments.</p>
+</details>
+
+## Question 25
+
+<p>Écrivez un programme Java qui affiche tous les éléments d’un tableau d’entiers dans l’ordre inverse.</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+int[] t = {1, 2, 3, 4, 5};
+for (int i = t.length - 1; i >= 0; i--) {
+    System.out.println(t[i]);
+}
+```
+
+</details>
+

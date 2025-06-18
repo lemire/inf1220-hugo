@@ -103,10 +103,6 @@ Le fait de faire : "entier + string" n'est pas une erreur. La JVM va convertir a
 <summary>Réponse</summary>
 
 {{<inlineJava path="CalculMoyenne.java" lang="java" >}}
-/**
- * Exemple question #5
- * @author cgouin
- */
 public class CalculMoyenne {
    public static void main(String[] args) {
        int tailleAlice = 104;
@@ -494,4 +490,15 @@ En informatique, on définit l'ensemble des nombres positifs comme étant les no
 <details><summary>Réponse</summary>
 <p>
  Dans le cas qui nous concerne, il n'est pas possible de distinguer 0.8825149536132812 et 0.8825149536132813, des nombres à 16 chiffres significatifs. En général, il est possible de représenter l'ensemble des nombres entre -10 à la puissance 308 et 10 à la puissance 308 avec 15 chiffres de précision, mais pas 16 chiffres de précision. Les nombres 0.8825149536132812 et 0.8825149536132813 sont représentés en nombre à virgule flottante comme étant  115673 fois 2 à la puissance -17 ce qui est le nombre 0.88251495361328125. 
+</details>
+
+
+## Question 24
+
+<p>Écrivez un code Java qui affiche tous les entiers pairs de 0 à 20 inclus.</p>
+<details><summary>Réponse</summary>
+<pre><code>for (int i = 0; i &lt;= 20; i += 2) {
+    System.out.println(i);
+}
+</code></pre>
 </details>

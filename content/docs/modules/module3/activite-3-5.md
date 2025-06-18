@@ -5,39 +5,26 @@ weight: 7
 
 # La récursivité
 
+La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.
+
 ## Le concept de récursivité
 
 <p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. Voici un exemple de récursivité :</p>
 
 ```java  {style=github}
 public class ExempleRecursivite {
-    
     public static void main(String[] args) {
-        
         int nb = fibonacci(10);
-        
         System.out.println("nb=" + nb);
-        
     }
     
-    /**
-     * Calcul de la suite de fibonnaci avec la récursivité
-     * 
-     * @param n
-     * @return 
-     */
     public static int fibonacci(int n) {
-        
-        // Si n == 0 alors on arrête les appels récursifs et on remonte le résultat.
         if(n <= 1) {
             return n;
         } else {
-            // Addition des deux nombres de la suite, en allant de façon décroissante.
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
-        
     }
-    
 }
 ```
 
@@ -45,7 +32,6 @@ public class ExempleRecursivite {
 
 ```java  {style=github}
 public class ExempleRecursivite {
-
     public static void main(String[] args) {
 
         // Provoque un OutOfMemoryError
@@ -56,41 +42,24 @@ public class ExempleRecursivite {
 
     }
 
-    /**
-     * L'appel de cette méthode provoque un OutOfMemoryError
-     *
-     * @param n
-     * @return
-     */
     public static long boom(long n) {
-
         long a = 10 * n;
         long b = 10 * n;
-
         ArrayList<String> list = new ArrayList<String>();
-
         for (int i = 0; i < n; i++) {
             list.add("Prendre de la mémoire");
         }
-
         return boom(a + b + n);
-
     }
     
-    /**
-     * L'appel de cette méthode provoque un StackOverflowError
-     * @param num 
-     */
     public static void recursivePrint(int num) {
         System.out.println("Number: " + num);
-
         if (num == 0) {
             return;
         } else {
             recursivePrint(++num);
         }
     }
-
 }
 ```
 

@@ -103,7 +103,7 @@ retourner -1 // Nombre non trouvé
 
 </details>
 
-### Exercice 3
+### Exercice 3 : Somme des multiples de 3 ou 5
 
 Additionnez tous les nombres naturels inférieurs à \(1000\) qui sont multiples de \(3\) ou de \(5\).
 
@@ -125,7 +125,7 @@ Retourne somme
 
 </details>
 
-### Exercice 4
+### Exercice 4 : Plus grand diviseur premier
 
 Trouvez le plus grand nombre premier qui divise \(317584931803\).
 
@@ -177,7 +177,7 @@ Vous pouvez supprimer la ligne `print(i, " est premier")` pour n’obtenir que l
 
 </details>
 
-### Exercice 5
+### Exercice 5 : Chiffre des dizaines
 
 Pour un entier positif \(x\), trouvez le chiffre occupant la position des dizaines.
 
@@ -196,7 +196,7 @@ Exemple : si x est 531, le quotient de 531 divisé par 10 est 53, reste 1. Le qu
 
 </details>
 
-### Exercice 6
+### Exercice 6 : Erreur dans un pseudo-code
 
 Trouvez l’erreur dans le pseudo-code suivant :
 
@@ -225,7 +225,7 @@ L’itérateur i prend les valeurs de 0 à N, accédant ainsi à N+1 éléments 
 
 </details>
 
-### Exercice 7
+### Exercice 7 : Racines d’un polynôme du second degré
 
 Soit \(P(x) = ax^2 + bx + c\) un polynôme du second degré à coefficients réels. Les racines se calculent via le discriminant \(A = b^2 - 4ac\).
 
@@ -264,7 +264,7 @@ Fin
 
 </details>
 
-### Exercice 8
+### Exercice 8 : Exécution de l’algorithme des racines
 
 Exécutez l’algorithme de l’exercice 7 pour \(P(x) = x^2 - 5x + 6\), en présentant les résultats dans un tableau.
 
@@ -283,7 +283,7 @@ Exécutez l’algorithme de l’exercice 7 pour \(P(x) = x^2 - 5x + 6\), en pré
 
 </details>
 
-### Exercice 9
+### Exercice 9 : Conversion de base
 
 Pour un entier \(B > 1\) et un nombre \(M\), la représentation en base \(B\) de \(M\) s’obtient par division successive : \(M = B \times Q_1 + R_1\), puis \(Q_1 = B \times Q_2 + R_2\), jusqu’à un quotient inférieur à \(B\). La représentation est \(Q_{n-1}R_n\ldots R_1\). Si \(B > 10\), les chiffres de \(10\) à \(B-1\) sont notés \(A, B, C, \ldots\) (par exemple, pour \(B = 16\), \(10 = A\), \(11 = B\), etc.).
 
@@ -349,7 +349,7 @@ def f(M, B):
 
 </details>
 
-### Exercice 10
+### Exercice 10 : Tester la parité en base 2
 
 En utilisant l’algorithme Algo_base, qui retourne la représentation en base \(B\) d’un nombre \(M\) (\(S = \text{Algo\_base}(B, M)\)), écrivez un algorithme qui teste la parité d’un nombre \(M\) et affiche « pair » ou « impair ».
 
@@ -373,6 +373,144 @@ Début
         Afficher « impair »
     Fin Si
 Fin
+```
+
+</details>
+
+### Exercice 11 : Calcul de la factorielle
+
+Écrivez un algorithme qui calcule la factorielle d’un entier positif \(n\) (\(n!\)).
+
+<details>
+<summary>Solution</summary>
+
+```
+Entrée :
+Entier positif n
+
+Variable :
+Entier fact = 1
+Entier i = 1
+
+TANT QUE i \leq n FAIRE
+    fact = fact \times i
+    i = i + 1
+FIN TANT QUE
+
+Retourner fact
+```
+
+</details>
+
+### Exercice 12 : Inverser un tableau
+
+Proposez un algorithme pour inverser un tableau d’entiers de taille quelconque.
+
+<details>
+<summary>Solution</summary>
+
+```
+Entrée :
+Tableau d’entiers T de taille N
+
+Variables :
+Entier i = 0
+Entier j = N - 1
+
+TANT QUE i < j FAIRE
+    échanger T[i] et T[j]
+    i = i + 1
+    j = j - 1
+FIN TANT QUE
+
+Retourner T
+```
+
+</details>
+
+### Exercice 13 : Compter les voyelles
+
+Écrivez un algorithme qui compte le nombre de voyelles dans une chaîne de caractères donnée.
+
+<details>
+<summary>Solution</summary>
+
+```
+Entrée :
+Chaîne de caractères S
+
+Variable :
+Entier compteur = 0
+Entier i = 0
+
+TANT QUE i < longueur de S FAIRE
+    SI S[i] est une voyelle ALORS
+        compteur = compteur + 1
+    FIN SI
+    i = i + 1
+FIN TANT QUE
+
+Retourner compteur
+```
+
+</details>
+
+### Exercice 14 : Tester si un entier est un palindrome
+
+Donnez un algorithme pour déterminer si un nombre entier est un palindrome (se lit de la même façon de gauche à droite et de droite à gauche).
+
+<details>
+<summary>Solution</summary>
+
+```
+Entrée :
+Entier positif n
+
+Variables :
+Entier original = n
+Entier renverse = 0
+
+TANT QUE n > 0 FAIRE
+    renverse = renverse \times 10 + (n \bmod 10)
+    n = n // 10
+FIN TANT QUE
+
+SI original = renverse ALORS
+    Retourner Vrai
+SINON
+    Retourner Faux
+FIN SI
+```
+
+</details>
+
+### Exercice 15 : Minimum et maximum d’un tableau
+
+Écrivez un algorithme qui trouve le minimum et le maximum dans un tableau d’entiers.
+
+<details>
+<summary>Solution</summary>
+
+```
+Entrée :
+Tableau d’entiers T de taille N
+
+Variables :
+Entier min = T[0]
+Entier max = T[0]
+Entier i = 1
+
+TANT QUE i < N FAIRE
+    SI T[i] < min ALORS
+        min = T[i]
+    FIN SI
+    SI T[i] > max ALORS
+        max = T[i]
+    FIN SI
+    i = i + 1
+FIN TANT QUE
+
+Retourner min, max
 ```
 
 </details>

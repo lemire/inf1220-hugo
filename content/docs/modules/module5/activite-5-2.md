@@ -78,8 +78,6 @@ import javax.swing.JPanel;
 
 /**
  * Classe permettant de dessiner un cercle pointillé.
- * 
- * @author cgouin
  */
 public class CerclePointille extends JPanel {
     
@@ -173,10 +171,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JFrame;
 
-/**
- *
- * @author cgouin
- */
 public class OvalePointille extends CerclePointille {
 
     protected float rayonHorizontal = 0;
@@ -399,95 +393,6 @@ public class Chainon<T> {
 ```
 
 <p>Dans un tel cas, Java peut émettre un avertissement à la compilation.</p>
-
-## Classes scellées
-
-
-Les classes scellées permettent de contrôler précisément quelles classes peuvent étendre une classe ou implémenter une interface. Voici deux exemples concrets pour illustrer leur utilisation.
-
-### Exemple 1 : hiérarchie de formes géométriques
-
-Dans cet exemple, une classe abstraite Forme est scellée et ne peut être étendue que par Cercle, Rectangle et Triangle.
-
-```java  {style=github}
-public abstract sealed class Forme permits Cercle, Rectangle, Triangle {
-    public abstract double calculerAire();
-}
-
-public final class Cercle extends Forme {
-    private final double rayon;
-
-    public Cercle(double rayon) {
-        this.rayon = rayon;
-    }
-
-    @Override
-    public double calculerAire() {
-        return Math.PI * rayon * rayon;
-    }
-}
-
-public final class Rectangle extends Forme {
-    private final double longueur;
-    private final double largeur;
-
-    public Rectangle(double longueur, double largeur) {
-        this.longueur = longueur;
-        this.largeur = largeur;
-    }
-
-    @Override
-    public double calculerAire() {
-        return longueur * largeur;
-    }
-}
-
-public non-sealed class Triangle extends Forme {
-    private final double base;
-    private final double hauteur;
-
-    public Triangle(double base, double hauteur) {
-        this.base = base;
-        this.hauteur = hauteur;
-    }
-
-    @Override
-    public double calculerAire() {
-        return (base * hauteur) / 2;
-    }
-}
-```
-
-### Exemple 2 : interface scellée pour types de véhicules
-
-```java  {style=github}
-public sealed interface Vehicule permits Voiture, Moto {
-    String getType();
-}
-
-public final class Voiture implements Vehicule {
-    @Override
-    public String getType() {
-        return "Voiture";
-    }
-}
-
-public final class Moto implements Vehicule {
-    @Override
-    public String getType() {
-        return "Moto";
-    }
-}
-
-public class TestVehicule {
-    public static void main(String[] args) {
-        Vehicule voiture = new Voiture();
-        Vehicule moto = new Moto();
-        System.out.println(voiture.getType()); // Affiche : Voiture
-        System.out.println(moto.getType());   // Affiche : Moto
-    }
-}
-```
 
 ## Lecture dans le livre de référence
 

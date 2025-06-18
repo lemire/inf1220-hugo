@@ -297,6 +297,13 @@ public class Entier {
 
 </details>
 
+## Question 15
+
+<p>Quelle est la différence entre <tt>public</tt>, <tt>private</tt> et <tt>protected</tt> pour un attribut ou une méthode en Java ?</p>
+<details><summary>Réponse</summary>
+<p><tt>public</tt> : accessible partout ; <tt>private</tt> : accessible uniquement dans la classe ; <tt>protected</tt> : accessible dans la classe et ses sous-classes (même dans d’autres packages).</p>
+</details>
+
 ## Allez plus loin?
 
 

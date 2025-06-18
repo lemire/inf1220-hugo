@@ -282,6 +282,7 @@ public class SerieTemporelle<T>  {
 }
 {{</inlineJava>}}
 
+</div>
 </details>
 
 ## Question 4
@@ -662,6 +663,83 @@ class Mammiferes extends Animaux {
    void seDeplace() {
         System.out.println("je suis un mammifère, je nage, je vole ou je marche");
    }
+}
+```
+
+</details>
+
+## Question 11
+<p>Expliquez la différence entre l’héritage simple et l’implémentation d’interfaces en Java.</p>
+<details><summary>Réponse</summary>
+<p>L’héritage simple permet à une classe de dériver d’une seule classe parente, héritant de ses méthodes et attributs. L’implémentation d’interfaces permet à une classe d’adopter plusieurs comportements en implémentant plusieurs interfaces, ce qui contourne l’absence d’héritage multiple en Java.</p>
+</details>
+
+## Question 12
+<p>Écrivez une interface Java nommée <tt>Volant</tt> avec une méthode <tt>void voler()</tt>, puis une classe <tt>Oiseau</tt> qui implémente cette interface.</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+interface Volant {
+    void voler();
+}
+class Oiseau implements Volant {
+    public void voler() {
+        System.out.println("L’oiseau vole.");
+    }
+}
+```
+
+</details>
+
+## Question 13
+<p>Expliquez la différence entre la redéfinition (override) et la surcharge (overload) de méthodes en Java.</p>
+<details><summary>Réponse</summary>
+<p>La redéfinition (override) consiste à fournir une nouvelle version d’une méthode héritée dans une sous-classe, avec la même signature. La surcharge (overload) consiste à définir plusieurs méthodes du même nom dans une même classe, mais avec des paramètres différents.</p>
+</details>
+
+## Question 14
+<p>Écrivez une classe <tt>Personne</tt> avec un attribut <tt>nom</tt> et une méthode <tt>afficherNom()</tt>. Créez une sous-classe <tt>Etudiant</tt> qui ajoute un attribut <tt>matricule</tt> et redéfinit la méthode <tt>afficherNom()</tt> pour afficher le nom et le matricule.</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+class Personne {
+    String nom;
+    Personne(String nom) { this.nom = nom; }
+    void afficherNom() { System.out.println(nom); }
+}
+class Etudiant extends Personne {
+    String matricule;
+    Etudiant(String nom, String matricule) {
+        super(nom);
+        this.matricule = matricule;
+    }
+    void afficherNom() {
+        System.out.println(nom + " (" + matricule + ")");
+    }
+}
+```
+
+</details>
+
+## Question 15
+<p>Écrivez une classe Java <tt>Animal</tt> avec une méthode <tt>parler()</tt> qui affiche "Je suis un animal". Créez deux sous-classes <tt>Chien</tt> et <tt>Chat</tt> qui redéfinissent la méthode <tt>parler()</tt> pour afficher respectivement "Wouf" et "Miaou".</p>
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+class Animal {
+    void parler() {
+        System.out.println("Je suis un animal");
+    }
+}
+class Chien extends Animal {
+    void parler() {
+        System.out.println("Wouf");
+    }
+}
+class Chat extends Animal {
+    void parler() {
+        System.out.println("Miaou");
+    }
 }
 ```
 

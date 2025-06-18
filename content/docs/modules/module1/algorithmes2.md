@@ -32,10 +32,11 @@ Les notations varient selon les conventions. Une multiplication peut s’écrire
 
 ## Compter le nombre de voyelles d'un mot entrées au clavier
 
-Exécutez ce pseudocode :
+Le compteur de voyelles est un outil interactif conçu pour t’aider à comprendre comment un algorithme traite une chaîne de caractères pour compter ses voyelles. Commence par saisir un mot ou une phrase dans le champ de texte, par exemple « bonjour ». Clique sur le bouton « Prochaine étape » pour exécuter l’algorithme pas à pas. À chaque clic, une ligne du pseudocode s’illumine, et une explication apparaît dans la zone de journalisation en bas. Tu verras aussi l’état actuel : la chaîne saisie, le caractère en cours d’analyse et le nombre de voyelles comptées. Si tu veux recommencer, clique sur « Réinitialiser » pour effacer les résultats et repartir de zéro. Assure-toi que ta saisie n’est pas vide, sinon un message te demandera de corriger.
+
+Cet outil te permet de suivre la logique de l’algorithme de manière visuelle. Le pseudocode, affiché à gauche, détaille chaque étape : initialisation des variables (comme la chaîne et le compteur de voyelles), lecture de la saisie, parcours de chaque caractère et vérification s’il s’agit d’une voyelle (a, e, i, o, u, y). En avançant étape par étape, tu peux observer comment l’algorithme « pense » pour résoudre le problème. Prends le temps de lire les messages du journal pour comprendre ce qui se passe à chaque moment. Cet exercice est parfait pour t’entraîner à traduire un problème en une série d’instructions claires, une compétence essentielle en programmation.
+
 
 {{< webapp path="voyelles.html" >}}
 
-Note: observez comment on termine la condition  "SI" avec une ligne "FIN SI".
-
-Note: observez comment l'algorithme comprend comme consigne l'impression à l'écran d'un résultat. Il s'agit implicitement d'un résultat ou d'une conséquence de l'algorithme.
+Maintenant que tu as exploré le compteur de voyelles, réfléchis à la manière dont cet algorithme pourrait être adapté ou amélioré. Par exemple, que se passerait-il si tu voulais compter uniquement certaines voyelles, comme « a » et « e », ou inclure les voyelles accentuées (é, è, ô) ? Comment modifierais-tu le pseudocode pour gérer ces cas ? Pense aussi à la structure de l’algorithme : quelles étapes pourraient être simplifiées ou rendues plus efficaces ? En te posant ces questions, tu commenceras à voir les algorithmes non pas comme des recettes figées, mais comme des solutions flexibles que tu peux ajuster pour répondre à différents besoins.
