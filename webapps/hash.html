@@ -1,0 +1,143 @@
+<div class="hash-app-container">
+    <div style="margin-bottom: 20px;">
+        <input type="text" id="hashApp_stringInput" placeholder="Entrez une chaîne" style="padding: 8px; width: 200px;">
+        <button id="hashApp_addButton" style="padding: 8px 16px; cursor: pointer;">Ajouter</button>
+    </div>
+    <h2>Chaînes saisies</h2>
+    <table id="hashApp_stringTable" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Chaîne</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Valeur de hachage</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Position dans la table</th>
+            </tr>
+        </thead>
+        <tbody id="hashApp_stringTableBody"></tbody>
+    </table>
+    <h2>Table de hachage</h2>
+    <div id="hashApp_hashTableDisplay" style="display: grid; gap: 10px;"></div>
+</div>
+
+<script>
+(function() {
+    // Préfixe unique pour éviter les conflits
+    const PREFIX = 'hashApp_';
+    
+    // Taille de la table de hachage
+    const HASH_TABLE_SIZE = 10;
+    
+    // Données de l'application
+    const appData = {
+        hashTable: Array(HASH_TABLE_SIZE).fill().map(() => []),
+        strings: []
+    };
+
+    // Fonction de hachage
+    function hashFunction(str) {
+        try {
+            let sum = 0;
+            for (let char of str) {
+                sum += char.charCodeAt(0);
+            }
+            const index = sum % HASH_TABLE_SIZE;
+            return {
+                hashValue: sum,
+                index: index
+            };
+        } catch (error) {
+            console.error(`${PREFIX}Erreur dans hashFunction:`, error);
+            return null;
+        }
+    }
+
+    // Ajouter une chaîne
+    function addString() {
+        try {
+            const input = document.getElementById(`${PREFIX}stringInput`);
+            const str = input.value.trim();
+            if (!str) return;
+
+            const hashResult = hashFunction(str);
+            if (!hashResult) return;
+
+            const { hashValue, index } = hashResult;
+            
+            // Ajouter aux données
+            appData.strings.push({ str, hashValue, index });
+            appData.hashTable[index].push(str);
+            
+            // Mettre à jour l'affichage
+            updateStringTable();
+            updateHashTableDisplay();
+            
+            // Réinitialiser l'input
+            input.value = '';
+        } catch (error) {
+            console.error(`${PREFIX}Erreur dans addString:`, error);
+        }
+    }
+
+    // Mettre à jour le tableau des chaînes
+    function updateStringTable() {
+        try {
+            const tableBody = document.getElementById(`${PREFIX}stringTableBody`);
+            tableBody.innerHTML = '';
+            appData.strings.forEach(({ str, hashValue, index }) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${str}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${hashValue}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${index}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        } catch (error) {
+            console.error(`${PREFIX}Erreur dans updateStringTable:`, error);
+        }
+    }
+
+    // Mettre à jour l'affichage de la table de hachage
+    function updateHashTableDisplay() {
+        try {
+            const display = document.getElementById(`${PREFIX}hashTableDisplay`);
+            display.innerHTML = '';
+            for (let i = 0; i < HASH_TABLE_SIZE; i++) {
+                const slot = document.createElement('div');
+                slot.style.cssText = 'padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;';
+                slot.innerHTML = `<h3 style="margin: 0; font-size: 16px;">Index ${i}</h3><p>${appData.hashTable[i].length > 0 ? appData.hashTable[i].join(', ') : 'Vide'}</p>`;
+                display.appendChild(slot);
+            }
+        } catch (error) {
+            console.error(`${PREFIX}Erreur dans updateHashTableDisplay:`, error);
+        }
+    }
+
+    // Initialisation
+    function init() {
+        try {
+            // Ajouter l'écouteur d'événements
+            const addButton = document.getElementById(`${PREFIX}addButton`);
+            if (addButton) {
+                addButton.addEventListener('click', addString);
+            }
+            
+            // Initialiser l'affichage
+            updateHashTableDisplay();
+        } catch (error) {
+            console.error(`${PREFIX}Erreur dans init:`, error);
+        }
+    }
+
+    // Lancer l'initialisation
+    init();
+})();
+</script>
+
+<style>
+.hash-app-container {
+    contain: content;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+</style>
