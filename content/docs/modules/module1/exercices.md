@@ -1,6 +1,6 @@
 ---
 title: Exercices sur les algorithmes
-weight: 10
+weight: 11
 ---
 
 
@@ -266,7 +266,7 @@ Fin
 
 ### Exercice 8 : Exécution de l’algorithme des racines
 
-Exécutez l’algorithme de l’exercice 7 pour \(P(x) = x^2 - 5x + 6\), en présentant les résultats dans un tableau.
+Exécutez l'algorithme de l'exercice 7 pour \(P(x) = x^2 - 5x + 6\), en présentant les résultats dans un tableau.
 
 <details>
 <summary>Réponse</summary>
@@ -515,13 +515,52 @@ Retourner min, max
 
 </details>
 
-### Problèmes supplémentaires
 
-Ce cours se concentre sur les bases de l’algorithmique et du pseudo-code. Si vous avez sérieusement résolu les exercices précédents, vous êtes prêt. Voici toutefois des problèmes supplémentaires :
+### Exercice 16
+Expliquez la différence entre la complexité en temps et la complexité en espace d’un algorithme.
 
-1. Dans un tableau, vérifiez si le nombre 3 est immédiatement suivi du nombre 2.
-2. Pour un tableau donné, vérifiez s’il est trié en ordre croissant.
-3. Pour deux entiers positifs \(a\) et \(b\), comptez les entiers dans l’intervalle \([a, b]\) divisibles par \(3\).
+<details>
+<summary>Solution</summary>
+
+La complexité en temps mesure la quantité d’opérations ou le temps d’exécution d’un algorithme en fonction de la taille des données d’entrée. La complexité en espace mesure la quantité de mémoire supplémentaire nécessaire à l’algorithme pour fonctionner. Un algorithme peut être rapide (faible complexité en temps) mais utiliser beaucoup de mémoire (complexité en espace élevée), ou l’inverse.
+</details>
+
+### Exercice 17
+Quel est le nombre maximal de comparaisons nécessaires pour rechercher un élément dans un tableau non trié de taille \( n \) ? Justifiez votre réponse.
+
+<details>
+<summary>Solution</summary>
+
+Dans un tableau non trié de taille \( n \), il faut au pire comparer l’élément recherché à chaque élément du tableau, soit \( n \) comparaisons. Cela correspond à une recherche linéaire, de complexité \( O(n) \).
+</details>
+
+### Exercice 18
+Pourquoi la recherche binaire n’est-elle applicable qu’aux tableaux triés ? Quelle est sa complexité en temps ?
+
+<details>
+<summary>Solution</summary>
+
+La recherche binaire n’est applicable qu’aux tableaux triés, car elle repose sur le fait que l’on peut éliminer la moitié des éléments à chaque étape en comparant la valeur recherchée à l’élément du milieu. Si le tableau n’est pas trié, on ne peut pas savoir dans quelle moitié chercher. Sa complexité en temps est \( O(\log n) \).
+</details>
+
+### Exercice 19
+Donnez un exemple d’algorithme ayant une complexité en \( O(n^2) \) et expliquez pourquoi.
+
+<details>
+<summary>Solution</summary>
+
+Un exemple classique est le tri à bulles (bubble sort). Pour chaque élément, on compare avec tous les autres, ce qui fait environ \( n^2 \) comparaisons pour un tableau de taille \( n \). C’est pourquoi sa complexité est \( O(n^2) \).
+</details>
+
+### Exercice 20
+Un algorithme de tri efficace comme le tri fusion (merge sort) a une complexité en \( O(n \log n) \). Expliquez ce que cela signifie et pourquoi c’est plus rapide qu’un tri naïf pour de grands tableaux.
+
+<details>
+<summary>Solution</summary>
+
+Une complexité en \( O(n \log n) \) signifie que le nombre d’opérations croît plus vite que linéairement, mais beaucoup moins vite que quadratiquement. Par exemple, le tri fusion (merge sort) divise le tableau en deux à chaque étape (logarithmique) et traite chaque élément à chaque niveau de division (linéaire), d’où le \( n \log n \). Pour de grands tableaux, c’est beaucoup plus rapide qu’un tri naïf en \( O(n^2) \).
+</details>
+
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme celles de Loïc & Julien ([voir ici](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ)) ou d’autres auteurs.
 

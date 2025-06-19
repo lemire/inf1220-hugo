@@ -52,13 +52,13 @@ public clas PleinErreurs {
 
     public  int entier = "Entier";
     public static String string = new String("string");
-
+    
     public static void main(String[] args) {
         entier += 33;
         string = entier + string;
         System.out.println(string)
     }
-
+    
 }
 ```
 
