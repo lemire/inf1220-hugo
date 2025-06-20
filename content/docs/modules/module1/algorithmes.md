@@ -93,6 +93,8 @@ SINON
 FIN SI
 ```
 
+
+
 #### Exemple 2 : Vérifier si un nombre est dans un intervalle
 
 ```pseudo
@@ -103,6 +105,17 @@ SINON
     écrire "x n'est pas dans l'intervalle"
 FIN SI
 ```
+
+{{< mermaid >}}
+graph TD
+    A[Lire x] --> B{x >= 10 ET x <= 20 ?}
+    B -- Vrai --> C["x est dans l'intervalle"]
+    B -- Faux --> D["x n'est pas dans l'intervalle"]
+    C --> E[Fin]
+    D --> E
+  
+{{< /mermaid >}}
+
 
 #### Notation des programmeurs
 
@@ -133,6 +146,21 @@ En informatique, on fait souvent référence à la notion d'impression à l'écr
 
 Pour illustrer la notion de pseudo-code, commençons par un exemple relativement simple.
 Supposons que nous avons un tableau de notes (par ex., les notes 10.4, 12.6, 18.7, 5.0) et que nous désirons calculer la moyenne. On utilise le convention que si le tableau se nomme 'notes', alors la première note (par ex., 10.4) est notes[0], la seconde note est notes[1]... et ainsi de suite jusqu'à notes[3]. Évidemment, dans ce cas, on sait qu'il y'a 4 notes, mais il plus pratique d'écrire le pseudo-code de manière générale. On fera donc référence à la longueur du tableau (au nombre d'éléments qu'il contient) comme étant un paramètre. Pour visiter tous les éléments, on peut initialiser une valeur entière à 0, et l'incrémenter de 1 tant qu'elle demeure plus petite que la longueur du tableau.
+
+{{< mermaid >}}
+graph TD
+    A[Début] --> B[Initialiser iterateur = 0, moyenne = 0]
+    B --> C{iterateur < longueur de notes ?}
+    C -- Vrai --> D["moyenne = moyenne + notes[iterateur]"]
+    D --> E[iterateur = iterateur + 1]
+    E --> C
+    C -- Faux --> F[moyenne = moyenne / longueur de notes]
+    F --> G[Afficher moyenne]
+    G --> H[Fin]
+{{< /mermaid >}}
+
+
+Utilisez l'application suivante pour explorer l'exécution de l'algorithme.
 
 {{< webapp path="moyenne.html" >}}
 

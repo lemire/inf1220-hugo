@@ -123,6 +123,18 @@ FIN TANT QUE
 retourne test
 ```
 
+{{< mermaid >}}
+
+graph TD
+    A[Début] --> B[Initialiser test = 0]
+    B --> C{test < 100 ?}
+    C -- Vrai --> D[test = test + 22]
+    D --> C
+    C -- Faux --> E[Retourner test]
+    E --> F[Fin]
+{{< /mermaid >}}
+
+
 1. Je débute le pseudo-code avec la valeur 0 stockée dans la variable test.
 2. J'entre dans la boucle TANT QUE.
 3. J'ajoute 22 à la variable test, le résultat est 22.
@@ -143,4 +155,4 @@ Vous devez absolument être capable de faire de telles exécutions. Dans certain
 
 
 
-{{< youtube id="kk6YbA5I" >}}
+{{< youtube id="kk6YbA5I-Iw" >}}

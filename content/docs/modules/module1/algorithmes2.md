@@ -32,6 +32,22 @@ Les notations varient selon les conventions. Une multiplication peut s’écrire
 
 ## Compter le nombre de voyelles d'un mot entrées au clavier
 
+L'algorithme suivant compte le nombre de voyelles saisies&nbsp;:
+
+```
+Entrées :
+  Chaîne de caractères : chaine = ""
+Sorties :
+  Entier : nbVoyelle = 0
+Imprimer à l'écran "Veuillez entrer un mot au clavier suivi de la touche entrée"
+Saisir le mot au clavier et assigner à la variable chaine
+POUR TOUT caractère c dans chaine FAIRE
+    SI c == 'a' OU c == 'e' OU c == 'i' OU c == 'o' OU c == 'u' OU c == 'y' ALORS
+        nbVoyelle = nbVoyelle + 1
+    FIN SI
+FIN POUR
+```
+
 Le compteur de voyelles est un outil interactif conçu pour t’aider à comprendre comment un algorithme traite une chaîne de caractères pour compter ses voyelles. Commence par saisir un mot ou une phrase dans le champ de texte, par exemple « bonjour ». Clique sur le bouton « Prochaine étape » pour exécuter l’algorithme pas à pas. À chaque clic, une ligne du pseudocode s’illumine, et une explication apparaît dans la zone de journalisation en bas. Tu verras aussi l’état actuel : la chaîne saisie, le caractère en cours d’analyse et le nombre de voyelles comptées. Si tu veux recommencer, clique sur « Réinitialiser » pour effacer les résultats et repartir de zéro. Assure-toi que ta saisie n’est pas vide, sinon un message te demandera de corriger.
 
 Cet outil te permet de suivre la logique de l’algorithme de manière visuelle. Le pseudocode, affiché à gauche, détaille chaque étape : initialisation des variables (comme la chaîne et le compteur de voyelles), lecture de la saisie, parcours de chaque caractère et vérification s’il s’agit d’une voyelle (a, e, i, o, u, y). En avançant étape par étape, tu peux observer comment l’algorithme « pense » pour résoudre le problème. Prends le temps de lire les messages du journal pour comprendre ce qui se passe à chaque moment. Cet exercice est parfait pour t’entraîner à traduire un problème en une série d’instructions claires, une compétence essentielle en programmation.

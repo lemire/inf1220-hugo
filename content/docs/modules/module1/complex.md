@@ -74,7 +74,18 @@ DEBUT
 FIN
 ```
 
+Pour mieux comprendre l'algorithme, essayez de chercher des nombreds dans un tableau trié avec
+l'application suivante.
+
+{{< webapp path="binaire.html" >}}
+
+Observez comment vous faites toujours moins de recherche qu'il y a d'éléments dans le tableau. Pouvez-vous faire en sorte qu'une seule étape soit nécessaire&nbsp;? Quel est le nombre maximal d'étapes nécessaires&nbsp;? 
+
 Cet algorithme a une complexité en \( O(\log n) \), ce qui le rend très efficace pour les grands tableaux triés. 
+
+
+
+
 
 Cela signifie que le nombre d’opérations nécessaires pour trouver (ou ne pas trouver) un élément ne croît pas proportionnellement à la taille du tableau, mais beaucoup plus lentement. Par exemple, pour un tableau de 1 000 000 d’éléments, la recherche binaire nécessite au maximum environ 20 comparaisons (car \( \log_2 1\,000\,000 \approx 20 \)), alors qu’une recherche linéaire pourrait en demander jusqu’à 1 000 000 dans le pire cas. Plus le tableau est grand, plus l’avantage de la recherche binaire est important.
 
