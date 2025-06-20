@@ -1,0 +1,118 @@
+    <div id="arrayContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 10px 0; gap: 5px;"></div>
+    
+    <div style="margin: 20px 0; text-align: center;">
+        <input type="number" id="searchInput" placeholder="Entrez un nombre à rechercher" style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 200px;">
+        <button onclick="performBinarySearch()" style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">Rechercher</button>
+    </div>
+    
+    <div id="stepsContainer" style="margin-top: 20px; padding: 15px; background-color: white; border: 1px solid #ddd; border-radius: 4px; min-height: 100px;">
+        <p style="color: #333;">Entrez un nombre et cliquez sur "Rechercher" pour voir les étapes de la recherche binaire.</p>
+    </div>
+    
+    <div id="resultContainer" style="margin-top: 20px; padding: 15px; background-color: white; border: 1px solid #ddd; border-radius: 4px; text-align: center; font-weight: bold; color: #333;"></div>
+
+    <script>
+        const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63];
+        const arrayContainer = document.getElementById('arrayContainer');
+
+        // Afficher le tableau initial
+        function renderArray(low = -1, high = -1, mid = -1) {
+            arrayContainer.innerHTML = '';
+            sortedArray.forEach((num, index) => {
+                const span = document.createElement('span');
+                span.innerText = num;
+                span.style.padding = '5px 10px';
+                span.style.border = '1px solid #ccc';
+                span.style.borderRadius = '4px';
+                span.style.backgroundColor = 
+                    index === mid ? '#ffc107' : // Milieu en jaune
+                    (index >= low && index <= high && low !== -1 && high !== -1) ? '#d4edda' : '#fff'; // Section active en vert clair
+                span.style.transition = 'background-color 0.5s';
+                arrayContainer.appendChild(span);
+            });
+        }
+
+        // Initialiser l'affichage du tableau
+        renderArray();
+
+        async function performBinarySearch() {
+            const searchValue = parseInt(document.getElementById('searchInput').value);
+            const stepsContainer = document.getElementById('stepsContainer');
+            const resultContainer = document.getElementById('resultContainer');
+
+            // Réinitialiser les conteneurs
+            stepsContainer.innerHTML = '';
+            resultContainer.innerHTML = '';
+            renderArray();
+
+            // Vérifier si l'entrée est valide
+            if (isNaN(searchValue)) {
+                resultContainer.innerHTML = 'Veuillez entrer un nombre valide.';
+                return;
+            }
+
+            let low = 0;
+            let high = sortedArray.length - 1;
+            let steps = [];
+            let found = false;
+            let resultIndex = -1;
+            let closestSmaller = -1;
+
+            // Recherche binaire avec animation
+            while (low <= high) {
+                const mid = Math.floor((low + high) / 2);
+                const midValue = sortedArray[mid];
+
+                // Afficher l'étape
+                steps.push(`Comparaison avec l'élément au milieu (index ${mid}) : ${midValue}`);
+                renderArray(low, high, mid);
+                addStepToContainer(steps[steps.length - 1]);
+
+                // Attendre pour l'animation
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                if (midValue === searchValue) {
+                    found = true;
+                    resultIndex = mid;
+                    steps.push(`Valeur ${searchValue} trouvée à l'index ${mid}.`);
+                    addStepToContainer(steps[steps.length - 1]);
+                    break;
+                } else if (midValue < searchValue) {
+                    steps.push(`La valeur ${searchValue} est plus grande, recherche dans la moitié droite.`);
+                    addStepToContainer(steps[steps.length - 1]);
+                    closestSmaller = mid;
+                    low = mid + 1;
+                } else {
+                    steps.push(`La valeur ${searchValue} est plus petite, recherche dans la moitié gauche.`);
+                    addStepToContainer(steps[steps.length - 1]);
+                    high = mid - 1;
+                }
+
+                // Attendre avant la prochaine itération
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+
+            // Afficher le résultat final
+            await new Promise(resolve => setTimeout(resolve, 500));
+            if (found) {
+                resultContainer.innerHTML = `Valeur ${searchValue} trouvée à l'index ${resultIndex}.`;
+                resultContainer.style.color = '#28a745';
+            } else {
+                if (closestSmaller !== -1) {
+                    resultContainer.innerHTML = `Valeur ${searchValue} non trouvée. La plus grande valeur inférieure est ${sortedArray[closestSmaller]} à l'index ${closestSmaller}.`;
+                } else {
+                    resultContainer.innerHTML = `Valeur ${searchValue} non trouvée. Aucune valeur inférieure dans le tableau.`;
+                }
+                resultContainer.style.color = '#dc3545';
+            }
+        }
+
+        // Fonction pour ajouter une étape au conteneur
+        function addStepToContainer(step) {
+            const p = document.createElement('p');
+            p.innerText = step;
+            p.style.margin = '5px 0';
+            p.style.color = '#555';
+            document.getElementById('stepsContainer').appendChild(p);
+        }
+    </script>
