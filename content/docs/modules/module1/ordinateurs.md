@@ -106,11 +106,3 @@ Les temps d’accès à la mémoire ou d’exécution d’instructions sont souv
 
 Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 
-## Java pas à pas
-
-
-<p>Nous vous invitons maintenant à lire le chapitre 1 du manuel  Java Pas à Pas.  Vous devez <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF</a>. </p>
-
-
-<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>

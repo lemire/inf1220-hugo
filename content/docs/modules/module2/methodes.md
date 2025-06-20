@@ -280,8 +280,7 @@ public class FusionDonnees {
 
 Chaque classe donnée ne peut avoir qu'une seule méthode ayant une certaine signature. La signature d'une méthode est la combinaison du nom de la méthode et de la liste (et l’ordre) des types de ses paramètres. Cela signifie que deux méthodes d’une même classe peuvent porter le même nom, à condition qu’elles aient des paramètres de types ou d’ordre différents : c’est la surcharge de méthodes (overloading). La signature ne tient pas compte du type de retour de la méthode ni des modificateurs d’accès (public, private, etc.).
 
-**Exemple :**
-```java
+```java {style=github}
 void afficher(String message)
 void afficher(int nombre)
 void afficher(String message, int nombre)

@@ -304,6 +304,32 @@ public class Entier {
 <p><tt>public</tt> : accessible partout ; <tt>private</tt> : accessible uniquement dans la classe ; <tt>protected</tt> : accessible dans la classe et ses sous-classes (même dans d’autres packages).</p>
 </details>
 
+## Question 16
+Considérez le code suivant :
+```java
+void afficher(String message) {}
+int afficher(int nombre) { return nombre; }
+void afficher(String message, int nombre) {}
+```
+Décrivez la signature de la méthode `afficher(String message, int nombre)` et expliquez pourquoi ces trois méthodes peuvent coexister dans la même classe.
+
+<details><summary>Réponse</summary>
+La signature de la méthode `afficher(String message, int nombre)` est composée des types et de l'ordre des paramètres, à savoir `afficher(String, int)`. Ces trois méthodes peuvent coexister dans la même classe car elles ont des signatures différentes, c'est-à-dire un nombre ou un type de paramètres différent. En Java, la surcharge de méthode est permise tant que les signatures des méthodes sont différentes.
+</details>
+
+
+## Question 17
+Pourquoi la signature d’une méthode ne tient-elle pas compte du type de retour ? Donnez un exemple où deux méthodes auraient le même nom et les mêmes paramètres mais des types de retour différents, et expliquez pourquoi cela pose problème.
+<details><summary>Réponse</summary>
+La signature d’une méthode ne tient pas compte du type de retour, car cela rendrait l’appel de la méthode ambigu pour le compilateur. Par exemple, si on écrivait :
+```java
+int calculer(int x);
+double calculer(int x);
+```
+Le compilateur ne saurait pas quelle version utiliser lors d’un appel comme `calculer(5)`, car le choix ne peut pas se faire uniquement sur le type de retour. C’est pourquoi Java interdit d’avoir deux méthodes avec le même nom et les mêmes paramètres, même si leur type de retour diffère.
+</details>
+
+
 ## Allez plus loin?
 
 

@@ -165,20 +165,6 @@ public class SwitchExpressionExample {
 
 Observez le mot-clé `yield` utilisé dans les expressions switch  pour spécifier la valeur renvoyée par une branche d’un bloc switch lorsqu’une logique complexe nécessite plusieurs instructions.
 
-## Java pas à pas
-
-
-<p>Nous vous invitons maintenant à lire le chapitre <em>Structures de contrôle</em> du manuel  Java Pas à Pas par Robert Godin et Daniel Lemire.  Vous devez charger le  <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">le document PDF</a>.</p>
-
-<p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
-
-<p>Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d'utiliser le manuel Java Pas à Pas.</p>
-
-
-<p>Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.</p>
-
-
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures de contrôle (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 5:</p>

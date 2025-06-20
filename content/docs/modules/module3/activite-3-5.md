@@ -28,7 +28,7 @@ public class ExempleRecursivite {
 }
 ```
 
-<p>Toutefois, la récursivité est à utiliser avec précaution, car elle peut facilement provoquer une erreur de type StackOverflow ou OutOfMemory. C'est à dire, que l'appel répétitif d'une méthode à l'intérieur de sa propre méthode provoquera la multiplication de structures en mémoire (ex. variables, information sur les appels de méthode en soi, structures de données, etc.) et l'utilisation complète de la mémoire dédiée à la JVM par le système d'exploitation de l'ordinateur. Il faut donc être prudent avec l'appel récursif. Voici deux mauvais exemples, qui provoque l'erreur de type StackOverflowError ou l'erreur de type OutOfMemoryError : </p>
+<p>Toutefois, la récursivité est à utiliser avec précaution, car elle peut facilement provoquer une erreur de type StackOverflow ou OutOfMemory. C'est à dire, que l'appel répétitif d'une méthode à l'intérieur de sa propre méthode provoquera la multiplication de structures en mémoire (ex. variables, information sur les appels de méthode en soi, structures de données, etc.) et l'utilisation complète de la mémoire dédiée à Java par le système d'exploitation de l'ordinateur. Il faut donc être prudent avec l'appel récursif. Voici deux mauvais exemples, qui provoque l'erreur de type StackOverflowError ou l'erreur de type OutOfMemoryError : </p>
 
 ```java  {style=github}
 public class ExempleRecursivite {
