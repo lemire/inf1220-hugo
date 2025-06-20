@@ -51,7 +51,7 @@ public class ExecutionIteration {
 }
 {{</inlineJava>}}
 
-<p>D'autre part, le mot-clé "continue" permet de "sauter" une partie de l'exécution du code d'une structure d'itération pour commencer une nouvelle itération. Ainsi, dans le code suivant, les nombres impairs ne seront pas affichés car l'exécution de la ligne System.out ne sera pas atteinte par la JVM :</p>
+<p>D'autre part, le mot-clé "continue" permet de "sauter" une partie de l'exécution du code d'une structure d'itération pour commencer une nouvelle itération. Ainsi, dans le code suivant, les nombres impairs ne seront pas affichés car l'exécution de la ligne System.out ne sera pas atteinte&nbsp;:</p>
 
 
 {{<inlineJava path="Main.java" lang="java" >}}

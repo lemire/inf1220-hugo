@@ -745,3 +745,140 @@ class Chat extends Animal {
 
 </details>
 
+## Question 16
+<p>Expliquez à quoi sert l’interface <tt>Serializable</tt> en Java et donnez un exemple de situation où il est nécessaire de l’utiliser.</p>
+
+<details><summary>Réponse</summary>
+<p>L’interface <tt>Serializable</tt> en Java permet de marquer une classe dont les objets peuvent être sérialisés, c’est-à-dire convertis en un flux d’octets pour être facilement stockés ou transmis. Par exemple, il est nécessaire de l’utiliser lors de la sauvegarde de l’état d’un objet dans un fichier ou lors de l’envoi d’un objet à travers un réseau.</p>
+</details>
+
+## Question 17
+<p>Écrivez un exemple de classe Java qui implémente l’interface <tt>Comparable</tt> pour permettre le tri naturel d’objets selon un attribut.</p>
+
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.util.*;
+
+class Etudiant implements Comparable<Etudiant> {
+    String nom;
+    int note;
+
+    Etudiant(String nom, int note) {
+        this.nom = nom;
+        this.note = note;
+    }
+
+    public int compareTo(Etudiant autre) {
+        return Integer.compare(this.note, autre.note);
+    }
+
+    public String toString() {
+        return nom + ": " + note;
+    }
+
+    public static void main(String[] args) {
+        List<Etudiant> liste = new ArrayList<>();
+        liste.add(new Etudiant("Alice", 85));
+        liste.add(new Etudiant("Bob", 70));
+        liste.add(new Etudiant("Charlie", 95));
+
+        Collections.sort(liste);
+
+        for (Etudiant e : liste) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+</details>
+
+## Question 18
+<p>Quelle est la différence entre <tt>Comparable</tt> et <tt>Comparator</tt> en Java ? Donnez un exemple d’utilisation de <tt>Comparator</tt> pour trier une liste d’objets selon un critère différent du tri naturel.</p>
+
+<details><summary>Réponse</summary>
+<p>L’interface <tt>Comparable</tt> impose un ordre naturel à une classe d’objets en définissant la méthode <tt>compareTo()</tt>, tandis que l’interface <tt>Comparator</tt> permet de définir des ordres de tri alternatifs à l’aide de la méthode <tt>compare()</tt>. Voici un exemple d’utilisation de <tt>Comparator</tt> :</p>
+
+```java  {style=github}
+import java.util.*;
+
+class Etudiant {
+    String nom;
+    int note;
+
+    Etudiant(String nom, int note) {
+        this.nom = nom;
+        this.note = note;
+    }
+
+    public String toString() {
+        return nom + ": " + note;
+    }
+
+    public static void main(String[] args) {
+        List<Etudiant> liste = new ArrayList<>();
+        liste.add(new Etudiant("Alice", 85));
+        liste.add(new Etudiant("Bob", 70));
+        liste.add(new Etudiant("Charlie", 95));
+
+        // Tri par ordre alphabétique
+        Collections.sort(liste, new Comparator<Etudiant>() {
+            public int compare(Etudiant e1, Etudiant e2) {
+                return e1.nom.compareTo(e2.nom);
+            }
+        });
+
+        for (Etudiant e : liste) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+</details>
+
+## Question 19
+<p>Donnez un exemple d’instanciation anonyme d’une interface Comparator en Java.</p>
+
+<details><summary>Réponse</summary>
+
+```java {style=github}
+// Exemple d'instanciation anonyme d'un Comparator pour trier une liste d'entiers par ordre décroissant
+List<Integer> liste = Arrays.asList(5, 2, 9, 1);
+Collections.sort(liste, new Comparator<Integer>() {
+    @Override
+    public int compare(Integer a, Integer b) {
+        return b - a; // ordre décroissant
+    }
+});
+System.out.println(liste); // Affiche [9, 5, 2, 1]
+```
+
+Ici, on crée une instance anonyme de l'interface Comparator directement dans l'appel à Collections.sort, sans créer de classe séparée.
+
+</details>
+
+## Question 20
+<p>Pourquoi est-il utile d’utiliser des classes anonymes ou des expressions lambda pour implémenter des interfaces fonctionnelles en Java ? Donnez un exemple de cas où cela simplifie le code.</p>
+
+<details><summary>Réponse</summary>
+<p>Les classes anonymes et les expressions lambda permettent d’implémenter des interfaces fonctionnelles de manière concise et sans avoir à créer une classe nommée séparée. Cela simplifie le code, surtout pour des implémentations ponctuelles. Par exemple :</p>
+
+```java  {style=github}
+import java.util.*;
+
+public class Exemple {
+    public static void main(String[] args) {
+        List<String> liste = Arrays.asList("un", "deux", "trois", "quatre");
+
+        // Tri avec une expression lambda
+        Collections.sort(liste, (a, b) -> b.compareTo(a));
+
+        liste.forEach(element -> System.out.println(element));
+    }
+}
+```
+
+</details>
+

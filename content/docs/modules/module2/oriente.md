@@ -1,9 +1,9 @@
 ---
-title: "Langage de programmation orientée-objet"
+title: "Langage de programmation orientée objet"
 weight: 2
 ---
 
-# Langage de programmation orientée-objet
+# Langage de programmation orientée objet
 
 ## Un premier programme
 

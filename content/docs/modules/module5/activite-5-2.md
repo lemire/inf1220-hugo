@@ -6,13 +6,13 @@ weight: 2
 # Le polymorphisme
 
 
-<p>Le polymorphisme est la capacité d'une méthode de se comporter différemment en fonction de l'objet qui s'en sert. Le polymorphisme permet donc de manipuler des objets grâce à leurs méthodes sans que nous nous souciions de leur classe. La JVM se charge d'appeler la méthode adéquate dans la hiérarchie de classes issue de l'héritage. Il existe trois formes de polymorphisme : le polymorphisme ad hoc, le polymorphisme paramètré et le polymorphisme par héritage. Dans les prochaines sections, nous aborderons ces trois types de polymorphisme et leur usage.</p>
-
-<p><a id="intro" name="section1"></a></p>
+<p>Le polymorphisme est la capacité d’un même nom de méthode à s’adapter à différents contextes, selon l’objet qui l’utilise. Cela permet de manipuler des objets de différentes classes de façon uniforme, sans se soucier de leur type précis. En Java, la machine virtuelle (JVM) choisit automatiquement la bonne méthode à exécuter selon la classe réelle de l’objet. On distingue trois formes principales de polymorphisme : ad hoc (surcharge), par héritage (redéfinition), et paramétrique (génériques). Chacune permet d’écrire du code plus flexible et réutilisable.</p>
 
 ## Le polymorphisme ad hoc
 
-<p>Le polymorphisme ad hoc est une technique de programmation OO où plusieurs méthodes avec le même nom sont créées, mais possède des paramètres de méthode différents. Nous avons vu le polymorphisme ad hoc dans le cadre du module 2 sous un autre nom: surdéfinition des méthodes. La signature de la méthode est donc différente pour chacune d'elle. Ainsi, c'est la JVM à l'exécution du code qui redirige l'appel vers la bonne méthode de l'objet selon les types ou les objets passés en paramètres. Ce type de polymorphisme, appelé régulièrement polymorphisme overloading, est utile pour concevoir plusieurs mises en oeuvre d'un même algorithme avec des entrées de données de différents types. Par exemple, des méthodes "calculMoyenne" qui pourrait prendre un tableau d'entier ou bien un tableau de double en entrée. Dans d'autres langages que le Java tels que le C++, ce type de polymorphisme est utilisé pour construire des opérateurs pour une classe particulière. Par exemple, redéfinir l'opérateur égal (==) pour comparer deux cercles. Voici un exemple de polymorphisme ad hoc et son utilisation en Java:</p>
+<p>Le polymorphisme ad hoc, aussi appelé surcharge de méthodes (overloading), consiste à définir plusieurs méthodes portant le même nom mais acceptant des paramètres différents (par leur nombre ou leur type). C’est la signature de la méthode qui change. Lorsqu’on appelle la méthode, Java choisit la version appropriée selon les arguments fournis. Par exemple, on peut écrire plusieurs méthodes `calculMoyenne` : l’une prenant un tableau d’entiers, l’autre un tableau de réels. Ce mécanisme permet d’adapter un même nom d’opération à différents types de données, ce qui rend le code plus lisible et modulaire. Dans d’autres langages comme C++, la surcharge permet aussi de redéfinir des opérateurs (par exemple, l’opérateur == pour comparer deux objets).</p>
+
+<p>L’exemple suivant montre trois méthodes `ajouterGradient` dans la classe `MixageCouleur`, chacune acceptant des types de paramètres différents (entiers, flottants, ou un objet Color). Selon le type d’argument passé, la bonne méthode est appelée automatiquement.</p>
 
 
 {{<inlineJava path="MixageCouleur.java" lang="java">}}
@@ -64,7 +64,9 @@ public class MixageCouleur {
 
 ## Le polymorphisme par héritage
 
-<p>Le polymorphisme par héritage est en fait la surcharge de méthode (overriding) que nous avons vu précédemment. Il s'agit donc de re-implémenter une méthode qui a été déclarée dans une classe héritée. Elle peut se faire avec des classes abstraites ou non. Voici un exemple de polymorphisme par héritage :</p>
+<p>Le polymorphisme par héritage, ou redéfinition de méthode (overriding), consiste à réécrire dans une sous-classe une méthode déjà définie dans la classe parente. Cela permet à chaque sous-classe de personnaliser le comportement hérité. Lorsqu’on manipule un objet via une référence de la classe parente, c’est toujours la version la plus spécifique (celle de la sous-classe) qui est exécutée. Ce mécanisme est au cœur de la programmation orientée objet, car il permet d’utiliser des collections d’objets variés de façon uniforme, tout en conservant leur comportement propre.</p>
+
+<p>Dans l’exemple, la classe `CerclePointille` définit une méthode `dessiner` pour tracer un cercle en pointillé. La sous-classe `OvalePointille` redéfinit cette méthode pour dessiner un ovale pointillé. Même si on manipule un `OvalePointille` via une référence de type `CerclePointille`, c’est la méthode redéfinie qui sera appelée.</p>
 
 ```java  {style=github}
 import java.awt.Color;
@@ -249,17 +251,11 @@ public class OvalePointille extends CerclePointille {
 
 <p><a id="intro" name="section3"></a></p>
 
-## Le polymorphisme paramétrique ou les génériques (templates)
+## Le polymorphisme paramétrique (génériques)
 
-<p>Le dernier type de polymorphisme abordé est celui paramétrique. En Java, ce type de paramétrique est en fait l'utilisation de génériques passées en paramètre à des fonctions. Pour ce faire, il est nécessaire d'utiliser la mécanique des templates. Les templates en Java permettent de construire des méthodes ou des classes avec des paramètres indéfinis à la conception et qui sont résolu à l'exécution. Par exemple, nous avons vu au début du cours les structures de type ArrayList. Celle-ci utilise les templates en ne définissant pas dès l'implémentation la classe d'objet pouvant être contenu dans la structure, celle-ci est résolu à l'exécution. Ainsi, il est possible de créer une ArrayList ainsi : ArrayList<String> ou bien ArrayList<Double> ou enfin ArrayList<MaClasse>. Les templates/génériques peuvent être utilisés dans la conception des classes ou bien dans la conception des méthodes (paramètres reçus ou retournés). La forme générale pour l'utilisation d'un générique dans une méthode est la suivante :</p>
+<p>Le polymorphisme paramétrique, ou utilisation de génériques, permet d’écrire des classes ou des méthodes qui fonctionnent avec différents types d’objets, sans dupliquer le code. En Java, cela se fait grâce aux « templates » (génériques). Par exemple, la classe `ArrayList<T>` peut contenir des éléments de n’importe quel type : `ArrayList<String>`, `ArrayList<Double>`, etc. On peut aussi écrire des méthodes génériques, comme une fonction `equals` qui compare deux objets de n’importe quel type. Les génériques rendent le code plus sûr (détection d’erreurs à la compilation) et plus réutilisable.</p>
 
-```java  {style=github}
-public|protected|private static|final <T> valeurDeRetour|void nomDeMethode(T unParametreGenerique)  {
-       //Faire quelque chose avec unParametreGenerique 
-}
-```
-
-<p>Un exemple classique de l'utilisation des templates est avec l'implémentation d'une méthode de comparaison (equals), recevant deux paramètres de classes inconnus :</p>
+<p>L’exemple montre comment déclarer une méthode générique avec `<T>` ou une classe générique avec `<T>`. On peut aussi utiliser plusieurs paramètres génériques si besoin.</p>
 
 ```java  {style=github}
 public class TestGenerique {
@@ -280,8 +276,6 @@ public class TestGenerique {
 }
 ```
 
-<p>Dans cet exemple, le type générique est déclaré en début de méthode (<T>). Celui-ci est en quelques sortes un "Joker" auquel on peut appliquer n'importe quelle classe. Toutefois, il faut faire attention, dans l'exemple précédent, comme tout les objets hérites de la superclasse Object, ceux-ci ont tous la méthode equals. Cela ne peut pas être le cas pour des méthodes spécifiques à des implémentations de classe particulière. Il est également possible d'utiliser deux génériques différents :</p>
-
 ```java  {style=github}
 public class TestGenerique {
     
@@ -300,25 +294,6 @@ public class TestGenerique {
     
 }
 ```
-
-<p>Pour ce qui est de l'utilisation des génériques dans la déclaration d'une classe, il est possible de lier l'instance d'une classe à un générique spécifique. Pour ce faire, il faut nommer le générique dans la déclaration de la classe (juste après le nom de la classe). Il est possible alors dans le corps de la déclaration de la classe d'utiliser le générique. La forme générale est : </p>
-
-```java  {style=github}
-public|protected|private Class NomDeClasse<T> {
-
-      //Un exemple de constructeur
-      public NomDeClasse(T parametre) {
-           //Faire quelque chose
-      }
-
-      public void uneMethode(T parametre) {
-           //Faire quelque chose
-      }
-
-}
-```
-
-<p>Voici un exemple de l'utilisation d'un générique dans l'implémentation d'une classe :</p>
 
 ```java  {style=github}
 public class Chainon<T> {
@@ -391,8 +366,20 @@ public class Chainon<T> {
     ArrayList al = new ArrayList();
     al.add(1);
 ```
-
 <p>Dans un tel cas, Java peut émettre un avertissement à la compilation.</p>
+
+## En résumé
+
+
+Voici les trois formes principales de polymorphisme en Java, avec leur principe et un exemple concret pour chacune.
+
+| Type de polymorphisme         | Description                                                                 | Exemple en Java                                  |
+|------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------|
+| Ad hoc (surcharge)           | Plusieurs méthodes portent le même nom mais ont des paramètres différents.   | `void f(int x)` et `void f(double x)`            |
+| Par héritage (redéfinition)  | Une méthode d’une classe parente est redéfinie dans une sous-classe.         | `@Override void dessiner()` dans une sous-classe  |
+| Paramétrique (génériques)    | Une méthode ou une classe fonctionne avec différents types d’objets.         | `ArrayList<String>`, `public <T> void f(T x)`     |
+
+
 
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
@@ -404,6 +391,9 @@ public class Chainon<T> {
 	<li>Chapitre 21 - Section 3 : Méthode générique</li>
 	<li>Chapitre 21 - Section 5 : Héritage et programmation générique</li>
 </ul>
+
+
+
 
 ## Vidéos
 

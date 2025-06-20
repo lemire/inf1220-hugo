@@ -10,7 +10,7 @@ weight: 5
 
 ## Les méthodes
 
-<p>Dans la plupart des langages de programmation modernes, il est possible de subdiviser le code en plusieurs sections appelées méthodes ou fonctions (le terme méthode est spécifique au langage Java, mais le terme fonction peut-être également utilisé). L'avantage est double, ces méthodes permettent une meilleure lecture du code et permet de généraliser et réutiliser des portions de code fréquent. De plus, en programmation orientée-objet, l'utilisation de méthodes est parfois appelée un passage de message. Ainsi, une classe peut offrir différentes méthodes à l'application qui peuvent être appelées en envoyant à celle-ci un message et des paramètres (ou non). De plus, la bibliothèque de code standard de Java, appelé <em>Application programming interface</em> (API), fournit plusieurs classes utiles telles que des structures de données (ex. ArrayList, Hashmap), des types avancés (ex. les chaînes de caractères String ou StringBuffer), des outils de gestion de flux de données (ex. pour l'écriture et la lecture dans les fichiers (ex. FileReader, FileInputStream). Chacune des classes de l'API offre un ensemble de méthodes pouvant être appelées pour une tâche ou un traitement donné. Voici un exemple d'appel de méthode avec la classe String : </p>
+<p>Dans la plupart des langages de programmation modernes, il est possible de subdiviser le code en plusieurs sections appelées méthodes ou fonctions (le terme méthode est spécifique au langage Java, mais le terme fonction peut-être également utilisé). L'avantage est double, ces méthodes permettent une meilleure lecture du code et permet de généraliser et réutiliser des portions de code fréquent. De plus, en programmation orientée objet, l'utilisation de méthodes est parfois appelée un passage de message. Ainsi, une classe peut offrir différentes méthodes à l'application qui peuvent être appelées en envoyant à celle-ci un message et des paramètres (ou non). De plus, la bibliothèque de code standard de Java, appelé <em>Application programming interface</em> (API), fournit plusieurs classes utiles telles que des structures de données (ex. ArrayList, Hashmap), des types avancés (ex. les chaînes de caractères String ou StringBuffer), des outils de gestion de flux de données (ex. pour l'écriture et la lecture dans les fichiers (ex. FileReader, FileInputStream). Chacune des classes de l'API offre un ensemble de méthodes pouvant être appelées pour une tâche ou un traitement donné. Voici un exemple d'appel de méthode avec la classe String : </p>
 
 {{<inlineJava path="ExempleMethode.java" lang="java" >}}
 public class ExempleMethode {
@@ -276,6 +276,18 @@ public class FusionDonnees {
 {{</inlineJava>}}
 
 
+### Signature d'une méthode
+
+Chaque classe donnée ne peut avoir qu'une seule méthode ayant une certaine signature. La signature d'une méthode est la combinaison du nom de la méthode et de la liste (et l’ordre) des types de ses paramètres. Cela signifie que deux méthodes d’une même classe peuvent porter le même nom, à condition qu’elles aient des paramètres de types ou d’ordre différents : c’est la surcharge de méthodes (overloading). La signature ne tient pas compte du type de retour de la méthode ni des modificateurs d’accès (public, private, etc.).
+
+**Exemple :**
+```java
+void afficher(String message)
+void afficher(int nombre)
+void afficher(String message, int nombre)
+```
+Ici, chaque méthode a une signature différente, même si le nom est identique.
+
 ### Vidéos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IZ8wKErw0_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -302,7 +314,7 @@ public class FusionDonnees {
 ## Les constructeurs
 
 
-<p>Pour les types élémentaires comme int et float, on peut créer une nouvelle instance, une nouvelle valeur directement par assignation: « float x = 1.0f; ». Les autres types (c'est-à-dire les instances de classe) sont définis par une classe Java et doivent être créés avec une fonction particulière appelée <em>constructeur</em>. Ces fonctions prennent le nom de la classe comme nom, ne possèdent pas de type de retour (void ou autre) et peuvent posséder plusieurs paramètres ou aucun. Il est également possible pour une même classe d'avoir plusieurs constructeurs avec des paramètres différents.  Les constructeurs sont appelées par la JVM lors de la création d'une instance d'une classe à l'aide du mot-clé « new ». L'appel du mot-clé « new » retourne une nouvelle instance de la classe créée par l'entremise de l'appel d'un constructeur: par exemple, l'appel « MaClasse x = new MaClasse(1) » pourra appeler le constructeur « public MaClasse(int x) ». Toute instance d'une classe doit avoir été créée par l'appel d'un constructeur. Si une classe ne comprend aucun constructeur explicite, Java va y ajouter un constructeur implicite qui ne prend aucun paramètre. Le constructeur par défaut ne va pas apparaître dans votre code, Java s'en charge. Le constructeur doit initialiser (donner une valeur) aux attributs de la classe. Une fois que le constructeur s'est exécuté, l'instance de classe doit être utilisable. Voici un exemple de constructeurs et leur utilisation :</p>
+<p>Pour les types élémentaires comme int et float, on peut créer une nouvelle instance, une nouvelle valeur directement par assignation: « float x = 1.0f; ». Les autres types (c'est-à-dire les instances de classe) sont définis par une classe Java et doivent être créés avec une fonction particulière appelée <em>constructeur</em>. Ces fonctions prennent le nom de la classe comme nom, ne possèdent pas de type de retour (void ou autre) et peuvent posséder plusieurs paramètres ou aucun. Il est également possible pour une même classe d'avoir plusieurs constructeurs avec des paramètres différents.  Les constructeurs sont appelées lors de la création d'une instance d'une classe à l'aide du mot-clé « new ». L'appel du mot-clé « new » retourne une nouvelle instance de la classe créée par l'entremise de l'appel d'un constructeur: par exemple, l'appel « MaClasse x = new MaClasse(1) » pourra appeler le constructeur « public MaClasse(int x) ». Toute instance d'une classe doit avoir été créée par l'appel d'un constructeur. Si une classe ne comprend aucun constructeur explicite, Java va y ajouter un constructeur implicite qui ne prend aucun paramètre. Le constructeur par défaut ne va pas apparaître dans votre code, Java s'en charge. Le constructeur doit initialiser (donner une valeur) aux attributs de la classe. Une fois que le constructeur s'est exécuté, l'instance de classe doit être utilisable. Voici un exemple de constructeurs et leur utilisation :</p>
 
 
 
@@ -368,7 +380,7 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 
 <p>La réponse est négative. Pour les problèmes simples qui peuvent être résolus avec une, deux ou trois petites fonctions statiques, il n'est souvent pas nécessaire ou souhaitable de créer une classe sur mesure. La règle d'or en programmation est que la solution la plus simple est la préférable.</p>
 
-<p>Le langage de programmation Java est fortement axé sur la programmation orientée-objet, mais cette stratégie de programmation ne doit pas être utilisée plus que nécessaire. Une solution comprenant plusieurs classes sur mesure n'est pas nécessairement meilleure. Plusieurs langages de programmation populaires comme le C, le Rust, le JavaScript conventionnel, le Go, etc. n'ont même pas de notion de classe. Il n'est donc pas nécessaire, quand on programme, de toujours créer des classes sur mesure.</p>
+<p>Le langage de programmation Java est fortement axé sur la programmation orientée objet, mais cette stratégie de programmation ne doit pas être utilisée plus que nécessaire. Une solution comprenant plusieurs classes sur mesure n'est pas nécessairement meilleure. Plusieurs langages de programmation populaires comme le C, le Rust, le JavaScript conventionnel, le Go, etc. n'ont même pas de notion de classe. Il n'est donc pas nécessaire, quand on programme, de toujours créer des classes sur mesure.</p>
 
 <p>Alors pourquoi est-ce qu'on vous demande d'en apprendre autant sur les classes, les constructeurs, etc.? Parce que c'est une technique de programmation répandue et parfois incontournable. En Java, si vous ne comprenez pas les notions de classe, méthode et constructeur, vous ne pourrez pas aller bien loin. Dès que les problèmes deviennent complexes, vous devrez créer des classes.</p>
 
