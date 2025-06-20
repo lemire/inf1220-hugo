@@ -134,3 +134,19 @@ Qui puis-je contacter si j’ai des questions?
 ## Résultat et rétroaction sur l'examen
 
 <p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception).</p>
+
+## Rétroaction sur le cours
+
+N'oubliez pas que nous tenons compte de votre opinion. Si vous avez des critiques
+constructives, [remplissez le formulaire à cet effet]({{< relref "erreurs.md" >}}).
+
+
+
+## Vous avez aimé le cours ?
+
+Si vous avez aimé le cours...
+
+- [Consultez la page professeur](https://www.teluq.ca/siteweb/univ/dlemire.html) et les autres cours qu'il a conçu.
+- Si vous avez un compte sur GitHub, [suivez-y le professeur](https://github.com/lemire). (Bouton  *follow*.)
+- [Laissez une évaluation positive sur la page du manuel chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
+- Parlez-en autour de vous, laissez des remarques positifs en ligne.
