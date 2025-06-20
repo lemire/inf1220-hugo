@@ -27,11 +27,11 @@
 &lt;/h1>
 &lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
 Faisons-en rapidement le tour.&lt;/p>
-&lt;h2 id="les-tableaux-et-matrices">
- Les tableaux et matrices
- &lt;a class="anchor" href="#les-tableaux-et-matrices">#&lt;/a>
+&lt;h2 id="string">
+ String
+ &lt;a class="anchor" href="#string">#&lt;/a>
 &lt;/h2>
-&lt;p>Jusqu'à présent, lorsque nous avons créé une variable, elle ne contenait qu'une seule donnée qui pouvait être une donnée primitive ou une référence vers un objet. En effet, dans la programmation orientée objet, certaines structures ont un nombre fixe d'objets : il s'agit des tableaux. Il en existe deux types : les tableaux à une dimension et les matrices à deux ou trois dimensions.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
  Exercices sur les structures de contrôle, les structures de données, les structures itératives
  &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
 &lt;/h1>
@@ -44,16 +44,20 @@ Faisons-en rapidement le tour.&lt;/p>
  Les exceptions
  &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
 &lt;/h1>
-&lt;h2 id="les-erreursexceptions-en-java">
- Les erreurs/exceptions en Java
- &lt;a class="anchor" href="#les-erreursexceptions-en-java">#&lt;/a>
-&lt;/h2>
-&lt;p>La grande majorité des langages de programmation modernes peuvent générer des fautes à la compilation (par exemple l'oubli d'un ; à la fin d'une ligne de code) et à l'exécution. Dans le langage Java, lorsqu'il y a une faute à l'exécution, une exception ou une erreur particulière est générée par la machine virtuelle Java (JVM) : StackOverflowError, DataFormatException, etc. Il faut distinguer d'abord ce qu'est une exception et une erreur. Une erreur (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/?java/lang/Error.html">Error&lt;/a>) est un événement grave que tout "bon" logiciel ne devrait pas "attraper" (avec le try-catch) et amener la fin de l'exécution du programme. Une exception (les classes dérivées de &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">Exception&lt;/a>) est une faute qui peut être gérée, ou non, par le programme et que l'on peut qualifier de moins grave. 
-&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
  La récursivité
  &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
 &lt;/h1>
-&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
+&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
+ Exercices sur les exceptions et la récursivité
+ &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h2>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
  Recommandations
  &lt;a class="anchor" href="#recommandations">#&lt;/a>
 &lt;/h1>

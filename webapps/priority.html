@@ -1,0 +1,233 @@
+<div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 500px;">
+    <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 16px; text-align: center;">Calculateur de priorité des opérateurs</h1>
+    <div style="margin-bottom: 16px;">
+      <label for="expression" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">Sélectionner ou entrer une expression</label>
+      <select id="expression" style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+        <option value="">Choisir un exemple...</option>
+        <option value="a + b * c">a + b * c</option>
+        <option value="(a + b) * c">(a + b) * c</option>
+        <option value="x - y / z ++">x - y / z ++</option>
+        <option value="x / (y - z)">x / (y - z)</option>
+        <option value="p * q -- + r">p * q -- + r</option>
+        <option value="a % b + c - d">a % b + c - d</option>
+        <option value="x ++ * y / z --">x ++ * y / z --</option>
+        <option value="(A + B) * (C - D) / E">(A + B) * (C - D) / E</option>
+      </select>
+    </div>
+    <div style="margin-bottom: 16px;">
+      <input type="text" id="customExpression" placeholder="Ou taper votre expression" style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+    </div>
+    <button id="calculate" style="width: 100%; background-color: #3b82f6; color: white; padding: 8px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Calculer la priorité</button>
+    <div id="result" style="margin-top: 16px; font-size: 16px; color: #374151;"></div>
+  </div>
+
+  <script>
+    (function() {
+      const OperatorPriority = {
+        priorities: {
+          '++': 4,
+          '--': 4,
+          '*': 3,
+          '/': 3,
+          '%': 3,
+          '+': 2,
+          '-': 2,
+          '(': 0,
+          ')': 0
+        },
+
+        tokenizeExpression(expression) {
+          const tokens = [];
+          const regex = /(\+\+|--|\(|\)|[*%\/+\-])|([a-zA-Z_][a-zA-Z0-9_]*|\d+(\.\d+)?)/g;
+          let match;
+          while ((match = regex.exec(expression)) !== null) {
+            if (match[1]) {
+                tokens.push(match[1]);
+            } else if (match[2]) {
+                tokens.push(match[2]);
+            }
+          }
+          return tokens;
+        },
+
+        getOperations(expression) {
+          if (!expression || typeof expression !== 'string') {
+            return [];
+          }
+
+          const rawTokens = this.tokenizeExpression(expression.replace(/\s+/g, ''));
+          const outputQueue = [];
+          const operatorStack = [];
+
+          for (let i = 0; i < rawTokens.length; i++) {
+            const token = rawTokens[i];
+
+            if (!this.priorities.hasOwnProperty(token)) {
+                outputQueue.push(token);
+            } else if (token === '(') {
+                operatorStack.push(token);
+            } else if (token === ')') {
+                while (operatorStack.length > 0 && operatorStack[operatorStack.length - 1] !== '(') {
+                    outputQueue.push(operatorStack.pop());
+                }
+                if (operatorStack.length === 0 || operatorStack[operatorStack.length - 1] !== '(') {
+                    throw new Error('Mismatched parentheses.');
+                }
+                operatorStack.pop();
+            } else {
+              while (
+                operatorStack.length > 0 &&
+                this.priorities[operatorStack[operatorStack.length - 1]] >= this.priorities[token] &&
+                operatorStack[operatorStack.length - 1] !== '('
+              ) {
+                outputQueue.push(operatorStack.pop());
+              }
+              operatorStack.push(token);
+            }
+          }
+
+          while (operatorStack.length > 0) {
+            const op = operatorStack.pop();
+            if (op === '(' || op === ')') {
+              throw new Error('Mismatched parentheses.');
+            }
+            outputQueue.push(op);
+          }
+
+          const finalOrderedOperations = [];
+          const evaluationStack = [];
+
+          outputQueue.forEach(token => {
+            if (!this.priorities.hasOwnProperty(token)) {
+              evaluationStack.push(token);
+            } else {
+              const operator = token;
+              const priority = this.priorities[operator];
+              let operands = [];
+              let replacement = '';
+              let type = 'binary';
+
+              if (operator === '++' || operator === '--') {
+                type = 'unary';
+                if (evaluationStack.length < 1) {
+                    throw new Error(`Insufficient operands for unary operator '${operator}'.`);
+                }
+                const operand = evaluationStack.pop();
+                operands.push(operand);
+                replacement = `(${operand}${operator})`;
+              } else {
+                if (evaluationStack.length < 2) {
+                    throw new Error(`Insufficient operands for binary operator '${operator}'.`);
+                }
+                const operand2 = evaluationStack.pop();
+                const operand1 = evaluationStack.pop();
+                operands.push(operand1, operand2);
+                replacement = `(${operand1} ${operator} ${operand2})`;
+              }
+
+              evaluationStack.push(replacement);
+              const currentVisualExpression = evaluationStack.join(' ');
+
+              finalOrderedOperations.push({
+                operator: operator,
+                priority: priority,
+                operands: operands,
+                expressionState: currentVisualExpression,
+                type: type
+              });
+            }
+          });
+          return finalOrderedOperations;
+        },
+
+        calculatePriority(expression) {
+          if (!expression || !expression.trim()) {
+            return '<div style="color: #dc2626;">Erreur : veuillez entrer une expression valide.</div>';
+          }
+
+          let operations;
+          try {
+            operations = this.getOperations(expression);
+          } catch (e) {
+            return `<div style="color: #dc2626;">Erreur de l'expression : ${e.message}</div>`;
+          }
+
+          if (operations.length === 0) {
+            return 'Aucun opérateur trouvé ou l\'expression est déjà simplifiée.';
+          }
+
+          let resultHtml = '<h2 style="font-size: 20px; font-weight: bold; margin-bottom: 12px;">Ordre de priorité des opérations :</h2>';
+          operations.forEach((op, index) => {
+            const priority = op.priority || 'Inconnue';
+            let operandsText = '';
+            if (op.type === 'unary') {
+                operandsText = `Opérande: '${op.operands[0]}'`;
+            } else if (op.type === 'binary') {
+                operandsText = `Opérandes: '${op.operands[0]}' et '${op.operands[1]}'`;
+            } else {
+                operandsText = 'Opérandes: Non spécifié';
+            }
+
+            resultHtml += `
+              <div id="op-${index}" style="opacity: 0; transition: opacity 0.5s ease, background-color 0.5s ease; background-color: #e5e7eb; padding: 8px; margin: 8px 0; border-radius: 4px;">
+                <strong style="color: #1f2937;">Étape ${index + 1}:</strong> Effectuer l'opération <span style="color: #1d4ed8;">'${op.operator}'</span> (Priorité: ${priority}) <br>
+                ${operandsText} <br>
+                État actuel de l'expression: <code>${op.expressionState}</code>
+              </div>
+            `;
+          });
+          return resultHtml;
+        },
+
+        animateOperators(count) {
+          for (let i = 0; i < count; i++) {
+            setTimeout(() => {
+              const opDiv = document.getElementById(`op-${i}`);
+              if (opDiv) {
+                opDiv.style.opacity = '1';
+                opDiv.style.backgroundColor = '#bfdbfe';
+                setTimeout(() => {
+                  opDiv.style.backgroundColor = '#e5e7eb';
+                }, 1000);
+              }
+            }, i * 1500);
+          }
+        },
+
+        init() {
+          const select = document.getElementById('expression');
+          const input = document.getElementById('customExpression');
+          const button = document.getElementById('calculate');
+          const resultDiv = document.getElementById('result');
+
+          if (!select || !input || !button || !resultDiv) {
+            console.error('Erreur : un ou plusieurs éléments DOM sont manquants.');
+            resultDiv.innerHTML = '<div style="color: #dc2626;">Erreur : échec de l\'initialisation de l\'application.</div>';
+            return;
+          }
+
+          select.addEventListener('change', () => {
+            input.value = select.value;
+            resultDiv.innerHTML = '';
+          });
+
+          button.addEventListener('click', () => {
+            const expression = input.value.trim() || select.value.trim();
+            resultDiv.innerHTML = this.calculatePriority(expression);
+            const operations = this.getOperations(expression);
+            this.animateOperators(operations.length);
+          });
+
+          if (select.value) {
+            input.value = select.value;
+          }
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => OperatorPriority.init());
+      } else {
+        OperatorPriority.init();
+      }
+    })();
+  </script>
