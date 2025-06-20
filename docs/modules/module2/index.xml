@@ -2,7 +2,17 @@
  Préparation de l&amp;rsquo;espace de travail
  &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail">#&lt;/a>
 &lt;/h1>
-&lt;p>Comme langage de support à l'introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l'introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d'instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d'exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d'exploitation et aux processeurs spécifiques de l'ordinateur.&lt;/p></description></item><item><title>Langage de programmation orientée objet</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="langage-de-programmation-orientée-objet">
+&lt;p>Comme langage de support à l'introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l'introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d'instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d'exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d'exploitation et aux processeurs spécifiques de l'ordinateur.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+ Java pas à pas
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
+&lt;/h1>
+&lt;p>Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p>
+&lt;ul>
+&lt;li>Chapitre 2. Introduction à la programmation Java&lt;/li>
+&lt;li>Chapitre 4. Types et expressions Java&lt;/li>
+&lt;/ul>
+&lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Langage de programmation orientée objet</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="langage-de-programmation-orientée-objet">
  Langage de programmation orientée objet
  &lt;a class="anchor" href="#langage-de-programmation-orient%c3%a9e-objet">#&lt;/a>
 &lt;/h1>
