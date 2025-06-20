@@ -197,7 +197,7 @@ public class Sudoku extends Jeu {
 ```
 
 <p style="text-align: justify;">Dans l'exemple ci-dessus, les méthodes <em>getnomdujeu</em> et <em>setnomdujeu</em> sont déclarées <em>protected</em> et donc visibles </p> 
-<p style="text-align: justify;">à la sous-classe SUDOKU. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
+<p style="text-align: justify;">à la sous-classe Sudoku. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
 <p style="text-align: justify;"> </p> 
 
 ## Utilisation des mots clés this et super dans une sous-classe
@@ -272,12 +272,12 @@ public class Sudoku extends Jeu {
 ```
 
 <p dir="ltr" style="text-align: justify;">Après l'exécution de ce programme, nous aurons :</p> 
-<p>je joue au SUDOKU :</p> 
+<p>je joue au Sudoku :</p> 
 <p>Niveau expert</p> 
 <p>Ainsi, avec le mot clé <em>super</em>, nous appelons la méthode choixdejeu de la classe de base. Nous pouvons aussi utiliser ce mot clé dans un constructeur.</p> 
 
 ## Constructeur d'une classe héritée
-Le constructeur de la classe dérivée (ou héritée) fait appel au constructeur de la superclasse au moment de la création d'un objet. (Le SUDOKU est avant tout un jeu.) Cet appel au constructeur de la superclasse peut être implicite ou explicite. Dans ce dernier cas, le constructeur de la classe héritée exécutera la première instruction.
+Le constructeur de la classe dérivée (ou héritée) fait appel au constructeur de la superclasse au moment de la création d'un objet. (Le Sudoku est avant tout un jeu.) Cet appel au constructeur de la superclasse peut être implicite ou explicite. Dans ce dernier cas, le constructeur de la classe héritée exécutera la première instruction.
 
 ```java  {style=github}
 class Jeu {
