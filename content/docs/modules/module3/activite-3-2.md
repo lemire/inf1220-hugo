@@ -206,4 +206,4 @@ public class Main {
 
 ### Vidéo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oHOXE9h3t_A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="oHOXE9h3t_A" >}}
