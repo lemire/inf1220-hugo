@@ -35,26 +35,38 @@ Daniel Lemire est professeur d'informatique à l'Université du Québec (TELUQ).
 
 ### NodeConf EU 2023
 
-<p><iframe src="https://www.youtube.com/embed/tQ-6OWRDsZg" frameborder="0" width="560" height="315"></iframe></p>
+{{< youtube id="tQ-6OWRDsZg" >}}
+
 
 ### BID 2023
 
-<p><iframe src="https://www.youtube.com/embed/BFISG3LY9UQ" frameborder="0" width="560" height="315"></iframe></p>
+
+{{< youtube id="BFISG3LY9UQ" >}}
+
 
 ### SPIRE 2021
 
-<p><iframe src="https://www.youtube.com/embed/wBBbAKGaId4" frameborder="0" width="560" height="315"></iframe></p>
+{{< youtube id="wBBbAKGaId4" >}}
+
 
 
 ### Go Systems (San Francisco, 2020)
 
-<p><iframe src="https://www.youtube.com/embed/AVXgvlMeIm4" frameborder="0" width="560" height="315"></iframe></p>
+{{< youtube id="AVXgvlMeIm4" >}}
+
+
 
 ### Performance Summmit III (Seattle, 2020)
-<p><iframe src="https://www.youtube.com/embed/p6X8BGSrR9w" frameborder="0" width="560" height="315"></iframe></p>
+
+{{< youtube id="p6X8BGSrR9w" >}}
+
 
 ### QCon San Francisco 2019 (la conférence la plus appréciée par les participants)
-<p><iframe src="https://www.youtube.com/embed/wlvKAT7SZIQ" frameborder="0" width="560" height="315"></iframe></p>
+
+{{< youtube id="wlvKAT7SZIQ" >}}
+
 
 ### Spark Summit East 2017
-<p><iframe src="https://www.youtube.com/embed/ubykHUyNi_0" frameborder="0" width="560" height="315"></iframe></p>
+
+{{< youtube id="ubykHUyNi_0" >}}
+

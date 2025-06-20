@@ -50,7 +50,8 @@ public class Bienvenue {
 
 <p>Si vous utilisez Windows, vous pouvez suivre cette vidéo&nbsp;:</p>
 
-<iframe width="672" height="378" src="https://www.youtube.com/embed/1ttHH5MlNug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="1ttHH5MlNug" >}}
+
 
 #### Compilation
 
@@ -94,16 +95,20 @@ public class Bienvenue {
 <p>Vous pouvez aussi utiliser repl.it. Dans ce cas, il suffit d'aller en ligne et d'utiliser l'interface graphique.</p>
 <p>En général, vous pouvez créez vos propres programmes sur repl.it. Repl.it est une plateforme en ligne pour écrire et tester du code Java sans installation. Cliquez sur les liens Repl.it du cours pour ouvrir les projets Java. </p>
 
-<p>Voici un exemple pertinent déjà en place:</p>
+<p>Voici un exemple pertinent déjà en place.</p>
 <iframe height="800px" width="100%" src="https://repl.it/@lemire/b1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
 
 <p>Si vous utilisez <tt>repl.it</tt>, vous devez tenir compte que la classe contenant la fonction exécutable (<tt>main</tt>) doit être nommée <tt>Main</tt>, mais c'est un détail technique spécifique à <tt>repl.it</tt> qui ne change pas la nature de l'exercice.</p>
 
 ## Vidéo suggérée
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8nXAvKzqbw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<p><a id="intro" name="avecideone"></a></p>
+{{< youtube id="8nXAvKzqbw0" >}}
+
+
+
 
 # Création d'une classe avec ideone.com 
 
@@ -115,7 +120,11 @@ public class Bienvenue {
 
 <p>Si vous avez installé l'IDE IntelliJ IDEA lors de l'activité précédente, vous pouvez maintenant l'utiliser pour écrire et exécuter du code Java.</p>
 
-<iframe width="728" height="410" src="https://www.youtube.com/embed/snX2j1HaOhc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+{{< youtube id="snX2j1HaOhc" >}}
+
+
 
 <p>Après avoir lancé IntelliJ IDEA, suivez les consignes suivantes:</p>
 <ol>
@@ -135,9 +144,11 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 ### Vidéo suggérée
 
-<p>(YouTube offre des sous-titres en français.)
+(YouTube offre des sous-titres en français.)
 
-<iframe width="728" height="410" src="https://www.youtube.com/embed/vaa5gAi9Wko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="vaa5gAi9Wko" >}}
+
+
 
 <p>L'approche est essentiellement la même pour les autres IDE comme Eclipse et NetBeans. On créé un projet, on écrit son code, et on exécute. Tous les IDE peuvent vous aider à identifier vos erreurs de syntaxe.</p>
 
@@ -162,7 +173,9 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 ### Vidéo suggérée
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5j5z9BJCAW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{{< youtube id="5j5z9BJCAW8" >}}
+
 
 
 ### Lecture optionnelle dans le livre de référence (Delannoy) (optionnel)
@@ -171,7 +184,7 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 ## Vidéos suggérées
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_l4pJ7HCrl4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="_l4pJ7HCrl4" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cvpkw2ZN4Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="cvpkw2ZN4Ps" >}}
 

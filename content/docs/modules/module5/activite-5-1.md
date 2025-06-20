@@ -716,13 +716,12 @@ Dans cet exemple, on crée un Comparator anonyme directement dans l’appel à C
 
 ## Vidéos
 
+{{< youtube id="8TSVW7SV0KA" >}}
 
+{{< youtube id="dd0_nYhtaKQ" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8TSVW7SV0KA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="M0hkhOoOIHg" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dd0_nYhtaKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M0hkhOoOIHg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <ol>
 <li><a href="https://www.youtube.com/playlist?list=PLZbs1ERZ-TGVouVQxf5QAsocS1awCi6d3">Il y a une liste de vidéos sur l'héritage par Sam et al.</a> </li>

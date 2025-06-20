@@ -141,4 +141,6 @@ Vous devez absolument être capable de faire de telles exécutions. Dans certain
 
 ## Vidéo suggérée
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kk6YbA5I-Iw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+{{< youtube id="kk6YbA5I" >}}

@@ -562,6 +562,8 @@ Une complexité en \( O(n \log n) \) signifie que le nombre d’opérations cro�
 </details>
 
 
-Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme celles de Loïc & Julien ([voir ici](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ)) ou d’autres auteurs.
+Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
 
-Certains étudiants utilisent des logiciels comme AlgoBox ([voir ici](https://www.xm1math.net/algobox/)). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outils. C’est l’essence du pseudo-code : il est indépendant des syntaxes et des outils.
+
+
+Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outils. C’est l’essence du pseudo-code : il est indépendant des syntaxes et des outils.

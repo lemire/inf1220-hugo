@@ -289,14 +289,13 @@ Ici, chaque méthode a une signature différente, même si le nom est identique.
 
 ### Vidéos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IZ8wKErw0_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="IZ8wKErw0_Y" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/48wGbUfFtfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="48wGbUfFtfM" >}}
 
+{{< youtube id="FkB7N0w81Dk" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FkB7N0w81Dk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zM_Qf07fEyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="zM_Qf07fEyc" >}}
 
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
@@ -388,7 +387,9 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 ### Vidéos
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cGpJ0o9z5GQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="cGpJ0o9z5GQ" >}}
+
+
 
 <ol>
 <li><a href="https://www.youtube.com/playlist?list=PLZbs1ERZ-TGWeJa5CqDPpNNmLhsIFEmkl">Il y a une liste de vidéos sur le sujet des constructeurs par Sam et al.</a></li>

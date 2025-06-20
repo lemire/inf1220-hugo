@@ -38,8 +38,10 @@ des instructions.
 
 <p>Ces outils en ligne vous permettent de saisir votre code, dans le navigateur, et de l'exécuter par la suite. Vous pouvez faire une grande partie du cours en utilisant seulement un outil comme <a href="https://repl.it">repl.it</a>. En effet, le cours se concentre principalement sur la programmation de base. Les outils d'aide à la programmation sont moins importants. Nous ne ferons pas de grands projets dans ce cours qui nécessitent beaucoup de gestion de code.</p>
 
-<p>La vidéo suivante illustre l'utilisation de <a href="https://repl.it">repl.it</a> (il n'est pas nécessaire d'écouter la narration en anglais pour comprendre): </p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kMqNSZPjBOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>La vidéo suivante illustre l'utilisation de <a href="https://repl.it">repl.it</a> (il n'est pas nécessaire d'écouter la narration en anglais pour comprendre). </p>
+
+{{< youtube id="kMqNSZPjBOY" >}}
+
 
 
 <p>Truc: Avec repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme « javac Main.java » et « java Main ».</p>
@@ -65,8 +67,9 @@ des instructions.
 
 #### Système d'exploitation Microsoft Windows :
 
-<p>Je vous suggère d'installer le JDK à partir du site https://adoptium.net/. La vidéo suivante illustre comment y arriver sous Windows en moins de deux minutes: </p>
-<iframe width="672" height="378" src="https://www.youtube.com/embed/Tk6u3Wm___s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Je vous suggère d'installer le JDK à partir du site https://adoptium.net/. La vidéo suivante illustre comment y arriver sous Windows en moins de deux minutes. </p>
+
+{{< youtube id="Tk6u3Wm___s" >}}
 
 
 <ol>

@@ -741,12 +741,14 @@ En résumé, le choix de la structure de données influence fortement la perform
 
 ## Vidéos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VdvUYGs17Ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="VdvUYGs17Ek" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wvQQ5263pvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="wvQQ5263pvI" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EphmNLfZ2hM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="EphmNLfZ2hM" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ov3d4s5w_m0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="ov3d4s5w_m0" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eXYLsxQvIF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="eXYLsxQvIF4" >}}
+
+

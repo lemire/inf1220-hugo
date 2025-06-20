@@ -23,7 +23,8 @@ weight: 3
 
 <p>Si vous devez compiler des classes Java sur votre PC, faites les choses simplement. Essayez d'utiliser les outils les plus élémentaires. Concentrez-vous sur le Java, et non pas sur les environnements et les outils. Une erreur fréquente des débutants est de perdre beaucoup de temps au sein de systèmes qu'ils ne maîtrisent pas à essayer de programmer dans un langage qu'ils ne maîtrisent pas. Il y faut y aller pas à pas.</p>
 
-<iframe width="672" height="378" src="https://www.youtube.com/embed/1ttHH5MlNug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="1ttHH5MlNug" >}}
+
 
 ## Les variables et les types
 
@@ -207,9 +208,10 @@ Le standard IEEE 754 gère également des cas spéciaux comme l'**infini**, les 
 
 ### Vidéos suggérées
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SvPGiy5UXRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mtizhxkB-Zw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="SvPGiy5UXRI" >}}
+
+{{< youtube id="mtizhxkB-Zw" >}}
 
 ### La déclaration d'une variable dans une fonction.
 
@@ -314,7 +316,7 @@ public class Main {
 
 ## Exemple
 
-Assurez-vous de bien comprendre cet exemple:
+Assurez-vous de bien comprendre cet exemple.
 
 {{<inlineJava path="Main.java" lang="java">}}
 public class Main {

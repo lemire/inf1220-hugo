@@ -152,19 +152,16 @@ public class ExempleRecursivite {
 {{</inlineJava>}}
 
 
-### Lecture optionnelle dans le livre de référence (Delannoy)
+## Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur la récursivité (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 6:</p>
 <ul>
 	<li>Section 10 : La récursivité des méthodes</li>
 </ul>
 
-### Vidéos
+## Vidéos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o0sfEUuqy40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="o0sfEUuqy40" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dfLPh1oWJNg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="dfLPh1oWJNg" >}}
 
----
-
-Ce format respecte vos instructions : conversion des sections contenant des éléments HTML en Markdown avec ```java, préservation du contenu non-codé, et application d'un style français impeccable avec des majuscules limitées et une utilisation minimale de listes ou de gras.

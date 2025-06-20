@@ -105,10 +105,12 @@ FIN TANT QUE
 
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em> ».</p>
 
+{{< youtube id="4jReEOCImds" >}}
+
+
 {{% /hint %}}
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4jReEOCImds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>Notez: le cours comprend plusieurs liens vers des vidéos et autres ressources externes. Ces ressources sont toujours optionnelles.</p>
 

@@ -176,6 +176,6 @@ Observez le mot-clé `yield` utilisé dans les expressions switch  pour spécifi
 
 ### Vidéos suggérées
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0rANfWRfc_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="0rANfWRfc_c" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ws0JqA7bPN0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="ws0JqA7bPN0" >}}

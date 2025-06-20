@@ -151,6 +151,6 @@ public class ExempleTryCatch {
 <p>Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.</p>
 </ul>
 
-### Vidéos
+### Vidéo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UEISfoJaOyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="UEISfoJaOyk" >}}

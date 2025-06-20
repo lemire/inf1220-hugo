@@ -63,7 +63,7 @@ Le pseudo-code permet aux programmeurs de planifier la logique avant de la tradu
 
 En résumé, un algorithme est une méthode pour résoudre un problème, tandis que le pseudo-code est un outil pour exprimer cet algorithme de manière claire et universelle. Ces deux concepts sont essentiels pour concevoir des solutions informatiques efficaces.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1ANpkDxJHo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="1ANpkDxJHo4" >}}
 
 ### Terminologie de base
 
@@ -72,11 +72,13 @@ Un algorithme prend habituellement des données et produit un résultat.  Par ex
 La plupart des algorithmes en pratique sont itératifs. Une itération est la répétition d'un processus. Si vous devez teindre une clôture, vous allez peut-être teindre chaque planche une à une. Nous dirons alors que vous itérez sur les planches. Mais comment saurez-vous où vous êtes rendu si vous prenez une pause? Peut-être pourrez-vous poser un petit drapeau sur la planche que vous êtes en train de teindre. On dira alors que le drapeau est un itérateur, c'est-à-dire un indicateur de votre progrès dans votre itération. À chaque étape où vous déplacez le drapeau d'une planche à l'autre, nous pourrons dire que vous incrémentez la position du drapeau. Si jamais vous deviez faire un retour à la planche précédente, nous dirons que vous décrémentez le drapeau.
 En informatique, nous n'utilisons pas de drapeaux physiques. Pour savoir où on est rendu, on utilise des compteurs, le plus souvent des valeurs entières. Quand on dit qu'on incrémente un entier, on veut généralement dire qu'on ajoute "1" à sa valeur.
 
-Nous obtenons alors la notion de boucle: nous effectuons une tâche donnée tant qu'une condition n'est pas satisfaite. Cette vidéo présente le concept de boucle:
+Nous obtenons alors la notion de boucle: nous effectuons une tâche donnée tant qu'une condition n'est pas satisfaite. Cette vidéo présente le concept de boucle.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HMlQEc6uPGU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-En informatique on fait souvent référence à la notion d'impression à l'écran. Le plus souvent cela fait référence à l'affichage à l'écran d'un message ou d'un texte.
+{{< youtube id="HMlQEc6uPGU" >}}
+
+
+En informatique, on fait souvent référence à la notion d'impression à l'écran. Le plus souvent cela fait référence à l'affichage à l'écran d'un message ou d'un texte.
 
 ### Calcul de la moyenne
 

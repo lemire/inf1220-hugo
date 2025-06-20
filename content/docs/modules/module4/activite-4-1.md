@@ -73,13 +73,15 @@ char[] motDePasse = uneConsole.readPassword("Mot de Passe: "); // le mot de pass
 
 <h2>Vidéos</h2>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fa84_nrUrMw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="fa84_nrUrMw" >}}
+
 
 <h2>Recevoir des arguments en ligne de commande</h2>
 
 <p>La méthode main en Java reçoit un tableau de String. Ainsi donc, si on lance un programme Java en ligne de commande (<tt>java MonProgramme arg1 arg2</tt>), la fonction main recevra les chaînes de caractère arg1 et arg2. Vous pouvez regarder la vidéo suivante pour en apprendre davantage sur ce mécanisme si vous le souhaitez.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BzFx1dszk4I?start=165" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="BzFx1dszk4I" >}}
+
 
 <p>Si vous utilisez repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme « javac Main.java » et « java Main arg1 arg2 ».</p>
 

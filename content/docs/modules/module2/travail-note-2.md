@@ -44,14 +44,22 @@ Le nom des méthodes aire et perimetre peut être différent si vous le souhaite
 
 <p>Attention: Vous devez remettre votre travail sous la forme d'un document PDF, et non comme un ensemble de fichiers Java. Pour faciliter la correction, assurez-vous qu'on puisse copier-coller du texte à partir du document PDF. N'utilisez pas des saisies d'écran.</p>
 
-<p>Vidéo suggérée concernant le calcul de l'aire et du périmètre : </p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/z9fvSc93azg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p>Vidéo suggérée concernant les classes et méthodes : </p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NXo2Pc1t2so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 {{% hint info %}}
+
+<p>Vidéo suggérée concernant le calcul de l'aire et du périmètre.</p>
+
+
+{{< youtube id="z9fvSc93azg" >}}
+
+
+
+<p>Vidéo suggérée concernant les classes et méthodes.</p>
+
+{{< youtube id="NXo2Pc1t2so" >}}
+
+
 
 <p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em> ».</p>
 
@@ -90,10 +98,10 @@ class Main {
 
 <p>Indice 3 : Essayez différentes valeurs pour voir ce qui se produit.</p>
 
+{{< youtube id="Gi-LtqUTfFo" >}}
+
 {{% /hint %}}
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gi-LtqUTfFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
