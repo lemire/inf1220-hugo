@@ -13,14 +13,33 @@ Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, 
 
 Tous ces langages partagent un objectif commun : permettre aux programmeurs de décrire des solutions à des problèmes en s’éloignant progressivement des contraintes du matériel. Pour comprendre leur rôle, il est essentiel de se pencher sur le fonctionnement des ordinateurs.
 
+## Programmation orientée objet
+
+La programmation orientée objet trouve ses origines dans les années 1960 avec le langage Simula, développé en Norvège par Ole-Johan Dahl et Kristen Nygaard. Simula introduit les concepts de classes et d’objets pour modéliser des entités du monde réel, ouvrant la voie à une nouvelle façon de structurer les programmes.
+
+Dans les années 1980, le langage Smalltalk, conçu par Alan Kay et son équipe chez Xerox PARC, popularise la programmation orientée objet en mettant l’accent sur l’interaction entre objets, l’héritage et le message passing. Smalltalk influence profondément la conception des langages modernes.
+
+Alan Kay a conçu le langage Smalltalk avec son équipe chez Xerox PARC dans les années 1970 pour explorer de nouvelles façons de rendre l’informatique plus accessible, flexible et intuitive. Sa motivation principale était de créer un environnement où les utilisateurs, y compris les enfants, pourraient manipuler des objets graphiques et apprendre à programmer de manière interactive. Il voulait que l’ordinateur devienne un « média personnel », aussi malléable qu’un carnet de notes, permettant l’expérimentation, la simulation et la construction de connaissances.
+
+Smalltalk a été pensé comme un outil pédagogique, inspiré par les idées de Seymour Papert sur l’apprentissage par la manipulation et la découverte. Alan Kay cherchait à démocratiser la programmation et à rendre le logiciel aussi modulaire et réutilisable que les objets du monde réel, d’où l’accent mis sur les objets, les messages et l’interactivité.
+
+La programmation orientée objet se diffuse ensuite dans de nombreux langages : C++ (1983) ajoute l’orienté objet au C, Java (1995) en fait un pilier de sa conception, Python, Ruby, C#, et bien d’autres adoptent ou s’inspirent de ces principes. La programmation orientée objet devient le paradigme dominant dans l’industrie logicielle, car on croit qu'elle facilite la modularité, la réutilisation et la maintenance du code.
+
+Aujourd’hui, la programmation orientée objet est enseignée dans la plupart des cursus en informatique et reste au cœur du développement de logiciels complexes, bien qu’elle coexiste avec d’autres paradigmes (fonctionnel, procédural, etc.) dans les langages modernes.
+
+Notre façon de programmer continuer d'évoluer. Aujourd'hui, plusieurs des idées fortes de la méthode orientée objet (comme l'héritage) sont vues comme parfois trop contraignantes. Néanmoins, les langages populaires comme Python, C#, Java, etc. relèvent de l'orienté objet.
 
 ## Java
 
-L’idée de programmer des machines remonte au 19e siècle, époque marquée par l’émergence des premières machines de calcul et d’automatisation. Dès 1801, les métiers à tisser Jacquard utilisaient des cartes perforées pour programmer des motifs textiles, préfigurant les concepts de codage. Cependant, c’est au milieu du 19e siècle qu’un jalon historique est posé avec les travaux d’Ada Lovelace (1815-1852) sur la machine analytique de Charles Babbage. Considérée comme la première programmeuse, elle rédigea des notes détaillées incluant un algorithme pour calculer les nombres de Bernoulli, démontrant qu’une machine pouvait exécuter des instructions complexes. Le langage Ada, créé dans les années 1980, rend hommage à cette contribution pionnière.
+Java a été créé au début des années 1990 par James Gosling et son équipe chez Sun Microsystems. Le projet, initialement nommé « Oak », visait à développer un langage portable pour les appareils électroniques embarqués. En 1995, le langage est officiellement lancé sous le nom de Java, avec la promesse « écrire une fois, exécuter partout » (Write Once, Run Anywhere), grâce à la machine virtuelle Java (JVM) qui permet d’exécuter le même code sur différentes plateformes.
 
-L’avènement des ordinateurs modernes dans les années 1940-1950 marque un tournant décisif. Les premiers langages de programmation apparaissent pour répondre aux besoins de calcul scientifique, commercial et logique. Parmi eux, FORTRAN (1954) facilite les calculs scientifiques, LISP (1958) introduit des concepts d’intelligence artificielle et de traitement symbolique, et COBOL (1959) s’impose dans la gestion des données commerciales. Ces langages, bien que rudimentaires comparés aux standards actuels, posent les bases des paradigmes de programmation modernes.
 
-Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, de flexibilité et d’accessibilité. Dans les années 1980 et 1990, des langages comme C++ (1983), Python (1991), Java (1995), JavaScript (1995) et PHP (1995) voient le jour, chacun répondant à des besoins spécifiques : performance pour C++, simplicité pour Python, portabilité pour Java, interactivité web pour JavaScript, ou développement web dynamique pour PHP. Aujourd’hui, ces langages dominent l’industrie, comme le montre le classement 2017 de l’IEEE Spectrum, qui reflète leur popularité et leur polyvalence.
+
+Java connaît un succès rapide, d’abord dans le développement d’applets pour le web, puis dans les applications d’entreprise avec la plateforme Java EE. Au fil des années, Java s’impose comme un standard pour le développement de logiciels robustes, portables et sécurisés, aussi bien côté serveur (applications web, systèmes bancaires, etc.) que côté client (applications de bureau, Android).
+
+Le langage évolue régulièrement : Java 5 introduit les génériques et les annotations, Java 8 apporte les expressions lambda et l’API Stream, Java 9 les modules, et les versions récentes (Java 17, 21…) continuent d’ajouter des fonctionnalités modernes (pattern matching, records, virtual threads…).
+
+En 2010, Oracle rachète Sun Microsystems et devient le principal responsable du développement de Java. Aujourd’hui, Java reste l’un des langages les plus utilisés au monde, soutenu par une vaste communauté et de nombreux outils open source. Il est omniprésent dans l’industrie, l’enseignement, le développement mobile (Android), le cloud et l’Internet des objets.
 
 
 
@@ -55,6 +74,11 @@ Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, 
 | Java SE 26 | Optimisations Leyden       | 2026             |
 
 
+Vidéo (optionnelle)&nbsp;:
+
+{{< youtube id="IT__Nrr3PNI" >}}
+
+
 ## Résumé de l’architecture des ordinateurs et de l’abstraction des langages
 
 
@@ -72,37 +96,37 @@ Dans ce cours, nous explorerons le langage Java, largement adopté dans l’indu
 
 ## Unités de mesures
 
-Les ordinateurs et leurs composants sont caractérisés par différentes unités de mesure :
+Les ordinateurs et leurs composants sont caractérisés par différentes unités de mesure :
 
 ### Fréquence (vitesse du processeur)
-- **Hertz (Hz)** : unité de fréquence, correspond à un cycle par seconde.
-- **Kilohertz (kHz)** : 1 000 Hz.
-- **Mégahertz (MHz)** : 1 000 000 Hz (un million de cycles/seconde).
-- **Gigahertz (GHz)** : 1 000 000 000 Hz (un milliard de cycles/seconde).
+- **Hertz (Hz)** : unité de fréquence, correspond à un cycle par seconde.
+- **Kilohertz (kHz)** : 1 000 Hz.
+- **Mégahertz (MHz)** : 1 000 000 Hz (un million de cycles/seconde).
+- **Gigahertz (GHz)** : 1 000 000 000 Hz (un milliard de cycles/seconde).
 
-La fréquence d’un processeur (ex : 3,2 GHz) indique combien d’opérations il peut effectuer par seconde.
+La fréquence d’un processeur (ex : 3,2 GHz) indique combien d’opérations il peut effectuer par seconde.
 
 ### Temps
-- **Seconde (s)** : unité de base du temps.
-- **Milliseconde (ms)** : 1/1 000 de seconde (\(10^{-3}\) s).
-- **Microseconde (µs)** : 1/1 000 000 de seconde (\(10^{-6}\) s).
-- **Nanoseconde (ns)** : 1/1 000 000 000 de seconde (\(10^{-9}\) s).
+- **Seconde (s)** : unité de base du temps.
+- **Milliseconde (ms)** : 1/1 000 de seconde (\(10^{-3}\) s).
+- **Microseconde (µs)** : 1/1 000 000 de seconde (\(10^{-6}\) s).
+- **Nanoseconde (ns)** : 1/1 000 000 000 de seconde (\(10^{-9}\) s).
 
 Les temps d’accès à la mémoire ou d’exécution d’instructions sont souvent mesurés en nanosecondes ou microsecondes.
 
 ### Stockage et mémoire
-- **Octet (B)** : unité de base, correspond à 8 bits.
-- **Kilooctet (ko)** : 1 000 octets (notation décimale, SI).
-- **Mégaoctet (Mo)** : 1 000 000 octets.
-- **Gigaoctet (Go)** : 1 000 000 000 octets.
-- **Téraoctet (To)** : 1 000 000 000 000 octets.
+- **Octet (B)** : unité de base, correspond à 8 bits.
+- **Kilooctet (ko)** : 1 000 octets (notation décimale, SI).
+- **Mégaoctet (Mo)** : 1 000 000 octets.
+- **Gigaoctet (Go)** : 1 000 000 000 octets.
+- **Téraoctet (To)** : 1 000 000 000 000 octets.
 
 #### Préfixes binaires (norme IEC)
-- **Kibioctet (Kio)** : 1 024 octets (\(2^{10}\)).
-- **Mebioctet (Mio)** : 1 048 576 octets (\(2^{20}\)).
-- **Gibioctet (Gio)** : 1 073 741 824 octets (\(2^{30}\)).
+- **Kibioctet (Kio)** : 1 024 octets (\(2^{10}\)).
+- **Mebioctet (Mio)** : 1 048 576 octets (\(2^{20}\)).
+- **Gibioctet (Gio)** : 1 073 741 824 octets (\(2^{30}\)).
 
-> **Remarque :** Les systèmes d’exploitation et les fabricants utilisent parfois les préfixes kilo, méga, giga pour désigner soit des puissances de 10 (décimal), soit des puissances de 2 (binaire). Par exemple, 1 Go peut désigner 1 000 000 000 octets (décimal) ou 1 073 741 824 octets (binaire). Les préfixes Kio, Mio, Gio sont utilisés pour lever cette ambiguïté.
+> **Remarque :** Les systèmes d’exploitation et les fabricants utilisent parfois les préfixes kilo, méga, giga pour désigner soit des puissances de 10 (décimal), soit des puissances de 2 (binaire). Par exemple, 1 Go peut désigner 1 000 000 000 octets (décimal) ou 1 073 741 824 octets (binaire). Les préfixes Kio, Mio, Gio sont utilisés pour lever cette ambiguïté.
 
 Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 

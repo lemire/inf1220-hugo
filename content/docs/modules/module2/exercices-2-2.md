@@ -306,7 +306,7 @@ public class Entier {
 
 ## Question 16
 Considérez le code suivant :
-```java
+```java {style=github}
 void afficher(String message) {}
 int afficher(int nombre) { return nombre; }
 void afficher(String message, int nombre) {}
@@ -314,6 +314,7 @@ void afficher(String message, int nombre) {}
 Décrivez la signature de la méthode `afficher(String message, int nombre)` et expliquez pourquoi ces trois méthodes peuvent coexister dans la même classe.
 
 <details><summary>Réponse</summary>
+
 La signature de la méthode `afficher(String message, int nombre)` est composée des types et de l'ordre des paramètres, à savoir `afficher(String, int)`. Ces trois méthodes peuvent coexister dans la même classe car elles ont des signatures différentes, c'est-à-dire un nombre ou un type de paramètres différent. En Java, la surcharge de méthode est permise tant que les signatures des méthodes sont différentes.
 </details>
 
@@ -321,8 +322,9 @@ La signature de la méthode `afficher(String message, int nombre)` est composée
 ## Question 17
 Pourquoi la signature d’une méthode ne tient-elle pas compte du type de retour ? Donnez un exemple où deux méthodes auraient le même nom et les mêmes paramètres mais des types de retour différents, et expliquez pourquoi cela pose problème.
 <details><summary>Réponse</summary>
+
 La signature d’une méthode ne tient pas compte du type de retour, car cela rendrait l’appel de la méthode ambigu pour le compilateur. Par exemple, si on écrivait :
-```java
+```java {style=github}
 int calculer(int x);
 double calculer(int x);
 ```
