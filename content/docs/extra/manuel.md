@@ -20,3 +20,14 @@ Vous pouvez aussi acheter la version papier du manuel [Java pas à pas chez Amaz
 
 
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+
+
+## Correspondance avec les modules
+
+ Module         | Chapitres/Sections du manuel recommandés                        | Thème principal du manuel pour le module                |
+|----------|----------------------------------------------------------------|---------------------------------------------------------|
+| 1   | Chapitre 1 : Concepts de base                                  | Introduction, concepts fondamentaux, exercices de base  |
+| 2 | Chapitre 2 : Introduction à Java<br>Chapitre 4 : Types/expressions | Types, expressions, bases de la programmation Java      |
+| 3      | Chapitre 3 : Structures de contrôle                            | Structures de contrôle (conditions, boucles, etc.)      |
+| 4      | Chapitre 9 : Traitement de fichiers                            | Fichiers, entrées/sorties, gestion de données           |
+| 5        | Chapitres 5 à 8 : Graphisme 2D, animation, conception objet, jeu | Programmation objet, graphisme, animation, projet jeu   |
