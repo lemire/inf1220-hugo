@@ -401,3 +401,67 @@ public class FileSize {
 ```
 
 </details>
+
+<h2>Question 11</h2>
+<p>Le code suivant lit un fichier texte ligne par ligne et concatène toutes les lignes dans une seule chaîne :</p>
+
+```java  {style=github}
+import java.io.*;
+String resultat = "";
+BufferedReader reader = new BufferedReader(new FileReader("fichier.txt"));
+String ligne;
+while ((ligne = reader.readLine()) != null) {
+    resultat = resultat + ligne;
+}
+reader.close();
+```
+
+<p>Réécrivez ce code de façon plus performante. Expliquez pourquoi votre version est préférable.</p>
+
+<details><summary>Réponse</summary>
+<p>On peut utiliser un <code>StringBuilder</code> pour éviter de créer de nombreuses chaînes intermédiaires, ce qui améliore l’efficacité (temps et mémoire) :</p>
+
+```java  {style=github}
+import java.io.*;
+StringBuilder resultat = new StringBuilder();
+BufferedReader reader = new BufferedReader(new FileReader("fichier.txt"));
+String ligne;
+while ((ligne = reader.readLine()) != null) {
+    resultat.append(ligne);
+}
+reader.close();
+```
+
+<p>Avec <code>StringBuilder</code>, on évite la création répétée de nouvelles chaînes à chaque itération, ce qui rend le code beaucoup plus rapide et économe en mémoire, surtout pour de gros fichiers.</p>
+</details>
+
+<h2>Question Y</h2>
+<p>Le code suivant lit un fichier caractère par caractère sans utiliser de buffer :</p>
+
+```java  {style=github}
+import java.io.*;
+FileReader reader = new FileReader("fichier.txt");
+int c;
+while ((c = reader.read()) != -1) {
+    // Traitement du caractère c
+}
+reader.close();
+```
+
+<p>Expliquez pourquoi ce code peut être lent pour de gros fichiers. Proposez une version optimisée utilisant un buffer, et expliquez pourquoi elle est préférable.</p>
+
+<details><summary>Réponse</summary>
+<p>Lire caractère par caractère sans buffer entraîne de nombreux accès disque, ce qui ralentit la lecture. Utiliser un <code>BufferedReader</code> permet de lire des blocs de caractères en mémoire, ce qui accélère le traitement :</p>
+
+```java  {style=github}
+import java.io.*;
+BufferedReader reader = new BufferedReader(new FileReader("fichier.txt"));
+int c;
+while ((c = reader.read()) != -1) {
+    // Traitement du caractère c
+}
+reader.close();
+```
+
+<p>Le <code>BufferedReader</code> réduit le nombre d’appels au système en lisant de grands blocs à la fois, ce qui améliore nettement la performance, surtout pour les gros fichiers.</p>
+</details>

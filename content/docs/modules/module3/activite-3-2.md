@@ -199,7 +199,20 @@ public class Main {
 {{</inlineJava>}}
 
 
-### Lecture optionnelle dans le livre de référence (Delannoy)
+## Comment choisir le type d'une boucle
+
+Le choix du type de boucle dépend du contexte du problème à résoudre et de la structure de votre code.
+
+- Utilisez une boucle **for** lorsque vous connaissez à l’avance le nombre d’itérations à effectuer, par exemple pour parcourir un tableau ou répéter une action un nombre précis de fois. La boucle for est idéale pour les situations où l’on a un compteur ou un indice qui évolue de façon prévisible.
+
+- Privilégiez une boucle **while** lorsque vous ne connaissez pas à l’avance le nombre d’itérations, mais que vous souhaitez répéter une action tant qu’une condition reste vraie. C’est le cas typique de la lecture d’entrées jusqu’à une valeur sentinelle, ou d’un processus qui doit s’arrêter dès qu’une condition est remplie.
+
+- La boucle **do...while** est utile lorsque vous voulez que le bloc d’instructions soit exécuté au moins une fois, peu importe la condition (par exemple, afficher un menu et demander une saisie tant que l’utilisateur ne choisit pas de quitter).
+
+En résumé : choisissez la boucle qui rend votre intention la plus claire et qui correspond le mieux à la logique du problème. Un code lisible et adapté au contexte est toujours préférable à une utilisation mécanique d’un seul type de boucle.
+
+
+## Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures d'itération (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy le chapitre 5.</p>
 

@@ -502,3 +502,110 @@ En informatique, on définit l'ensemble des nombres positifs comme étant les no
 }
 </code></pre>
 </details>
+
+## Question 25
+
+Quel sera le résultat de l'expression 1.0 / 0.0 ?
+
+<details><summary>Réponse</summary>
+<p>En Java, l'expression <code>1.0 / 0.0</code> retourne <code>Infinity</code> (l'infini positif), car la division par zéro avec des nombres à virgule flottante (double) ne provoque pas d'exception, mais retourne une valeur spéciale représentant l'infini.</p>
+</details>
+
+## Question 26
+
+Quel sera le résultat de l'expression 1 / 0 ?
+
+<details><summary>Réponse</summary>
+<p>En Java, l'expression <code>1 / 0</code> provoque une erreur de type division par zéro, car la division entière par zéro n'est pas définie.</p>
+</details>
+
+## Question 27
+
+Quelle est la différence entre <code>==</code> et <code>equals()</code> pour comparer deux chaînes de caractères en Java ?
+<details><summary>Réponse</summary>
+<p><code>==</code> compare les références (adresses en mémoire), alors que <code>equals()</code> compare le contenu des chaînes. Il faut utiliser <code>equals()</code> pour vérifier si deux chaînes ont le même texte.</p>
+</details>
+
+## Question 28
+
+Que fait l’opérateur <code>+</code> lorsqu’il est utilisé avec des chaînes de caractères et des nombres en Java ? Donnez un exemple.
+<details><summary>Réponse</summary>
+<p>L’opérateur <code>+</code> concatène les chaînes et convertit automatiquement les nombres en chaînes si l’un des opérandes est une chaîne.</p>
+
+Exemple :
+
+```java  {style=github}
+String s = "Valeur : " + 10 + 5; // "Valeur : 105"
+```
+</details>
+
+## Question 29
+
+Quelle est la valeur de l’expression <code>1 + 2 + "3" + 4 + 5</code> en Java ?
+<details><summary>Réponse</summary>
+<p>L’expression s’évalue de gauche à droite : <code>1 + 2</code> donne 3, puis <code>3 + "3"</code> donne "33" (concaténation), puis <code>"33" + 4</code> donne "334", puis <code>"334" + 5</code> donne "3345". La valeur finale est <strong>"3345"</strong>.</p>
+</details>
+
+## Question 30
+
+Comment extraire une sous-chaîne d’une chaîne en Java ? Donnez un exemple avec <code>substring()</code>.
+<details><summary>Réponse</summary>
+<p>On utilise la méthode <code>substring(debut, fin)</code> pour obtenir une sous-chaîne allant de l’indice <code>debut</code> (inclus) à <code>fin</code> (exclu).</p>
+
+Exemple :
+
+```java  {style=github}
+String texte = "Bonjour";
+String sous = texte.substring(0, 3); // "Bon"
+```
+</details>
+
+## Question 31
+
+Comment vérifier si une chaîne commence ou se termine par un certain texte en Java ?
+<details><summary>Réponse</summary>
+<p>On utilise <code>startsWith()</code> pour vérifier le début, et <code>endsWith()</code> pour la fin.</p>
+
+Exemple :
+
+```java  {style=github}
+String phrase = "Bonjour le monde";
+System.out.println(phrase.startsWith("Bon")); // true
+System.out.println(phrase.endsWith("monde")); // true
+```
+</details>
+
+
+
+## Question 32
+
+Qu’est-ce qu’une classe enveloppe (wrapper) en Java ? Donnez un exemple d’utilisation pour convertir une chaîne de caractères en entier.
+
+<details><summary>Réponse</summary>
+<p>Une classe enveloppe permet de manipuler un type primitif comme un objet. Exemple :</p>
+
+```java  {style=github}
+String s = "123";
+int n = Integer.parseInt(s); // n vaut 123
+```
+</details>
+
+## Question 33
+
+Expliquez la différence entre <code>int</code> et <code>Integer</code> en Java. Dans quel cas doit-on utiliser <code>Integer</code> ?
+
+<details><summary>Réponse</summary>
+<p><code>int</code> est un type primitif, alors que <code>Integer</code> est une classe objet qui encapsule un int. /p>
+</details>
+
+## Question 34
+
+Que vaut l’expression <code>new Integer(3) == new Integer(3)</code> en Java ? Expliquez pourquoi.
+
+<details><summary>Réponse</summary>
+<p>L’expression retourne <strong>false</strong>. Chaque appel à <code>new Integer(3)</code> crée un nouvel objet distinct en mémoire : les deux objets ont la même valeur mais ne sont pas le même objet. L’opérateur <code>==</code> compare les références (adresses) des objets, pas leur contenu. Pour comparer la valeur, il faut utiliser <code>equals()</code> :</p>
+
+```java  {style=github}
+System.out.println(new Integer(3).equals(new Integer(3))); // true
+```
+</details>

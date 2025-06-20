@@ -65,9 +65,58 @@ En résumé, un algorithme est une méthode pour résoudre un problème, tandis 
 
 {{< youtube id="1ANpkDxJHo4" >}}
 
-### Terminologie de base
+### Logique booléenne
 
-Un algorithme prend habituellement des données et produit un résultat.  Par exemple, un algorithme cherchant à déterminer si un nombre est pair, pourra recevoir un nombre en paramètre et il pourra produire comme réponse une valeur Booléenne (vrai ou faux). Un même algorithme va donc généralement pouvoir être exécuté sur différentes données et pouvoir fournir des réponses différentes. En ce sens, une fonction (au sens mathématique) comme f(x) = a x + b peut être décrite comme étant un algorithme. Une fonction doit toujours produire la même valeur étant donnée les mêmes données. Un algorithme n'est pas limité de cette manière. Par exemple, un algorithme pourrait servir à choisir un nom aléatoirement au sein d'une liste. D'une exécution à l'autre, l'algorithme pourrait produire des valeurs différentes avec les mêmes données. 
+Un des fondements des algorithmes est la logique booléenne.
+
+Voici la table de vérité des principaux opérateurs logiques :
+
+| A     | B     | NON A | A ET B | A OU B |
+|-------|-------|-------|--------|--------|
+| vrai  | vrai  | faux  | vrai   | vrai   |
+| vrai  | faux  | faux  | faux   | vrai   |
+| faux  | vrai  | vrai  | faux   | vrai   |
+| faux  | faux  | vrai  | faux   | faux   |
+
+- **NON A** : l’inverse de A (négation)
+- **A ET B** : vrai seulement si A et B sont vrais
+- **A OU B** : vrai si au moins un des deux est vrai
+
+#### Exemple 1 : Contrôle d’accès selon l’âge
+
+```pseudo
+lire age
+SI age >= 18 ALORS
+    écrire "Accès autorisé"
+SINON
+    écrire "Accès refusé"
+FIN SI
+```
+
+#### Exemple 2 : Vérifier si un nombre est dans un intervalle
+
+```pseudo
+lire x
+SI x >= 10 ET x <= 20 ALORS
+    écrire "x est dans l'intervalle [10, 20]"
+SINON
+    écrire "x n'est pas dans l'intervalle"
+FIN SI
+```
+
+#### Notation des programmeurs
+
+Pour des raisons historiques, les programmeurs remplacent souvent ET par `&&`, OU par `||` et
+NON par `!`. C'est le cas notamment en Java.
+
+Utilisez l'application suivante pour tester votre compréhension.
+
+{{< webapp path="bool.html" >}}
+
+
+### La boucle
+
+Un algorithme prend habituellement des données et produit un résultat.  Par exemple, un algorithme cherchant à déterminer si un nombre est pair, pourra recevoir un nombre en paramètre et il pourra produire comme réponse une valeur booléenne (vrai ou faux). Un même algorithme va donc généralement pouvoir être exécuté sur différentes données et pouvoir fournir des réponses différentes. En ce sens, une fonction (au sens mathématique) comme f(x) = a x + b peut être décrite comme étant un algorithme. Une fonction doit toujours produire la même valeur étant donnée les mêmes données. Un algorithme n'est pas limité de cette manière. Par exemple, un algorithme pourrait servir à choisir un nom aléatoirement au sein d'une liste. D'une exécution à l'autre, l'algorithme pourrait produire des valeurs différentes avec les mêmes données. 
 
 La plupart des algorithmes en pratique sont itératifs. Une itération est la répétition d'un processus. Si vous devez teindre une clôture, vous allez peut-être teindre chaque planche une à une. Nous dirons alors que vous itérez sur les planches. Mais comment saurez-vous où vous êtes rendu si vous prenez une pause? Peut-être pourrez-vous poser un petit drapeau sur la planche que vous êtes en train de teindre. On dira alors que le drapeau est un itérateur, c'est-à-dire un indicateur de votre progrès dans votre itération. À chaque étape où vous déplacez le drapeau d'une planche à l'autre, nous pourrons dire que vous incrémentez la position du drapeau. Si jamais vous deviez faire un retour à la planche précédente, nous dirons que vous décrémentez le drapeau.
 En informatique, nous n'utilisons pas de drapeaux physiques. Pour savoir où on est rendu, on utilise des compteurs, le plus souvent des valeurs entières. Quand on dit qu'on incrémente un entier, on veut généralement dire qu'on ajoute "1" à sa valeur.

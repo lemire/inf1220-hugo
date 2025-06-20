@@ -802,3 +802,136 @@ for (int i = t.length - 1; i >= 0; i--) {
 
 </details>
 
+## Question 26
+
+<p>Qu'est-ce qu'une <code>HashMap</code> en Java ? Donnez un exemple simple d'utilisation pour associer des noms d'étudiants à leurs notes.</p>
+<details><summary>Réponse</summary>
+<p>Une <code>HashMap</code> est une structure de données qui associe des clés à des valeurs. Elle permet de retrouver rapidement une valeur à partir de sa clé. Exemple :</p>
+
+```java  {style=github}
+import java.util.HashMap;
+HashMap<String, Integer> notes = new HashMap<>();
+notes.put("Alice", 85);
+notes.put("Bob", 92);
+System.out.println(notes.get("Alice")); // Affiche 85
+```
+</details>
+
+## Question 27
+
+<p>Que se passe-t-il si on ajoute deux fois la même clé dans une <code>HashMap</code> en Java ? Par exemple :</p>
+
+```java  {style=github}
+HashMap<String, Integer> map = new HashMap<>();
+map.put("clé", 1);
+map.put("clé", 2);
+```
+
+Quelle sera la valeur associée à la clé <code>"clé"</code> ?</p>
+<details><summary>Réponse</summary>
+<p>La deuxième insertion écrase la première : la valeur associée à la clé <code>"clé"</code> sera 2. Une <code>HashMap</code> ne peut contenir qu'une seule valeur par clé ; si on ajoute une clé déjà existante, la nouvelle valeur remplace l'ancienne.</p>
+</details>
+
+## Question 28
+
+<p>Comment utiliser une <code>Stack</code> en Java pour inverser l'ordre des éléments d'une liste ? Donnez un exemple de code qui empile les éléments d'un tableau d'entiers, puis les dépile pour les afficher dans l'ordre inverse.</p>
+<details><summary>Réponse</summary>
+<p>On peut utiliser une <code>Stack</code> pour inverser l'ordre des éléments : on empile chaque élément, puis on les dépile un à un (LIFO : Last In, First Out).</p>
+
+```java  {style=github}
+import java.util.Stack;
+int[] t = {1, 2, 3, 4, 5};
+Stack<Integer> pile = new Stack<>();
+for (int x : t) {
+    pile.push(x);
+}
+while (!pile.isEmpty()) {
+    System.out.println(pile.pop());
+}
+```
+</details>
+
+## Question 29
+
+Qu’est-ce que l’interface <code>CharSequence</code> en Java ? Donnez un exemple d’utilisation de la méthode <code>subSequence()</code> sur une chaîne de caractères.
+
+<details><summary>Réponse</summary>
+<p>L’interface <code>CharSequence</code> représente une séquence de caractères et est implémentée par <code>String</code>, <code>StringBuilder</code>, etc. La méthode <code>subSequence(start, end)</code> permet d’obtenir une sous-séquence de caractères.</p>
+
+Exemple :</p>
+
+```java  {style=github}
+String texte = "Bonjour le monde";
+CharSequence sousTexte = texte.subSequence(8, 14); // "le mon"
+System.out.println(sousTexte);
+```
+
+On peut ainsi éviter de faire des copies.
+</details>
+
+## Question 30
+
+Pourquoi est-il préférable d’utiliser <code>StringBuilder</code> plutôt que l’opérateur <code>+</code> pour concaténer des chaînes dans une boucle ? Donnez un exemple.
+
+<details><summary>Réponse</summary>
+<p><code>StringBuilder</code> permet de modifier une chaîne sans créer de nouveaux objets à chaque opération, ce qui améliore la performance, surtout dans les boucles. L’opérateur <code>+</code> de la classe String peut créer une nouvelle chaîne à chaque concaténation, ce qui est coûteux en mémoire et en temps.</p>
+
+Exemple :</p>
+
+```java  {style=github}
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < 5; i++) {
+    sb.append("Ligne ").append(i).append("\n");
+}
+System.out.println(sb.toString());
+```
+</details>
+
+## Question 31
+
+Quels sont les types et classes immuables en Java ? Donnez quelques exemples et expliquez pourquoi l’immuabilité peut être utile.
+
+<details><summary>Réponse</summary>
+<p>Un type ou une classe est dit <strong>immuable</strong> si son état ne peut pas être modifié après sa création. En Java, les principaux types et classes immuables sont :</p>
+<ul>
+  <li><code>String</code></li>
+  <li>Les classes enveloppes des types primitifs : <code>Integer</code>, <code>Double</code>, <code>Boolean</code>, <code>Long</code>, <code>Short</code>, <code>Byte</code>, <code>Character</code>, <code>Float</code></li>
+</ul>
+<p>L’immuabilité facilite la programmation (pas de risque de modification imprévue), rend les objets sûrs à partager, et simplifie le raisonnement sur le code.</p>
+</details>
+
+## Question 32
+
+Considérez le code suivant :
+
+```java  {style=github}
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Java";
+        String str2 = "Java";
+        String str3 = new String("Java");
+        
+        System.out.println(str1 == str2);
+        System.out.println(str1 == str3);
+    }
+}
+```
+
+Qu’affichera ce programme ? Expliquez pourquoi.
+
+<details><summary>Réponse</summary>
+<p>Le premier affichage (<code>str1 == str2</code>) retournera <strong>true</strong> car les deux variables pointent vers la même chaîne littérale dans le pool de chaînes de Java. Le second (<code>str1 == str3</code>) retournera <strong>false</strong> car <code>str3</code> est un nouvel objet créé explicitement, différent de la chaîne littérale, même si leur contenu est identique. Pour comparer le contenu des chaînes, il faut utiliser <code>equals()</code> :</p>
+
+```java  {style=github}
+System.out.println(str1.equals(str3)); // true
+```
+
+
+En Java, les chaînes de caractères sont des objets particuliers : les chaînes littérales (comme "Java") sont stockées dans une zone spéciale appelée « pool de chaînes ». Quand on écrit deux fois la même chaîne littérale dans le code, Java réutilise le même objet pour économiser de la mémoire. C’est pourquoi <code>str1 == str2</code> retourne <strong>true</strong> : les deux variables pointent vers le même objet en mémoire.
+
+En revanche, lorsque l’on crée une chaîne avec <code>new String("Java")</code>, Java crée explicitement un nouvel objet, même si le contenu est identique à une chaîne littérale existante. Ainsi, <code>str1 == str3</code> retourne <strong>false</strong> car les deux variables pointent vers des objets différents.
+
+Pour comparer le contenu de deux chaînes (et non leur emplacement en mémoire), il faut utiliser la méthode <code>equals()</code>. Cette méthode vérifie caractère par caractère si les deux chaînes ont le même contenu, ce qui est généralement ce que l’on souhaite en pratique.
+
+</details>
+

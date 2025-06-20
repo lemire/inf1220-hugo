@@ -5,98 +5,116 @@ weight: 6
 
 # Les exceptions
 
-## Les erreurs/exceptions en Java
+En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.
 
-<p>La grande majorité des langages de programmation modernes peuvent générer des fautes à la compilation (par exemple l'oubli d'un ; à la fin d'une ligne de code) et à l'exécution. Dans le langage Java, lorsqu'il y a une faute à l'exécution, une exception ou une erreur particulière est générée par la machine virtuelle Java (JVM) : StackOverflowError, DataFormatException, etc. Il faut distinguer d'abord ce qu'est une exception et une erreur. Une erreur (les classes dérivées de <a href="https://docs.oracle.com/javase/8/docs/api/?java/lang/Error.html">Error</a>) est un événement grave que tout "bon" logiciel ne devrait pas "attraper" (avec le try-catch) et amener la fin de l'exécution du programme. Une exception (les classes dérivées de <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">Exception</a>) est une faute qui peut être gérée, ou non, par le programme et que l'on peut qualifier de moins grave. 
-</p>
 
-<p>La gestion des erreurs et des exceptions par un programme permet d'ajouter de la fiabilité et de permettre à un programme à continuer de fonctionner malgré des erreurs internes ou externes. Cette gestion permet également de notifier les utilisateurs ou les développeurs de la génération d'une faute. Par exemple, si une application nécessite l'ouverture d'une communication TCP/IP entre le programme et un serveur externe, et que cette communication est coupée pour une raison externe à l'application (ex. perte du réseau). Il est alors raisonnable d'informer l'utilisateur et/ou de gérer cette exception, par exemple, en tentant après un certain délai une nouvelle connexion au serveur.</p>
 
-## La structure Try-Catch
+## Les erreurs et exceptions en Java
 
-<p>La structure try-catch permet "d'enrober" une partie du code dans une structure permettant de récupérer les erreurs ou fautes lancées par la JVM ou l'application et gérer celles-ci. Voici la structure générale d'un try-catch pour une exception et une erreur:</p>
+La plupart des langages modernes distinguent deux types de fautes : celles détectées à la compilation (par exemple, l’oubli d’un point-virgule) et celles qui surviennent à l’exécution. En Java, lorsqu’une erreur se produit à l’exécution, la machine virtuelle Java (JVM) génère une exception ou une erreur. Il est important de distinguer :
+- Une <strong>erreur</strong> (<code>Error</code>) : événement grave, souvent lié au système, que l’on ne cherche généralement pas à intercepter (ex. : manque de mémoire).
+- Une <strong>exception</strong> (<code>Exception</code>) : situation inhabituelle ou fautive que le programme peut choisir de gérer (ex. : division par zéro, fichier absent).
+
+Gérer les exceptions permet d’éviter que le programme ne s’arrête de façon inattendue et d’informer l’utilisateur ou le développeur de ce qui s’est passé. Par exemple, si une application perd la connexion réseau, elle peut afficher un message d’erreur et tenter de se reconnecter, plutôt que de planter.
+
+## La structure try-catch
+
+Pour gérer les exceptions, on utilise la structure <code>try-catch</code>. On place dans le bloc <code>try</code> le code susceptible de provoquer une erreur. Si une exception survient, le flux d’exécution passe dans le bloc <code>catch</code>, où l’on peut réagir de façon appropriée.
 
 ```java  {style=github}
 try {
-    //Code ...
+    // Code susceptible de générer une exception
 } catch (Exception e) {
-    //Gestion de l'exception
+    // Code exécuté si une exception est levée
 }
+```
 
+On peut aussi intercepter des erreurs, mais ce n’est généralement pas recommandé :
+
+```java  {style=github}
 try {
-    //Code ...
+    // Code...
 } catch (Error e) {
-    //Gestion de l'erreur
+    // Gestion d’une erreur système
 }
 ```
 
-<p>Dans le code ci-dessus, la partie intérieure de la structure comprend le code susceptible de générer des fautes ou exception. La partie inférieure (après le catch) permet l'ajout de code pour gérer l'erreur ou l'exception. L'exemple ci-dessus présente la gestion d'une erreur système, par contre, comme nous l'avons mentionné auparavant, il est généralement déconseillé "d'attraper" les erreurs (et non les exceptions). Toutefois, il peut être utile d'attraper celles-ci, de les journaliser et d'ensuite cesser l'exécution du programme. Voici quelques exemples de façon de gérer les exceptions ou erreurs :</p>
+Dans le bloc <code>catch</code>, on peut :
+- Afficher un message d’erreur
+- Journaliser l’erreur
+- Relancer l’exception (<code>throw e;</code>)
+- Arrêter le programme (<code>System.exit(1);</code>)
+
+Exemples :
 
 ```java  {style=github}
 try {
-    //Code ...
+    // ...
 } catch (Exception e) {
-    
-    e.printStackTrace();
+    e.printStackTrace(); // Affiche la trace de l’erreur
 }
 
 try {
-    //Code ...
+    // ...
 } catch (Exception e) {
-    
     e.printStackTrace();
-    throw e;
+    throw e; // Relance l’exception
 }
 
 try {
-    //Code ...
+    // ...
 } catch (Exception e) {
-    
     e.printStackTrace();
-    System.exit(1);
-    
+    System.exit(1); // Arrête le programme
 }
 
 try {
-    //Code ...
+    // ...
 } catch (Exception e) {
-    
-    Logger.getLogger("Erreur.log").severe(e.getMessage());
-
+    Logger.getLogger("Erreur.log").severe(e.getMessage()); // Journalise l’erreur
 }
 ```
 
-<p>Il est également possible d'utiliser plusieurs catchs afin de mieux gérer le type d'exception. Dans l'exemple ci-dessous, l'exception de type NullPointerException sera "attrapée" avant l'Exception générale :</p>
+On peut utiliser plusieurs blocs <code>catch</code> pour gérer différents types d’exceptions :
 
 ```java  {style=github}
 try {
     String test = null;
     test.charAt(0);
 } catch (NullPointerException e) {
-    // l'accès à l'objet test qui est null va lancer une exception de tytpe NullPointerException
+    // Gestion spécifique du cas où test est null
     e.printStackTrace();
 } catch (Exception e) {
+    // Gestion générale
     e.printStackTrace();
 }
 ```
 
-<p>Les erreurs et exceptions peuvent être causées par les développeurs ayant introduit des "bugs" dans leur logiciel, par exemple l'accès à un index hors de la taille d'un tableau ou bien une division par zéro. Elles peuvent également être lancées volontairement par les programmeurs dans certaines conditions (voir section suivante). Enfin, comme nous l'avions introduit plus tôt, les exceptions ou erreurs peuvent également être produites par des événements externes au programme et sont hors de contrôle des développeurs, par exemple un lien réseau perdu, l'entrée d'un caractère inconnu ou non géré par l'utilisateur (ex. symbole chinois), fichier corrompu, etc.</p>
+Les blocs <code>catch</code> sont évalués dans l’ordre : le premier qui correspond à l’exception levée sera exécuté.
 
+Les exceptions peuvent être causées par :
+- Des erreurs de programmation (ex. : accès à un index hors limites)
+- Des événements extérieurs (ex. : fichier absent, réseau coupé)
+- Des conditions prévues par le programmeur (qui peut lancer une exception volontairement)
 
 ## Lancer des exceptions
 
-<p>Il est possible dans une application de lancer des exceptions dans le code en utilisant le mot-clé "throw" et le faisant suivant par l'instanciation d'un objet de type Exception ou ses sous-classes (l'héritage sera vu dans le prochain module) : NullPointerException, SQLException, etc. : </p>
+Pour signaler une situation anormale, un programmeur peut lancer une exception avec le mot-clé <code>throw</code> :
 
 ```java  {style=github}
 throw new Exception();
-
-// Exemple d'exception pouvant être lié à des requêtes SQL
-throw new SQLException("USER DOESN'T EXIST");
+throw new SQLException("Utilisateur inconnu");
 ```
 
-<p>Toutefois, une fois une exception lancée, il est nécessaire de la récupérée à un certain moment, sinon, elle remontera de méthode en méthode jusqu'à la méthode "main" et amènera l'arrêt du programme. Pour ce faire, il faut soit : attraper la faute dans une structure try-catch ou bien lancer l'exception à la méthode ayant invoqué la méthode où l'exception est lancée. Pour ce faire, il faut ajouter à la fin de la description d'une méthode/fonction, le mots-clé "throws". Il y a donc une hiérarchie d'appel de méthode et si l'exception n'est pas attrapée, celle-ci remontera les appels jusqu'au niveau supérieur, soit la méthode main. Voici un exemple pour illustrer cette remontée d'une exception : </p>
+Si l’exception n’est pas capturée, elle remonte la pile d’appels jusqu’à la méthode main, puis provoque l’arrêt du programme. On peut aussi déclarer qu’une méthode peut lancer une exception avec le mot-clé <code>throws</code> :
 
+```java  {style=github}
+public void maMethode() throws IOException {
+    // ...
+}
+```
 
+Voici un exemple illustrant la propagation d’une exception à travers plusieurs méthodes :
 
 {{<inlineJava path="ExempleTryCatch.java" lang="java">}}
 import java.time.DateTimeException;
@@ -146,10 +164,128 @@ public class ExempleTryCatch {
 }
 {{</inlineJava>}}
 
+### Les exceptions vérifiées
+
+Les exceptions dites « vérifiées » (checked) sont des exceptions que le compilateur Java oblige à traiter explicitement, soit en les capturant avec un bloc try/catch, soit en les déclarant avec throws dans la signature de la méthode. Elles héritent de la classe Exception (mais pas de RuntimeException).
+
+Un exemple classique d’exception checked est IOException, qui peut survenir lors de la lecture ou l’écriture de fichiers. Voici un exemple :
+
+```java  {style=github}
+import java.io.*;
+
+public class ExempleChecked {
+    public static void main(String[] args) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("fichier.txt"));
+            String ligne = reader.readLine();
+            System.out.println(ligne);
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Erreur d'entrée/sortie : " + e.getMessage());
+        }
+    }
+}
+```
+
+Dans cet exemple, FileReader et readLine peuvent lancer une IOException : le compilateur oblige à traiter cette exception.
+
+On peut aussi propager l’exception à la méthode appelante avec throws :
+
+```java  {style=github}
+public void lireFichier(String nom) throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(nom));
+    String ligne = reader.readLine();
+    reader.close();
+}
+```
+
+Ici, la méthode signale qu’elle peut lancer une IOException, et c’est à l’appelant de la gérer.
+
+### Les exceptions non vérifiées
+
+Les exceptions non vérifiées (ou « unchecked ») héritent de la classe RuntimeException. Elles ne sont pas vérifiées par le compilateur : il n’est pas obligatoire de les capturer ni de les déclarer avec throws. Elles surviennent souvent lors d’erreurs de programmation (ex. : accès à un index hors limites, division par zéro, etc.).
+
+Exemple classique : ArrayIndexOutOfBoundsException, qui se produit lorsqu’on tente d’accéder à un indice inexistant dans un tableau.
+
+```java  {style=github}
+public class ExempleUnchecked {
+    public static void main(String[] args) {
+        int[] t = {1, 2, 3};
+        System.out.println(t[5]); // Provoque ArrayIndexOutOfBoundsException
+    }
+}
+```
+
+Dans cet exemple, aucune gestion d’exception n’est requise : si l’erreur survient, le programme s’arrête avec un message d’erreur.
+
+### La clause finally
+
+Le bloc <code>finally</code> permet d’exécuter du code qui sera toujours exécuté à la fin d’un bloc <code>try</code>, que l’exception soit levée ou non, et même si un <code>return</code> est rencontré dans le <code>try</code> ou le <code>catch</code>. Il est souvent utilisé pour libérer des ressources (fichiers, connexions, etc.).
+
+Exemple :
+
+```java  {style=github}
+public class ExempleFinally {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Début du try");
+            int x = 10 / 0; // Provoque une exception
+        } catch (ArithmeticException e) {
+            System.out.println("Exception capturée");
+        } finally {
+            System.out.println("Bloc finally exécuté");
+        }
+        System.out.println("Après le try-catch-finally");
+    }
+}
+```
+
+Sortie attendue :
+
+<pre>
+Début du try
+Exception capturée
+Bloc finally exécuté
+Après le try-catch-finally
+</pre>
+
+
+## La pile d’appels
+
+La pile d’appels (ou « call stack ») est une structure de données interne utilisée par la machine virtuelle Java pour suivre l’enchaînement des appels de méthodes pendant l’exécution d’un programme. Chaque fois qu’une méthode est appelée, une nouvelle « case » (ou frame) est ajoutée au sommet de la pile ; quand la méthode se termine, cette case est retirée. Cela permet à Java de savoir où reprendre l’exécution après chaque appel de méthode.
+
+Ce mécanisme est essentiel pour comprendre la gestion des exceptions et la récursivité. Lorsqu’une exception est levée, Java parcourt la pile d’appels de haut en bas pour trouver un bloc catch approprié. Si aucun n’est trouvé, le programme s’arrête et affiche la trace de la pile (stack trace), qui montre la séquence des appels ayant mené à l’erreur.
+
+Exemple :
+
+```java  {style=github}
+public class ExemplePileAppels {
+    public static void main(String[] args) {
+        methodeA();
+    }
+    static void methodeA() {
+        methodeB();
+    }
+    static void methodeB() {
+        int x = 1 / 0; // Provoque une exception
+    }
+}
+```
+
+La trace d’erreur affichera :
+
+<pre>
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+    at ExemplePileAppels.methodeB(ExemplePileAppels.java:9)
+    at ExemplePileAppels.methodeA(ExemplePileAppels.java:6)
+    at ExemplePileAppels.main(ExemplePileAppels.java:3)
+</pre>
+
+On voit que la pile d’appels retrace le chemin des méthodes jusqu’à l’origine de l’exception. Cela aide beaucoup à déboguer les programmes.
+
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
-<p>Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.</p>
-</ul>
+Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.
 
 ### Vidéo
 

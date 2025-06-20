@@ -689,6 +689,44 @@ System.out.println(liste); // Affiche [9, 5, 2, 1]
 Dans cet exemple, on crée un Comparator anonyme directement dans l’appel à Collections.sort, ce qui rend le code plus compact et facile à comprendre.
 
 
+## Principe de substitution de Liskov
+
+Le <strong>principe de substitution de Liskov</strong> (Liskov Substitution Principle, LSP) est un principe fondamental de la programmation orientée objet. Il stipule que toute classe dérivée (sous-classe) doit pouvoir être utilisée à la place de sa classe de base (super-classe) sans que cela ne provoque d’erreur ou de comportement inattendu. Autrement dit, un objet d’une sous-classe doit pouvoir remplacer un objet de la super-classe partout où celui-ci est attendu, et le programme doit continuer à fonctionner correctement.
+
+Ce principe garantit la cohérence et la robustesse du code lors de l’utilisation de l’héritage et du polymorphisme.
+
+Exemple en Java :
+
+```java  {style=github}
+class Animal {
+    public void crier() {
+        System.out.println("Un animal fait un bruit.");
+    }
+}
+
+class Chien extends Animal {
+    @Override
+    public void crier() {
+        System.out.println("Le chien aboie.");
+    }
+}
+
+public class TestLiskov {
+    public static void faireCrier(Animal a) {
+        a.crier();
+    }
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        Chien chien = new Chien();
+        faireCrier(animal); // Affiche : Un animal fait un bruit.
+        faireCrier(chien);  // Affiche : Le chien aboie.
+    }
+}
+```
+
+Ici, la méthode faireCrier accepte un Animal : on peut lui passer un Chien sans problème, car Chien respecte le contrat d’Animal. C’est le principe de substitution de Liskov.
+
+
 ## Protection des données héritées
 <p>Les trois modificateurs de portée qui réalisent l'encapsulation jouent simultanément un rôle dans la protection des données.</p> 
 

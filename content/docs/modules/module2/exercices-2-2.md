@@ -332,6 +332,20 @@ Le compilateur ne saurait pas quelle version utiliser lors d’un appel comme `c
 </details>
 
 
+## Question 18
+Considérez l’expression suivante en Java :
+
+```java {style=github}
+bool = (1 + 3 == 2) || f(x) || f(x);
+```
+
+Combien de fois la fonction `f(x)` est-elle appelée lors de l’évaluation de cette expression ? Expliquez pourquoi.
+
+<details><summary>Réponse</summary>
+`f(x)` n’est appelée qu’une seule fois. En Java, l’opérateur logique `||` (OU logique) est évalué de façon « paresseuse » (short-circuit). Dès qu’une des conditions est vraie, les suivantes ne sont pas évaluées. Ici, `(1 + 3 == 2)` est faux, donc on évalue le premier `f(x)`. Si ce premier appel retourne vrai, le second `f(x)` n’est pas évalué. Si le premier retourne faux, alors le second est évalué. Mais dans tous les cas, au maximum un seul des deux appels à `f(x)` sera exécuté.
+</details>
+
+
 ## Allez plus loin?
 
 

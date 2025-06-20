@@ -8,6 +8,66 @@ weight: 4
 Le langage Java possède toutes les stuctures de données nécessaires.
 Faisons-en rapidement le tour.
 
+
+## String
+
+En Java, le type <code>String</code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type <code>String</code> sont <strong>immuables</strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet <code>String</code> en mémoire, sans changer l’original.
+
+Par exemple :
+
+```java  {style=github}
+String s = "Bonjour";
+s = s + " le monde"; // Crée un nouvel objet String
+```
+
+Ici, la chaîne "Bonjour" n’est pas modifiée : une nouvelle chaîne "Bonjour le monde" est créée et la variable <code>s</code> pointe vers ce nouvel objet. L’ancienne chaîne reste inchangée (et sera éventuellement libérée par le ramasse-miettes).
+
+Cette immuabilité rend les <code>String</code> sûres et efficaces pour le partage, mais peut entraîner des problèmes de performance si on fait beaucoup de modifications : dans ce cas, il vaut mieux utiliser <code>StringBuilder</code>.
+
+## StringBuilder
+
+Le type <code>StringBuilder</code> en Java permet de construire et de modifier efficacement des chaînes de caractères. Contrairement à la classe <code>String</code>, qui est immuable (chaque modification crée un nouvel objet), <code>StringBuilder</code> permet d’ajouter, de modifier ou de supprimer des caractères sans créer de nouveaux objets à chaque opération. Cela le rend particulièrement utile lorsqu’on doit faire de nombreuses modifications ou concaténations de chaînes, par exemple lors de la lecture d’un fichier ou la construction dynamique d’un texte.
+
+L’utilisation de <code>StringBuilder</code> améliore considérablement les performances, surtout dans les boucles : concaténer des chaînes avec <code>+</code> dans une boucle crée à chaque fois une nouvelle chaîne, ce qui consomme beaucoup de mémoire et ralentit le programme. <code>StringBuilder</code> évite ce problème en travaillant sur une seule zone mémoire.
+
+Exemple :
+
+```java  {style=github}
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < 5; i++) {
+    sb.append("Ligne ").append(i).append("\n");
+}
+String resultat = sb.toString();
+System.out.println(resultat);
+```
+
+Dans cet exemple, toutes les lignes sont ajoutées efficacement à la même chaîne. Pour des opérations répétées ou sur de gros volumes de texte, <code>StringBuilder</code> est donc le choix recommandé pour de bonnes performances.
+
+
+## CharSequence et subSequence()
+
+L’interface <code>CharSequence</code> représente une séquence de caractères lisible : elle est implémentée par plusieurs classes Java comme <code>String</code>, <code>StringBuilder</code> et <code>StringBuffer</code>. Cela permet d’écrire des méthodes qui acceptent n’importe quel type de séquence de caractères, et pas seulement des chaînes immuables.
+
+La méthode <code>subSequence(int start, int end)</code> permet d’obtenir une portion (sous-séquence) de la séquence de caractères, allant de l’indice <code>start</code> (inclus) à <code>end</code> (exclu). C’est utile pour extraire une partie d’un texte sans créer une nouvelle chaîne si ce n’est pas nécessaire.
+
+Exemple avec String :
+
+```java  {style=github}
+String texte = "Bonjour le monde";
+CharSequence sousTexte = texte.subSequence(8, 14); // "le mon"
+System.out.println(sousTexte);
+```
+
+Exemple avec StringBuilder :
+
+```java  {style=github}
+StringBuilder sb = new StringBuilder("abcdefg");
+CharSequence sousSeq = sb.subSequence(2, 5); // "cde"
+System.out.println(sousSeq);
+```
+
+Utiliser <code>CharSequence</code> rend le code plus flexible : on peut manipuler des chaînes, des buffers ou des builders de la même façon, et extraire facilement des sous-parties avec <code>subSequence()</code>. La méthode `subSequence` évite de faire une copie inutile.
+
 ## Les tableaux et matrices
 
 <p>Jusqu'à présent, lorsque nous avons créé une variable, elle ne contenait qu'une seule donnée qui pouvait être une donnée primitive ou une référence vers un objet. En effet, dans la programmation orientée objet, certaines structures ont un nombre fixe d'objets : il s'agit des tableaux. Il en existe deux types : les tableaux à une dimension et les matrices à deux ou trois dimensions.</p>
@@ -322,19 +382,6 @@ public class ExempleLongueur {
 {{</inlineJava>}}
 
 
-#### Différents algorithmes de tri
-
-<p>Les types de tri possibles sont les suivants :</p> 
-  <ol type="1"> 
-    <li>le <em>tri bulles (bubble sort);</em> </li> 
-    <li>le <em>tri par sélection (selection sort);</em> </li> 
-    <li>le <em>tri rapide (quicksort).</em> </li> 
-  </ol> 
-  <p><em>Des démonstrations de ces tris sont disponibles à l'adresse :</em></p> 
-  <p><em><strong><a href="http://download.oracle.com/javase/tutorial/collections/algorithms/index.html">http://download.oracle.com/javase/tutorial/collections/algorithms/index.html</a></strong></em> (en anglais)</p></p>
-
-
-<p>On peut trier un tableau facilement avec la méthode « sort » de la classe java.util.Arrays. <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html">La classe Arrays comprend plusieurs autres fonctions utiles</a>.</p>
 
 ## Les tableaux à plusieurs dimensions (Matrices)
 
@@ -646,11 +693,78 @@ while(it.hasNext()) {
 
 ## Autres structures de données
 
-<p>L'API standard du langage Java offre plusieurs autres types de structure de données. D'ailleurs, la plupart des langages OO ou autres langages modernes offrent également le même genre de structure de données : C++ avec la STL, API .net de C#, Python, etc. Voici quelques exemples de structures de données utiles en Java et des tutoriaux (sites externes en anglais) sur leur utilisation:</p>
-<ul>
-	<li>Stack (ou pile en français). Permet d'empiler des items du genre "dernier ajouté, premier enlevé" : <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html">https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html</a> et <a href="https://www.tutorialspoint.com/java/java_stack_class.htm">https://www.tutorialspoint.com/java/java_stack_class.htm</a></li>
-	<li>HashMap. Permet de créer une structure de données liant une clé (key) à une valeur (value). Très utile pour la recherche d'information en temps constant \(O(1)\), donc pas besoin d'itérer dans toute une liste (\(O(N)\) si en désordre, sinon \(O(\log n)\) si classé). Cette structure de données utilise des fonctions de <a href="https://fr.wikipedia.org/wiki/Fonction_de_hachage">hachage</a> pour convertir la clé en un index dans un tableau : <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html</a> et <a href="https://www.tutorialspoint.com/java/java_hashmap_class.htm">https://www.tutorialspoint.com/java/java_hashmap_class.htm</a></li>
-</ul>
+### Stack (Pile)
+
+Une <strong>Stack</strong> (ou pile) est une structure de données fondamentale qui fonctionne selon le principe « dernier arrivé, premier sorti » (LIFO : Last In, First Out). Cela signifie que le dernier élément ajouté à la pile sera le premier à en sortir. Les opérations principales sont <code>push</code> (empiler), <code>pop</code> (dépiler) et <code>peek</code> (regarder le sommet sans retirer). Les piles sont utilisées dans de nombreux contextes : gestion des appels de fonctions, annulation d’actions, analyse d’expressions, etc.
+
+En Java, la classe <code>Stack</code> permet d’utiliser facilement cette structure : on peut y empiler des objets de tout type, puis les dépiler dans l’ordre inverse de leur ajout. Voici un exemple simple :
+
+```java  {style=github}
+import java.util.Stack;
+
+public class ExempleStack {
+    public static void main(String[] args) {
+        Stack<Integer> pile = new Stack<>();
+        pile.push(10);
+        pile.push(20);
+        pile.push(30);
+        System.out.println(pile.pop()); // Affiche 30
+        System.out.println(pile.peek()); // Affiche 20 (sans dépiler)
+    }
+}
+```
+
+Dans cet exemple, on empile trois entiers ; le <code>pop()</code> retire et retourne le dernier ajouté (30), puis <code>peek()</code> permet de consulter le sommet (20) sans le retirer.
+
+### HashMap (Table de hachage)
+
+Une <strong>HashMap</strong> est une structure de données qui associe des clés à des valeurs. Elle permet de retrouver très rapidement une valeur à partir de sa clé, grâce à une fonction de hachage qui transforme la clé en un index. Les <code>HashMap</code> sont très utiles pour stocker des associations uniques, comme des noms d’étudiants et leurs notes, ou des mots et leurs définitions.
+
+Une caractéristique importante : si on ajoute plusieurs fois la même clé, la nouvelle valeur écrase l’ancienne. Par exemple, si on fait <code>map.put("clé", 1)</code> puis <code>map.put("clé", 2)</code>, la valeur associée à "clé" sera 2. Si on cherche une clé qui n’est pas présente, <code>get</code> retourne <code>null</code> (ou lève une exception si on utilise <code>getOrDefault</code> ou <code>get</code> sur des types primitifs).
+
+Voici un exemple d’utilisation :
+
+```java  {style=github}
+import java.util.HashMap;
+
+public class ExempleHashMap {
+    public static void main(String[] args) {
+        HashMap<String, Integer> notes = new HashMap<>();
+        notes.put("Alice", 85);
+        notes.put("Bob", 92);
+        notes.put("Alice", 90); // Remplace la note précédente d'Alice
+        System.out.println(notes.get("Alice")); // Affiche 90
+        System.out.println(notes.get("Charlie")); // Affiche null (clé absente)
+    }
+}
+```
+
+Dans cet exemple, la note d’Alice est d’abord 85, puis remplacée par 90. La recherche d’une clé absente ("Charlie") retourne <code>null</code>.
+
+### PriorityQueue (File de priorité)
+
+Une <strong>PriorityQueue</strong> (file de priorité) est une structure de données qui permet de toujours extraire l’élément ayant la plus haute priorité (par défaut, le plus petit selon l’ordre naturel). Contrairement à une file classique (FIFO), la PriorityQueue trie automatiquement ses éléments selon leur priorité. Elle est très utilisée pour la gestion de files d’attente avec priorités, les algorithmes de plus court chemin (Dijkstra), ou la planification de tâches.
+
+En Java, la classe <code>PriorityQueue</code> permet d’ajouter des éléments avec <code>add</code> ou <code>offer</code>, et d’extraire le plus prioritaire avec <code>poll</code> (qui le retire) ou <code>peek</code> (qui le consulte sans le retirer). Par défaut, les éléments sont triés dans l’ordre croissant, mais on peut fournir un comparateur personnalisé.
+
+Voici un exemple simple :
+
+```java  {style=github}
+import java.util.PriorityQueue;
+
+public class ExemplePriorityQueue {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> file = new PriorityQueue<>();
+        file.add(30);
+        file.add(10);
+        file.add(20);
+        System.out.println(file.poll()); // Affiche 10 (le plus petit)
+        System.out.println(file.peek()); // Affiche 20 (le prochain plus petit)
+    }
+}
+```
+
+Dans cet exemple, les entiers sont extraits dans l’ordre croissant. On peut aussi utiliser des objets et définir l’ordre de priorité avec un comparateur.
 
 ## Lambdas
 
@@ -723,6 +837,11 @@ La complexité algorithmique mesure le coût (en temps ou en espace) des opérat
 
 ### HashMap
 - **Insertion, suppression, recherche par clé** : \(O(1)\) en moyenne, \(O(n)\) dans le pire cas (rare)
+
+### PriorityQueue
+- **Ajout d’un élément** : \(O(\log n)\) (le nouvel élément est placé à la fin puis remonté)
+- **Extraction du plus prioritaire (poll)** : \(O(\log n)\) (le dernier élément est placé en tête puis redescendu)
+- **Consultation du plus prioritaire (peek)** : \(O(1)\)
 
 ### Opérations sur les streams et lambdas
 - **Filtrage, transformation (map, filter, etc.)** : \(O(n)\), car chaque élément est traité une fois

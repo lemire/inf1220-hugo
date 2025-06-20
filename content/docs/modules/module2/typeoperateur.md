@@ -299,7 +299,7 @@ public class Main {
 
 ### Priorité des opérateurs
 
-<p>La priorité des opérateurs détermine l'ordre dans lequel les opérations sont effectuées dans une expression. Par exemple, dans l'expression <code>3 + 5 * 2</code>, la multiplication est effectuée avant l'addition en raison de la priorité des opérateurs.</p>
+<p>Les expressions sont généralement évaluées de la gauche vers la droite, en suivant la priorité des opérations. La priorité des opérateurs détermine l'ordre dans lequel les opérations sont effectuées dans une expression. Par exemple, dans l'expression <code>3 + 5 * 2</code>, la multiplication est effectuée avant l'addition en raison de la priorité des opérateurs.</p>
 
 <p>Voici un tableau résumant la priorité des opérateurs que nous avons vus :</p>
 
@@ -312,6 +312,17 @@ public class Main {
 | 5      | \|\|                      | a || b          |
 | 6      | ?:                        | a ? b : c       |
 | 7      | = += -= *= /= %=          | a = b + c       |
+
+Dans le cas où il s'agit de l'évaluation d'une valeur booléenne, Java évalue l'expression
+de manière paresseuse, en faisant le moins de travail possible.
+Il peut donc omettre l'évaluation d'une partie de l'expression. Par exemple, dans
+l'expresson `true || a`, Java va passer outre à l'évaluation de l'expression `a` puisque
+la réponse est nécessairement vraie.
+
+Utilisez l'application pour voir si vous avez compris.
+
+{{< webapp path="priority.html" >}}
+
 
 
 ## Exemple
@@ -361,6 +372,136 @@ public class Main {
     }
 }
 {{</inlineJava>}}
+
+## Les classes enveloppes des types primitifs
+
+Les <strong>classes enveloppes</strong> (ou « wrapper classes ») permettent de manipuler les types primitifs (int, double, boolean, etc.) comme des objets. Chaque type primitif possède une classe enveloppe correspondante : <code>Integer</code> pour <code>int</code>, <code>Double</code> pour <code>double</code>, <code>Boolean</code> pour <code>boolean</code>, etc.
+
+Exemples d’utilisation :
+
+```java  {style=github}
+// Création d’un Integer à partir d’un int
+int a = 5;
+Integer objA = Integer.valueOf(a);
+
+// Conversion automatique (autoboxing)
+Integer objB = 10; // Java convertit automatiquement int -> Integer
+
+// Récupérer la valeur primitive (unboxing)
+int b = objB; // Java convertit automatiquement Integer -> int
+
+
+// Méthodes utilitaires
+String s = "123";
+int n = Integer.parseInt(s); // Convertit une chaîne en int
+System.out.println(n + 1); // Affiche 124
+```
+Les classes enveloppes sont notamment utiles pour bénéficier de méthodes utilitaires (parsing, conversion, etc.). 
+Par exemple, les classes enveloppes fournissent des méthodes pratiques pour :
+- Convertir une chaîne de caractères en valeur numérique (parsing)
+- Convertir une valeur numérique en chaîne de caractères
+- Comparer des valeurs
+- Obtenir des constantes utiles (valeurs maximales, minimales, etc.)
+
+Exemples :
+
+```java  {style=github}
+// Parsing : convertir une chaîne en int
+String s = "123";
+int n = Integer.parseInt(s); // n vaut 123
+
+// Conversion inverse : int vers String
+int x = 42;
+String str = Integer.toString(x); // str vaut "42"
+
+// Comparaison
+int a = 5, b = 8;
+int res = Integer.compare(a, b); // renvoie -1 car a < b
+
+// Constantes utiles
+int max = Integer.MAX_VALUE;
+int min = Integer.MIN_VALUE;
+System.out.println("int max : " + max + ", int min : " + min);
+```
+
+Ces méthodes facilitent la manipulation et la conversion des données dans vos programmes Java.
+
+
+
+
+
+Elles peuvent représenter une valeur, mais une fois cette valeur assignée,
+elle peut pas être modifiée. Par exemple&nbsp;:
+
+```java  {style=github}
+Integer a = 5;
+a = a + 1; // Cela crée un nouvel objet Integer, l’ancien n’est pas modifié
+System.out.println(a); // Affiche 6
+```
+
+Ici, l’objet Integer initial contenant 5 n’est pas modifié : l’opération crée un nouvel objet contenant 6, et la variable a pointe vers ce nouvel objet. Les classes enveloppes sont donc immuables : leur valeur ne peut pas être changée après création.
+
+Pour comparer la valeur de deux objets issus de classes enveloppes (comme Integer, Double, etc.), il ne faut pas utiliser l’opérateur <code>==</code>, qui compare les références (adresses en mémoire), mais la méthode <code>equals()</code>, qui compare le contenu (la valeur).
+
+Exemple :
+
+```java  {style=github}
+Integer a = new Integer(5);
+Integer b = new Integer(5);
+System.out.println(a == b);      // false (références différentes)
+System.out.println(a.equals(b)); // true  (valeurs identiques)
+```
+
+Dans cet exemple, <code>a == b</code> est faux car ce sont deux objets distincts, mais <code>a.equals(b)</code> est vrai car ils contiennent la même valeur.
+
+## String et operateur '+'
+
+En Java, le type <code>String</code> représente une séquence de caractères. Les objets String sont <strong>immuables</strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation) crée en réalité un nouvel objet String.
+
+L’opérateur <code>+</code> permet de concaténer des chaînes facilement :
+
+```java  {style=github}
+String s1 = "Bonjour";
+String s2 = " le monde";
+String s3 = s1 + s2; // s3 vaut "Bonjour le monde"
+```
+
+Attention : pour comparer le contenu de deux chaînes, il ne faut pas utiliser <code>==</code> (qui compare les références), mais la méthode <code>equals()</code> :
+
+```java  {style=github}
+String a = "Java";
+String b = new String("Java");
+System.out.println(a == b);      // false (références différentes)
+System.out.println(a.equals(b)); // true  (contenu identique)
+```
+
+Pour tester si une chaîne commence ou se termine par un certain texte, on peut utiliser <code>startsWith()</code> et <code>endsWith()</code> :
+
+```java  {style=github}
+String phrase = "Bonjour le monde";
+System.out.println(phrase.startsWith("Bon")); // true
+System.out.println(phrase.endsWith("monde")); // true
+```
+
+Il existe aussi d’autres méthodes utiles comme <code>substring()</code> (extraire une sous-chaîne), <code>toUpperCase()</code>, <code>toLowerCase()</code>, <code>length()</code>, etc.
+
+
+On peut aussi concaténer une chaîne avec une valeur entière, un double ou tout autre type : Java convertit automatiquement la valeur en chaîne de caractères avant de faire la concaténation. Cela permet d’afficher facilement des résultats ou de construire dynamiquement des messages.
+
+Exemples :
+
+```java  {style=github}
+int age = 25;
+String message = "J'ai " + age + " ans."; // "J'ai 25 ans."
+
+double prix = 19.99;
+String ticket = "Prix : " + prix + " €"; // "Prix : 19.99 €"
+
+boolean ok = true;
+String etat = "Succès : " + ok; // "Succès : true"
+```
+
+Java convertit automatiquement les valeurs non String en chaîne lors de la concaténation avec l’opérateur <code>+</code> de gauche à droite.
 
 ## Exercices
 

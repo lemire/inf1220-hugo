@@ -1,0 +1,239 @@
+
+  <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 600px;">
+    <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 16px; text-align: center;">Calculateur d'expressions booléennes</h1>
+    <div style="margin-bottom: 16px;">
+      <label for="expression" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">Sélectionner ou entrer une expression</label>
+      <select id="expression" style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+        <option value="">Choisir un exemple...</option>
+        <option value="!A || A">!A || A</option>
+        <option value="A && B">A && B</option>
+        <option value="A || B">A || B</option>
+        <option value="!A && B">!A && B</option>
+        <option value="A || !B">A || !B</option>
+        <option value="!(A && B)">!(A && B)</option>
+        <option value="(A || B) && !A">(A || B) && !A</option>
+      </select>
+    </div>
+    <div style="margin-bottom: 16px;">
+      <input type="text" id="customExpression" placeholder="Ou taper votre expression (ex. A && !B)" style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+    </div>
+    <button id="calculate" style="width: 100%; background-color: #3b82f6; color: white; padding: 8px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Générer la table de vérité</button>
+    <div id="result" style="margin-top: 16px; font-size: 16px; color: #374151;"></div>
+  </div>
+
+  <script>
+    (function() {
+      const BooleanEvaluator = {
+        // Définit les opérateurs booléens
+        operators: {
+          '!': { precedence: 3, type: 'unary' },
+          '&&': { precedence: 2, type: 'binary' },
+          '||': { precedence: 1, type: 'binary' }
+        },
+
+        // Tokenise l'expression en variables, opérateurs et parenthèses
+        tokenizeExpression(expression) {
+          const tokens = [];
+          const regex = /(!|&&|\|\||\(|\))|([AB])/g;
+          let match;
+          while ((match = regex.exec(expression)) !== null) {
+            if (match[1]) {
+              tokens.push(match[1]);
+            } else if (match[2]) {
+              tokens.push(match[2]);
+            }
+          }
+          return tokens;
+        },
+
+        // Convertit l'expression en notation polonaise inversée (RPN)
+        toRPN(expression) {
+          if (!expression || typeof expression !== 'string') {
+            return [];
+          }
+          const tokens = this.tokenizeExpression(expression.replace(/\s+/g, ''));
+          const outputQueue = [];
+          const operatorStack = [];
+
+          for (const token of tokens) {
+            if (token === 'A' || token === 'B') {
+              outputQueue.push(token);
+            } else if (token === '(') {
+              operatorStack.push(token);
+            } else if (token === ')') {
+              while (operatorStack.length > 0 && operatorStack[operatorStack.length - 1] !== '(') {
+                outputQueue.push(operatorStack.pop());
+              }
+              if (operatorStack.length === 0 || operatorStack[operatorStack.length - 1] !== '(') {
+                throw new Error('Parenthèses mal assorties.');
+              }
+              operatorStack.pop();
+            } else if (this.operators[token]) {
+              while (
+                operatorStack.length > 0 &&
+                operatorStack[operatorStack.length - 1] !== '(' &&
+                this.operators[operatorStack[operatorStack.length - 1]] &&
+                this.operators[operatorStack[operatorStack.length - 1]].precedence >= this.operators[token].precedence
+              ) {
+                outputQueue.push(operatorStack.pop());
+              }
+              operatorStack.push(token);
+            }
+          }
+
+          while (operatorStack.length > 0) {
+            const op = operatorStack.pop();
+            if (op === '(' || op === ')') {
+              throw new Error('Parenthèses mal assorties.');
+            }
+            outputQueue.push(op);
+          }
+
+          return outputQueue;
+        },
+
+        // Évalue une expression RPN pour des valeurs données de A et B
+        evaluateRPN(rpn, values) {
+          const stack = [];
+          for (const token of rpn) {
+            if (token === 'A') {
+              stack.push(values.A);
+            } else if (token === 'B') {
+              stack.push(values.B);
+            } else if (this.operators[token]) {
+              if (this.operators[token].type === 'unary') {
+                if (stack.length < 1) {
+                  throw new Error(`Opérandes insuffisants pour l'opérateur '${token}'.`);
+                }
+                const operand = stack.pop();
+                if (token === '!') {
+                  stack.push(!operand);
+                }
+              } else {
+                if (stack.length < 2) {
+                  throw new Error(`Opérandes insuffisants pour l'opérateur '${token}'.`);
+                }
+                const b = stack.pop();
+                const a = stack.pop();
+                if (token === '&&') {
+                  stack.push(a && b);
+                } else if (token === '||') {
+                  stack.push(a || b);
+                }
+              }
+            }
+          }
+          if (stack.length !== 1) {
+            throw new Error('Expression mal formée.');
+          }
+          return stack[0];
+        },
+
+        // Génère la table de vérité
+        generateTruthTable(expression) {
+          if (!expression || !expression.trim()) {
+            return '<div style="color: #dc2626;">Erreur : veuillez entrer une expression valide.</div>';
+          }
+
+          let rpn;
+          try {
+            rpn = this.toRPN(expression);
+          } catch (e) {
+            return `<div style="color: #dc2626;">Erreur de l'expression : ${e.message}</div>`;
+          }
+
+          const combinations = [
+            { A: true, B: true },
+            { A: true, B: false },
+            { A: false, B: true },
+            { A: false, B: false }
+          ];
+
+          let html = '<h2 style="font-size: 20px; font-weight: bold; margin-bottom: 12px;">Tableau de vérité pour : ' + expression + '</h2>';
+          html += '<table style="width: 100%; border-collapse: collapse; margin-top: 8px;">';
+          html += '<thead>';
+          html += '<tr style="background-color: #e5e7eb;">';
+          html += '<th style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">A</th>';
+          html += '<th style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">B</th>';
+          html += '<th style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">Résultat</th>';
+          html += '</tr>';
+          html += '</thead>';
+          html += '<tbody>';
+
+          combinations.forEach((combo, index) => {
+            let result;
+            try {
+              result = this.evaluateRPN(rpn, combo);
+            } catch (e) {
+              return `<div style="color: #dc2626;">Erreur d'évaluation : ${e.message}</div>`;
+            }
+            html += `<tr id="boolcalc-row-${index}" style="opacity: 0; transition: opacity 0.5s ease, background-color 0.5s ease;">`;
+            html += `<td style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">${combo.A ? 'vrai' : 'faux'}</td>`;
+            html += `<td style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">${combo.B ? 'vrai' : 'faux'}</td>`;
+            html += `<td style="border: 1px solid #d1d5db; padding: 8px; text-align: center;">${result ? 'vrai' : 'faux'}</td>`;
+            html += '</tr>';
+          });
+
+          html += '</tbody>';
+          html += '</table>';
+          return { html, rowCount: combinations.length };
+        },
+
+        // Anime l'affichage des lignes du tableau
+        animateRows(count) {
+          for (let i = 0; i < count; i++) {
+            setTimeout(() => {
+              const row = document.getElementById(`boolcalc-row-${i}`);
+              if (row) {
+                row.style.opacity = '1';
+                row.style.backgroundColor = '#bfdbfe';
+                setTimeout(() => {
+                  row.style.backgroundColor = 'transparent';
+                }, 1000);
+              }
+            }, i * 1000);
+          }
+        },
+
+        // Initialise l'application
+        init() {
+          const select = document.getElementById('expression');
+          const input = document.getElementById('customExpression');
+          const button = document.getElementById('calculate');
+          const resultDiv = document.getElementById('result');
+
+          if (!select || !input || !button || !resultDiv) {
+            console.error('Erreur : un ou plusieurs éléments DOM sont manquants.');
+            resultDiv.innerHTML = '<div style="color: #dc2626;">Erreur : échec de l\'initialisation de l\'application.</div>';
+            return;
+          }
+
+          select.addEventListener('change', () => {
+            input.value = select.value;
+            resultDiv.innerHTML = '';
+          });
+
+          button.addEventListener('click', () => {
+            const expression = input.value.trim() || select.value.trim();
+            const result = this.generateTruthTable(expression);
+            if (typeof result === 'string') {
+              resultDiv.innerHTML = result;
+            } else {
+              resultDiv.innerHTML = result.html;
+              this.animateRows(result.rowCount);
+            }
+          });
+
+          if (select.value) {
+            input.value = select.value;
+          }
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => BooleanEvaluator.init());
+      } else {
+        BooleanEvaluator.init();
+      }
+    })();
+  </script>
