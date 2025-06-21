@@ -9,6 +9,41 @@ L’idée de programmer des machines remonte au 19e siècle, époque marquée pa
 
 L’avènement des ordinateurs modernes dans les années 1940-1950 marque un tournant décisif. Les premiers langages de programmation apparaissent pour répondre aux besoins de calcul scientifique, commercial et logique. Parmi eux, FORTRAN (1954) facilite les calculs scientifiques, LISP (1958) introduit des concepts d’intelligence artificielle et de traitement symbolique, et COBOL (1959) s’impose dans la gestion des données commerciales. Ces langages, bien que rudimentaires comparés aux standards actuels, posent les bases des paradigmes de programmation modernes.
 
+Le langage ALGOL (Algorithmic Language) est un langage de programmation développé à la fin des années 1950, conçu pour exprimer des algorithmes de manière claire et structurée. Créé par un comité international de chercheurs, dont John Backus et Peter Naur, ALGOL a été introduit avec sa première version, ALGOL 58, suivie par ALGOL 60, qui est devenue la plus influente. Son objectif était de fournir un langage universel pour décrire des algorithmes, à la fois pour la recherche scientifique et l’enseignement, tout en servant de base pour le développement de compilateurs ALGOL se distingue par plusieurs innovations. Il introduit une syntaxe formelle, décrite par la notation de Backus-Naur (BNF), qui permet de définir précisément la structure du langage. Il propose des concepts comme la programmation structurée, avec des blocs de code délimités, des boucles et des conditionnelles bien définies, ainsi que la récursivité. Contrairement à des langages comme FORTRAN, orientés vers le calcul numérique, ALGOL privilégie la lisibilité et la généralité, ce qui en fait un précurseur des langages modernes. Bien qu’ALGOL n’ait pas été largement adopté dans l’industrie, il a eu une influence majeure. Des langages comme Pascal, C et Simula en sont directement inspirés. Simula, en particulier, a étendu ALGOL en y intégrant les concepts de classes et d’objets, posant les bases de la programmation orientée objet. ALGOL reste ainsi une étape clé dans l’histoire de l’informatique, reconnu pour sa rigueur conceptuelle et son impact sur la conception des langages de programmation.
+
+
+<details>
+<summary>Notation de Backus-Naur </summary>
+
+
+La notation de Backus-Naur (BNF) est une méthode formelle pour décrire la syntaxe d’un langage, qu’il s’agisse de langages de programmation, de protocoles ou de formats de données. Développée par John Backus et Peter Naur pour le langage ALGOL 60, elle définit les règles grammaticales d’un langage de manière précise et concise. BNF utilise des règles de production pour spécifier comment des symboles (terminaux et non-terminaux) peuvent être combinés pour former des constructions valides. Elle est essentielle pour concevoir des compilateurs et des analyseurs syntaxiques.
+
+- **Symboles terminaux** : Éléments de base du langage, comme des mots-clés, des opérateurs ou des caractères (par exemple, `if`, `+`, `1`).
+- **Symboles non-terminaux** : Catégories ou abstractions représentant des structures du langage (par exemple, `<expression>`, `<instruction>`).
+- **Règles de production** : Définissent comment un symbole non-terminal peut être remplacé par une combinaison de terminaux et/ou non-terminaux, sous la forme `<symbole> ::= définition`.
+- **Méta-symboles** : BNF utilise `::=` pour indiquer une définition et `|` pour exprimer des alternatives.
+
+Une règle s’écrit ainsi :
+```
+<nom_du_symbole> ::= séquence_de_symboles | autre_séquence
+```
+- Le côté gauche (`<nom_du_symbole>`) est un non-terminal.
+- Le côté droit décrit les combinaisons possibles de terminaux et non-terminaux.
+- Le symbole `|` sépare les alternatives.
+
+Par exemple, pour définir la syntaxe d’un nombre entier (composé de chiffres de 0 à 9) :
+```
+<chiffre> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<nombre_entier> ::= <chiffre> | <chiffre> <nombre_entier>
+```
+- `<chiffre>` est un symbole terminal parmi `"0"`, `"1"`, ..., `"9"`.
+- `<nombre_entier>` est soit un `<chiffre>`, soit un `<chiffre>` suivi d’un autre `<nombre_entier>` (permettant des nombres comme `42` ou `123`).
+- La règle est récursive.
+
+BNF permet de définir la syntaxe des langages de manière non ambiguë, facilitant la création d’analyseurs syntaxiques pour les compilateurs. Elle est utilisée pour des formats de données (par exemple, JSON) ou des protocoles réseau. Des variantes comme EBNF (Extended BNF) ajoutent des fonctionnalités comme la répétition ou les expressions optionnelles.
+
+</details>
+
 Au fil des décennies, les langages évoluent pour offrir plus d’abstraction, de flexibilité et d’accessibilité. Dans les années 1980 et 1990, des langages comme C++ (1983), Python (1991), Java (1995), JavaScript (1995) et PHP (1995) voient le jour, chacun répondant à des besoins spécifiques : performance pour C++, simplicité pour Python, portabilité pour Java, interactivité web pour JavaScript, ou développement web dynamique pour PHP. Aujourd’hui, ces langages dominent l’industrie, comme le montre le classement 2017 de l’IEEE Spectrum, qui reflète leur popularité et leur polyvalence.
 
 Tous ces langages partagent un objectif commun : permettre aux programmeurs de décrire des solutions à des problèmes en s’éloignant progressivement des contraintes du matériel. Pour comprendre leur rôle, il est essentiel de se pencher sur le fonctionnement des ordinateurs.
@@ -16,6 +51,10 @@ Tous ces langages partagent un objectif commun : permettre aux programmeurs de d
 ## Programmation orientée objet
 
 La programmation orientée objet trouve ses origines dans les années 1960 avec le langage Simula, développé en Norvège par Ole-Johan Dahl et Kristen Nygaard. Simula introduit les concepts de classes et d’objets pour modéliser des entités du monde réel, ouvrant la voie à une nouvelle façon de structurer les programmes.
+
+Ole-Johan Dahl et Kristen Nygaard ont développé Simula dans les années 1960 avec pour motivation principale de créer un langage capable de modéliser et de simuler des systèmes complexes du monde réel. Travaillant au Centre de calcul norvégien à Oslo, ils cherchaient à résoudre des problèmes liés à la simulation de processus, notamment dans des domaines comme la recherche opérationnelle et la gestion de systèmes dynamiques. Leur objectif était de concevoir un outil permettant de représenter des entités concrètes (comme des objets physiques ou des processus) et leurs interactions de manière intuitive.
+
+Simula, initialement conçu comme une extension du langage ALGOL, a introduit les concepts de classes et d’objets pour répondre à ce besoin. Nygaard, en particulier, était motivé par la nécessité de modéliser des systèmes où de multiples entités agissaient simultanément, comme dans les simulations de flux de trafic ou de réseaux de communication. Dahl, quant à lui, apportait une rigueur mathématique pour structurer ces idées dans un cadre formel. Leur vision était de rendre la programmation plus proche de la pensée humaine, en représentant les concepts du monde réel directement dans le code, ce qui a jeté les bases de la programmation orientée objet.
 
 Dans les années 1980, le langage Smalltalk, conçu par Alan Kay et son équipe chez Xerox PARC, popularise la programmation orientée objet en mettant l’accent sur l’interaction entre objets, l’héritage et le message passing. Smalltalk influence profondément la conception des langages modernes.
 
@@ -488,6 +527,9 @@ Vidéo (optionnelle)&nbsp;:
 
 {{< youtube id="IT__Nrr3PNI" >}}
 
+
+
+*Définition.* La programmation orientée objet est un paradigme de programmation qui organise le code autour d’« objets » représentant des entités du monde réel ou conceptuel. Chaque objet regroupe des données (attributs) et des comportements (méthodes) et interagit avec d’autres objets via des messages ou des appels de méthodes.
 
 ## Résumé de l’architecture des ordinateurs et de l’abstraction des langages
 

@@ -9,6 +9,22 @@ Le langage Java possède toutes les stuctures de données nécessaires.
 Faisons-en rapidement le tour.
 
 
+### Allocation de mémoire et ramasse-miettes
+
+Lorsque vous créez un objet  en Java, la mémoire nécessaire est automatiquement allouée dans une zone appelée le « tas » (heap). Contrairement à certains langages comme C ou C++, il n’est pas nécessaire de libérer explicitement la mémoire des objets qui ne sont plus utilisés. Java intègre un mécanisme appelé ramasse-miettes (ou garbage collector) qui se charge de détecter et de libérer automatiquement la mémoire occupée par les objets devenus inaccessibles. Il partage
+cette caractéristique avec d'autres langages comme C#, JavaScript et Python.
+
+Le ramasse-miettes fonctionne en arrière-plan : il identifie les objets qui ne sont plus référencés par aucune variable ou structure de données, puis récupère la mémoire correspondante pour la rendre disponible à de nouveaux objets. Cela simplifie la gestion de la mémoire et réduit les risques de fuites de mémoire (memory leaks) ou d’erreurs de libération (comme les double free en C).
+
+Cependant, il est important de comprendre que la libération de la mémoire n’est pas instantanée : le ramasse-miettes intervient à des moments choisis par la machine virtuelle Java (JVM), ce qui peut parfois entraîner de légères pauses dans l’exécution du programme. Pour la plupart des applications, ce fonctionnement automatique est un avantage, car il permet de se concentrer sur la logique du programme sans se soucier de la gestion manuelle de la mémoire.
+
+L’allocation de mémoire en Java est automatique et la libération est assurée par le ramasse-miettes, ce qui contribue à la robustesse et à la sécurité des programmes Java.
+
+Par contre, le ramasse-miettes a des inconvénients : il peut provoquer des pauses imprévisibles dans l’exécution du programme, appelées « pauses de collecte », lorsque la JVM décide de libérer la mémoire. Ces pauses sont généralement courtes, mais peuvent devenir perceptibles dans des applications nécessitant une grande réactivité (jeux, systèmes temps réel, etc.). De plus, le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, ce qui peut compliquer l’optimisation des performances dans certains cas particuliers. Enfin, le ramasse-miettes consomme lui-même des ressources processeur, ce qui peut avoir un effet sur l’efficacité globale du programme.
+
+Malgré l'existence du ramasse-miettes, il faut donc tenter de minimiser l'allocation de mémoire.
+Il faut éviter de créer des objets temporaires quand on peut réutiliser un objet déjà alloué.
+
 ## String
 
 En Java, le type <code>String</code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type <code>String</code> sont <strong>immuables</strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet <code>String</code> en mémoire, sans changer l’original.
@@ -23,6 +39,25 @@ s = s + " le monde"; // Crée un nouvel objet String
 Ici, la chaîne "Bonjour" n’est pas modifiée : une nouvelle chaîne "Bonjour le monde" est créée et la variable <code>s</code> pointe vers ce nouvel objet. L’ancienne chaîne reste inchangée (et sera éventuellement libérée par le ramasse-miettes).
 
 Cette immuabilité rend les <code>String</code> sûres et efficaces pour le partage, mais peut entraîner des problèmes de performance si on fait beaucoup de modifications : dans ce cas, il vaut mieux utiliser <code>StringBuilder</code>.
+
+
+En Java, les chaînes de caractères (<code>String</code>) sont représentées en mémoire selon l’encodage UTF-16. Cela signifie que chaque élément du tableau interne d’une chaîne est un « code unit » de 16 bits (un <code>char</code> Java), mais tous les caractères Unicode ne tiennent pas forcément dans un seul <code>char</code>.
+
+L’UTF-16 est un encodage qui permet de représenter tous les caractères Unicode. La plupart des caractères courants (latin, accentués, etc.) sont codés sur un seul <code>char</code> (16 bits), mais certains caractères spéciaux ou emojis, appelés « supplémentaires », nécessitent deux <code>char</code> consécutifs (appelés une paire de substitution ou surrogate pair).
+
+La méthode <code>charAt(int index)</code> retourne le <code>char</code> à la position donnée dans la chaîne, mais ce <code>char</code> ne correspond pas toujours à un caractère complet pour l’utilisateur. Si la chaîne contient un caractère supplémentaire (hors du plan multilingue de base), <code>charAt</code> peut retourner seulement une partie de ce caractère (un des deux éléments de la paire de substitution).
+
+Pour manipuler correctement les caractères Unicode, il faut utiliser les méthodes <code>codePointAt</code>, <code>codePoints()</code> ou les classes de l’API <code>Character</code>, qui tiennent compte des paires de substitution et permettent de traiter chaque caractère Unicode comme une entité logique.
+
+```java  {style=github}
+String s = "A😊B";
+System.out.println(s.length());      // Affiche 4 (car 😊 occupe deux char)
+System.out.println(s.charAt(1));     // Affiche un char de la paire surrogate, pas le smiley complet
+System.out.println(s.codePointAt(1));// Affiche le code Unicode complet du smiley
+```
+
+Ainsi, il faut être vigilant lors du traitement de chaînes contenant des emojis ou des caractères spéciaux, car la longueur d’une chaîne (length) et l’accès par <code>charAt</code> ne correspondent pas toujours au nombre réel de caractères.
+
 
 ## StringBuilder
 
@@ -854,6 +889,8 @@ La complexité algorithmique mesure le coût (en temps ou en espace) des opérat
 - Les structures comme HashMap sont très performantes pour la recherche par clé, mais moins adaptées pour le parcours ordonné.
 
 En résumé, le choix de la structure de données influence fortement la performance des algorithmes. Il est essentiel de comprendre la complexité des opérations pour écrire du code efficace, surtout lorsque les ensembles de données deviennent volumineux.
+
+
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les structures de données(optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
@@ -869,5 +906,4 @@ En résumé, le choix de la structure de données influence fortement la perform
 {{< youtube id="ov3d4s5w_m0" >}}
 
 {{< youtube id="eXYLsxQvIF4" >}}
-
 

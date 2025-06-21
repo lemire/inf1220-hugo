@@ -146,3 +146,97 @@ Que se passe-t-il si on place plusieurs blocs <code>catch</code> à la suite d�
 <p>Les blocs <code>catch</code> sont évalués dans l’ordre d’apparition. Le premier bloc dont le type correspond à l’exception levée sera exécuté ; les autres seront ignorés. Il faut placer les exceptions les plus spécifiques avant les plus générales.</p>
 </details>
 
+## Question 11
+
+Qu’est-ce que le ramasse-miettes (garbage collector) en Java ? Quels sont ses avantages et ses inconvénients par rapport à la gestion manuelle de la mémoire ?
+
+<details><summary>Réponse</summary>
+<p>Le ramasse-miettes (garbage collector) est un mécanisme automatique de la machine virtuelle Java (JVM) qui libère la mémoire occupée par les objets qui ne sont plus utilisés (inaccessibles). Il permet d’éviter les fuites de mémoire et les erreurs de libération (comme les doubles libérations en C), ce qui rend la gestion de la mémoire plus sûre et plus simple pour le programmeur.</p>
+<p><b>Avantages :</b> simplifie la programmation, réduit les risques d’erreurs, améliore la robustesse et la sécurité des programmes.</p>
+<p><b>Inconvénients :</b> le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, et le ramasse-miettes peut provoquer des pauses imprévisibles dans l’exécution du programme, ce qui peut être gênant pour les applications temps réel ou très sensibles aux performances.</p>
+</details>
+
+## Question 12
+
+Comment peut-on limiter le surcoût du ramasse-miettes (garbage collector) dans une application Java ? Donnez quelques bonnes pratiques pour réduire son impact sur les performances.
+
+<details><summary>Réponse</summary>
+<p>Pour limiter le surcoût du ramasse-miettes, il est conseillé de :</p>
+<ul>
+<li>Réduire la création d’objets temporaires inutiles (par exemple, réutiliser les objets ou utiliser des types primitifs quand c’est possible).</li>
+<li>Privilégier les structures de données adaptées à l’usage (par exemple, préférer <code>StringBuilder</code> à la concaténation répétée de <code>String</code>).</li>
+<li>Limiter la taille des objets et des collections pour éviter une consommation excessive de mémoire.</li>
+<li>Pour les applications critiques, ajuster les paramètres de la JVM (options de tuning du garbage collector) selon le profil d’utilisation.</li>
+</ul>
+<p>En appliquant ces bonnes pratiques, on réduit la pression sur le ramasse-miettes et on améliore la réactivité et la performance globale de l’application.</p>
+</details>
+
+## Question 13
+
+Qu’est-ce que l’encodage UTF-16 et pourquoi Java l’utilise-t-il pour représenter les chaînes de caractères (<code>String</code>) ?
+
+<details><summary>Réponse</summary>
+<p>L’UTF-16 est un encodage qui permet de représenter tous les caractères Unicode à l’aide de séquences de 16 bits (un ou deux <code>char</code>). Java utilise l’UTF-16 pour garantir la compatibilité avec l’ensemble des caractères internationaux, y compris les symboles, emojis et alphabets non latins. Cela permet de manipuler du texte multilingue de façon uniforme, mais implique que certains caractères occupent deux <code>char</code> au lieu d’un seul.</p>
+</details>
+
+## Question 14
+
+Expliquez pourquoi la méthode <code>charAt(int index)</code> sur une <code>String</code> Java ne retourne pas toujours un caractère complet pour l’utilisateur. Donnez un exemple.
+
+<details><summary>Réponse</summary>
+<p>En UTF-16, certains caractères Unicode (comme les emojis ou des symboles rares) sont codés sur deux <code>char</code> (une paire de substitution). La méthode <code>charAt</code> retourne un seul <code>char</code> à l’index donné, qui peut ne représenter qu’une partie d’un caractère complet. Par exemple :</p>
+
+```java  {style=github}
+String s = "A😊B";
+System.out.println(s.charAt(1)); // Retourne un char de la paire, pas le smiley complet
+```
+</details>
+
+## Question 15
+
+Comment peut-on parcourir correctement tous les caractères Unicode d’une <code>String</code> en Java, même ceux codés sur deux <code>char</code> ?
+
+<details><summary>Réponse</summary>
+<p>Pour parcourir tous les caractères Unicode (code points) d’une chaîne, il faut utiliser les méthodes <code>codePoints()</code> ou <code>codePointAt()</code> de la classe <code>String</code>, ou la classe <code>Character</code>. Par exemple :</p>
+
+```java  {style=github}
+String s = "A😊B";
+s.codePoints().forEach(cp -> System.out.println(Character.toChars(cp)));
+```
+<p>Cette approche permet de traiter chaque caractère Unicode comme une entité logique, même s’il est codé sur deux <code>char</code>.</p>
+</details>
+
+## Question 16
+
+Combien de mémoire une <code>String</code> Java utilise-t-elle par caractère ? Cette valeur est-elle toujours la même pour tous les caractères ?
+
+<details><summary>Réponse</summary>
+<p>En Java, chaque élément du tableau interne d’une <code>String</code> occupe 2 octets (16 bits), car il s’agit d’un <code>char</code> en UTF-16. Pour la plupart des caractères courants (latin, accentués, etc.), un caractère occupe donc 2 octets. Cependant, certains caractères Unicode (comme les emojis ou des symboles rares) nécessitent deux <code>char</code> (soit 4 octets) pour être représentés, car ils sont codés sur une paire de substitution (surrogate pair). Ainsi, la mémoire utilisée par caractère visible peut varier selon le caractère.</p>
+</details>
+
+## Question 17
+
+Écrivez un programme Java qui prend une chaîne de caractères en entrée et affiche la valeur numérique (code Unicode) de chaque <code>char</code> de la chaîne.
+
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.util.Scanner;
+
+public class AfficheCodes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Entrez une chaîne : ");
+        String s = sc.nextLine();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            System.out.println("Caractère : '" + c + "' | Code Unicode : " + (int) c);
+        }
+    }
+}
+```
+
+Ce programme lit une chaîne au clavier et affiche, pour chaque <code>char</code>, sa valeur numérique (code Unicode en décimal).
+
+</details>
+

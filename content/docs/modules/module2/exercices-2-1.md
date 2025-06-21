@@ -609,3 +609,16 @@ Que vaut l’expression <code>new Integer(3) == new Integer(3)</code> en Java 
 System.out.println(new Integer(3).equals(new Integer(3))); // true
 ```
 </details>
+
+
+
+
+### Question 35
+
+Quels sont, selon vous, les principaux avantages et inconvénients de Java par rapport à d’autres langages de programmation modernes ?
+
+<details>
+<summary>Réponse</summary>
+<p><b>Avantages :</b> portabilité, gestion automatique de la mémoire (garbage collector), vaste écosystème de bibliothèques et frameworks, documentation abondante.</p>
+<p><b>Inconvénients :</b> performances parfois inférieures au code natif (C/C++), syntaxe parfois verbeuse, nécessité d’installer la JVM.</p>
+</details>

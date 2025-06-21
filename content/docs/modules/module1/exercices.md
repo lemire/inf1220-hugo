@@ -561,6 +561,50 @@ Un algorithme de tri efficace comme le tri fusion (merge sort) a une complexité
 Une complexité en \( O(n \log n) \) signifie que le nombre d’opérations croît plus vite que linéairement, mais beaucoup moins vite que quadratiquement. Par exemple, le tri fusion (merge sort) divise le tableau en deux à chaque étape (logarithmique) et traite chaque élément à chaque niveau de division (linéaire), d’où le \( n \log n \). Pour de grands tableaux, c’est beaucoup plus rapide qu’un tri naïf en \( O(n^2) \).
 </details>
 
+### Exercice 21
+
+Alan Kay est considéré comme l’un des pères de la programmation orientée objet. Quelles étaient ses motivations principales lorsqu’il a conçu ce paradigme ? En quoi sa vision différait-elle de l’utilisation courante de la programmation orientée objet aujourd’hui ? Résumez brièvement ses objectifs et l’esprit original de la programmation orientée objet selon Kay.
+
+<details>
+<summary>Réponse</summary>
+<p>Alan Kay a conçu la programmation orientée objet pour faciliter la création de systèmes logiciels modulaires, flexibles et évolutifs, inspirés par la biologie et la communication entre objets autonomes. Son objectif principal était de permettre à chaque « objet » d’être responsable de son propre état et de communiquer avec d’autres objets uniquement via des messages, favorisant ainsi l’encapsulation et l’indépendance des composants.</p>
+<p>Pour Kay, la programmation orientée objet devait avant tout encourager l’émergence de systèmes dynamiques, adaptatifs et faciles à modifier, plutôt que de se limiter à la simple hiérarchie de classes et à l’héritage. Il insistait sur l’importance de la communication par messages et sur la capacité à faire évoluer les programmes sans tout réécrire.</p>
+<p>De nos jours, la programmation orientée objet est souvent réduite à l’organisation du code et des données, alors que la vision originale de Kay mettait l’accent sur la modularité, la flexibilité et l’autonomie des objets. Sa conception visait à rendre la programmation plus naturelle, intuitive et proche du fonctionnement des systèmes vivants.</p>
+</details>
+
+### Exercice 22
+
+Ole-Johan Dahl et Kristen Nygaard sont les créateurs du premier langage orienté objet, Simula. Quelles étaient leurs motivations principales lors de la création de ce langage ? Expliquez en quoi leur approche a influencé la programmation moderne.
+
+<details>
+<summary>Réponse</summary>
+<p>Dahl et Nygaard ont conçu Simula pour faciliter la modélisation et la simulation de systèmes complexes, comme des réseaux, des usines ou des processus sociaux. Leur motivation était de représenter chaque entité du système par un « objet » autonome, regroupant données et comportements, afin de refléter la réalité de manière plus naturelle et modulaire.</p>
+<p>Ils voulaient permettre l’encapsulation, la réutilisation du code grâce à l’héritage, et la création de structures hiérarchiques. Cette approche a posé les bases de la programmation orientée objet moderne, en rendant la conception de logiciels plus flexible, évolutive et adaptée à la complexité des systèmes réels.</p>
+</details>
+
+### Exercice 23
+
+Qui est James Gosling et quel a été son rôle dans la création du langage Java ? Quelles étaient les motivations principales derrière la conception de Java ?
+
+<details>
+<summary>Réponse</summary>
+<p>James Gosling est un informaticien canadien considéré comme le principal créateur du langage Java, développé chez Sun Microsystems dans les années 1990. Son objectif était de concevoir un langage portable, sécurisé, simple et adapté aux systèmes embarqués et aux réseaux. Java devait permettre d’écrire un programme une seule fois et de l’exécuter partout (« Write Once, Run Anywhere »), grâce à la machine virtuelle Java (JVM).</p>
+</details>
+
+### Exercice 24
+
+Citez trois domaines ou secteurs industriels où Java est largement utilisé aujourd’hui. Expliquez brièvement pourquoi Java est apprécié dans ces contextes.
+
+<details>
+<summary>Réponse</summary>
+<p>Java est largement utilisé dans :</p>
+<ul>
+<li><b>Le développement d’applications d’entreprise</b> (banques, assurances, télécommunications), grâce à sa robustesse, sa sécurité et la richesse de ses bibliothèques.</li>
+<li><b>Le développement d’applications mobiles</b> (notamment Android), car Java est le langage principal pour Android et bénéficie d’un vaste écosystème.</li>
+<li><b>Les systèmes embarqués et l’Internet des objets (IoT)</b>, où la portabilité et la fiabilité de Java sont des atouts majeurs.</li>
+</ul>
+</details>
+
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
 

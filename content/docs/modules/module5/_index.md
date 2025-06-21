@@ -7,9 +7,7 @@ bookCollapseSection: true
 
 # Module 5
 
-Le module 5 initie à la programmation orientée objet en explorant des concepts fondamentaux : l’héritage, les interfaces et le polymorphisme. L’héritage permet de créer des classes dérivées qui réutilisent et étendent les propriétés et comportements de classes existantes. Les interfaces permettent de définir des contrats (ensembles de méthodes) que plusieurs classes peuvent implémenter, sans imposer d’héritage de l’implémentation. Elles favorisent la flexibilité, la réutilisation du code et facilitent le polymorphisme, car une même interface peut être partagée par des classes n’ayant pas de lien hiérarchique direct.
-
- favorisant ainsi une conception modulaire et efficace du code. Le polymorphisme, quant à lui, offre la possibilité d’utiliser des objets de différentes classes de manière uniforme, en s’appuyant sur des interfaces ou des classes parentes. À travers des exemples pratiques issus du manuel Java pas à pas et du site du cours, ce module enseigne comment appliquer ces principes pour construire des programmes Java structurés, flexibles et maintenables.
+Le module 5 initie à la programmation orientée objet en explorant des concepts fondamentaux : l’héritage, les interfaces et le polymorphisme. L’héritage permet de créer des classes dérivées qui réutilisent et étendent les propriétés et comportements de classes existantes. Les interfaces permettent de définir des contrats (ensembles de méthodes) que plusieurs classes peuvent implémenter, sans imposer d’héritage de l’implémentation. Elles favorisent la flexibilité, la réutilisation du code, car une même interface peut être partagée par des classes n’ayant pas de lien hiérarchique direct. Le polymorphisme, quant à lui, offre la possibilité d’utiliser des objets de différentes classes de manière uniforme, en s’appuyant sur des interfaces ou des classes parentes. À travers des exemples pratiques issus du manuel Java pas à pas et du site du cours, ce module enseigne comment appliquer ces principes pour construire des programmes Java structurés, flexibles et maintenables.
 
 
 ## Objectifs du module
