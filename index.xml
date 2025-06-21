@@ -158,7 +158,18 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
 &lt;p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 
 nous trouvons des erreurs.&lt;/p>
 &lt;p>&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site&lt;/a>. Nous apprécions toujours vos commentaires constructifs.&lt;/p>
-&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
+&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Développement Web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
+ Développement Web en Java
+ &lt;a class="anchor" href="#d%c3%a9veloppement-web-en-java">#&lt;/a>
+&lt;/h1>
+&lt;p>Le développement web en Java repose sur l’utilisation de technologies et de frameworks
+ermettant de créer des applications accessibles via un navigateur. Java est largement
+utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse de son écosystème.&lt;/p>
+&lt;h2 id="concepts-de-base">
+ Concepts de base
+ &lt;a class="anchor" href="#concepts-de-base">#&lt;/a>
+&lt;/h2>
+&lt;p>Un serveur web est un programme qui reçoit les requêtes des clients (navigateurs) et renvoie des réponses (pages HTML, données JSON, etc.). Le protocole de communication qui permet l’échange de données entre le navigateur (client) et le serveur web est le HTTP. Toutes les requêtes et réponses web transitent via HTTP ou HTTPS (version sécurisée).&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
  Exercices sur les classes, les variables, les types et les opérateurs
  &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
 &lt;/h1>
