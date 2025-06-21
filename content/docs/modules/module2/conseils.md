@@ -169,6 +169,47 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
+Avec les versions récentes de Java, je recommande d'utiliser MarkDown pour les 
+commentaires, comme dans cet exemple&nbsp;:
+
+```java {style=github}
+/**
+ * # Exemple
+ *
+ * Ceci est un commentaire en  **Markdown**.
+ *
+ * - Partie 1
+ * - Partie 2
+ * 
+ * [Ceci est un lien](http://www.exemple.com/)
+ */
+public class Example {
+    // Class implementation
+}
+```
+
+Markdown est un langage de balisage léger conçu pour formater du texte de manière simple et lisible, tout en permettant une conversion facile vers du HTML. Il a été créé en 2004 par John Gruber, avec l’aide d’Aaron Swartz, dans le but de rendre l’écriture de documents structurés accessible à tous, sans complexité technique.
+John Gruber, blogueur et développeur américain, a développé Markdown pour répondre au besoin d’un format de texte qui soit à la fois facile à lire en brut et simple à convertir en HTML pour le web. Aaron Swartz, programmeur et militant de l’Internet, a contribué à l’implémentation du premier convertisseur Markdown. Le nom « Markdown » évoque l’idée de « réduire » (mark down) la complexité du balisage traditionnel.
+
+
+Markdown permet de structurer un texte avec des titres, des listes, des liens, des images, des citations, du code, etc., en utilisant une syntaxe intuitive :
+
+- **Titres :** Utilisation du symbole `#` (un ou plusieurs) en début de ligne.
+- **Listes :** Listes à puces avec `-`, `*` ou `+`, listes numérotées avec des chiffres suivis d’un point.
+- **Liens :** `[texte du lien](URL)`
+- **Images :** `![texte alternatif](URL)`
+- **Texte en gras :** `**gras**` ou `__gras__`
+- **Texte en italique :** `*italique*` ou `_italique_`
+- **Citations :** `> citation`
+
+Markdown est largement utilisé pour la documentation, les fichiers README, les blogs, et de nombreux outils collaboratifs (GitHub, GitLab, forums, etc.). Sa simplicité et sa portabilité en font un standard de facto pour la rédaction technique et pédagogique.
+
+Testez votre compréhension du MarkDown avec l'outil suivant.
+
+{{<webapp path="markdown.html">}}
+
+
+
 ## Organisation des classes
 Une classe Java bien organisée suit un ordre logique : constantes, attributs,
  constructeurs, méthodes publiques, puis méthodes privées. Chaque section est 
