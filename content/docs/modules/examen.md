@@ -138,7 +138,7 @@ Qui puis-je contacter si j’ai des questions?
 ## Rétroaction sur le cours
 
 N'oubliez pas que nous tenons compte de votre opinion. Si vous avez des critiques
-constructives, [remplissez le formulaire à cet effet]({{< relref "erreurs.md" >}}).
+constructives, [remplissez le formulaire à cet effet]({{< relref "docs/erreurs.md" >}}).
 
 
 
@@ -146,7 +146,10 @@ constructives, [remplissez le formulaire à cet effet]({{< relref "erreurs.md" >
 
 Si vous avez aimé le cours...
 
+- Parlez du cours autour de vous, laissez des remarques positives en ligne.
 - [Consultez la page professeur](https://www.teluq.ca/siteweb/univ/dlemire.html) et les autres cours qu'il a conçu.
 - Si vous avez un compte sur GitHub, [suivez-y le professeur](https://github.com/lemire). (Bouton  *follow*.)
+- Si vous lisez l'anglais, [abonnez-vous au blog du professeur](https://lemire.me/blog/).
+- Vous pouvez suivre le professeur sur [X](https://x.com/lemire).
 - [Laissez une évaluation positive sur la page du manuel chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
-- Parlez-en autour de vous, laissez des remarques positifs en ligne.
+- [Consultez les autres livres écrits par le professeur](https://www.amazon.ca/stores/Daniel-Lemire/author/B0CR7YMZT2)
