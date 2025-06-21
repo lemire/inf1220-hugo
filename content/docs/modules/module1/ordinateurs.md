@@ -13,7 +13,7 @@ Le langage ALGOL (Algorithmic Language) est un langage de programmation dévelop
 
 
 <details>
-<summary>Notation de Backus-Naur </summary>
+<summary>Notation de Backus-Naur</summary>
 
 
 La notation de Backus-Naur (BNF) est une méthode formelle pour décrire la syntaxe d’un langage, qu’il s’agisse de langages de programmation, de protocoles ou de formats de données. Développée par John Backus et Peter Naur pour le langage ALGOL 60, elle définit les règles grammaticales d’un langage de manière précise et concise. BNF utilise des règles de production pour spécifier comment des symboles (terminaux et non-terminaux) peuvent être combinés pour former des constructions valides. Elle est essentielle pour concevoir des compilateurs et des analyseurs syntaxiques.
@@ -582,3 +582,4 @@ Les temps d’accès à la mémoire ou d’exécution d’instructions sont souv
 
 Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 
+La vitesse de la lumière dans le vide est d’environ 299 792 458 mètres par seconde (environ 300 000 km/s). C’est la vitesse maximale à laquelle l’information ou l’énergie peut se déplacer dans l’univers selon la physique moderne. La lumière parcourt environ 29,98 centimètres (soit presque 30 cm) en une nanoseconde dans le vide. Autrement dit, en une nanoseconde (1 ns = 10⁻⁹ seconde), la lumière se déplace d’environ 30 cm.

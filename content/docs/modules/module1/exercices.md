@@ -605,6 +605,37 @@ Citez trois domaines ou secteurs industriels où Java est largement utilisé auj
 </ul>
 </details>
 
+### Exercice 25
+
+Qu’est-ce que la notation de Backus-Naur (BNF) ? À quoi sert-elle en informatique ? Donnez un exemple simple de BNF décrivant la syntaxe d’une expression arithmétique composée de chiffres et de l’opérateur +.
+
+<details>
+<summary>Réponse</summary>
+<p>La notation de Backus-Naur (BNF) est une méthode formelle pour décrire la syntaxe des langages de programmation et des langages formels. Elle permet de spécifier les règles de formation des expressions valides dans un langage, en utilisant des symboles non terminaux, des symboles terminaux et des règles de production.</p>
+<p>La BNF est largement utilisée pour définir la grammaire des langages de programmation, des protocoles ou des formats de données.</p>
+<p><b>Exemple de BNF pour une expression arithmétique simple :</b></p>
+
+<pre>
+&lt;expression&gt; ::= &lt;chiffre&gt; | &lt;expression&gt; "+" &lt;chiffre&gt;
+&lt;chiffre&gt; ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+</pre>
+
+<p>Cela décrit une expression composée d’un ou plusieurs chiffres séparés par des +.</p>
+</details>
+
+### Exercice 26
+
+Mon ordinateur roule à une fréquence de 3 GHz. À tous les cycles, il exécute ses opérations.
+Quelle distance est-ce que la vitesse de la lumière traverse pendant un cycle&nbsp;?
+
+<details>
+<summary>Réponse</summary>
+<p>À 3 GHz, un cycle d’horloge dure :</p>
+<p>1 / 3 000 000 000 = 0,333... nanoseconde (ns) par cycle.</p>
+<p>La lumière parcourt environ 30 cm (0,3 mètre) en 1 ns. Donc, en 0,333 ns, elle parcourt :</p>
+<p>30 cm × 0,333... ≈ 10 cm.</p>
+<p><b>Réponse :</b> Pendant un cycle d’horloge à 3 GHz, la lumière parcourt environ 10 centimètres dans le vide.</p>
+</details>
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
 
