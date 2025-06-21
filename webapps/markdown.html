@@ -1,0 +1,54 @@
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+
+  <div id="markdown-app" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <textarea id="markdown-input" placeholder="Entrez votre texte Markdown ici..." style="width: 100%; min-height: 200px; padding: 10px; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; resize: vertical; box-sizing: border-box;"></textarea>
+    <div id="markdown-output" style="width: 100%; min-height: 200px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #f9f9f9; overflow: auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6;"></div>
+  </div>
+  <script>
+    (function() {
+      // Encapsuler dans une IIFE pour éviter la pollution de l'espace global
+      const appContainer = document.getElementById('markdown-app');
+      if (!appContainer) return;
+
+      const input = document.getElementById('markdown-input');
+      const output = document.getElementById('markdown-output');
+
+      // Configurer marked avec des options sécurisées
+      marked.setOptions({
+        breaks: true,
+        gfm: true
+      });
+
+      // Fonction pour mettre à jour l'aperçu
+      function updatePreview() {
+        const markdownText = input.value;
+        const rawHtml = marked.parse(markdownText);
+        const sanitizedHtml = DOMPurify.sanitize(rawHtml);
+        output.innerHTML = sanitizedHtml;
+
+        // Appliquer des styles en ligne au contenu généré pour éviter les conflits
+        output.querySelectorAll('*').forEach(element => {
+          element.style.margin = '0';
+          element.style.padding = '0';
+          element.style.boxSizing = 'border-box';
+          element.style.fontFamily = 'Arial, sans-serif';
+          element.style.lineHeight = '1.6';
+        });
+        output.querySelectorAll('h1').forEach(el => { el.style.fontSize = '2em'; el.style.marginBottom = '0.5em'; });
+        output.querySelectorAll('h2').forEach(el => { el.style.fontSize = '1.5em'; el.style.marginBottom = '0.5em'; });
+        output.querySelectorAll('p').forEach(el => { el.style.marginBottom = '1em'; });
+        output.querySelectorAll('ul, ol').forEach(el => { el.style.paddingLeft = '20px'; el.style.marginBottom = '1em'; });
+        output.querySelectorAll('li').forEach(el => { el.style.marginBottom = '0.5em'; });
+        output.querySelectorAll('a').forEach(el => { el.style.color = '#007bff'; el.style.textDecoration = 'underline'; });
+        output.querySelectorAll('code').forEach(el => { el.style.background = '#f0f0f0'; el.style.padding = '2px 4px'; el.style.borderRadius = '3px'; });
+        output.querySelectorAll('pre').forEach(el => { el.style.background = '#f0f0f0'; el.style.padding = '10px'; el.style.borderRadius = '4px'; el.style.overflowX = 'auto'; });
+      }
+
+      // Écouter les changements dans la textarea
+      input.addEventListener('input', updatePreview);
+
+      // Initialiser l'aperçu
+      updatePreview();
+    })();
+  </script>
