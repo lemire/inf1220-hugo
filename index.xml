@@ -173,11 +173,12 @@ nous trouvons des erreurs.&lt;/p>
 &lt;/h1>
 &lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
 Faisons-en rapidement le tour.&lt;/p>
-&lt;h2 id="string">
- String
- &lt;a class="anchor" href="#string">#&lt;/a>
-&lt;/h2>
-&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Travail noté 4</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</guid><description>&lt;h1 id="travail-noté-4---les-flux-dentrées-et-de-sorties">
+&lt;h3 id="allocation-de-mémoire-et-ramasse-miettes">
+ Allocation de mémoire et ramasse-miettes
+ &lt;a class="anchor" href="#allocation-de-m%c3%a9moire-et-ramasse-miettes">#&lt;/a>
+&lt;/h3>
+&lt;p>Lorsque vous créez un objet en Java, la mémoire nécessaire est automatiquement allouée dans une zone appelée le « tas » (heap). Contrairement à certains langages comme C ou C++, il n’est pas nécessaire de libérer explicitement la mémoire des objets qui ne sont plus utilisés. Java intègre un mécanisme appelé ramasse-miettes (ou garbage collector) qui se charge de détecter et de libérer automatiquement la mémoire occupée par les objets devenus inaccessibles. Il partage
+cette caractéristique avec d&amp;rsquo;autres langages comme C#, JavaScript et Python.&lt;/p></description></item><item><title>Travail noté 4</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/travail-note-4/</guid><description>&lt;h1 id="travail-noté-4---les-flux-dentrées-et-de-sorties">
  Travail noté 4 - Les flux d&amp;rsquo;entrées et de sorties
  &lt;a class="anchor" href="#travail-not%c3%a9-4---les-flux-dentr%c3%a9es-et-de-sorties">#&lt;/a>
 &lt;/h1>
