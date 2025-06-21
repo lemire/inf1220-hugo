@@ -478,6 +478,10 @@ Aujourd’hui, la programmation orientée objet est enseignée dans la plupart d
 
 Notre façon de programmer continuer d'évoluer. Aujourd'hui, plusieurs des idées fortes de la méthode orientée objet (comme l'héritage) sont vues comme parfois trop contraignantes. Néanmoins, les langages populaires comme Python, C#, Java, etc. relèvent de l'orienté objet.
 
+
+*Définition.* La programmation orientée objet est un paradigme de programmation qui organise le code autour d’« objets » représentant des entités du monde réel ou conceptuel. Chaque objet regroupe des données (attributs) et des comportements (méthodes) et interagit avec d’autres objets via des messages ou des appels de méthodes.
+
+
 ## Java
 
 Java a été créé au début des années 1990 par James Gosling et son équipe chez Sun Microsystems. Le projet, initialement nommé « Oak », visait à développer un langage portable pour les appareils électroniques embarqués. En 1995, le langage est officiellement lancé sous le nom de Java, avec la promesse « écrire une fois, exécuter partout » (Write Once, Run Anywhere), grâce à la machine virtuelle Java (JVM) qui permet d’exécuter le même code sur différentes plateformes.
@@ -489,6 +493,9 @@ Java connaît un succès rapide, d’abord dans le développement d’applets po
 Le langage évolue régulièrement : Java 5 introduit les génériques et les annotations, Java 8 apporte les expressions lambda et l’API Stream, Java 9 les modules, et les versions récentes (Java 17, 21…) continuent d’ajouter des fonctionnalités modernes (pattern matching, records, virtual threads…).
 
 En 2010, Oracle rachète Sun Microsystems et devient le principal responsable du développement de Java. Aujourd’hui, Java reste l’un des langages les plus utilisés au monde, soutenu par une vaste communauté et de nombreux outils open source. Il est omniprésent dans l’industrie, l’enseignement, le développement mobile (Android), le cloud et l’Internet des objets.
+
+Le langage Java est en pleine évolution. Certaines des techniques enseignées dans notre cours
+ne fonctionnent pas avec des versions précédentes du Java.
 
 
 
@@ -528,8 +535,6 @@ Vidéo (optionnelle)&nbsp;:
 {{< youtube id="IT__Nrr3PNI" >}}
 
 
-
-*Définition.* La programmation orientée objet est un paradigme de programmation qui organise le code autour d’« objets » représentant des entités du monde réel ou conceptuel. Chaque objet regroupe des données (attributs) et des comportements (méthodes) et interagit avec d’autres objets via des messages ou des appels de méthodes.
 
 ## Résumé de l’architecture des ordinateurs et de l’abstraction des langages
 

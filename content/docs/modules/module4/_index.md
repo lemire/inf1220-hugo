@@ -12,6 +12,10 @@ Le module 4 se consacre aux concepts d’entrées et de sorties, des composantes
 
 Ce module met également l’accent sur la gestion efficace des flux d’entrées et de sorties, en introduisant des notions telles que la lecture et l’écriture de fichiers. Les apprenants découvrent comment manipuler des données textuelles ou numériques pour répondre à des besoins spécifiques, tout en apprenant à gérer les erreurs potentielles liées à ces opérations. En s’appuyant sur des exemples concrets, ce module renforce la compréhension des mécanismes d’interaction entre un programme et son environnement, permettant ainsi de développer des applications plus robustes et polyvalentes. Ces compétences s’intègrent aux connaissances acquises dans les modules précédents, consolidant une approche pratique et structurée de la programmation.
 
+Ce module comprend désormais une section dédiée au développement web avec Java. Vous y découvrirez les bases du protocole HTTP, la structure des pages HTML, l’utilisation de JavaScript et de JSON, ainsi que la création d’applications web dynamiques côté serveur avec Javalin et Thymeleaf. Une activité complète vous guide pas à pas dans la réalisation d’un jeu web interactif, de la conception du code Java à la mise en forme avec CSS, en passant par la gestion des routes, des sessions et des échanges de données.
+
+Vous apprendrez également à utiliser Maven pour automatiser la compilation et le déploiement de vos applications web Java, et à structurer vos projets pour faciliter la maintenance et la collaboration. Cette nouvelle section vous permettra de relier les notions d’entrées/sorties à la programmation web moderne, en mettant l’accent sur l’interaction entre le serveur, le navigateur et l’utilisateur.
+
 ## Objectifs du module
 
 À la fin de ce module, vous serez capable de :
