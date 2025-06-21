@@ -258,7 +258,9 @@ Grâce à Maven, il suffit d’une commande (`mvn package` ou `mvn exec:java`) p
 Je vous invite maintenant à [consulter l'application web complète](https://github.com/lemire/webdemo-inf1220) en ligne. [Vous pouvez la charger sur votre machine](https://github.com/lemire/webdemo-inf1220/archive/refs/heads/main.zip) et la déployer en suivant
 les instructions.
 
-
+Vous devriez pouvoir utiliser l'application web sur votre PC. Comment la rendre disponible sur le
+web&nbsp;? Je recommande d'utiliser une approche par *container Docker*. Malheureusement, ce
+sujet excède le cadre du présent cours.
 
 ## Questions de révision
 
