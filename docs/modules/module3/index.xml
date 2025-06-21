@@ -11,13 +11,8 @@
  Les structures de contrôle
  &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
 &lt;/h1>
-&lt;p>Les structures de contrôle permettent de contrôler des variables puis d'effectuer des actions basées sur le résultat du contrôle. Dans le langage Java, à l'exception de l'opération de contrôle à trois opérandes (vu précédemment dans le cours), il existe 2 formes de structure de contrôle : le if-else et le switch-case.&lt;/p>
-&lt;p>&lt;a id="intro" name="section1">&lt;/a>&lt;/p>
-&lt;h2 id="le-bloc-dinstructions">
- Le bloc d&amp;rsquo;instructions
- &lt;a class="anchor" href="#le-bloc-dinstructions">#&lt;/a>
-&lt;/h2>
-&lt;p dir="ltr" style="margin-right: 0px; ">Un bloc d'instructions est un groupe d'instructions rédigées entre deux accolades (&lt;strong>{ }&lt;/strong>). Il exprime l'ordre d'exécution des différentes instructions. Il définit également le domaine de visibilité des variables incluses dans la déclaration. Un bloc d'instructions peut apparaître partout dans l'instruction. &lt;br />Les instructions, comme les blocs d'instructions, peuvent être identifiées par une étiquette. Cette étiquette précédera l'instruction, ou fera partie du bloc d'instructions, et sera suivie du caractère &lt;strong>:&lt;/strong>&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+&lt;p>Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong>if-else&lt;/strong> et &lt;strong>switch-case&lt;/strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p>
+&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
  Les structures itératives
  &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
 &lt;/h1>
