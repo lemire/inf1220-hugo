@@ -6,20 +6,28 @@ weight: 2
 
 # Les structures de contrôle
 
-<p>Les structures de contrôle permettent de contrôler des variables puis d'effectuer des actions basées sur le résultat du contrôle. Dans le langage Java, à l'exception de l'opération de contrôle à trois opérandes (vu précédemment dans le cours), il existe 2 formes de structure de contrôle : le if-else et le switch-case.</p>
+Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont <strong>if-else</strong> et <strong>switch-case</strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).
 
-<p><a id="intro" name="section1"></a></p>
+Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.
 
 ## Le bloc d'instructions
 
-<p dir="ltr" style="margin-right: 0px; ">Un bloc d'instructions est un groupe d'instructions rédigées entre deux accolades (<strong>{ }</strong>). Il exprime l'ordre d'exécution des différentes instructions. Il définit également le domaine de visibilité des variables incluses dans la déclaration. Un bloc d'instructions peut apparaître partout dans l'instruction. <br />Les instructions, comme les blocs d'instructions, peuvent être identifiées par une étiquette. Cette étiquette précédera l'instruction, ou fera partie du bloc d'instructions, et sera suivie du caractère <strong>:</strong></p> 
-<blockquote dir="ltr" style="margin-right: 0px; "> 
-<p dir="ltr" style="margin-right: 0px; "><br />Exemple: <br /><em>bloc1 : {</em></p> 
-<p dir="ltr" style="margin-right: 0px; "><em>instruction_1 ;</em> <br /> <em>instruction_2 ;</em></p> 
-<p dir="ltr" style="margin-right: 0px; ">...</p> 
-<p dir="ltr" style="margin-right: 0px; "><em>instruction_n;</em><br /> <em>}</em></p> 
-</blockquote> 
+Un <strong>bloc d'instructions</strong> est un ensemble d’instructions regroupées entre deux accolades (<code>{ }</code>). Il permet de définir clairement quelles instructions doivent être exécutées ensemble, par exemple dans un <code>if</code> ou une boucle. Les variables déclarées à l’intérieur d’un bloc ne sont visibles que dans ce bloc (on parle de portée ou « scope »).
 
+On peut aussi donner un nom (une étiquette) à un bloc d’instructions, ce qui peut servir dans certains cas avancés (par exemple avec <code>break</code> ou <code>continue</code> étiquetés).
+
+Exemple :
+
+```java  {style=github}
+bloc1: {
+    instruction_1;
+    instruction_2;
+    // ...
+    instruction_n;
+}
+```
+
+Ce bloc nommé <code>bloc1</code> regroupe plusieurs instructions qui seront exécutées dans l’ordre.
 
 <p><a id="intro" name="section2"></a></p>
 

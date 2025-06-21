@@ -107,7 +107,6 @@ public class PNGGradientExtractor extends GradientExtractor {
         
         // Lit le fichier et charge
         loadImage(file);
-        
     }
     
     public void loadImage(File file) {        
@@ -880,5 +879,78 @@ public class Exemple {
 }
 ```
 
+</details>
+
+## Question 21
+<p>Expliquez le principe de substitution de Liskov (Liskov Substitution Principle, LSP) en programmation orientée objet. Donnez un exemple simple en Java illustrant une violation de ce principe.</p>
+
+<details><summary>Réponse</summary>
+<p>Le principe de substitution de Liskov stipule que toute classe dérivée doit pouvoir être utilisée à la place de sa classe parente sans altérer le bon fonctionnement du programme. Autrement dit, les objets d’une sous-classe doivent pouvoir remplacer les objets de la superclasse sans que le code client ait à se soucier des différences.</p>
+
+<p><b>Exemple de violation :</b></p>
+
+```java {style=github}
+class Rectangle {
+    protected int largeur, hauteur;
+    public void setLargeur(int l) { largeur = l; }
+    public void setHauteur(int h) { hauteur = h; }
+    public int getAire() { return largeur * hauteur; }
+}
+
+class Carre extends Rectangle {
+    @Override
+    public void setLargeur(int l) { largeur = hauteur = l; }
+    @Override
+    public void setHauteur(int h) { largeur = hauteur = h; }
+}
+
+// Utilisation
+Rectangle r = new Carre();
+r.setLargeur(5);
+r.setHauteur(10);
+System.out.println(r.getAire()); // Affiche 100, mais on s’attendrait à 50 pour un rectangle
+```
+
+<p>Ici, la classe <code>Carre</code> (carré) viole le principe de substitution de Liskov car elle modifie le comportement attendu de la classe <code>Rectangle</code> : un carré impose que la largeur et la hauteur soient toujours égales, ce qui n’est pas le cas d’un rectangle. Le code client utilisant un <code>Rectangle</code> ne peut plus raisonner correctement si on lui passe un <code>Carre</code>.</p>
+</details>
+
+## Question 22
+<p>Expliquez comment l’utilisation d’une interface peut simplifier le code en Java. Donnez un exemple concret où l’interface permet d’écrire du code plus flexible et réutilisable.</p>
+
+<details><summary>Réponse</summary>
+<p>L’utilisation d’une interface permet de définir un contrat commun à plusieurs classes, sans imposer d’héritage d’implémentation. Cela favorise la flexibilité, la réutilisation et le découplage du code. Grâce aux interfaces, on peut écrire des méthodes ou des classes qui manipulent des objets de types différents, à condition qu’ils respectent le même contrat (interface).</p>
+
+<p><b>Exemple :</b></p>
+
+```java {style=github}
+interface Affichable {
+    void afficher();
+}
+
+class Personne implements Affichable {
+    public void afficher() {
+        System.out.println("Je suis une personne.");
+    }
+}
+
+class Voiture implements Affichable {
+    public void afficher() {
+        System.out.println("Je suis une voiture.");
+    }
+}
+
+// Méthode générique
+void afficherTout(Affichable[] objets) {
+    for (Affichable obj : objets) {
+        obj.afficher();
+    }
+}
+
+// Utilisation
+Affichable[] tab = { new Personne(), new Voiture() };
+afficherTout(tab);
+```
+
+<p>Ici, la méthode <code>afficherTout</code> peut traiter n’importe quel objet qui implémente l’interface <code>Affichable</code>, ce qui rend le code plus générique, flexible et facile à étendre.</p>
 </details>
 

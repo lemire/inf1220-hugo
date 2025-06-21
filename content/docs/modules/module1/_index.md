@@ -6,6 +6,14 @@ bookCollapseSection: true
 
 # Module 1
 
-Un algorithme est une méthode structurée composée d'une série d'instructions précises destinées à résoudre un problème ou à réaliser une tâche. À l’image d’une recette de cuisine, il repose sur des étapes ordonnées de manière logique pour aboutir à un résultat attendu, comme un plat préparé. Dans ce module, nous explorerons la conception d’algorithmes simples et leur transcription en pseudocode, un langage clair et accessible qui permet de décrire ces étapes sans recourir à la syntaxe d’un langage de programmation spécifique.
+Le module 1 pose les bases de l’algorithmique et du raisonnement informatique. Il vous initie à la notion d’algorithme : une suite d’instructions précises permettant de résoudre un problème, à l’image d’une recette de cuisine. Vous apprendrez à décrire ces solutions en pseudocode, un langage intermédiaire entre le français et la programmation, pour exprimer clairement chaque étape sans vous soucier de la syntaxe d’un langage particulier.
 
-L’objectif de ce module est de vous familiariser avec les fondamentaux des algorithmes et leur importance en informatique. Vous apprendrez à reconnaître leurs composants essentiels, tels que les entrées, les sorties et les instructions, tout en développant la capacité à rédiger des algorithmes simples en pseudocode en français. À travers des exemples concrets tirés du quotidien, vous serez en mesure d’appliquer ces concepts pour résoudre des problèmes pratiques de manière efficace.
+Au fil du module, vous découvrirez :
+
+- Comment identifier les composants essentiels d’un algorithme (entrées, sorties, instructions, conditions, boucles).
+- Comment rédiger des algorithmes simples en pseudocode, en français.
+- Les bases de la complexité algorithmique (notation grand-O, comparaison d’approches).
+- L’importance de la rigueur, de la précision et de la pratique pour progresser.
+- Un aperçu historique des langages de programmation et de l’évolution des ordinateurs.
+
+De nombreux exemples concrets et exercices d’autoévaluation vous permettront d’appliquer ces concepts et de développer votre capacité à raisonner de façon logique et méthodique, compétence essentielle pour la suite du cours et pour toute démarche informatique.

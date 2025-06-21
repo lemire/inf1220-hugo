@@ -29,3 +29,20 @@ Pour devenir un bon programmeur...
 - Il faut lire du code : il faut explorer des exemples pour comprendre comment les autres structurent leurs programmes.
 - Il faut écrire un code lisible : Il faut utiliser des noms de variables clairs et il faut commenter son code pour qu’il soit facile à comprendre.
 - Il faut accepter les erreurs : les échecs sont des opportunités d’apprentissage, car ils font partie intégrante du processus.
+
+## Objectifs du module
+
+Ce module a pour objectif de vous donner une compréhension solide des bases de la programmation en Java, en insistant sur :
+
+- La distinction entre les différents types de données (primitifs et objets), leur rôle et leur manipulation.
+- La déclaration, l’utilisation et la portée des variables (locales, de classe, d’instance).
+- L’utilisation des opérateurs et des classes enveloppes pour manipuler les données.
+- La structuration du code à l’aide de méthodes (fonctions), leur définition, leur appel et leur utilité pour la réutilisation et la clarté du programme.
+- Les fondements de la programmation orientée objet : classes, instances, constructeurs, et premières notions d’organisation du code.
+- La lecture, l’écriture et la compréhension de programmes Java simples, en s’appuyant sur des exemples concrets et des exercices pratiques.
+- Le développement de l’autonomie dans la résolution de problèmes, la lecture de code et la correction d’erreurs courantes.
+
+À l’issue de ce module, vous serez capable de :
+- Écrire et comprendre des programmes Java simples utilisant variables, types, opérateurs, méthodes et classes.
+- Structurer votre code de façon claire et modulaire.
+- Appliquer les bonnes pratiques de base pour progresser efficacement en programmation.
