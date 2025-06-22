@@ -954,3 +954,53 @@ afficherTout(tab);
 <p>Ici, la méthode <code>afficherTout</code> peut traiter n’importe quel objet qui implémente l’interface <code>Affichable</code>, ce qui rend le code plus générique, flexible et facile à étendre.</p>
 </details>
 
+## Question 23
+Expliquez la différence entre l’opérateur `==` et la méthode `equals()` en Java. Donnez un exemple où l’utilisation de l’un ou de l’autre change le résultat.
+
+<details><summary>Réponse</summary>
+<p>L’opérateur `==` compare les références (adresses mémoire) pour les objets, tandis que la méthode `equals()` compare le contenu (la valeur logique) si elle est redéfinie. Pour les types primitifs, `==` compare directement les valeurs.</p>
+
+<p><b>Exemple :</b></p>
+
+```java
+Point p1 = new Point(1, 2);
+Point p2 = new Point(1, 2);
+System.out.println(p1 == p2);      // false (références différentes)
+System.out.println(p1.equals(p2)); // true  (contenu identique)
+```
+</details>
+
+## Question 24
+Qu’est-ce que la méthode `hashCode()` ? Pourquoi est-il important de la redéfinir lorsqu’on redéfinit `equals()` ?
+
+<details><summary>Réponse</summary>
+<p>La méthode `hashCode()` retourne un entier représentant le code de hachage d’un objet. Elle est utilisée dans les structures de données comme `HashMap` ou `HashSet` pour organiser et retrouver rapidement les objets. Si deux objets sont égaux selon `equals()`, ils doivent obligatoirement avoir le même `hashCode()`. Sinon, les collections basées sur le hachage ne fonctionneront pas correctement.</p>
+</details>
+
+## Question 25
+Peut-on utiliser les méthodes `equals()` et `hashCode()` avec des types primitifs comme `int` ou `double` ? Expliquez pourquoi.
+
+<details><summary>Réponse</summary>
+<p>Non, les types primitifs (`int`, `double`, etc.) ne sont pas des objets et ne possèdent donc pas de méthodes comme `equals()` ou `hashCode()`. Ces méthodes existent uniquement pour les objets. Pour comparer des valeurs primitives, on utilise directement les opérateurs (`==`, `!=`, etc.). Si on veut utiliser des méthodes comme `equals()` ou `hashCode()` avec des valeurs numériques, il faut utiliser les classes enveloppes (`Integer`, `Double`, etc.).</p>
+</details>
+
+## Question 26
+Qu’est-ce qu’un record en Java ? Expliquez ses avantages et donnez un exemple d’utilisation.
+
+<details><summary>Réponse</summary>
+<p>Un <b>record</b> est un type spécial de classe introduit en Java 16 pour représenter des données immuables de façon concise. Un record déclare automatiquement les champs, le constructeur, les méthodes `equals()`, `hashCode()` et `toString()`, ce qui simplifie la création de classes « porteuses de données » (data classes). Les records sont particulièrement utiles pour les objets dont l’identité est définie uniquement par leurs valeurs, comme les points, coordonnées, ou résultats de calculs.</p>
+
+<p><b>Exemple :</b></p>
+
+```java
+record Point(int x, int y) {}
+
+Point p1 = new Point(1, 2);
+Point p2 = new Point(1, 2);
+System.out.println(p1.equals(p2)); // true
+System.out.println(p1);            // Point[x=1, y=2]
+```
+
+<p>Ici, il n’est pas nécessaire d’écrire le constructeur ou de redéfinir `equals()` et `hashCode()` : tout est généré automatiquement par le compilateur.</p>
+</details>
+

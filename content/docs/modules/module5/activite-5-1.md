@@ -308,6 +308,15 @@ public class Sudoku extends Jeu {
 <p>Les classes abstraites permettent de créer des concepts de haut-niveau, ne pouvant être instanciés et rendant obligatoire la conception de sous-classes pour leur utilisation. Les classes abstraites sont donc souvent utilisées dans des API ou autres bibliothèques de code.  Afin de rendre possible la redéfinition de méthode par héritage, les méthodes d'une superclasse doivent être déclarées avec le modificateur <em>abstract</em>. Ainsi, une classe abstraite est une classe qui contient des méthodes abstraites. L'intérêt de ceci est de rendre la classe « héritable ». <br />La sous-classe peut implémenter ou non les méthodes abstraites héritées. Si elles ne les implémentent pas, elle est elle-même une classe abstraite. <br />Une sous-classe dérivant d'une classe non abstraite peut définir des nouvelles méthodes abstraites, et par le fait même, devenir à leur tour abstraite.</p> 
 <p>Remarque : Nous ne pouvons instancier des objets d'une classe abstraite. Ce sont des classes qui sont destinées à subir le processus d'héritage.</p> 
 
+
+
+## Object
+
+La classe `Object` est la superclasse de toutes les classes en Java. Cela signifie que chaque classe, même si elle n’hérite pas explicitement d’une autre classe, hérite automatiquement de `Object`. Cette classe fournit des méthodes fondamentales que tous les objets Java possèdent, comme `toString()` (pour obtenir une représentation textuelle de l’objet), `equals()` (pour comparer deux objets), et `hashCode()` (pour obtenir un code de hachage). Grâce à cette hiérarchie, il est possible de manipuler des collections d’objets de types variés, d’utiliser des tableaux de type `Object[]`, ou de passer n’importe quel objet à des méthodes qui attendent un paramètre de type `Object`.
+
+Comprendre le rôle de `Object` est essentiel pour maîtriser l’héritage, le polymorphisme et la gestion des collections en Java. Par exemple, lorsqu’on utilise des structures de données génériques ou qu’on souhaite sérialiser des objets, la connaissance des méthodes héritées de `Object` permet d’écrire du code plus flexible et réutilisable. Il est aussi courant de redéfinir certaines de ces méthodes dans ses propres classes pour adapter leur comportement aux besoins spécifiques de l’application.
+
+
 ## Utilisation du modificateur final
 <p>Il arrive que nous ne souhaitions pas offrir une possibilité d'héritage à une certaine classe. Dans ce cas, nous la définissons avec le mot clé <em>final</em>. <br />Si le mot clé <em>final</em> est utilisé dans la définition d'une méthode, celle-ci ne pourra plus être redéfinie par héritage. <br />Enfin, nous définissons une constante en écrivant <em>final</em> dans la déclaration de la variable.<br/> Voici un exemple d'utilisation d'une classe abstraite. Ici, la méthode analyse est abstraite et oblige donc les sous-classes à implémenter celle-ci :</p> 
 
@@ -740,6 +749,108 @@ Ici, la méthode faireCrier accepte un Animal : on peut lui passer un Chien sa
 |              | Lorsqu'un membre de la classe n'est précédé d'aucun modificateur, il est accessible à toutes les classes du même package que la classe qui le définit. |
 
 
+
+## Différence entre types primitifs et objets
+
+En Java, il existe deux grandes catégories de types : les types primitifs (comme `int`, `double`, `char`, `boolean`, etc.) et les types objets (toutes les classes, y compris `String`, `Integer`, et toute classe que vous définissez). Les types primitifs représentent des valeurs simples et ne sont pas des objets : ils ne possèdent pas de méthodes et sont stockés directement en mémoire. Par exemple, une variable `int` contient directement la valeur numérique. À l’inverse, les objets sont des instances de classes, stockées sous forme de références (pointeurs) en mémoire. Une variable de type objet ne contient pas l’objet lui-même, mais une référence vers celui-ci. Cela a des conséquences sur la manipulation, la comparaison et la gestion de la mémoire. Par exemple, les collections Java (`ArrayList`, etc.) ne peuvent contenir que des objets, pas des types primitifs : il faut alors utiliser les classes enveloppes (`Integer` pour `int`, `Double` pour `double`, etc.).
+
+## Différence entre == et equals
+
+En Java, l’opérateur `==` compare les références pour les objets, c’est-à-dire s’il s’agit exactement du même objet en mémoire. Pour les types primitifs, `==` compare directement les valeurs (par exemple, `3 == 3` est vrai). Pour les objets, `==` ne compare pas le contenu, mais l’adresse mémoire. Pour comparer le contenu de deux objets, il faut utiliser la méthode `equals()`, qui peut être redéfinie dans chaque classe pour définir ce que signifie « égalité » pour ce type d’objet. 
+
+Prenons l’exemple d’une classe `Point` :
+
+```java
+class Point {
+    int x, y;
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Point other = (Point) obj;
+        return x == other.x && y == other.y;
+    }
+}
+
+Point p1 = new Point(1, 2);
+Point p2 = new Point(1, 2);
+System.out.println(p1 == p2);      // false (références différentes)
+System.out.println(p1.equals(p2)); // true  (contenu identique)
+```
+
+Ici, `p1` et `p2` sont deux objets différents en mémoire, donc `p1 == p2` est faux. Mais comme ils ont les mêmes coordonnées et que la méthode `equals` a été redéfinie, `p1.equals(p2)` est vrai.
+
+**À propos des records :**
+
+Depuis Java 16, les records simplifient la création de classes immuables destinées à contenir des données. Un record déclare automatiquement les méthodes `equals()`, `hashCode()` et `toString()` en fonction de ses composants. Ainsi, deux records avec les mêmes valeurs sont considérés comme égaux avec `equals`, et leur `hashCode` est cohérent avec leur contenu, sans avoir à redéfinir ces méthodes manuellement.
+
+Exemple :
+
+```java
+record Point(int x, int y) {}
+
+Point p1 = new Point(1, 2);
+Point p2 = new Point(1, 2);
+System.out.println(p1.equals(p2)); // true
+System.out.println(p1.hashCode() == p2.hashCode()); // true
+```
+
+## hashCode et son utilisation
+
+La méthode `hashCode()` est définie dans la classe `Object` et doit être redéfinie dans toute classe dont les instances seront utilisées comme clés dans des structures de données comme les tables de hachage (`HashMap`, `HashSet`). Le code de hachage est un entier calculé à partir du contenu de l’objet, permettant de répartir efficacement les objets dans des « buckets » pour accélérer la recherche. La règle fondamentale est : si deux objets sont égaux selon `equals()`, ils doivent avoir le même `hashCode()`. En revanche, deux objets avec le même `hashCode()` ne sont pas forcément égaux. Si vous redéfinissez `equals()`, il est donc essentiel de redéfinir aussi `hashCode()` pour garantir le bon fonctionnement des collections basées sur le hachage.
+
+Exemple :
+
+```java
+@Override
+public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    MaClasse autre = (MaClasse) obj;
+    return this.champ == autre.champ;
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(champ);
+}
+```
+
+## Les classes enveloppes
+
+En Java, les types primitifs (`int`, `double`, `char`, etc.) ne sont pas des objets et ne possèdent donc pas de méthodes. Pour pouvoir manipuler ces valeurs comme des objets (par exemple, dans les collections comme `ArrayList`), Java fournit des classes enveloppes (wrapper classes) pour chaque type primitif : `Integer` pour `int`, `Double` pour `double`, `Character` pour `char`, etc. Ces classes permettent d’encapsuler une valeur primitive dans un objet et offrent des méthodes utilitaires (conversion, comparaison, parsing, etc.).
+
+Par exemple :
+
+```java
+int a = 5;
+Integer b = Integer.valueOf(a); // Conversion d'un int en Integer
+ArrayList<Integer> liste = new ArrayList<>();
+liste.add(a); // Autoboxing automatique
+```
+
+Depuis Java 5, l’autoboxing et l’unboxing permettent de convertir automatiquement entre types primitifs et classes enveloppes :
+- Autoboxing : conversion automatique d’un type primitif vers sa classe enveloppe (`int` → `Integer`)
+- Unboxing : conversion automatique d’une classe enveloppe vers son type primitif (`Integer` → `int`)
+
+Les classes enveloppes sont aussi utiles pour utiliser les méthodes `equals()` et `hashCode()` sur des valeurs numériques, ou pour gérer la valeur spéciale `null` (impossible avec un type primitif).
+
+**Résumé des principales classes enveloppes :**
+
+| Type primitif | Classe enveloppe |
+|---------------|-----------------|
+| boolean       | Boolean         |
+| byte          | Byte            |
+| char          | Character       |
+| short         | Short           |
+| int           | Integer         |
+| long          | Long            |
+| float         | Float           |
+| double        | Double          |
 
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 

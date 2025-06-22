@@ -824,7 +824,7 @@ public class ExempleLambda {
 Ce code définit une liste de mots, utilise une lambda pour trier les éléments par longueur croissante, puis affiche le résultat. La lambda (a, b) -> a.length() - b.length() remplace une implémentation complète de Comparator.
 
 
-Les lambdas sont utilisés à de multiples fins en Java. L’API Stream en Java pour effectuer un filtrage fonctionnel sur une liste de nombres. Considérons le prochain exemple. Le premier concept clé est la création d’une liste immuable avec Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8). Cette méthode transforme un tableau de nombres en une List fixe, qui ne peut pas être modifiée (par exemple, pas d’ajout ou de suppression d’éléments). Cette liste, nommée nombres, sert de point de départ pour le traitement. Ensuite, l’opération de filtrage repose sur l’API Stream, introduite en Java 8, qui permet de manipuler des collections de manière déclarative, en exprimant ce qu’on veut obtenir (ici, les nombres pairs) plutôt que comment le faire (comme avec une boucle traditionnelle). Ce paradigme fonctionnel rend le code plus concis et expressif.
+Les lambdas sont utilisés à de multiples fins en Java. L’API Stream en Java pour effectuer un filtrage fonctionnel sur une liste de nombres. Considérons le prochain exemple. Le premier concept clé est la création d’une liste immuable avec Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8). Cette méthode transforme un tableau de nombres en une List fixe, qui ne peut pas être modifiée (par exemple, pas d’ajout ou de suppression d’éléments). Cette liste, nommée nombres, sert de point de départ pour le traitement. Ensuite, l’opération de filtrage repose sur l’API Stream, introduite en Java 8, qui permet de manipuler des collections de manière déclarative, en exprimant ce qu’on veut obtenir (ici, les nombres pairs) plutôt que comment le faire (comme avec une boucle traditionnelle). Ce paradigme fonctionnel rend le code plus concis et expressif. La méthode `filter()` crée un nouveau flux contenant uniquement les éléments satisfaisant une condition donnée, définie par une expression lambda qui retourne `true` ou `false`.
 
 {{<inlineJava path="ExempleLambdaFiltre.java" lang="java">}}
 import java.util.Arrays;
@@ -841,6 +841,177 @@ public class ExempleLambdaFiltre {
     }
 }
 {{</inlineJava>}}
+
+Dans cet exemple, nous utilisons les méthodes `stream` et `collect`.
+
+
+- **stream()** : La méthode `stream()` convertit une collection (comme une liste) en un flux (Stream), une séquence d’éléments permettant un traitement séquentiel ou parallèle. Les opérations sur un flux sont paresseuses (exécutées uniquement lorsque nécessaire) et ne modifient pas la collection d’origine.
+- **collect()** : La méthode `collect()` rassemble les éléments d’un flux dans une structure de données (par exemple, une liste) après application des opérations. Elle utilise souvent un collecteur, comme `Collectors.toList()`, pour spécifier le type de résultat. C’est une opération terminale qui déclenche l’exécution du flux.
+
+
+La méthode `map()` transforme chaque élément d’un flux en appliquant une fonction, produisant un nouveau flux de même longueur avec les valeurs transformées.
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
+        List<Integer> nombresCarres = nombres.stream()
+                                            .map(x -> x * x)
+                                            .collect(Collectors.toList());
+        System.out.println(nombresCarres); // Sortie : [1, 4, 9, 16]
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode `reduce()` combine les éléments d’un flux en une seule valeur en appliquant une fonction prenant deux arguments : le résultat accumulé et l’élément suivant.
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
+        int produit = nombres.stream()
+                            .reduce(1, (x, y) -> x * y);
+        System.out.println(produit); // Sortie : 24
+    }
+}
+{{</inlineJava>}}
+
+La méthode `forEach()` applique une action à chaque élément d’un flux. C’est une opération terminale, souvent utilisée pour afficher des résultats ou effectuer des effets secondaires.
+
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
+        nombres.stream()
+               .forEach(x -> System.out.println(x));
+        // Sortie :
+        // 1
+        // 2
+        // 3
+        // 4
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode `flatMap()` transforme chaque élément d’un flux en un flux d’éléments, puis aplatit ces flux en un seul flux. Elle est utile pour gérer des collections imbriquées.
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<List<Integer>> listes = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4));
+        List<Integer> aplatie = listes.stream()
+                                     .flatMap(liste -> liste.stream())
+                                     .collect(Collectors.toList());
+        System.out.println(aplatie); // Sortie : [1, 2, 3, 4]
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode `distinct()` supprime les doublons d’un flux, renvoyant un flux avec des éléments uniques (basé sur la méthode `equals()`).
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 2, 3, 3, 4);
+        List<Integer> uniques = nombres.stream()
+                                       .distinct()
+                                       .collect(Collectors.toList());
+        System.out.println(uniques); // Sortie : [1, 2, 3, 4]
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode `limit()` restreint un flux aux `n` premiers éléments, utile pour traiter un sous-ensemble de données.
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> premiers = nombres.stream()
+                                       .limit(3)
+                                       .collect(Collectors.toList());
+        System.out.println(premiers); // Sortie : [1, 2, 3]
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode `sorted()` trie les éléments d’un flux selon leur ordre naturel ou un comparateur personnalisé.
+
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(4, 1, 3, 2);
+        List<Integer> tries = nombres.stream()
+                                    .sorted((a, b) -> b - a)
+                                    .collect(Collectors.toList());
+        System.out.println(tries); // Sortie : [4, 3, 2, 1]
+    }
+}
+{{</inlineJava>}}
+
+
+Les méthodes peuvent être enchaînées pour des opérations complexes. Par exemple, filtrer les nombres pairs, les mettre au carré, supprimer les doublons, limiter à deux éléments et trier en ordre décroissant :
+
+{{<inlineJava path="Main.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> nombres = Arrays.asList(1, 2, 2, 3, 4, 4, 5, 6);
+        List<Integer> resultat = nombres.stream()
+                                       .filter(x -> x % 2 == 0)
+                                       .map(x -> x * x)
+                                       .distinct()
+                                       .limit(2)
+                                       .sorted((a, b) -> b - a)
+                                       .collect(Collectors.toList());
+        System.out.println(resultat); // Sortie : [16, 4]
+    }
+}
+{{</inlineJava>}}
+
+
 
 
 La programmation fonctionnelle est un paradigme de programmation qui met l'accent sur l'utilisation de fonctions pures, l'immutabilité des données et l'évitement des effets secondaires. Une fonction pure produit toujours le même résultat pour les mêmes entrées et n'altère pas l'état externe, ce qui facilite la prédiction et le débogage du code. En Java, bien que le langage soit principalement orienté objet, l'introduction de l'API Stream et des expressions lambda en Java 8 a permis d'intégrer des concepts fonctionnels. Ces outils permettent de manipuler des collections de données de manière déclarative, en exprimant ce que l'on veut accomplir (par exemple, filtrer ou transformer des données) plutôt que comment le faire étape par étape, comme dans une approche impérative. Cette approche améliore la lisibilité et la modularité du code, tout en favorisant des opérations comme le parallélisme sans effort explicite.
