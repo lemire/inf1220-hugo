@@ -107,13 +107,18 @@
           dots = (dots + 1) % 4;
           resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
         }, 500);
+        // Ajout d'un timeout de 30 secondes à la requête fetch
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function() { controller.abort(); }, 30000); // 30 000 ms = 30 s
         fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ java_files: java_files, txt_files: txt_files })
+          body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+          signal: controller.signal
         })
         .then(function(r){
           clearInterval(execAnim);
+          clearTimeout(timeoutId);
           if (!r.ok) {
             throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
           }
@@ -208,11 +213,18 @@
                 }
               });
             }
-          } catch(e){ clearInterval(execAnim); console.log(e); resultDiv.textContent=t; }
+          } catch (err) {
+            resultDiv.textContent = 'Erreur lors de l’analyse de la réponse : ' + err;
+          }
         })
         .catch(function(error){
           clearInterval(execAnim);
-          resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+          clearTimeout(timeoutId);
+          if (error.name === 'AbortError') {
+            resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+          } else {
+            resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+          }
         });
       };
       // Gestion des tooltips d'erreur au survol

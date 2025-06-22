@@ -158,12 +158,17 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
         dots = (dots + 1) % 4;
         resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
       }, 500);
+      // Ajout d'un timeout de 30 secondes à la requête fetch
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 000 ms = 30 s
       try {
         const resp = await fetch('{{<endpoint>}}', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ java_files, txt_files })
+          body: JSON.stringify({ java_files, txt_files }),
+          signal: controller.signal
         });
+        clearTimeout(timeoutId);
         if (!resp.ok) {
           throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
         }
@@ -263,10 +268,14 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           displayDiv.textContent = resultText;
         }
       } catch (error) {
-        console.error('Erreur lors de la requête :', error);
-        // Affichez un message d’erreur à l’utilisateur si besoin
+        clearTimeout(timeoutId);
         clearInterval(execAnim);
-        document.getElementById('result').innerHTML = '<pre style="color:#c00;">Erreur lors de l\'exécution : ' + error.message + '</pre>';
+        let displayDiv = document.getElementById('result');
+        if (error.name === 'AbortError') {
+          displayDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+        } else {
+          displayDiv.textContent = 'Erreur lors de la requête : ' + error;
+        }
       }
     };
     window.onload = () => {
@@ -351,4 +360,5 @@ public class Fibo {
 
 Pour optimiser votre expérience, suivez ces conseils. Assurez-vous que les noms de fichiers Java correspondent au nom de la classe publique qu'ils contiennent (par exemple, Main.java pour public class Main). Si vous utilisez des packages, indiquez le chemin correct dans le nom du fichier, comme ca/teluq/informatique/Fibo.java pour un fichier dans le package ca.teluq.informatique. Testez d'abord avec les exemples fournis pour comprendre comment l'environnement gère les entrées et sorties. Si vous travaillez avec des fichiers texte, comme dans l'exemple d'affichage de fichier, vérifiez que le nom du fichier texte correspond à celui utilisé dans votre code Java. Enfin, consultez la version de Java affichée en bas de la page pour vous assurer que votre code est compatible. Cet environnement est idéal pour apprendre et tester des programmes Java simples sans installer de logiciel.
 
-L'environnement est limité pour les besoins du cours. Nous vous suggérons de n'inclure qu'une seule classe ayant une méthode `main`. Par ailleurs, vous ne pouvez pas construire d'interface graphiques ou de serveurs web.
+L'environnement est limité pour les besoins du cours. Nous vous suggérons de n'inclure qu'une seule classe ayant une méthode `main`. Par ailleurs, vous ne pouvez pas construire d'interface graphiques ou de serveurs web. L'environnement ne permet pas non plus d'exécuter des programmes
+arbitraires. L'exécution doit être brève et ne pas nécessiter trop de mémoire.
