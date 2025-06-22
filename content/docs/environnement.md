@@ -77,6 +77,7 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           <option value="ex1">Affichage d'un fichier texte (2 Java + 1 texte)</option>
           <option value="ex2">Bonjour le monde (simple)</option>
           <option value="ex3">Fibonacci (package, commentaires FR)</option>
+          <option value="ex4">Mario</option>
         </select>
       </div>
       <div id="files" class="files"></div>
@@ -321,7 +322,18 @@ public class Fibo {
         }
     }
 }`);
-      }
+      } else if (v === 'ex4') {
+        addFile('java', 'Mario.java',
+`void main() {
+        System.out.println("☀️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️");
+        System.out.println("☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️");
+        System.out.println("☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️");
+        System.out.println("    🟨 🟨 🟨    💰 💰 💰    🟨 ");
+        System.out.println("                💰 💰 💰       ");
+        System.out.println("🟫     🟫        🟫       🟫");
+        System.out.println("🟫 👨‍🚒 🟫 🟫 🐢 🟫 🟫 🍄 🟫 🟫");
+        System.out.println("🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫");
+}`);}
     };
   </script>
 
