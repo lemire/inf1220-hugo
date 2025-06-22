@@ -60,7 +60,7 @@ Lorsque Java appelle une fonction, celle-ci dispose d'une certaine quantité de 
 Lorsque la fonction se termine, sa trame d’activation est retirée de la pile et la mémoire correspondante est libérée. Si les appels de fonction s’enchaînent trop profondément (par exemple, dans une récursion mal contrôlée), la pile peut se remplir complètement, ce qui provoque une erreur appelée StackOverflowError. C’est pourquoi il est important de bien maîtriser la récursivité et de s’assurer que chaque fonction récursive possède un cas d’arrêt (ou condition de terminaison) pour éviter une croissance infinie de la pile.
 
 
-Pour pallier ce problème, on privilégie une version itérative, qui utilise une simple boucle et deux variables pour mémoriser les deux derniers résultats. Cette approche est beaucoup plus efficace et permet de calculer rapidement des valeurs élevées de la suite de Fibonacci sans risque de débordement de pile. Cependant, il faut aussi faire attention au type de variable utilisé (int, long, BigInteger) pour éviter les débordements lors du calcul de grands nombres.
+Pour pallier ce problème, on privilégie une version itérative, qui utilise une simple boucle et deux variables pour mémoriser les deux derniers résultats. Cette approche est beaucoup plus efficace et permet de calculer rapidement des valeurs élevées de la suite de Fibonacci sans risque de débordement de pile. Dans l'exemple suivant, modifiez le nombre de Fibonacci calculé.
 
 {{<inlineJava path="ExempleRecursivite.java" lang="java">}}
 public class ExempleRecursivite {
@@ -89,13 +89,13 @@ public class ExempleRecursivite {
 }
 {{</inlineJava>}}
 
+Cependant, il faut aussi faire attention au type de variable utilisé (int, long, BigInteger) pour éviter les débordements lors du calcul de grands nombres.
+
 La récursivité demeure utile par son élégance et sa simplicité. Prenons cet exemple où on trouve le plus grand diviseur commun de deux entiers, basée sur l'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide">algorithme d'Euclide</a>.
 
 L’algorithme d’Euclide est une méthode ancienne et très efficace pour calculer le plus grand commun diviseur (PGCD) de deux entiers. Le principe repose sur l’observation suivante : le PGCD de deux nombres \( a \) et \( b \) (avec \( a \geq b \)) est le même que le PGCD de \( b \) et du reste de la division de \( a \) par \( b \), soit \( a \bmod b \). On répète ce processus jusqu’à ce que le reste soit nul ; à ce moment, le PGCD est le dernier diviseur non nul. Cette approche permet de réduire rapidement la taille des nombres à chaque étape, ce qui rend l’algorithme très performant, même pour de grands entiers.
 
 En Java, l’algorithme d’Euclide s’exprime naturellement de façon récursive : si le second nombre (\( q \)) est nul, on retourne le premier (\( p \)) ; sinon, on rappelle la fonction avec les arguments \( (q, p \bmod q) \). Cette simplicité et cette efficacité expliquent pourquoi l’algorithme d’Euclide est encore largement utilisé aujourd’hui, aussi bien dans les calculs mathématiques que dans des applications pratiques comme la cryptographie ou la simplification de fractions.
-
-
 
 
 {{<inlineJava path="ExempleRecursivite.java" lang="java">}}
