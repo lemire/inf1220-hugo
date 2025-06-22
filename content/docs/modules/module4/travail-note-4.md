@@ -1,6 +1,6 @@
 ---
 title: "Travail noté 4"
-weight: 4
+weight: 6
 ---
 
 # Travail noté 4 - Les flux d'entrées et de sorties

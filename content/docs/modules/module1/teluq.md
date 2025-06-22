@@ -36,12 +36,6 @@ Dans le cas du cours INF 1220, l’utilisation plus intensive de la vidéo n’e
 
 Certains étudiants préfèrent écouter et regarder plutôt que de lire. Nous sommes conscients que la lecture d’un manuel portant sur la programmation peut sembler rébarbative. Par contre, la lecture technique fait partie intégrante de l’activité de programmation. Il est absolument essentiel de pouvoir lire des documents techniques et des descriptions formelles. En somme, si la vidéo peut être utilisée, elle ne peut remplacer la lecture en programmation.
 
-## Applications, jeux, web, etc.
-
-Le cours se veut une introduction à la programmation. Il n’est donc pas question de programmer des jeux vidéo complets, de créer des applications qui pourraient être déployées dans votre organisation, de créer des applications web complètes ou des applications mobiles pouvant être distribuées. Notre objectif n’est que de vous donner les bases vous permettant, dans une seconde étape, de réaliser de tels travaux.
-
-Avant de maîtriser les interfaces graphiques et le web, il faut d’abord maîtriser la base. Il faut savoir comment manipuler des données en mémoire au sein de scénarios simplifiés avant de résoudre des problèmes réels.
-
 ## Python, JavaScript, C#, C++, Go, Rust, etc.
 
 Certains étudiants souhaitent apprendre un autre langage que Java. Nous vous encourageons à étudier plus d’un langage de programmation, surtout si vous souhaitez faire carrière en informatique. Dans le cadre de ce cours, nous allons cibler un seul langage.
@@ -49,6 +43,9 @@ Certains étudiants souhaitent apprendre un autre langage que Java. Nous vous en
 Certains étudiants souhaitent apprendre le C#. Il est particulièrement facile de passer du Java au C#. En effet, le C# peut être vu comme une variante du Java. La syntaxe est souvent quasiment identique et les pratiques de programmation sont équivalentes.
 
 Dans le cadre d’une carrière dans l’industrie du logiciel, il peut être dommage de se limiter à une seule technologie, un seul langage de programmation. Les choix technologiques évoluent et les offres d’emploi diffèrent d’un moment à l’autre. On s’attend à ce qu’un diplômé universitaire maîtrise plusieurs technologies, plusieurs langages.
+
+Si vous souhaitez étudier le langage Python, vous pourrez prendre le cours INF 2020 Programmation d'applications avec Python. Si vous souhaitez étudier le langage Go, vous pourrez prendre
+le cours INF 2007 Programmation avancée.
 
 
 ## Soyez informé !
