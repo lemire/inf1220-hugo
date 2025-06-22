@@ -112,7 +112,13 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ java_files: java_files, txt_files: txt_files })
         })
-        .then(function(r){ clearInterval(execAnim); return r.text(); })
+        .then(function(r){
+          clearInterval(execAnim);
+          if (!r.ok) {
+            throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+          }
+          return r.text();
+        })
         .then(function(t){
           try {
             var j=JSON.parse(t);
@@ -203,6 +209,10 @@
               });
             }
           } catch(e){ clearInterval(execAnim); console.log(e); resultDiv.textContent=t; }
+        })
+        .catch(function(error){
+          clearInterval(execAnim);
+          resultDiv.textContent = 'Erreur lors de la requête : ' + error;
         });
       };
       // Gestion des tooltips d'erreur au survol

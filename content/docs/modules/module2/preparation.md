@@ -73,7 +73,7 @@ des instructions.
 
 
 <ol>
-<li>Aller sur le site https://adoptium.net/. La version a peu d'importance;  choisir la dernière version disponible.</li>
+<li>Aller sur le site https://adoptium.net/. Choisir la dernière version disponible.</li>
 <li>Une fois le fichier d'installation téléchargé, démarrer l'installation et suivre les différentes étapes d'installation.</li>
 <li>Une fois le logiciel installé, la machine virtuelle Java (java.exe) et ses outils de compilation (javac.exe) auront été installés.</li></ol>
 </ol>

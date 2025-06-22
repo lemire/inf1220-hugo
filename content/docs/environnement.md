@@ -158,105 +158,115 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
         dots = (dots + 1) % 4;
         resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
       }, 500);
-      const resp = await fetch('{{<endpoint>}}', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ java_files, txt_files })
-      });
-      let resultText = await resp.text();
-      clearInterval(execAnim);
-      let displayDiv = document.getElementById('result');
       try {
-        const resultJson = JSON.parse(resultText);
-        if (resultJson.status === 'ran_successfully') {
-          displayDiv.innerHTML = '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
-            (resultJson.output || '').replace(/\n/g, '<br>') + '</pre>';
-          // Nettoie les erreurs précédentes
-          document.querySelectorAll('.file-block').forEach(block => {
-            if (block._cm) {
-              block._cm.operation(() => {
-                block._cm.getAllMarks().forEach(m => m.clear());
-              });
-            }
-          });
-        } else if (resultJson.status === 'compiling') {
-          displayDiv.innerHTML = '<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">' +
-            (resultJson.error || '').replace(/\n/g, '<br>') + '</pre>';
-          // Parse et surligne les erreurs dans CodeMirror
-          const errorText = resultJson.error || '';
-          // Regexp pour extraire : NomFichier.java:ligne: ...\n message
-          // Modifié pour supporter les chemins (ex: ca/teluq/informatique/Fibo.java)
-          const errorRegex = /([\w./\\-]+\.java):(\d+): error: ([^\n]+)([\s\S]*?)(?=\n[\w./\\-]+\.java:|$)/g;
-          let match;
-          // Pour chaque éditeur, nettoie les erreurs précédentes
-          document.querySelectorAll('.file-block').forEach(block => {
-            if (block._cm) {
-              block._cm.operation(() => {
-                block._cm.getAllMarks().forEach(m => m.clear());
-              });
-            }
-          });
-          while ((match = errorRegex.exec(errorText)) !== null) {
-            const [_, file, lineStr, msg, details] = match;
-            const line = parseInt(lineStr, 10) - 1; // CodeMirror est 0-based
-            // Trouve le bloc correspondant au fichier
+        const resp = await fetch('{{<endpoint>}}', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ java_files, txt_files })
+        });
+        if (!resp.ok) {
+          throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
+        }
+        let resultText = await resp.text();
+        clearInterval(execAnim);
+        let displayDiv = document.getElementById('result');
+        try {
+          const resultJson = JSON.parse(resultText);
+          if (resultJson.status === 'ran_successfully') {
+            displayDiv.innerHTML = '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
+              (resultJson.output || '').replace(/\n/g, '<br>') + '</pre>';
+            // Nettoie les erreurs précédentes
             document.querySelectorAll('.file-block').forEach(block => {
-              const nameInput = block.querySelector('input[type=text]');
-              // Compare le nom du fichier avec ou sans chemin
-              if (nameInput && (nameInput.value.trim() === file || nameInput.value.trim().endsWith('/'+file) || nameInput.value.trim().endsWith('\\'+file))) {
-                if (block._cm) {
-                  block._cm.operation(() => {
-                    // Surligne la ligne
-                    const mark = block._cm.markText({line, ch:0}, {line:line+1, ch:0}, {
-                      className: 'cm-java-error',
-                      title: (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim()
-                    });
-                    // Ajoute gestion du survol pour afficher l'erreur dans la status bar
-                    const statusBar = block.querySelector('.java-status-bar');
-                    if (statusBar) {
-                      const errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
-                      // Nettoie les anciens listeners
-                      if (!block._cm._javaErrorStatusListeners) block._cm._javaErrorStatusListeners = [];
-                      block._cm._javaErrorStatusListeners.forEach(({line, handler}) => {
-                        block._cm.off('cursorActivity', handler);
-                      });
-                      block._cm._javaErrorStatusListeners = [];
-                      // Ajoute un listener pour afficher l'erreur au survol de la ligne
-                      const handler = function(cm) {
-                        const pos = cm.getCursor();
-                        if (pos.line === line) {
-                          statusBar.textContent = errorMsg;
-                        } else {
-                          statusBar.textContent = '';
-                        }
-                      };
-                      block._cm.on('cursorActivity', handler);
-                      block._cm._javaErrorStatusListeners.push({line, handler});
-                      // Ajoute aussi un survol direct (pour la souris)
-                      const lineHandle = block._cm.getLineHandle(line);
-                      if (lineHandle) {
-                        block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
-                        // Ajoute un event sur le DOM
-                        setTimeout(() => {
-                          const lines = block._cm.display.lineDiv.querySelectorAll('.cm-java-error-line');
-                          lines.forEach(domLine => {
-                            domLine.onmouseenter = () => { statusBar.textContent = errorMsg; };
-                            domLine.onmouseleave = () => { statusBar.textContent = ''; };
-                          });
-                        }, 10);
-                      }
-                    }
-                  });
-                }
+              if (block._cm) {
+                block._cm.operation(() => {
+                  block._cm.getAllMarks().forEach(m => m.clear());
+                });
               }
             });
+          } else if (resultJson.status === 'compiling') {
+            displayDiv.innerHTML = '<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">' +
+              (resultJson.error || '').replace(/\n/g, '<br>') + '</pre>';
+            // Parse et surligne les erreurs dans CodeMirror
+            const errorText = resultJson.error || '';
+            // Regexp pour extraire : NomFichier.java:ligne: ...\n message
+            // Modifié pour supporter les chemins (ex: ca/teluq/informatique/Fibo.java)
+            const errorRegex = /([\w./\\-]+\.java):(\d+): error: ([^\n]+)([\s\S]*?)(?=\n[\w./\\-]+\.java:|$)/g;
+            let match;
+            // Pour chaque éditeur, nettoie les erreurs précédentes
+            document.querySelectorAll('.file-block').forEach(block => {
+              if (block._cm) {
+                block._cm.operation(() => {
+                  block._cm.getAllMarks().forEach(m => m.clear());
+                });
+              }
+            });
+            while ((match = errorRegex.exec(errorText)) !== null) {
+              const [_, file, lineStr, msg, details] = match;
+              const line = parseInt(lineStr, 10) - 1; // CodeMirror est 0-based
+              // Trouve le bloc correspondant au fichier
+              document.querySelectorAll('.file-block').forEach(block => {
+                const nameInput = block.querySelector('input[type=text]');
+                // Compare le nom du fichier avec ou sans chemin
+                if (nameInput && (nameInput.value.trim() === file || nameInput.value.trim().endsWith('/'+file) || nameInput.value.trim().endsWith('\\'+file))) {
+                  if (block._cm) {
+                    block._cm.operation(() => {
+                      // Surligne la ligne
+                      const mark = block._cm.markText({line, ch:0}, {line:line+1, ch:0}, {
+                        className: 'cm-java-error',
+                        title: (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim()
+                      });
+                      // Ajoute gestion du survol pour afficher l'erreur dans la status bar
+                      const statusBar = block.querySelector('.java-status-bar');
+                      if (statusBar) {
+                        const errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+                        // Nettoie les anciens listeners
+                        if (!block._cm._javaErrorStatusListeners) block._cm._javaErrorStatusListeners = [];
+                        block._cm._javaErrorStatusListeners.forEach(({line, handler}) => {
+                          block._cm.off('cursorActivity', handler);
+                        });
+                        block._cm._javaErrorStatusListeners = [];
+                        // Ajoute un listener pour afficher l'erreur au survol de la ligne
+                        const handler = function(cm) {
+                          const pos = cm.getCursor();
+                          if (pos.line === line) {
+                            statusBar.textContent = errorMsg;
+                          } else {
+                            statusBar.textContent = '';
+                          }
+                        };
+                        block._cm.on('cursorActivity', handler);
+                        block._cm._javaErrorStatusListeners.push({line, handler});
+                        // Ajoute aussi un survol direct (pour la souris)
+                        const lineHandle = block._cm.getLineHandle(line);
+                        if (lineHandle) {
+                          block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+                          // Ajoute un event sur le DOM
+                          setTimeout(() => {
+                            const lines = block._cm.display.lineDiv.querySelectorAll('.cm-java-error-line');
+                            lines.forEach(domLine => {
+                              domLine.onmouseenter = () => { statusBar.textContent = errorMsg; };
+                              domLine.onmouseleave = () => { statusBar.textContent = ''; };
+                            });
+                          }, 10);
+                        }
+                      }
+                    });
+                  }
+                }
+              });
+            }
+          } else {
+            displayDiv.textContent = JSON.stringify(resultJson, null, 2);
           }
-        } else {
-          displayDiv.textContent = JSON.stringify(resultJson, null, 2);
+        } catch (e) {
+          clearInterval(execAnim);
+          displayDiv.textContent = resultText;
         }
-      } catch (e) {
+      } catch (error) {
+        console.error('Erreur lors de la requête :', error);
+        // Affichez un message d’erreur à l’utilisateur si besoin
         clearInterval(execAnim);
-        displayDiv.textContent = resultText;
+        document.getElementById('result').innerHTML = '<pre style="color:#c00;">Erreur lors de l\'exécution : ' + error.message + '</pre>';
       }
     };
     window.onload = () => {
