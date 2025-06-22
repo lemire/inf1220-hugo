@@ -240,3 +240,115 @@ Ce programme lit une chaîne au clavier et affiche, pour chaque <code>char</code
 
 </details>
 
+## Question 18
+
+Qu’est-ce qu’un stream en Java ? À quoi sert-il ?
+
+<details><summary>Réponse</summary>
+<p>Un stream est une séquence d’éléments sur laquelle on peut effectuer des opérations de traitement en chaîne (filter, map, etc.). Il permet de manipuler des collections de façon déclarative et fonctionnelle, souvent en une seule ligne de code.</p>
+</details>
+
+## Question 19
+
+Expliquez le rôle de la méthode <code>filter</code> dans un stream Java. Donnez un exemple.
+
+<details><summary>Réponse</summary>
+<p><code>filter</code> permet de ne conserver que les éléments qui satisfont une condition (prédicat). Exemple :</p>
+
+```java
+List<Integer> l = List.of(1, 2, 3, 4);
+l.stream().filter(x -> x % 2 == 0).forEach(System.out::println); // Affiche 2, 4
+```
+</details>
+
+## Question 20
+
+À quoi sert la méthode <code>map</code> dans un stream ? Donnez un exemple.
+
+<details><summary>Réponse</summary>
+<p><code>map</code> applique une fonction à chaque élément du stream et retourne un nouveau stream avec les résultats. Exemple :</p>
+
+```java
+List<String> noms = List.of("alice", "bob");
+noms.stream().map(String::toUpperCase).forEach(System.out::println); // ALICE, BOB
+```
+</details>
+
+## Question 21
+
+Expliquez l’utilité de la méthode <code>limit</code> dans un stream Java.
+
+<details><summary>Réponse</summary>
+<p><code>limit</code> permet de ne traiter qu’un nombre maximum d’éléments du stream. Exemple :</p>
+
+```java
+Stream.iterate(0, n -> n + 1).limit(5).forEach(System.out::println); // 0 1 2 3 4
+```
+</details>
+
+## Question 22
+
+Que fait la méthode <code>distinct</code> sur un stream ? Donnez un exemple.
+
+<details><summary>Réponse</summary>
+<p><code>distinct</code> supprime les doublons du stream (en utilisant equals). Exemple :</p>
+
+```java
+List<Integer> l = List.of(1, 2, 2, 3);
+l.stream().distinct().forEach(System.out::println); // 1 2 3
+```
+</details>
+
+## Question 23
+
+Quel est le rôle de la méthode <code>sorted</code> dans un stream Java ?
+
+<details><summary>Réponse</summary>
+<p><code>sorted</code> trie les éléments du stream selon l’ordre naturel ou un comparateur fourni. Exemple :</p>
+
+```java
+List<String> noms = List.of("bob", "alice");
+noms.stream().sorted().forEach(System.out::println); // alice, bob
+```
+</details>
+
+## Question 24
+
+À quoi sert la méthode <code>collect</code> dans un stream ? Donnez un exemple d’utilisation avec <code>Collectors.toList()</code>.
+
+<details><summary>Réponse</summary>
+<p><code>collect</code> permet de rassembler les éléments du stream dans une collection ou une autre structure de données. Exemple :</p>
+
+```java
+List<Integer> pairs = List.of(1, 2, 3, 4).stream()
+    .filter(x -> x % 2 == 0)
+    .collect(Collectors.toList());
+System.out.println(pairs); // [2, 4]
+```
+</details>
+
+## Question 25
+
+Expliquez la différence entre un stream et une collection en Java.
+
+<details><summary>Réponse</summary>
+<p>Une collection (List, Set, etc.) stocke des données en mémoire et permet d’y accéder plusieurs fois. Un stream est une vue temporaire sur ces données, qui permet de les traiter de façon déclarative : il ne stocke pas les données et ne peut être consommé qu’une seule fois.</p>
+</details>
+
+## Question 26
+
+Donnez un exemple d’utilisation de <code>stream()</code> sur une liste de chaînes pour obtenir la liste des longueurs distinctes, triées, de ces chaînes.
+
+<details><summary>Réponse</summary>
+
+```java
+List<String> mots = List.of("java", "code", "stream", "java");
+List<Integer> longueurs = mots.stream()
+    .map(String::length)
+    .distinct()
+    .sorted()
+    .collect(Collectors.toList());
+System.out.println(longueurs); // [4, 5, 6]
+```
+</details>
+

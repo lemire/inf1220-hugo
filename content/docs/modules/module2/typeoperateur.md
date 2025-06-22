@@ -427,9 +427,6 @@ System.out.println("int max : " + max + ", int min : " + min);
 Ces méthodes facilitent la manipulation et la conversion des données dans vos programmes Java.
 
 
-
-
-
 Elles peuvent représenter une valeur, mais une fois cette valeur assignée,
 elle peut pas être modifiée. Par exemple&nbsp;:
 
@@ -452,7 +449,8 @@ System.out.println(a == b);      // false (références différentes)
 System.out.println(a.equals(b)); // true  (valeurs identiques)
 ```
 
-Dans cet exemple, <code>a == b</code> est faux car ce sont deux objets distincts, mais <code>a.equals(b)</code> est vrai car ils contiennent la même valeur.
+Dans cet exemple, <code>a == b</code> est faux car ce sont deux objets distincts, mais <code>a.equals(b)</code> est vrai car ils contiennent la même valeur. Nous reviendrons sur les classes
+enveloppes dans les autres modules du cours.
 
 ## String et operateur '+'
 
@@ -467,6 +465,8 @@ String s3 = s1 + s2; // s3 vaut "Bonjour le monde"
 ```
 
 Attention : pour comparer le contenu de deux chaînes, il ne faut pas utiliser <code>==</code> (qui compare les références), mais la méthode <code>equals()</code> :
+
+En Java, une <strong>référence</strong> est comme une « adresse » qui indique où un objet est stocké en mémoire. Quand on écrit <code>a == b</code> pour deux objets (ici, des chaînes), on demande si <code>a</code> et <code>b</code> pointent exactement vers le même objet, c’est-à-dire la même case mémoire. Deux chaînes différentes, même si elles contiennent le même texte, peuvent être stockées à des endroits différents en mémoire. Ainsi, <code>==</code> ne vérifie pas si le contenu des chaînes est identique, mais seulement si c’est le même objet. Pour vérifier que deux chaînes ont le même texte caractère par caractère, il faut utiliser <code>equals()</code>, qui compare le contenu des objets.
 
 ```java  {style=github}
 String a = "Java";

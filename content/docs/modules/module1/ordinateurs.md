@@ -58,7 +58,7 @@ Simula, initialement conçu comme une extension du langage ALGOL, a introduit le
 
 Dans les années 1980, le langage Smalltalk, conçu par Alan Kay et son équipe chez Xerox PARC, popularise la programmation orientée objet en mettant l’accent sur l’interaction entre objets, l’héritage et le message passing. Smalltalk influence profondément la conception des langages modernes.
 
-Alan Kay a conçu le langage Smalltalk avec son équipe chez Xerox PARC dans les années 1970 pour explorer de nouvelles façons de rendre l’informatique plus accessible, flexible et intuitive. Sa motivation principale était de créer un environnement où les utilisateurs, y compris les enfants, pourraient manipuler des objets graphiques et apprendre à programmer de manière interactive. Il voulait que l’ordinateur devienne un « média personnel », aussi malléable qu’un carnet de notes, permettant l’expérimentation, la simulation et la construction de connaissances.
+Alan Kay a conçu le langage Smalltalk avec son équipe chez Xerox PARC dans les années 1970 pour explorer de nouvelles façons de rendre l’informatique plus accessible, flexible et intuitive. Sa motivation principale était de créer un environnement où les utilisateurs, y compris les enfants, pourraient manipuler des objets graphiques et apprendre à programmer de manière interactive. Il voulait que l’ordinateur devienne un « media personnel », aussi malléable qu’un carnet de notes, permettant l’expérimentation, la simulation et la construction de connaissances.
 
 Smalltalk a été pensé comme un outil pédagogique, inspiré par les idées de Seymour Papert sur l’apprentissage par la manipulation et la découverte. Alan Kay cherchait à démocratiser la programmation et à rendre le logiciel aussi modulaire et réutilisable que les objets du monde réel, d’où l’accent mis sur les objets, les messages et l’interactivité.
 
@@ -550,6 +550,14 @@ Les processeurs se déclinent en plusieurs architectures. Dans les ordinateurs p
 Les langages de programmation jouent un rôle crucial en traduisant des instructions humaines en commandes compréhensibles par ces composants matériels. Leur niveau d’abstraction varie : les langages de bas niveau, comme l’assembleur, sont proches du matériel et offrent un contrôle précis mais exigent une expertise technique. À l’opposé, les langages de haut niveau, comme Python ou Java, simplifient le développement en masquant les détails matériels, ce qui les rend plus accessibles et adaptés à des applications complexes, comme le développement web ou l’intelligence artificielle.
 
 Dans ce cours, nous explorerons le langage Java, largement adopté dans l’industrie pour sa portabilité, sa robustesse et sa polyvalence. Utilisé dans des domaines variés, des applications mobiles Android aux systèmes d’entreprise, Java illustre parfaitement comment un langage de haut niveau peut répondre à des besoins modernes tout en s’appuyant sur les principes fondamentaux de l’informatique.
+
+## API
+
+Le terme <strong>API</strong> signifie « Application Programming Interface » (interface de programmation d’application). Une API est un ensemble organisé de classes, de méthodes et de conventions qui permet à des développeurs d’utiliser facilement des fonctionnalités sans avoir à connaître les détails internes de leur implémentation. En Java, on parle souvent de l’API standard (Java Standard Library), qui regroupe des milliers de classes prêtes à l’emploi pour manipuler des chaînes de caractères, des fichiers, des collections, des dates, des flux de données, etc.
+
+Par exemple, l’<strong>API Stream</strong> introduite en Java 8 fournit des outils puissants pour traiter des collections de données de façon déclarative et fonctionnelle (filtrer, transformer, trier, agréger…). L’API Swing permet de créer des interfaces graphiques, l’API JDBC permet d’accéder à des bases de données, etc. Chaque API définit un « contrat » : si vous respectez la façon d’utiliser ses classes et méthodes, vous pouvez profiter de fonctionnalités avancées sans réinventer la roue.
+
+En résumé, une API est une boîte à outils logicielle, conçue pour être utilisée par d’autres développeurs, qui facilite l’accès à des fonctionnalités complexes (réseau, interface graphique, traitement de données, etc.) tout en masquant les détails techniques.
 
 ## Unités de mesures
 

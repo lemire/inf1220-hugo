@@ -852,6 +852,19 @@ Les classes enveloppes sont aussi utiles pour utiliser les méthodes `equals()` 
 | float         | Float           |
 | double        | Double          |
 
+
+Dans l'API Stream, la méthode `boxed()` permet de convertir un stream de types primitifs (comme `IntStream`, `DoubleStream`, etc.) en un stream d’objets correspondants (par exemple, de `int` vers `Integer`). Cela est nécessaire car de nombreuses méthodes de l’API Stream, comme `collect`, `map`, ou encore l’utilisation de collections (`List`, `Set`, etc.), attendent des objets et non des types primitifs. Par exemple, un `IntStream` ne peut pas être directement collecté dans une `List<Integer>` sans conversion, car une liste Java ne peut contenir que des objets. De plus, certaines opérations comme le tri personnalisé, l’utilisation de méthodes d’instance (par exemple, `Integer::compareTo`), ou l’application de méthodes génériques sur des streams nécessitent de manipuler des objets. La méthode `boxed()` effectue donc automatiquement l’autoboxing de chaque valeur primitive du stream, rendant possible l’utilisation de toute la richesse de l’API des objets Java.
+
+**Exemple :**
+
+```java
+int[] tab = {1, 2, 3, 4};
+List<Integer> liste = Arrays.stream(tab)
+    .boxed() // Convertit chaque int en Integer
+    .collect(Collectors.toList());
+System.out.println(liste); // Affiche [1, 2, 3, 4]
+```
+
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8:</p>

@@ -1004,3 +1004,16 @@ System.out.println(p1);            // Point[x=1, y=2]
 <p>Ici, il n’est pas nécessaire d’écrire le constructeur ou de redéfinir `equals()` et `hashCode()` : tout est généré automatiquement par le compilateur.</p>
 </details>
 
+
+## Question 27
+
+Comment peut-on transformer un tableau d’entiers en une liste d’entiers en utilisant les streams ?
+
+<details><summary>Réponse</summary>
+<p>On peut utiliser <code>Arrays.stream()</code> et <code>boxed()</code> pour convertir un tableau primitif en stream d’objets, puis collecter dans une liste :</p>
+
+```java
+int[] tab = {1, 2, 3};
+List<Integer> l = Arrays.stream(tab).boxed().collect(Collectors.toList());
+```
+</details>

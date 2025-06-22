@@ -83,6 +83,8 @@ public class C {
 Ce code utilise des noms de variables cryptiques (`C`, `x`, `m`, `a`), manque de commentaires 
 clairs, et est mal indenté, rendant sa compréhension difficile.
 
+
+
 ## Structure et indentation
 Une bonne indentation améliore la lisibilité. En Java, chaque niveau de bloc (méthodes, boucles, 
 conditions) est indenté avec 4 espaces. Les accolades doivent être alignées, et chaque 
@@ -102,6 +104,47 @@ Un code non indenté ou avec des instructions sur une seule ligne (ex. : `if (x)
 est difficile à suivre.
 
 ## Utilisation des commentaires Javadoc
+
+
+
+Les programmeurs Java utilisent généralement Javadoc. Javadoc est un outil fourni par Oracle, intégré à l'environnement de développement Java, qui permet de générer automatiquement une documentation à partir du code source Java. Il analyse les commentaires écrits dans un format spécifique (commentaires Javadoc) pour produire des pages HTML décrivant les classes, interfaces, méthodes, constructeurs et champs d'un programme.
+
+Les commentaires Javadoc sont placés directement dans le code, généralement avant une déclaration, et utilisent une syntaxe particulière commençant par `/**` et se terminant par `*/`. Ces commentaires peuvent inclure des balises spécifiques pour structurer les informations, comme :
+
+- `@param` : décrit un paramètre d'une méthode.
+- `@return` : indique ce que retourne une méthode.
+- `@throws` ou `@exception` : précise les exceptions lancées.
+- `@author` : mentionne l'auteur du code.
+- `@version` : indique la version de la classe ou de la méthode.
+
+Exemple de commentaire Javadoc pour une méthode :
+
+```java {style=github}
+/**
+ * Calcule la somme de deux entiers.
+ * @param a Premier entier.
+ * @param b Second entier.
+ * @return La somme des deux entiers.
+ * @throws IllegalArgumentException Si les paramètres sont négatifs.
+ */
+public int somme(int a, int b) {
+    if (a < 0 || b < 0) {
+        throw new IllegalArgumentException("Les paramètres doivent être positifs.");
+    }
+    return a + b;
+}
+```
+
+
+Pour générer la documentation, on utilise la commande `javadoc` dans un terminal, suivie des fichiers source ou des packages à documenter. Par exemple :
+
+```bash
+javadoc -d doc MonFichier.java
+```
+
+Cela crée un dossier `doc` contenant des fichiers HTML consultables dans un navigateur, avec une navigation structurée (index, liste des classes, détails des méthodes, etc.).
+
+
 Les commentaires Javadoc sont essentiels pour documenter les API publiques. Ils doivent décrire le but de la classe ou de la méthode, les paramètres, la valeur de retour, et les exceptions possibles. Par exemple :
 
 ```java {style=github}
