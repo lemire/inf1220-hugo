@@ -255,7 +255,7 @@ Expliquez le rôle de la méthode <code>filter</code> dans un stream Java. Donne
 <details><summary>Réponse</summary>
 <p><code>filter</code> permet de ne conserver que les éléments qui satisfont une condition (prédicat). Exemple :</p>
 
-```java
+```java  {style=github}
 List<Integer> l = List.of(1, 2, 3, 4);
 l.stream().filter(x -> x % 2 == 0).forEach(System.out::println); // Affiche 2, 4
 ```
@@ -268,7 +268,7 @@ l.stream().filter(x -> x % 2 == 0).forEach(System.out::println); // Affiche 2, 4
 <details><summary>Réponse</summary>
 <p><code>map</code> applique une fonction à chaque élément du stream et retourne un nouveau stream avec les résultats. Exemple :</p>
 
-```java
+```java  {style=github}
 List<String> noms = List.of("alice", "bob");
 noms.stream().map(String::toUpperCase).forEach(System.out::println); // ALICE, BOB
 ```
@@ -281,7 +281,7 @@ Expliquez l’utilité de la méthode <code>limit</code> dans un stream Java.
 <details><summary>Réponse</summary>
 <p><code>limit</code> permet de ne traiter qu’un nombre maximum d’éléments du stream. Exemple :</p>
 
-```java
+```java  {style=github}
 Stream.iterate(0, n -> n + 1).limit(5).forEach(System.out::println); // 0 1 2 3 4
 ```
 </details>
@@ -293,7 +293,7 @@ Que fait la méthode <code>distinct</code> sur un stream ? Donnez un exemple.
 <details><summary>Réponse</summary>
 <p><code>distinct</code> supprime les doublons du stream (en utilisant equals). Exemple :</p>
 
-```java
+```java  {style=github}
 List<Integer> l = List.of(1, 2, 2, 3);
 l.stream().distinct().forEach(System.out::println); // 1 2 3
 ```
@@ -306,7 +306,7 @@ Quel est le rôle de la méthode <code>sorted</code> dans un stream Java ?
 <details><summary>Réponse</summary>
 <p><code>sorted</code> trie les éléments du stream selon l’ordre naturel ou un comparateur fourni. Exemple :</p>
 
-```java
+```java  {style=github}
 List<String> noms = List.of("bob", "alice");
 noms.stream().sorted().forEach(System.out::println); // alice, bob
 ```
@@ -319,7 +319,7 @@ noms.stream().sorted().forEach(System.out::println); // alice, bob
 <details><summary>Réponse</summary>
 <p><code>collect</code> permet de rassembler les éléments du stream dans une collection ou une autre structure de données. Exemple :</p>
 
-```java
+```java  {style=github}
 List<Integer> pairs = List.of(1, 2, 3, 4).stream()
     .filter(x -> x % 2 == 0)
     .collect(Collectors.toList());
@@ -341,7 +341,7 @@ Donnez un exemple d’utilisation de <code>stream()</code> sur une liste de cha�
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 List<String> mots = List.of("java", "code", "stream", "java");
 List<Integer> longueurs = mots.stream()
     .map(String::length)

@@ -760,7 +760,7 @@ En Java, l’opérateur `==` compare les références pour les objets, c’est-�
 
 Prenons l’exemple d’une classe `Point` :
 
-```java
+```java  {style=github}
 class Point {
     int x, y;
     Point(int x, int y) {
@@ -790,7 +790,7 @@ Depuis Java 16, les records simplifient la création de classes immuables destin
 
 Exemple :
 
-```java
+```java  {style=github}
 record Point(int x, int y) {}
 
 Point p1 = new Point(1, 2);
@@ -805,7 +805,7 @@ La méthode `hashCode()` est définie dans la classe `Object` et doit être red�
 
 Exemple :
 
-```java
+```java  {style=github}
 @Override
 public boolean equals(Object obj) {
     if (this == obj) return true;
@@ -826,7 +826,7 @@ En Java, les types primitifs (`int`, `double`, `char`, etc.) ne sont pas des obj
 
 Par exemple :
 
-```java
+```java  {style=github}
 int a = 5;
 Integer b = Integer.valueOf(a); // Conversion d'un int en Integer
 ArrayList<Integer> liste = new ArrayList<>();
@@ -857,7 +857,7 @@ Dans l'API Stream, la méthode `boxed()` permet de convertir un stream de types 
 
 **Exemple :**
 
-```java
+```java  {style=github}
 int[] tab = {1, 2, 3, 4};
 List<Integer> liste = Arrays.stream(tab)
     .boxed() // Convertit chaque int en Integer

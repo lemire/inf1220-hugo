@@ -962,7 +962,7 @@ Expliquez la différence entre l’opérateur `==` et la méthode `equals()` en 
 
 <p><b>Exemple :</b></p>
 
-```java
+```java  {style=github}
 Point p1 = new Point(1, 2);
 Point p2 = new Point(1, 2);
 System.out.println(p1 == p2);      // false (références différentes)
@@ -992,7 +992,7 @@ Qu’est-ce qu’un record en Java ? Expliquez ses avantages et donnez un exemp
 
 <p><b>Exemple :</b></p>
 
-```java
+```java  {style=github}
 record Point(int x, int y) {}
 
 Point p1 = new Point(1, 2);
@@ -1012,7 +1012,7 @@ Comment peut-on transformer un tableau d’entiers en une liste d’entiers en u
 <details><summary>Réponse</summary>
 <p>On peut utiliser <code>Arrays.stream()</code> et <code>boxed()</code> pour convertir un tableau primitif en stream d’objets, puis collecter dans une liste :</p>
 
-```java
+```java  {style=github}
 int[] tab = {1, 2, 3};
 List<Integer> l = Arrays.stream(tab).boxed().collect(Collectors.toList());
 ```

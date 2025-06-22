@@ -613,7 +613,7 @@ System.out.println(new Integer(3).equals(new Integer(3))); // true
 
 
 
-### Question 35
+## Question 35
 
 Quels sont, selon vous, les principaux avantages et inconvénients de Java par rapport à d’autres langages de programmation modernes ?
 
