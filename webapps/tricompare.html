@@ -1,0 +1,337 @@
+<div style="width: 100%; max-width: 700px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 24px; margin-bottom: 32px;">
+    <div style="margin-bottom: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+      <button id="sortingApp_startAllButton" style="padding: 12px 24px; background-color: #2563eb; color: #ffffff; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease-in-out; cursor: pointer; transform: scale(1);" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">Lancer tous les tris</button>
+      <button id="sortingApp_resetButton" style="padding: 12px 24px; background-color: #dc2626; color: #ffffff; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease-in-out; cursor: pointer; transform: scale(1);" onmouseover="this.style.backgroundColor='#b91c1c'" onmouseout="this.style.backgroundColor='#dc2626'" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">Réinitialiser</button>
+      <label for="sortingApp_pivotStrategy" style="font-size: 18px; font-weight: 600; white-space: nowrap;">Stratégie de pivot (tri rapide) :</label>
+      <select id="sortingApp_pivotStrategy" style="padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 16px; outline: none; flex-grow: 1;">
+        <option value="median">Médiane de trois</option>
+        <option value="random">Élément aléatoire</option>
+        <option value="last">Dernier élément</option>
+        <option value="first">Premier élément</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr; gap: 8px; width: 100%; max-width: 700px;">
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 4px;">
+      <p style="text-align: center; margin-bottom: 16px;">Tri à bulles</p>
+      <div id="sortingApp_bubbleSortContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 2px; border: 1px solid #d1d5db; padding: 10px; overflow-x: auto; min-height: 100px; border-radius: 8px;"></div>
+    </div>
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 4;">
+      <p style="text-align: center; margin-bottom: 16px;">Tri par insertion</p>
+      <div id="sortingApp_insertionSortContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 2px; border: 1px solid #d1d5db; padding: 10px; overflow-x: auto; min-height: 100px; border-radius: 8px;"></div>
+    </div>
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 4;">
+      <p style=" text-align: center; margin-bottom: 16px;">Tri par fusion</p>
+      <div id="sortingApp_mergeSortContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 2px; border: 1px solid #d1d5db; padding: 10px; overflow-x: auto; min-height: 100px; border-radius: 8px;"></div>
+    </div>
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 4px;">
+      <p style=" text-align: center; margin-bottom: 16px;">Tri rapide</p>
+      <div id="sortingApp_quickSortContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 2px; border: 1px solid #d1d5db; padding: 10px; overflow-x: auto; min-height: 100px; border-radius: 8px;"></div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Get references to HTML elements
+      const startAllButton = document.getElementById('sortingApp_startAllButton');
+      const resetButton = document.getElementById('sortingApp_resetButton');
+      const pivotStrategySelect = document.getElementById('sortingApp_pivotStrategy');
+      const containers = {
+        bubble: document.getElementById('sortingApp_bubbleSortContainer'),
+        insertion: document.getElementById('sortingApp_insertionSortContainer'),
+        merge: document.getElementById('sortingApp_mergeSortContainer'),
+        quick: document.getElementById('sortingApp_quickSortContainer')
+      };
+
+      // State variables
+      let originalArray = [];
+      let arrays = {
+        bubble: [],
+        insertion: [],
+        merge: [],
+        quick: []
+      };
+      let isSorting = false;
+      let sortedIndices = {
+          bubble: new Set(),
+          insertion: new Set(),
+          merge: new Set(),
+          quick: new Set()
+      };
+
+      // Configuration constants
+      const ARRAY_SIZE = 64;
+      const DELAY = 50;
+      const MAX_VALUE = 100;
+      const MIN_VALUE = 10;
+
+      function generateArray() {
+        originalArray = Array.from({length: ARRAY_SIZE}, () => Math.floor(Math.random() * (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE);
+        arrays.bubble = [...originalArray];
+        arrays.insertion = [...originalArray];
+        arrays.merge = [...originalArray];
+        arrays.quick = [...originalArray];
+
+        sortedIndices = {
+            bubble: new Set(),
+            insertion: new Set(),
+            merge: new Set(),
+            quick: new Set()
+        };
+
+        renderAllArrays();
+      }
+
+      function renderArray(container, array, algorithmName, highlight = { comparing: [], swapping: [], pivot: -1 }) {
+        container.innerHTML = '';
+
+        const containerWidth = container.clientWidth - (2 * 10);
+        const barGap = 2;
+        const totalGapWidth = (array.length - 1) * barGap;
+        const barWidth = Math.max(2, Math.floor((containerWidth - totalGapWidth) / array.length));
+
+        array.forEach((value, index) => {
+          const bar = document.createElement('div');
+          bar.style.transition = 'background-color 0.1s ease, height 0.1s ease';
+          bar.style.display = 'inline-block';
+          bar.style.borderRadius = '4px';
+          bar.style.height = `${value * 2}px`;
+          bar.style.width = `${barWidth}px`;
+
+          if (sortedIndices[algorithmName].has(index)) {
+              bar.style.backgroundColor = '#10b981';
+          } else if (index === highlight.pivot) {
+              bar.style.backgroundColor = '#22c55e';
+          } else if (Array.isArray(highlight.swapping) && highlight.swapping.includes(index)) {
+              bar.style.backgroundColor = '#3b82f6';
+          } else if (Array.isArray(highlight.comparing) && highlight.comparing.includes(index)) {
+              bar.style.backgroundColor = '#ef4444';
+          } else {
+              bar.style.backgroundColor = '#6b7280';
+          }
+          container.appendChild(bar);
+        });
+      }
+
+      function renderAllArrays(highlights = {}) {
+        renderArray(containers.bubble, arrays.bubble, 'bubble', { comparing: [], swapping: [], pivot: -1, ...highlights.bubble });
+        renderArray(containers.insertion, arrays.insertion, 'insertion', { comparing: [], swapping: [], pivot: -1, ...highlights.insertion });
+        renderArray(containers.merge, arrays.merge, 'merge', { comparing: [], swapping: [], pivot: -1, ...highlights.merge });
+        renderArray(containers.quick, arrays.quick, 'quick', { comparing: [], swapping: [], pivot: -1, ...highlights.quick });
+      }
+
+      const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+      async function bubbleSort() {
+        let array = arrays.bubble;
+        let n = array.length;
+        for (let i = 0; i < n - 1; i++) {
+          for (let j = 0; j < n - i - 1; j++) {
+            renderAllArrays({ bubble: { comparing: [j, j + 1] } });
+            await sleep(DELAY);
+
+            if (array[j] > array[j + 1]) {
+              [array[j], array[j + 1]] = [array[j + 1], array[j]];
+              renderAllArrays({ bubble: { swapping: [j, j + 1] } });
+              await sleep(DELAY);
+            }
+          }
+          sortedIndices.bubble.add(n - 1 - i);
+        }
+        sortedIndices.bubble.add(0);
+        renderAllArrays({ bubble: {} });
+      }
+
+      async function insertionSort() {
+        let array = arrays.insertion;
+        let n = array.length;
+        for (let i = 1; i < n; i++) {
+          let key = array[i];
+          let j = i - 1;
+          renderAllArrays({ insertion: { comparing: [i], swapping: [j + 1] } });
+          await sleep(DELAY);
+
+          while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            renderAllArrays({ insertion: { comparing: [j, i], swapping: [j + 1, j] } });
+            await sleep(DELAY);
+            j--;
+          }
+          array[j + 1] = key;
+          renderAllArrays({ insertion: { swapping: [j + 1] } });
+          await sleep(DELAY);
+          for (let k = 0; k <= i; k++) {
+              sortedIndices.insertion.add(k);
+          }
+        }
+        for (let k = 0; k < n; k++) {
+            sortedIndices.insertion.add(k);
+        }
+        renderAllArrays({ insertion: {} });
+      }
+
+      async function merge(arr, start, mid, end) {
+        let temp = [];
+        let i = start;
+        let j = mid + 1;
+        let k = 0;
+
+        while (i <= mid && j <= end) {
+          renderAllArrays({ merge: { comparing: [i, j] } });
+          await sleep(DELAY);
+
+          if (arr[i] <= arr[j]) {
+            temp[k++] = arr[i++];
+          } else {
+            temp[k++] = arr[j++];
+          }
+        }
+
+        while (i <= mid) {
+          temp[k++] = arr[i++];
+        }
+
+        while (j <= end) {
+          temp[k++] = arr[j++];
+        }
+
+        for (let x = 0; x < temp.length; x++) {
+          arr[start + x] = temp[x];
+          renderAllArrays({ merge: { swapping: [start + x] } });
+          await sleep(DELAY);
+        }
+      }
+
+      async function mergeSort(arr, start, end) {
+        if (start >= end) {
+          if (start === end) {
+             sortedIndices.merge.add(start);
+          }
+          return;
+        }
+
+        const mid = Math.floor((start + end) / 2);
+
+        await mergeSort(arr, start, mid);
+        await mergeSort(arr, mid + 1, end);
+
+        await merge(arr, start, mid, end);
+
+        for (let k = start; k <= end; k++) {
+            sortedIndices.merge.add(k);
+        }
+        renderAllArrays({ merge: {} });
+      }
+
+      async function getMedianIndex(arr, low, high) {
+        const mid = Math.floor((low + high) / 2);
+        const values = [
+          { value: arr[low], index: low },
+          { value: arr[mid], index: mid },
+          { value: arr[high], index: high }
+        ];
+        values.sort((a, b) => a.value - b.value);
+        return values[1].index;
+      }
+
+      async function partition(arr, low, high) {
+        let pivotIdxToUse;
+        const strategy = pivotStrategySelect.value;
+
+        if (strategy === 'first') pivotIdxToUse = low;
+        else if (strategy === 'random') pivotIdxToUse = low + Math.floor(Math.random() * (high - low + 1));
+        else if (strategy === 'median') pivotIdxToUse = await getMedianIndex(arr, low, high);
+        else pivotIdxToUse = high;
+
+        [arr[pivotIdxToUse], arr[high]] = [arr[high], arr[pivotIdxToUse]];
+        let actualPivotIndex = high;
+
+        const pivotValue = arr[actualPivotIndex];
+
+        renderAllArrays({ quick: { pivot: actualPivotIndex, comparing: [low, high] } });
+        await sleep(DELAY);
+
+        let i = low - 1;
+
+        for (let j = low; j < high; j++) {
+          renderAllArrays({ quick: { pivot: actualPivotIndex, comparing: [j, i + 1] } });
+          await sleep(DELAY);
+
+          if (arr[j] < pivotValue) {
+            i++;
+            if (i !== j) {
+              [arr[i], arr[j]] = [arr[j], arr[i]];
+              renderAllArrays({ quick: { pivot: actualPivotIndex, swapping: [i, j] } });
+              await sleep(DELAY);
+            }
+          }
+        }
+
+        if (i + 1 !== actualPivotIndex) {
+          [arr[i + 1], arr[actualPivotIndex]] = [arr[actualPivotIndex], arr[i + 1]];
+          renderAllArrays({ quick: { swapping: [i + 1, actualPivotIndex] } });
+          await sleep(DELAY);
+        }
+
+        return i + 1;
+      }
+
+      async function quickSort(arr, low, high) {
+        if (low < high) {
+          const pi = await partition(arr, low, high);
+
+          await quickSort(arr, low, pi - 1);
+          await quickSort(arr, pi + 1, high);
+
+          sortedIndices.quick.add(pi);
+        } else if (low === high) {
+            sortedIndices.quick.add(low);
+        }
+        renderAllArrays({ quick: {} });
+      }
+
+      async function startAllSorts() {
+        if (isSorting) return;
+        isSorting = true;
+        startAllButton.disabled = true;
+        startAllButton.style.cursor = 'not-allowed';
+        startAllButton.style.opacity = '0.7';
+        resetButton.disabled = true;
+        pivotStrategySelect.disabled = true;
+
+        generateArray();
+
+        console.log("Starting all sorts concurrently...");
+        await Promise.all([
+          bubbleSort(),
+          insertionSort(),
+          mergeSort(arrays.merge, 0, arrays.merge.length - 1),
+          quickSort(arrays.quick, 0, arrays.quick.length - 1)
+        ]);
+        console.log("All sorts finished.");
+
+        isSorting = false;
+        startAllButton.disabled = false;
+        startAllButton.style.cursor = 'pointer';
+        startAllButton.style.opacity = '1';
+        resetButton.disabled = false;
+        pivotStrategySelect.disabled = false;
+      }
+
+      startAllButton.addEventListener('click', startAllSorts);
+      resetButton.addEventListener('click', () => {
+        if (!isSorting) {
+            generateArray();
+        }
+      });
+
+      generateArray();
+
+      window.addEventListener('resize', () => {
+          if (!isSorting) {
+              renderAllArrays();
+          }
+      });
+    })();
+  </script>
