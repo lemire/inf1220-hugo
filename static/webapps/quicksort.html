@@ -1,0 +1,124 @@
+<div id="quickSortApp_controls" style="margin-bottom: 20px;">
+    <label for="quickSortApp_pivotStrategy" style="font-size: 16px; margin-right: 10px;">Stratégie de pivot :</label>
+    <select id="quickSortApp_pivotStrategy" style="padding: 5px; font-size: 16px; margin-right: 20px;">
+      <option value="median">Médiane de trois</option>
+      <option value="random">Élément aléatoire</option>
+      <option value="last">Dernier élément</option>
+      <option value="first">Premier élément</option>
+    </select>
+    <button id="quickSortApp_startButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Lancer le tri</button>
+    <button id="quickSortApp_resetButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer; margin-left: 10px;">Réinitialiser</button>
+  </div>
+  <div id="quickSortApp_arrayContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 5px;"></div>
+  <script>
+    (function() {
+      const startButton = document.getElementById('quickSortApp_startButton');
+      const resetButton = document.getElementById('quickSortApp_resetButton');
+      const pivotStrategy = document.getElementById('quickSortApp_pivotStrategy');
+      const arrayContainer = document.getElementById('quickSortApp_arrayContainer');
+      let array = [];
+      let isSorting = false;
+
+      function generateArray() {
+        array = Array.from({length: 20}, () => Math.floor(Math.random() * 100) + 10);
+        renderArray();
+      }
+
+      function renderArray(pivotIndex = -1, comparing = [], swapping = []) {
+        arrayContainer.innerHTML = '';
+        array.forEach((value, index) => {
+          const bar = document.createElement('div');
+          bar.style.height = `${value * 2}px`;
+          bar.style.width = '20px';
+          bar.style.backgroundColor = index === pivotIndex ? 'green' : swapping.includes(index) ? 'blue' : comparing.includes(index) ? 'red' : 'gray';
+          bar.style.display = 'inline-block';
+          arrayContainer.appendChild(bar);
+        });
+      }
+
+      function getMedianIndex(low, high) {
+        const mid = Math.floor((low + high) / 2);
+        const values = [
+          { value: array[low], index: low },
+          { value: array[mid], index: mid },
+          { value: array[high], index: high }
+        ];
+        values.sort((a, b) => a.value - b.value);
+        return values[1].index;
+      }
+
+      async function partition(low, high) {
+        let pivotIndex;
+        const strategy = pivotStrategy.value;
+        if (strategy === 'first') {
+          pivotIndex = low;
+        } else if (strategy === 'random') {
+          pivotIndex = low + Math.floor(Math.random() * (high - low + 1));
+        } else if (strategy === 'median') {
+          pivotIndex = getMedianIndex(low, high);
+        } else {
+          pivotIndex = high;
+        }
+
+        const pivot = array[pivotIndex];
+        if (pivotIndex !== high) {
+          [array[pivotIndex], array[high]] = [array[high], array[pivotIndex]];
+          pivotIndex = high;
+        }
+
+        renderArray(pivotIndex, [low, high]);
+        await new Promise(resolve => setTimeout(resolve, 100));
+        let i = low - 1;
+
+        for (let j = low; j < high; j++) {
+          renderArray(pivotIndex, [j, i + 1]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          if (array[j] <= pivot) {
+            i++;
+            if (i !== j) {
+              [array[i], array[j]] = [array[j], array[i]];
+              renderArray(pivotIndex, [], [i, j]);
+              await new Promise(resolve => setTimeout(resolve, 100));
+            }
+          }
+        }
+
+        if (i + 1 !== high) {
+          [array[i + 1], array[high]] = [array[high], array[i + 1]];
+          renderArray(-1, [], [i + 1, high]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
+
+        return i + 1;
+      }
+
+      async function quickSort(low, high) {
+        if (low < high) {
+          const pi = await partition(low, high);
+          await quickSort(low, pi - 1);
+          await quickSort(pi + 1, high);
+        }
+      }
+
+      async function sort() {
+        if (isSorting) return;
+        isSorting = true;
+        startButton.disabled = true;
+        startButton.style.cursor = 'not-allowed';
+
+        await quickSort(0, array.length - 1);
+        renderArray();
+
+        isSorting = false;
+        startButton.disabled = false;
+        startButton.style.cursor = 'pointer';
+      }
+
+      startButton.addEventListener('click', sort);
+      resetButton.addEventListener('click', () => {
+        if (!isSorting) generateArray();
+      });
+
+      generateArray();
+    })();
+  </script>

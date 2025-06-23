@@ -119,6 +119,10 @@ POUR i de 0 à n-2
 FIN POUR
 ```
 
+Utilisez cette application pour mieux comprendre le tri à bulle.
+{{< webapp path="bulle.html" >}}
+
+
 Un autre algorithme simple est le tri par insertion. Il parcourt le tableau élément par élément, insérant chaque nouvel élément à sa place dans la partie déjà triée.
 
 ```
@@ -132,6 +136,9 @@ POUR i de 1 à n-1
     tableau[j+1] ← clé
 FIN POUR
 ```
+Utilisez cette application pour mieux comprendre le tri par insertion.
+
+{{< webapp path="insertion.html" >}}
 
 Heureusement, il existe des algorithmes de tri plus efficaces. Par exemple, le tri fusion (merge sort) utilise une approche « diviser pour régner » : il divise le tableau en deux moitiés, trie chaque moitié récursivement, puis fusionne les deux moitiés triées en un seul tableau trié. Cette méthode réduit considérablement le nombre de comparaisons nécessaires et atteint une complexité en \( O(n \log n) \).
 
@@ -173,8 +180,12 @@ FIN FONCTION
 
 Le tri fusion est donc beaucoup plus rapide que les tris naïfs pour les grands tableaux, et il illustre l’intérêt des algorithmes efficaces en informatique.
 
+Utilisez cette application pour mieux comprendre le tri fusion.
 
-Un autre algorithme performant est le tri rapide (quick sort). Il choisit un élément pivot, partitionne le tableau en deux sous-tableaux (les éléments plus petits que le pivot et ceux plus grands), puis trie récursivement chaque sous-tableau. En moyenne, sa complexité est en \( O(n \log n) \), bien qu’il puisse atteindre \( O(n^2) \) dans le pire cas (par exemple, si le tableau est déjà trié et que le pivot est mal choisi). Le choix du pivot est crucial : une stratégie courante est de sélectionner l’élément médian ou un élément aléatoire.
+{{< webapp path="fusion.html" >}}
+
+
+Un autre algorithme performant est le tri rapide (quick sort). Il choisit un élément pivot, partitionne le tableau en deux sous-tableaux (les éléments plus petits que le pivot et ceux plus grands), puis trie récursivement chaque sous-tableau. En moyenne, sa complexité est en \( O(n \log n) \), bien qu’il puisse atteindre \( O(n^2) \) dans le pire cas (par exemple, si le tableau est déjà trié et que le pivot est mal choisi). Le choix du pivot est crucial : une stratégie courante est de sélectionner la médiane de trois valeurs ou un élément aléatoire.
 
 ```
 FONCTION triRapide(tableau, début, fin)
@@ -198,6 +209,10 @@ FONCTION partitionner(tableau, début, fin)
     retourner i + 1
 FIN FONCTION
 ```
+
+Utilisez cette application pour mieux comprendre le tri rapide.
+
+{{< webapp path="quicksort.html" >}}
 
 Le tri rapide est souvent le plus rapide en pratique pour plusieurs raisons.
 Premièrement, le tri rapide est efficace en termes de localité de mémoire. Il travaille directement sur le tableau (tri en place), ce qui minimise les accès mémoire et exploite bien la mémoire tampon des processeurs modernes. Comparé au tri fusion, qui nécessite un tableau auxiliaire pour la fusion, le tri rapide réduit les allocations de mémoire et les copies d’éléments.
