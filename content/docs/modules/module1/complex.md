@@ -180,7 +180,7 @@ FIN FONCTION
 
 Le tri fusion est donc beaucoup plus rapide que les tris naïfs pour les grands tableaux, et il illustre l’intérêt des algorithmes efficaces en informatique.
 
-Utilisez cette application pour mieux comprendre le tri fusion.
+Utilisez cette application pour mieux comprendre le tri fusion. 
 
 {{< webapp path="fusion.html" >}}
 
