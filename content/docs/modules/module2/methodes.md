@@ -128,7 +128,7 @@ public class TransformeurTexte {
 }
 {{</inlineJava>}}
 
-
+Dans la classe TransformeurTexte, la référence this est utilisée dans la méthode setTexte pour désigner l'instance actuelle de la classe. La référence this représente l'instance actuelle de la classe TransformeurTexte sur laquelle la méthode setTexte est appelée. La référence this ne peut être utilisée que dans un contexte non statique.
 
 
 <p>Peu importe l'environnement que vous utilisez pour tester nos exemples, prenez la peine de vous familiariser avec celui-ci.</p>

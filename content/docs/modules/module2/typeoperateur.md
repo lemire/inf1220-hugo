@@ -503,6 +503,20 @@ String etat = "Succès : " + ok; // "Succès : true"
 
 Java convertit automatiquement les valeurs non String en chaîne lors de la concaténation avec l’opérateur <code>+</code> de gauche à droite.
 
+
+## Constantes
+
+En Java, le mot-clé final est utilisé pour déclarer qu'une variable, une méthode ou une classe ne peut pas être modifiée ou redéfinie après son initialisation. Lorsqu'il est appliqué à une variable, il garantit que sa valeur reste constante une fois qu'elle a été assignée.
+Une variable final doit être initialisée au moment de sa déclaration ou dans un bloc d'initialisation (pour les champs d'instance) ou un constructeur (pour les champs d'instance dans une classe). Si elle n'est pas initialisée, le compilateur génère une erreur.
+
+```java {style=github} 
+public class Exemple {
+    public static final double PI = 3.14159;
+}
+```
+
+
+
 ## Exercices
 
 <p>Voici quelques exercices pour pratiquer ce que vous venez d'apprendre :</p>

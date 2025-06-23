@@ -34,6 +34,70 @@ public class ExempleLambda {
 
 Ce code définit une liste de mots, utilise une lambda pour trier les éléments par longueur croissante, puis affiche le résultat. La lambda (a, b) -> a.length() - b.length() remplace une implémentation complète de Comparator.
 
+En Java, les expressions lambda permettent de capturer des variables de leur portée environnante, mais cette capture est soumise à des règles strictes pour garantir la sécurité et la prévisibilité. Les lambdas peuvent accéder aux variables locales, aux paramètres de méthode, aux variables d'instance, aux variables statiques et aux références this ou super. 
+Les variables locales et les paramètres de méthode doivent être final ou effectivement final (non modifiés après leur initialisation) pour être capturés par une lambda.  Par exemple, une variable locale int x = 10 peut être utilisée dans une lambda si elle n'est pas réassignée. En revanche, les variables d'instance et statiques de la classe englobante peuvent être librement accédées et modifiées.
+Les lambdas capturent également la référence this de la classe englobante, permettant d'accéder à ses méthodes et champs d'instance. Contrairement aux classes anonymes, où this fait référence à l'instance de la classe anonyme, dans une lambda, this désigne l'instance de la classe englobante. Les lambdas ne créent pas de nouvelle portée pour this, ce qui simplifie leur sémantique. Cependant, les paramètres de la lambda ne peuvent pas avoir le même nom qu'une variable locale capturée pour éviter les ambiguïtés.
+Sous le capot, la capture des variables locales se fait par référence à leur valeur (qui est constante en raison de la règle de finalité effective), tandis que les variables d'instance et statiques sont accessibles via une référence à l'objet ou à la classe englobante. 
+Cela permet aux lambdas de modifier l'état mutable, comme une liste référencée par une variable locale effectivement final, ce qui peut compromettre la pureté fonctionnelle. Pour qu'une lambda soit une fonction pure, elle doit éviter de modifier ou de dépendre d'un état mutable externe et se limiter à ses paramètres d'entrée et à des données immuables.
+
+{{<inlineJava path="LambdaCaptureExample.java" lang="java">}}
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+public class LambdaCaptureExample {
+    private int instanceVar = 100; // Variable d'instance
+    private static int staticVar = 200; // Variable statique
+
+    public void demonstrateLambdaCapture() {
+        // Variable locale
+        int localVar = 10; // Effectivement final
+        // Liste mutable référencée par une variable locale
+        List<Integer> mutableList = new ArrayList<>();
+
+        // Lambda 1 : Capture d'une variable locale (pure)
+        Function<Integer, Integer> pureLambda = x -> x + localVar;
+        System.out.println("Lambda pure (5 + localVar) : " + pureLambda.apply(5)); // Affiche 15
+
+        // Lambda 2 : Capture et modification d'une variable d'instance (non pure)
+        Runnable instanceLambda = () -> {
+            instanceVar += 50;
+            System.out.println("Variable d'instance modifiée : " + instanceVar);
+        };
+        instanceLambda.run(); // Affiche 150
+
+        // Lambda 3 : Capture et modification d'une variable statique (non pure)
+        Runnable staticLambda = () -> {
+            staticVar += 100;
+            System.out.println("Variable statique modifiée : " + staticVar);
+        };
+        staticLambda.run(); // Affiche 300
+
+        // Lambda 4 : Capture de 'this' pour accéder à une méthode d'instance
+        Runnable thisLambda = () -> System.out.println("Accès via this, instanceVar : " + this.getInstanceVar());
+        thisLambda.run(); // Affiche 150
+
+        // Lambda 5 : Capture d'une liste mutable (non pure)
+        Consumer<Integer> listLambda = x -> mutableList.add(x);
+        listLambda.accept(42);
+        System.out.println("Liste après ajout : " + mutableList); // Affiche [42]
+
+        // Tentative de modification de localVar (invalide)
+        // localVar = 20; // Erreur : localVar doit être final ou effectivement final
+    }
+
+    public int getInstanceVar() {
+        return instanceVar;
+    }
+
+    public static void main(String[] args) {
+        LambdaCaptureExample example = new LambdaCaptureExample();
+        example.demonstrateLambdaCapture();
+    }
+}
+{{</inlineJava>}}
+
 
 Les lambdas sont utilisés à de multiples fins en Java. L’API Stream en Java pour effectuer un filtrage fonctionnel sur une liste de nombres. Considérons le prochain exemple. Le premier concept clé est la création d’une liste immuable avec Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8). Cette méthode transforme un tableau de nombres en une List fixe, qui ne peut pas être modifiée (par exemple, pas d’ajout ou de suppression d’éléments). Cette liste, nommée nombres, sert de point de départ pour le traitement. Ensuite, l’opération de filtrage repose sur l’API Stream, introduite en Java 8, qui permet de manipuler des collections de manière déclarative, en exprimant ce qu’on veut obtenir (ici, les nombres pairs) plutôt que comment le faire (comme avec une boucle traditionnelle). Ce paradigme fonctionnel rend le code plus concis et expressif. La méthode `filter()` crée un nouveau flux contenant uniquement les éléments satisfaisant une condition donnée, définie par une expression lambda qui retourne `true` ou `false`.
 
