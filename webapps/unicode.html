@@ -1,0 +1,37 @@
+<textarea id="utf16HexApp_inputText" rows="4" style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 10px;">Allo la 🌍!</textarea>
+  <div id="utf16HexApp_hexDisplay" style="font-family: monospace; font-size: 14px; line-height: 1.5;"></div>
+  <script>
+    (function() {
+      const inputText = document.getElementById('utf16HexApp_inputText');
+      const hexDisplay = document.getElementById('utf16HexApp_hexDisplay');
+
+      function updateDisplay() {
+        const text = inputText.value;
+        let hexOutput = '';
+        let colorCounter = 0;
+
+        for (let i = 0; i < text.length; ) {
+          const char = text[i];
+          const codePoint = char.codePointAt(0);
+          const color = colorCounter % 2 === 0 ? 'blue' : 'red';
+
+          if (text.charCodeAt(i) >= 0xD800 && text.charCodeAt(i) <= 0xDFFF && i + 1 < text.length) {
+            const highSurrogate = text.charCodeAt(i).toString(16).padStart(4, '0').toUpperCase();
+            const lowSurrogate = text.charCodeAt(i + 1).toString(16).padStart(4, '0').toUpperCase();
+            hexOutput += `<span style="color: ${color}; font-weight: bold;">0x${highSurrogate} 0x${lowSurrogate}</span> `;
+            i += 2;
+          } else {
+            const hex = codePoint.toString(16).padStart(4, '0').toUpperCase();
+            hexOutput += `<span style="color: ${color};">0x${hex}</span> `;
+            i++;
+          }
+          colorCounter++;
+        }
+
+        hexDisplay.innerHTML = hexOutput;
+      }
+
+      inputText.addEventListener('input', updateDisplay);
+      updateDisplay();
+    })();
+  </script>
