@@ -34,6 +34,18 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
 &lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Concepts de base&lt;/em> (chapitre 1) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après votre lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Décrivez les principales composantes matérielles d’un ordinateur typique, telles que le processeur, la mémoire centrale et les unités périphériques. Expliquez brièvement le rôle du bus dans la communication entre ces composantes.&lt;/li>
+&lt;li>Expliquez le fonctionnement de base du processeur central (CPU) dans l’exécution d’un programme. Décrivez le cycle de traitement (chercher et exécuter une instruction) et donnez un exemple simple d’instruction que le processeur pourrait exécuter.&lt;/li>
+&lt;li>Quelles sont les caractéristiques principales de la mémoire centrale (RAM) en termes de rapidité et de volatilité ? Expliquez pourquoi un programme doit être chargé dans la mémoire centrale avant son exécution et ce qui se passe en cas d’interruption de courant.&lt;/li>
+&lt;li>Distinguez les périphériques d’entrée, de sortie et d’entrée/sortie. À l’aide d’exemples concrets (comme le clavier, l’écran ou le disque dur), expliquez comment ces périphériques permettent l’échange d’informations entre l’ordinateur et le monde extérieur.&lt;/li>
+&lt;li>Quelle est la différence entre le matériel (hardware) et le logiciel (software) ? Décrivez le rôle du système d’exploitation dans la gestion des ressources d’un ordinateur, en citant un exemple de système d’exploitation mentionné dans le chapitre.&lt;/li>
+&lt;li>Expliquez ce qu’est le langage binaire et pourquoi il est utilisé dans les ordinateurs. À l’aide d’un exemple, montrez comment l’entier décimal 42 est représenté en binaire sur 8 bits, en détaillant le calcul.&lt;/li>
+&lt;li>Décrivez le processus de compilation dans le contexte de la programmation Java. Expliquez pourquoi il est nécessaire de traduire un programme Java en langage machine avant son exécution par le processeur.&lt;/li>
+&lt;li>Expliquez ce qu’est un système de gestion de fichiers et son rôle dans l’organisation des données en mémoire secondaire. À l’aide d’un exemple de chemin de fichier sous Windows (comme C:\Users\Robert\Documents\HelloWorld.java), décrivez comment un fichier est localisé.&lt;/li>
+&lt;li>Qu’est-ce que le pseudo-parallélisme dans un système monoprocesseur ? Expliquez comment le système d’exploitation crée l’illusion d’une exécution simultanée de plusieurs programmes, et précisez en quoi cela diffère du parallélisme réel dans un système multi-cœur.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
  Court historique des langages de programmation
  &lt;a class="anchor" href="#court-historique-des-langages-de-programmation">#&lt;/a>

@@ -2,12 +2,28 @@
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Expliquez ce qu&amp;rsquo;est la structure de contrôle de type séquence en programmation Java. Donnez un exemple simple de code Java illustrant cette structure et expliquez pourquoi elle est considérée comme la structure de contrôle de base.&lt;/li>
+&lt;li>Décrivez le fonctionnement de la boucle while en Java, en précisant sa syntaxe et les conditions nécessaires pour qu&amp;rsquo;elle s&amp;rsquo;exécute correctement. À l&amp;rsquo;aide d&amp;rsquo;un exemple de code, montrez comment utiliser une boucle while pour afficher les nombres de 1 à 10.&lt;/li>
+&lt;li>Comparez les boucles for et while en termes de structure et d&amp;rsquo;utilisation en Java. Fournissez un exemple de code utilisant une boucle for pour calculer la somme des nombres pairs compris entre 1 et 100, et expliquez pourquoi la boucle for est particulièrement adaptée à ce type de tâche.&lt;/li>
+&lt;li>Expliquez comment la structure if permet de prendre des décisions dans un programme Java. Écrivez un programme simple qui utilise une structure if-else pour déterminer si un nombre saisi par l&amp;rsquo;utilisateur (via la classe Scanner) est&lt;/li>
+&lt;li>Selon le chapitre, pourquoi est-il important de tester et de déboguer un programme Java ? Décrivez une méthode de test que vous pourriez utiliser pour vérifier le bon fonctionnement d&amp;rsquo;une boucle for qui affiche les multiples de 5 jusqu&amp;rsquo;à 50. Expliquez comment vous identifieriez et corrigeriez une erreur si la boucle affichait incorrectement les résultats.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Traitement de fichiers&lt;/em> (chapitre 9) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Traitement de fichiers&lt;/em> (chapitre 9) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après votre lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Expliquez la différence entre un fichier binaire et un fichier texte en Java. À l&amp;rsquo;aide d&amp;rsquo;un exemple de code utilisant les classes FileOutputStream et FileInputStream, montrez comment écrire et lire un entier dans un fichier binaire. Précisez pourquoi il est important de gérer les exceptions dans ce contexte.&lt;/li>
+&lt;li>Décrivez le rôle des classes DataInputStream et DataOutputStream dans le traitement de fichiers binaires en Java. Écrivez un programme simple qui utilise ces classes pour écrire un tableau de doubles dans un fichier binaire, puis le relire et l’afficher à l’écran. Expliquez comment ces classes facilitent la gestion des types de données.&lt;/li>
+&lt;li>Expliquez comment la classe StreamTokenizer peut être utilisée pour effectuer une analyse lexicale d’un fichier texte. Fournissez un exemple de code qui lit un fichier texte contenant des nombres et des mots, et qui utilise StreamTokenizer pour séparer les nombres des chaînes de caractères, en les affichant séparément. Précisez comment configurer les caractères d’espacement (whitespaceChars) et de citation (quoteChar).&lt;/li>
+&lt;li>Décrivez le fonctionnement de la classe JFileChooser pour la sélection de fichiers dans une interface graphique. Écrivez un programme Java qui utilise JFileChooser pour permettre à l’utilisateur de sélectionner un fichier texte, puis affiche son chemin absolu. Expliquez comment cette classe améliore l’expérience utilisateur par rapport à une saisie manuelle du chemin.&lt;/li>
+&lt;li>Expliquez ce qu’est un fichier à adressage relatif et en quoi il diffère d’un fichier sériel en Java. À l’aide d’un exemple de code basé sur la classe RandomAccessFile, montrez comment lire et modifier un enregistrement spécifique dans un fichier contenant des objets Plant (comme dans l’exemple du manuel). Décrivez comment la méthode seek et la gestion des numéros d’enregistrement relatif permettent un accès direct aux données.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
@@ -72,7 +88,18 @@ en ligne de ce type.&lt;/p>
 &lt;li>Chapitre 4. Types et expressions Java&lt;/li>
 &lt;/ul>
 &lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
-&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
+&lt;p>Après votre lecture, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Chapitre 2. Introduction à la programmation Java&lt;/p>
+&lt;ul>
+&lt;li>Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li>
+&lt;li>Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li>
+&lt;li>Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Chapitre 4. Types et expressions Java&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
  Le polymorphisme
  &lt;a class="anchor" href="#le-polymorphisme">#&lt;/a>
 &lt;/h1>
@@ -142,6 +169,18 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
 &lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Concepts de base&lt;/em> (chapitre 1) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après votre lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Décrivez les principales composantes matérielles d’un ordinateur typique, telles que le processeur, la mémoire centrale et les unités périphériques. Expliquez brièvement le rôle du bus dans la communication entre ces composantes.&lt;/li>
+&lt;li>Expliquez le fonctionnement de base du processeur central (CPU) dans l’exécution d’un programme. Décrivez le cycle de traitement (chercher et exécuter une instruction) et donnez un exemple simple d’instruction que le processeur pourrait exécuter.&lt;/li>
+&lt;li>Quelles sont les caractéristiques principales de la mémoire centrale (RAM) en termes de rapidité et de volatilité ? Expliquez pourquoi un programme doit être chargé dans la mémoire centrale avant son exécution et ce qui se passe en cas d’interruption de courant.&lt;/li>
+&lt;li>Distinguez les périphériques d’entrée, de sortie et d’entrée/sortie. À l’aide d’exemples concrets (comme le clavier, l’écran ou le disque dur), expliquez comment ces périphériques permettent l’échange d’informations entre l’ordinateur et le monde extérieur.&lt;/li>
+&lt;li>Quelle est la différence entre le matériel (hardware) et le logiciel (software) ? Décrivez le rôle du système d’exploitation dans la gestion des ressources d’un ordinateur, en citant un exemple de système d’exploitation mentionné dans le chapitre.&lt;/li>
+&lt;li>Expliquez ce qu’est le langage binaire et pourquoi il est utilisé dans les ordinateurs. À l’aide d’un exemple, montrez comment l’entier décimal 42 est représenté en binaire sur 8 bits, en détaillant le calcul.&lt;/li>
+&lt;li>Décrivez le processus de compilation dans le contexte de la programmation Java. Expliquez pourquoi il est nécessaire de traduire un programme Java en langage machine avant son exécution par le processeur.&lt;/li>
+&lt;li>Expliquez ce qu’est un système de gestion de fichiers et son rôle dans l’organisation des données en mémoire secondaire. À l’aide d’un exemple de chemin de fichier sous Windows (comme C:\Users\Robert\Documents\HelloWorld.java), décrivez comment un fichier est localisé.&lt;/li>
+&lt;li>Qu’est-ce que le pseudo-parallélisme dans un système monoprocesseur ? Expliquez comment le système d’exploitation crée l’illusion d’une exécution simultanée de plusieurs programmes, et précisez en quoi cela diffère du parallélisme réel dans un système multi-cœur.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
  Les structures itératives
  &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
@@ -153,8 +192,8 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
 &lt;p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 
 nous trouvons des erreurs.&lt;/p>
 &lt;p>&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site&lt;/a>. Nous apprécions toujours vos commentaires constructifs.&lt;/p>
-&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Développement Web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
- Développement Web en Java
+&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Développement web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
+ Développement web en Java
  &lt;a class="anchor" href="#d%c3%a9veloppement-web-en-java">#&lt;/a>
 &lt;/h1>
 &lt;p>Le développement web en Java repose sur l’utilisation de technologies et de frameworks

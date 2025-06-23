@@ -2,7 +2,15 @@
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Expliquez ce qu&amp;rsquo;est la structure de contrôle de type séquence en programmation Java. Donnez un exemple simple de code Java illustrant cette structure et expliquez pourquoi elle est considérée comme la structure de contrôle de base.&lt;/li>
+&lt;li>Décrivez le fonctionnement de la boucle while en Java, en précisant sa syntaxe et les conditions nécessaires pour qu&amp;rsquo;elle s&amp;rsquo;exécute correctement. À l&amp;rsquo;aide d&amp;rsquo;un exemple de code, montrez comment utiliser une boucle while pour afficher les nombres de 1 à 10.&lt;/li>
+&lt;li>Comparez les boucles for et while en termes de structure et d&amp;rsquo;utilisation en Java. Fournissez un exemple de code utilisant une boucle for pour calculer la somme des nombres pairs compris entre 1 et 100, et expliquez pourquoi la boucle for est particulièrement adaptée à ce type de tâche.&lt;/li>
+&lt;li>Expliquez comment la structure if permet de prendre des décisions dans un programme Java. Écrivez un programme simple qui utilise une structure if-else pour déterminer si un nombre saisi par l&amp;rsquo;utilisateur (via la classe Scanner) est&lt;/li>
+&lt;li>Selon le chapitre, pourquoi est-il important de tester et de déboguer un programme Java ? Décrivez une méthode de test que vous pourriez utiliser pour vérifier le bon fonctionnement d&amp;rsquo;une boucle for qui affiche les multiples de 5 jusqu&amp;rsquo;à 50. Expliquez comment vous identifieriez et corrigeriez une erreur si la boucle affichait incorrectement les résultats.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
  GitHub (optionnel)
  &lt;a class="anchor" href="#github-optionnel">#&lt;/a>

@@ -2,7 +2,15 @@
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre suivants &lt;em>Traitement de fichiers&lt;/em> (chapitre 9) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Traitement de fichiers&lt;/em> (chapitre 9) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après votre lecture du chapitre, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>Expliquez la différence entre un fichier binaire et un fichier texte en Java. À l&amp;rsquo;aide d&amp;rsquo;un exemple de code utilisant les classes FileOutputStream et FileInputStream, montrez comment écrire et lire un entier dans un fichier binaire. Précisez pourquoi il est important de gérer les exceptions dans ce contexte.&lt;/li>
+&lt;li>Décrivez le rôle des classes DataInputStream et DataOutputStream dans le traitement de fichiers binaires en Java. Écrivez un programme simple qui utilise ces classes pour écrire un tableau de doubles dans un fichier binaire, puis le relire et l’afficher à l’écran. Expliquez comment ces classes facilitent la gestion des types de données.&lt;/li>
+&lt;li>Expliquez comment la classe StreamTokenizer peut être utilisée pour effectuer une analyse lexicale d’un fichier texte. Fournissez un exemple de code qui lit un fichier texte contenant des nombres et des mots, et qui utilise StreamTokenizer pour séparer les nombres des chaînes de caractères, en les affichant séparément. Précisez comment configurer les caractères d’espacement (whitespaceChars) et de citation (quoteChar).&lt;/li>
+&lt;li>Décrivez le fonctionnement de la classe JFileChooser pour la sélection de fichiers dans une interface graphique. Écrivez un programme Java qui utilise JFileChooser pour permettre à l’utilisateur de sélectionner un fichier texte, puis affiche son chemin absolu. Expliquez comment cette classe améliore l’expérience utilisateur par rapport à une saisie manuelle du chemin.&lt;/li>
+&lt;li>Expliquez ce qu’est un fichier à adressage relatif et en quoi il diffère d’un fichier sériel en Java. À l’aide d’un exemple de code basé sur la classe RandomAccessFile, montrez comment lire et modifier un enregistrement spécifique dans un fichier contenant des objets Plant (comme dans l’exemple du manuel). Décrivez comment la méthode seek et la gestion des numéros d’enregistrement relatif permettent un accès direct aux données.&lt;/li>
+&lt;/ul>
 &lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Les flux de console</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/activite-4-1/</guid><description>&lt;h1 id="les-flux-de-console">
  Les flux de console
  &lt;a class="anchor" href="#les-flux-de-console">#&lt;/a>
@@ -19,8 +27,8 @@
 &lt;h1>Questions/Réponses&lt;/h1>
 &lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
 &lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n'arriviez pas alors à faire les travaux notés et les examens.&lt;/p>
-&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Développement Web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
- Développement Web en Java
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Développement web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
+ Développement web en Java
  &lt;a class="anchor" href="#d%c3%a9veloppement-web-en-java">#&lt;/a>
 &lt;/h1>
 &lt;p>Le développement web en Java repose sur l’utilisation de technologies et de frameworks

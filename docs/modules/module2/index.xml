@@ -16,7 +16,18 @@
 &lt;li>Chapitre 4. Types et expressions Java&lt;/li>
 &lt;/ul>
 &lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
-&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
+&lt;p>Après votre lecture, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Chapitre 2. Introduction à la programmation Java&lt;/p>
+&lt;ul>
+&lt;li>Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li>
+&lt;li>Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li>
+&lt;li>Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Chapitre 4. Types et expressions Java&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
  Introduction aux types de base et à leurs opérateurs
  &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
 &lt;/h1>
