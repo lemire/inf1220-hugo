@@ -1,0 +1,110 @@
+  <div id="mergeSortApp_controls" style="margin-bottom: 20px;">
+    <button id="mergeSortApp_startButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Lancer le tri</button>
+    <button id="mergeSortApp_resetButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer; margin-left: 10px;">Réinitialiser</button>
+  </div>
+  <div id="mergeSortApp_arrayContainer" style="display: flex; justify-content: center; align-items: flex-end; height: 300px; gap: 5px;"></div>
+  <script>
+    (function() {
+      const startButton = document.getElementById('mergeSortApp_startButton');
+      const resetButton = document.getElementById('mergeSortApp_resetButton');
+      const arrayContainer = document.getElementById('mergeSortApp_arrayContainer');
+      let array = [];
+      let isSorting = false;
+
+      function generateArray() {
+        array = Array.from({length: 20}, () => Math.floor(Math.random() * 100) + 10);
+        renderArray();
+      }
+
+      function renderArray(activeIndices = [], merging = []) {
+        arrayContainer.innerHTML = '';
+        array.forEach((value, index) => {
+          const bar = document.createElement('div');
+          bar.style.height = `${value * 2}px`;
+          bar.style.width = '20px';
+          bar.style.backgroundColor = merging.includes(index) ? 'blue' : activeIndices.includes(index) ? 'red' : 'gray';
+          bar.style.display = 'inline-block';
+          arrayContainer.appendChild(bar);
+        });
+      }
+
+      async function merge(left, right, start) {
+        let result = [];
+        let i = 0, j = 0;
+        let currentIndex = start;
+
+        while (i < left.length && j < right.length) {
+          renderArray([currentIndex], [currentIndex]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          if (left[i] <= right[j]) {
+            result.push(left[i]);
+            array[currentIndex] = left[i];
+            i++;
+          } else {
+            result.push(right[j]);
+            array[currentIndex] = right[j];
+            j++;
+          }
+          currentIndex++;
+          renderArray([start, start + result.length - 1], [currentIndex - 1]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
+
+        while (i < left.length) {
+          result.push(left[i]);
+          array[currentIndex] = left[i];
+          renderArray([currentIndex], [currentIndex]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          i++;
+          currentIndex++;
+        }
+
+        while (j < right.length) {
+          result.push(right[j]);
+          array[currentIndex] = right[j];
+          renderArray([currentIndex], [currentIndex]);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          j++;
+          currentIndex++;
+        }
+
+        return result;
+      }
+
+      async function mergeSort(start, end) {
+        if (start < end) {
+          const mid = Math.floor((start + end) / 2);
+          renderArray(array.slice(start, mid + 1).map((_, i) => start + i));
+          await new Promise(resolve => setTimeout(resolve, 100));
+          await mergeSort(start, mid);
+          renderArray(array.slice(mid + 1, end + 1).map((_, i) => mid + 1 + i));
+          await new Promise(resolve => setTimeout(resolve, 100));
+          await mergeSort(mid + 1, end);
+          const left = array.slice(start, mid + 1);
+          const right = array.slice(mid + 1, end + 1);
+          await merge(left, right, start);
+        }
+      }
+
+      async function sort() {
+        if (isSorting) return;
+        isSorting = true;
+        startButton.disabled = true;
+        startButton.style.cursor = 'not-allowed';
+
+        await mergeSort(0, array.length - 1);
+        renderArray();
+
+        isSorting = false;
+        startButton.disabled = false;
+        startButton.style.cursor = 'pointer';
+      }
+
+      startButton.addEventListener('click', sort);
+      resetButton.addEventListener('click', () => {
+        if (!isSorting) generateArray();
+      });
+
+      generateArray();
+    })();
+  </script>
