@@ -18,10 +18,10 @@ Le langage ALGOL (Algorithmic Language) est un langage de programmation dévelop
 
 La notation de Backus-Naur (BNF) est une méthode formelle pour décrire la syntaxe d’un langage, qu’il s’agisse de langages de programmation, de protocoles ou de formats de données. Développée par John Backus et Peter Naur pour le langage ALGOL 60, elle définit les règles grammaticales d’un langage de manière précise et concise. BNF utilise des règles de production pour spécifier comment des symboles (terminaux et non-terminaux) peuvent être combinés pour former des constructions valides. Elle est essentielle pour concevoir des compilateurs et des analyseurs syntaxiques.
 
-- **Symboles terminaux** : Éléments de base du langage, comme des mots-clés, des opérateurs ou des caractères (par exemple, `if`, `+`, `1`).
-- **Symboles non-terminaux** : Catégories ou abstractions représentant des structures du langage (par exemple, `<expression>`, `<instruction>`).
-- **Règles de production** : Définissent comment un symbole non-terminal peut être remplacé par une combinaison de terminaux et/ou non-terminaux, sous la forme `<symbole> ::= définition`.
-- **Méta-symboles** : BNF utilise `::=` pour indiquer une définition et `|` pour exprimer des alternatives.
+- *Symboles terminaux* : Éléments de base du langage, comme des mots-clés, des opérateurs ou des caractères (par exemple, `if`, `+`, `1`).
+- *Symboles non-terminaux* : Catégories ou abstractions représentant des structures du langage (par exemple, `<expression>`, `<instruction>`).
+- *Règles de production* : Définissent comment un symbole non-terminal peut être remplacé par une combinaison de terminaux et/ou non-terminaux, sous la forme `<symbole> ::= définition`.
+- *Méta-symboles* : BNF utilise `::=` pour indiquer une définition et `|` pour exprimer des alternatives.
 
 Une règle s’écrit ainsi :
 ```
@@ -564,34 +564,34 @@ En résumé, une API est une boîte à outils logicielle, conçue pour être uti
 Les ordinateurs et leurs composants sont caractérisés par différentes unités de mesure :
 
 ### Fréquence (vitesse du processeur)
-- **Hertz (Hz)** : unité de fréquence, correspond à un cycle par seconde.
-- **Kilohertz (kHz)** : 1 000 Hz.
-- **Mégahertz (MHz)** : 1 000 000 Hz (un million de cycles/seconde).
-- **Gigahertz (GHz)** : 1 000 000 000 Hz (un milliard de cycles/seconde).
+- *Hertz (Hz)* : unité de fréquence, correspond à un cycle par seconde.
+- *Kilohertz (kHz)* : 1 000 Hz.
+- *Mégahertz (MHz)* : 1 000 000 Hz (un million de cycles/seconde).
+- *Gigahertz (GHz)* : 1 000 000 000 Hz (un milliard de cycles/seconde).
 
 La fréquence d’un processeur (ex : 3,2 GHz) indique combien d’opérations il peut effectuer par seconde.
 
 ### Temps
-- **Seconde (s)** : unité de base du temps.
-- **Milliseconde (ms)** : 1/1 000 de seconde (\(10^{-3}\) s).
-- **Microseconde (µs)** : 1/1 000 000 de seconde (\(10^{-6}\) s).
-- **Nanoseconde (ns)** : 1/1 000 000 000 de seconde (\(10^{-9}\) s).
+- *Seconde (s)* : unité de base du temps.
+- *Milliseconde (ms)* : 1/1 000 de seconde (\(10^{-3}\) s).
+- *Microseconde (µs)* : 1/1 000 000 de seconde (\(10^{-6}\) s).
+- *Nanoseconde (ns)* : 1/1 000 000 000 de seconde (\(10^{-9}\) s).
 
 Les temps d’accès à la mémoire ou d’exécution d’instructions sont souvent mesurés en nanosecondes ou microsecondes.
 
 ### Stockage et mémoire
-- **Octet (B)** : unité de base, correspond à 8 bits.
-- **Kilooctet (ko)** : 1 000 octets (notation décimale, SI).
-- **Mégaoctet (Mo)** : 1 000 000 octets.
-- **Gigaoctet (Go)** : 1 000 000 000 octets.
-- **Téraoctet (To)** : 1 000 000 000 000 octets.
+- *Octet (B)* : unité de base, correspond à 8 bits.
+- *Kilooctet (ko)* : 1 000 octets (notation décimale, SI).
+- *Mégaoctet (Mo)* : 1 000 000 octets.
+- *Gigaoctet (Go)* : 1 000 000 000 octets.
+- *Téraoctet (To)* : 1 000 000 000 000 octets.
 
 #### Préfixes binaires (norme IEC)
-- **Kibioctet (Kio)** : 1 024 octets (\(2^{10}\)).
-- **Mebioctet (Mio)** : 1 048 576 octets (\(2^{20}\)).
-- **Gibioctet (Gio)** : 1 073 741 824 octets (\(2^{30}\)).
+- *Kibioctet (Kio)* : 1 024 octets (\(2^{10}\)).
+- *Mebioctet (Mio)* : 1 048 576 octets (\(2^{20}\)).
+- *Gibioctet (Gio)* : 1 073 741 824 octets (\(2^{30}\)).
 
-> **Remarque :** Les systèmes d’exploitation et les fabricants utilisent parfois les préfixes kilo, méga, giga pour désigner soit des puissances de 10 (décimal), soit des puissances de 2 (binaire). Par exemple, 1 Go peut désigner 1 000 000 000 octets (décimal) ou 1 073 741 824 octets (binaire). Les préfixes Kio, Mio, Gio sont utilisés pour lever cette ambiguïté.
+> *Remarque :* Les systèmes d’exploitation et les fabricants utilisent parfois les préfixes kilo, méga, giga pour désigner soit des puissances de 10 (décimal), soit des puissances de 2 (binaire). Par exemple, 1 Go peut désigner 1 000 000 000 octets (décimal) ou 1 073 741 824 octets (binaire). Les préfixes Kio, Mio, Gio sont utilisés pour lever cette ambiguïté.
 
 Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 

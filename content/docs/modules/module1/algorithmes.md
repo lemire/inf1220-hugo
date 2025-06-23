@@ -34,7 +34,7 @@ Quand on rédige un pseudo-code, il faut tout spécifier, comme si on s'adressai
 Le pseudocode est destiné à être lu par l'humain, et il peut être écrit de diverses manières tant que l'humain le comprend. Le cours ne vise pas à vous permettre de comprendre une syntaxe particulière de pseudocode,  mais bien le pseudocode en général.
 
 ### Qu'est-ce qu'un algorithme ?
-Un **algorithme** est une suite finie et ordonnée d'instructions permettant de résoudre un problème ou d'accomplir une tâche spécifique. Il s'agit d'une méthode systématique, exprimée de manière précise, qui garantit un résultat correct lorsqu'elle est exécutée. Les algorithmes sont au cœur de l'informatique, car ils décrivent comment un programme doit fonctionner pour atteindre un objectif.
+Un *algorithme* est une suite finie et ordonnée d'instructions permettant de résoudre un problème ou d'accomplir une tâche spécifique. Il s'agit d'une méthode systématique, exprimée de manière précise, qui garantit un résultat correct lorsqu'elle est exécutée. Les algorithmes sont au cœur de l'informatique, car ils décrivent comment un programme doit fonctionner pour atteindre un objectif.
 
 Exemples d'algorithmes dans la vie quotidienne :
 - Une recette de cuisine (série d'étapes pour préparer un plat).
@@ -43,7 +43,7 @@ Exemples d'algorithmes dans la vie quotidienne :
 En informatique, un algorithme peut, par exemple, trier une liste de nombres ou calculer le chemin le plus court entre deux points.
 
 ### Qu'est-ce que le pseudo-code ?
-Le **pseudo-code** est une manière d'écrire un algorithme en utilisant un langage simplifié, proche du langage naturel, mais structuré comme un programme informatique. Il n'est pas destiné à être exécuté directement par un ordinateur, mais sert à décrire la logique d'un algorithme de manière claire et compréhensible, indépendamment d'un langage de programmation spécifique.
+Le *pseudo-code* est une manière d'écrire un algorithme en utilisant un langage simplifié, proche du langage naturel, mais structuré comme un programme informatique. Il n'est pas destiné à être exécuté directement par un ordinateur, mais sert à décrire la logique d'un algorithme de manière claire et compréhensible, indépendamment d'un langage de programmation spécifique.
 
 Le pseudo-code utilise des conventions comme :
 - `SI`, `ALORS`, `SINON` pour les conditions.

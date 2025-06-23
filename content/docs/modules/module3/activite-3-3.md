@@ -968,32 +968,32 @@ De toute manière, une instance de la classe String ne peut pas être modifiée 
 La complexité algorithmique mesure le coût (en temps ou en espace) des opérations selon la taille des données manipulées. Voici un survol de la complexité des principales opérations sur les structures de données abordées dans ce module :
 
 ### Tableaux (array)
-- **Accès à un élément** : \(O(1)\) (accès direct par indice)
-- **Modification d’un élément** : \(O(1)\)
-- **Recherche d’une valeur** : \(O(n)\) dans le pire cas (il faut parcourir tout le tableau)
-- **Insertion/Suppression** : \(O(n)\) (il faut déplacer les éléments suivants)
+- *Accès à un élément* : \(O(1)\) (accès direct par indice)
+- *Modification d’un élément* : \(O(1)\)
+- *Recherche d’une valeur* : \(O(n)\) dans le pire cas (il faut parcourir tout le tableau)
+- *Insertion/Suppression* : \(O(n)\) (il faut déplacer les éléments suivants)
 
 ### ArrayList
-- **Accès à un élément** : \(O(1)\)
-- **Ajout à la fin** : \(O(1)\) en moyenne (amortie), mais \(O(n)\) lors d’un redimensionnement
-- **Insertion/Suppression à une position donnée** : \(O(n)\) (déplacement des éléments)
-- **Recherche d’une valeur** : \(O(n)\)
+- *Accès à un élément* : \(O(1)\)
+- *Ajout à la fin* : \(O(1)\) en moyenne (amortie), mais \(O(n)\) lors d’un redimensionnement
+- *Insertion/Suppression à une position donnée* : \(O(n)\) (déplacement des éléments)
+- *Recherche d’une valeur* : \(O(n)\)
 
 ### Stack (Pile)
-- **Ajout (push) ou retrait (pop) d’un élément** : \(O(1)\)
-- **Accès au sommet** : \(O(1)\)
+- *Ajout (push) ou retrait (pop) d’un élément* : \(O(1)\)
+- *Accès au sommet* : \(O(1)\)
 
 ### HashMap
-- **Insertion, suppression, recherche par clé** : \(O(1)\) en moyenne, \(O(n)\) dans le pire cas (rare)
+- *Insertion, suppression, recherche par clé* : \(O(1)\) en moyenne, \(O(n)\) dans le pire cas (rare)
 
 ### PriorityQueue
-- **Ajout d’un élément** : \(O(\log n)\) (le nouvel élément est placé à la fin puis remonté)
-- **Extraction du plus prioritaire (poll)** : \(O(\log n)\) (le dernier élément est placé en tête puis redescendu)
-- **Consultation du plus prioritaire (peek)** : \(O(1)\)
+- *Ajout d’un élément* : \(O(\log n)\) (le nouvel élément est placé à la fin puis remonté)
+- *Extraction du plus prioritaire (poll)* : \(O(\log n)\) (le dernier élément est placé en tête puis redescendu)
+- *Consultation du plus prioritaire (peek)* : \(O(1)\)
 
 ### Opérations sur les streams et lambdas
-- **Filtrage, transformation (map, filter, etc.)** : \(O(n)\), car chaque élément est traité une fois
-- **Tri d’une liste** : \(O(n \log n)\) (par exemple, avec `Collections.sort()` ou `List.sort()`)
+- *Filtrage, transformation (map, filter, etc.)* : \(O(n)\), car chaque élément est traité une fois
+- *Tri d’une liste* : \(O(n \log n)\) (par exemple, avec `Collections.sort()` ou `List.sort()`)
 
 ### Remarques pédagogiques
 - Les opérations en \(O(1)\) sont dites « en temps constant » : leur durée ne dépend pas de la taille des données.

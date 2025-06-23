@@ -15,11 +15,11 @@ Un serveur web est un programme qui reçoit les requêtes des clients (navigateu
 
 Dans le protocole HTTP, les méthodes (ou « verbes ») définissent l’action à effectuer sur une ressource du serveur. Les principales méthodes sont :
 
-- **GET** : Récupère une ressource ou des données depuis le serveur. Par exemple, accéder à une page web ou demander des informations via une API.
-- **POST** : Envoie des données au serveur pour créer une nouvelle ressource ou déclencher un traitement (par exemple, soumettre un formulaire).
-- **PUT** : Met à jour une ressource existante sur le serveur avec de nouvelles données.
-- **DELETE** : Supprime une ressource du serveur.
-- **PATCH** : Modifie partiellement une ressource existante.
+- *GET* : Récupère une ressource ou des données depuis le serveur. Par exemple, accéder à une page web ou demander des informations via une API.
+- *POST* : Envoie des données au serveur pour créer une nouvelle ressource ou déclencher un traitement (par exemple, soumettre un formulaire).
+- *PUT* : Met à jour une ressource existante sur le serveur avec de nouvelles données.
+- *DELETE* : Supprime une ressource du serveur.
+- *PATCH* : Modifie partiellement une ressource existante.
 
 Chaque méthode a un usage précis et permet de structurer les échanges entre le client (navigateur ou application) et le serveur de façon claire et standardisée. Par exemple, une API REST utilisera GET pour lire des données, POST pour en créer, PUT ou PATCH pour les modifier, et DELETE pour les supprimer.
 La plupart des requêtes HTTP sont de type GET ou POST.
@@ -31,7 +31,7 @@ Le HTML (HyperText Markup Language) est le langage de balisage standard utilisé
 
 Le HTML est interprété par le navigateur, qui transforme la structure décrite en une page visuelle. Il est possible d’ajouter des attributs aux balises pour préciser leur apparence ou leur comportement (par exemple, l’attribut href pour les liens ou src pour les images). Le HTML est la base de toute page web, et il peut être enrichi par des feuilles de style CSS et des scripts JavaScript.
 
-**Exemple de base :**
+*Exemple de base :*
 
 ```html {style=github}
 <!DOCTYPE html>
@@ -54,13 +54,13 @@ JavaScript est un langage de programmation exécuté principalement côté clien
 
 Grâce à JavaScript, il est possible de manipuler le Document Object Model (DOM), c’est-à-dire la structure de la page HTML, pour ajouter, modifier ou supprimer des éléments à la volée. JavaScript peut aussi communiquer avec le serveur via des requêtes asynchrones (AJAX), ce qui permet de mettre à jour une partie de la page sans la recharger entièrement.
 
-**Exemple simple :**
+*Exemple simple :*
 
 ```html {style=github}
 <button onclick="alert('Bonjour !')">Cliquez-moi</button>
 ```
 
-**Exemple de modification du contenu :**
+*Exemple de modification du contenu :*
 
 ```html {style=github}
 <p id="demo">Texte initial</p>
@@ -75,7 +75,7 @@ JSON (JavaScript Object Notation) est un format léger d’échange de données,
 
 Un document JSON est constitué de paires clé/valeur, de tableaux et d’objets imbriqués. Il ne supporte que quelques types de données : chaînes de caractères, nombres, booléens, tableaux, objets et null. JSON est plus compact et plus facile à manipuler que le XML, ce qui explique son adoption massive dans le développement web.
 
-**Exemple de structure JSON :**
+*Exemple de structure JSON :*
 
 ```json {style=github}
 {
@@ -86,7 +86,7 @@ Un document JSON est constitué de paires clé/valeur, de tableaux et d’objets
 }
 ```
 
-**Exemple d’utilisation en JavaScript :**
+*Exemple d’utilisation en JavaScript :*
 
 ```javascript {style=github}
 const donnees = '{"nom": "Alice", "age": 30}';
@@ -107,12 +107,12 @@ sélecteur {
 }
 ```
 
-- Le **sélecteur** indique quels éléments HTML seront affectés par la règle (par exemple, `body`, `h1`, `.container`).
-- Les **propriétés** définissent les aspects visuels à modifier (couleur, police, marges, etc.), et chaque propriété est suivie de sa **valeur**.
+- Le *sélecteur* indique quels éléments HTML seront affectés par la règle (par exemple, `body`, `h1`, `.container`).
+- Les *propriétés* définissent les aspects visuels à modifier (couleur, police, marges, etc.), et chaque propriété est suivie de sa *valeur*.
 
-Pour cibler une **classe** (attribut `class` dans le HTML), on utilise un point devant le nom de la classe dans le sélecteur. Par exemple, `.container` cible tous les éléments ayant `class="container"`.
+Pour cibler une *classe* (attribut `class` dans le HTML), on utilise un point devant le nom de la classe dans le sélecteur. Par exemple, `.container` cible tous les éléments ayant `class="container"`.
 
-**Exemple :**
+*Exemple :*
 
 ```html {style=github}
 <div class="message">Ceci est un message</div>
@@ -135,7 +135,7 @@ Une API REST (Representational State Transfer) est une interface qui permet à d
 
 Le principe de REST repose sur l’utilisation d’URL pour identifier les ressources (par exemple, /utilisateurs/123 pour accéder à l’utilisateur numéro 123) et sur l’utilisation des méthodes HTTP pour effectuer des opérations sur ces ressources (lecture, création, modification, suppression). Une API REST bien conçue est stateless (sans état côté serveur entre deux requêtes) et respecte des conventions claires pour la structure des URL et des réponses.
 
-**Exemple d’appel à une API REST en JavaScript :**
+*Exemple d’appel à une API REST en JavaScript :*
 
 ```javascript {style=github}
 fetch('https://api.exemple.com/utilisateurs/123')

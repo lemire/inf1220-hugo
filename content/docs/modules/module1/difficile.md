@@ -60,4 +60,14 @@ le pseudocode pour obtenir toujours la distance la plus courte&nbsp;? C'est une 
 {{< youtube id="yqH11OHfN2U" >}}
 
 
+Cet exemple d'algorithme est un algorithme glouton.
+Un algorithme glouton est une méthode algorithmique qui résout un problème en faisant à chaque étape le choix localement optimal, dans l’espoir que ces choix mènent à une solution globale optimale. Il privilégie la simplicité et la rapidité, mais ne garantit pas toujours la meilleure solution pour tous les problèmes, car il ne revient jamais en arrière pour réévaluer les décisions prises. Ce type d’algorithme est souvent utilisé pour des problèmes d’optimisation où une solution approximative est acceptable ou lorsque le problème possède une structure particulière, comme la propriété de sous-structure optimale ou la propriété gloutonne.
+
+Considérons d'autres exemples de l'approche gloutonne.
+
+-  Suppose que nous disposions d’un sac à dos de capacité limitée et d’objets ayant chacun un poids et une valeur. L’objectif est de maximiser la valeur totale des objets dans le sac, en autorisant des fractions d’objets. L'approche gloutonne dans ce cas consiste à d'abord trier les objets par rapport décroissant de leur rapport valeur/poids. Ensuite, il faut remplir le sac en prenant autant que possible de chaque objet dans cet ordre jusqu’à atteindre la capacité.
+- Suppose que nous disposions d’un ensemble d’activités avec des heures de début et de fin, et l’objectif est de sélectionner le plus grand nombre d’activités compatibles (qui ne se chevauchent pas). Une approche gloutonne consiste à trier les activités par heure de fin croissante. Sélectionner la première activité, puis la prochaine activité compatible, et ainsi de suite.
+
+Les approches gloutonnes donnent généralement une solution qui n'est pas optimale.
+
 Dans le cadre de ce cours, vous ne serez pas confronté à des problèmes aussi complexes que le voyageur de commerce. Les exercices proposés viseront à renforcer votre compréhension des bases algorithmiques, comme les boucles, les conditions et la manipulation de données simples. Cependant, il est utile de connaître l’existence de ces problèmes difficiles pour apprécier la profondeur de l’informatique. Ils illustrent l’importance de l’efficacité algorithmique et des compromis dans la conception de solutions. En explorant des cas plus simples, vous poserez les fondations nécessaires pour, un jour, peut-être, relever ces défis plus ardus.

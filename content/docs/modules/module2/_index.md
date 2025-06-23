@@ -26,16 +26,16 @@ Java est un langage de programmation orienté objet, conçu pour être à la foi
 
 Java présente plusieurs avantages par rapport à d’autres langages de programmation :
 
-- **Portabilité :** Grâce à la machine virtuelle Java (JVM), un programme Java peut être exécuté sur n’importe quelle plateforme disposant d’une JVM, sans modification du code source (« Write Once, Run Anywhere »).
-- **Gestion automatique de la mémoire :** Le ramasse-miettes (garbage collector) libère automatiquement la mémoire inutilisée, ce qui réduit les risques de fuites de mémoire et simplifie la gestion des ressources.
-- **Vaste écosystème :** Java dispose d’un grand nombre de bibliothèques, de frameworks et d’outils, facilitant le développement d’applications variées (web, mobile, entreprise, etc.).
-- **Documentation et communauté :** La documentation est abondante et la communauté très active, ce qui facilite l’apprentissage et la résolution de problèmes.
+- *Portabilité :* Grâce à la machine virtuelle Java (JVM), un programme Java peut être exécuté sur n’importe quelle plateforme disposant d’une JVM, sans modification du code source (« Write Once, Run Anywhere »).
+- *Gestion automatique de la mémoire :* Le ramasse-miettes (garbage collector) libère automatiquement la mémoire inutilisée, ce qui réduit les risques de fuites de mémoire et simplifie la gestion des ressources.
+- *Vaste écosystème :* Java dispose d’un grand nombre de bibliothèques, de frameworks et d’outils, facilitant le développement d’applications variées (web, mobile, entreprise, etc.).
+- *Documentation et communauté :* La documentation est abondante et la communauté très active, ce qui facilite l’apprentissage et la résolution de problèmes.
 
 Cependant, Java présente aussi certains inconvénients :
 
-- **Performances parfois inférieures au code natif :** Les programmes Java peuvent être plus lents que ceux écrits en C ou C++, car ils s’exécutent sur la JVM et non directement sur le matériel. Java permet tout de même d'offrir une performance très supérieurs au JavaScript ou à Python.
-- **Syntaxe parfois verbeuse :** Le code Java peut être plus long et moins concis que dans d’autres langages modernes comme Python ou Kotlin.
-- **Nécessité d’installer la JVM :** Pour exécuter un programme Java, il faut installer la machine virtuelle Java, ce qui peut compliquer le déploiement sur certains systèmes.
+- *Performances parfois inférieures au code natif :* Les programmes Java peuvent être plus lents que ceux écrits en C ou C++, car ils s’exécutent sur la JVM et non directement sur le matériel. Java permet tout de même d'offrir une performance très supérieurs au JavaScript ou à Python.
+- *Syntaxe parfois verbeuse :* Le code Java peut être plus long et moins concis que dans d’autres langages modernes comme Python ou Kotlin.
+- *Nécessité d’installer la JVM :* Pour exécuter un programme Java, il faut installer la machine virtuelle Java, ce qui peut compliquer le déploiement sur certains systèmes.
 
 En résumé, Java est un langage polyvalent, robuste et largement utilisé, mais il n’est pas toujours le plus adapté pour les applications nécessitant des performances maximales ou une grande concision syntaxique.
 

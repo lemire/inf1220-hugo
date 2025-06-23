@@ -120,8 +120,8 @@ public class ExempleLambdaFiltre {
 Dans cet exemple, nous utilisons les méthodes `stream` et `collect`.
 
 
-- **stream()** : La méthode `stream()` convertit une collection (comme une liste) en un flux (Stream), une séquence d’éléments permettant un traitement séquentiel ou parallèle. Les opérations sur un flux sont paresseuses (exécutées uniquement lorsque nécessaire) et ne modifient pas la collection d’origine.
-- **collect()** : La méthode `collect()` rassemble les éléments d’un flux dans une structure de données (par exemple, une liste) après application des opérations. Elle utilise souvent un collecteur, comme `Collectors.toList()`, pour spécifier le type de résultat. C’est une opération terminale qui déclenche l’exécution du flux.
+- *stream()* : La méthode `stream()` convertit une collection (comme une liste) en un flux (Stream), une séquence d’éléments permettant un traitement séquentiel ou parallèle. Les opérations sur un flux sont paresseuses (exécutées uniquement lorsque nécessaire) et ne modifient pas la collection d’origine.
+- *collect()* : La méthode `collect()` rassemble les éléments d’un flux dans une structure de données (par exemple, une liste) après application des opérations. Elle utilise souvent un collecteur, comme `Collectors.toList()`, pour spécifier le type de résultat. C’est une opération terminale qui déclenche l’exécution du flux.
 
 
 La méthode `map()` transforme chaque élément d’un flux en appliquant une fonction, produisant un nouveau flux de même longueur avec les valeurs transformées.

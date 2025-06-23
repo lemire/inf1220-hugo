@@ -29,9 +29,9 @@ Respecter ces normes garantit un code uniforme.
 ## Comment commenter son code en Java
 En Java, les commentaires servent à expliquer le code sans affecter son exécution. 
 Il existe trois types de commentaires :  
-- **Commentaire sur une ligne** : `//` pour des explications courtes.  
-- **Commentaire multi-lignes** : `/* */` pour des blocs plus longs.  
-- **Javadoc** : `/** */` pour documenter classes, méthodes ou variables, générant 
+- *Commentaire sur une ligne* : `//` pour des explications courtes.  
+- *Commentaire multi-lignes* : `/* */` pour des blocs plus longs.  
+- *Javadoc* : `/* */` pour documenter classes, méthodes ou variables, générant 
 une documentation automatique. Les commentaires doivent être concis, pertinents et éviter 
 de paraphraser le code. Par exemple, un commentaire comme `// Incrémente i` est inutile 
 si le code dit `i++`, mais `// Calcule la moyenne des notes pour chaque étudiant` est utile.
@@ -109,7 +109,7 @@ est difficile à suivre.
 
 Les programmeurs Java utilisent généralement Javadoc. Javadoc est un outil fourni par Oracle, intégré à l'environnement de développement Java, qui permet de générer automatiquement une documentation à partir du code source Java. Il analyse les commentaires écrits dans un format spécifique (commentaires Javadoc) pour produire des pages HTML décrivant les classes, interfaces, méthodes, constructeurs et champs d'un programme.
 
-Les commentaires Javadoc sont placés directement dans le code, généralement avant une déclaration, et utilisent une syntaxe particulière commençant par `/**` et se terminant par `*/`. Ces commentaires peuvent inclure des balises spécifiques pour structurer les informations, comme :
+Les commentaires Javadoc sont placés directement dans le code, généralement avant une déclaration, et utilisent une syntaxe particulière commençant par `/*` et se terminant par `*/`. Ces commentaires peuvent inclure des balises spécifiques pour structurer les informations, comme :
 
 - `@param` : décrit un paramètre d'une méthode.
 - `@return` : indique ce que retourne une méthode.
@@ -219,7 +219,7 @@ commentaires, comme dans cet exemple&nbsp;:
 /**
  * # Exemple
  *
- * Ceci est un commentaire en  **Markdown**.
+ * Ceci est un commentaire en  *Markdown*.
  *
  * - Partie 1
  * - Partie 2
@@ -237,13 +237,13 @@ John Gruber, blogueur et développeur américain, a développé Markdown pour r�
 
 Markdown permet de structurer un texte avec des titres, des listes, des liens, des images, des citations, du code, etc., en utilisant une syntaxe intuitive :
 
-- **Titres :** Utilisation du symbole `#` (un ou plusieurs) en début de ligne.
-- **Listes :** Listes à puces avec `-`, `*` ou `+`, listes numérotées avec des chiffres suivis d’un point.
-- **Liens :** `[texte du lien](URL)`
-- **Images :** `![texte alternatif](URL)`
-- **Texte en gras :** `**gras**` ou `__gras__`
-- **Texte en italique :** `*italique*` ou `_italique_`
-- **Citations :** `> citation`
+- *Titres :* Utilisation du symbole `#` (un ou plusieurs) en début de ligne.
+- *Listes :* Listes à puces avec `-`, `*` ou `+`, listes numérotées avec des chiffres suivis d’un point.
+- *Liens :* `[texte du lien](URL)`
+- *Images :* `![texte alternatif](URL)`
+- *Texte en gras :* `*gras*` ou `__gras__`
+- *Texte en italique :* `*italique*` ou `_italique_`
+- *Citations :* `> citation`
 
 Markdown est largement utilisé pour la documentation, les fichiers README, les blogs, et de nombreux outils collaboratifs (GitHub, GitLab, forums, etc.). Sa simplicité et sa portabilité en font un standard de facto pour la rédaction technique et pédagogique.
 

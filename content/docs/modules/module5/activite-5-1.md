@@ -824,7 +824,7 @@ System.out.println(p1.equals(p2)); // true  (contenu identique)
 
 Ici, `p1` et `p2` sont deux objets différents en mémoire, donc `p1 == p2` est faux. Mais comme ils ont les mêmes coordonnées et que la méthode `equals` a été redéfinie, `p1.equals(p2)` est vrai.
 
-**À propos des records :**
+*À propos des records :*
 
 Depuis Java 16, les records simplifient la création de classes immuables destinées à contenir des données. Un record déclare automatiquement les méthodes `equals()`, `hashCode()` et `toString()` en fonction de ses composants. Ainsi, deux records avec les mêmes valeurs sont considérés comme égaux avec `equals`, et leur `hashCode` est cohérent avec leur contenu, sans avoir à redéfinir ces méthodes manuellement.
 
@@ -879,7 +879,7 @@ Depuis Java 5, l’autoboxing et l’unboxing permettent de convertir automatiqu
 
 Les classes enveloppes sont aussi utiles pour utiliser les méthodes `equals()` et `hashCode()` sur des valeurs numériques, ou pour gérer la valeur spéciale `null` (impossible avec un type primitif).
 
-**Résumé des principales classes enveloppes :**
+*Résumé des principales classes enveloppes :*
 
 | Type primitif | Classe enveloppe |
 |---------------|-----------------|
@@ -895,7 +895,7 @@ Les classes enveloppes sont aussi utiles pour utiliser les méthodes `equals()` 
 
 Dans l'API Stream, la méthode `boxed()` permet de convertir un stream de types primitifs (comme `IntStream`, `DoubleStream`, etc.) en un stream d’objets correspondants (par exemple, de `int` vers `Integer`). Cela est nécessaire car de nombreuses méthodes de l’API Stream, comme `collect`, `map`, ou encore l’utilisation de collections (`List`, `Set`, etc.), attendent des objets et non des types primitifs. Par exemple, un `IntStream` ne peut pas être directement collecté dans une `List<Integer>` sans conversion, car une liste Java ne peut contenir que des objets. De plus, certaines opérations comme le tri personnalisé, l’utilisation de méthodes d’instance (par exemple, `Integer::compareTo`), ou l’application de méthodes génériques sur des streams nécessitent de manipuler des objets. La méthode `boxed()` effectue donc automatiquement l’autoboxing de chaque valeur primitive du stream, rendant possible l’utilisation de toute la richesse de l’API des objets Java.
 
-**Exemple :**
+*Exemple :*
 
 ```java  {style=github}
 int[] tab = {1, 2, 3, 4};
