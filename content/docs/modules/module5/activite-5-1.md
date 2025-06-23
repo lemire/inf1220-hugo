@@ -582,6 +582,46 @@ public class Etudiant {
 Ici, Comparator permet de trier les Etudiant par nom sans modifier la classe Etudiant. Cela illustre la flexibilité des interfaces : au lieu d’hériter d’une classe de base avec une méthode de tri fixe, on définit un comparateur externe. Cela est particulièrement utile pour des tris multiples (par nom, âge, etc.) ou pour des classes que vous ne pouvez pas modifier.
 
 
+L’interface CharSequence est un exemple emblématique de la bibliothèque Java standard. Elle représente une séquence de caractères et est utilisée par des classes comme String, StringBuilder ou StringBuffer. Cette interface définit des méthodes pour accéder à une séquence de caractères de manière standardisée, sans imposer de structure interne. Les méthodes principales sont length(), charAt(int index), subSequence(int start, int end) et toString(). Cela permet à des classes variées de fournir un accès uniforme à leurs données sous forme de caractères, facilitant leur utilisation dans des API génériques, comme les expressions régulières ou les manipulations de texte.
+Pour illustrer, voici une implémentation personnalisée de CharSequence qui représente une séquence de caractères inversée, utile par exemple pour des opérations où l’ordre des caractères doit être retourné.
+
+```java {style=github}
+public class ReverseCharSequence implements CharSequence {
+    private final String sequence;
+
+    public ReverseCharSequence(String sequence) {
+        this.sequence = sequence;
+    }
+
+    @Override
+    public int length() {
+        return sequence.length();
+    }
+
+    @Override
+    public char charAt(int index) {
+        return sequence.charAt(sequence.length() - 1 - index);
+    }
+
+    @Override
+    public CharSequence subSequence(int start, int end) {
+        if (start < 0 || end > length() || start > end) {
+            throw new IndexOutOfBoundsException();
+        }
+        StringBuilder sub = new StringBuilder();
+        for (int i = start; i < end; i++) {
+            sub.append(charAt(i));
+        }
+        return new ReverseCharSequence(sub.toString());
+    }
+
+    @Override
+    public String toString() {
+        return new StringBuilder(this).toString();
+    }
+}
+```
+
 L’interface Serializable est une interface marqueur (sans méthode) qui indique qu’une classe peut être sérialisée, c’est-à-dire convertie en un flux d’octets pour être sauvegardée ou transmise.
 
 {{<inlineJava path="Produit.java">}}
