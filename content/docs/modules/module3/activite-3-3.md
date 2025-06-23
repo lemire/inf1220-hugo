@@ -6,7 +6,66 @@ weight: 4
 # Les structures de données de base
 
 Le langage Java possède toutes les stuctures de données nécessaires.
-Faisons-en rapidement le tour.
+Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.
+
+Les types référence, quant à eux, incluent les objets tels que String, StringBuilder, ArrayList, HashMap, HashSet, PriorityQueue et Stack. Ces types, qui font partie des classes Java, sont utilisés pour manipuler des données complexes. Les classes enveloppes appartiennent également aux types référence, car elles sont des objets. Les types référence comme ArrayList et HashMap sont des collections génériques capables de stocker d’autres objets, y compris des instances de classes enveloppes ou d’autres types référence. Cette organisation permet une gestion flexible des données, avec des relations où les types primitifs sont enveloppés par leurs classes correspondantes, et les types référence servent de conteneurs ou de structures pour organiser et manipuler ces données.
+
+Le diagramme suivant résume l'organisation des types que vous allez découvrir.
+
+{{<mermaid>}}
+classDiagram
+    %% Categories as containers
+    class Types_Primitif {
+        int
+        double
+        float
+        long
+        short
+        byte
+        char
+        boolean
+    }
+
+    class Classes_Enveloppes {
+        Integer
+        Double
+        Float
+        Long
+        Short
+        Byte
+        Character
+        Boolean
+    }
+
+    class Tableaux {
+        int[]
+        Integer[]
+        Float[]
+        String[]
+        int[][]
+    }
+
+    class Types_Reference {
+        String
+        StringBuilder
+        ArrayList
+        HashMap
+        HashSet
+        PriorityQueue
+        Stack
+    }
+    Classes_Enveloppes -->  Types_Reference : fait partie de
+    Tableaux -->  Types_Reference : fait partie de
+
+    %% Relationships
+    Types_Primitif --> Classes_Enveloppes : enveloppe
+  
+    %% Reference Types relationships
+    Types_Reference --> ArrayList : stocké dans
+    Types_Reference --> HashMap : stocké dans
+{{</mermaid>}}
+
+
 
 
 ### Allocation de mémoire et ramasse-miettes
@@ -801,222 +860,101 @@ public class ExemplePriorityQueue {
 
 Dans cet exemple, les entiers sont extraits dans l’ordre croissant. On peut aussi utiliser des objets et définir l’ordre de priorité avec un comparateur.
 
-## Lambdas
+## Par valeur et par référence
 
-Une fonction lambda, ou expression lambda, est une fonction anonyme concise définie sans nom, souvent utilisée pour des opérations simples et ponctuelles. Elle permet d'écrire du code plus compact, notamment dans des contextes où une fonction est passée en argument, comme pour des opérations de filtrage ou de tri. En Java, par exemple, les lambdas s'appuient sur les interfaces fonctionnelles, qui possèdent une unique méthode abstraite. Leur syntaxe est de la forme (paramètres) -> expression ou (paramètres) -> { instructions; } pour des blocs plus complexes.
+Quand on passe une valeur en Java, il y a une différence fondamentale selon qu’il s’agit d’un type primitif ou d’un type référence, en raison de la manière dont Java gère les paramètres dans les méthodes.
 
-Voici un exemple de code Java avec une méthode main utilisant une lambda pour trier une liste de chaînes par longueur :
+Les types primitifs (int, double, float, long, short, byte, char, boolean) sont passés par valeur. Cela signifie que lorsqu’une variable de type primitif est passée à une méthode, une copie de sa valeur est transmise. Toute modification de cette valeur à l’intérieur de la méthode n’affecte pas la variable originale à l’extérieur de la méthode. Par exemple, si vous passez un int à une méthode et que la méthode modifie ce paramètre, la valeur de la variable initiale reste inchangée.
 
-{{<inlineJava path="ExempleLambda.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.Comparator;
+En revanche, les types référence (comme String, StringBuilder, ArrayList, HashMap, ou les classes enveloppes telles que Integer, Double ainsi que tous les tableaux) sont passés par référence, ou plus précisément, par copie de la référence. Cela signifie que la méthode reçoit une copie de l’adresse mémoire pointant vers l’objet. Si la méthode modifie l’état interne de l’objet (par exemple, en ajoutant un élément à un ArrayList), cette modification est visible à l’extérieur, car l’objet original est affecté. Cependant, si la méthode réassigne la référence à un nouvel objet (par exemple, en créant un nouveau StringBuilder), cela n’affecte pas la référence originale à l’extérieur de la méthode. En résumé, pour les types référence, les modifications internes aux objets sont persistantes, mais les réassignations de la référence ne le sont pas.
 
-public class ExempleLambda {
+Il est préférable d'utiliser des exemples pour bien comprendre. Dans l'exemple suivant, la variable valeur n’est pas modifiée car une copie de sa valeur est passée à la méthode.
+{{<inlineJava path="Exemple.java" lang="java">}}
+
+public class Exemple {
+    public static void modifierValeur(int nombre) {
+        nombre = 100;
+        System.out.println("Valeur dans la méthode : " + nombre);
+    }
+
     public static void main(String[] args) {
-        List<String> mots = Arrays.asList("chat", "éléphant", "chien", "girafe");
-        mots.sort((a, b) -> a.length() - b.length());
-        System.out.println("Mots triés par longueur : " + mots);
+        int valeur = 10;
+        System.out.println("Avant appel : " + valeur);
+        modifierValeur(valeur);
+        System.out.println("Après appel : " + valeur);
     }
 }
 {{</inlineJava>}}
 
-Ce code définit une liste de mots, utilise une lambda pour trier les éléments par longueur croissante, puis affiche le résultat. La lambda (a, b) -> a.length() - b.length() remplace une implémentation complète de Comparator.
+Dans le prochain exemple, le tableau est modifié car la méthode accède à l’objet original via la copie de la référence.
+{{<inlineJava path="Exemple.java" lang="java">}}
+public class Exemple {
+    public static void modifierTableau(int[] tableau) {
+        tableau[0] = 999;
+        System.out.println("Valeur dans la méthode : " + tableau[0]);
+    }
 
-
-Les lambdas sont utilisés à de multiples fins en Java. L’API Stream en Java pour effectuer un filtrage fonctionnel sur une liste de nombres. Considérons le prochain exemple. Le premier concept clé est la création d’une liste immuable avec Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8). Cette méthode transforme un tableau de nombres en une List fixe, qui ne peut pas être modifiée (par exemple, pas d’ajout ou de suppression d’éléments). Cette liste, nommée nombres, sert de point de départ pour le traitement. Ensuite, l’opération de filtrage repose sur l’API Stream, introduite en Java 8, qui permet de manipuler des collections de manière déclarative, en exprimant ce qu’on veut obtenir (ici, les nombres pairs) plutôt que comment le faire (comme avec une boucle traditionnelle). Ce paradigme fonctionnel rend le code plus concis et expressif. La méthode `filter()` crée un nouveau flux contenant uniquement les éléments satisfaisant une condition donnée, définie par une expression lambda qui retourne `true` ou `false`.
-
-{{<inlineJava path="ExempleLambdaFiltre.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class ExempleLambdaFiltre {
     public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
-        List<Integer> nombresPairs = nombres.stream()
-                                           .filter(n -> n % 2 == 0)
-                                           .collect(Collectors.toList());
-        System.out.println("Nombres pairs : " + nombresPairs);
+        int[] monTableau = {1, 2, 3};
+        System.out.println("Avant appel : " + monTableau[0]);
+        modifierTableau(monTableau);
+        System.out.println("Après appel : " + monTableau[0]);
     }
 }
 {{</inlineJava>}}
 
-Dans cet exemple, nous utilisons les méthodes `stream` et `collect`.
+Dans cet autre exemple, la modification interne de l’objet StringBuilder est visible à l’extérieur.
+{{<inlineJava path="Exemple.java" lang="java">}}
+public class Exemple {
+    public static void modifierStringBuilder(StringBuilder sb) {
+        sb.append(" monde");
+        System.out.println("Valeur dans la méthode : " + sb);
+    }
 
-
-- **stream()** : La méthode `stream()` convertit une collection (comme une liste) en un flux (Stream), une séquence d’éléments permettant un traitement séquentiel ou parallèle. Les opérations sur un flux sont paresseuses (exécutées uniquement lorsque nécessaire) et ne modifient pas la collection d’origine.
-- **collect()** : La méthode `collect()` rassemble les éléments d’un flux dans une structure de données (par exemple, une liste) après application des opérations. Elle utilise souvent un collecteur, comme `Collectors.toList()`, pour spécifier le type de résultat. C’est une opération terminale qui déclenche l’exécution du flux.
-
-
-La méthode `map()` transforme chaque élément d’un flux en appliquant une fonction, produisant un nouveau flux de même longueur avec les valeurs transformées.
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
     public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
-        List<Integer> nombresCarres = nombres.stream()
-                                            .map(x -> x * x)
-                                            .collect(Collectors.toList());
-        System.out.println(nombresCarres); // Sortie : [1, 4, 9, 16]
+        StringBuilder texte = new StringBuilder("Bonjour");
+        System.out.println("Avant appel : " + texte);
+        modifierStringBuilder(texte);
+        System.out.println("Après appel : " + texte);
     }
 }
 {{</inlineJava>}}
 
+Dans le prochain exemple, la réassignation de sb à un nouvel objet n’affecte pas la référence originale.
+{{<inlineJava path="Exemple.java" lang="java">}}
+public class Exemple {
+    public static void reassignerStringBuilder(StringBuilder sb) {
+        sb = new StringBuilder("Nouveau");
+        System.out.println("Valeur dans la méthode : " + sb);
+    }
 
-La méthode `reduce()` combine les éléments d’un flux en une seule valeur en appliquant une fonction prenant deux arguments : le résultat accumulé et l’élément suivant.
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-
-public class Main {
     public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
-        int produit = nombres.stream()
-                            .reduce(1, (x, y) -> x * y);
-        System.out.println(produit); // Sortie : 24
+        StringBuilder texte = new StringBuilder("Original");
+        System.out.println("Avant appel : " + texte);
+        reassignerStringBuilder(texte);
+        System.out.println("Après appel : " + texte);
     }
 }
 {{</inlineJava>}}
 
-La méthode `forEach()` applique une action à chaque élément d’un flux. C’est une opération terminale, souvent utilisée pour afficher des résultats ou effectuer des effets secondaires.
+Dans ce dernier exemple, la réassignation dans la méthode crée un nouvel objet sans affecter la référence originale.
+{{<inlineJava path="Exemple.java" lang="java">}}
+public class Exemple {
+    public static void modifierString(String texte) {
+        texte = "Nouveau texte";
+        System.out.println("Valeur dans la méthode : " + texte);
+    }
 
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-
-public class Main {
     public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 3, 4);
-        nombres.stream()
-               .forEach(x -> System.out.println(x));
-        // Sortie :
-        // 1
-        // 2
-        // 3
-        // 4
+        String message = "Texte initial";
+        System.out.println("Avant appel : " + message);
+        modifierString(message);
+        System.out.println("Après appel : " + message);
     }
 }
 {{</inlineJava>}}
 
-
-La méthode `flatMap()` transforme chaque élément d’un flux en un flux d’éléments, puis aplatit ces flux en un seul flux. Elle est utile pour gérer des collections imbriquées.
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
-    public static void main(String[] args) {
-        List<List<Integer>> listes = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4));
-        List<Integer> aplatie = listes.stream()
-                                     .flatMap(liste -> liste.stream())
-                                     .collect(Collectors.toList());
-        System.out.println(aplatie); // Sortie : [1, 2, 3, 4]
-    }
-}
-{{</inlineJava>}}
-
-
-La méthode `distinct()` supprime les doublons d’un flux, renvoyant un flux avec des éléments uniques (basé sur la méthode `equals()`).
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
-    public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 2, 3, 3, 4);
-        List<Integer> uniques = nombres.stream()
-                                       .distinct()
-                                       .collect(Collectors.toList());
-        System.out.println(uniques); // Sortie : [1, 2, 3, 4]
-    }
-}
-{{</inlineJava>}}
-
-
-La méthode `limit()` restreint un flux aux `n` premiers éléments, utile pour traiter un sous-ensemble de données.
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
-    public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 3, 4, 5);
-        List<Integer> premiers = nombres.stream()
-                                       .limit(3)
-                                       .collect(Collectors.toList());
-        System.out.println(premiers); // Sortie : [1, 2, 3]
-    }
-}
-{{</inlineJava>}}
-
-
-La méthode `sorted()` trie les éléments d’un flux selon leur ordre naturel ou un comparateur personnalisé.
-
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
-    public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(4, 1, 3, 2);
-        List<Integer> tries = nombres.stream()
-                                    .sorted((a, b) -> b - a)
-                                    .collect(Collectors.toList());
-        System.out.println(tries); // Sortie : [4, 3, 2, 1]
-    }
-}
-{{</inlineJava>}}
-
-
-Les méthodes peuvent être enchaînées pour des opérations complexes. Par exemple, filtrer les nombres pairs, les mettre au carré, supprimer les doublons, limiter à deux éléments et trier en ordre décroissant :
-
-{{<inlineJava path="Main.java" lang="java">}}
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Main {
-    public static void main(String[] args) {
-        List<Integer> nombres = Arrays.asList(1, 2, 2, 3, 4, 4, 5, 6);
-        List<Integer> resultat = nombres.stream()
-                                       .filter(x -> x % 2 == 0)
-                                       .map(x -> x * x)
-                                       .distinct()
-                                       .limit(2)
-                                       .sorted((a, b) -> b - a)
-                                       .collect(Collectors.toList());
-        System.out.println(resultat); // Sortie : [16, 4]
-    }
-}
-{{</inlineJava>}}
-
-
-La programmation fonctionnelle est un paradigme de programmation qui met l'accent sur l'utilisation de fonctions pures, l'immutabilité des données et l'évitement des effets secondaires. Une fonction pure produit toujours le même résultat pour les mêmes entrées et n'altère pas l'état externe, ce qui facilite la prédiction et le débogage du code. En Java, bien que le langage soit principalement orienté objet, l'introduction de l'API Stream et des expressions lambda en Java 8 a permis d'intégrer des concepts fonctionnels. Ces outils permettent de manipuler des collections de données de manière déclarative, en exprimant ce que l'on veut accomplir (par exemple, filtrer ou transformer des données) plutôt que comment le faire étape par étape, comme dans une approche impérative. Cette approche améliore la lisibilité et la modularité du code, tout en favorisant des opérations comme le parallélisme sans effort explicite.
-
-Le rôle des lambdas et de l'API Stream dans Java illustre bien l'influence de la programmation fonctionnelle. Les lambdas permettent de définir des fonctions anonymes concises, souvent utilisées pour implémenter des interfaces fonctionnelles (comme Predicate ou Function) dans des opérations comme le filtrage, le mappage ou le tri. Par exemple, dans une opération comme list.stream().filter(x -> x > 0).map(x -> x * 2).collect(Collectors.toList()), chaque étape est une transformation fonctionnelle qui ne modifie pas la liste initiale, respectant ainsi le principe d'immutabilité. L'API Stream prend en charge ces transformations en traitant les données comme un flux, où les opérations sont enchaînées et évaluées de manière paresseuse (lazy evaluation), ne s'exécutant qu'à la demande d'un résultat final. Cela réduit les calculs inutiles et permet une optimisation automatique, comme le traitement parallèle avec parallelStream().
-
-Cependant, l'intégration de la programmation fonctionnelle en Java reste partielle, car le langage conserve une forte orientation objet. Les développeurs doivent être conscients des compromis : les lambdas et les streams rendent le code plus expressif, mais une utilisation excessive ou inappropriée peut nuire à la performance ou à la lisibilité, notamment dans des cas complexes. De plus, Java impose des contraintes, comme l'absence de fonctions de première classe (les lambdas sont des implémentations d'interfaces) et une gestion explicite de l'immutabilité. Malgré ces limitations, la programmation fonctionnelle en Java, via les streams et les lambdas, a transformé la manière dont les développeurs manipulent les données, encourageant des pratiques plus modernes et alignées sur les paradigmes fonctionnels tout en restant ancrées dans l'écosystème Java.
+De toute manière, une instance de la classe String ne peut pas être modifiée en Java.
 
 
 ## Complexité algorithmique 

@@ -1,7 +1,7 @@
 ---
 
 title: "Exercices sur les exceptions et la récursivité"
-weight: 8
+weight: 9
 ---
 
 # Exercices sur les exceptions et la récursivité
