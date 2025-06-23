@@ -67,27 +67,30 @@ Qui puis-je contacter si j’ai des questions?
 
 ## Examen factice 1
 
-<p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux cinq questions suivantes :</p>
+<p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux six questions suivantes :</p>
 <ol>
 <li>Écrivez une fonction Java qui, étant donné une chaîne de caractères, retourne la même chaîne de caractères mais inversée. Par exemple, la fonction doit transformer la chaîne "un chien" en la chaîne "neihc nu". Vous pouvez faire l'hypothèse que les caractères de la chaîne originale se représentent tous en 2 octets selon la norme UTF-16.</li>
 <li>Écrivez une fonction Java qui prend un tableau d'entier et compte le nombre d'entiers négatifs.</li>
 <li>Écrivez une classe qui va lire, dans son constructeur, les chaînes de caractères trouvées dans un fichier texte. Le constructeur doit prendre le nom du fichier en argument. La classe doit être munie d'une méthode enregistre prenant un nom de fichier en paramètre. Lorsque la méthode enregistre est invoquée, les chaînes de caractères chargées par le constructeur sont écrites dans un fichier texte prenant le nom de fichier fourni à la méthode enregistre. Il doit être possible, en appelant la méthode enregistre ainsi qu'un constructeur de dupliquer une instance de classe. </li>
 <li>Écrivez une fonction Java qui, étant donné un tableau d'entier, calcule la moyenne des valeurs, sous la forme d'un nombre à virgule flottante.</li>
 <li>Mettez en oeuvre le jeu Fizz Buzz à l'aide d'une fonction Java, affichant les nombre de un à cent, en y ajoutant Fizz quand le nombre est divisible par trois et Buzz quand le nombre est divisible par cinq.</li>
+<li>Écrivez un programme Java qui utilise FileOutputStream et FileInputStream pour écrire une séquence de nombres entiers dans un fichier binaire, puis la relire. Gérez les exceptions.</li>
 </ol>
 <p>Dans tous les cas, vous devez expliquer vos solutions et produire du code valable.</p>
 <p>Vous devriez arrivez sans mal à produire les solutions attendues en moins de 3 heures. Si vous n'y arrivez pas, c'est que vous manquez de pratique.</p>
 
 ## Examen factice 2
 
-<p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux cinq questions suivantes :</p>
+<p>Pour vous pratiquer pour l'examen, prenez un maximum de trois heures pour répondre aux six questions suivantes :</p>
 <ol>
 <li>Écrivez une classe « Tableau » munie d'une fonction « unique » qui prend comme paramètre un tableau (String[] t). La fonction doit trouver le nombre de valeurs répétées consécutivement dans le tableau. Une valeur est répétée si la valeur précédente lui est identique. Ainsi donc, étant donné le tableau {"bah", "bah", "be", "bo", "bo", "bo"}, votre fonction doit retourner l’entier 3 puisqu’il y a trois valeurs répétées.</li>
 <li>Écrivez une fonction occurrences(String s, char c) qui prend deux paramètres : une chaine de caractères et un caractère. Elle doit retourner un tableau comprenant les indices correspondant aux occurrences du caractère (second paramètre) dans la chaîne (premier paramètre). Les indices doivent être des entiers de 1 à s.length() inclusivement.</li>
 <li>Écrivez un programme qui demande à l’utilisateur de fournir un entier positif. Le programme doit vérifier si l’entier en question est un nombre premier. Un nombre premier n’est divisible que par lui-même et par le nombre 1.</li> 
 <li>Écrivez un programme Java qui demande à l'utilisateur de choisir un nombre impair entre 0 et 100. Le programme doit ensuite offrir à l'utilisateur un nombre impair entre 0 et 100 et demander à celui-ci si le nombre choisi est (a) plus petit (b) plus grand ou (c) identique au nombre offert par le programme. Le programme doit continuer tant que la bonne valeur n'est pas trouvée par le programme informatique. Votre mise en œuvre doit être efficace pour obtenir tous les points. Vous devez pleinement expliquer votre solution.</li>
 <li>Créez une classe « Fruit » dotée de deux méthodes non-statiques nommées « mange » et « jette ». Les méthodes ne doivent prendre aucun paramètre et ne retourner qu’un entier. La méthode « mange » doit retourner le nombre de fois qu'elle a été appelée pendant la vie de l'objet (instance de classe) courante. La méthode « jette » doit retourner le nombre de fois qu'elle a été appelée, toutes instances confondues. Votre code doit inclure une méthode « main » qui démontre que le code répond bien à la question. Vous devez par ailleurs expliquer (en prose française) votre solution. Si votre explication est manquante ou peu claire, une note de zéro pourra être attribuée.</li>
+<li>Décrivez l’utilisation de la classe RandomAccessFile pour manipuler un fichier à adressage relatif. Donnez-un exemple de code.</li>
 </ol>
+
 
 <p>Dans tous les cas, vous devez expliquer vos solutions et produire du code valable.</p>
 <p>Vous devriez arrivez sans mal à produire les solutions attendues en moins de 3 heures. Si vous n'y arrivez pas, c'est que vous manquez de pratique.</p>

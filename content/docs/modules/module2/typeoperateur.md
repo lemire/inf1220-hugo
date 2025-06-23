@@ -19,6 +19,13 @@ weight: 3
 
 <p>Il en va de même quand vous écrivez du code. Commencez par le plus simple, et progressez lentement, en prenant des notes, en vous laissant des commentaires. Souvent il est utile d'écrire le pseudo-code avant d'écrire le code en Java.</p>
 
+Le modèle pédagogique est donc fondé sur la répétition et pars du principe que la première fois que nous rencontrons une notion, celle-ci 
+nous échappe au moins partiellement. Ce n'est qu'en revenant plusieurs fois sur les mêmes idées que nous pouvons vraiment maîtriser une notion.
+Sur le site web du cours, nous revenons plusieurs fois sur les mêmes concepts, mais de manières de manières différentes. Par ailleurs, nous
+vous demandons de lire nombre de manuel où les choses sont expliquées et présentées différemment. Nous offrons aussi des vidéos où vous 
+trouverez d'autres explications. Par ailleurs, nous vous demandons de faire de nombreux exercices, à la fois dans le manuel et sur le 
+site web du cours. 
+
 ## Environnement de développement (rappel)
 
 <p>Si vous devez compiler des classes Java sur votre PC, faites les choses simplement. Essayez d'utiliser les outils les plus élémentaires. Concentrez-vous sur le Java, et non pas sur les environnements et les outils. Une erreur fréquente des débutants est de perdre beaucoup de temps au sein de systèmes qu'ils ne maîtrisent pas à essayer de programmer dans un langage qu'ils ne maîtrisent pas. Il y faut y aller pas à pas.</p>
@@ -98,6 +105,7 @@ String s = "Chaîne de caractères";
 <li>En Java, on ne peut pas représenter les valeurs réelles. On utilise plutôt des nombres à virgule flottante. Ainsi donc, on peut utiliser des « double » pour consacrer 64 bits afin de représenter des nombres. On utilise alors la norme « binary64 » qui accorde 53 bits à la mantisse d'une représentation binaire. En d'autres mots, on peut pratiquement représenter n'importe quel nombre de la forme m x 2<sup>p</sup> tant que m n'excède pas 2<sup>53</sup>. En particulier, le type « double » en Java peut représenter tous les entiers (positifs et négatifs) qui n'excèdent pas une magnitude de 2<sup>53</sup>. Quand un nombre ne peut pas être  être représenté, Java va trouver le nombre à virgule flottante le plus proche. Si jamais nous arrivons exactement entre deux nombres à virgule flottante, comme c'est le cas avec le nombre 9000000000000002.5, Java va choisir le nombre le plus proche qui a une mantisse paire (ici 9000000000000002).</li>
 </ol>
 
+### Débordements
 
 <p>Les types ont des limites qu'il faut connaître. En 2021, on pouvait lire ceci dans les journaux:</p>
 <blockquote>
@@ -105,7 +113,6 @@ Le cours de l’action Berkshire Hathaway Inc de Warren Buffett est passé à pl
 </blockquote>
 
 
-### Débordements
 
 
 Pour représenter les entiers signés, la méthode du complément à deux est couramment utilisée. Dans ce système, le bit le plus significatif (à gauche) indique le signe : 0 pour un nombre positif ou nul, 1 pour un nombre négatif. Pour obtenir la représentation d’un nombre négatif, on prend la représentation binaire de sa valeur absolue, on inverse tous les bits (complément à un), puis on ajoute 1. Par exemple, pour représenter -5 avec 8 bits : la valeur absolue 5 s’écrit 00000101 ; son complément à un est 11111010 ; en ajoutant 1, on obtient 11111011, qui représente -5. Ce système permet une gestion cohérente des nombres positifs et négatifs dans les calculs.
@@ -145,10 +152,11 @@ public class NumberRepresentation {
 {{</inlineJava>}}
 
 
-Utilisez l'application suivante pour explorer les notations binaires, hexadécimales et décimales.
+Utilisez l'application suivante pour explorer les notations binaires, hexadécimales et décimales. Vos nombres doivent être non-négatifs. 
 
 {{< webapp path="numbers.html" >}}
 
+Trouvez le plus grand entier qui ne nécessite que deux *chiffres* en notation hexadécimale.
 
 ### Mot-clé var
 

@@ -1,9 +1,9 @@
 ---
-title: "Développement Web"
+title: "Développement web"
 weight: 4
 ---
 
-# Développement Web en Java
+# Développement web en Java
 
 Le développement web en Java repose sur l’utilisation de technologies et de frameworks
  ermettant de créer des applications accessibles via un navigateur. Java est largement 

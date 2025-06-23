@@ -47,7 +47,7 @@ Le cours INF1220 : Introduction à la programmation est un cours universitaire d
 - structures de données de base (tableaux, listes),
 - écriture/lecture à des flux (lignes de commandes, fichiers).
 
-De plus, la plupart des langages de programmation modernes sont ou incluent des aspects orientés objet. Comme le langage Java est un langage orienté-objet, ce cours d’introduction présente également les concepts de base de la programmation orientée objet (OO), soit :
+De plus, la plupart des langages de programmation modernes sont ou incluent des aspects orientés objet. Comme le langage Java est un langage orienté objet, ce cours d’introduction présente également les concepts de base de la programmation orientée objet (OO), soit :
 
 - classes vs. instances,
 - héritage simple et multiple,

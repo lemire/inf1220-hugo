@@ -622,3 +622,33 @@ Quels sont, selon vous, les principaux avantages et inconvénients de Java par r
 <p><b>Avantages :</b> portabilité, gestion automatique de la mémoire (garbage collector), vaste écosystème de bibliothèques et frameworks, documentation abondante.</p>
 <p><b>Inconvénients :</b> performances parfois inférieures au code natif (C/C++), syntaxe parfois verbeuse, nécessité d’installer la JVM.</p>
 </details>
+
+## Question 36
+Expliquez ce qu’est un débordement (overflow) lors d’un calcul avec des entiers en Java. Donnez un exemple de code qui provoque un débordement.
+<details><summary>Réponse</summary>
+<p>Un débordement se produit lorsqu’une opération arithmétique dépasse la valeur maximale ou minimale qu’un type peut représenter. Par exemple, un <code>int</code> en Java varie de -2 147 483 648 à 2 147 483 647. Si on additionne 1 à la valeur maximale, on « retourne » à la valeur minimale.</p>
+
+```java
+int max = Integer.MAX_VALUE;
+System.out.println(max);         // 2147483647
+System.out.println(max + 1);     // -2147483648 (débordement)
+```
+</details>
+
+## Question 37
+Comment écrit-on un nombre en notation hexadécimale en Java ? Donnez un exemple et expliquez à quoi cela sert.
+<details><summary>Réponse</summary>
+<p>On utilise le préfixe <code>0x</code> pour écrire un nombre en hexadécimal. Exemple :</p>
+
+```java
+int x = 0xFF; // 255 en décimal
+System.out.println(x); // Affiche 255
+```
+<p>La notation hexadécimale est utile pour manipuler des valeurs binaires, des couleurs, des adresses mémoire, etc.</p>
+</details>
+
+## Question 38
+Quelle est la valeur de l’expression <code>0xA + 10</code> en Java ? Expliquez pourquoi.
+<details><summary>Réponse</summary>
+<p><code>0xA</code> représente 10 en décimal, donc <code>0xA + 10</code> vaut 20.</p>
+</details>
