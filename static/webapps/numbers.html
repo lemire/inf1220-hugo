@@ -1,0 +1,60 @@
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 300px;">
+    <div>
+      <label for="numberConverterApp_hexInput" style="display: inline-block; width: 80px;">Hex (0x)</label>
+      <input id="numberConverterApp_hexInput" type="text" value="0x0" style="padding: 5px; font-size: 14px; width: 150px; font-family: monospace;">
+    </div>
+    <div>
+      <label for="numberConverterApp_decInput" style="display: inline-block; width: 80px;">Décimal</label>
+      <input id="numberConverterApp_decInput" type="text" value="0" style="padding: 5px; font-size: 14px; width: 150px; font-family: monospace;">
+    </div>
+    <div>
+      <label for="numberConverterApp_binInput" style="display: inline-block; width: 80px;">Binaire</label>
+      <input id="numberConverterApp_binInput" type="text" value="0" style="padding: 5px; font-size: 14px; width: 150px; font-family: monospace;">
+    </div>
+  </div>
+  <script>
+    (function() {
+      const hexInput = document.getElementById('numberConverterApp_hexInput');
+      const decInput = document.getElementById('numberConverterApp_decInput');
+      const binInput = document.getElementById('numberConverterApp_binInput');
+
+      function validateAndParse(input, base) {
+        let value = input.trim();
+        if (base === 16) {
+          value = value.replace(/^0x/i, '').replace(/[^0-9a-fA-F]/g, '');
+          return value === '' ? 0 : parseInt(value, 16);
+        } else if (base === 10) {
+          value = value.replace(/[^0-9]/g, '');
+          return value === '' ? 0 : parseInt(value, 10);
+        } else if (base === 2) {
+          value = value.replace(/[^01]/g, '');
+          return value === '' ? 0 : parseInt(value, 2);
+        }
+        return 0;
+      }
+
+      function updateFields(sourceInput, value) {
+        if (sourceInput !== hexInput) {
+          hexInput.value = '0x' + (value >= 0 ? value.toString(16).toUpperCase() : '0');
+        }
+        if (sourceInput !== decInput) {
+          decInput.value = value >= 0 ? value.toString(10) : '0';
+        }
+        if (sourceInput !== binInput) {
+          binInput.value = value >= 0 ? value.toString(2) : '0';
+        }
+      }
+
+      function handleInput(event, base) {
+        const input = event.target;
+        const value = validateAndParse(input.value, base);
+        updateFields(input, value);
+      }
+
+      hexInput.addEventListener('input', (e) => handleInput(e, 16));
+      decInput.addEventListener('input', (e) => handleInput(e, 10));
+      binInput.addEventListener('input', (e) => handleInput(e, 2));
+
+      updateFields(null, 0);
+    })();
+  </script>

@@ -105,6 +105,51 @@ Le cours de l’action Berkshire Hathaway Inc de Warren Buffett est passé à pl
 </blockquote>
 
 
+### Débordements
+
+
+Pour représenter les entiers signés, la méthode du complément à deux est couramment utilisée. Dans ce système, le bit le plus significatif (à gauche) indique le signe : 0 pour un nombre positif ou nul, 1 pour un nombre négatif. Pour obtenir la représentation d’un nombre négatif, on prend la représentation binaire de sa valeur absolue, on inverse tous les bits (complément à un), puis on ajoute 1. Par exemple, pour représenter -5 avec 8 bits : la valeur absolue 5 s’écrit 00000101 ; son complément à un est 11111010 ; en ajoutant 1, on obtient 11111011, qui représente -5. Ce système permet une gestion cohérente des nombres positifs et négatifs dans les calculs.
+
+Les débordements se produisent lorsqu’une opération arithmétique sur des entiers dépasse la capacité du type de données utilisé. Par exemple, pour un type int (32 bits) en Java, les valeurs sont comprises entre -2³¹ et 2³¹-1. Si l’addition de deux grands nombres dépasse 2³¹-1, le résultat "déborde" et revient vers les valeurs négatives, ou inversement pour une soustraction. En Java, les débordements ne déclenchent pas d’exception ; ils sont gérés silencieusement par un comportement de "retour circulaire" (wrap-around). Par exemple, si l’on additionne Integer.MAX_VALUE (2³¹-1) et 1, le résultat sera Integer.MIN_VALUE (-2³¹). Pour détecter ou éviter les débordements, Java propose des méthodes comme Math.addExact(int, int), qui lance une ArithmeticException en cas de débordement, ou l’utilisation de types plus grands comme long ou BigInteger pour des calculs nécessitant une plage plus large.
+
+En Java, les types numériques pour les entiers sont soit signés, soit non signés. Les types signés, qui utilisent le complément à deux pour représenter les nombres négatifs, sont : byte (8 bits), short (16 bits), int (32 bits) et long (64 bits). Le type char (16 bits), bien qu’utilisé principalement pour les caractères, est non signé, représentant des valeurs de 0 à 65 535.
+
+
+### Binaire, décimal, hexadécimal
+
+La représentation binaire, décimale et hexadécimale des entiers permet d’exprimer des nombres dans différents systèmes de numération. En binaire (base 2), un entier est représenté par une séquence de 0 et de 1, où chaque position correspond à une puissance de 2. Par exemple, le nombre 13 s’écrit 1101 en binaire, car 1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 8 + 4 + 0 + 1 = 13. En décimal (base 10), les chiffres de 0 à 9 sont utilisés, et chaque position représente une puissance de 10 ; ainsi, 13 s’écrit simplement 13. En hexadécimal (base 16), les chiffres vont de 0 à 9, complétés par les lettres A à F (où A = 10, B = 11, ..., F = 15), et chaque position correspond à une puissance de 16. Le nombre 13 s’écrit D en hexadécimal, car D représente 13 en base 16. L'avantage de l'hexadécimal est qu'il correspond plus directement à la représentation en mémoire. Chaque *chiffre* (0, 1, ..., 9, A, ..., F) correspond à 4 bits. On peut toujours représenter un char (16-bits) en utilisant exactement 4 *chiffres*. 
+
+Pour distinguer les notations hexadécimales, binaires et décimales, nous utilisons sont un préfixe: `0x` pour hexadécimal et `0b` pour binaire.
+L'expression Java `int x = 0b1101;`  définit la valeur 13 en décimal. L'expression `int x = 0x1101;` représente plutôt le nombre 4353.
+Nous pouvons obtenir la repésentation binaire d'un nombre en Java avec un expression comme `Integer.toBinaryString(x)` et la représentation
+hexadécimale avec `Integer.toHexString(x)`. Voici un exemple.
+
+{{<inlineJava path="NumberRepresentation.java" lang="java">}}
+public class NumberRepresentation {
+    public static void main(String[] args) {
+        int number = 42;
+
+        // Binary representation
+        String binary = Integer.toBinaryString(number);
+        // Decimal representation
+        String decimal = String.valueOf(number);
+        // Hexadecimal representation
+        String hexadecimal = Integer.toHexString(number);
+
+        System.out.println("Number: " + number);
+        System.out.println("Binary: " + binary);
+        System.out.println("Decimal: " + decimal);
+        System.out.println("Hexadecimal: " + hexadecimal);
+    }
+}
+{{</inlineJava>}}
+
+
+Utilisez l'application suivante pour explorer les notations binaires, hexadécimales et décimales.
+
+{{< webapp path="numbers.html" >}}
+
+
 ### Mot-clé var
 
 En Java, le mot-clé var permet de déclarer des variables locales avec une inférence de type, introduite dans Java 10. Il simplifie le code en évitant de spécifier explicitement le type d'une variable lorsque celui-ci peut être déduit par le compilateur à partir de l'expression d'initialisation. Cela améliore la lisibilité, surtout pour les types complexes comme les collections ou les classes génériques, tout en maintenant la sûreté du typage statique. Cependant, var ne peut être utilisé que pour des variables locales dans des blocs de code, comme les méthodes ou les blocs d'initialisation, et nécessite une initialisation immédiate. Il ne peut pas être utilisé pour les champs de classe, les paramètres de méthode ou les types de retour. De plus, son usage doit rester clair pour éviter de nuire à la compréhension du code.

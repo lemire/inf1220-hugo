@@ -118,6 +118,12 @@ System.out.println(s.codePointAt(1));// Affiche le code Unicode complet du smile
 Ainsi, il faut être vigilant lors du traitement de chaînes contenant des emojis ou des caractères spéciaux, car la longueur d’une chaîne (length) et l’accès par <code>charAt</code> ne correspondent pas toujours au nombre réel de caractères.
 
 
+Utilisez l'application suivante pour explorer la représentation des chaînes de caractères en format UTF-16.
+
+{{< webapp path="unicode.html" >}}
+
+
+
 ## StringBuilder
 
 Le type <code>StringBuilder</code> en Java permet de construire et de modifier efficacement des chaînes de caractères. Contrairement à la classe <code>String</code>, qui est immuable (chaque modification crée un nouvel objet), <code>StringBuilder</code> permet d’ajouter, de modifier ou de supprimer des caractères sans créer de nouveaux objets à chaque opération. Cela le rend particulièrement utile lorsqu’on doit faire de nombreuses modifications ou concaténations de chaînes, par exemple lors de la lecture d’un fichier ou la construction dynamique d’un texte.
