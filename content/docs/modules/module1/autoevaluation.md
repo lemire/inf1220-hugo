@@ -20,17 +20,12 @@ Je vous invite donc à faire une autoévaluation.
 
 ## Mathématiques
 
-Pour pouvoir faire de l'informatique, il convient de connaître un peu les mathématiues. Ces notions, loin d’être de simples outils, forment un réseau de significations qui structurent le raisonnement mathématique.
-
+Pour pouvoir faire de l'informatique, il convient de connaître un peu les mathématiues. 
 La division euclidienne, par exemple, offre une perspective fondamentale sur la décomposition des nombres. Elle ne se limite pas à un calcul, mais exprime une relation entre un dividende, un diviseur, un quotient et un reste. Considérons \( 75 \div 8 \) : le quotient est \( 9 \) et le reste \( 3 \), car \( 8 \times 9 = 72 \) et \( 75 - 72 = 3 \). De même, pour \( 20 \div 6 \), le quotient est \( 3 \) et le reste \( 2 \). Le reste, toujours inférieur au diviseur, capture l’excédent d’une division imparfaite. Cette idée devient puissante lorsqu’on remarque, par exemple, que si \( x \div y \) laisse un reste de \( 1 \), alors \( x - 1 \) est un multiple de \( y \), révélant une propriété intrinsèque de divisibilité.
-
-Les nombres se déclinent en catégories – entiers, réels, rationnels, irrationnels – chacune porteuse de propriétés distinctes. Le nombre \( \sqrt{2} \), réel et irrationnel, défie toute représentation fractionnaire, incarnant une rupture avec les nombres rationnels. Le théorème fondamental de l’arithmétique, quant à lui, établit que tout entier positif supérieur à \( 1 \) se factorise de manière unique en nombres premiers. Ainsi, \( 28 = 2^2 \times 7 \). Les propriétés des diviseurs enrichissent cette vision : si \( x \) divise un nombre impair \( z \), alors \( x \) est nécessairement impair, car un diviseur pair engendrerait un résultat pair, contredisant l’hypothèse.
-
-Les opérations algébriques, régies par un ordre de priorité, reflètent une logique de structuration des calculs. Les parenthèses redéfinissent cet ordre, comme dans \( (2 + 3) \times 5 = 25 \), où l’addition prime, contrairement à \( 2 + 3 \times 5 = 17 \), où la multiplication domine. Les exposants et les logarithmes explorent des relations de transformation : pour \( b^3 = 27 \) avec \( b = 3 \), et \( \log_3(81) = 4 \) car \( 3^4 = 81 \), on perçoit une interplay entre croissance et réduction. La propriété \( \frac{\log x}{\log 3} = \log_3 x \) facilite la résolution d’équations comme \( \log x / \log 3 = 5 \).
-
-Les probabilités et la combinatoire introduisent une approche de l’incertain et de l’organisation. La factorielle, comme \( 4! = 4 \times 3 \times 2 \times 1 = 24 \), quantifie les arrangements possibles. Pour la probabilité d’obtenir une somme de \( 7 \) avec deux dés, on recense les cas favorables \( (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) \), soit 6, sur 36 résultats, donnant \( \frac{6}{36} = \frac{1}{6} \). 
-
-
+Les nombres se déclinent en catégories – entiers, réels, rationnels, irrationnels – chacune porteuse de propriétés distinctes. Le nombre \( \sqrt{2} \), réel et irrationnel, défie toute représentation fractionnaire, incarnant une rupture avec les nombres rationnels. Le théorème fondamental de l’arithmétique, quant à lui, établit que tout entier positif supérieur à \( 1 \) se factorise de manière unique en nombres premiers. Ainsi, \( 28 = 2^2 \times 7 \). Si \( x \) divise un nombre impair \( z \), alors \( x \) est nécessairement impair, car un diviseur pair engendrerait un résultat pair, contredisant l’hypothèse.
+Les opérations algébriques, régies par un ordre de priorité, reflètent une logique de structuration des calculs. Les parenthèses redéfinissent cet ordre, comme dans \( (2 + 3) \times 5 = 25 \), où l’addition prime, contrairement à \( 2 + 3 \times 5 = 17 \), où la multiplication domine. Les exposants et les logarithmes sont un exemple de fonction inverse : nous avons que \( \log_3(81) = 4 \) car \( 3^4 = 81 \). 
+La propriété \( \frac{\log x}{\log b} = \log_b x \) est fort utile.
+La factorielle, comme \( 4! = 4 \times 3 \times 2 \times 1 = 24 \), quantifie les arrangements possibles. Pour la probabilité d’obtenir une somme de \( 7 \) avec deux dés, on recense les cas favorables \( (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) \), soit 6, sur 36 résultats, donnant \( \frac{6}{36} = \frac{1}{6} \). 
 On peut trier les objects selon différents orders. L’ordre lexicographique, appliqué à des nombres comme \( 3, 30, 4 \), les trie comme des chaînes \( 3, 30, 4 \), illustrant une logique de classement importée du langage.
 
 
