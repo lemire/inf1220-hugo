@@ -2,16 +2,1067 @@
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
-&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p>
-&lt;ul>
-&lt;li>Expliquez ce qu&amp;rsquo;est la structure de contrôle de type séquence en programmation Java. Donnez un exemple simple de code Java illustrant cette structure et expliquez pourquoi elle est considérée comme la structure de contrôle de base.&lt;/li>
-&lt;li>Décrivez le fonctionnement de la boucle while en Java, en précisant sa syntaxe et les conditions nécessaires pour qu&amp;rsquo;elle s&amp;rsquo;exécute correctement. À l&amp;rsquo;aide d&amp;rsquo;un exemple de code, montrez comment utiliser une boucle while pour afficher les nombres de 1 à 10.&lt;/li>
-&lt;li>Comparez les boucles for et while en termes de structure et d&amp;rsquo;utilisation en Java. Fournissez un exemple de code utilisant une boucle for pour calculer la somme des nombres pairs compris entre 1 et 100, et expliquez pourquoi la boucle for est particulièrement adaptée à ce type de tâche.&lt;/li>
-&lt;li>Expliquez comment la structure if permet de prendre des décisions dans un programme Java. Écrivez un programme simple qui utilise une structure if-else pour déterminer si un nombre saisi par l&amp;rsquo;utilisateur (via la classe Scanner) est&lt;/li>
-&lt;li>Selon le chapitre, pourquoi est-il important de tester et de déboguer un programme Java ? Décrivez une méthode de test que vous pourriez utiliser pour vérifier le bon fonctionnement d&amp;rsquo;une boucle for qui affiche les multiples de 5 jusqu&amp;rsquo;à 50. Expliquez comment vous identifieriez et corrigeriez une erreur si la boucle affichait incorrectement les résultats.&lt;/li>
-&lt;/ul>
-&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.&lt;/p>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1750806289327944323">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1750806289327944323 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1750806289327944323 .export-form { margin-bottom:0; }
+ #java-runner-1750806289327944323 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1750806289327944323 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1750806289327944323 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1750806289327944323 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1750806289327944323 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1750806289327944323-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
+public class ExemplesMath {
+
+ public static void main(String args[]) {
+ System.out.println(&amp;#34;Math.log(1.0)=&amp;#34; &amp;#43; Math.log(1.0));
+ System.out.println(&amp;#34;Math.exp(1.0)=&amp;#34; &amp;#43; Math.exp(1.0));
+ System.out.println(&amp;#34;Math.cos(0)=&amp;#34; &amp;#43; Math.cos(0));
+ System.out.println(&amp;#34;Math.sin(0)=&amp;#34; &amp;#43; Math.sin(0));
+ System.out.println(&amp;#34;Math.sqrt(4)=&amp;#34; &amp;#43; Math.sqrt(4));
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1750806289327944323-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1750806289327944323');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1750806289328021467">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1750806289328021467 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1750806289328021467 .export-form { margin-bottom:0; }
+ #java-runner-1750806289328021467 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1750806289328021467 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1750806289328021467 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1750806289328021467 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1750806289328021467 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1750806289328021467-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
+public class ExemplesString {
+
+ public static void main(String args[]) {
+
+ String string1 = &amp;#34;abc&amp;#34;;
+ String string2 = &amp;#34;def&amp;#34;;
+ String string3 = &amp;#34;abcdef&amp;#34;;
+ String string4 = new String(&amp;#34;abcdef&amp;#34;);
+
+ // Tous les litéraux identiques (� la compilation) sont traduits
+ // par une référence au même objet
+ System.out.println(string3 == &amp;#34;abcdef&amp;#34;); // true
+ System.out.println(&amp;#34;abc&amp;#34; &amp;#43; &amp;#34;def&amp;#34; == &amp;#34;abcdef&amp;#34;); // true
+
+ // Par contre, si le litéral est calculé à l&amp;#39;exécution, ce n&amp;#39;est pas le cas
+ System.out.println(string1 &amp;#43; string2 == &amp;#34;abcdef&amp;#34;); // false
+
+ // Le constructeur String produit toujours un objet différent de l&amp;#39;objet
+ // correspondant au litéral
+ System.out.println(string4 == &amp;#34;abcdef&amp;#34;); // false
+
+ // La méthode intern() de la classe String permet de convertir
+ // la référence à l&amp;#39;objet correspondant au litéral
+ System.out.println((string1 &amp;#43; string2).intern() == &amp;#34;abcdef&amp;#34;); // true
+ System.out.println(string4.intern() == &amp;#34;abcdef&amp;#34;); // true
+
+ // La méthode equals() permet de comparer le contenu de l&amp;#39;objet plutôt que la référence
+ System.out.println((string1 &amp;#43; string2).equals(&amp;#34;abcdef&amp;#34;)); // true
+ System.out.println(string4.equals(&amp;#34;abcdef&amp;#34;)); // true
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1750806289328021467-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1750806289328021467');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1750806289328067413">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1750806289328067413 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1750806289328067413 .export-form { margin-bottom:0; }
+ #java-runner-1750806289328067413 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1750806289328067413 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1750806289328067413 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1750806289328067413 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1750806289328067413 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1750806289328067413-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
+public class ExempleZero {
+ public static void main(String[] s) {
+ double minus_zero = -0.0;
+ double plus_zero = &amp;#43;0.0;
+ System.out.println(minus_zero == plus_zero);
+ System.out.println(1/minus_zero);
+ System.out.println(1/plus_zero);
+ System.out.println(1/minus_zero == 1/plus_zero);
+ double n = 0.0 / 0.0;
+ System.out.println(n);
+ System.out.println(n == n);
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1750806289328067413-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1750806289328067413');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1750806289328144688">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1750806289328144688 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1750806289328144688 .export-form { margin-bottom:0; }
+ #java-runner-1750806289328144688 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1750806289328144688 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1750806289328144688 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1750806289328144688 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1750806289328144688 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1750806289328144688-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
+public class ExerciceForFor {
+ public static void main(String args[]) {
+ for (int compteur1 = 1; compteur1 &amp;lt;= 9; compteur1 = compteur1 &amp;#43; 1) {
+ for (int compteur2 = 1; compteur2 &amp;lt;= compteur1; compteur2 = compteur2 &amp;#43; 1)
+ System.out.print(compteur2);
+ System.out.println();
+ }
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1750806289328144688-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1750806289328144688');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
