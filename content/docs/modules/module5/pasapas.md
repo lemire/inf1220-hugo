@@ -14,7 +14,7 @@ Nous vous invitons maintenant à lire les chapitres suivants du  manuel Java pas
 - Chapitre 8. Animation 2D et développement d’un jeu simple
 
 
-**Dans ce cours, vous n'avez pas à maîtriser la programmation de jeux vidéos et la conception d'interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrée.**
+**Dans ce cours, vous n'avez pas à maîtriser la programmation de jeux vidéos et la conception d'interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrées.**
 
 
 Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Par l'entremise de la construction d'un jeu, vous pourrez développer une maîtrise des concepts du module.
