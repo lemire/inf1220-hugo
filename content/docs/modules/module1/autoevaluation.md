@@ -20,7 +20,7 @@ Je vous invite donc à faire une autoévaluation.
 
 ## Mathématiques
 
-Pour pouvoir faire de l'informatique, il convient de connaître un peu les mathématiues. 
+Pour pouvoir faire de l'informatique, il convient de connaître les mathématiques. 
 La division euclidienne, par exemple, offre une perspective fondamentale sur la décomposition des nombres. Elle ne se limite pas à un calcul, mais exprime une relation entre un dividende, un diviseur, un quotient et un reste. Considérons \( 75 \div 8 \) : le quotient est \( 9 \) et le reste \( 3 \), car \( 8 \times 9 = 72 \) et \( 75 - 72 = 3 \). De même, pour \( 20 \div 6 \), le quotient est \( 3 \) et le reste \( 2 \). Le reste, toujours inférieur au diviseur, capture l’excédent d’une division imparfaite. Cette idée devient puissante lorsqu’on remarque, par exemple, que si \( x \div y \) laisse un reste de \( 1 \), alors \( x - 1 \) est un multiple de \( y \), révélant une propriété intrinsèque de divisibilité.
 Les nombres se déclinent en catégories – entiers, réels, rationnels, irrationnels – chacune porteuse de propriétés distinctes. Le nombre \( \sqrt{2} \), réel et irrationnel, défie toute représentation fractionnaire, incarnant une rupture avec les nombres rationnels. Le théorème fondamental de l’arithmétique, quant à lui, établit que tout entier positif supérieur à \( 1 \) se factorise de manière unique en nombres premiers. Ainsi, \( 28 = 2^2 \times 7 \). Si \( x \) divise un nombre impair \( z \), alors \( x \) est nécessairement impair, car un diviseur pair engendrerait un résultat pair, contredisant l’hypothèse.
 Les opérations algébriques, régies par un ordre de priorité, reflètent une logique de structuration des calculs. Les parenthèses redéfinissent cet ordre, comme dans \( (2 + 3) \times 5 = 25 \), où l’addition prime, contrairement à \( 2 + 3 \times 5 = 17 \), où la multiplication domine. Les exposants et les logarithmes sont un exemple de fonction inverse : nous avons que \( \log_3(81) = 4 \) car \( 3^4 = 81 \). 
@@ -40,25 +40,6 @@ On peut trier les objects selon différents orders. L’ordre lexicographique, a
     études secondaires au Québec récemment, on s'attend à ce que vous apparteniez aux profils Technico-Science ou
     Sciences Naturelles plutôt que Culture, Société et Technique.</p>
 
-
-<p>Le cours INF 1220 s'adresse aux étudiants qui maîtrisent bien les mathématiques de base (secondaire et collégial):
-    fonctions mathématiques, algèbre, variables, priorité des opérations, logarithmes, exponentielles, polynômes,
-    notions de preuve mathématique, nombres entiers, rationnels, réels, les matrices transposées, etc. Vous devez savoir
-    déterminer si un nombre est un multiple d'un autre nombre. Vous devez être capable de calculer le reste de la
-    division entre deux entiers. Vous devez être familier avec les notations mathématiques de base: par exemple, vous
-    devez savoir ce que vaut "<em>a</em>&nbsp;2<sup style="vertical-align: super;"><em>x</em></sup>" si <em>a</em> est 3
-    et <em>x</em> est 2. Vous devez aussi maîtriser divers autres concepts élémentaires comme le tri de mots selon
-    l'ordre du dictionnaire ou tri lexicographique, la logique élémentaire et ainsi de suite. Si vous n'avez pas ces
-    fondements parce que vous n'avez pas réussi les mathématiques au secondaire et au collégial, il est recommandé de
-    prendre au préalable un cours de mise à niveau en mathématique: vous ne devriez pas normalement être inscrit à ce
-    cours sans ces fondements. Si avez vu ces notions mais qu'elles sont lointaines, il est de votre responsabilité de
-    faire des recherches sur Internet au besoin. Vous pouvez, par exemple, étudier la section mathématique du site
-    d'aide aux devoirs pour étudiants au secondaire, <a href="http://www.alloprof.qc.ca/">alloprof</a>.</p>
-
-
-<p><strong>Important</strong>: Si vous n'avez pas les préalables mathématiques, il est possible que vous ne puissiez pas
-    réussir le cours. C'est <strong>votre responsabilité</strong> de vous en assurer.</p>
-
 ## Autoévaluation (mathématiques)
 
 <p>
@@ -73,13 +54,6 @@ On peut trier les objects selon différents orders. L’ordre lexicographique, a
     mathématiques de base, et peut-être suivre un cours d'appoint tout en poursuivant des études complémentaires sur une
     base autonome.</p>
 
-<p>Notez que si vous n'avez pas fait les mathématiques dans l'orientation scientifique au secondaire et que vous avez
-    omis les mathématiques avancées au collégial (algèbre linéaire, calcul I, calcul II), un seul cours d'appoint à
-    l'universitaire ne suffira pas. Vous devrez sans doute faire de la révision ponctuelle des notions mathématiques
-    pré-universitaires. L'informatique est une discipline scientifique et si vous n'avez pas suivi un cursus
-    scientifique jusqu'à présent, vous devrez compenser par du travail supplémentaire.</p>
-
-
 <p>Certains étudiants qui n'ont pas la préparation suffisante décident de tout de même poursuivre dans le cours sans
     pour autant prévoir du temps supplémentaire pour l'étude de la matière vue au secondaire et au collégial.
     Malheureusement pour eux, ils se rendent souvent compte qu'ils vont faire face à des difficultés alors qu'il n'est
@@ -92,27 +66,6 @@ On peut trier les objects selon différents orders. L’ordre lexicographique, a
 
 
 Pour se préparer au cours INF 1220, il est crucial de développer une rigueur intellectuelle et une capacité à raisonner de manière abstraite, deux qualités indispensables à la programmation. Programmer ne se limite pas à écrire des lignes de code : c’est un exercice de pensée structurée qui exige de décomposer un problème en étapes logiques, de les traduire en instructions précises et de vérifier méticuleusement leur exactitude. Un programme fonctionne ou échoue sans demi-mesure, ce qui impose une discipline constante : écrire, tester, corriger, puis tester à nouveau. La patience et l’attention aux détails sont essentielles, car une simple erreur, comme une virgule mal placée, peut compromettre un programme entier. S’entraîner à résoudre des problèmes logiques, comme déterminer qui de Jean ou Pierre arrive en premier au travail dans un énoncé où Jean est immédiatement suivi par Pierre, aide à affûter cette précision. Si de tels énoncés semblent opaques ou exigent un effort disproportionné, il peut être utile de renforcer ses bases en logique avant d’aborder le cours.
-
-Le cours INF 1220 s’adresse à des étudiants prêts à s’engager dans un parcours universitaire en informatique, où la maîtrise du raisonnement logique et mathématique est non négociable. Au-delà des concepts mathématiques, comme la division euclidienne ou les propriétés des nombres, le cours demande une aisance à manipuler des énoncés formels et à en extraire des implications logiques pour les traduire en code. Par exemple, analyser une recette algorithmique, comme celle décrite pour lire les pages d’un livre, nécessite de suivre mentalement chaque étape, d’identifier les boucles et les conditions, et de repérer les erreurs, telle une boucle infinie ou une condition mal définie. Si repérer l’erreur dans cette recette – par exemple, l’absence d’une vérification que la page existe avant de la lire – demande un effort considérable, cela peut indiquer un besoin de préparation supplémentaire. Pour réussir, il faut s’exercer à lire des algorithmes, à en simuler l’exécution mentalement, et à traduire des problèmes abstraits en solutions programmées, tout en acceptant que ce cours, conçu pour un public scientifique, exigera un investissement significatif en temps et en effort.
-
-
-<p>Pour plusieurs personnes, programmer n'est pas naturel. Cela exige de penser différemment. Il faut beaucoup de
-    rigueur, de pensée abstraite, pour programmer. Un code fait ce qu'il doit faire ou il ne le fait pas. Il faut se
-    relire avec soin, tester ses solutions, les retester encore. Même quand on pense avoir compris, il faut revenir à la
-    charge, encore et encore. Il faut être patient, méticuleux quand il s'agit de coder.</p>
-
-
-
-<p>Le cours INF 1220 est un véritable cours universitaire en informatique destiné aux gens qui ont les aptitudes et
-    intérêts en informatique. Le cours fait partie du cursus des étudiants qui s'engagent dans un parcours professionnel
-    de niveau universitaire en informatique.</p>
-
-
-<p>Au-delà des notions proprement mathématiques, le cours exige une aisance avec le raisonnement logique abstrait. Vous
-    devez être capable de lire des énoncés logiques et mathématiques, vous devez être capable de les comprendre et d'en
-    déduire les conséquences logiques. Par exemple, vous devez vous attendre à ce que l'examen de ce cours comporte des
-    énoncés formels que vous devrez transcrire en code informatique. </p>
-
 
 
 # Question 1
@@ -137,9 +90,10 @@ Vous disposez d'un calepin (effaçable) où vous pouvez écrire un nombre entier
 
 
 {{% hint info %}}
-
 Essayez d'appliquer cette recette avec un livre comptant cinq pages. Que constatez-vous ?
 {{% /hint %}}
+
+Utilisez cette application pour explorer le problème.
 
 {{< webapp path="lecture.html" >}}
 
