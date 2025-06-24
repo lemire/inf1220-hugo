@@ -1,0 +1,116 @@
+<h2 style="text-align: center; color: #333;">Simulation d'ArrayList Java</h2>
+    <div style="margin-bottom: 20px;">
+        <input type="number" id="inputValue" placeholder="Entrez un nombre" style="padding: 8px; width: 150px; margin-right: 10px;">
+        <button onclick="addElement()" style="padding: 8px 16px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Ajouter</button>
+        <button id="stepButton" onclick="stepResize()" style="padding: 8px 16px; background-color: #008CBA; color: white; border: none; cursor: pointer; display: none;">Étape</button>
+    </div>
+    <div id="arrayContainer" style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+    <div id="newArrayContainer" style="margin-bottom: 20px; display: none; flex-wrap: wrap; gap: 10px;"></div>
+    <div id="status" style="font-size: 16px; color: #333;"></div>
+
+    <script>
+        let array = [];
+        let capacity = 4;
+        let size = 0;
+        let isResizing = false;
+        let newArray = null;
+        let newCapacity = 0;
+        let copyIndex = 0;
+
+        function updateDisplay() {
+            const container = document.getElementById('arrayContainer');
+            container.innerHTML = '';
+            for (let i = 0; i < capacity; i++) {
+                const box = document.createElement('div');
+                box.style.width = '60px';
+                box.style.height = '60px';
+                box.style.border = '2px solid #333';
+                box.style.display = 'flex';
+                box.style.alignItems = 'center';
+                box.style.justifyContent = 'center';
+                box.style.backgroundColor = i < size ? '#d4edda' : '#fff';
+                box.textContent = i < size ? array[i] : '';
+                container.appendChild(box);
+            }
+
+            const newContainer = document.getElementById('newArrayContainer');
+            if (isResizing && newArray) {
+                newContainer.style.display = 'flex';
+                newContainer.innerHTML = '<div style="width: 100%; margin-bottom: 10px;">Nouveau tableau (capacité ' + newCapacity + ') :</div>';
+                for (let i = 0; i < newCapacity; i++) {
+                    const box = document.createElement('div');
+                    box.style.width = '60px';
+                    box.style.height = '60px';
+                    box.style.border = '2px solid #333';
+                    box.style.display = 'flex';
+                    box.style.alignItems = 'center';
+                    box.style.justifyContent = 'center';
+                    box.style.backgroundColor = i < copyIndex ? '#d4edda' : '#fff';
+                    box.textContent = i < copyIndex ? newArray[i] : '';
+                    newContainer.appendChild(box);
+                }
+            } else {
+                newContainer.style.display = 'none';
+            }
+
+            document.getElementById('stepButton').style.display = isResizing ? 'inline-block' : 'none';
+        }
+
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+        }
+
+        function addElement() {
+            if (isResizing) {
+                updateStatus('Veuillez terminer le redimensionnement en cliquant sur Étape.');
+                return;
+            }
+
+            const input = document.getElementById('inputValue');
+            const value = parseInt(input.value);
+            if (isNaN(value)) {
+                updateStatus('Veuillez entrer un nombre valide.');
+                return;
+            }
+
+            if (size >= capacity) {
+                // Déclencher le redimensionnement
+                isResizing = true;
+                newCapacity = capacity === 4 ? 6 : 8;
+                newArray = new Array(newCapacity).fill(null);
+                copyIndex = 0;
+                updateStatus('Tableau plein (taille = ' + size + ', capacité = ' + capacity + '). Redimensionnement à la capacité ' + newCapacity + '. Cliquez sur Étape pour copier les éléments.');
+                updateDisplay();
+                return;
+            }
+
+            array[size] = value;
+            size++;
+            updateStatus('Ajouté ' + value + '. Taille = ' + size + ', Capacité = ' + capacity);
+            input.value = '';
+            updateDisplay();
+        }
+
+        function stepResize() {
+            if (!isResizing) return;
+
+            if (copyIndex < size) {
+                newArray[copyIndex] = array[copyIndex];
+                copyIndex++;
+                updateStatus('Copie de l’élément ' + newArray[copyIndex - 1] + ' dans le nouveau tableau. Cliquez sur Étape pour continuer.');
+                updateDisplay();
+            } else {
+                // Redimensionnement terminé
+                array = newArray;
+                capacity = newCapacity;
+                isResizing = false;
+                newArray = null;
+                updateStatus('Redimensionnement terminé. Nouvelle capacité = ' + capacity + '. Vous pouvez ajouter d’autres éléments.');
+                updateDisplay();
+            }
+        }
+
+        // Initialisation de l’affichage
+        updateStatus('ArrayList initialisée avec une capacité de 4.');
+        updateDisplay();
+    </script>

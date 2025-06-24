@@ -9,7 +9,7 @@
 &lt;li>Chapitre 7. Développement de classes : conception objet&lt;/li>
 &lt;li>Chapitre 8. Animation 2D et développement d’un jeu simple&lt;/li>
 &lt;/ul>
-&lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Par l&amp;rsquo;entremise de la construction d&amp;rsquo;un jeu, vous pourrez développer une maîtrise des concepts du module.&lt;/p></description></item><item><title>L'héritage, les classes abstraites et les interfaces</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</guid><description>&lt;h1 id="lhéritage-les-classes-abstraites-et-les-interfaces">
+&lt;p>&lt;strong>Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la programmation de jeux vidéos et la conception d&amp;rsquo;interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrée.&lt;/strong>&lt;/p></description></item><item><title>L'héritage, les classes abstraites et les interfaces</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</guid><description>&lt;h1 id="lhéritage-les-classes-abstraites-et-les-interfaces">
  L&amp;rsquo;héritage, les classes abstraites et les interfaces
  &lt;a class="anchor" href="#lh%c3%a9ritage-les-classes-abstraites-et-les-interfaces">#&lt;/a>
 &lt;/h1>
