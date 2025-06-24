@@ -103,7 +103,7 @@ XML (Extensible Markup Language) est un autre format d’échange de données, p
 
 Exemple de structure XML :
 
-```xml
+```xml {style=github}
 <personne>
     <nom>Alice</nom>
     <age>30</age>
