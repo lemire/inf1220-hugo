@@ -293,3 +293,13 @@ En conclusion, écrire du code Java lisible nécessite des noms explicites,
 une indentation soignée, des commentaires pertinents, et le respect des normes. 
 En évitant les pièges comme les noms cryptiques ou les commentaires inutiles, 
 vous produisez un code clair, maintenable et professionnel.
+
+
+## Packages
+
+Pour les projets qui prennent beaucoup d'ampleur, il peut être nécessaire d'organiser votre code Java en packages. Ça ne sera pas nécessaire
+dans ce cours, mais vous devriez comprendre le principle.
+
+Pour utiliser les packages dans votre propre code, commencez par structurer votre projet en créant une arborescence de répertoires qui correspond à la hiérarchie des packages. Par exemple, pour un package nommé `com.monentreprise.monapplication`, créez un dossier `com/monentreprise/monapplication` dans votre répertoire source. Placez vos fichiers Java, comme `MaClasse.java`, dans ce dossier, et ajoutez la ligne `package com.monentreprise.monapplication;` en haut de chaque fichier. Cette organisation permet de regrouper les classes par fonctionnalité, par exemple, un package `com.monentreprise.monapplication.model` pour les classes de données et un autre `com.monentreprise.monapplication.util` pour les utilitaires. Compilez et exécutez votre code en veillant à ce que le répertoire racine des packages soit inclus dans le chemin de classe (classpath).
+
+Lors de l’utilisation de vos propres packages, vous pouvez importer vos classes dans d’autres parties du projet avec `import`. Par exemple, si une classe `Utilisateur` est définie dans `com.monentreprise.monapplication.model`, vous pouvez l’importer dans une autre classe avec `import com.monentreprise.monapplication.model.Utilisateur;`. Si vos classes se trouvent dans le même package, aucune importation n’est nécessaire. Pour partager votre code ou le déployer, vous pouvez empaqueter vos classes dans un fichier JAR, en respectant la structure des packages. Une convention courante pour nommer les packages est d’utiliser le domaine de votre organisation en sens inverse (par exemple, `com.monentreprise`), ce qui garantit l’unicité des noms et facilite la collaboration ou l’intégration avec d’autres projets.

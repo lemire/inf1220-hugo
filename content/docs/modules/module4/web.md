@@ -97,6 +97,25 @@ const obj = JSON.parse(donnees);
 console.log(obj.nom); // Affiche "Alice"
 ```
 
+# XML
+
+XML (Extensible Markup Language) est un autre format d’échange de données, plus structuré et verbeux que JSON. Il utilise des balises personnalisables pour décrire les données, ce qui le rend très flexible et adapté à des applications nécessitant une structure complexe, comme les documents ou les configurations. XML est largement dans les fichiers de configuration, en bureautique (Microsoft Word stocke ses données en XML) ou les formats de documents. Contrairement à JSON, XML supporte les attributs dans les balises et permet l’inclusion de métadonnées, mais sa syntaxe plus lourde peut compliquer son traitement.
+
+Exemple de structure XML :
+
+```xml
+<personne>
+    <nom>Alice</nom>
+    <age>30</age>
+    <estEtudiant>false</estEtudiant>
+    <competences>
+        <competence>Java</competence>
+        <competence>HTML</competence>
+        <competence>JavaScript</competence>
+    </competences>
+</personne>
+```
+
 ### CSS
 
 Le CSS (Cascading Style Sheets) est un langage de style qui permet de contrôler l’apparence visuelle des pages web. Il sépare la présentation (couleurs, polices, marges, disposition, etc.) du contenu HTML, ce qui facilite la maintenance et la personnalisation des sites.
@@ -256,7 +275,9 @@ Javalin utilise la notion de route. Une « route » dans le contexte d’un se
 Notre fonction `handleGuess` reçoit un objet de type Context. Cet objet représente la requête HTTP en cours et fournit tous les outils nécessaires pour accéder aux données envoyées par l’utilisateur (comme les paramètres de formulaire), manipuler la session, et construire la réponse à renvoyer au client. Grâce à `Context`, on peut facilement lire les valeurs soumises, stocker des informations persistantes pour l’utilisateur (par exemple, le nombre à deviner), et rendre un template HTML avec des variables dynamiques. Cela simplifie grandement la gestion des interactions entre le serveur et le navigateur dans une application web Java.
 
 Pour construire et lancer l'application, nous pouvons utiliser Maven. Maven est un outil de gestion de projet et d’automatisation de la compilation pour les projets Java. Il permet de décrire la structure du projet, les dépendances (bibliothèques externes comme Javalin ou Thymeleaf), les étapes de compilation, de test et de déploiement dans un fichier de configuration appelé `pom.xml`.
-Grâce à Maven, il suffit d’une commande (`mvn package` ou `mvn exec:java`) pour télécharger automatiquement toutes les dépendances nécessaires, compiler le code source, exécuter les tests et lancer l’application. Cela simplifie grandement le développement, la maintenance et le partage de projets Java, en garantissant que tous les développeurs utilisent les mêmes versions de bibliothèques et une structure cohérente.
+Grâce à Maven, il suffit d’une commande (`mvn package` ou `mvn exec:java`) pour télécharger automatiquement toutes les dépendances nécessaires, compiler le code source, exécuter les tests et lancer l’application. Cela simplifie grandement le développement, la maintenance et le partage de projets Java, en garantissant que tous les développeurs utilisent les mêmes versions de bibliothèques et une structure cohérente. 
+Le fichier `pom.xml` (Project Object Model) est au cœur de Maven. Il contient des sections clés comme les coordonnées du projet (groupId, artifactId, version), les dépendances avec leurs versions spécifiques, et les plugins qui personnalisent le cycle de vie du build. Par exemple, pour une application web utilisant Javalin, on ajoute la dépendance `<dependency><groupId>io.javalin</groupId><artifactId>javalin</artifactId><version>5.6.3</version></dependency>` dans le `pom.xml`. Maven télécharge alors cette bibliothèque depuis un dépôt central comme Maven Central. Les plugins, comme le plugin `maven-compiler-plugin`, permettent de configurer des options comme la version de Java à utiliser. Cette centralisation des configurations facilite la reproductibilité et réduit les erreurs liées à des environnements de développement différents.
+Maven offre également une gestion avancée des cycles de vie du projet, divisés en phases comme `compile`, `test`, `package` et `install`. Chaque phase exécute des tâches prédéfinies, mais vous pouvez les personnaliser via des plugins. Par exemple, avec le plugin `exec-maven-plugin`, vous pouvez exécuter directement votre application avec `mvn exec:java`. De plus, Maven supporte l’intégration avec des outils d’intégration continue comme Jenkins, permettant d’automatiser les déploiements. En structurant votre projet selon les conventions de Maven (dossiers `src/main/java` pour le code source et `src/test/java` pour les tests), vous gagnez en clarté et en compatibilité avec d’autres outils de l’écosystème Java, rendant votre application plus robuste et facile à maintenir. Une solution de recherche populaire à Maven est Gradle, un autre outil de build pour les projets Java. Gradle utilise un fichier de configuration nommé build.gradle, écrit en Groovy ou Kotlin, qui offre une syntaxe plus concise et flexible que le XML de Maven. Par exemple, pour ajouter Javalin, on écrit implementation 'io.javalin:javalin:5.6.3' dans build.gradle. Gradle est particulièrement apprécié pour sa performance, grâce à un mécanisme de cache et une exécution incrémentale des tâches. Il suit un modèle de tâches personnalisables, où des commandes comme gradle build ou gradle run gèrent la compilation, les tests et l’exécution. Gradle est également bien intégré avec les IDE comme IntelliJ IDEA et supporte les mêmes conventions de structure de projet que Maven, tout en offrant plus de souplesse pour les projets complexes ou multi-modules.
 
 Je vous invite maintenant à [consulter l'application web complète](https://github.com/lemire/webdemo-inf1220) en ligne. [Vous pouvez la charger sur votre machine](https://github.com/lemire/webdemo-inf1220/archive/refs/heads/main.zip) et la déployer en suivant
 les instructions.
