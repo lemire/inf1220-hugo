@@ -585,8 +585,6 @@ Les temps d’accès à la mémoire ou d’exécution d’instructions sont souv
 - *Mégaoctet (Mo)* : 1 000 000 octets.
 - *Gigaoctet (Go)* : 1 000 000 000 octets.
 - *Téraoctet (To)* : 1 000 000 000 000 octets.
-
-#### Préfixes binaires (norme IEC)
 - *Kibioctet (Kio)* : 1 024 octets (\(2^{10}\)).
 - *Mebioctet (Mio)* : 1 048 576 octets (\(2^{20}\)).
 - *Gibioctet (Gio)* : 1 073 741 824 octets (\(2^{30}\)).
