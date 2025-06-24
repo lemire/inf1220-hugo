@@ -5,7 +5,89 @@ weight: 1
 
 # Java pas à pas
 
-Nous vous invitons maintenant à lire le chapitre  *Structures de contrôle* (chapitre 3)  du  manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.
+Nous vous invitons maintenant à lire le chapitre  *Structures de contrôle* (chapitre 3)  du  manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.
+
+{{<inlineJava path="ExemplesMath.java" lang="java" >}}
+public class ExemplesMath {
+
+  public static void main(String args[]) {
+    System.out.println("Math.log(1.0)=" + Math.log(1.0));
+    System.out.println("Math.exp(1.0)=" + Math.exp(1.0));
+    System.out.println("Math.cos(0)=" + Math.cos(0));
+    System.out.println("Math.sin(0)=" + Math.sin(0));
+    System.out.println("Math.sqrt(4)=" + Math.sqrt(4));
+  }
+}
+{{</inlineJava>}}
+
+
+{{<inlineJava path="ExemplesString.java" lang="java" >}}
+public class ExemplesString {
+
+  public static void main(String args[]) {
+
+    String string1 = "abc";
+    String string2 = "def";
+    String string3 = "abcdef";
+    String string4 = new String("abcdef");
+
+    // Tous les litéraux identiques (� la compilation) sont traduits
+    // par une référence au même objet
+    System.out.println(string3 == "abcdef"); // true
+    System.out.println("abc" + "def" == "abcdef"); // true
+
+    // Par contre, si le litéral est calculé à l'exécution, ce n'est pas le cas
+    System.out.println(string1 + string2 == "abcdef"); // false
+
+    // Le constructeur String produit toujours un objet différent de l'objet
+    // correspondant au litéral
+    System.out.println(string4 == "abcdef"); // false
+
+    // La méthode intern() de la classe String permet de convertir
+    // la référence à l'objet correspondant au litéral
+    System.out.println((string1 + string2).intern() == "abcdef"); // true
+    System.out.println(string4.intern() == "abcdef"); // true
+
+    // La méthode equals() permet de comparer le contenu de l'objet plutôt que la référence
+    System.out.println((string1 + string2).equals("abcdef")); // true
+    System.out.println(string4.equals("abcdef")); // true
+  }
+}
+{{</inlineJava>}}
+
+
+{{<inlineJava path="ExempleZero.java" lang="java" >}}
+public class ExempleZero {
+  public static void main(String[] s) {
+    double minus_zero = -0.0;
+    double plus_zero = +0.0;
+    System.out.println(minus_zero == plus_zero);
+    System.out.println(1/minus_zero);
+    System.out.println(1/plus_zero);
+    System.out.println(1/minus_zero == 1/plus_zero);
+    double n = 0.0 / 0.0;
+    System.out.println(n);
+    System.out.println(n == n);
+  }
+}
+{{</inlineJava>}}
+
+
+{{<inlineJava path="ExerciceForFor.java" lang="java" >}}
+public class ExerciceForFor {
+  public static void main(String args[]) {
+    for (int compteur1 = 1; compteur1 <= 9; compteur1 = compteur1 + 1) {
+      for (int compteur2 = 1; compteur2 <= compteur1; compteur2 = compteur2 + 1)
+        System.out.print(compteur2);
+      System.out.println();
+    }
+  }
+}
+{{</inlineJava>}}
+
+
+
+
 
 Après la lecture du chapitre, répondez aux questions suivantes.
 
