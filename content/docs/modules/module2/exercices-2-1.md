@@ -652,3 +652,15 @@ Quelle est la valeur de l’expression <code>0xA + 10</code> en Java ? Expliqu
 <details><summary>Réponse</summary>
 <p><code>0xA</code> représente 10 en décimal, donc <code>0xA + 10</code> vaut 20.</p>
 </details>
+
+## Question 39
+Est-ce que <code>-0.0</code> est égal à <code>0.0</code> en Java ?
+<details><summary>Réponse</summary>
+<p>En Java, <code>-0.0 == 0.0</code> retourne <code>true</code> car la comparaison d’égalité (<code>==</code>) considère ces deux valeurs comme égales selon la norme IEEE 754. Cependant, il existe une différence binaire entre <code>-0.0</code> et <code>0.0</code> (le signe du zéro), ce qui peut être détecté avec certaines méthodes comme <code>Double.doubleToRawLongBits()</code> ou en utilisant <code>1.0 / -0.0</code> (qui donne <code>-Infinity</code>), alors que <code>1.0 / 0.0</code> donne <code>Infinity</code>.</p>
+</details>
+
+## Question 40
+Comment est représenté <code>-1</code> en Java ?
+<details><summary>Réponse</summary>
+<p>En Java, les entiers sont représentés en binaire selon le format « complément à deux ». Ainsi, <code>-1</code> est représenté par une suite de bits où tous les bits sont à 1. Par exemple, pour un <code>int</code> (32 bits), <code>-1</code> correspond à <code>0xFFFFFFFF</code> en hexadécimal, soit 32 bits à 1. </p>
+</details>

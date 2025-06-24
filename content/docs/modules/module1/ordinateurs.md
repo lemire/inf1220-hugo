@@ -594,3 +594,36 @@ Les temps d’accès à la mémoire ou d’exécution d’instructions sont souv
 Ces unités sont essentielles pour comprendre les performances, la capacité de stockage et la rapidité des ordinateurs modernes.
 
 La vitesse de la lumière dans le vide est d’environ 299 792 458 mètres par seconde (environ 300 000 km/s). C’est la vitesse maximale à laquelle l’information ou l’énergie peut se déplacer dans l’univers selon la physique moderne. La lumière parcourt environ 29,98 centimètres (soit presque 30 cm) en une nanoseconde dans le vide. Autrement dit, en une nanoseconde (1 ns = 10⁻⁹ seconde), la lumière se déplace d’environ 30 cm.
+
+
+### Binaire
+
+Les ordinateurs fonctionnent en binaire, c’est-à-dire qu’ils ne manipulent que deux états possibles : 0 et 1. Cette représentation repose sur le système de numération binaire, où chaque chiffre (bit) correspond à une puissance de 2. Un bit (binary digit) est l’unité d’information la plus petite : il peut valoir 0 ou 1. 
+
+Un groupe de 8 bits forme un octet (byte), qui permet de représenter 256 valeurs différentes (de 0 à 255). Les ordinateurs stockent et traitent toutes les données (nombres, texte, images, sons) sous forme de suites de bits. Par exemple, le nombre décimal 5 s’écrit 101 en binaire : 
+
+- 1 × 2² + 0 × 2¹ + 1 × 2⁰ = 4 + 0 + 1 = 5
+
+Voici quelques exemples de conversion :
+
+| Décimal | Binaire |
+|---------|---------|
+| 0       | 0000    |
+| 1       | 0001    |
+| 2       | 0010    |
+| 3       | 0011    |
+| 4       | 0100    |
+| 5       | 0101    |
+| 6       | 0110    |
+| 7       | 0111    |
+| 8       | 1000    |
+| 9       | 1001    |
+
+Chaque bit supplémentaire double le nombre de valeurs possibles. Ainsi, avec n bits, on peut représenter 2ⁿ valeurs différentes.
+
+#### Pourquoi le binaire ?
+
+Le choix du binaire s’explique par la simplicité de la technologie électronique : il est facile de concevoir des circuits qui distinguent deux états (tension présente ou absente, aimantation positive ou négative, etc.). Cela rend les ordinateurs plus fiables et moins sensibles au bruit que s’ils utilisaient plus de deux états.
+
+Les ordinateurs effectuent des opérations logiques (ET, OU, NON, OU exclusif) directement sur les bits. Ces opérations sont à la base de tous les calculs et traitements informatiques.
+

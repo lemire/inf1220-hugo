@@ -637,8 +637,27 @@ Quelle distance est-ce que la vitesse de la lumière traverse pendant un cycle&n
 <p><b>Réponse :</b> Pendant un cycle d’horloge à 3 GHz, la lumière parcourt environ 10 centimètres dans le vide.</p>
 </details>
 
+
+### Exercice 27
+
+Quelle est la différence entre un kibioctet et un kilo-octet ?
+
+<details>
+<summary>Réponse</summary>
+
+Un kilo-octet (ko) correspond à 1 000 octets (selon le système décimal, préfixe SI), tandis qu’un kibioctet (Kio) correspond à 1 024 octets (selon le système binaire, préfixe IEC). Le préfixe « kilo » (k) est utilisé pour les puissances de 10, alors que « kibi » (Ki) est utilisé pour les puissances de 2. Ainsi, 1 Kio = 1 024 octets, 1 ko = 1 000 octets.
+
+</details>
+
+
+### Vidéos
+
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
 
 
+### Logiciels
+
 
 Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outils. C’est l’essence du pseudo-code : il est indépendant des syntaxes et des outils.
+
+
