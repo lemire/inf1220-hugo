@@ -12,6 +12,9 @@ Depuis, la programmation fonctionnelle a influencé de nombreux langages moderne
 
 Avant Java 8 (2014), la programmation fonctionnelle était absente ou limitée. Les programmeurs utilisaient des solutions comme les classes anonymes pour simuler des comportements fonctionnels, mais cela était verbeux. Avec Java 8, l’introduction des expressions lambda, de l’API Stream et des interfaces fonctionnelles (comme Function, Predicate) a marqué un tournant, permettant de manipuler les fonctions comme des objets de première classe et de traiter les données de manière déclarative. Les références de méthodes et les types fonctionnels ont renforcé cette approche. 
 
+
+**Dans ce cours, vous n'avez pas à maîtriser la programmation fonctionnelle, mais il est utile d'être familier avec cette notion.**
+
 ## Lambdas
 
 Une fonction lambda, ou expression lambda, est une fonction anonyme concise définie sans nom, souvent utilisée pour des opérations simples et ponctuelles. Elle permet d'écrire du code plus compact, notamment dans des contextes où une fonction est passée en argument, comme pour des opérations de filtrage ou de tri. En Java, par exemple, les lambdas s'appuient sur les interfaces fonctionnelles, qui possèdent une unique méthode abstraite. Leur syntaxe est de la forme (paramètres) -> expression ou (paramètres) -> { instructions; } pour des blocs plus complexes.

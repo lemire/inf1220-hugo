@@ -721,7 +721,7 @@ for (int i = 0; i < 5; i++) {
 
 ## Les ArrayLists
 
-Une ArrayList est une structure de données de type "Collection", similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "`ArrayList<String>`, `ArrayList<Double>`, `ArrayList<ArrayList<Integer>>`" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.
+Une ArrayList est une structure de données, similaire à un tableau, mais avec une taille indéfinie. Bref, comme une liste d'items, sa taille change au fur et à mesure de l'ajout ou du retrait d'éléments et s'utilise à la façon d'un tableau grâce à la méthode get(i), où i est l'index du tableau. L'objet ArrayList possède un ensemble de méthodes permettant de manipuler les données (ex. get, remove, isEmpty, toArray). De plus, les ArrayList utilisent le système de template (à voir en détail un peu plus loin), qui permet de créer des ArrayList pour un type d'Objet en particulier, par exemple : "`ArrayList<String>`, `ArrayList<Double>`, `ArrayList<ArrayList<Integer>>`" (Oui c'est possible ... pour simuler une matrice par exemple),etc. Voici un exemple d'instanciation et d'utilisation d'une ArrayList.
 
 
 
@@ -787,9 +787,45 @@ while(it.hasNext()) {
 }
 ```
 
-<p>En conclusion, les ArrayList sont des structures de données utiles. Vous verrez dans la suite du cours plusieurs utilisations des ArrayList.</p>
+Les structures de données dynamiques, comme StringBuilder ou ArrayList ne sont pas magiques. Elles augmentent leur capacité de la manière suivante.
+En commençant avec un tableau ayant une capacité fixe, elles permettent d'ajouter des éléments jusqu'à ce que la capacité soit épuisée.
+Elles allouent alors un nouveau tableau plus grand, elles y copient les éléments, et ainis de suite.
+Pour comprendre le mécanisme, utilisez l'application suivante.
 
-<p><a id="intro" name="section3"></a></p>
+{{< webapp path="arraylist.html" >}}
+
+<details>
+<summary>
+Les tableaux dynamiques ont un coût amorti de \(O(1)\) ?
+</summary>
+
+
+Ajouter de nouveaux éléments à un tableau dynamique, comme l'`ArrayList` de Java, a un temps constant espéré (\(O(1)\)) grâce à l'analyse amortie. Alors que la plupart des ajouts sont des opérations rapides en \(O(1)\), car elles placent simplement un élément dans un emplacement disponible du tableau sous-jacent, il arrive occasionnellement que le tableau atteigne sa capacité et doive être redimensionné. Ce redimensionnement implique la création d'un nouveau tableau, plus grand (généralement d'un facteur \(K > 1\)), et la copie de tous les éléments existants. Si la capacité actuelle est \(C\), et qu'il y a \(C\) éléments, leur copie vers le nouveau tableau de taille \(K \cdot C\) prend un temps \(O(C)\).
+
+
+Pour comprendre pourquoi cela conduit à un temps amorti de \(O(1)\), considérons une séquence de \(N\) insertions à partir d'un tableau vide. Le coût total pour \(N\) insertions est la somme des coûts des insertions individuelles (chacune en \(O(1)\)) plus les coûts de toutes les opérations de redimensionnement. Les insertions individuelles ajoutent \(N \cdot O(1) = O(N)\) au coût total.
+
+Concentrons-nous maintenant sur les coûts de redimensionnement. Les capacités auxquelles les redimensionnements se produisent sont approximativement \(1, K, K^2, K^3, \ldots, K^m\), où \(K^m\) est la plus petite puissance de \(K\) supérieure ou égale à \(N\).
+
+Le coût de copie pour ces redimensionnements sera :
+\(1 + K + K^2 + \ldots + K^{m-1}\) (en supposant une capacité initiale de 1 pour simplifier).
+
+Ceci est la somme d'une série géométrique :
+\(\mathrm{Coût}_{\mathrm{copie}} = \sum_{i=0}^{m-1} K^i = \frac{K^m - 1}{K - 1}\)
+
+Puisque \(K^m \approx N\) (plus précisément, \(K^{m-1} < N \le K^m\)), le coût de copie est approximativement \(\frac{N}{K-1}\).
+
+Par conséquent, le coût total pour \(N\) insertions est :
+\(\mathrm{Coût\ Total} = O(N)\ \text{(pour les insertions)} + O\left(\frac{N}{K-1}\right)\ \text{(pour les copies)}\)
+
+Étant donné que \(K\) est une constante supérieure à 1, \(\frac{1}{K-1}\) est également une constante.
+Ainsi, \(\mathrm{Coût\ Total} = O(N) + O(N) = O(N)\).
+
+Enfin, le coût amorti par opération est le coût total divisé par le nombre d'opérations :
+\(\mathrm{Coût\ Amorti} = \frac{\mathrm{Coût\ Total}}{N} = \frac{O(N)}{N} = O(1)\).
+
+Donc, tant que \(K > 1\), la complexité temporelle amortie pour ajouter un élément à un tableau dynamique reste \(O(1)\), car le coût total de la copie des éléments lors des redimensionnements est proportionnel au nombre total d'éléments insérés.
+</details>
 
 ## Autres structures de données
 
@@ -874,7 +910,7 @@ Les types primitifs (int, double, float, long, short, byte, char, boolean) sont 
 
 En revanche, les types référence (comme String, StringBuilder, ArrayList, HashMap, ou les classes enveloppes telles que Integer, Double ainsi que tous les tableaux) sont passés par référence, ou plus précisément, par copie de la référence. Cela signifie que la méthode reçoit une copie de l’adresse mémoire pointant vers l’objet. Si la méthode modifie l’état interne de l’objet (par exemple, en ajoutant un élément à un ArrayList), cette modification est visible à l’extérieur, car l’objet original est affecté. Cependant, si la méthode réassigne la référence à un nouvel objet (par exemple, en créant un nouveau StringBuilder), cela n’affecte pas la référence originale à l’extérieur de la méthode. En résumé, pour les types référence, les modifications internes aux objets sont persistantes, mais les réassignations de la référence ne le sont pas.
 
-Il est préférable d'utiliser des exemples pour bien comprendre. Dans l'exemple suivant, la variable valeur n’est pas modifiée car une copie de sa valeur est passée à la méthode.
+Il est préférable d'utiliser des exemples pour bien comprendre. Dans l'exemple suivant, la variable valeur n’est pas modifiée car une copie de sa valeur n’est pas modifiée car une copie de sa valeur est passée à la méthode.
 {{<inlineJava path="Exemple.java" lang="java">}}
 
 public class Exemple {

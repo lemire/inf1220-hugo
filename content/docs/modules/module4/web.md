@@ -9,6 +9,9 @@ Le développement web en Java repose sur l’utilisation de technologies et de f
  ermettant de créer des applications accessibles via un navigateur. Java est largement 
  utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse de son écosystème.
 
+
+**Dans ce cours, vous n'avez pas à maîtriser la programmation web. Nous vous présentons un exemple pour motiver votre apprentissage.**
+
 ## Concepts de base
 
 Un serveur web est un programme qui reçoit les requêtes des clients (navigateurs) et renvoie des réponses (pages HTML, données JSON, etc.). Le protocole de communication qui permet l’échange de données entre le navigateur (client) et le serveur web est le HTTP. Toutes les requêtes et réponses web transitent via HTTP ou HTTPS (version sécurisée).
