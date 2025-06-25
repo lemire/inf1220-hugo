@@ -621,6 +621,12 @@ Voici quelques exemples de conversion :
 
 Chaque bit supplémentaire double le nombre de valeurs possibles. Ainsi, avec n bits, on peut représenter 2ⁿ valeurs différentes.
 
+Utilisez l'application suivante pour explorer la représentation binaire.  Observez comment, par convention, le bit le plus
+à gauche est le plus significatif. Que remarquez-vous au sujet des puissances de deux comme 2, 4, 8&nbsp;?
+
+{{< webapp path="eightbits.html" >}}
+
+
 #### Pourquoi le binaire ?
 
 Le choix du binaire s’explique par la simplicité de la technologie électronique : il est facile de concevoir des circuits qui distinguent deux états (tension présente ou absente, aimantation positive ou négative, etc.). Cela rend les ordinateurs plus fiables et moins sensibles au bruit que s’ils utilisaient plus de deux états.

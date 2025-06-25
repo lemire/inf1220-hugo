@@ -1,0 +1,60 @@
+  <div id="bitApp" style="font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
+    <h2 style="margin: 0 0 20px; font-size: 24px;">Manipulateur de 8 bits</h2>
+    <div id="bitContainer" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+      <!-- Les boutons seront insérés par JavaScript -->
+    </div>
+    <div style="font-size: 18px;">
+      <p>Valeur binaire: <span id="binaryValue" style="font-family: monospace;">00000000</span></p>
+      <p>Valeur décimale: <span id="decimalValue" style="font-family: monospace;">0</span></p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // Encapsulation dans une IIFE pour éviter les conflits
+      const app = document.getElementById('bitApp');
+      if (!app) return; // Sécurité si l'élément n'existe pas
+
+      const bitContainer = app.querySelector('#bitContainer');
+      if (!bitContainer) return; // Sécurité supplémentaire
+      const binaryDisplay = app.querySelector('#binaryValue');
+      const decimalDisplay = app.querySelector('#decimalValue');
+      const bits = Array(8).fill(0); // Tableau pour stocker les 8 bits
+
+      // Création des boutons pour chaque bit
+      for (let i = 0; i < 8; i++) {
+        const button = document.createElement('button');
+        button.textContent = '0';
+        button.setAttribute('aria-label', `Bit ${7 - i}`);
+        button.style.cssText = `
+          width: 40px; height: 40px; font-size: 18px; font-family: monospace;
+          background-color: #f0f0f0; border: 1px solid #999; border-radius: 4px;
+          cursor: pointer; transition: background-color 0.2s;
+        `;
+        button.addEventListener('click', () => toggleBit(7-i));
+        bitContainer.appendChild(button);
+      }
+
+      // Fonction pour basculer un bit et mettre à jour l'affichage
+      function toggleBit(index) {
+        bits[index] = bits[index] ? 0 : 1;
+        updateDisplay();
+      }
+
+      // Mise à jour de l'affichage
+      function updateDisplay() {
+        const buttons = bitContainer.querySelectorAll('button');
+        let binary = '';
+        for (let i = 0; i < 8; i++) {
+          buttons[7 - i].textContent = bits[i];
+          buttons[7 - i].style.backgroundColor = bits[i] ? '#4caf50' : '#f0f0f0';
+          binary = bits[i] + binary; // Construit la chaîne binaire de gauche à droite
+        }
+        binaryDisplay.textContent = binary;
+        decimalDisplay.textContent = parseInt(binary, 2) || 0; // Gestion du cas où binary est vide
+      }
+
+      // Initialisation
+      updateDisplay();
+    })();
+  </script>
