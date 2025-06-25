@@ -169,7 +169,7 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           signal: controller.signal
         });
         clearTimeout(timeoutId);
-        if (!resp.ok) {
+        if (!resp.ok && resp.status !== 400) {
           throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
         }
         let resultText = await resp.text();

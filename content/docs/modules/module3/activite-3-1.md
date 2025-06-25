@@ -96,9 +96,10 @@ class IfElseDemontration {
 }
 ```
 
-## La structure de contrôle SWITCH-CASE
+## La structure de contrôle switch-case
 
-<p>L'instruction de choix multiples <strong>switch</strong> permet d'effectuer un aiguillage sur plusieurs instructions, suivant la valeur retournée par une expression d'un des types suivants : <strong>char</strong>, <strong>byte</strong>, <strong>short</strong> ou <strong>int</strong>. Lorsque la valeur de l'expression est connue, elle est comparée à chacune des valeurs indiquées par les clauses <strong>case</strong>, en séquence dans l'ordre d'apparition des clauses. Dès qu'une valeur indiquée par une clause est égale à la valeur calculée, le contrôle d'exécution est donné à la séquence d'instructions qui suit cette clause. Si aucune valeur ne correspond, le contrôle est donné à la clause <strong>default,</strong> si celle-ci existe, ou bien, l'instruction de choix multiples est considérée comme terminée.</p> 
+<p>L'instruction de choix multiples <strong>switch</strong> permet d'effectuer un aiguillage sur plusieurs instructions, suivant la valeur retournée par une expression d'un des types suivants : 
+char, byte, short, int, ainsi que leurs classes enveloppes (Character, Byte, Short, Integer), les énumérations (enum), et les chaînes de caractères (String). Lorsque la valeur de l'expression est connue, elle est comparée à chacune des valeurs indiquées par les clauses <strong>case</strong>, en séquence dans l'ordre d'apparition des clauses. Dès qu'une valeur indiquée par une clause est égale à la valeur calculée, le contrôle d'exécution est donné à la séquence d'instructions qui suit cette clause. Si aucune valeur ne correspond, le contrôle est donné à la clause <strong>default,</strong> si celle-ci existe, ou bien, l'instruction de choix multiples est considérée comme terminée.</p> 
 <p>L'instruction <strong>break</strong> permet d'arrêter l'instruction de choix multiples. Elle sera en général utilisée à la fin de la séquence d'instructions de chaque clause.</p> 
 
 
@@ -114,6 +115,85 @@ switch (i % 2) {
                 break;
         }
 ```
+
+Considérons un exemple avec une chaîne de caractères.
+
+{{<inlineJava path="SwitchStringExemple.java" lang="java">}}
+class SwitchStringExemple {
+    public static void main(String[] args) {
+        String jour = "Lundi";
+        String typeJour;
+        switch (jour) {
+            case "Lundi":
+            case "Mardi":
+            case "Mercredi":
+            case "Jeudi":
+            case "Vendredi":
+                typeJour = "Jour ouvrable";
+                break;
+            case "Samedi":
+            case "Dimanche":
+                typeJour = "Week-end";
+                break;
+            default:
+                typeJour = "Jour invalide";
+                break;
+        }
+        System.out.println(jour + " est un " + typeJour);
+    }
+}
+{{</inlineJava>}}
+
+Dans cet exemple, l'instruction switch évalue une chaîne de caractères représentant un jour de la semaine. Selon la valeur de jour, une variable typeJour est définie pour indiquer si c'est un jour ouvrable, un week-end ou un jour invalide. L'instruction break est utilisée pour éviter la traversée des cas.
+
+Voici un exemple avec un enum.
+
+{{<inlineJava path="GestionCouleurs.java" lang="java">}}
+public class GestionCouleurs {
+    // Définition de l'énumération
+    enum Couleur {
+        ROUGE,
+        NOIR,
+        BLEU
+    }
+
+    // Méthode utilisant l'enum avec un switch
+    public static String decrireCouleur(Couleur couleur) {
+        String description;
+        switch (couleur) {
+            case ROUGE:
+                description = "Une couleur vive et chaleureuse";
+                break;
+            case NOIR:
+                description = "Une couleur profonde et élégante";
+                break;
+            case BLEU:
+                description = "Une couleur calme et apaisante";
+                break;
+            default:
+                description = "Couleur inconnue";
+                break;
+        }
+        return "La couleur " + couleur + " est : " + description;
+    }
+
+    // Méthode principale pour tester
+    public static void main(String[] args) {
+        // Variable de type Couleur
+        Couleur maCouleur = Couleur.ROUGE;
+        System.out.println(decrireCouleur(maCouleur));
+
+        maCouleur = Couleur.NOIR;
+        System.out.println(decrireCouleur(maCouleur));
+
+        maCouleur = Couleur.BLEU;
+        System.out.println(decrireCouleur(maCouleur));
+    }
+}
+{{</inlineJava>}}
+
+
+Dans le prochain exemple, une énumération Saison est définie avec quatre valeurs. L'instruction switch évalue une variable de type Saison et assigne une description textuelle à la variable description en fonction de la saison. Comme pour l'exemple précédent, break est utilisé pour terminer chaque cas.
 
 <p style="text-align: left; ">Le programme suivant montre l'utilisation de l'instruction switch. Il s'agit ici d'une banque qui définit quatre catégories de classes afin de donner des commissions à ses employés. Pour la classe 1, nous avons un taux de commission de 2 %, de 3,5 % pour la classe 2, de 5 % pour la classe 3 et de 0 % pour la classe 4.</p> 
 <p style="text-align: left; ">Voici le programme qui permet de réaliser cette opération :</p> 
@@ -172,6 +252,28 @@ public class SwitchExpressionExample {
 {{</inlineJava>}}
 
 Observez le mot-clé `yield` utilisé dans les expressions switch  pour spécifier la valeur renvoyée par une branche d’un bloc switch lorsqu’une logique complexe nécessite plusieurs instructions.
+
+Pour bien comprendre l'intérêt de la nouvelle syntaxe, reprenons l'exemple du taux de commission.
+Voici la même fonction avec la nouvelle syntaxe.
+
+{{<inlineJava path="SwitchExemple.java" lang="java">}}
+class SwitchExemple {
+    public static void main(String[] args) {
+        int classe = 1;
+        double tauxCommission = switch (classe) {
+            case 1 -> 0.02;
+            case 2 -> 0.035;
+            case 3 -> 0.05;
+            default -> 0.0;
+        };
+        System.out.println("Le taux de commission est : " + tauxCommission);
+    }
+}
+{{</inlineJava>}}
+
+
+Cet exemple montre comment la nouvelle syntaxe simplifie le code tout en conservant la même fonctionnalité.
+Les différences entre la syntaxe traditionnelle et la nouvelle syntaxe des expressions switch résident principalement dans leur structure et leur comportement. Dans la syntaxe traditionnelle, le switch est une instruction qui exécute un bloc de code pour chaque clause case, nécessitant un break pour éviter la traversée des cas suivants (fall-through). Elle est verbeuse, car elle exige une variable temporaire pour stocker le résultat et des affectations explicites. En revanche, la nouvelle syntaxe utilise des flèches (->) pour associer directement une valeur ou un bloc à un cas, éliminant le besoin de break, car il n’y a pas de fall-through. De plus, le switch devient une expression qui renvoie une valeur, permettant une affectation directe, comme dans l’exemple où tauxCommission est initialisé en une ligne. La nouvelle syntaxe supporte également des cases multiples (séparés par des virgules) et le mot-clé yield pour renvoyer des valeurs depuis des blocs complexes, rendant le code plus concis, lisible et moins sujet aux erreurs.
 
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
