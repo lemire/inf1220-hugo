@@ -26,7 +26,7 @@ Le professeur est préoccupé par le fait que l’apprentissage s’effectue de 
 
 Certains étudiants préfèrent lire, d'autres préfèrent regarder des vidéos. Nous croyons que les deux modes de diffusion (écrit et vidéo) ont leur place en enseignement.
 
-L’Université TÉLUQ est un précurseur dans l’enseignement avec la vidéo, comme le suggère son nom (*télé-université*). Longtemps, lors de l’inscription à un cours, on pouvait recevoir des cassettes vidéos (VHS). L’Université TÉLUQ a même porté son propre poste de télévision appelé [Canal Savoir](https://fr.wikipedia.org/wiki/CFTU-DT).
+L’Université TÉLUQ est un précurseur dans l’enseignement avec la vidéo. Longtemps, lors de l’inscription à un cours, on pouvait recevoir des cassettes vidéos (VHS). L’Université TÉLUQ a même porté son propre poste de télévision appelé [Canal Savoir](https://fr.wikipedia.org/wiki/CFTU-DT).
 
 Quelques cours à l’Université TÉLUQ sont toujours diffusés principalement avec des vidéos. Dans la plupart des cas, cependant, les cours utilisent des notes de cours. C’est le cas du cours INF 1220. Le langage écrit a plusieurs avantages, notamment le fait d’être plus accessible.
 
