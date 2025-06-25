@@ -121,6 +121,9 @@ Les débordements se produisent lorsqu’une opération arithmétique sur des en
 
 En Java, les types numériques pour les entiers sont soit signés, soit non signés. Les types signés, qui utilisent le complément à deux pour représenter les nombres négatifs, sont : byte (8 bits), short (16 bits), int (32 bits) et long (64 bits). Le type char (16 bits), bien qu’utilisé principalement pour les caractères, est non signé, représentant des valeurs de 0 à 65 535.
 
+Pour mieux comprendre les débordements, essayez d'en créer un avec l'application suivante. Créez un débordement vers une valeur positive puis vers une valeur négative.
+
+{{< webapp path="debordement.html" >}}
 
 ### Binaire, décimal, hexadécimal
 
@@ -568,6 +571,57 @@ public class Exemple {
 }
 ```
 
+## Enum
+
+En Java, les enum (abréviations de "énumérations") sont des types spéciaux utilisés pour définir un ensemble fixe de constantes nommées. Introduits dans Java 5, ils permettent de représenter des collections de valeurs prédéfinies, comme les jours de la semaine, les états d'un système ou des catégories spécifiques. Par exemple, une énumération pour les jours pourrait être déclarée ainsi : enum Jour { LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE }. Chaque constante d'une enum est en réalité une instance de la classe enum, ce qui signifie qu'elles sont immuables et que leur nombre est fixé à la compilation. Les enum offrent une alternative robuste aux constantes statiques de type int ou String, car elles garantissent la sécurité des types et empêchent l'utilisation de valeurs non valides.
+
+{{<inlineJava path="GestionCouleurs.java" lang="java" >}}
+
+public class GestionCouleurs {
+    // Définition de l'énumération
+    enum Couleur {
+        ROUGE,
+        NOIR,
+        BLEU
+    }
+
+    // Méthode utilisant l'enum
+    public static String afficherCouleur(Couleur couleur) {
+        return "La couleur sélectionnée est : " + couleur;
+    }
+
+    // Méthode principale pour tester
+    public static void main(String[] args) {
+        // Test avec différentes couleurs
+        System.out.println(afficherCouleur(Couleur.ROUGE));
+        System.out.println(afficherCouleur(Couleur.NOIR));
+        System.out.println(afficherCouleur(Couleur.BLEU));
+    }
+}
+{{</inlineJava>}}
+
+
+Les enums ont plusieurs fonctions avancées. Il est possible d'ajouter des attributs aux différentes valeurs, et ainsi de suite.
+On peut notamment utiliser la méthode `values()` pour énumérer les enums.
+
+{{<inlineJava path="Main.java" lang="java" >}}
+enum Jour {
+    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Utilisation de values() pour obtenir un tableau de toutes les constantes de l'enum
+        for (Jour jour : Jour.values()) {
+            System.out.println(jour);
+        }
+    }
+}
+{{</inlineJava>}}
+
+La vidéo suivante (optionnelle) vous permettra d'en apprendre davantage.
+
+{{< youtube id="9P6SH-zgHME" >}}
 
 
 ## Exercices

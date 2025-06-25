@@ -120,7 +120,7 @@
         .then(function(r){
           clearInterval(execAnim);
           clearTimeout(timeoutId);
-          if (!r.ok) {
+          if (!r.ok && resp.status !== 400) {
             throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
           }
           return r.text();

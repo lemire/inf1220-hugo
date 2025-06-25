@@ -94,7 +94,7 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
     .then(r => {
       clearInterval(execAnim);
       clearTimeout(timeoutId);
-      if (!r.ok) {
+      if (!r.ok && resp.status !== 400) {
         throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
       }
       return r.json();
