@@ -17,7 +17,7 @@ Dans la notion de pseudo-code, il est également possible de faire une suite de 
 
 Considérons l'exemple suivant. Il s'agit d'un outil interactif qui t’aide à comprendre comment un algorithme utilise des conditions pour classer une personne selon son âge. Pour commencer, saisis un âge entier positif dans le champ prévu, par exemple « 25 ». Ensuite, clique sur « Prochaine étape » pour exécuter l’algorithme étape par étape. À chaque clic, une ligne du pseudocode s’illumine, et un message explicatif apparaît dans la zone de journalisation en bas. Tu verras également l’état mis à jour : l’âge saisi et la catégorie déterminée (comme « Vous êtes un adulte »). Si tu veux recommencer, clique sur « Réinitialiser » pour effacer les résultats. Attention, l’âge doit être un nombre entier positif, sinon un message te demandera de corriger.
 
-Cet outil te permet de suivre le raisonnement de l’algorithme de manière claire. Le pseudocode, affiché à gauche, utilise une structure conditionnelle (SI, SINON SI, SINON) pour évaluer l’âge et assigner une catégorie : enfant (≤ 10 ans), adolescent (> 10 et < 18 ans), adulte (≥ 18 et < 65 ans) ou personne âgée (≥ 65 ans). En progressant dans les étapes, observe comment l’algorithme teste chaque condition et choisit la bonne catégorie. Lis attentivement les messages du journal pour comprendre les décisions prises. Cet exercice t’entraîne à structurer des décisions logiques, une compétence clé pour programmer des solutions complexes.
+Cet outil vous permet de suivre le raisonnement de l’algorithme de manière claire. Le pseudocode, affiché à gauche, utilise une structure conditionnelle (SI, SINON SI, SINON) pour évaluer l’âge et assigner une catégorie : enfant (≤ 10 ans), adolescent (> 10 et < 18 ans), adulte (≥ 18 et < 65 ans) ou personne âgée (≥ 65 ans). En progressant dans les étapes, observe comment l’algorithme teste chaque condition et choisit la bonne catégorie. Lisez attentivement les messages du journal pour comprendre les décisions prises.
 
 {{< webapp path="age.html" >}}
 
@@ -46,6 +46,8 @@ POUR TOUT Entier e de tableau FAIRE
     FIN SI
 FIN POUR TOUT
 ```
+
+Ce pseudocode décrit un algorithme pour trouver la valeur minimale dans un tableau d’entiers de taille 100. L’algorithme commence par initialiser la variable minimum à la première valeur du tableau (tableau[0]), en supposant que le tableau n’est pas vide. Ensuite, une boucle (POUR TOUT Entier e de tableau FAIRE) parcourt chaque élément e du tableau. À chaque itération, si l’élément e est inférieur à la valeur actuelle de minimum, alors minimum est mis à jour avec la valeur de e (minimum = e). À la fin de la boucle, minimum contient la plus petite valeur du tableau, qui est retournée comme résultat.
 </details>
 
 <details>
@@ -67,6 +69,8 @@ TANT QUE iterateur < 100 FAIRE
     iterateur = iterateur + 1;
 FIN TANT QUE
 ```
+
+Ce pseudocode décrit un algorithme pour trouver la valeur minimale dans un tableau d’entiers de taille 100. Une variable minimum est initialisée avec la première valeur du tableau (tableau[0]), supposant que le tableau n’est pas vide. Une variable iterateur est initialisée à 0 pour suivre la position dans le tableau. La boucle (TANT QUE iterateur < 100 FAIRE) parcourt le tableau tant que iterateur est inférieur à 100. À chaque itération, si l’élément à l’indice iterateur (tableau[iterateur]) est inférieur à minimum, alors minimum est mis à jour avec cette valeur. Ensuite, iterateur est incrémenté de 1 (iterateur = iterateur + 1) pour passer à l’élément suivant. À la fin de la boucle, minimum contient la plus petite valeur du tableau, qui est retournée.
 </details>
 
 ### Composition
@@ -80,6 +84,8 @@ TANT QUE x > 0 FAIRE
   FIN TANT QUE
 FIN TANT QUE
 ```
+
+Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable x jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (TANT QUE x > 0 FAIRE) continue tant que x est strictement positif. À l'intérieur, la boucle interne (TANT QUE x > 10 FAIRE) s'exécute uniquement si x est supérieur à 10, et dans ce cas, elle décrémente x de 1 à chaque itération (x = x - 1). Une fois que x devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si x > 0. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier x lorsque x ≤ 10, le programme entre dans une boucle infinie si x est compris entre 1 et 10 inclus. Si x est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si x est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
 
 ### La fin d'un algorithme
 

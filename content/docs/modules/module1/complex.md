@@ -33,6 +33,8 @@ POUR i de 0 à n-1
 FIN POUR
 ```
 
+Une variable somme est initialisée à 0 pour accumuler le résultat. La boucle (POUR i de 0 à n-1) parcourt chaque indice i du tableau, et à chaque itération, la valeur de l’élément tableau[i] est ajoutée à somme (`somme = somme + tableau[i]`). À la fin de la boucle, somme contient la somme totale des éléments du tableau.
+
 Ici, chaque élément est visité une seule fois, donc le temps d’exécution est proportionnel à \( n \).
 
 ### Exemples d’algorithmes en \( O(n^2) \)
@@ -46,6 +48,8 @@ POUR i de 0 à n-1
     FIN POUR
 FIN POUR
 ```
+
+Ce pseudocode décrit une double boucle imbriquée qui parcourt toutes les paires possibles d’éléments dans un tableau de taille n. La boucle externe (POUR i de 0 à n-1) itère sur chaque indice i du tableau, tandis que la boucle interne (POUR j de 0 à n-1) parcourt à nouveau tous les indices j du tableau, indépendamment de i. À chaque itération, une opération (désignée par « faire quelque chose ») est effectuée en utilisant les éléments `tableau[i]` et `tableau[j]`. Cela inclut les cas où i et j désignent le même élément (quand i = j) ainsi que toutes les combinaisons de paires, y compris les permutations (par exemple, (i,j) et (j,i)).
 
 Ici, pour chaque valeur de \( i \), on parcourt toutes les valeurs de \( j \), ce qui donne \( n \times n = n^2 \) opérations.
 
@@ -75,8 +79,9 @@ DEBUT
     retourner FAUX
 FIN
 ```
+Le pseudocode décrit ce processus : on initialise deux indices, debut (0) et fin (n-1), délimitant la partie du tableau à explorer. À chaque itération, on calcule l’indice milieu (moyenne de debut et fin) et compare l’élément à cet indice (`tableau[milieu]`) avec la valeur recherchée. Si les deux sont égaux, l’élément est trouvé (retourner VRAI). Si la valeur est plus grande, la recherche se poursuit dans la moitié droite en ajustant debut à milieu + 1 ; sinon, dans la moitié gauche en ajustant fin à milieu - 1. Le processus se répète tant que debut ≤ fin. Si l’intervalle est épuisé sans trouver la valeur, l’algorithme retourne FAUX, indiquant que l’élément n’est pas dans le tableau.
 
-Pour mieux comprendre l'algorithme, essayez de chercher des nombreds dans un tableau trié avec
+Pour mieux comprendre l'algorithme, essayez de chercher des nombres dans un tableau trié avec
 l'application suivante.
 
 {{< webapp path="binaire.html" >}}
@@ -121,6 +126,8 @@ POUR i de 0 à n-2
 FIN POUR
 ```
 
+Le tri à bulle est un algorithme de tri simple qui parcourt un tableau de manière répétée pour comparer et échanger les éléments adjacents s’ils sont dans le mauvais ordre. Dans le pseudocode présenté, la boucle externe (i de 0 à n-2) contrôle le nombre de passes sur le tableau, chaque passe garantissant que l’élément le plus grand non encore trié est placé à la fin. La boucle interne (j de 0 à n-2-i) compare chaque paire d’éléments consécutifs (tableau[j] et tableau[j+1]) et les échange s’ils sont mal ordonnés (tableau[j] > tableau[j+1]). À chaque itération, les éléments les plus grands "remontent" comme des bulles vers la fin du tableau, d’où le nom de l’algorithme.
+
 Utilisez cette application pour mieux comprendre le tri à bulle.
 {{< webapp path="bulle.html" >}}
 
@@ -138,6 +145,9 @@ POUR i de 1 à n-1
     tableau[j+1] ← clé
 FIN POUR
 ```
+
+Le tri par insertion est un algorithme de tri qui construit progressivement une partie triée du tableau en insérant chaque élément à sa position correcte. Dans le pseudocode fourni, la boucle externe (i de 1 à n-1) sélectionne chaque élément (`clé ← tableau[i]`) à partir du deuxième élément. La boucle interne compare cette clé avec les éléments de la partie déjà triée (de `j ← i-1` jusqu’à 0), en déplaçant les éléments plus grands que la clé d’une position vers la droite (`tableau[j+1] ← tableau[j]`) tant que `tableau[j] > clé` et `j ≥ 0`. Une fois la bonne position trouvée, la clé est insérée (`tableau[j+1] ← clé`). Ce processus répété garantit que, à chaque étape, la sous-partie du tableau jusqu’à l’indice i est triée, aboutissant à un tableau entièrement trié à la fin.
+
 Utilisez cette application pour mieux comprendre le tri par insertion.
 
 {{< webapp path="insertion.html" >}}
@@ -180,6 +190,8 @@ FONCTION fusionner(gauche, droite)
 FIN FONCTION
 ```
 
+Le pseudocode décrit deux fonctions principales. La fonction triFusion divise récursivement le tableau en deux moitiés jusqu’à ce que chaque sous-tableau ait au plus un élément (déjà trié). Pour cela, elle calcule l’indice milieu, trie récursivement la moitié gauche (0 à milieu-1) et la moitié droite (milieu à fin), puis fusionne ces deux sous-tableaux triés. La fonction fusionner combine les sous-tableaux gauche et droite en un tableau trié : elle compare les premiers éléments de chaque sous-tableau, ajoute le plus petit à résultat, et retire cet élément de son sous-tableau d’origine. Ce processus continue jusqu’à ce qu’un des sous-tableaux soit vide, puis les éléments restants de l’autre sous-tableau sont ajoutés à résultat. 
+
 Le tri fusion est donc beaucoup plus rapide que les tris naïfs pour les grands tableaux, et il illustre l’intérêt des algorithmes efficaces en informatique.
 
 Utilisez cette application pour mieux comprendre le tri fusion. 
@@ -211,6 +223,8 @@ FONCTION partitionner(tableau, début, fin)
     retourner i + 1
 FIN FONCTION
 ```
+
+La fonction triRapide vérifie si l’intervalle à trier (de début à fin) contient plus d’un élément ; si oui, elle appelle partitionner pour réorganiser le tableau autour d’un pivot, puis trie récursivement les sous-tableaux à gauche (de début à pivot-1) et à droite (de pivot+1 à fin). La fonction partitionner sélectionne le dernier élément comme pivot (tableau[fin]) et réarrange le tableau de sorte que les éléments inférieurs ou égaux au pivot soient à gauche et les plus grands à droite. Elle utilise un indice i pour suivre la frontière des éléments plus petits et échange les éléments appropriés via un parcours (j de début à fin-1). Enfin, le pivot est placé à sa position finale (échange avec tableau[i+1]), et son indice (i+1) est retourné.
 
 Utilisez cette application pour mieux comprendre le tri rapide.
 
@@ -260,6 +274,9 @@ FONCTION triParNiches(tableau, min, max)
 FIN FONCTION
 ```
 
+
+Le tri par niches (ou bucket sort) est un algorithme de tri non comparatif adapté aux données uniformément réparties dans une plage de valeurs connue (de min à max). Le pseudocode décrit un processus en deux étapes. D’abord, il calcule la taille de la plage (k ← max - min + 1) et crée un tableau niches de taille k, où chaque niche correspond à une valeur possible. Dans l’étape 1, chaque élément du tableau est placé dans la niche correspondante (index ← élément - min), ce qui regroupe les éléments de même valeur. Dans l’étape 2, le tableau est reconstruit en parcourant les niches dans l’ordre (de 0 à k-1) et en extrayant leurs éléments pour les placer séquentiellement dans le tableau (tableau[index]). L’indice index suit la position d’insertion.
+
 ### Table de hachage
 
 Une table de hachage (ou « hash table ») est une structure de données qui permet d’associer des clés à des valeurs et d’accéder très rapidement à une valeur à partir de sa clé. Le principe repose sur l’utilisation d’une fonction de hachage qui transforme la clé (par exemple, un texte ou un nombre) en un indice de tableau. Les opérations d’insertion, de recherche et de suppression se font en temps moyen \( O(1) \), c’est-à-dire en temps constant, quelle que soit la taille de la table (si la fonction de hachage est bonne et la table bien dimensionnée). La table de hachage est efficace pour retrouver rapidement une information à partir d’une clé.
@@ -282,6 +299,8 @@ FONCTION rechercher(table, clé)
 FIN FONCTION
 ```
 
+Le pseudocode décrit une fonction de recherche dans une table de hachage, une structure de données optimisée pour retrouver rapidement un élément. La fonction rechercher prend une table (tableau représentant la table de hachage) et une clé à chercher (clé). Elle commence par calculer l’indice correspondant à la clé via une fonction de hachage (indice ← hachage(clé)), qui mappe la clé à une position dans la table. Ensuite, elle vérifie si l’élément à cet indice (`table[indice]`) est égal à la clé recherchée. Si c’est le cas, la fonction retourne VRAI, indiquant que la clé est présente. Sinon, elle retourne FAUX, signifiant que la clé est absente. Ce pseudocode suppose une table de hachage simple sans gestion des collisions (cas où plusieurs clés pointent vers le même indice), ce qui la rend efficace mais limitée aux cas où chaque indice contient au plus un élément.
+
 Pour mieux comprendre, testez l'application suivante. Saisissez des chaînes de caractères qui seront ajoutées à la table de hachage. Pouvez-vous créer une collision ?
 
 
@@ -297,6 +316,8 @@ dico.put("chat", 1);
 dico.put("chien", 2);
 System.out.println(dico.get("chat")); // Affiche 1
 ```
+
+Ce code Java utilise une HashMap pour créer une structure de données associant des clés à des valeurs. Une instance `HashMap<String, Integer>` est déclarée, avec des clés de type String et des valeurs de type Integer. Deux paires clé-valeur sont ajoutées via la méthode put : "chat" associé à 1 et "chien" à 2. La méthode get("chat") récupère la valeur liée à la clé "chat", soit 1, qui est ensuite affichée avec System.out.println.
 
 Les tables de hachage sont omniprésentes en informatique car elles rendent possible la recherche rapide dans de grands ensembles de données.
 
@@ -321,6 +342,8 @@ FIN POUR
 retourner FAUX
 ```
 
+La boucle externe (POUR i de 0 à n-1) parcourt chaque élément du tableau, tandis que la boucle interne (POUR j de i+1 à n-1) examine tous les éléments suivants (à partir de i+1) pour éviter de considérer le même élément deux fois ou des paires redondantes. À chaque itération, la condition SI `tableau[i] + tableau[j] == cible` teste si la somme des éléments aux indices i et j égale la valeur cible. Si une telle paire est trouvée, la fonction retourne VRAI, indiquant que la solution existe. Si aucune paire ne satisfait la condition après avoir exploré toutes les combinaisons, la fonction retourne FAUX. 
+
 Ici, on teste toutes les paires possibles, ce qui prend un temps quadratique.
 
 Solution optimisée (\( O(n) \)) :
@@ -336,6 +359,8 @@ POUR chaque élément x du tableau
 FIN POUR
 retourner FAUX
 ```
+
+Initialement, un ensemble vide est créé pour stocker les éléments rencontrés. La boucle (POUR chaque élément x du tableau) parcourt chaque élément x du tableau. Pour chaque x, l’algorithme vérifie si cible - x (la valeur nécessaire pour atteindre la somme cible) est déjà dans l’ensemble. Si c’est le cas, une paire d’éléments dont la somme vaut cible a été trouvée, et la fonction retourne VRAI. Sinon, l’élément x est ajouté à l’ensemble pour être utilisé dans les itérations suivantes. Si la boucle se termine sans trouver une telle paire, la fonction retourne FAUX.
 
 Ici, chaque élément est traité une seule fois, et si la recherche dans l’ensemble se fait en temps constant (en moyenne) ou \( O(1) \), la solution est en \( O(n) \).
 Dans la solution optimisée, la vérification « (cible - x) est dans l’ensemble » est cruciale.

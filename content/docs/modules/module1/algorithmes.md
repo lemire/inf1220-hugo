@@ -93,6 +93,7 @@ SINON
 FIN SI
 ```
 
+Ce pseudocode décrit un algorithme simple de contrôle d’accès basé sur l’âge d’une personne. L’instruction lire age récupère une valeur (l’âge) entrée par l’utilisateur ou une source externe, stockée dans la variable age. Une structure conditionnelle (SI ... ALORS ... SINON) vérifie si age est supérieur ou égal à 18. Si la condition est vraie (age >= 18), l’algorithme affiche le message "Accès autorisé", indiquant que la personne est majeure et peut accéder à une ressource ou un lieu. Sinon, si age est inférieur à 18, il affiche "Accès refusé", signalant que l’accès est interdit. L’algorithme se termine après l’affichage.
 
 
 #### Exemple 2 : Vérifier si un nombre est dans un intervalle
@@ -105,6 +106,9 @@ SINON
     écrire "x n'est pas dans l'intervalle"
 FIN SI
 ```
+
+
+Ce pseudocode décrit un algorithme qui vérifie si une valeur entrée se situe dans l’intervalle fermé [10, 20]. L’instruction lire x récupère une valeur (un nombre, supposé réel ou entier) entrée par l’utilisateur, stockée dans la variable x. Une structure conditionnelle (SI ... ALORS ... SINON) évalue si x satisfait deux conditions combinées par l’opérateur ET : x >= 10 (x est supérieur ou égal à 10) et x <= 20 (x est inférieur ou égal à 20). Si les deux conditions sont vraies, c’est-à-dire si x est dans l’intervalle [10, 20], l’algorithme affiche "x est dans l'intervalle [10, 20]". Sinon, si x est inférieur à 10 ou supérieur à 20, il affiche "x n'est pas dans l'intervalle". L’algorithme se termine après l’affichage.
 
 {{< mermaid >}}
 graph TD
@@ -142,6 +146,16 @@ Nous obtenons alors la notion de boucle: nous effectuons une tâche donnée tant
 
 En informatique, on fait souvent référence à la notion d'impression à l'écran. Le plus souvent cela fait référence à l'affichage à l'écran d'un message ou d'un texte.
 
+
+### Tableau
+
+Un tableau est une structure de données qui permet de stocker plusieurs éléments, comme des nombres ou des chaînes de caractères, dans une seule variable. Ces éléments sont organisés séquentiellement et accessibles via un indice, un nombre entier qui indique leur position. Par exemple, dans un tableau nommé tableau, l’élément à la position 1 est noté `tableau[1]`, celui à la position 2 est `tableau[2]`, et ainsi de suite. La taille du 
+tableau est normalement fixée et connue.
+
+
+La numérotation des indices varie selon les langages de programmation ou les contextes. Dans de nombreux langages comme C, Java ou Python, les indices commencent à 0 : le premier élément est `tableau[0]`, le deuxième `tableau[1]`, etc. Cette convention, dite « base 0 », est courante en informatique pour des raisons techniques liées à la gestion de la mémoire. Dans d’autres contextes, comme certaines notations mathématiques ou langages comme Lua, les indices débutent à 1, ce qui peut être plus intuitif pour des utilisateurs non techniques. Le choix de l’index de départ dépend donc du système utilisé, et il est crucial de connaître cette convention pour manipuler correctement les éléments d’un tableau. La convention utilisée est souvent
+claire selon le contexte.
+
 ### Calcul de la moyenne
 
 Pour illustrer la notion de pseudo-code, commençons par un exemple relativement simple.
@@ -161,6 +175,7 @@ graph TD
 
 
 Utilisez l'application suivante pour explorer l'exécution de l'algorithme.
+Ce pseudocode calcule la moyenne de quatre nombres rationnels stockés dans un tableau notes. Une variable iterateur est initialisée à 0 pour parcourir le tableau, et une variable moyenne est initialisée à 0 pour accumuler la somme des éléments. La boucle (TANT QUE iterateur < la longueur de notes FAIRE) itère tant que iterateur est inférieur à la longueur du tableau (ici, 4). À chaque itération, l’élément `notes[iterateur]` est ajouté à moyenne, et iterateur est incrémenté de 1. Une fois la boucle terminée, la somme totale des éléments est stockée dans moyenne. Enfin, moyenne est divisée par la longueur du tableau (moyenne = moyenne / la longueur de notes) pour obtenir la moyenne arithmétique. Le résultat, un nombre rationnel, est la sortie.
 
 {{< webapp path="moyenne.html" >}}
 
