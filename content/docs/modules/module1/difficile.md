@@ -34,6 +34,8 @@ Ajouter la ville de départ à la fin de trajet pour boucler
 RETOURNER trajet
 ```
 
+Ce pseudocode décrit une solution gloutonne au problème du voyageur de commerce (TSP), qui cherche un circuit visitant chaque ville d’une liste exactement une fois et revenant à la ville de départ, en minimisant la distance totale. Les entrées sont une liste de n villes (`villes[n]`) et une matrice `distances[n][n]` indiquant les distances entre chaque paire de villes. Une liste trajet est initialisée vide pour stocker l’ordre des villes. L’algorithme commence par choisir une ville de départ (par exemple, `villes[0]`), l’ajoute à trajet, et la marque comme visitée. Une boucle (TANT QUE toutes les villes ne sont pas visitées FAIRE) sélectionne à chaque étape la ville non visitée la plus proche de la dernière ville ajoutée à trajet, en consultant la matrice distances. Cette ville est ajoutée à trajet et marquée comme visitée. Une fois toutes les villes visitées, la ville de départ est ajoutée à la fin de trajet pour former un circuit fermé. La liste trajet est retournée comme résultat.
+
 Considérons une table (fictive) des distances entre certains villes du Québec.
 
 | Ville      | Montréal | Québec | Laval | Gatineau | Longueuil |
