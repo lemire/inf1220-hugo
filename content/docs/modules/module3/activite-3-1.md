@@ -31,7 +31,7 @@ Ce bloc nommé <code>bloc1</code> regroupe plusieurs instructions qui seront ex�
 
 <p><a id="intro" name="section2"></a></p>
 
-## La structure de contrôle IF-ELSE
+## La structure de contrôle if-else
 
 <p>Le branchement conditionnel (<strong>if</strong>) peut apparaître sous deux formes : avec ou sans clause <strong>else</strong>. Dans les deux cas, il s'agit d'un branchement booléen, c'est à dire que selon le contrôle (qui est au final une valeur booléenne, ex. i != 0) ou la valeur vraie permettra d'aller dans la portée de la structure ou non. </p> 
 <p>La forme :</p>
