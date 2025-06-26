@@ -127,37 +127,49 @@ public class ExempleTryCatch {
         
         ExempleTryCatch ex = new ExempleTryCatch();
         
+        System.out.println("Début du programme");
+        
         try {   
+            System.out.println("Appel de deuxiemeMethode");
             ex.deuxiemeMethode();
         } catch (Exception ex1) {
+            System.out.println("Exception capturée dans main pour deuxiemeMethode: " + ex1.getMessage());
             Logger.getLogger(
                 ExempleTryCatch.class.getName()).log(
                     Level.SEVERE, null, ex1);
         }
         
         try {
+            System.out.println("Appel de quatriemeMethode");
             ex.quatriemeMethode();
         } catch (Exception ex1) {
+            System.out.println("Exception capturée dans main pour quatriemeMethode: " + ex1.getMessage());
             Logger.getLogger(
                 ExempleTryCatch.class.getName()).log(
                     Level.SEVERE, null, ex1);
         }
+        
+        System.out.println("Fin du programme");
     }
     
     public void premiereMethode() throws NullPointerException {
+        System.out.println("Dans premiereMethode");
         String test = null;
         test.charAt(0);
     }
     
     public void deuxiemeMethode() throws Exception {
+        System.out.println("Dans deuxiemeMethode");
         premiereMethode();
     }     
     
     public void troisiemeMethode() throws DateTimeException {
+        System.out.println("Dans troisiemeMethode");
         throw new DateTimeException("Wrong Date Format");
     }        
     
     public void quatriemeMethode() throws Exception {
+        System.out.println("Dans quatriemeMethode");
         troisiemeMethode();
     }  
 
