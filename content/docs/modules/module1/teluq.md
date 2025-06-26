@@ -118,3 +118,6 @@ notés et l'examen. Il est aussi défendu de donner des indices concernant les t
 
 
 
+## Cahier et notes
+
+Je vous suggère fortement de prendre un cahier (en papier) et un bon crayon et de prendre des notes tout au long du cours. Je sais que ça semble vieillot, mais il s'agit d'une méthode éprouvée.

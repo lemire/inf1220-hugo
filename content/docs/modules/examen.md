@@ -57,9 +57,17 @@ Qui puis-je contacter si j’ai des questions?
 
 ## Se préparer
 
-<p>Les étudiants qui passent un examen en ligne doivent s'assurer d'avoir un environnement adéquat. Il se peut que vous deviez programmer pendant l'examen en ligne sur votre ordinateur: il est de votre responsabilité d'avoir un ordinateur configuré d'une manière efficace avec un bon clavier et tous les logiciels dont vous avez besoin. Si vous travaillez sur un ordinateur portable, gardez-le sous tension. Assurez-vous de travailler sur un ordinateur stable. Au besoin, prévoyez un second ordinateur. Assurez-vous d'avoir une bonne connection Internet avec une solution de rechange (par exemple, un branchement par l'entremise de votre téléphone cellulaire). Pour les étudiants qui passent l'examen en salle, assurez-vous d'arriver à l'heure et d'être bien reposé.</p>
+Les étudiants qui passent un examen en ligne doivent s'assurer d'avoir un environnement adéquat. Il se peut que vous deviez programmer pendant l'examen en ligne sur votre ordinateur: il est de votre responsabilité d'avoir un ordinateur configuré d'une manière efficace avec un bon clavier et tous les logiciels dont vous avez besoin. Si vous travaillez sur un ordinateur portable, gardez-le sous tension. Assurez-vous de travailler sur un ordinateur stable. Au besoin, prévoyez un second ordinateur. Assurez-vous d'avoir une bonne connection Internet avec une solution de rechange (par exemple, un branchement par l'entremise de votre téléphone cellulaire). 
 
-<p>Nous comprenons que la vie vous réserve des surprises. Parfois un logiciel plante. Parfois il faut redémarrer un ordinateur et ainsi de suite. Néanmoins, vous êtes responsable d'être bien préparé.</p>
+Nous comprenons que la vie vous réserve des surprises. Parfois un logiciel plante. Parfois il faut redémarrer un ordinateur et ainsi de suite. Néanmoins, vous êtes responsable d'être bien préparé.
+
+Assurez-vous d'avoir des solutions de rechange&nbsp;:
+
+- Installez un environnement de développement Java sur votre ordinateur. [Vous pouvez faire l'examen avec l'environnement de développement du site du cours,]({{< ref "docs/environnement" >}}) mais une panne est toujours possible. Prenez le temps de le tester plusieurs différentes manières de compiler et d'exécuter votre code. Vous devez tester votre code.
+- Si vous prévoyez utiliser l'intelligence artificielle pour votre examen, assurez-vous d'avoir une page dans votre navigateur ouverte. Rappelez-vous que vous devez faire une utilisation responsable de l'intelligence artificielle (pas de copier-coller aléatoire).
+- Il est fortement conseillé d'avoir une copie du manuel du cours à votre disposition pendant l'examen. [Si vous avez acheté la version papier du manuel, gardez-la à proximité](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
+- Vous pouvez rédigez vos propres notes.
+- Vous pouvez préparer des exemples de code.
 
 ## Gestion du temps à l'examen
 
