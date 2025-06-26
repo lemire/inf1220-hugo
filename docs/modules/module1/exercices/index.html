@@ -77,21 +77,21 @@ TANT QUE i &lt; 317584931803
     i = i + 1
 FIN TANT QUE
 Retourne solution
-</code></pre><p>Pour les curieux, voici une solution exécutable en Python (<a href=https://fr.wikipedia.org/wiki/Python_%28langage%29>voir ici</a>) :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>solution <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> i <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>317584931803</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>317584931803</span> <span style=color:#f92672>%</span> i <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
-</span></span><span style=display:flex><span>        j <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>        premier <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span> j <span style=color:#f92672>&lt;</span> i:
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> i <span style=color:#f92672>%</span> j <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
-</span></span><span style=display:flex><span>                premier <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
-</span></span><span style=display:flex><span>            j <span style=color:#f92672>=</span> j <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> premier:
-</span></span><span style=display:flex><span>            print(i, <span style=color:#e6db74>&#34; est premier&#34;</span>)
-</span></span><span style=display:flex><span>            solution <span style=color:#f92672>=</span> i
-</span></span><span style=display:flex><span>    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>print(solution)
+</code></pre><p>Pour les curieux, voici une solution exécutable en Python (<a href=https://fr.wikipedia.org/wiki/Python_%28langage%29>voir ici</a>) :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>i <span style=color:#0550ae>=</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span>solution <span style=color:#0550ae>=</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>while</span> i <span style=color:#0550ae>&lt;</span> <span style=color:#0550ae>317584931803</span><span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>if</span> <span style=color:#0550ae>317584931803</span> <span style=color:#0550ae>%</span> i <span style=color:#0550ae>==</span> <span style=color:#0550ae>0</span><span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>        j <span style=color:#0550ae>=</span> <span style=color:#0550ae>3</span>
+</span></span><span style=display:flex><span>        premier <span style=color:#0550ae>=</span> <span style=color:#cf222e>True</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>while</span> j <span style=color:#0550ae>&lt;</span> i<span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>if</span> i <span style=color:#0550ae>%</span> j <span style=color:#0550ae>==</span> <span style=color:#0550ae>0</span><span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>                premier <span style=color:#0550ae>=</span> <span style=color:#cf222e>False</span>
+</span></span><span style=display:flex><span>            j <span style=color:#0550ae>=</span> j <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>if</span> premier<span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#6639ba>print</span><span style=color:#1f2328>(</span>i<span style=color:#1f2328>,</span> <span style=color:#0a3069>&#34; est premier&#34;</span><span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>            solution <span style=color:#0550ae>=</span> i
+</span></span><span style=display:flex><span>    i <span style=color:#0550ae>=</span> i <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span><span style=color:#6639ba>print</span><span style=color:#1f2328>(</span>solution<span style=color:#1f2328>)</span>
 </span></span></code></pre></div><p>Vous pouvez supprimer la ligne <code>print(i, " est premier")</code> pour n’obtenir que la réponse finale. Notez que j commence à 3, car tout diviseur premier (sauf 2) est impair d’après le théorème fondamental de l’arithmétique.</p></details><h3 id=exercice-5--chiffre-des-dizaines>Exercice 5 : Chiffre des dizaines
 <a class=anchor href=#exercice-5--chiffre-des-dizaines>#</a></h3><p>Pour un entier positif \(x\), trouvez le chiffre occupant la position des dizaines.</p><details><summary>Réponse</summary><pre tabindex=0><code>Variable entière x
 
@@ -168,23 +168,23 @@ Début
         Fin Tant que
     Fin Si
 Fin
-</code></pre><p>Voici l’équivalent en Python (<a href=https://www.python.org>voir ici</a>) :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>f</span>(M, B):
-</span></span><span style=display:flex><span>    s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> B <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>2</span>:
-</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;entrez un entier supérieur ou égal à 2&#34;</span>)
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>
-</span></span><span style=display:flex><span>    q <span style=color:#f92672>=</span> M
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> q <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
-</span></span><span style=display:flex><span>        r <span style=color:#f92672>=</span> q <span style=color:#f92672>-</span> (q <span style=color:#f92672>//</span> B) <span style=color:#f92672>*</span> B
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>10</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;A&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>11</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;B&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>12</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>13</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;D&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>14</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;E&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> r <span style=color:#f92672>==</span> <span style=color:#ae81ff>15</span>: s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;F&#34;</span> <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>: s <span style=color:#f92672>=</span> str(r) <span style=color:#f92672>+</span> s
-</span></span><span style=display:flex><span>        q <span style=color:#f92672>=</span> q <span style=color:#f92672>//</span> B
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> s
+</code></pre><p>Voici l’équivalent en Python (<a href=https://www.python.org>voir ici</a>) :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#cf222e>def</span> <span style=color:#6639ba>f</span><span style=color:#1f2328>(</span>M<span style=color:#1f2328>,</span> B<span style=color:#1f2328>):</span>
+</span></span><span style=display:flex><span>    s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>if</span> B <span style=color:#0550ae>&lt;</span> <span style=color:#0550ae>2</span><span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#6639ba>print</span><span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;entrez un entier supérieur ou égal à 2&#34;</span><span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>return</span>
+</span></span><span style=display:flex><span>    q <span style=color:#0550ae>=</span> M
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>while</span> q <span style=color:#0550ae>&gt;</span> <span style=color:#0550ae>0</span><span style=color:#1f2328>:</span>
+</span></span><span style=display:flex><span>        r <span style=color:#0550ae>=</span> q <span style=color:#0550ae>-</span> <span style=color:#1f2328>(</span>q <span style=color:#0550ae>//</span> B<span style=color:#1f2328>)</span> <span style=color:#0550ae>*</span> B
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>if</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>10</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;A&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>elif</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>11</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;B&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>elif</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>12</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;C&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>elif</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>13</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;D&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>elif</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>14</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;E&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>elif</span> r <span style=color:#0550ae>==</span> <span style=color:#0550ae>15</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#0a3069>&#34;F&#34;</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>else</span><span style=color:#1f2328>:</span> s <span style=color:#0550ae>=</span> <span style=color:#6639ba>str</span><span style=color:#1f2328>(</span>r<span style=color:#1f2328>)</span> <span style=color:#0550ae>+</span> s
+</span></span><span style=display:flex><span>        q <span style=color:#0550ae>=</span> q <span style=color:#0550ae>//</span> B
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>return</span> s
 </span></span></code></pre></div></details><h3 id=exercice-10--tester-la-parité-en-base-2>Exercice 10 : Tester la parité en base 2
 <a class=anchor href=#exercice-10--tester-la-parit%c3%a9-en-base-2>#</a></h3><p>En utilisant l’algorithme Algo_base, qui retourne la représentation en base \(B\) d’un nombre \(M\) (\(S = \text{Algo\_base}(B, M)\)), écrivez un algorithme qui teste la parité d’un nombre \(M\) et affiche « pair » ou « impair ».</p><details><summary>Réponse</summary><pre tabindex=0><code>Algo parité
 
