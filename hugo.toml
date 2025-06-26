@@ -16,6 +16,8 @@ math = true
 BookLogo = "livre.jpg"
 
 [markup]
+  [markup.highlight]
+    style = 'github'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
