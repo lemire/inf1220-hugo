@@ -47,6 +47,7 @@ public class Sudoku extends Jeu {
   <li>nous pouvons aussi ajouter des méthodes et des champs <em>private</em> et <em>protected</em> à une sous-classe. </li> 
 </ul> 
 
+En Java, l'annotation @Override est utilisée pour indiquer qu'une méthode dans une sous-classe redéfinit ou remplace une méthode déclarée dans une superclasse ou une interface. Elle aide le compilateur à vérifier que la méthode respecte les règles de surcharge, comme avoir la même signature (nom, paramètres, type de retour) que la méthode d'origine. Si la méthode annotée ne correspond pas à une méthode de la superclasse, le compilateur génère une erreur, ce qui améliore la sécurité et la lisibilité du code. Bien que facultative, son utilisation est recommandée pour éviter des erreurs accidentelles, notamment lors de la maintenance ou de la refactorisation.
 
 Prenons un autre exemple. Imaginons une application bancaire avec différents types de comptes : CompteEpargne et CompteCourant. Tous les comptes partagent des propriétés comme le solde et des opérations comme déposer ou retirer de l'argent, mais chaque type de compte a des règles spécifiques.
 
@@ -133,6 +134,123 @@ Dans cet exemple, le système bancaire est modélisé en une seule classe Compte
 Une classe statique interne est une classe définie à l'intérieur d'une autre classe et déclarée avec le mot-clé static. Contrairement à une classe interne non statique, elle ne nécessite pas d'instance de la classe englobante pour être utilisée, ce qui la rend indépendante et adaptée pour organiser des sous-classes logiquement liées. Le mot-clé @Override est une annotation en Java qui indique qu'une méthode dans une sous-classe redéfinit une méthode de la superclasse. Dans l'exemple, CompteCourant utilise @Override pour redéfinir retirer, signalant au compilateur que cette méthode remplace celle de CompteBancaire. Cela améliore la lisibilité et permet au compilateur de vérifier que la méthode existe bien dans la superclasse, évitant des erreurs. La logique du code repose sur cette hiérarchie : CompteBancaire fournit une base générique, tandis que CompteEpargne et CompteCourant spécialisent le comportement. Lors de l'exécution, CompteEpargne applique des intérêts, et CompteCourant autorise des retraits jusqu'à une limite de découvert, démontrant comment l'héritage et le polymorphisme (via @Override) permettent des comportements adaptés tout en partageant du code commun.
 
 
+Voici la structure de quelques classes importantes en Java. Cette structure illustre les relations d'héritage entre plusieurs classes fondamentales de Java, mettant en évidence leur organisation hiérarchique. La classe Object constitue la racine de toutes les classes, servant de parent direct à des classes comme Throwable, AbstractCollection, AbstractMap, InputStream et OutputStream. La branche des exceptions, avec Throwable comme base, se divise en Exception et Error, où Exception donne naissance à RuntimeException pour les erreurs non vérifiées. Dans le domaine des collections, AbstractCollection mène à AbstractList, qui est elle-même étendue par ArrayList, tandis que AbstractMap est la base de HashMap. Pour les entrées/sorties, InputStream et OutputStream sont des classes abstraites dont dérivent respectivement FileInputStream et FileOutputStream. Cette hiérarchie reflète la conception modulaire de Java, facilitant la réutilisation du code et la spécialisation des fonctionnalités.
+
+{{< mermaid >}}
+classDiagram
+    class Object {
+        java.lang.Object
+    }
+    class Throwable {
+        java.lang.Throwable
+    }
+    class Exception {
+        java.lang.Exception
+    }
+    class RuntimeException {
+        java.lang.RuntimeException
+    }
+    class Error {
+        java.lang.Error
+    }
+    class AbstractCollection {
+        java.util.AbstractCollection
+    }
+    class AbstractList {
+        java.util.AbstractList
+    }
+    class AbstractMap {
+        java.util.AbstractMap
+    }
+    class ArrayList {
+        java.util.ArrayList
+    }
+    class HashMap {
+        java.util.HashMap
+    }
+    class InputStream {
+        java.io.InputStream
+    }
+    class OutputStream {
+        java.io.OutputStream
+    }
+    class FileInputStream {
+        java.io.FileInputStream
+    }
+    class FileOutputStream {
+        java.io.FileOutputStream
+    }
+
+    Object <|-- Throwable
+    Throwable <|-- Exception
+    Throwable <|-- Error
+    Exception <|-- RuntimeException
+
+    Object <|-- AbstractCollection
+    Object <|-- AbstractMap
+    Object <|-- InputStream
+    Object <|-- OutputStream
+
+    AbstractCollection <|-- AbstractList
+    AbstractList <|-- ArrayList
+    AbstractMap <|-- HashMap
+
+    InputStream <|-- FileInputStream
+    OutputStream <|-- FileOutputStream
+{{< /mermaid >}}
+
+
+## Mot-clé instanceof et getClass()
+
+
+L'opérateur instanceof en Java permet de vérifier si un objet est une instance d'une classe spécifique ou d'une de ses sous-classes. Il est utilisé pour tester le type d'un objet à l'exécution, ce qui est particulièrement utile dans des contextes où le polymorphisme est impliqué, comme avec des hiérarchies de classes ou des interfaces. Par exemple, si une variable est déclarée comme étant de type interface ou classe parente, instanceof peut déterminer si l'objet référencé appartient à une classe dérivée particulière. Cet opérateur renvoie true si l'objet est compatible avec le type spécifié, et false sinon. Cependant, il faut noter que instanceof retourne false pour un objet null, et son usage excessif peut indiquer un mauvais design orienté objet, car il peut contourner les avantages du polymorphisme.
+
+
+Dans l'exemple suivant, instanceof vérifie si animal1 est un Chien (vrai, car c'est une instance de Chien) et si animal2 est un Chat (vrai). Il retourne false pour animal3, car null n'est pas une instance de quelque classe que ce soit.
+
+{{<inlineJava path="Main.java">}}
+class Animal {}
+class Chien extends Animal {}
+class Chat extends Animal {}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Chien();
+        Animal animal2 = new Chat();
+        Animal animal3 = null;
+
+        System.out.println(animal1 instanceof Chien); // true
+        System.out.println(animal1 instanceof Animal); // true
+        System.out.println(animal1 instanceof Chat); // false
+        System.out.println(animal2 instanceof Chat); // true
+        System.out.println(animal3 instanceof Animal); // false
+    }
+}
+{{</inlineJava>}}
+
+
+La méthode getClass(), définie dans la classe Object, retourne l'objet de type Class représentant la classe exacte de l'instance à l'exécution. Contrairement à instanceof, qui teste la compatibilité avec un type ou ses sous-types, getClass() fournit une information précise sur la classe réelle de l'objet, sans tenir compte de la hiérarchie d'héritage. Par exemple, appeler getClass() sur un objet permet d'obtenir des métadonnées sur sa classe, comme son nom ou ses méthodes, via l'API de réflexion de Java. Cette méthode est particulièrement utile dans des scénarios nécessitant une introspection, comme les frameworks de sérialisation ou de mapping. Toutefois, son utilisation doit être prudente, car elle peut rendre le code moins flexible en liant étroitement le comportement à des classes spécifiques.
+
+Dans l'exemple suivant, getClass() est utilisé pour obtenir le nom de la classe exacte de chaque objet (Chien pour animal1, Chat pour animal2). La comparaison avec == montre que les classes sont différentes, et animal1.getClass() correspond exactement à Chien.class. Contrairement à instanceof, getClass() ne considère pas la hiérarchie d'héritage, mais la classe réelle de l'objet.
+
+{{<inlineJava path="Main.java">}}
+class Animal {}
+class Chien extends Animal {}
+class Chat extends Animal {}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Chien();
+        Animal animal2 = new Chat();
+
+        System.out.println(animal1.getClass().getSimpleName()); // Chien
+        System.out.println(animal2.getClass().getSimpleName()); // Chat
+        System.out.println(animal1.getClass() == animal2.getClass()); // false
+        System.out.println(animal1.getClass() == Chien.class); // true
+    }
+}
+{{</inlineJava>}}
+
 ## Surcharge des méthodes
 <p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui est <em>public</em>, cette méthode sera dite <em>surchargée</em>. Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe.</p> 
 <p style="text-align: justify;">Supposons que nous définissons notre classe Jeu, qui possède une méthode jouer. La superclasse qui représente tous les jeux possibles peut être définie de la manière suivante :</p> 
@@ -173,7 +291,7 @@ public class Sudoku extends Jeu {
 </ul> 
 
 ### Protection des membres
-<p align="left" style="text-align: justify;">Nous connaissons déjà les mots clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
+<p align="left" style="text-align: justify;">Nous connaissons déjà les mots-clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
 <p align="left" style="text-align: justify;">Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant :</p> 
 
 ```java  {style=github}
@@ -200,7 +318,7 @@ public class Sudoku extends Jeu {
 <p style="text-align: justify;">à la sous-classe Sudoku. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
 <p style="text-align: justify;"> </p> 
 
-## Utilisation des mots clés this et super dans une sous-classe
+## Utilisation des mots-clés this et super dans une sous-classe
 
 
 En Java, le mot-clé this est une référence à l'instance actuelle de la classe dans laquelle il est utilisé. Il sert principalement à lever l'ambiguïté entre les variables d'instance et les paramètres ou variables locales ayant le même nom. Par exemple, dans un constructeur ou une méthode, si un paramètre porte le même nom qu'un attribut de la classe, this permet de spécifier que l'on fait référence à l'attribut de l'instance. De plus, this peut être utilisé pour appeler un autre constructeur de la même classe (via this()) ou pour passer l'instance actuelle comme argument à une méthode. Ce mot-clé est essentiel pour écrire un code clair et éviter des erreurs dans la gestion des variables, surtout dans des classes avec de nombreux attributs.
@@ -665,6 +783,274 @@ class Produit implements Serializable {
 
 L'interface Serializable en Java est une interface marqueur, c'est-à-dire qu'elle ne définit aucune méthode, mais indique que les objets d'une classe peuvent être sérialisés, c'est-à-dire convertis en un flux de données (par exemple, pour être sauvegardés dans un fichier ou transmis via un réseau). Lorsqu'une classe implémente Serializable, le mécanisme de sérialisation de Java peut automatiquement sauvegarder l'état de ses champs non transitoires et non statiques. Cela est particulièrement utile dans des contextes comme la persistance d'objets ou la communication entre applications. Pour une gestion fine, les développeurs peuvent personnaliser le processus avec les méthodes writeObject et readObject ou utiliser l'attribut serialVersionUID pour assurer la compatibilité entre différentes versions d'une classe.
 
+
+En Java, l'interface Cloneable est une interface marqueur, dépourvue de méthodes à implémenter, qui signale qu'un objet peut être cloné en utilisant la méthode clone() héritée de la classe Object. Pour qu'une classe soit clonable, elle doit implémenter Cloneable et redéfinir la méthode clone(), généralement en invoquant super.clone() pour créer une copie de l'objet. Si l'interface n'est pas implémentée, appeler clone() provoque une CloneNotSupportedException. Par défaut, clone() réalise une copie superficielle (shallow copy), qui duplique les champs de type primitif et les références d'objets, mais pas les objets référencés eux-mêmes. Pour une copie profonde (deep copy), il est nécessaire de cloner explicitement les objets imbriqués. Cette interface est essentielle pour contrôler la duplication d'objets tout en garantissant la cohérence des données.
+
+Le rôle de la méthode clone() et de l'interface Cloneable est de fournir un mécanisme standard pour créer des copies d'objets de manière contrôlée. Ce processus est particulièrement utile dans des scénarios où l'on souhaite dupliquer un objet sans modifier l'original, par exemple pour préserver l'état initial d'un objet dans des opérations complexes ou pour implémenter des structures de données modifiables. La copie superficielle est suffisante pour les objets contenant uniquement des types primitifs ou des références immuables, mais pour des objets avec des champs complexes (comme des collections ou des objets modifiables), une copie profonde est souvent nécessaire pour éviter que l'original et la copie ne partagent les mêmes références. L'implémentation de Cloneable oblige le développeur à réfléchir au type de clonage requis et à personnaliser la méthode clone() en conséquence, assurant ainsi une gestion précise des copies. L'exemple de code ci-dessus illustre une implémentation simple de Cloneable avec une copie superficielle pour une classe Person.
+
+{{<inlineJava path="Person.java">}}
+
+public class Person implements Cloneable {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + "}";
+    }
+
+    public static void main(String[] args) {
+        try {
+            Person person1 = new Person("Alice", 30);
+            Person person2 = (Person) person1.clone();
+            System.out.println("Original: " + person1);
+            System.out.println("Clone: " + person2);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+En Java, la copie d’un objet peut être superficielle (shallow copy) ou complète (deep copy), selon la manière dont les champs sont dupliqués. Une copie superficielle, réalisée par défaut via la méthode clone() de la classe Object, duplique les champs de type primitif et les références des objets imbriqués, mais pas les objets référencés eux-mêmes. Ainsi, l’original et la copie partagent les mêmes instances des objets imbriqués, ce qui peut entraîner des modifications involontaires si ces objets sont modifiés. En revanche, une copie complète crée une duplication indépendante de tous les objets imbriqués, garantissant que la copie et l’original n’ont aucune référence partagée. Cela nécessite une implémentation explicite dans clone(), en clonant récursivement les objets référencés. Le choix entre les deux dépend des besoins : une copie superficielle est plus légère mais risquée pour les objets modifiables, tandis qu’une copie complète est plus sûre mais plus coûteuse en ressources. Une copie superficielle (shallow copy) ou complète (deep copy) détermine si un objet cloné est une entité indépendante ou partage des références avec l’original.
+
+
+{{<inlineJava path="Livre.java">}}
+class Auteur implements Cloneable {
+    private String nom;
+
+    public Auteur(String nom) {
+        this.nom = nom;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+}
+
+class Livre implements Cloneable {
+    private String titre;
+    private Auteur auteur;
+
+    public Livre(String titre, Auteur auteur) {
+        this.titre = titre;
+        this.auteur = auteur;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Livre copie = (Livre) super.clone(); // Copie superficielle
+        copie.auteur = (Auteur) auteur.clone(); // Copie complète pour auteur
+        return copie;
+    }
+
+    @Override
+    public String toString() {
+        return "Livre{titre='" + titre + "', auteur=" + auteur.getNom() + "}";
+    }
+
+    public static void main(String[] args) {
+        try {
+            Auteur auteur = new Auteur("Victor Hugo");
+            Livre livre1 = new Livre("Les Misérables", auteur);
+            Livre livre2 = (Livre) livre1.clone();
+
+            System.out.println("Original: " + livre1);
+            System.out.println("Copie: " + livre2);
+
+            // Modification de l'auteur dans la copie
+            livre2.auteur.setNom("Alexandre Dumas");
+            System.out.println("Après modification:");
+            System.out.println("Original: " + livre1);
+            System.out.println("Copie: " + livre2);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
+En Java, l’implémentation de la méthode clone() dans une classe qui implémente l’interface Cloneable implique souvent la nécessité de redéfinir les méthodes equals() et hashCode() pour garantir une cohérence sémantique et un comportement correct. La méthode equals(), dans sa version par défaut de la classe Object, compare les références des objets, ce qui signifie que l’original et la copie ne seraient jamais égaux, même si leurs champs sont identiques. Redéfinir equals() permet de comparer le contenu des objets (par exemple, les valeurs de leurs champs), de sorte que l’original et une copie complète puissent être considérés comme égaux s’ils ont les mêmes données. Par ailleurs, le contrat de la méthode hashCode() exige que deux objets égaux selon equals() produisent le même code de hachage. Si equals() est redéfini pour tenir compte du contenu, hashCode() doit également être redéfini pour générer un code de hachage basé sur les mêmes champs utilisés dans equals(), afin d’assurer la cohérence dans des structures comme HashMap ou HashSet.
+Reprenons notre exemple avec le livre pour illustrer cette idée.
+
+{{<inlineJava path="Livre.java">}}
+class Auteur implements Cloneable {
+    private String nom;
+
+    public Auteur(String nom) {
+        this.nom = nom;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Auteur)) return false;
+        Auteur autre = (Auteur) obj;
+        return nom.equals(autre.nom);
+    }
+
+    @Override
+    public int hashCode() {
+        return nom.hashCode();
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+}
+
+class Livre implements Cloneable {
+    private String titre;
+    private Auteur auteur;
+
+    public Livre(String titre, Auteur auteur) {
+        this.titre = titre;
+        this.auteur = auteur;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Livre copie = (Livre) super.clone();
+        copie.auteur = (Auteur) auteur.clone(); // Copie complète
+        return copie;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Livre)) return false;
+        Livre autre = (Livre) obj;
+        return titre.equals(autre.titre) && auteur.equals(autre.auteur);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = titre.hashCode();
+        result = 31 * result + auteur.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Livre{titre='" + titre + "', auteur=" + auteur.getNom() + "}";
+    }
+
+    public static void main(String[] args) {
+        try {
+            Auteur auteur = new Auteur("Victor Hugo");
+            Livre livre1 = new Livre("Les Misérables", auteur);
+            Livre livre2 = (Livre) livre1.clone();
+
+            // Vérification de l'égalité et du hashCode
+            System.out.println("Original: " + livre1);
+            System.out.println("Copie: " + livre2);
+            System.out.println("equals: " + livre1.equals(livre2)); // true
+            System.out.println("hashCode identique: " + (livre1.hashCode() == livre2.hashCode())); // true
+
+            // Modification de la copie
+            livre2.auteur.setNom("Alexandre Dumas");
+            System.out.println("\nAprès modification de la copie:");
+            System.out.println("Original: " + livre1);
+            System.out.println("Copie: " + livre2);
+            System.out.println("equals: " + livre1.equals(livre2)); // false
+            System.out.println("hashCode identique: " + (livre1.hashCode() == livre2.hashCode())); // false
+
+            // Utilisation dans une HashMap
+            java.util.HashMap<Livre, String> map = new java.util.HashMap<>();
+            map.put(livre1, "Original");
+            System.out.println("\nRecherche dans HashMap:");
+            System.out.println("Contient original: " + map.containsKey(livre1)); // true
+            System.out.println("Contient copie avant modification: " + map.containsKey(livre2)); // false après modification
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
+En Java, l'interface Iterable est utilisée pour indiquer qu'une classe peut être parcourue à l'aide d'une boucle for-each (boucle améliorée). Elle définit une méthode unique, iterator(), qui retourne un objet de type Iterator, permettant de parcourir les éléments de la collection ou de la structure de données. Implémenter Iterable est essentiel pour les classes personnalisées qui représentent des collections, comme des listes ou des ensembles, afin de les rendre compatibles avec les constructions de Java comme les boucles for-each ou les flux (Stream). Cela améliore la lisibilité et la réutilisabilité du code. Par exemple, une classe représentant une liste personnalisée peut implémenter Iterable pour permettre un accès séquentiel à ses éléments.
+
+
+
+{{<inlineJava path="CustomList.java">}}
+import java.util.Iterator;
+
+public class CustomList<T> implements Iterable<T> {
+    private T[] items;
+    private int size;
+
+    @SuppressWarnings("unchecked")
+    public CustomList(int capacity) {
+        this.items = (T[]) new Object[capacity];
+        this.size = 0;
+    }
+
+    public void add(T item) {
+        if (size < items.length) {
+            items[size++] = item;
+        }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private int currentIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < size;
+            }
+
+            @Override
+            public T next() {
+                return items[currentIndex++];
+            }
+        };
+    }
+
+    public static void main(String[] args) {
+        CustomList<String> list = new CustomList<>(5);
+        list.add("Alice");
+        list.add("Bob");
+        list.add("Charlie");
+
+        for (String name : list) {
+            System.out.println(name);
+        }
+    }
+}
+{{</inlineJava>}}
+
+
 En Java, une interface peut inclure des méthodes statiques (depuis Java 8) et des champs statiques (qui sont implicitement public, static, et final, donc des constantes). Les méthodes statiques dans une interface sont utiles pour fournir des utilitaires liés au contrat de l’interface, tandis que les champs statiques définissent des valeurs constantes partagées par toutes les implémentations. Voici un exemple concret d’interface avec une méthode statique et un champ statique, suivi d’un exemple d’utilisation.
 
 
@@ -737,6 +1123,38 @@ System.out.println(liste); // Affiche [9, 5, 2, 1]
 
 Dans cet exemple, on crée un Comparator anonyme directement dans l’appel à Collections.sort, ce qui rend le code plus compact et facile à comprendre.
 
+### Quelques interfaces importantes en Java
+
+La table ci-dessous recense les principales interfaces de la bibliothèque standard de Java.
+
+| Nom de l'interface | Package | Courte description |
+|--------------------|---------|--------------------|
+| Collection | java.util | Représente un groupe d'objets, base des structures de données comme les listes et ensembles. |
+| List | java.util | Définit une collection ordonnée, permettant l'accès par index et les doublons. |
+| Set | java.util | Représente une collection sans doublons, sans ordre garanti. |
+| Map | java.util | Associe des clés uniques à des valeurs, sans doublons de clés. |
+| Iterator | java.util | Permet de parcourir les éléments d'une collection séquentiellement. |
+| Comparable | java.lang | Définit une méthode pour comparer des objets, utilisée pour le tri naturel. |
+| Comparator | java.util | Fournit une comparaison personnalisée pour trier des objets. |
+| Runnable | java.lang | Représente une tâche exécutable dans un thread, avec une méthode run(). |
+| Callable | java.util.concurrent | Similaire à Runnable, mais peut retourner un résultat et lancer des exceptions. |
+| Serializable | java.io | Indique qu'un objet peut être sérialisé pour être sauvegardé ou transmis. |
+| Cloneable | java.lang | Marque une classe comme pouvant être clonée via la méthode clone(). |
+| Closeable | java.io | Définit une ressource (comme un flux) pouvant être fermée via close(). |
+| AutoCloseable | java.lang | Généralise Closeable pour la gestion automatique des ressources (try-with-resources). |
+| EventListener | java.util | Interface de base pour les écouteurs d'événements dans les interfaces graphiques. |
+| Consumer | java.util.function | Représente une opération acceptant un argument sans retourner de résultat. |
+| Predicate | java.util.function | Définit une fonction qui teste une condition et retourne un booléen. |
+| Supplier | java.util.function | Fournit une instance d'un type donné sans accepter d'argument. |
+| Function | java.util.function | Représente une fonction transformant un argument en un résultat d'un autre type. |
+| BiConsumer | java.util.function | Accepte deux arguments pour effectuer une opération sans retourner de résultat. |
+| BiFunction | java.util.function | Transforme deux arguments en un résultat d'un type donné. |
+| BiPredicate | java.util.function | Teste une condition sur deux arguments et retourne un booléen. |
+| Optional | java.util | Encapsule un objet pouvant être null pour éviter les NullPointerException. |
+| Stream | java.util.stream | Permet le traitement fonctionnel de collections via des opérations comme map et filter. |
+| Deque | java.util | Définit une file à double extrémité, supportant l'ajout/retrait aux deux bouts. |
+| NavigableMap | java.util | Étend Map pour des opérations basées sur l'ordre des clés, comme les recherches par proximité. |
+| NavigableSet | java.util | Étend Set pour des opérations sur des ensembles ordonnés, comme les sous-ensembles. |
 
 ## Principe de substitution de Liskov
 

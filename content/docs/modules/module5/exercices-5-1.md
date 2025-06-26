@@ -1017,3 +1017,173 @@ int[] tab = {1, 2, 3};
 List<Integer> l = Arrays.stream(tab).boxed().collect(Collectors.toList());
 ```
 </details>
+
+## Question 28
+
+Comment peut-on vérifier en Java qu'un objet est une instance d'une classe donnée ? Ou qu'un objet satisfait à une interface donnée ?
+
+<details><summary>Réponse</summary>
+<p>En Java, on peut utiliser l’opérateur <code>instanceof</code> pour vérifier si un objet est une instance d’une classe ou d’une interface (directement ou par héritage). On peut aussi utiliser la méthode <code>isAssignableFrom()</code> de la classe <code>Class</code> pour vérifier les relations d’héritage ou d’implémentation entre deux classes ou interfaces.</p>
+
+<p><b>Exemple avec <code>instanceof</code> :</b></p>
+
+```java  {style=github}
+if (objet instanceof MonInterface) {
+    // objet implémente MonInterface
+}
+if (objet instanceof MaClasseParente) {
+    // objet hérite de MaClasseParente
+}
+```
+</details>
+
+## Question 29
+
+Si j’ai une instance d’une classe, comment puis-je savoir si elle n’est pas en fait d’une classe dérivée (c’est-à-dire d’une sous-classe) ?
+
+<details><summary>Réponse</summary>
+<p>Pour savoir si une instance est exactement d’une classe donnée (et non d’une sous-classe), on peut comparer sa classe réelle avec la classe attendue à l’aide de <code>getClass()</code> :</p>
+
+```java  {style=github}
+if (objet.getClass() == MaClasse.class) {
+    // objet est exactement de type MaClasse
+} else {
+    // objet est d’une sous-classe de MaClasse (ou d’un autre type)
+}
+```
+</details>
+
+## Question 30
+<p>Expliquez à quoi sert l’annotation <tt>@Override</tt> en Java et dans quels cas son utilisation est recommandée.</p>
+
+<details><summary>Réponse</summary>
+<p>L’annotation <tt>@Override</tt> indique qu’une méthode dans une sous-classe redéfinit une méthode de sa superclasse ou implémente une méthode d’une interface. Elle aide le compilateur à vérifier que la méthode respecte la signature de la méthode originale, évitant ainsi des erreurs comme une surcharge involontaire. Son utilisation est recommandée pour améliorer la lisibilité du code et prévenir des erreurs lors de la maintenance, surtout dans les projets complexes.</p>
+</details>
+
+## Question 31
+<p>Quelles sont les principales caractéristiques de l’interface <tt>Iterable</tt> en Java ? Donnez un exemple simple d’utilisation.</p>
+
+<details><summary>Réponse</summary>
+<p>L’interface <tt>Iterable</tt> permet à une classe d’être parcourue à l’aide d’une boucle <tt>for-each</tt>. Elle définit une méthode <tt>iterator()</tt> qui retourne un <tt>Iterator</tt>. Cette interface est essentielle pour les collections comme <tt>List</tt> ou <tt>Set</tt>. Exemple :</p>
+
+```java  {style=github}
+import java.util.*;
+
+class Exemple {
+    public static void main(String[] args) {
+        List<String> liste = Arrays.asList("un", "deux", "trois");
+        for (String s : liste) {
+            System.out.println(s);
+        }
+    }
+}
+```
+
+</details>
+
+## Question 32
+<p>Expliquez le rôle de l’interface <tt>Cloneable</tt> en Java et les précautions à prendre lors de son utilisation.</p>
+
+<details><summary>Réponse</summary>
+<p>L’interface <tt>Cloneable</tt> marque une classe comme pouvant être clonée via la méthode <tt>clone()</tt> de la classe <tt>Object</tt>. Sans implémenter cette interface, appeler <tt>clone()</tt> lève une <tt>CloneNotSupportedException</tt>. Une précaution importante est de redéfinir <tt>clone()</tt> pour effectuer une copie profonde (deep copy) si la classe contient des références à des objets modifiables, afin d’éviter des modifications non désirées de l’original. Exemple :</p>
+
+```java  {style=github}
+class Exemple implements Cloneable {
+    int valeur;
+    Exemple(int valeur) { this.valeur = valeur; }
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+```
+
+</details>
+
+
+
+## Question 33
+Comment les méthodes clone(), equals() et l’opérateur == sont-ils liés en termes de comparaison et de copie d’objets en Java ?
+
+<details><summary>Réponse</summary>
+En Java, clone(), equals() et l’opérateur == servent des objectifs distincts mais sont liés par leur rapport à la gestion des objets. L’opérateur == compare les références des objets, vérifiant s’ils pointent vers la même instance en mémoire. La méthode equals(), définie dans Object, compare par défaut les références (comme ==), mais peut être redéfinie pour comparer le contenu des objets (par exemple, les valeurs de leurs champs). La méthode clone() crée une copie d’un objet, mais le type de copie (superficielle ou profonde) influence la relation entre l’original et la copie. Par exemple, une copie superficielle partage les références des objets imbriqués, ce qui peut affecter les comparaisons avec equals() si ces objets sont modifiés. Une bonne pratique est de s’assurer que equals() reflète les mêmes critères d’égalité pour l’original et sa copie, surtout pour une copie profonde. Exemple :
+
+```java
+class Personne implements Cloneable {
+    String nom;
+    Personne(String nom) { this.nom = nom; }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Personne)) return false;
+        Personne autre = (Personne) obj;
+        return nom.equals(autre.nom);
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+    
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Personne p1 = new Personne("Alice");
+        Personne p2 = (Personne) p1.clone();
+        System.out.println(p1 == p2); // false (différentes références)
+        System.out.println(p1.equals(p2)); // true (même contenu)
+    }
+}
+```
+
+</details>
+
+## Question 34
+Quelles précautions faut-il prendre lors de la redéfinition de equals() pour une classe implémentant Cloneable ?
+
+<details><summary>Réponse</summary>
+Lorsqu’une classe implémente Cloneable et redéfinit equals(), il est crucial de s’assurer que la méthode equals() est cohérente avec le comportement de clone(). Cela signifie que deux objets, l’original et sa copie, doivent généralement retourner true pour equals() si la copie est une duplication fidèle (surtout pour une copie profonde). Il faut vérifier que tous les champs pertinents pour equals() sont correctement copiés dans clone(), en particulier pour les objets imbriqués. Si clone() effectue une copie superficielle, les références partagées peuvent entraîner des incohérences si les objets imbriqués sont modifiés. De plus, equals() doit respecter les propriétés du contrat d’égalité (réflexivité, symétrie, transitivité, cohérence et non-nullité). Exemple :
+
+```java
+class Livre implements Cloneable {
+    String titre;
+    Auteur auteur;
+    
+    Livre(String titre, Auteur auteur) {
+        this.titre = titre;
+        this.auteur = auteur;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Livre)) return false;
+        Livre autre = (Livre) obj;
+        return titre.equals(autre.titre) && auteur.equals(autre.auteur);
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Livre copie = (Livre) super.clone();
+        copie.auteur = (Auteur) auteur.clone(); // Copie profonde
+        return copie;
+    }
+}
+
+class Auteur implements Cloneable {
+    String nom;
+    Auteur(String nom) { this.nom = nom; }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Auteur)) return false;
+        return nom.equals(((Auteur) obj).nom);
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+```
+
+</details>
