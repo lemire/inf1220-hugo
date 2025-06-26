@@ -15,6 +15,8 @@ weight: 3
 <p>C'est là que l'intérêt du concept de pseudo-code prend tout son sens. Au coeur de la programmation, on trouve l'écriture d'algorithmes, et un algorithme existe indépendamment du langage de programmation. Le pseudo-code l'illustre parfaitement.</p>
 <p>Il n'est donc pas nécessaire, pour programmer, de tout savoir et de tout comprendre. Vous ne terminerez pas le cours INF 1220 avec une maîtrise intégrale du Java. Plusieurs aspects resteront mystérieux à vos yeux. C'est normal.</p>
 
+Le cours ne couvre que les notions essentielles de la programmation Java. Malgré cela, vous ne maîtriserez pas toutes les notions vues dans le cours à la fin du cours. C'est normal.
+
 <p>Utilisez donc l'approche suivante. Quand vous rencontrez un nouveau code Java, ne le prenez pas dans son ensemble tout d'un coup. Faites comme vous le feriez en français : lisez une ligne à la fois. N'insistez pas pour tout comprendre. Développez une intuition pour les variables, les méthodes, etc. Allez-y par étape ! Prenez votre temps ! Prenez des notes. </p>
 
 <p>Il en va de même quand vous écrivez du code. Commencez par le plus simple, et progressez lentement, en prenant des notes, en vous laissant des commentaires. Souvent il est utile d'écrire le pseudo-code avant d'écrire le code en Java.</p>
@@ -24,7 +26,16 @@ nous échappe au moins partiellement. Ce n'est qu'en revenant plusieurs fois sur
 Sur le site web du cours, nous revenons plusieurs fois sur les mêmes concepts, mais de manières de manières différentes. Par ailleurs, nous
 vous demandons de lire nombre de manuel où les choses sont expliquées et présentées différemment. Nous offrons aussi des vidéos où vous 
 trouverez d'autres explications. Par ailleurs, nous vous demandons de faire de nombreux exercices, à la fois dans le manuel et sur le 
-site web du cours. 
+site web du cours.
+
+C'est en programmant qu'on devient programmeur. Prenez le temps de faire les exercices de programmation. Vous devriez avoir écrit
+des dizaines de programme en Java d'ici la fin du cours.
+
+Vous ne maîtriserez pas parfaitement la syntaxe du Java. Vous ne connaîtrez pas toutes les nuances de la programmation orientée objet.
+Ce n'est pas grave&nbsp;!
+
+L'important, l'essentiel, est qu'avec la pratique, vous allez développer le raisonnement et les instincts du programmeur. À des multiples
+reprises, vous serez frustré par une erreur dans votre code que vous ne comprenez pas. Vous apprendrez à résoudre les problèmes d'instinct.
 
 ## Environnement de développement (rappel)
 

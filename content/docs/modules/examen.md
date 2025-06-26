@@ -164,3 +164,15 @@ Si vous avez aimé le cours...
 - Vous pouvez suivre le professeur sur [X](https://x.com/lemire).
 - [Laissez une évaluation positive sur la page du manuel chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
 - [Consultez les autres livres écrits par le professeur](https://www.amazon.ca/stores/Daniel-Lemire/author/B0CR7YMZT2)
+
+## Vous voulez continuer votre apprentissage ?
+
+Je vous recommande les cours suivants.
+
+- Au sein du cours [INF 2007 Programmation avancée](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%202007/), vous approfondirez vos compétences en développement logiciel avec des concepts avancés comme les tests et l'optimisation des performances en utilisant le langage Go. Ce cours de programmation avancée est une suite naturelle au cours INF 1220. Plusieurs des mêmes notions y sont approfondies.
+- Au sein du cours [INF 2020 Programmation d'applications avec Python : des jeux au Web](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%202020/), vous apprendrez à créer des applications dynamiques, allant des jeux interactifs aux interfaces web, en maîtrisant Python et ses bibliothèques. Ce cours est aussi une suite naturelle au cours INF 1220.
+- Au sein du cours [INF 6450 Gestion de l'information avec XML](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%206450/), vous explorerez les techniques de structuration, de stockage et de transformation des données à l’aide du langage XML et de ses technologies associées. Ces techniques sont importantes pour développer des applications web.
+- Au sein du cours [INF 6460 Recherche et filtrage d'informations](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%206460/), vous développerez des compétences pour concevoir et utiliser des systèmes de recherche et de filtrage d'informations, en exploitant des techniques avancées d'indexation et d'analyse de données. Vous y apprendrez comment fonctionne les moteurs de recherche.
+- Au sein du cours [INF 9004 Informatique des entrepôts de données](https://www.teluq.ca/site/etudes/offre/cours/teluq/inf%209004), vous développerez des compétences en conception, gestion et analyse d’entrepôts de données pour soutenir la prise de décision stratégique. Vous y apprendrez à faire des requêtes sophistiquées au sein de bases de données avec des langages comme MDX et le SQL.
+
+
