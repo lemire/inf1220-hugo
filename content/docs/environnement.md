@@ -78,6 +78,7 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
           <option value="ex2">Bonjour le monde (simple)</option>
           <option value="ex3">Fibonacci (package, commentaires FR)</option>
           <option value="ex4">Mario</option>
+          <option value="ex5">Chargement des articles du blogue de Daniel Lemire</option>
         </select>
       </div>
       <div id="files" class="files"></div>
@@ -182,10 +183,27 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
               (resultJson.output || '').replace(/\n/g, '<br>') + '</pre>';
             // Nettoie les erreurs précédentes
             document.querySelectorAll('.file-block').forEach(block => {
-              if (block._cm) {
+              if (block._cm && block.querySelector('.file-type b').textContent === 'Java') {
                 block._cm.operation(() => {
+                  // Nettoie les marques de texte
                   block._cm.getAllMarks().forEach(m => m.clear());
+                  // Nettoie la classe cm-java-error-line pour toutes les lignes
+                  block._cm.eachLine(lineHandle => {
+                    block._cm.removeLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+                  });
                 });
+                // Nettoie les anciens listeners
+                if (block._cm._javaErrorStatusListeners) {
+                  block._cm._javaErrorStatusListeners.forEach(({line, handler}) => {
+                    block._cm.off('cursorActivity', handler);
+                  });
+                  block._cm._javaErrorStatusListeners = [];
+                }
+                const statusBar = block.querySelector('.java-status-bar');
+                if (statusBar) {
+                  statusBar.textContent = '';
+                  statusBar.style.visibility = 'hidden';
+                }
               }
             });
           } else if (resultJson.status === 'compiling') {
@@ -341,6 +359,77 @@ public class Fibo {
         }
     }
 }`);
+      } else if(v == 'ex5') {
+                addFile('java', 'RssFeedReader.java',
+`import java.io.InputStream;
+import java.net.URL;
+import java.net.HttpURLConnection;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+public class RssFeedReader {
+    public static void main(String[] args) {
+        try {
+            // Connexion au flux RSS
+            String rssUrl = "https://lemire.me/blog/feed/";
+            URL url = new URL(rssUrl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            // Vérification de la réponse
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                System.out.println("Erreur : Code de réponse " + responseCode);
+                return;
+            }
+            // Parsing du XML
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            InputStream inputStream = connection.getInputStream();
+            Document doc = builder.parse(inputStream);
+            doc.getDocumentElement().normalize();
+            // Extraction des informations du channel
+            NodeList channelList = doc.getElementsByTagName("channel");
+            if (channelList.getLength() > 0) {
+                Element channel = (Element) channelList.item(0);
+                String channelTitle = getElementValue(channel, "title");
+                String channelDescription = getElementValue(channel, "description");
+                String channelLink = getElementValue(channel, "link");
+                System.out.println("Flux RSS : " + channelTitle);
+                System.out.println("Description : " + channelDescription);
+                System.out.println("Lien : " + channelLink);
+                System.out.println("Articles :");
+            }
+            // Extraction des items (articles)
+            NodeList itemList = doc.getElementsByTagName("item");
+            for (int i = 0; i < itemList.getLength(); i++) {
+                Element item = (Element) itemList.item(i); 
+                String title = getElementValue(item, "title");
+                String link = getElementValue(item, "link");
+                String pubDate = getElementValue(item, "pubDate");
+                System.out.println("Article " + (i + 1) + ":");
+                System.out.println("  Titre : " + title);
+                System.out.println("  Lien : " + link);
+                System.out.println("  Date de publication : " + pubDate);
+                System.out.println();
+            }
+            inputStream.close();
+            connection.disconnect();
+        } catch (Exception e) {
+            System.out.println("Erreur lors de la récupération du flux RSS : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    // Méthode utilitaire pour extraire la valeur d'un élément
+    private static String getElementValue(Element parent, String tagName) {
+        NodeList nodeList = parent.getElementsByTagName(tagName);
+        if (nodeList.getLength() > 0 && nodeList.item(0).getFirstChild() != null) {
+            return nodeList.item(0).getFirstChild().getNodeValue();
+        }
+        return "";
+    }
+}`);
       } else if (v === 'ex4') {
         addFile('java', 'Mario.java',
 `void main() {
@@ -357,6 +446,16 @@ public class Fibo {
   </script>
 
 
+
+## Description des exemples
+
+- Affichage d'un fichier texte: Cet exemple comprend deux classes Java, ProgrammeAffichageFichier et UtilitaireLectureFichier, accompagnées d’un fichier texte fichier.txt contenant la phrase "Bonjour la vie". Le programme lit ce fichier à l’aide d’un BufferedReader et affiche son contenu ligne par ligne dans la console. La classe UtilitaireLectureFichier encapsule la logique de lecture et gère les exceptions d’entrée/sortie (IOException) pour signaler toute erreur, comme un fichier introuvable, garantissant une exécution robuste.
+- Bonjour le monde : L’exemple propose une classe simple nommée Bonjour, qui constitue une version classique du programme "Hello World" en Java. La méthode main utilise la fonction System.out.println pour afficher le message "Bonjour le monde !" dans la console. Ce code illustre la structure minimale d’un programme Java exécutable, idéal pour les débutants apprenant les bases de la syntaxe et de la sortie console.
+- Fibonacci : La classe Fibo, placée dans le paquetage ca.teluq.informatique, implémente une fonction récursive fibonacci pour calculer les termes de la suite de Fibonacci. Le programme affiche les dix premiers termes (de F(0) à F(9)) en bouclant sur la fonction et en montrant chaque résultat. Cet exemple démontre l’utilisation de la récursivité en Java, bien que cette approche puisse être inefficace pour de grands nombres en raison de calculs redondants.
+- Mario : L’exemple Mario utilise des caractères Unicode pour créer une représentation graphique inspirée du jeu Super Mario dans la console. La méthode main affiche une scène avec des nuages, un soleil, des blocs, des pièces, un personnage, une tortue et un champignon. Ce programme montre comment manipuler des caractères spéciaux pour produire un affichage visuel simple, offrant une approche ludique de la sortie console.
+- Chargement des articles du blogue de Daniel Lemire : La classe RssFeedReader illustre la récupération et le traitement d’un flux RSS à partir de l’URL https://lemire.me/blog/feed/. Elle établit une connexion HTTP, parse le XML avec DocumentBuilder, puis extrait les informations du canal (titre, description, lien) et des articles (titre, lien, date de publication). Les données sont affichées dans la console, avec une gestion des erreurs pour les problèmes de connexion ou de parsing, démontrant ainsi l’interaction avec des données web en Java.
+
+## Conseils
 
 Pour optimiser votre expérience, suivez ces conseils. Assurez-vous que les noms de fichiers Java correspondent au nom de la classe publique qu'ils contiennent (par exemple, Main.java pour public class Main). Si vous utilisez des packages, indiquez le chemin correct dans le nom du fichier, comme ca/teluq/informatique/Fibo.java pour un fichier dans le package ca.teluq.informatique. Testez d'abord avec les exemples fournis pour comprendre comment l'environnement gère les entrées et sorties. Si vous travaillez avec des fichiers texte, comme dans l'exemple d'affichage de fichier, vérifiez que le nom du fichier texte correspond à celui utilisé dans votre code Java. Enfin, consultez la version de Java affichée en bas de la page pour vous assurer que votre code est compatible. Cet environnement est idéal pour apprendre et tester des programmes Java simples sans installer de logiciel.
 
