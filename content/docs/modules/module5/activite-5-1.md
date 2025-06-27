@@ -467,6 +467,103 @@ public class FastDynamicTimeWarping extends AlgorithmeIA {
 }
 ```
 
+### Classes abstraites AbstractList et AbstractMap
+
+Dans le cadre des collections Java, les classes abstraites `AbstractList` et `AbstractMap` jouent un rôle central dans la hiérarchie du Java Collections Framework, défini dans le paquetage `java.util`. Ces classes, qui étendent directement ou indirectement la classe `Object`, servent de pont entre les interfaces `List` et `Map` et leurs implémentations concrètes comme `ArrayList` et `HashMap`. Elles fournissent des implémentations partielles des comportements définis par leurs interfaces respectives, facilitant ainsi la création de nouvelles classes concrètes par héritage. Cette section explore le rôle de ces classes abstraites, leur utilisation dans la conception des collections, et leur importance dans le contexte de l’héritage et du polymorphisme.
+
+#### Rôle et fonctionnement d’AbstractList
+
+La classe `AbstractList` est une classe abstraite qui implémente l’interface `List`, elle-même une sous-interface de `Collection`. Elle fournit une implémentation squelettique des méthodes requises pour une liste ordonnée, où les éléments sont accessibles par leur indice et où les doublons sont autorisés. En héritant de `AbstractCollection`, `AbstractList` réutilise les fonctionnalités génériques des collections tout en ajoutant des méthodes spécifiques aux listes, comme l’accès par indice (`get(int index)`) et la modification d’éléments (`set(int index, E element)`). Cependant, certaines méthodes clés, comme `get` et `size`, restent abstraites, obligeant les sous-classes concrètes à les implémenter.
+
+L’objectif d’`AbstractList` est de réduire la charge de travail pour les développeurs créant leurs propres implémentations de `List`. Par exemple, une classe concrète comme `ArrayList` étend `AbstractList` et fournit des implémentations spécifiques pour `get` et `size`, utilisant un tableau interne redimensionnable. De même, une classe personnalisée peut hériter d’`AbstractList` pour créer une liste avec un comportement spécifique, tout en réutilisant les méthodes génériques comme `add` ou `remove`. Cette approche illustre l’héritage, où la superclasse abstraite définit un cadre commun, tandis que les sous-classes spécialisent le comportement.
+
+Voici un exemple d’une classe personnalisée qui étend `AbstractList` pour gérer une liste de scores dans un jeu de Sudoku, avec un comportement restreint (lecture seule pour simplifier) :
+
+```java {style=github}
+import java.util.AbstractList;
+
+public class ListeScores extends AbstractList<Integer> {
+    private final Integer[] scores;
+    private final int taille;
+
+    public ListeScores(Integer[] scores) {
+        this.scores = scores;
+        this.taille = scores.length;
+    }
+
+    @Override
+    public Integer get(int index) {
+        if (index < 0 || index >= taille) {
+            throw new IndexOutOfBoundsException("Index : " + index);
+        }
+        return scores[index];
+    }
+
+    @Override
+    public int size() {
+        return taille;
+    }
+
+    public static void main(String[] args) {
+        ListeScores scores = new ListeScores(new Integer[]{150, 200, 180});
+        System.out.println("Score à l'index 1 : " + scores.get(1)); // Affiche 200
+        System.out.println("Taille : " + scores.size()); // Affiche 3
+        for (Integer score : scores) {
+            System.out.println(score);
+        }
+    }
+}
+```
+
+Dans cet exemple, `ListeScores` étend `AbstractList` et implémente les méthodes abstraites `get` et `size`. Les autres méthodes de `List`, comme l’itération via la boucle `for-each`, sont héritées de `AbstractList`, qui fournit une implémentation basée sur ces deux méthodes. Cet exemple montre comment `AbstractList` simplifie la création d’une liste personnalisée en réduisant le nombre de méthodes à implémenter, tout en garantissant la conformité avec l’interface `List`.
+
+#### Rôle et fonctionnement d’AbstractMap
+
+La classe `AbstractMap` est une classe abstraite qui implémente l’interface `Map`, définissant une structure de données associant des clés uniques à des valeurs. Elle fournit une implémentation partielle des méthodes de `Map`, comme `put`, `get`, `containsKey` ou `entrySet`, en s’appuyant sur une méthode abstraite clé : `entrySet`, qui doit être implémentée par les sous-classes. En centralisant les comportements communs des mappings, `AbstractMap` permet aux développeurs de créer des implémentations personnalisées de `Map` sans réécrire la logique générique.
+
+Comme pour `AbstractList`, `AbstractMap` est conçue pour être étendue par des classes concrètes, telles que `HashMap` ou `TreeMap`. Par exemple, `HashMap` étend `AbstractMap` et implémente `entrySet` en utilisant une table de hachage, tandis que `TreeMap` utilise un arbre binaire équilibré pour trier les clés. Cette hiérarchie repose sur l’héritage : `AbstractMap` définit un comportement générique, et les sous-classes fournissent des implémentations optimisées pour des cas d’utilisation spécifiques. De plus, `AbstractMap` permet de créer des mappings immuables ou personnalisés avec un effort réduit.
+
+Voici un exemple d’une classe personnalisée qui étend `AbstractMap` pour gérer un mapping des joueurs aux niveaux atteints dans un jeu de Sudoku :
+
+```java {style=github}
+import java.util.AbstractMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
+
+public class NiveauxJoueurs extends AbstractMap<String, Integer> {
+    private final Set<Map.Entry<String, Integer>> entrees;
+
+    public NiveauxJoueurs() {
+        entrees = new HashSet<>();
+        entrees.add(new AbstractMap.SimpleEntry<>("Alice", 3));
+        entrees.add(new AbstractMap.SimpleEntry<>("Bob", 5));
+    }
+
+    @Override
+    public Set<Map.Entry<String, Integer>> entrySet() {
+        return entrees;
+    }
+
+    public static void main(String[] args) {
+        NiveauxJoueurs niveaux = new NiveauxJoueurs();
+        System.out.println("Niveau d'Alice : " + niveaux.get("Alice")); // Affiche 3
+        System.out.println("Contient Bob ? " + niveaux.containsKey("Bob")); // Affiche true
+        for (Map.Entry<String, Integer> entree : niveaux) {
+            System.out.println(entree.getKey() + " : " + entree.getValue());
+        }
+    }
+}
+```
+
+Dans cet exemple, `NiveauxJoueurs` étend `AbstractMap` et implémente la méthode abstraite `entrySet`, qui retourne un ensemble d’entrées clé-valeur. Les autres méthodes de `Map`, comme `get` et `containsKey`, sont héritées de `AbstractMap` et fonctionnent automatiquement grâce à l’implémentation d’`entrySet`. Cet exemple illustre comment `AbstractMap` permet de créer un mapping personnalisé avec un minimum de code, tout en respectant le contrat de l’interface `Map`.
+
+
+Les classes `AbstractList` et `AbstractMap` incarnent les principes de l’héritage et de l’abstraction en Java. En tant que classes abstraites, elles ne peuvent pas être instanciées directement, mais elles servent de superclasses pour des implémentations concrètes. Leur rôle est double : elles réduisent la duplication de code en fournissant des implémentations génériques, et elles garantissent que les sous-classes respectent les contrats des interfaces `List` et `Map`. Cette conception modulaire permet aux développeurs de se concentrer sur les aspects spécifiques de leurs implémentations, tout en bénéficiant d’une base robuste.
+
+Dans le contexte du Java Collections Framework, `AbstractList` et `AbstractMap` facilitent l’extensibilité. Par exemple, un développeur peut créer une liste ou un mapping avec des contraintes spécifiques (comme une liste immuable ou un mapping synchronisé) en étendant ces classes, sans réimplémenter les fonctionnalités communes. De plus, leur intégration dans la hiérarchie des collections, où `ArrayList` et `HashMap` en sont des sous-classes, illustre comment l’héritage et le polymorphisme permettent de manipuler des collections de manière générique, en utilisant les types d’interface (`List`, `Map`) plutôt que les implémentations concrètes.
+
+
 
 ## Classes scellées
 
@@ -1101,6 +1198,174 @@ class TestGestionStock {
     }
 }
 ```
+
+
+
+### Interfaces Map et List dans les collections Java
+
+Dans la programmation Java, les collections sont des structures de données permettant de stocker et de manipuler des ensembles d’objets. La bibliothèque standard Java fournit un ensemble de classes et d’interfaces dans le paquetage `java.util`, organisé autour du cadre des collections (Java Collections Framework). Deux interfaces fondamentales de ce cadre sont `Map` et `List`, qui définissent des comportements abstraits pour stocker et accéder à des données. Ces interfaces sont implémentées par des classes concrètes comme `HashMap` pour `Map` et `ArrayList` pour `List`. Comprendre la distinction entre ces interfaces et leurs implémentations est essentiel pour écrire du code flexible et maintenable, notamment dans le contexte de l’héritage et du polymorphisme.
+
+#### Interface Map et son implémentation HashMap
+
+L’interface `Map` définit une structure de données qui associe des clés uniques à des valeurs, permettant un accès rapide aux valeurs via leurs clés. Une `Map` ne garantit pas d’ordre spécifique pour ses entrées et interdit les clés dupliquées. Elle est particulièrement utile pour des cas comme la gestion de dictionnaires, la configuration d’applications ou l’indexation de données. L’interface `Map` est implémentée par plusieurs classes, dont `HashMap`, qui est l’implémentation la plus courante en raison de sa performance et de sa simplicité.
+
+La classe `HashMap` étend la classe abstraite `AbstractMap`, qui elle-même implémente l’interface `Map`. Cette hiérarchie illustre l’héritage : `HashMap` hérite des comportements définis par `Map` et `AbstractMap`, tout en fournissant une implémentation concrète basée sur une table de hachage. Une `HashMap` offre des opérations (ajout, recherche, suppression) avec une complexité moyenne constante, à condition que les clés aient une bonne fonction de hachage. Cependant, elle n’est pas synchronisée, ce qui signifie qu’elle n’est pas thread-safe par défaut, et elle autorise des valeurs `null` pour les clés et les valeurs.
+
+Voici un exemple illustrant l’utilisation de l’interface `Map` et de la classe `HashMap` pour gérer les scores des joueurs dans un jeu comme le Sudoku :
+
+```java {style=github}
+import java.util.Map;
+import java.util.HashMap;
+
+public class GestionScores {
+    public static void main(String[] args) {
+        Map<String, Integer> scores = new HashMap<>();
+        scores.put("Alice", 150);
+        scores.put("Bob", 200);
+        scores.put("Alice", 180); // Remplace la valeur précédente pour "Alice"
+
+        System.out.println("Score d'Alice : " + scores.get("Alice")); // Affiche 180
+        System.out.println("Contient Bob ? " + scores.containsKey("Bob")); // Affiche true
+
+        for (Map.Entry<String, Integer> entree : scores.entrySet()) {
+            System.out.println(entree.getKey() + " : " + entree.getValue());
+        }
+    }
+}
+```
+
+Dans cet exemple, la variable `scores` est déclarée comme étant de type `Map`, mais elle est instanciée avec une `HashMap`. Cette approche favorise la flexibilité, car le code peut facilement être modifié pour utiliser une autre implémentation de `Map`, comme `TreeMap` (qui trie les clés) ou `LinkedHashMap` (qui conserve l’ordre d’insertion), sans changer la logique du programme. La méthode `put` associe une clé à une valeur, `get` récupère une valeur à partir d’une clé, et l’itération sur les entrées affiche les paires clé-valeur. Cet exemple montre comment l’interface `Map` garantit un contrat commun, tandis que `HashMap` fournit une implémentation spécifique.
+
+#### Interface List et son implémentation ArrayList
+
+L’interface `List` définit une collection ordonnée d’éléments, où les éléments sont accessibles par leur indice et où les doublons sont autorisés. Une `List` est idéale pour des séquences de données, comme une liste de tâches, des historiques ou des collections d’objets à parcourir dans un ordre précis. L’interface `List` est implémentée par des classes comme `ArrayList`, qui est l’implémentation la plus utilisée grâce à sa rapidité pour l’accès par indice et sa gestion dynamique de la taille.
+
+La classe `ArrayList` étend la classe abstraite `AbstractList`, qui implémente l’interface `List`. Comme pour `Map`, cette hiérarchie repose sur l’héritage : `ArrayList` hérite des comportements définis par `List` et `AbstractList`, tout en utilisant un tableau redimensionnable en interne pour stocker les éléments. Une `ArrayList` offre un accès rapide aux éléments par indice (complexité constante), mais l’insertion ou la suppression en milieu de liste peut être plus lente (complexité linéaire). Comme `HashMap`, elle n’est pas synchronisée et accepte les éléments `null`.
+
+Voici un exemple illustrant l’utilisation de l’interface `List` et de la classe `ArrayList` pour gérer une liste de parties de Sudoku jouées par un utilisateur :
+
+```java {style=github}
+import java.util.List;
+import java.util.ArrayList;
+
+public class HistoriqueParties {
+    public static void main(String[] args) {
+        List<String> parties = new ArrayList<>();
+        parties.add("Partie 1 : Niveau Facile");
+        parties.add("Partie 2 : Niveau Moyen");
+        parties.add(0, "Partie 3 : Niveau Difficile"); // Insère en tête
+
+        System.out.println("Première partie : " + parties.get(0)); // Affiche Partie 3
+        System.out.println("Taille de l'historique : " + parties.size()); // Affiche 3
+
+        for (String partie : parties) {
+            System.out.println(partie);
+        }
+    }
+}
+```
+
+Dans cet exemple, la variable `parties` est déclarée comme étant de type `List`, mais instanciée avec une `ArrayList`. Cela permet de remplacer `ArrayList` par une autre implémentation de `List`, comme `LinkedList` (optimisée pour les insertions fréquentes), sans modifier le reste du code. La méthode `add` insère des éléments, `get` accède à un élément par son indice, et la boucle `for-each` parcourt les éléments dans l’ordre. Cet exemple montre comment l’interface `List` définit un comportement générique, tandis que `ArrayList` fournit une implémentation efficace pour la plupart des cas.
+
+
+L’utilisation des interfaces `Map` et `List` plutôt que leurs implémentations concrètes (`HashMap`, `ArrayList`) est une bonne pratique en Java, car elle favorise la flexibilité et la maintenabilité du code. En déclarant une variable avec le type de l’interface, le code devient indépendant de l’implémentation sous-jacente, ce qui permet de changer facilement d’implémentation sans modifier la logique. Par exemple, si une application nécessite un ordre trié pour les clés d’une `Map`, on peut passer de `HashMap` à `TreeMap` en modifiant uniquement l’instanciation. De plus, cette approche est cohérente avec le principe du polymorphisme, où le type de la variable peut être plus général que le type de l’objet réel.
+
+
+
+### Création de Map et List immuables en Java
+
+Dans le cadre des collections Java, il est souvent utile de créer des structures de données immuables, c’est-à-dire des collections dont le contenu ne peut être modifié après leur création. Les collections immuables garantissent l’intégrité des données, réduisent les erreurs dans les applications multi-thread et simplifient le raisonnement sur le comportement du code. En Java, les interfaces `Map` et `List` peuvent être utilisées pour créer des collections immuables, soit via des méthodes de fabrique introduites dans Java 9 (paquetage `java.util`), soit via des approches alternatives comme `Collections.unmodifiableMap` et `Collections.unmodifiableList` pour les versions antérieures ou des cas spécifiques. 
+
+#### Création d’une List immuable
+
+Une `List` immuable est une liste dont les éléments ne peuvent être ni ajoutés, ni supprimés, ni modifiés après sa création. Depuis Java 9, la méthode statique `List.of` permet de créer facilement des listes immuables de taille fixe. Cette méthode est concise et garantit que la liste résultante est non modifiable, sans possibilité d’ajouter ou de supprimer des éléments, et sans accepter de valeurs `null` (sauf si explicitement spécifié avec `null`). Pour les versions antérieures à Java 9, la méthode `Collections.unmodifiableList` peut être utilisée pour envelopper une liste existante et la rendre immuable, bien que cette approche nécessite une étape supplémentaire.
+
+Voici un exemple illustrant la création d’une `List` immuable pour stocker les niveaux de difficulté d’un jeu de Sudoku, utilisant `List.of` et `Collections.unmodifiableList` :
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ListeNiveauxImmuable {
+    public static void main(String[] args) {
+        // Création avec List.of (Java 9 et supérieur)
+        List<String> niveaux = List.of("Facile", "Moyen", "Difficile");
+        System.out.println("Niveaux : " + niveaux);
+        try {
+            niveaux.add("Expert"); // Lève UnsupportedOperationException
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Impossible de modifier la liste immuable");
+        }
+
+        // Création avec Collections.unmodifiableList (toutes versions)
+        List<String> niveauxModifiables = new ArrayList<>();
+        niveauxModifiables.add("Facile");
+        niveauxModifiables.add("Moyen");
+        List<String> niveauxImmuables = Collections.unmodifiableList(niveauxModifiables);
+        System.out.println("Niveaux immuables : " + niveauxImmuables);
+        try {
+            niveauxImmuables.add("Difficile"); // Lève UnsupportedOperationException
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Impossible de modifier la liste immuable");
+        }
+
+        // Attention : la liste originale reste modifiable
+        niveauxModifiables.add("Expert");
+        System.out.println("Niveaux immuables après modification originale : " + niveauxImmuables);
+    }
+}
+```
+
+Dans cet exemple, `List.of` crée une liste immuable contenant trois niveaux de difficulté. Toute tentative de modification (via `add`, `remove` ou `set`) lève une `UnsupportedOperationException`, garantissant l’immuabilité. Avec `Collections.unmodifiableList`, une `ArrayList` modifiable est d’abord créée, puis enveloppée dans une vue immuable. Cependant, il est important de noter que la liste originale (`niveauxModifiables`) reste modifiable, et toute modification de celle-ci se reflète dans la vue immuable, ce qui peut être une source d’erreurs si la liste originale n’est pas protégée. Cet exemple montre l’avantage de `List.of` pour sa simplicité et sa sécurité accrue.
+
+#### Création d’une Map immuable
+
+Une `Map` immuable est une structure associant des clés uniques à des valeurs, où ni les paires clé-valeur, ni les clés, ni les valeurs ne peuvent être modifiées après la création. Depuis Java 9, la méthode statique `Map.of` (et ses variantes comme `Map.ofEntries`) permet de créer des mappings immuables de manière concise. Comme pour `List.of`, ces mappings n’acceptent pas de clés ou de valeurs `null` (sauf si explicitement spécifié) et lèvent une `UnsupportedOperationException` en cas de tentative de modification. Pour les versions antérieures ou pour des cas où une `Map` existante doit être rendue immuable, `Collections.unmodifiableMap` offre une solution en enveloppant une `Map` existante.
+
+Voici un exemple illustrant la création d’une `Map` immuable pour associer des joueurs à leurs scores dans un jeu de Sudoku, utilisant `Map.of` et `Collections.unmodifiableMap` :
+
+```java
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collections;
+
+public class MapScoresImmuable {
+    public static void main(String[] args) {
+        // Création avec Map.of (Java 9 et supérieur)
+        Map<String, Integer> scores = Map.of("Alice", 150, "Bob", 200, "Charlie", 180);
+        System.out.println("Scores : " + scores);
+        try {
+            scores.put("David", 170); // Lève UnsupportedOperationException
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Impossible de modifier la map immuable");
+        }
+
+        // Création avec Collections.unmodifiableMap (toutes versions)
+        Map<String, Integer> scoresModifiables = new HashMap<>();
+        scoresModifiables.put("Alice", 150);
+        scoresModifiables.put("Bob", 200);
+        Map<String, Integer> scoresImmuables = Collections.unmodifiableMap(scoresModifiables);
+        System.out.println("Scores immuables : " + scoresImmuables);
+        try {
+            scoresImmuables.put("Charlie", 180); // Lève UnsupportedOperationException
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Impossible de modifier la map immuable");
+        }
+
+        // Attention : la map originale reste modifiable
+        scoresModifiables.put("David", 170);
+        System.out.println("Scores immuables après modification originale : " + scoresImmuables);
+    }
+}
+```
+
+Dans cet exemple, `Map.of` crée une `Map` immuable associant des joueurs à leurs scores. Toute tentative de modification (via `put`, `remove` ou `clear`) lève une `UnsupportedOperationException`. Avec `Collections.unmodifiableMap`, une `HashMap` modifiable est créée, puis enveloppée dans une vue immuable. Comme pour `List`, la `Map` originale reste modifiable, et les modifications de celle-ci affectent la vue immuable, ce qui nécessite une gestion prudente de la `Map` originale. Cet exemple met en évidence la simplicité de `Map.of` pour créer des mappings immuables directement, comparée à l’approche plus verbeuse de `Collections.unmodifiableMap`.
+
+
+Les méthodes `List.of` et `Map.of` produisent des collections immuables qui implémentent respectivement les interfaces `List` et `Map`, mais leurs classes concrètes internes (définies dans le JDK) ne sont pas accessibles directement et n’étendent pas publiquement `AbstractList` ou `AbstractMap`. Cependant, leur conception s’appuie sur les principes d’héritage et de polymorphisme, car elles respectent les contrats de ces interfaces, permettant leur utilisation dans tout code attendant un `List` ou un `Map`. En revanche, `Collections.unmodifiableList` et `Collections.unmodifiableMap` créent des vues qui enveloppent des implémentations existantes, comme `ArrayList` (qui étend `AbstractList`) ou `HashMap` (qui étend `AbstractMap`), et s’intègrent directement dans la hiérarchie des collections.
+
+L’immuabilité est particulièrement utile dans des contextes où les données doivent rester constantes, comme les configurations d’un jeu ou les résultats d’un tournoi. Cependant, il est crucial de comprendre les limites des approches. Avec `List.of` et `Map.of`, l’immuabilité est absolue, mais ces méthodes sont limitées à un nombre fixe d’éléments (jusqu’à 10 pour `Map.of` sans `Map.ofEntries`). Avec `Collections.unmodifiableList` et `Collections.unmodifiableMap`, la flexibilité est plus grande, mais la dépendance à une collection modifiable sous-jacente peut introduire des vulnérabilités si cette dernière n’est pas protégée.
 
 
 ### Instanciation anonyme
