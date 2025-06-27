@@ -935,3 +935,71 @@ Pour comparer le contenu de deux chaînes (et non leur emplacement en mémoire),
 
 </details>
 
+
+
+
+## Question 33 (pour les experts !)
+
+Considérons la décroissance radioactive d’un isotope. Supposons que nous ayons une quantité initiale de matière radioactive, et nous voulons modéliser comment sa masse diminue avec le temps en raison de la désintégration. Ce phénomène est courant en physique nucléaire, en médecine (pour les traitements par radiothérapie) et en datation au carbone.
+
+La décroissance radioactive suit une loi où la vitesse de diminution de la masse \( N \) (nombre de particules ou masse restante) est proportionnelle à la masse actuelle. Mathématiquement, cela s’exprime comme :
+
+\[
+\frac{dN}{dt} = -\lambda N
+\]
+
+- \( N(t) \) : masse (ou nombre de particules) restante à l’instant \( t \).
+- \( \lambda \) : constante de désintégration (spécifique à l’isotope, en \( \text{s}^{-1} \)).
+- Le signe négatif indique que la masse diminue.
+
+Cette équation différentielle décrit un taux de changement proportionnel à la quantité présente. Par exemple, pour le carbone-14, \( \lambda \approx 3.839 \times 10^{-12} \, \text{s}^{-1} \), mais pour simplifier, nous utiliserons une constante plus grande, comme \( \lambda = 0.1 \, \text{s}^{-1} \), pour observer une décroissance significative sur un intervalle court.
+
+- **Condition initiale** : À \( t = 0 \), la masse initiale est \( N_0 = 100 \, \text{g} \).
+- **Intervalle** : Nous modélisons sur \( t \) de 0 à 20 secondes.
+- **Méthode** : Nous utiliserons la méthode d’Euler pour résoudre numériquement cette équation. La méthode d’Euler est une technique numérique simple pour résoudre des équations différentielles ordinaires en approximant la solution par des pas discrets. Elle repose sur l’idée que la dérivée d’une fonction donne la pente locale, permettant d’estimer la valeur suivante à partir de la valeur actuelle et d’un pas de temps \( h \). Pour une  équations différentielles ordinaires  de la forme \( \frac{dy}{dt} = f(t, y) \), la méthode calcule \( y_{n+1} = y_n + h \cdot f(t_n, y_n) \). 
+
+Écrivez un programme qui utilise la méthode d’Euler pour résoudre l’équation \( \frac{dN}{dt} = -0.1 N \), avec \( N(0) = 100 \), et affiche la masse restante à chaque pas de temps.
+
+<details><summary>Réponse</summary>
+
+{{<inlineJava path="DecroissanceRadioactive.java" lang="java" >}}
+
+public class DecroissanceRadioactive {
+    // Fonction représentant l'équation différentielle dN/dt = -lambda * N
+    public static double dNdt(double N, double lambda) {
+        return -lambda * N;
+    }
+
+    public static void main(String[] args) {
+        // Paramètres
+        double N0 = 100.0;    // Masse initiale (g)
+        double lambda = 0.1;  // Constante de désintégration (s^-1)
+        double t0 = 0.0;      // Temps initial (s)
+        double tFin = 20.0;   // Temps final (s)
+        double h = 0.1;       // Taille du pas (s)
+        int etapes = (int) ((tFin - t0) / h); // Nombre d'étapes
+
+        // Tableaux pour stocker t et N
+        double[] t = new double[etapes + 1];
+        double[] N = new double[etapes + 1];
+
+        // Conditions initiales
+        t[0] = t0;
+        N[0] = N0;
+
+        // Méthode d'Euler
+        for (int i = 0; i < etapes; i++) {
+            t[i + 1] = t[i] + h;
+            N[i + 1] = N[i] + h * dNdt(N[i], lambda);
+        }
+
+        // Afficher les résultats
+        System.out.println("Temps (s)\t Masse (g)");
+        for (int i = 0; i <= etapes; i += 10) { // Affiche toutes les 10 étapes pour lisibilité
+            System.out.printf("%.1f\t\t %.4f\n", t[i], N[i]);
+        }
+    }
+}
+{{</inlineJava>}}
+
+</details>

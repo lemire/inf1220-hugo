@@ -114,7 +114,6 @@ public class Main {
 }
 {{</inlineJava>}}
 
-<p><a id="intro" name="section3"></a></p>
 
 ## La boucle do-while
 

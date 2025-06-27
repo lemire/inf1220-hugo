@@ -73,6 +73,30 @@ FIN TANT QUE
 Ce pseudocode décrit un algorithme pour trouver la valeur minimale dans un tableau d’entiers de taille 100. Une variable minimum est initialisée avec la première valeur du tableau (tableau[0]), supposant que le tableau n’est pas vide. Une variable iterateur est initialisée à 0 pour suivre la position dans le tableau. La boucle (TANT QUE iterateur < 100 FAIRE) parcourt le tableau tant que iterateur est inférieur à 100. À chaque itération, si l’élément à l’indice iterateur (tableau[iterateur]) est inférieur à minimum, alors minimum est mis à jour avec cette valeur. Ensuite, iterateur est incrémenté de 1 (iterateur = iterateur + 1) pour passer à l’élément suivant. À la fin de la boucle, minimum contient la plus petite valeur du tableau, qui est retournée.
 </details>
 
+
+
+Les boucles permettent de résoudre des problèmes difficiles. Par exemple, la méthode d'Euler est une technique numérique pour résoudre des équations différentielles ordinaires de la forme \( y' = f(x, y) \) avec une condition initiale \( y(x_0) = y_0 \). Voici son pseudocode.
+
+Entrée : 
+- fonction \( f(x, y) \) (dérivée)
+- \( x_0 \), \( y_0 \) (conditions initiales)
+- \( x_f \) (valeur finale de \( x \))
+- \( h \) (taille du pas)
+
+Sortie : 
+- liste des points \((x_i, y_i)\) approximant la solution
+
+1. Initialiser \( x = x_0 \), \( y = y_0 \)
+2. Initialiser une liste vide pour stocker les points \((x_i, y_i)\)
+3. Ajouter le point \((x, y)\) à la liste
+4. Tant que \( x < x_f \):
+   - Calculer la pente : \( m = f(x, y) \)
+   - Mettre à jour \( y \): \( y = y + h \cdot m \)
+   - Mettre à jour \( x \): \( x = x + h \)
+   - Ajouter le nouveau point \((x, y)\) à la liste
+5. Retourner la liste des points
+
+
 ### Composition
 
 Dans la pratique, un algorithme peut comporter plusieurs structures de contrôle itératives, plusieurs structures de contrôle alternatives et plusieurs opérations. On peut les combiner de diverses manières. Il est possible, par exemple, d'avoir une boucle TANT QUE au sein d'une autre boucle TANT QUE.
