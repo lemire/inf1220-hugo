@@ -392,8 +392,8 @@ Variable :
 Entier fact = 1
 Entier i = 1
 
-TANT QUE i \leq n FAIRE
-    fact = fact \times i
+TANT QUE i <= n FAIRE
+    fact = fact × i
     i = i + 1
 FIN TANT QUE
 
@@ -471,7 +471,7 @@ Entier original = n
 Entier renverse = 0
 
 TANT QUE n > 0 FAIRE
-    renverse = renverse \times 10 + (n \bmod 10)
+    renverse = renverse × 10 + (reste de la division de n avec 10)
     n = n // 10
 FIN TANT QUE
 
