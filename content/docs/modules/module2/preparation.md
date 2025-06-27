@@ -118,7 +118,7 @@ Cet IDE possède un éditeur visuel bien fait, stable et complet. Pour installer
 
 Si vous optez pour NetBeans, vous devrez vous en remettre au soutien technique et à la documentation de l'entreprise qui fournit le produit.
 
-# Installation de l'IDE Eclipse
+### Installation de l'IDE Eclipse
 
 Si vous avez installé IntelliJ IDEA ou Netbeans, il n'est sans doute pas nécessaire d'installer aussi Eclipse. Cependant, vous pouvez installer les trois, pour comparer.
 
