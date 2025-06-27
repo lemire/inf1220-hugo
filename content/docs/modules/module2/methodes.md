@@ -42,6 +42,36 @@ public class Voiture {
 }
 {{</inlineJava>}}
 
+Le mot-clé this est une référence à l'instance actuelle de la classe dans laquelle il est utilisé. Il n'est généralement pas nécessaire.
+Par exemple, nous pouvons réécrire la classe sans le mot-clé this en évitant tout ambiguité.
+
+
+{{<inlineJava path="Voiture.java" lang="java" >}}
+public class Voiture {
+    private int vitesse; // Variable d’instance
+    private String couleur; // Variable d’instance
+
+    public Voiture(int v, String c) {
+        vitesse = v;
+        couleur = c;
+    }
+
+    public int getVitesse() {
+        return vitesse;
+    }
+
+    public void setCouleur(String c) {
+        couleur = c;
+    }
+
+    public static void main(String[] args) {
+        Voiture voiture1 = new Voiture(60, "Rouge");
+        Voiture voiture2 = new Voiture(80, "Bleue");
+        System.out.println("Voiture 1 : " + voiture1.couleur + ", " + voiture1.vitesse + " km/h");
+        System.out.println("Voiture 2 : " + voiture2.couleur + ", " + voiture2.vitesse + " km/h");
+    }
+}
+{{</inlineJava>}}
 
 À l’inverse, une variable de classe, déclarée avec le mot-clé static, est unique et partagée par toutes les instances. Dans la classe Voiture, on pourrait définir une variable de classe nombreTotalVoitures pour compter toutes les voitures créées. Cette variable est la même pour tous les objets Voiture et peut être accédée sans instance, via Voiture.nombreTotalVoitures. Sa portée s’étend à l’ensemble du programme dès que la classe est chargée, persistant jusqu’à la fin de l’exécution. Cela convient pour des données communes ou des constantes, mais une modification affecte toutes les instances.
 

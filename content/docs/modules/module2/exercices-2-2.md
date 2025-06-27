@@ -401,6 +401,98 @@ public class PleinErreurs {
 Le fait de faire : "entier + string" n'est pas une erreur. La JVM va convertir automatiquement le int en string suivant l'opération "+".
 </details>
 
+
+
+## Question 21
+
+<p>Expliquer pourquoi exercice1.resultat vaut 30 et non 80 à la fin de la méthode main. Que faudrait-il corriger dans le code suivant si on souhaite obtenir 80 ?</p>
+
+```java  {style=github}
+public class Exercice {
+    protected int numeroExercice = 1;
+    protected boolean reussi = false;
+    protected static short resultat = 0;
+    public static void main(String[] args) {
+    }
+}
+```
+<details>
+<summary>Réponse</summary>
+Il faut enlever le qualifiant static à l'attribut result.
+</details>
+
+
+
+## Question 22
+
+<p>Soit les deux codes suivants :</p>
+
+<p>1)</p>
+
+```java  {style=github}
+public class Main {
+  public static void main(String[] args) {
+    final int NOMBRE;                
+    System.out.println((NOMBRE=10) + " Je suis un nombre final ");
+  }
+}
+```
+
+
+<p>2)</p>
+
+```java  {style=github}
+public class Main {
+  public static void main(String[] args) {
+    final int NOMBRE=0;                    
+    System.out.println((NOMBRE=10) + "  Je suis un nombre final ");
+  }
+}
+```
+
+<p>Lequel renvoie une erreur ? Pourquoi n&#x2019;y a-t-il pas d&#x2019;erreur
+dans celui qui s&#x2019;execute correctement ?</p>
+
+<details><summary>Réponse</summary>
+
+
+<p>Le code 2) renvoie une erreur. Le code 1) ne renvoie pas d&#x2019;erreur,
+puisque nous pouvons fixer la valeur d'une constante déclarée finale après dans la déclaration, mais une seule fois.</p>
+</details>
+
+
+## Question 23
+
+<p>Vous avez à créer une classe qui selon une constante de type nombre entier présente dans la classe, le code doit afficher le bon nombre de mots de la phrase suivante : "Veni vidi vici". Vous ne pouvez qu'utiliser les opérateurs vus dans la leçon précédente (truc: opérateur à trois opérandes).</p>
+
+<details><summary>Réponse</summary>
+
+
+{{<inlineJava path="Main.java" lang="java" >}}
+public class Main {
+    
+        // La constante qui détermine le nombre de mot;
+        public static final int nombreDeMot = 3;
+        
+        public static final String veni = "Veni";
+        public static final String vidi = "vidi";
+        public static final String vici = "vici";
+        
+        public static void main(String[] args){
+            
+                String phrase = new String();
+            
+                phrase = (nombreDeMot == 3) ? veni + vidi + vici : (nombreDeMot == 2) ? veni + vidi : (nombreDeMot == 1) ? veni : "";
+                
+                System.out.println("Phrase : " + phrase);
+        }                        
+    
+}
+{{</inlineJava>}}
+
+
+</details>
+
 ## Allez plus loin?
 
 

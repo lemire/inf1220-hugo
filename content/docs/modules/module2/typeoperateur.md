@@ -89,6 +89,7 @@ Les contraintes suivantes sont à respecter dans l'écriture des noms de variabl
 </ul> 
 <p>En effet, un octet est un regroupement de 8 bits, et un bit ne peut être qu'un 0 ou un 1. Une donnée codée sur un octet peut prendre 256 valeurs. <br /></p> 
 
+
 ### Les types de base en Java
 
 <p>Comme la plupart des langages de programmation, Java propose des types de base permettant la manipulation de valeurs numériques entières ou de caractères. En principe, comme le Java est un langage OO, tous les éléments devraient être des objets (ex. String, Serializer, HashMap, etc.). Or, à la création du langage, les concepteurs ont décidé de créer des types "non-objet" afin de faciliter l'usage et réduire la complexité pour les types de base. Ces types sont donc représentés par des mots-clés, prédéfinis par le langage. Ils sont également dits simples, car à un instant donné, ces types de variables ne peuvent contenir qu'une seule valeur. Le tableau ci-dessous représente les différents types en Java.</p>
@@ -303,6 +304,8 @@ public class Main {
 }
 {{</inlineJava>}}
 
+En Java, la portée d'une variable désigne la partie du programme où elle est accessible, selon son lieu de déclaration. Une variable
+déclarée dans une fonction n'est accessible que dans la fonction.
 
 ## Les opérateurs de base
 
@@ -571,16 +574,6 @@ String etat = "Succès : " + ok; // "Succès : true"
 Java convertit automatiquement les valeurs non String en chaîne lors de la concaténation avec l’opérateur <code>+</code> de gauche à droite.
 
 
-## Constantes
-
-En Java, le mot-clé final est utilisé pour déclarer qu'une variable, une méthode ou une classe ne peut pas être modifiée ou redéfinie après son initialisation. Lorsqu'il est appliqué à une variable, il garantit que sa valeur reste constante une fois qu'elle a été assignée.
-Une variable final doit être initialisée au moment de sa déclaration ou dans un bloc d'initialisation (pour les champs d'instance) ou un constructeur (pour les champs d'instance dans une classe). Si elle n'est pas initialisée, le compilateur génère une erreur.
-
-```java {style=github} 
-public class Exemple {
-    public static final double PI = 3.14159;
-}
-```
 
 ## Enum
 
