@@ -79,6 +79,8 @@ La plupart des langages de programmation s'utilisent avec des fichiers de texte.
 
 Le meilleur éditeur de fichier texte est sans doute [Visual Studio Code](https://code.visualstudio.com) (à ne pas confondre avec Visual Studio). Microsoft rend disponible [un guide d'utilisation de Visual Studio Code avec Java](https://code.visualstudio.com/docs/java/java-tutorial).
 
+{{< youtube id="hN86e5-uYrc" >}}
+
 
 
 ## Environnement de développement
@@ -132,3 +134,5 @@ Si vous optez pour Eclipse, vous devrez vous en remettre au soutien technique et
 ## Les choix du professeur
 
 S'il faut que je développe du code, j'utilise Visual Studio Code. [Je suis actif au sein de plusieurs projets](https://github.com/lemire) et Visual Studio Code a plusieurs avantages. Il fonctionne pratiquement partout. Visual Studio Code me permet de "programmer" dans une multitude de langages, de LaTeX à Go en passant par Haskell, Markdown, C++, etc. Je peux facilement combiner Visual Studio Code à plusieurs autres outils. Je peux développer aussi bien sous docker qu'avec ssh, etc.
+
+Je vous recommande fortement d'utilise Visual Studio Code plutôt qu'un IDE spécialisé.
