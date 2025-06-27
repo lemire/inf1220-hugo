@@ -295,6 +295,38 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 On voit que la pile d’appels retrace le chemin des méthodes jusqu’à l’origine de l’exception. Cela aide beaucoup à déboguer les programmes.
 
+
+## Créer ses propres exceptions
+
+
+Pour créer ses propres exceptions en Java, il faut définir une nouvelle classe qui étend la classe Exception ou l'une de ses sous-classes, comme RuntimeException pour les exceptions non vérifiées ou Exception pour les exceptions vérifiées. Cette classe peut inclure des constructeurs pour personnaliser les messages d'erreur ou ajouter des attributs spécifiques. Une fois définie, l'exception peut être levée avec throw et capturée dans un bloc try-catch. Voici un exemple : supposons une application qui valide des âges, avec une exception personnalisée pour un âge invalide (négatif ou trop élevé).
+
+```java {style=github}
+public class AgeInvalideException extends Exception {
+    public AgeInvalideException(String message) {
+        super(message);
+    }
+}
+
+class GestionAge {
+    public static void validerAge(int age) throws AgeInvalideException {
+        if (age < 0 || age > 120) {
+            throw new AgeInvalideException("L'âge " + age + " est invalide. Il doit être entre 0 et 120.");
+        }
+        System.out.println("Âge valide : " + age);
+    }
+
+    public static void main(String[] args) {
+        try {
+            validerAge(25);
+            validerAge(-5);
+        } catch (AgeInvalideException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
+    }
+}
+```
+
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
 Pour aller plus en profondeur sur les structures try-catch (optionnel), vous pouvez lire le chapitre 10 dans <em>Programmer en Java</em> de Claude Delannoy.

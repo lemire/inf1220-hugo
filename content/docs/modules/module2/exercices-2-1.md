@@ -35,58 +35,17 @@ Une classe est la description abstraite d'un concept. Une instance est la matér
 Vrai et Faux: c'est un langage interprété par une machine virtuelle, la JVM. La code est pré-compilé dans un langage intermédiaire, le bytecode. Par la suite, lors de l'exécution, le bytecode peut être compilé en langage machine. 
 </details>
 
-## Question 3
 
-<p>Vrai ou Faux : Le mot-clé "static" permet de créer une seule variable en mémoire pour plusieurs instances d'un objet?</p>
-<details>
-<summary>Réponse</summary>
-Vrai: le mot-clé static permet de créer une variable "pointant" vers une seule adresse en mémoire. Donc, si la classe Test possède une variable static, toutes les instances de la classe Test accèderont à la même variable en mémoire. Elles pourraient donc modifier cette valeur à tour de rôle.
+## Question 3
+Comment est représenté <code>-1</code> en Java ?
+<details><summary>Réponse</summary>
+<p>En Java, les entiers sont représentés en binaire selon le format « complément à deux ». Ainsi, <code>-1</code> est représenté par une suite de bits où tous les bits sont à 1. Par exemple, pour un <code>int</code> (32 bits), <code>-1</code> correspond à <code>0xFFFFFFFF</code> en hexadécimal, soit 32 bits à 1. </p>
 </details>
 
 ## Question 4
-
-<p>Le code suivant est truffé d'erreurs. Veuillez énumérer les erreurs et les corriger.</p>
-
-```java  {style=github}
-public clas PleinErreurs {
-
-    public  int entier = "Entier";
-    public static String string = new String("string");
-    
-    public static void main(String[] args) {
-        entier += 33;
-        string = entier + string;
-        System.out.println(string)
-    }
-    
-}
-```
-
-<details>
-<summary>Réponse</summary>
-<ul>
-	<li>Le mot clas : class</li>
-	<li>Il manque le mot static devant la variable int entier</li>
-	<li>On ne peut pas initialiser un int avec une chaîne de caractère. Mettre entier = 0;</li>
-	<li>Ajouter un point-virgule à la fin du System.out.println</li>
-</ul>
-
-```java  {style=github}
-public class PleinErreurs {
-
-    public static int entier = 0;
-    public static String string = new String("string");
-    
-    public static void main(String[] args) {
-        entier += 33;
-        string = entier + string;
-        System.out.println(string);
-    }
-    
-}
-```
-
-Le fait de faire : "entier + string" n'est pas une erreur. La JVM va convertir automatiquement le int en string suivant l'opération "+".
+Est-ce que <code>-0.0</code> est égal à <code>0.0</code> en Java ?
+<details><summary>Réponse</summary>
+<p>En Java, <code>-0.0 == 0.0</code> retourne <code>true</code> car la comparaison d’égalité (<code>==</code>) considère ces deux valeurs comme égales selon la norme IEEE 754. Cependant, il existe une différence binaire entre <code>-0.0</code> et <code>0.0</code> (le signe du zéro), ce qui peut être détecté avec certaines méthodes comme <code>Double.doubleToRawLongBits()</code> ou en utilisant <code>1.0 / -0.0</code> (qui donne <code>-Infinity</code>), alors que <code>1.0 / 0.0</code> donne <code>Infinity</code>.</p>
 </details>
 
 ## Question 5
@@ -177,56 +136,25 @@ public class Exercice {
 La réponse est 12 car l'opérateur à 3 opérandes "?:" vérifie si i est plus grand ou égal à 1 (c'est le cas), alors la valeur retournée est i pré-incrémenté de 1 : 12.
 </details>
 
+
 ## Question 9
-
-<p>Expliquer pourquoi exercice1.resultat vaut 30 et non 80 à la fin de la méthode main. Que faudrait-il corriger dans le code suivant si on souhaite obtenir 80 ?</p>
-
-```java  {style=github}
-public class Exercice {
-    protected int numeroExercice = 1;
-    protected boolean reussi = false;
-    protected static short resultat = 0;
-    public static void main(String[] args) {
-    }
-}
-```
-<details>
-<summary>Réponse</summary>
-Il faut enlever le qualifiant static à l'attribut result.
-</details>
-
-## Question 10
-
-<p>Vous avez à créer une classe qui selon une constante de type nombre entier présente dans la classe, le code doit afficher le bon nombre de mots de la phrase suivante : "Veni vidi vici". Vous ne pouvez qu'utiliser les opérateurs vus dans la leçon précédente (truc: opérateur à trois opérandes).</p>
-
+Quelle est la valeur de l’expression <code>0xA + 10</code> en Java ? Expliquez pourquoi.
 <details><summary>Réponse</summary>
-
-
-{{<inlineJava path="Main.java" lang="java" >}}
-public class Main {
-    
-        // La constante qui détermine le nombre de mot;
-        public static final int nombreDeMot = 3;
-        
-        public static final String veni = "Veni";
-        public static final String vidi = "vidi";
-        public static final String vici = "vici";
-        
-        public static void main(String[] args){
-            
-                String phrase = new String();
-            
-                phrase = (nombreDeMot == 3) ? veni + vidi + vici : (nombreDeMot == 2) ? veni + vidi : (nombreDeMot == 1) ? veni : "";
-                
-                System.out.println("Phrase : " + phrase);
-        }                        
-    
-}
-{{</inlineJava>}}
-
-
+<p><code>0xA</code> représente 10 en décimal, donc <code>0xA + 10</code> vaut 20.</p>
 </details>
 
+
+## Question 36
+Expliquez ce qu’est un débordement (overflow) lors d’un calcul avec des entiers en Java. Donnez un exemple de code qui provoque un débordement.
+<details><summary>Réponse</summary>
+<p>Un débordement se produit lorsqu’une opération arithmétique dépasse la valeur maximale ou minimale qu’un type peut représenter. Par exemple, un <code>int</code> en Java varie de -2 147 483 648 à 2 147 483 647. Si on additionne 1 à la valeur maximale, on « retourne » à la valeur minimale.</p>
+
+```java
+int max = Integer.MAX_VALUE;
+System.out.println(max);         // 2147483647
+System.out.println(max + 1);     // -2147483648 (débordement)
+```
+</details>
 
 
 ## Question 11
@@ -262,44 +190,17 @@ composés comme monEntier.</p>
 </details>
 
 
-
 ## Question 12
-
-<p>Soit les deux codes suivants :</p>
-
-<p>1)</p>
-
-```java  {style=github}
-public class Main {
-  public static void main(String[] args) {
-    final int NOMBRE;                
-    System.out.println((NOMBRE=10) + " Je suis un nombre final ");
-  }
-}
-```
-
-
-<p>2)</p>
-
-```java  {style=github}
-public class Main {
-  public static void main(String[] args) {
-    final int NOMBRE=0;                    
-    System.out.println((NOMBRE=10) + "  Je suis un nombre final ");
-  }
-}
-```
-
-<p>Lequel renvoie une erreur ? Pourquoi n&#x2019;y a-t-il pas d&#x2019;erreur
-dans celui qui s&#x2019;execute correctement ?</p>
-
+Comment écrit-on un nombre en notation hexadécimale en Java ? Donnez un exemple et expliquez à quoi cela sert.
 <details><summary>Réponse</summary>
+<p>On utilise le préfixe <code>0x</code> pour écrire un nombre en hexadécimal. Exemple :</p>
 
-
-<p>Le code 2) renvoie une erreur. Le code 1) ne renvoie pas d&#x2019;erreur,
-puisque nous pouvons fixer la valeur d'une constante déclarée finale après dans la déclaration, mais une seule fois.</p>
+```java
+int x = 0xFF; // 255 en décimal
+System.out.println(x); // Affiche 255
+```
+<p>La notation hexadécimale est utile pour manipuler des valeurs binaires, des couleurs, des adresses mémoire, etc.</p>
 </details>
-
 
 
 ## Question 13
@@ -391,33 +292,7 @@ public static boolean f(int x, int y) {
 <p>La fonction retourne la valeur vraie si et seulement si un seul des deux paramètres est négatif. Par exemple, f(-1,1) est vrai, f(2,2) et f(-1,-3) sont faux.</p>
 </details>
 
-## Question 17
-
-<p>Nous savons que la somme 1/2 + 1/4 + 1/8 +... donne la valeur unitaire.</p>
-
-<p>Sachant qu'un type double en Java a une mantisse comportant 53 bits, que va afficher le programme suivant?</p>
-
-```java  {style=github}
-class Main {
-  public static void main(String[] args) {
-    double x = 0;
-    double f = 1.0;
-    for (int i = 0; i < 53; i++) {
-      f /= 2;
-      x += f;
-    }
-    System.out.println(x==1.0);
-    f /= 2;
-    x += f;
-    System.out.println(x==1.0);
-  }
-}
-```
-
-<details><summary>Réponse</summary>
-<p>false, true</p>
-</details>
-
+shit
 
 
 
@@ -623,44 +498,10 @@ Quels sont, selon vous, les principaux avantages et inconvénients de Java par r
 <p><b>Inconvénients :</b> performances parfois inférieures au code natif (C/C++), syntaxe parfois verbeuse, nécessité d’installer la JVM.</p>
 </details>
 
-## Question 36
-Expliquez ce qu’est un débordement (overflow) lors d’un calcul avec des entiers en Java. Donnez un exemple de code qui provoque un débordement.
-<details><summary>Réponse</summary>
-<p>Un débordement se produit lorsqu’une opération arithmétique dépasse la valeur maximale ou minimale qu’un type peut représenter. Par exemple, un <code>int</code> en Java varie de -2 147 483 648 à 2 147 483 647. Si on additionne 1 à la valeur maximale, on « retourne » à la valeur minimale.</p>
 
-```java
-int max = Integer.MAX_VALUE;
-System.out.println(max);         // 2147483647
-System.out.println(max + 1);     // -2147483648 (débordement)
-```
-</details>
 
-## Question 37
-Comment écrit-on un nombre en notation hexadécimale en Java ? Donnez un exemple et expliquez à quoi cela sert.
-<details><summary>Réponse</summary>
-<p>On utilise le préfixe <code>0x</code> pour écrire un nombre en hexadécimal. Exemple :</p>
 
-```java
-int x = 0xFF; // 255 en décimal
-System.out.println(x); // Affiche 255
-```
-<p>La notation hexadécimale est utile pour manipuler des valeurs binaires, des couleurs, des adresses mémoire, etc.</p>
-</details>
 
-## Question 38
-Quelle est la valeur de l’expression <code>0xA + 10</code> en Java ? Expliquez pourquoi.
-<details><summary>Réponse</summary>
-<p><code>0xA</code> représente 10 en décimal, donc <code>0xA + 10</code> vaut 20.</p>
-</details>
 
-## Question 39
-Est-ce que <code>-0.0</code> est égal à <code>0.0</code> en Java ?
-<details><summary>Réponse</summary>
-<p>En Java, <code>-0.0 == 0.0</code> retourne <code>true</code> car la comparaison d’égalité (<code>==</code>) considère ces deux valeurs comme égales selon la norme IEEE 754. Cependant, il existe une différence binaire entre <code>-0.0</code> et <code>0.0</code> (le signe du zéro), ce qui peut être détecté avec certaines méthodes comme <code>Double.doubleToRawLongBits()</code> ou en utilisant <code>1.0 / -0.0</code> (qui donne <code>-Infinity</code>), alors que <code>1.0 / 0.0</code> donne <code>Infinity</code>.</p>
-</details>
 
-## Question 40
-Comment est représenté <code>-1</code> en Java ?
-<details><summary>Réponse</summary>
-<p>En Java, les entiers sont représentés en binaire selon le format « complément à deux ». Ainsi, <code>-1</code> est représenté par une suite de bits où tous les bits sont à 1. Par exemple, pour un <code>int</code> (32 bits), <code>-1</code> correspond à <code>0xFFFFFFFF</code> en hexadécimal, soit 32 bits à 1. </p>
-</details>
+

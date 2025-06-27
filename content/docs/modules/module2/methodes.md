@@ -7,7 +7,112 @@ weight: 5
 
 La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.
 
+## Les variables d’instance et de classe
 
+En programmation orientée objet avec Java, les variables sont essentielles pour stocker les données associées à une classe ou à ses objets. On distingue les variables d’instance, propres à chaque objet créé à partir d’une classe, et les variables de classe, partagées par toutes les instances. Leur portée, c’est-à-dire la partie du programme où elles sont accessibles, dépend de leur déclaration et de leur nature.
+
+Une variable d’instance est définie au niveau de la classe, mais chaque objet possède sa propre copie. Prenons une classe Voiture représentant un véhicule. Cette classe pourrait avoir des variables d’instance comme vitesse et couleur. Lorsqu’un objet Voiture est créé, ces variables sont initialisées pour cet objet spécifique. Si deux voitures sont créées, l’une rouge à 60 km/h et l’autre bleue à 80 km/h, chaque objet aura ses propres valeurs pour vitesse et couleur, indépendantes. La portée d’une variable d’instance est liée à l’objet : elle reste accessible tant que l’objet existe et peut être modifiée ou lue via des méthodes comme getVitesse ou setCouleur. Un modificateur comme private peut restreindre l’accès aux seules méthodes de la classe.
+
+Voici un exemple de classe Voiture avec des variables d’instance :
+
+{{<inlineJava path="Voiture.java" lang="java" >}}
+public class Voiture {
+    private int vitesse; // Variable d’instance
+    private String couleur; // Variable d’instance
+
+    public Voiture(int vitesse, String couleur) {
+        this.vitesse = vitesse;
+        this.couleur = couleur;
+    }
+
+    public int getVitesse() {
+        return vitesse;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    public static void main(String[] args) {
+        Voiture voiture1 = new Voiture(60, "Rouge");
+        Voiture voiture2 = new Voiture(80, "Bleue");
+        System.out.println("Voiture 1 : " + voiture1.couleur + ", " + voiture1.vitesse + " km/h");
+        System.out.println("Voiture 2 : " + voiture2.couleur + ", " + voiture2.vitesse + " km/h");
+    }
+}
+{{</inlineJava>}}
+
+
+À l’inverse, une variable de classe, déclarée avec le mot-clé static, est unique et partagée par toutes les instances. Dans la classe Voiture, on pourrait définir une variable de classe nombreTotalVoitures pour compter toutes les voitures créées. Cette variable est la même pour tous les objets Voiture et peut être accédée sans instance, via Voiture.nombreTotalVoitures. Sa portée s’étend à l’ensemble du programme dès que la classe est chargée, persistant jusqu’à la fin de l’exécution. Cela convient pour des données communes ou des constantes, mais une modification affecte toutes les instances.
+
+Voici un exemple illustrant une variable de classe :
+
+{{<inlineJava path="Voiture.java" lang="java" >}}
+public class Voiture {
+    private int vitesse;
+    private String couleur;
+    public static int nombreTotalVoitures = 0; // Variable de classe
+
+    public Voiture(int vitesse, String couleur) {
+        this.vitesse = vitesse;
+        this.couleur = couleur;
+        nombreTotalVoitures++;
+    }
+
+    public static int getNombreTotalVoitures() {
+        return nombreTotalVoitures;
+    }
+
+    public static void main(String[] args) {
+        Voiture voiture1 = new Voiture(60, "Rouge");
+        Voiture voiture2 = new Voiture(80, "Bleue");
+        System.out.println("Nombre total de voitures : " + Voiture.getNombreTotalVoitures());
+    }
+}
+{{</inlineJava>}}
+
+La portée des variables influence leur usage dans les méthodes. Une variable d’instance, comme vitesse, ne peut être utilisée que dans un contexte non statique, car elle est liée à un objet. Une méthode accelerer pourrait modifier vitesse en utilisant this. En revanche, une variable de classe, comme nombreTotalVoitures, est accessible dans des méthodes statiques, comme getNombreTotalVoitures, sans nécessiter d’instance. Cette distinction reflète leur rôle : les variables d’instance décrivent l’état d’un objet, les variables de classe définissent des propriétés globales.
+
+Un dernier exemple combine les deux types de variables et illustre l’impact des modificateurs d’accès :
+
+{{<inlineJava path="Voiture.java" lang="java" >}}
+public class Voiture {
+    private int vitesse; // Instance, accès restreint
+    protected String couleur; // Instance, accès pour sous-classes
+    public static final String MARQUE = "Generic"; // Classe, constante
+
+    public Voiture(int vitesse, String couleur) {
+        this.vitesse = vitesse;
+        this.couleur = couleur;
+    }
+
+    public void afficherDetails() {
+        System.out.println(MARQUE + " : Couleur " + couleur + ", Vitesse " + vitesse);
+    }
+
+    public static void main(String[] args) {
+        Voiture voiture = new Voiture(100, "Verte");
+        voiture.afficherDetails();
+        System.out.println("Marque : " + Voiture.MARQUE);
+    }
+}
+{{</inlineJava>}}
+
+Les modificateurs d’accès contrôlent la portée. Une variable public, comme MARQUE, est accessible partout. Une variable protected, comme couleur, est limitée à la classe et ses sous-classes. Une variable private, comme vitesse, n’est accessible que dans la classe, renforçant l’encapsulation. Ces modificateurs garantissent que les variables sont manipulées de manière contrôlée.
+
+En conclusion, les variables d’instance et de classe répondent à des besoins distincts. Les variables d’instance, avec une portée liée à l’objet, modélisent des données spécifiques. Les variables de classe, avec une portée globale, gèrent des informations communes. Comprendre leur portée et leur interaction avec les méthodes est crucial pour concevoir des programmes Java robustes et clairs.
+
+
+### Constantes
+
+En Java, le mot-clé final est utilisé pour déclarer qu'une variable, une méthode ou une classe ne peut pas être modifiée ou redéfinie après son initialisation. Lorsqu'il est appliqué à une variable, il garantit que sa valeur reste constante une fois qu'elle a été assignée.
+Une variable final doit être initialisée au moment de sa déclaration ou dans un bloc d'initialisation (pour les champs d'instance) ou un constructeur (pour les champs d'instance dans une classe). Si elle n'est pas initialisée, le compilateur génère une erreur.
+
+```java {style=github} 
+public class Exemple {
+    public static final double PI = 3.14159;
+}
+```
 
 ## Les méthodes
 

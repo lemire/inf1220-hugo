@@ -29,7 +29,9 @@ bloc1: {
 
 Ce bloc nommé <code>bloc1</code> regroupe plusieurs instructions qui seront exécutées dans l’ordre.
 
-<p><a id="intro" name="section2"></a></p>
+La portée des  variables déclarées au sein d'un bloc se limite à ce bloc. Il n'est pas possible de faire référence à la variable en 
+dehors de ce bloc.
+
 
 ## La structure de contrôle if-else
 

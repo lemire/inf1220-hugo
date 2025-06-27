@@ -347,6 +347,60 @@ Combien de fois la fonction `f(x)` est-elle appelée lors de l’évaluation de 
 </details>
 
 
+## Question 19
+
+<p>Vrai ou Faux : Le mot-clé "static" permet de créer une seule variable en mémoire pour plusieurs instances d'un objet?</p>
+<details>
+<summary>Réponse</summary>
+Vrai: le mot-clé static permet de créer une variable "pointant" vers une seule adresse en mémoire. Donc, si la classe Test possède une variable static, toutes les instances de la classe Test accèderont à la même variable en mémoire. Elles pourraient donc modifier cette valeur à tour de rôle.
+</details>
+
+## Question 20
+
+<p>Le code suivant est truffé d'erreurs. Veuillez énumérer les erreurs et les corriger.</p>
+
+```java  {style=github}
+public clas PleinErreurs {
+
+    public  int entier = "Entier";
+    public static String string = new String("string");
+    
+    public static void main(String[] args) {
+        entier += 33;
+        string = entier + string;
+        System.out.println(string)
+    }
+    
+}
+```
+
+<details>
+<summary>Réponse</summary>
+<ul>
+	<li>Le mot clas : class</li>
+	<li>Il manque le mot static devant la variable int entier</li>
+	<li>On ne peut pas initialiser un int avec une chaîne de caractère. Mettre entier = 0;</li>
+	<li>Ajouter un point-virgule à la fin du System.out.println</li>
+</ul>
+
+```java  {style=github}
+public class PleinErreurs {
+
+    public static int entier = 0;
+    public static String string = new String("string");
+    
+    public static void main(String[] args) {
+        entier += 33;
+        string = entier + string;
+        System.out.println(string);
+    }
+    
+}
+```
+
+Le fait de faire : "entier + string" n'est pas une erreur. La JVM va convertir automatiquement le int en string suivant l'opération "+".
+</details>
+
 ## Allez plus loin?
 
 

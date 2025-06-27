@@ -937,8 +937,35 @@ Pour comparer le contenu de deux chaînes (et non leur emplacement en mémoire),
 
 
 
+## Question 33
 
-## Question 33 (pour les experts !)
+<p>Nous savons que la somme 1/2 + 1/4 + 1/8 +... donne la valeur unitaire.</p>
+
+<p>Sachant qu'un type double en Java a une mantisse comportant 53 bits, que va afficher le programme suivant?</p>
+
+```java  {style=github}
+class Main {
+  public static void main(String[] args) {
+    double x = 0;
+    double f = 1.0;
+    for (int i = 0; i < 53; i++) {
+      f /= 2;
+      x += f;
+    }
+    System.out.println(x==1.0);
+    f /= 2;
+    x += f;
+    System.out.println(x==1.0);
+  }
+}
+```
+
+<details><summary>Réponse</summary>
+<p>false, true</p>
+</details>
+
+
+## Question 34 (pour les experts !)
 
 Considérons la décroissance radioactive d’un isotope. Supposons que nous ayons une quantité initiale de matière radioactive, et nous voulons modéliser comment sa masse diminue avec le temps en raison de la désintégration. Ce phénomène est courant en physique nucléaire, en médecine (pour les traitements par radiothérapie) et en datation au carbone.
 
