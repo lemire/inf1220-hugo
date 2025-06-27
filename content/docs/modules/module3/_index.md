@@ -28,5 +28,5 @@ En intégrant les principes de la programmation fonctionnelle, ce module introdu
 
 ## Planification du temps
 
-Nous vous suggérons de consacrer trois semaines au troisième module. Assurez-vous de remettre
+Nous vous suggérons de consacrer trois semaines au troisième module (environ 27 heures). Assurez-vous de remettre
 le troisième travail noté à la fin de la neuvième semaine.

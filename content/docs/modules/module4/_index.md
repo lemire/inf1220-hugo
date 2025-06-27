@@ -29,3 +29,10 @@ Vous apprendrez également à utiliser Maven pour automatiser la compilation et 
 - Intégrer les opérations d’entrée/sortie dans des programmes plus complexes, en lien avec les structures de données et de contrôle vues dans les modules précédents.
 - Vous pourrez décrire le format JSON.
 - Vous pourrez décrire le format XML.
+
+
+
+## Planification du temps
+
+Nous vous suggérons de consacrer deux semaines au quatrième module  (environ 18 heures). Assurez-vous de remettre
+le quatrième travail noté à la fin de la 11e semaine.

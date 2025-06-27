@@ -13,6 +13,7 @@ weight: 6
 
 <p>Quand il s'agit de programmer, plusieurs étudiants remettent du code qui n'est pas fonctionnel, qui ne peut en aucun cas répondre à la question. Vous devez autant que possible vous assurez que votre code est fonctionnel. Pour y arriver, vous pouvez le relire et l'exécuter dans votre esprit, en traçant la valeur des variables. Comme vous devez de toute manière toujours expliquer vos solutions, vous pouvez en profiter pour y inclure une séquence d'exécution de votre programme. Un programmeur doit toujours se relire, et tester, et retester son code. Il est facile de se tromper complètement en écrivant même du code simple si on ne se relit pas avec soin.</p>
 
+**Nous vous suggérons de prévoir au moins 4 heures pour vous préparer à l'examen.**
 
 <div style=" border: 2px solid red; margin: 2em; padding:2em;">
 

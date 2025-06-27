@@ -70,5 +70,6 @@ Ce module a pour objectif de vous donner une compréhension solide des bases de 
 
 ## Planification du temps
 
-Nous vous suggérons de consacrer trois semaines au second module. Assurez-vous de remettre
-le second travail noté à la fin de la sixième semaine.
+Nous vous suggérons de consacrer trois semaines au second module.  Vous aurez à lire deux chapitres dans le manuel,
+nous vous suggérons d'en lire un par semaine pendant les deux premières semaines, en plus des lectures du site web.
+Assurez-vous de remettre le second travail noté à la fin de la sixième semaine.

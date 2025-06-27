@@ -25,7 +25,9 @@ Le module 5 initie à la programmation orientée objet en explorant des concepts
 
 ## Planification du temps
 
-Nous vous suggérons de consacrer trois semaines au cinquième module. Assurez-vous de remettre
-le cinquième travail noté à la fin de la 14e semaine.
+Nous vous suggérons de consacrer trois semaines au cinquième module  (environ 27 heures). Assurez-vous de remettre
+le cinquième travail noté à la fin de la 14e semaine. Vous aurez à lire quatre chapitres au sein du manuel,
+nous vous suggérons d'en lire deux par semaine pendant les deux premières semaine du module, en plus
+de la lecture des textes du site de cours.
 
 La dernière semaine du cours devrait être consacrée à la préparation de l'examen.
