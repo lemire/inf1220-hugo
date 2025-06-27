@@ -55,8 +55,6 @@ De plus, la plupart des langages de programmation modernes sont ou incluent des 
 
 Le cours est divisé en 5 modules avec un ensemble d'activités introduisant les éléments de programmation. Des exercices pratiques et des travaux notés viennent évaluer vos connaissances, pour enfin terminer le cours avec un examen final. Chaque module se termine par un travail noté.
 
-En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.
-
 Le site du cours vous permet d'exécuter du code Java directement dans votre 
 navigateur&nbsp;: 
 
@@ -84,6 +82,9 @@ du cours comprend des lectures obligatoires dans le manuel.
 | 4      | Chapitre 9 : Traitement de fichiers                            | Fichiers, entrées/sorties, gestion de données           |
 | 5        | Chapitres 5 à 8 : Graphisme 2D, animation, conception objet, jeu | Programmation objet, graphisme, animation, projet jeu   |
 
+
+
+En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.
 
 ## Intelligence artificielle
 

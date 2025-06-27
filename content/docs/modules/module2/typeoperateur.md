@@ -37,6 +37,19 @@ Ce n'est pas grave&nbsp;!
 L'important, l'essentiel, est qu'avec la pratique, vous allez développer le raisonnement et les instincts du programmeur. À des multiples
 reprises, vous serez frustré par une erreur dans votre code que vous ne comprenez pas. Vous apprendrez à résoudre les problèmes d'instinct.
 
+
+
+## Version du Java
+
+Le Java est en pleine évolution. Le site du cours requiert Java 26. Nous vous recommendons d'utiliser Java 21 ou mieux. Un petit nombre d'exemples du cours nécessitent Java 26 ou mieux. Par contre, tous les travaux notés et l'examen peuvent être faits avec Java 8.
+
+
+## Erreurs et avertissements
+
+Java pourra émettre certains messages lors de la compilation et de l'exécution de vos programmes. Il y a d'une part les messages d'erreur. Dans un tel cas, le programme ne peut être compilé ou exécuté. Il y a d'autre part les messages d'avertissement. Le plus souvent, on peut ignorer les messages d'avertissement. Ils servent avant tout à attirer l'attention du programmeur sur des problèmes potentiels, mais ils ne nuisent pas à la compilation et à l'exécution.
+
+Il est important de faire la différence entre une erreur et un avertissement. Vous ne devez pas confondre les deux concepts lorsque vous programmez. Soyez précis !
+
 ## Environnement de développement (rappel)
 
 <p>Si vous devez compiler des classes Java sur votre PC, faites les choses simplement. Essayez d'utiliser les outils les plus élémentaires. Concentrez-vous sur le Java, et non pas sur les environnements et les outils. Une erreur fréquente des débutants est de perdre beaucoup de temps au sein de systèmes qu'ils ne maîtrisent pas à essayer de programmer dans un langage qu'ils ne maîtrisent pas. Il y faut y aller pas à pas.</p>

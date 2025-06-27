@@ -479,7 +479,7 @@ L’objectif d’`AbstractList` est de réduire la charge de travail pour les d�
 
 Voici un exemple d’une classe personnalisée qui étend `AbstractList` pour gérer une liste de scores dans un jeu de Sudoku, avec un comportement restreint (lecture seule pour simplifier) :
 
-```java {style=github}
+{{<inlineJava path="ListeScores.java">}}
 import java.util.AbstractList;
 
 public class ListeScores extends AbstractList<Integer> {
@@ -513,7 +513,8 @@ public class ListeScores extends AbstractList<Integer> {
         }
     }
 }
-```
+{{</inlineJava>}}
+
 
 Dans cet exemple, `ListeScores` étend `AbstractList` et implémente les méthodes abstraites `get` et `size`. Les autres méthodes de `List`, comme l’itération via la boucle `for-each`, sont héritées de `AbstractList`, qui fournit une implémentation basée sur ces deux méthodes. Cet exemple montre comment `AbstractList` simplifie la création d’une liste personnalisée en réduisant le nombre de méthodes à implémenter, tout en garantissant la conformité avec l’interface `List`.
 
@@ -525,7 +526,7 @@ Comme pour `AbstractList`, `AbstractMap` est conçue pour être étendue par des
 
 Voici un exemple d’une classe personnalisée qui étend `AbstractMap` pour gérer un mapping des joueurs aux niveaux atteints dans un jeu de Sudoku :
 
-```java {style=github}
+{{<inlineJava path="NiveauxJoueurs.java">}}
 import java.util.AbstractMap;
 import java.util.Map;
 import java.util.Set;
@@ -554,7 +555,7 @@ public class NiveauxJoueurs extends AbstractMap<String, Integer> {
         }
     }
 }
-```
+{{</inlineJava>}}
 
 Dans cet exemple, `NiveauxJoueurs` étend `AbstractMap` et implémente la méthode abstraite `entrySet`, qui retourne un ensemble d’entrées clé-valeur. Les autres méthodes de `Map`, comme `get` et `containsKey`, sont héritées de `AbstractMap` et fonctionnent automatiquement grâce à l’implémentation d’`entrySet`. Cet exemple illustre comment `AbstractMap` permet de créer un mapping personnalisé avec un minimum de code, tout en respectant le contrat de l’interface `Map`.
 
@@ -1213,7 +1214,7 @@ La classe `HashMap` étend la classe abstraite `AbstractMap`, qui elle-même imp
 
 Voici un exemple illustrant l’utilisation de l’interface `Map` et de la classe `HashMap` pour gérer les scores des joueurs dans un jeu comme le Sudoku :
 
-```java {style=github}
+{{<inlineJava path="GestionScores.java">}}
 import java.util.Map;
 import java.util.HashMap;
 
@@ -1232,7 +1233,7 @@ public class GestionScores {
         }
     }
 }
-```
+{{</inlineJava>}}
 
 Dans cet exemple, la variable `scores` est déclarée comme étant de type `Map`, mais elle est instanciée avec une `HashMap`. Cette approche favorise la flexibilité, car le code peut facilement être modifié pour utiliser une autre implémentation de `Map`, comme `TreeMap` (qui trie les clés) ou `LinkedHashMap` (qui conserve l’ordre d’insertion), sans changer la logique du programme. La méthode `put` associe une clé à une valeur, `get` récupère une valeur à partir d’une clé, et l’itération sur les entrées affiche les paires clé-valeur. Cet exemple montre comment l’interface `Map` garantit un contrat commun, tandis que `HashMap` fournit une implémentation spécifique.
 
@@ -1244,7 +1245,7 @@ La classe `ArrayList` étend la classe abstraite `AbstractList`, qui implémente
 
 Voici un exemple illustrant l’utilisation de l’interface `List` et de la classe `ArrayList` pour gérer une liste de parties de Sudoku jouées par un utilisateur :
 
-```java {style=github}
+{{<inlineJava path="HistoriqueParties.java">}}
 import java.util.List;
 import java.util.ArrayList;
 
@@ -1263,7 +1264,8 @@ public class HistoriqueParties {
         }
     }
 }
-```
+{{</inlineJava>}}
+
 
 Dans cet exemple, la variable `parties` est déclarée comme étant de type `List`, mais instanciée avec une `ArrayList`. Cela permet de remplacer `ArrayList` par une autre implémentation de `List`, comme `LinkedList` (optimisée pour les insertions fréquentes), sans modifier le reste du code. La méthode `add` insère des éléments, `get` accède à un élément par son indice, et la boucle `for-each` parcourt les éléments dans l’ordre. Cet exemple montre comment l’interface `List` définit un comportement générique, tandis que `ArrayList` fournit une implémentation efficace pour la plupart des cas.
 
@@ -1282,7 +1284,7 @@ Une `List` immuable est une liste dont les éléments ne peuvent être ni ajout�
 
 Voici un exemple illustrant la création d’une `List` immuable pour stocker les niveaux de difficulté d’un jeu de Sudoku, utilisant `List.of` et `Collections.unmodifiableList` :
 
-```java
+{{<inlineJava path="ListeNiveauxImmuable.java">}}
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -1315,7 +1317,7 @@ public class ListeNiveauxImmuable {
         System.out.println("Niveaux immuables après modification originale : " + niveauxImmuables);
     }
 }
-```
+{{</inlineJava>}}
 
 Dans cet exemple, `List.of` crée une liste immuable contenant trois niveaux de difficulté. Toute tentative de modification (via `add`, `remove` ou `set`) lève une `UnsupportedOperationException`, garantissant l’immuabilité. Avec `Collections.unmodifiableList`, une `ArrayList` modifiable est d’abord créée, puis enveloppée dans une vue immuable. Cependant, il est important de noter que la liste originale (`niveauxModifiables`) reste modifiable, et toute modification de celle-ci se reflète dans la vue immuable, ce qui peut être une source d’erreurs si la liste originale n’est pas protégée. Cet exemple montre l’avantage de `List.of` pour sa simplicité et sa sécurité accrue.
 
@@ -1325,7 +1327,7 @@ Une `Map` immuable est une structure associant des clés uniques à des valeurs,
 
 Voici un exemple illustrant la création d’une `Map` immuable pour associer des joueurs à leurs scores dans un jeu de Sudoku, utilisant `Map.of` et `Collections.unmodifiableMap` :
 
-```java
+{{<inlineJava path="MapScoresImmuable.java">}}
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
@@ -1358,7 +1360,8 @@ public class MapScoresImmuable {
         System.out.println("Scores immuables après modification originale : " + scoresImmuables);
     }
 }
-```
+{{</inlineJava>}}
+
 
 Dans cet exemple, `Map.of` crée une `Map` immuable associant des joueurs à leurs scores. Toute tentative de modification (via `put`, `remove` ou `clear`) lève une `UnsupportedOperationException`. Avec `Collections.unmodifiableMap`, une `HashMap` modifiable est créée, puis enveloppée dans une vue immuable. Comme pour `List`, la `Map` originale reste modifiable, et les modifications de celle-ci affectent la vue immuable, ce qui nécessite une gestion prudente de la `Map` originale. Cet exemple met en évidence la simplicité de `Map.of` pour créer des mappings immuables directement, comparée à l’approche plus verbeuse de `Collections.unmodifiableMap`.
 
