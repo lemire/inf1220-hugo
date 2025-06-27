@@ -650,6 +650,34 @@ Un kilo-octet (ko) correspond à 1 000 octets (selon le système décimal, préf
 </details>
 
 
+### Exercice 28
+
+Écrivez un algorithme qui supprime les doublons d’un tableau d’entiers trié en ordre croissant, en renvoyant la nouvelle taille du tableau.
+
+<details>
+<summary>Réponse</summary>
+
+```
+Entrée :
+Tableau d’entiers trié T de taille N
+
+Variables :
+Entier nouvelle_taille = 1
+Entier i = 1
+
+Tant que i < N faire
+    Si T[i] ≠ T[nouvelle_taille - 1] alors
+        T[nouvelle_taille] = T[i]
+        nouvelle_taille = nouvelle_taille + 1
+    Fin si
+    i = i + 1
+Fin tant que
+
+Retourner nouvelle_taille
+```
+</details>
+
+
 ### Vidéos
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
