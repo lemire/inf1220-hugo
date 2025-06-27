@@ -72,32 +72,7 @@ Grâce à JavaScript, il est possible de manipuler le Document Object Model (DOM
 </script>
 ```
 
-### JSON
-
-JSON (JavaScript Object Notation) est un format léger d’échange de données, facile à lire et à écrire pour les humains et les machines. Il est basé sur une syntaxe dérivée des objets JavaScript, mais il est utilisé par de nombreux langages de programmation. JSON est particulièrement populaire pour transmettre des données entre un serveur et une application web, notamment dans les API REST.
-
-Un document JSON est constitué de paires clé/valeur, de tableaux et d’objets imbriqués. Il ne supporte que quelques types de données : chaînes de caractères, nombres, booléens, tableaux, objets et null. JSON est plus compact et plus facile à manipuler que le XML, ce qui explique son adoption massive dans le développement web.
-
-*Exemple de structure JSON :*
-
-```json {style=github}
-{
-  "nom": "Alice",
-  "age": 30,
-  "estEtudiant": false,
-  "competences": ["Java", "HTML", "JavaScript"]
-}
-```
-
-*Exemple d’utilisation en JavaScript :*
-
-```javascript {style=github}
-const donnees = '{"nom": "Alice", "age": 30}';
-const obj = JSON.parse(donnees);
-console.log(obj.nom); // Affiche "Alice"
-```
-
-# XML
+### XML
 
 XML (Extensible Markup Language) est un autre format d’échange de données, plus structuré et verbeux que JSON. Il utilise des balises personnalisables pour décrire les données, ce qui le rend très flexible et adapté à des applications nécessitant une structure complexe, comme les documents ou les configurations. XML est largement dans les fichiers de configuration, en bureautique (Microsoft Word stocke ses données en XML) ou les formats de documents. Contrairement à JSON, XML supporte les attributs dans les balises et permet l’inclusion de métadonnées, mais sa syntaxe plus lourde peut compliquer son traitement.
 

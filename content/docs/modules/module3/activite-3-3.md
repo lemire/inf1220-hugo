@@ -131,6 +131,99 @@ Utilisez l'application suivante pour explorer la représentation des chaînes de
 {{< webapp path="unicode.html" >}}
 
 
+Voici un exemple en Java qui illustre la plupart des propriétés et méthodes de la classe String.
+
+{{<inlineJava path="ExempleString.java" lang="java">}}
+// Programme pour démontrer les principales méthodes de la classe String en Java
+public class ExempleString {
+    public static void main(String[] args) {
+        // Déclaration et initialisation de chaînes
+        String texte = "Bonjour le Monde !";
+        String autreTexte = "bonjour le monde !";
+        String vide = "";
+        String avecEspaces = "   Texte avec espaces   ";
+
+        // 1. Longueur de la chaîne
+        // La méthode length() retourne le nombre de caractères
+        System.out.println("Longueur de texte : " + texte.length());
+
+        // 2. Vérification si la chaîne est vide
+        // isEmpty() retourne true si la chaîne est vide
+        System.out.println("La chaîne vide est-elle vide ? " + vide.isEmpty());
+        System.out.println("La chaîne texte est-elle vide ? " + texte.isEmpty());
+
+        // 3. Conversion en majuscules et minuscules
+        // toUpperCase() et toLowerCase() pour changer la casse
+        System.out.println("Texte en majuscules : " + texte.toUpperCase());
+        System.out.println("Texte en minuscules : " + texte.toLowerCase());
+
+        // 4. Comparaison de chaînes
+        // equals() compare le contenu, equalsIgnoreCase() ignore la casse
+        System.out.println("Les chaînes sont-elles égales ? " + texte.equals(autreTexte));
+        System.out.println("Égalité en ignorant la casse : " + texte.equalsIgnoreCase(autreTexte));
+
+        // 5. Recherche dans la chaîne
+        // contains() vérifie la présence d'une sous-chaîne
+        // indexOf() retourne la position de la première occurrence
+        System.out.println("Contient 'Monde' ? " + texte.contains("Monde"));
+        System.out.println("Position de 'le' : " + texte.indexOf("le"));
+        System.out.println("Dernière position de 'o' : " + texte.lastIndexOf("o"));
+
+        // 6. Extraction de sous-chaînes
+        // substring() extrait une partie de la chaîne
+        System.out.println("Sous-chaîne (0,7) : " + texte.substring(0, 7));
+        System.out.println("Sous-chaîne à partir de 8 : " + texte.substring(8));
+
+        // 7. Remplacement
+        // replace() et replaceAll() pour modifier le contenu
+        System.out.println("Remplacer 'Monde' par 'Univers' : " + texte.replace("Monde", "Univers"));
+        System.out.println("Remplacer espaces par '_' : " + texte.replaceAll("\\s", "_"));
+
+        // 8. Suppression des espaces
+        // trim() supprime les espaces au début et à la fin
+        // strip() est similaire mais gère plus de types d'espaces (Java 11+)
+        System.out.println("Après trim : '" + avecEspaces.trim() + "'");
+        System.out.println("Après strip : '" + avecEspaces.strip() + "'");
+
+        // 9. Concaténation
+        // concat() ou l'opérateur + pour joindre des chaînes
+        String nouvelleChaine = texte.concat(" Bienvenue !");
+        System.out.println("Après concaténation : " + nouvelleChaine);
+
+        // 10. Vérification du début et de la fin
+        // startsWith() et endsWith() pour vérifier les préfixes/suffixes
+        System.out.println("Commence par 'Bon' ? " + texte.startsWith("Bon"));
+        System.out.println("Finit par '!' ? " + texte.endsWith("!"));
+
+        // 11. Conversion en tableau de caractères
+        // toCharArray() convertit la chaîne en tableau de char
+        char[] caracteres = texte.toCharArray();
+        System.out.println("Premier caractère : " + caracteres[0]);
+
+        // 12. Formatage
+        // String.format() pour créer des chaînes formatées
+        String formate = String.format("Texte: %s, Longueur: %d", texte, texte.length());
+        System.out.println("Chaîne formatée : " + formate);
+
+        // 13. Division de la chaîne
+        // split() divise la chaîne en un tableau selon un délimiteur
+        String[] mots = texte.split("\\s+");
+        System.out.println("Nombre de mots : " + mots.length);
+        for (String mot : mots) {
+            System.out.println("Mot : " + mot);
+        }
+
+        // 14. Vérification des caractères
+        // charAt() accède à un caractère à une position donnée
+        System.out.println("Caractère à l'index 2 : " + texte.charAt(2));
+
+        // 15. Comparaison lexicographique
+        // compareTo() compare deux chaînes lexicographiquement
+        System.out.println("Comparaison avec autreTexte : " + texte.compareTo(autreTexte));
+        System.out.println("Comparaison en ignorant la casse : " + texte.compareToIgnoreCase(autreTexte));
+    }
+}
+{{</inlineJava>}}
 
 ## StringBuilder
 
@@ -150,6 +243,103 @@ System.out.println(resultat);
 ```
 
 Dans cet exemple, toutes les lignes sont ajoutées efficacement à la même chaîne. Pour des opérations répétées ou sur de gros volumes de texte, <code>StringBuilder</code> est donc le choix recommandé pour de bonnes performances.
+
+
+Voici un exemple en Java qui illustre la plupart des propriétés et méthodes de la classe StringBuilder.
+
+{{<inlineJava path="ExempleStringBuilder.java" lang="java">}}
+ublic class ExempleStringBuilder {
+    public static void main(String[] args) {
+        // Initialisation d'un StringBuilder avec une chaîne initiale
+        StringBuilder sb = new StringBuilder("Bonjour le Monde !");
+        StringBuilder vide = new StringBuilder();
+        StringBuilder avecEspaces = new StringBuilder("   Texte avec espaces   ");
+
+        // 1. Longueur et capacité
+        // length() retourne le nombre de caractères, capacity() la taille du buffer
+        System.out.println("Longueur de sb : " + sb.length());
+        System.out.println("Capacité de sb : " + sb.capacity());
+
+        // 2. Ajout de contenu
+        // append() ajoute du contenu à la fin
+        sb.append(" Bienvenue !");
+        System.out.println("Après append : " + sb);
+
+        // 3. Insertion
+        // insert() insère du contenu à une position donnée
+        sb.insert(7, "cher ");
+        System.out.println("Après insert : " + sb);
+
+        // 4. Remplacement
+        // replace() remplace une portion de la chaîne
+        sb.replace(8, 12, "monde");
+        System.out.println("Après replace : " + sb);
+
+        // 5. Suppression
+        // delete() supprime une portion, deleteCharAt() supprime un caractère
+        sb.delete(0, 7);
+        System.out.println("Après delete : " + sb);
+        sb.deleteCharAt(sb.length() - 1);
+        System.out.println("Après deleteCharAt : " + sb);
+
+        // 6. Inversion
+        // reverse() inverse l'ordre des caractères
+        sb.reverse();
+        System.out.println("Après reverse : " + sb);
+        sb.reverse(); // Remettre dans l'ordre initial
+        System.out.println("Après second reverse : " + sb);
+
+        // 7. Accès aux caractères
+        // charAt() accède à un caractère, setCharAt() modifie un caractère
+        System.out.println("Caractère à l'index 0 : " + sb.charAt(0));
+        sb.setCharAt(0, 'C');
+        System.out.println("Après setCharAt : " + sb);
+
+        // 8. Extraction de sous-chaîne
+        // substring() extrait une portion sans modifier l'original
+        System.out.println("Sous-chaîne (0,5) : " + sb.substring(0, 5));
+        System.out.println("Sous-chaîne à partir de 6 : " + sb.substring(6));
+
+        // 9. Modification de la longueur
+        // setLength() ajuste la longueur (tronque ou ajoute des caractères nuls)
+        sb.setLength(10);
+        System.out.println("Après setLength(10) : " + sb);
+        sb.setLength(20); // Ajoute des caractères nuls
+        System.out.println("Après setLength(20) : " + sb);
+
+        // 10. Suppression des espaces
+        // trimToSize() réduit la capacité au minimum nécessaire
+        avecEspaces.trimToSize();
+        System.out.println("Capacité après trimToSize : " + avecEspaces.capacity());
+
+        // 11. Conversion en String
+        // toString() convertit le StringBuilder en String
+        String resultat = sb.toString();
+        System.out.println("Conversion en String : " + resultat);
+
+        // 12. Vérification si vide
+        // Un StringBuilder est considéré vide si length() == 0
+        System.out.println("Le StringBuilder vide est-il vide ? " + (vide.length() == 0));
+        System.out.println("Le StringBuilder sb est-il vide ? " + (sb.length() == 0));
+
+        // 13. Index de sous-chaîne
+        // indexOf() et lastIndexOf() recherchent une sous-chaîne
+        System.out.println("Position de 'monde' : " + sb.indexOf("monde"));
+        System.out.println("Dernière position de 'e' : " + sb.lastIndexOf("e"));
+
+        // 14. Ajout de différents types de données
+        // append() peut ajouter des types variés (int, double, etc.)
+        StringBuilder sb2 = new StringBuilder("Valeur : ");
+        sb2.append(42).append(" et ").append(3.14);
+        System.out.println("Ajout de types variés : " + sb2);
+
+        // 15. Réinitialisation
+        // setLength(0) vide le contenu
+        sb.setLength(0);
+        System.out.println("Après réinitialisation : " + sb);
+    }
+}
+{{</inlineJava>}}
 
 
 ## CharSequence et subSequence()
@@ -351,8 +541,8 @@ public static void main(String[] args) {
 
 ### Trier un ensemble de données
 
-<p>L'atout principal de l'ordinateur est sa capacité de traiter très rapidement une immense quantité de données (par exemple, la recherche d'éléments dans un ensemble selon des contraintes choisies par l'utilisateur ou encore le tri d'éléments en fonction d'un critère déterminé). 
-Le tri d'informations fait partie des nombreuses applications en informatique. Il y a n! (factoriel n) façons d'ordonner une collection de n éléments. Les données triées permettent une recherche d'informations plus efficace. Le choix d'un algorithme de tri est par conséquent un critère plus pertinent que la vitesse intrinsèque de l'ordinateur.</p>
+L'atout principal de l'ordinateur est sa capacité de traiter très rapidement une immense quantité de données (par exemple, la recherche d'éléments dans un ensemble selon des contraintes choisies par l'utilisateur ou encore le tri d'éléments en fonction d'un critère déterminé). 
+Le tri d'informations fait partie des nombreuses applications en informatique. Il y a n! (factoriel n) façons d'ordonner une collection de n éléments. Les données triées permettent une recherche d'informations plus efficace. Le choix d'un algorithme de tri est par conséquent un critère plus pertinent que la vitesse intrinsèque de l'ordinateur.
 
 <p>Un tri simple de données consiste à rechercher la valeur minimale d'un tableau ou sa valeur maximale. Grâce à un algorithme de recherche, nous assignons la valeur minimale à la première valeur, puis parcourons l'ensemble des valeurs pour tester si l'une d'entre elles est plus petite que la valeur minimale. Si tel est le cas, la valeur minimale est assignée à cette valeur, sinon, le tri se poursuit. </p>
 
@@ -397,7 +587,7 @@ L’interface Comparator définit une méthode abstraite, compare(T o1, T o2), q
 - Une valeur positive si o1 doit suivre o2.
 
 
-Ce cas montre comment trier une liste de chaînes en utilisant un comparator pour inverser l’ordre alphabétique naturel.
+Ce cas montre comment trier une liste de chaînes en utilisant une *Comparator* pour inverser l’ordre alphabétique naturel.
 
 {{<inlineJava path="TriInverse.java" lang="java">}}
 import java.util.Arrays;
@@ -412,7 +602,69 @@ public class TriInverse {
 }
 {{</inlineJava>}}
 
+Nous avons ici utiliser la classe Arrays qui est polyvalente. Elle permet de trier des tableaux, mais aussi d'accomplir plusieurs
+tâches essentielles.
 
+{{<inlineJava path="ArraysDemo.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+
+public class ArraysDemo {
+    public static void main(String[] args) {
+        // Création d'un tableau d'entiers pour les exemples
+        int[] nombres = {5, 2, 8, 1, 9};
+
+        // toString : affiche le contenu du tableau sous forme de chaîne
+        System.out.println("\nAffichage du tableau avec toString : " + Arrays.toString(nombres));
+
+        // sort : trie le tableau en ordre croissant
+        Arrays.sort(nombres);
+        System.out.println("Tableau trié : " + Arrays.toString(nombres));
+
+        // binarySearch : recherche un élément dans un tableau trié
+        int index = Arrays.binarySearch(nombres, 8);
+        System.out.println("\nIndex de l'élément 8 (binarySearch) : " + index);
+
+        // copyOf : crée une copie du tableau avec une nouvelle taille
+        int[] copie = Arrays.copyOf(nombres, 7);
+        System.out.println("Copie du tableau avec taille 7 : " + Arrays.toString(copie));
+
+        // copyOfRange : copie une plage du tableau
+        int[] sousTableau = Arrays.copyOfRange(nombres, 1, 4);
+        System.out.println("Sous-tableau (indices 1 à 3) : " + Arrays.toString(sousTableau));
+
+        // fill : remplit le tableau avec une valeur spécifique
+        int[] tableauRempli = new int[5];
+        Arrays.fill(tableauRempli, 42);
+        System.out.println("\nTableau rempli avec 42 : " + Arrays.toString(tableauRempli));
+
+        // equals : compare deux tableaux pour l'égalité
+        int[] autreTableau = {1, 2, 5, 8, 9};
+        boolean sontEgaux = Arrays.equals(nombres, autreTableau);
+        System.out.println("\nLes tableaux sont égaux ? " + sontEgaux);
+
+        // deepEquals : compare des tableaux imbriqués pour l'égalité
+        Integer[][] tableau2D = {{1, 2}, {3, 4}};
+        Integer[][] autreTableau2D = {{1, 2}, {3, 4}};
+        boolean egaux2D = Arrays.deepEquals(tableau2D, autreTableau2D);
+        System.out.println("Les tableaux 2D sont égaux (deepEquals) ? " + egaux2D);
+
+        // hashCode : calcule le code de hachage du tableau
+        int hash = Arrays.hashCode(nombres);
+        System.out.println("\nCode de hachage du tableau : " + hash);
+
+        // deepHashCode : calcule le code de hachage pour un tableau imbriqué
+        int deepHash = Arrays.deepHashCode(tableau2D);
+        System.out.println("Code de hachage du tableau 2D : " + deepHash);
+
+        // stream : convertit le tableau en un IntStream pour traitement fonctionnel
+        System.out.println("\nNombres supérieurs à 4 (via stream) :");
+        Arrays.stream(nombres)
+              .filter(n -> n > 4)
+              .forEach(n -> System.out.println(n));
+    }
+}
+{{</inlineJava>}}
 
 Le prochain code Java illustre une manière simple et claire de trier une liste de mots en fonction de leur longueur, de la plus courte à la plus longue. Le programme commence par importer des outils Java essentiels : Arrays pour créer des listes, List pour gérer une collection de données, et Comparator pour définir une règle de tri personnalisée. Une classe spéciale, LongueurComparator, est créée pour comparer deux mots en soustrayant la longueur du premier mot de celle du second, ce qui permet de les classer par ordre de taille. Dans la méthode principale (main), une liste de mots ("chat", "éléphant", "chien", "girafe") est initialisée, puis triée à l’aide de cette règle de comparaison. Enfin, le programme affiche la liste triée, montrant les mots dans l’ordre suivant : "chat", "chien", "girafe", "éléphant".
 
@@ -768,6 +1020,12 @@ class Main {
       // type Object[]. On ne peut donc pas faire:
       //
       // String[] tableau = list.toArray(); // Non!!!
+
+
+      // Solution de rechange simple : 
+      String[] tableau = list.toArray(new String[0]); 
+      // ou
+      // String[] tableau = list.toArray(String[]::new);
   }
 }
 {{</inlineJava>}}
@@ -794,6 +1052,55 @@ while(it.hasNext()) {
     System.out.println(it.next());
 }
 ```
+
+On peut passer d'un tableau à un ArrayList, et inversement.
+
+{{<inlineJava path="ArrayListConversion.java" lang="java">}}
+import java.util.ArrayList;
+
+public class ArrayListConversion {
+    public static void main(String[] args) {
+        // Création d'un tableau d'objets (String) pour les exemples
+        String[] tableau = {"un", "deux", "trois", "quatre"};
+
+        // Conversion tableau vers ArrayList : Boucle manuelle
+        // Chaque élément du tableau est ajouté à un nouvel ArrayList
+        ArrayList<String> liste = new ArrayList<>();
+        for (String element : tableau) {
+            liste.add(element);
+        }
+        // Résultat : liste contient ["un", "deux", "trois", "quatre"]
+        // Modification de l'ArrayList en ajoutant un élément
+        liste.add("cinq");
+        // Résultat après modification : liste contient ["un", "deux", "trois", "quatre", "cinq"]
+
+        // Conversion ArrayList vers tableau : Boucle manuelle
+        // Création d'un tableau et remplissage à partir de l'ArrayList
+        String[] nouveauTableau = new String[liste.size()];
+        for (int i = 0; i < liste.size(); i++) {
+            nouveauTableau[i] = liste.get(i);
+        }
+        // Résultat : nouveauTableau contient ["un", "deux", "trois", "quatre", "cinq"]
+
+        // Exemple avec un tableau de types primitifs (int[])
+        int[] nombres = {1, 2, 3, 4};
+        // Conversion en ArrayList<Integer> : Boucle manuelle (boxing manuel)
+        ArrayList<Integer> listeNombres = new ArrayList<>();
+        for (int nombre : nombres) {
+            listeNombres.add(nombre);
+        }
+        // Résultat : listeNombres contient [1, 2, 3, 4]
+
+        // Conversion ArrayList<Integer> vers int[] : Boucle manuelle (unboxing)
+        int[] tableauNombres = new int[listeNombres.size()];
+        for (int i = 0; i < listeNombres.size(); i++) {
+            tableauNombres[i] = listeNombres.get(i);
+        }
+        // Résultat : tableauNombres contient [1, 2, 3, 4]
+    }
+}
+{{</inlineJava>}}
+
 
 Les structures de données dynamiques, comme StringBuilder ou ArrayList ne sont pas magiques. Elles augmentent leur capacité de la manière suivante.
 En commençant avec un tableau ayant une capacité fixe, elles permettent d'ajouter des éléments jusqu'à ce que la capacité soit épuisée.

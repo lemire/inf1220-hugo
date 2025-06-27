@@ -289,6 +289,419 @@ public class Main {
 }
 {{</inlineJava>}}
 
+
+Voici un exemple qui illustre les principales méthodes.
+
+{{<inlineJava path="StreamDemo.java" lang="java">}}
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+class Personne {
+    private String nom;
+    private int age;
+    private double salaire;
+
+    public Personne(String nom, int age, double salaire) {
+        this.nom = nom;
+        this.age = age;
+        this.salaire = salaire;
+    }
+
+    public String getNom() { return nom; }
+    public int getAge() { return age; }
+    public double getSalaire() { return salaire; }
+}
+
+public class StreamDemo {
+    public static void main(String[] args) {
+        // Création d'une liste de personnes pour les exemples
+        List<Personne> personnes = Arrays.asList(
+            new Personne("alice", 25, 50000.0),
+            new Personne("bob", 30, 60000.0),
+            new Personne("charlie", 25, 55000.0),
+            new Personne("dave", 35, 70000.0)
+        );
+
+        // filter : sélectionne les personnes de plus de 28 ans
+        System.out.println("Personnes de plus de 28 ans :");
+        personnes.stream()
+                 .filter(p -> p.getAge() > 28)
+                 .forEach(p -> System.out.println(p.getNom()));
+
+        // map : transforme chaque personne en son nom en majuscules
+        System.out.println("\nNoms en majuscules :");
+        List<String> nomsMaj = personnes.stream()
+                                       .map(p -> p.getNom().toUpperCase())
+                                       .collect(Collectors.toList());
+        System.out.println(nomsMaj);
+
+        // flatMap : aplatit une liste de listes de noms en une seule liste
+        List<List<String>> listesNoms = Arrays.asList(
+            Arrays.asList("alice", "bob"),
+            Arrays.asList("charlie", "dave")
+        );
+        System.out.println("\nNoms aplatis :");
+        List<String> nomsAplatis = listesNoms.stream()
+                                            .flatMap(List::stream)
+                                            .collect(Collectors.toList());
+        System.out.println(nomsAplatis);
+
+        // distinct : supprime les âges en double
+        System.out.println("\nÂges distincts :");
+        personnes.stream()
+                 .map(Personne::getAge)
+                 .distinct()
+                 .forEach(age -> System.out.println(age));
+
+        // sorted : trie les personnes par salaire
+        System.out.println("\nPersonnes triées par salaire :");
+        personnes.stream()
+                 .sorted((p1, p2) -> Double.compare(p1.getSalaire(), p2.getSalaire()))
+                 .forEach(p -> System.out.println(p.getNom() + ": " + p.getSalaire()));
+
+        // limit : limite à 2 personnes
+        System.out.println("\nDeux premières personnes :");
+        personnes.stream()
+                 .limit(2)
+                 .forEach(p -> System.out.println(p.getNom()));
+
+        // skip : ignore la première personne
+        System.out.println("\nPersonnes après avoir ignoré la première :");
+        personnes.stream()
+                 .skip(1)
+                 .forEach(p -> System.out.println(p.getNom()));
+
+        // reduce : concatène les noms en une seule chaîne
+        String nomsConcat = personnes.stream()
+                                    .map(Personne::getNom)
+                                    .reduce("", (a, b) -> a + (a.isEmpty() ? "" : ", ") + b);
+        System.out.println("\nNoms concaténés : " + nomsConcat);
+
+        // anyMatch : vérifie si une personne a plus de 30 ans
+        boolean plusDe30 = personnes.stream()
+                                   .anyMatch(p -> p.getAge() > 30);
+        System.out.println("\nUne personne a-t-elle plus de 30 ans ? " + plusDe30);
+
+        // allMatch : vérifie si toutes les personnes ont plus de 20 ans
+        boolean tousPlusDe20 = personnes.stream()
+                                       .allMatch(p -> p.getAge() > 20);
+        System.out.println("Toutes les personnes ont-elles plus de 20 ans ? " + tousPlusDe20);
+
+        // noneMatch : vérifie si aucune personne n'a moins de 20 ans
+        boolean aucunMoinsDe20 = personnes.stream()
+                                         .noneMatch(p -> p.getAge() < 20);
+        System.out.println("Aucune personne a-t-elle moins de 20 ans ? " + aucunMoinsDe20);
+
+        // findFirst : trouve la première personne
+        System.out.println("\nPremière personne :");
+        personnes.stream()
+                 .findFirst()
+                 .ifPresent(p -> System.out.println(p.getNom()));
+
+        // count : compte le nombre de personnes
+        long nombre = personnes.stream().count();
+        System.out.println("\nNombre total de personnes : " + nombre);
+
+        // toArray : convertit en tableau de noms
+        String[] tableauNoms = personnes.stream()
+                                       .map(Personne::getNom)
+                                       .toArray(String[]::new);
+        System.out.println("\nTableau de noms : " + Arrays.toString(tableauNoms));
+    }
+}
+{{</inlineJava>}}
+
+
+### Conversion vers les types primitifs
+Les flux standards opèrent sur des objets, mais pour optimiser les performances avec les types primitifs, Java propose des flux spécialisés : IntStream, LongStream et DoubleStream. Par exemple, un IntStream manipule directement des valeurs int.
+
+{{<inlineJava path="StreamDemo.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+
+public class StreamDemo {
+    public static void main(String[] args) {
+        // Cas 1 : Conversion d'une liste de chaînes en IntStream et calcul de la somme
+        List<String> nombres = Arrays.asList("1", "2", "3", "4");
+        int somme = nombres.stream()
+                          .mapToInt(Integer::parseInt)
+                          .sum();
+        System.out.println("Somme des chaînes : " + somme); // Affiche : Somme des chaînes : 10
+        
+        // Cas 2 : Conversion d'une liste de chaînes en DoubleStream et calcul de la moyenne
+        double moyenne = nombres.stream()
+                               .mapToDouble(Double::parseDouble)
+                               .average()
+                               .orElse(0.0);
+        System.out.println("Moyenne des chaînes : " + moyenne); // Affiche : Moyenne des chaînes : 2.5
+        
+        // Cas 3 : Utilisation d'un tableau int[] pour créer un IntStream et calcul de la somme
+        int[] tableau = {5, 10, 15, 20};
+        int sommeTableau = Arrays.stream(tableau)
+                                .sum();
+        System.out.println("Somme du tableau : " + sommeTableau); // Affiche : Somme du tableau : 50
+    }
+}
+{{</inlineJava>}}
+
+Voici un exemple qui illustre les principales méthodes d'une instance de `IntStream`.
+
+{{<inlineJava path="IntStreamDemo.java" lang="java">}}
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class IntStreamDemo {
+    public static void main(String[] args) {
+        // Création d'un IntStream à partir d'un tableau d'entiers
+        int[] nombres = {5, 2, 8, 2, 10, 3, 5};
+        IntStream stream = Arrays.stream(nombres);
+
+        // filter : sélectionne les nombres supérieurs à 4
+        System.out.println("Nombres supérieurs à 4 :");
+        Arrays.stream(nombres)
+              .filter(n -> n > 4)
+              .forEach(n -> System.out.println(n));
+
+        // map : multiplie chaque nombre par 2
+        System.out.println("\nNombres multipliés par 2 :");
+        Arrays.stream(nombres)
+              .map(n -> n * 2)
+              .forEach(n -> System.out.println(n));
+
+        // distinct : supprime les doublons
+        System.out.println("\nNombres distincts :");
+        Arrays.stream(nombres)
+              .distinct()
+              .forEach(n -> System.out.println(n));
+
+        // sorted : trie les nombres par ordre croissant
+        System.out.println("\nNombres triés :");
+        Arrays.stream(nombres)
+              .sorted()
+              .forEach(n -> System.out.println(n));
+
+        // limit : limite aux 3 premiers nombres
+        System.out.println("\nTrois premiers nombres :");
+        Arrays.stream(nombres)
+              .limit(3)
+              .forEach(n -> System.out.println(n));
+
+        // skip : ignore les 2 premiers nombres
+        System.out.println("\nNombres après avoir ignoré les 2 premiers :");
+        Arrays.stream(nombres)
+              .skip(2)
+              .forEach(n -> System.out.println(n));
+
+        // reduce : calcule la somme des nombres
+        int somme = Arrays.stream(nombres)
+                         .reduce(0, (a, b) -> a + b);
+        System.out.println("\nSomme des nombres : " + somme);
+
+        // anyMatch : vérifie si un nombre est supérieur à 9
+        boolean superieurA9 = Arrays.stream(nombres)
+                                   .anyMatch(n -> n > 9);
+        System.out.println("\nY a-t-il un nombre supérieur à 9 ? " + superieurA9);
+
+        // allMatch : vérifie si tous les nombres sont positifs
+        boolean tousPositifs = Arrays.stream(nombres)
+                                    .allMatch(n -> n > 0);
+        System.out.println("Tous les nombres sont-ils positifs ? " + tousPositifs);
+
+        // noneMatch : vérifie si aucun nombre n'est négatif
+        boolean aucunNegatif = Arrays.stream(nombres)
+                                    .noneMatch(n -> n < 0);
+        System.out.println("Aucun nombre est-il négatif ? " + aucunNegatif);
+
+        // findFirst : trouve le premier nombre
+        System.out.println("\nPremier nombre :");
+        Arrays.stream(nombres)
+              .findFirst()
+              .ifPresent(n -> System.out.println(n));
+
+        // count : compte le nombre d'éléments
+        long nombreElements = Arrays.stream(nombres).count();
+        System.out.println("\nNombre total d'éléments : " + nombreElements);
+
+        // toArray : convertit en tableau d'entiers
+        int[] tableau = Arrays.stream(nombres).toArray();
+        System.out.println("\nTableau des nombres : " + Arrays.toString(tableau));
+
+        // sum : calcule la somme des nombres
+        int sommeDirecte = Arrays.stream(nombres).sum();
+        System.out.println("\nSomme directe : " + sommeDirecte);
+
+        // average : calcule la moyenne des nombres
+        double moyenne = Arrays.stream(nombres)
+                              .average()
+                              .orElse(0.0);
+        System.out.println("Moyenne des nombres : " + moyenne);
+
+        // min : trouve le plus petit nombre
+        System.out.println("\nNombre minimum :");
+        Arrays.stream(nombres)
+              .min()
+              .ifPresent(n -> System.out.println(n));
+
+        // max : trouve le plus grand nombre
+        System.out.println("\nNombre maximum :");
+        Arrays.stream(nombres)
+              .max()
+              .ifPresent(n -> System.out.println(n));
+    }
+}
+{{</inlineJava>}}
+
+
+L’API Stream de Java comprend des méthodes tells que mapToInt, qui transforme un `Stream` en un `IntStream` de valeurs primitives int. Elle prend en paramètre une fonction définissant comment chaque élément est converti en int.  De manière similaire, l’API propose mapToLong et mapToDouble, qui convertissent respectivement un flux en LongStream ou DoubleStream pour les types primitifs long et double.
+Une fois le flux transformé, des opérations spécifiques aux flux primitifs, comme sum(), average(), min() ou max(), deviennent disponibles. Par exemple, mapToInt est souvent utilisé pour extraire des valeurs numériques d’objets complexes ou de chaînes de caractères avant d’effectuer des calculs. 
+
+{{<inlineJava path="StreamExample.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+
+class Person {
+    private int age;
+    public Person(int age) { this.age = age; }
+    public int getAge() { return age; }
+}
+
+public class StreamExample {
+    public static void main(String[] args) {
+        // Exemple avec mapToInt
+        List<String> numbers = Arrays.asList("10", "20", "30");
+        int sumInt = numbers.stream()
+                           .mapToInt(Integer::parseInt)
+                           .sum();
+        System.out.println("Somme des entiers : " + sumInt);
+
+        // Exemple avec mapToDouble
+        List<String> decimals = Arrays.asList("1.5", "2.5", "3.5");
+        double sumDouble = decimals.stream()
+                                  .mapToDouble(Double::parseDouble)
+                                  .sum();
+        System.out.println("Somme des décimaux : " + sumDouble);
+
+        // Exemple avec mapToLong
+        List<String> longs = Arrays.asList("1000", "2000", "3000");
+        long sumLong = longs.stream()
+                           .mapToLong(Long::parseLong)
+                           .sum();
+        System.out.println("Somme des longs : " + sumLong);
+
+        // Exemple combiné avec des objets
+        List<Person> people = Arrays.asList(new Person(20), new Person(30), new Person(40));
+        int totalAge = people.stream()
+                            .mapToInt(Person::getAge)
+                            .filter(age -> age > 25)
+                            .sum();
+        System.out.println("Somme des âges supérieurs à 25 : " + totalAge);
+    }
+}
+{{</inlineJava>}}
+
+
+## Référence de constructeur
+
+Les références de constructeur en Java, introduites avec Java 8, permettent de référencer un constructeur d’une classe de manière concise à l’aide de la syntaxe Classe::new. Elles sont utilisées dans des contextes fonctionnels, comme les interfaces fonctionnelles (par exemple, Function, Supplier, ou IntFunction), pour créer des instances d’objets sans écrire explicitement une expression lambda. Elles sont particulièrement utiles dans les opérations de l’API Stream, les fabriques d’objets, ou les méthodes comme map et toArray, car elles simplifient le code tout en restant expressives. Par exemple, dans une conversion d’un flux en tableau, une référence de constructeur comme String[]::new peut être utilisée pour indiquer comment créer un tableau de chaînes de la taille appropriée, évitant ainsi des conversions manuelles complexes.
+
+{{<inlineJava path="ConstructorReferenceDemo.java" lang="java">}}
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ConstructorReferenceDemo {
+    public static void main(String[] args) {
+        // Création d’une ArrayList pour l’exemple
+        ArrayList<String> list = new ArrayList<>();
+        list.add("un");
+        list.add("deux");
+        list.add("trois");
+
+        // Utilisation d’une référence de constructeur String[]::new
+        // String[]::new est une fonction qui crée un tableau String[] de la taille demandée
+        // Elle est passée à toArray pour convertir le flux en tableau
+        String[] tableau = list.stream().toArray(String[]::new);
+        // Résultat : tableau contient ["un", "deux", "trois"]
+    }
+}
+{{</inlineJava>}}
+
+Nous pouvons utiliser la référence de constructeur comme une fonction.
+
+{{<inlineJava path="ConstructorReferenceAsFunction.java" lang="java">}}
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+class Produit {
+    private String nom;
+    private double prix;
+
+    // Constructeur sans paramètre
+    public Produit() {
+        this.nom = "inconnu";
+        this.prix = 0.0;
+    }
+
+    // Constructeur avec un paramètre
+    public Produit(String nom) {
+        this.nom = nom;
+        this.prix = 0.0;
+    }
+
+    // Constructeur avec deux paramètres
+    public Produit(String nom, double prix) {
+        this.nom = nom;
+        this.prix = prix;
+    }
+
+    @Override
+    public String toString() {
+        return nom + ": " + prix;
+    }
+}
+
+public class ConstructorReferenceAsFunction {
+    public static void main(String[] args) {
+        // Liste de noms pour créer des produits
+        List<String> noms = Arrays.asList("chaise", "table", "lampe");
+
+        // Référence de constructeur comme Function
+        // Produit::new (String) correspond à Function<String, Produit>
+        Function<String, Produit> creerProduit = Produit::new;
+        List<Produit> produits1 = noms.stream()
+                                     .map(creerProduit)
+                                     .toList();
+        // Résultat : produits1 contient [chaise: 0.0, table: 0.0, lampe: 0.0]
+
+        // Référence de constructeur comme BiFunction
+        // Produit::new (String, double) correspond à BiFunction<String, Double, Produit>
+        BiFunction<String, Double, Produit> creerProduitAvecPrix = Produit::new;
+        List<Produit> produits2 = noms.stream()
+                                     .map(nom -> creerProduitAvecPrix.apply(nom, 100.0))
+                                     .toList();
+        // Résultat : produits2 contient [chaise: 100.0, table: 100.0, lampe: 100.0]
+
+        // Référence de constructeur comme Supplier
+        // Produit::new () correspond à Supplier<Produit>
+        Supplier<Produit> produitParDefaut = Produit::new;
+        Produit produitDefaut = produitParDefaut.get();
+        // Résultat : produitDefaut est [inconnu: 0.0]
+
+        // Référence de constructeur pour un tableau
+        // Produit[]::new correspond à IntFunction<Produit[]>
+        Produit[] tableauProduits = produits1.stream()
+                                            .toArray(Produit[]::new);
+        // Résultat : tableauProduits contient les mêmes produits que produits1
+    }
+}
+{{</inlineJava>}}
+
+
 ## Function, Predicate
 
 En Java, les interfaces Function et Predicate font partie du package java.util.function, introduit avec Java 8 pour supporter la programmation fonctionnelle. L'interface `Function<T, R>` représente une fonction qui prend un argument de type `T` et produit un résultat de type `R`. Elle est utilisée pour transformer ou mapper des données, souvent dans des contextes comme les streams ou les lambdas. Par exemple, une Function peut convertir une chaîne en sa longueur ou transformer un objet en un autre type. Sa méthode principale est apply, qui exécute la transformation. Les Function peuvent être chaînées avec des méthodes comme andThen ou compose pour combiner des opérations. Ces interfaces rendent le code plus concis et déclaratif, facilitant les manipulations fonctionnelles dans un langage historiquement orienté objet.

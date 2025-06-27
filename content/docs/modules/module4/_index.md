@@ -27,3 +27,5 @@ Vous apprendrez également à utiliser Maven pour automatiser la compilation et 
 - Comprendre et appliquer les notions de flux (streams) pour optimiser la gestion des données.
 - Appliquer les bonnes pratiques pour assurer la robustesse et la performance des opérations d’E/S.
 - Intégrer les opérations d’entrée/sortie dans des programmes plus complexes, en lien avec les structures de données et de contrôle vues dans les modules précédents.
+- Vous pourrez décrire le format JSON.
+- Vous pourrez décrire le format XML.

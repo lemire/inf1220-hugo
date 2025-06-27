@@ -258,15 +258,36 @@ void main() {
 
 ## Accès à l'Internet
 
+*Dans ce cours, vous n'aurez pas à gérer des requêtes HTTP. Il est néanmoins nécessaire d'être familier avec le principle.
+Prenez la peine de lire et d'exécuter les exemples suivants.*
+
 Java permet aussi d'avoir accès à des ressources sur le web. Grâce à ses bibliothèques modernes, comme l'API HttpClient introduite dans Java 11, il est possible d'effectuer des requêtes HTTP de manière simple et efficace, facilitant la récupération de données depuis des serveurs distants.
 
-L'API HttpClient offre une approche fluide pour interagir avec des ressources en ligne. Dans l'exemple fourni, la classe SimpleHttpReader utilise cette API pour envoyer une requête GET à l'URL http://worldtimeapi.org/api/timezone/Etc/UTC. Cette URL renvoie des informations sur l'heure universelle coordonnée (UTC) au format JSON. La méthode HttpClient.newHttpClient() crée une instance du client HTTP, qui est ensuite utilisée pour construire et envoyer la requête. Cette approche est non seulement concise, mais aussi adaptée aux applications modernes nécessitant des interactions fréquentes avec des services web.
 
+La majorité des services web utilisent le format JSON.
+JSON (JavaScript Object Notation) est un format léger d’échange de données, facile à lire et à écrire pour les humains et les machines. Il est basé sur une syntaxe dérivée des objets JavaScript, mais il est utilisé par de nombreux langages de programmation. JSON est particulièrement populaire pour transmettre des données entre un serveur et une application web, notamment dans les API REST. Un document JSON est constitué de paires clé/valeur, de tableaux et d’objets imbriqués. Il ne supporte que quelques types de données : chaînes de caractères, nombres, booléens, tableaux, objets et null. 
+
+*Exemple de structure JSON :*
+
+```json {style=github}
+{
+  "nom": "Alice",
+  "age": 30,
+  "estEtudiant": false,
+  "competences": ["Java", "HTML", "JavaScript"]
+}
+```
+
+*Exemple d’utilisation en JavaScript :*
+
+```javascript {style=github}
+const donnees = '{"nom": "Alice", "age": 30}';
+const obj = JSON.parse(donnees);
+console.log(obj.nom); // Affiche "Alice"
+```
+
+L'API HttpClient offre une approche fluide pour interagir avec des ressources en ligne. Dans l'exemple fourni, la classe SimpleHttpReader de l'exemp,e qui suit utilise cette API pour envoyer une requête GET à l'URL http://worldtimeapi.org/api/timezone/Etc/UTC. Cette URL renvoie des informations sur l'heure universelle coordonnée (UTC) au format JSON. La méthode HttpClient.newHttpClient() crée une instance du client HTTP, qui est ensuite utilisée pour construire et envoyer la requête. Cette approche est non seulement concise, mais aussi adaptée aux applications modernes nécessitant des interactions fréquentes avec des services web.
 La gestion des requêtes dans l'exemple est robuste grâce à la vérification du code de statut HTTP. Si le serveur renvoie un code différent de 200 (indiquant une réussite), une exception est levée avec un message clair, permettant une gestion d'erreur appropriée. De plus, l'utilisation de StandardCharsets.UTF_8 garantit que les données textuelles sont correctement décodées, évitant les problèmes liés aux encodages de caractères. Ce mécanisme illustre comment Java combine simplicité et fiabilité pour accéder aux ressources web.
-
-Un aspect notable de ce code est sa structure orientée objet et sa facilité d'exécution. La méthode main ne prend aucun paramètre, rendant le programme immédiatement exécutable sans configuration supplémentaire. En cas d'erreur, un message précis est affiché, indiquant une "Erreur lors de la requête HTTP" accompagnée de détails sur l'exception. Cette clarté est essentielle pour le débogage et la maintenance, en particulier dans des applications plus complexes intégrant de multiples appels réseau.
-
-Enfin, l'exemple démontre la puissance de Java pour intégrer des services web dans des applications. En récupérant des données d'une API publique comme worldtimeapi.org, le programme montre comment Java peut être utilisé pour consommer des services RESTful. Cette capacité est cruciale dans le développement d'applications modernes, qu'il s'agisse de microservices, d'applications mobiles ou de systèmes de monitoring, où l'accès aux données en temps réel est souvent une exigence clé.
 
 {{<inlineJava path="SimpleHttpReader.java" lang="java">}}
 import java.net.URI;
@@ -304,6 +325,85 @@ public class SimpleHttpReader {
     }
 }
 {{</inlineJava>}}
+
+
+
+Le programme Java suivant récupère et affiche les prévisions météo horaires pour Montréal en interrogeant l’API Open-Meteo. Il commence par définir les coordonnées géographiques de Montréal (latitude 45.5017, longitude -73.5673) et construit une URL pour demander les données de température et de précipitations horaires. À l’aide des classes HttpClient et HttpRequest du module java.net.http, il envoie une requête GET à l’API et récupère la réponse sous forme de chaîne JSON. Plutôt que d’utiliser une bibliothèque externe, le programme parse manuellement cette réponse en extrayant les tableaux de données (heures, températures et précipitations) à l’aide de manipulations de chaînes. Une méthode auxiliaire, extractArray, facilite cette extraction en isolant les tableaux JSON correspondant à chaque variable météo.
+
+Une fois les données extraites, le programme utilise LocalDateTime et DateTimeFormatter pour traiter les horodatages au format UTC et les convertir en un format lisible (jour/mois/année heure:minute). Il parcourt ensuite les tableaux pour afficher les prévisions des 12 prochaines heures à partir de l’heure actuelle, en filtrant les données antérieures. Pour chaque heure valide, il affiche la date, la température (en °C) et les précipitations (en mm) avec un formatage précis. Une gestion d’exceptions basique capture les erreurs potentielles, comme des problèmes de connexion ou une réponse mal formée. Ce code est simple, évite les dépendances externes et illustre une approche directe pour interagir avec une API REST et traiter des données JSON.
+
+{{<inlineJava path="WeatherForecast.java" lang="java">}}
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class WeatherForecast {
+    public static void main(String[] args) {
+        // Coordonnées de Montréal
+        double latitude = 45.5017;
+        double longitude = -73.5673;
+        String url = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude +
+                     "&longitude=" + longitude + "&hourly=temperature_2m,precipitation";
+
+        try {
+            // Créer un client HTTP
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            // Envoyer la requête et obtenir la réponse
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            String json = response.body();
+
+            // Extraire les tableaux horaires
+            String hourly = json.substring(json.indexOf("\"hourly\":{"));
+            String times = extractArray(hourly, "\"time\":");
+            String temperatures = extractArray(hourly, "\"temperature_2m\":");
+            String precipitations = extractArray(hourly, "\"precipitation\":");
+
+            // Formatter pour les dates
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+            // Afficher les prévisions pour les 12 prochaines heures
+            System.out.println("Prévisions météo pour Montréal (prochaines 12 heures) :");
+            LocalDateTime now = LocalDateTime.now();
+            String[] timeArray = times.split(",");
+            String[] tempArray = temperatures.split(",");
+            String[] precipArray = precipitations.split(",");
+            int count = 0;
+
+            for (int i = 0; i < timeArray.length && count < 12; i++) {
+                String time = timeArray[i].replace("[\"","").replace("\"]","").replace("\"","");
+                LocalDateTime forecastTime = LocalDateTime.parse(time, formatter);
+                if (forecastTime.isAfter(now)) {
+                    double temp = Double.parseDouble(tempArray[i].replace("[","").replace("]",""));
+                    double precip = Double.parseDouble(precipArray[i].replace("[","").replace("]",""));
+                    System.out.printf("%s : %.1f°C, Précipitations : %.1f mm%n",
+                            forecastTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")),
+                            temp, precip);
+                    count++;
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Erreur lors de la récupération des données : " + e.getMessage());
+        }
+    }
+
+    // Méthode pour extraire un tableau JSON spécifique
+    private static String extractArray(String json, String key) {
+        int start = json.indexOf(key) + key.length();
+        int end = json.indexOf("]", start) + 1;
+        return json.substring(start, end);
+    }
+}
+{{</inlineJava>}}
+
 
 ## Performance
 
