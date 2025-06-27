@@ -965,6 +965,160 @@ class Main {
 </details>
 
 
+
+Je vais réécrire les trois questions (35, 36, et 37) pour demander explicitement aux étudiants d’implémenter les algorithmes (tri par insertion, tri à bulle, et recherche binaire) en Java, en utilisant du markdown comme format pour les réponses, conformément à vos consignes. Chaque question inclura une description de l’algorithme, une demande d’implémentation en Java, et une solution en code Java dans un artefact. Puisque vous demandez une modification des questions précédentes avec un nouveau format et contenu, je vais générer de nouveaux artefacts avec de nouveaux `artifact_id` pour chaque question, car ce sont des contenus distincts des précédents. Le format markdown sera utilisé pour les réponses, avec le code Java inclus dans les artefacts.
+
+Voici les questions révisées :
+
+## Question 35
+
+Décrivez le fonctionnement de l’algorithme de tri par insertion. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
+
+```java
+public class InsertionSort {
+    // Méthode pour effectuer le tri par insertion
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Tableau avant le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+        insertionSort(tableau);
+        System.out.println("\nTableau après le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+L’algorithme de tri par insertion parcourt un tableau élément par élément, en insérant chaque élément à sa position correcte dans la partie déjà triée. Pour chaque élément, il le compare avec les éléments précédents et le déplace vers la gauche jusqu’à ce qu’il soit à sa place.
+
+Le programme Java ci-dessus implémente le tri par insertion. La méthode `insertionSort` prend un tableau d’entiers, utilise une boucle pour parcourir les éléments, et insère chaque élément à la bonne position en décalant les éléments plus grands. Le programme affiche le tableau avant et après le tri.
+
+Exemple de sortie pour le tableau `{64, 34, 25, 12, 22, 11, 90}` :
+```
+Tableau avant le tri :
+64 34 25 12 22 11 90
+Tableau après le tri :
+11 12 22 25 34 64 90
+```
+</details>
+
+## Question 36
+
+Décrivez le fonctionnement de l’algorithme de tri à bulle. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
+
+```java
+public class BubbleSort {
+    // Méthode pour effectuer le tri à bulle
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Échanger les éléments
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Tableau avant le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+        bubbleSort(tableau);
+        System.out.println("\nTableau après le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+Le tri à bulle parcourt répétitivement un tableau, comparant des éléments adjacents et les échangeant s’ils sont dans le mauvais ordre. À chaque itération, l’élément le plus grand de la portion non triée est placé à la fin, comme une bulle qui remonte.
+
+Le programme Java ci-dessus implémente le tri à bulle. La méthode `bubbleSort` utilise deux boucles imbriquées pour comparer et échanger les éléments adjacents. Le programme affiche le tableau avant et après le tri.
+
+Exemple de sortie pour le tableau `{64, 34, 25, 12, 22, 11, 90}` :
+```
+Tableau avant le tri :
+64 34 25 12 22 11 90
+Tableau après le tri :
+11 12 22 25 34 64 90
+```
+</details>
+
+## Question 37
+
+Décrivez le principe de la recherche binaire dans un tableau trié. Implémentez cet algorithme en Java pour trouver l’indice d’un élément dans un tableau d’entiers trié en ordre croissant. Votre programme doit retourner l’indice de l’élément s’il est trouvé, ou -1 sinon, et afficher un message indiquant le résultat.
+
+```java
+public class BinarySearch {
+    // Méthode pour effectuer la recherche binaire
+    public static int binarySearch(int[] arr, int target) {
+        int debut = 0;
+        int fin = arr.length - 1;
+        while (debut <= fin) {
+            int milieu = (debut + fin) / 2;
+            if (arr[milieu] == target) {
+                return milieu;
+            } else if (arr[milieu] < target) {
+                debut = milieu + 1;
+            } else {
+                fin = milieu - 1;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {11, 12, 22, 25, 34, 64, 90};
+        int cible = 25;
+        int resultat = binarySearch(tableau, cible);
+        if (resultat != -1) {
+            System.out.println("Élément " + cible + " trouvé à l'indice : " + resultat);
+        } else {
+            System.out.println("Élément " + cible + " non trouvé dans le tableau.");
+        }
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+La recherche binaire trouve un élément dans un tableau trié en divisant itérativement l’intervalle de recherche par deux. Elle compare l’élément cible avec l’élément central, puis restreint la recherche à la moitié inférieure ou supérieure selon le résultat. Le tableau doit être trié au préalable.
+
+Le programme Java ci-dessus implémente la recherche binaire. La méthode `binarySearch` prend un tableau trié et un élément cible, utilise une boucle pour ajuster les indices `debut` et `fin`, et retourne l’indice de l’élément ou -1 s’il n’est pas trouvé. Le programme affiche un message indiquant le résultat.
+
+Exemple de sortie pour le tableau `{11, 12, 22, 25, 34, 64, 90}` et la cible `25` :
+```
+Élément 25 trouvé à l'indice : 3
+```
+
+
 ## Question 34 (pour les experts !)
 
 Considérons la décroissance radioactive d’un isotope. Supposons que nous ayons une quantité initiale de matière radioactive, et nous voulons modéliser comment sa masse diminue avec le temps en raison de la désintégration. Ce phénomène est courant en physique nucléaire, en médecine (pour les traitements par radiothérapie) et en datation au carbone.
@@ -1055,5 +1209,143 @@ public class DecroissanceRadioactive {
     }
 }
 {{</inlineJava>}}
+
+</details>
+
+
+## Question 35  (pour les experts !)
+
+Décrivez le fonctionnement de l’algorithme de tri par insertion. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
+
+
+<details><summary>Réponse</summary>
+L’algorithme de tri par insertion parcourt un tableau élément par élément, en insérant chaque élément à sa position correcte dans la partie déjà triée. Pour chaque élément, il le compare avec les éléments précédents et le déplace vers la gauche jusqu’à ce qu’il soit à sa place.
+
+Le programme Java ci-dessus implémente le tri par insertion. La méthode `insertionSort` prend un tableau d’entiers, utilise une boucle pour parcourir les éléments, et insère chaque élément à la bonne position en décalant les éléments plus grands. Le programme affiche le tableau avant et après le tri.
+
+{{<inlineJava path="InsertionSort.java" lang="java" >}}
+public class InsertionSort {
+    // Méthode pour effectuer le tri par insertion
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Tableau avant le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+        insertionSort(tableau);
+        System.out.println("\nTableau après le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+    }
+}
+{{</inlineJava>}}
+
+</details>
+
+## Question 36  (pour les experts !)
+
+Décrivez le fonctionnement de l’algorithme de tri à bulle. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
+
+
+
+<details><summary>Réponse</summary>
+Le tri à bulle parcourt répétitivement un tableau, comparant des éléments adjacents et les échangeant s’ils sont dans le mauvais ordre. À chaque itération, l’élément le plus grand de la portion non triée est placé à la fin, comme une bulle qui remonte.
+
+Le programme Java ci-dessus implémente le tri à bulle. La méthode `bubbleSort` utilise deux boucles imbriquées pour comparer et échanger les éléments adjacents. Le programme affiche le tableau avant et après le tri.
+
+{{<inlineJava path="BubbleSort.java" lang="java" >}}
+
+public class BubbleSort {
+    // Méthode pour effectuer le tri à bulle
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Échanger les éléments
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Tableau avant le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+        bubbleSort(tableau);
+        System.out.println("\nTableau après le tri :");
+        for (int value : tableau) {
+            System.out.print(value + " ");
+        }
+    }
+}
+{{</inlineJava>}}
+
+</details>
+
+## Question 37  (pour les experts !)
+
+Décrivez le principe de la recherche binaire dans un tableau trié. Implémentez cet algorithme en Java pour trouver l’indice d’un élément dans un tableau d’entiers trié en ordre croissant. Votre programme doit retourner l’indice de l’élément s’il est trouvé, ou -1 sinon, et afficher un message indiquant le résultat.
+
+<details><summary>Réponse</summary>
+La recherche binaire trouve un élément dans un tableau trié en divisant itérativement l’intervalle de recherche par deux. Elle compare l’élément cible avec l’élément central, puis restreint la recherche à la moitié inférieure ou supérieure selon le résultat. Le tableau doit être trié au préalable.
+
+Le programme Java  implémente la recherche binaire. La méthode `binarySearch` prend un tableau trié et un élément cible, utilise une boucle pour ajuster les indices `debut` et `fin`, et retourne l’indice de l’élément ou -1 s’il n’est pas trouvé. Le programme affiche un message indiquant le résultat.
+
+
+{{<inlineJava path="BinarySearch.java" lang="java" >}}
+public class BinarySearch {
+    // Méthode pour effectuer la recherche binaire
+    public static int binarySearch(int[] arr, int target) {
+        int debut = 0;
+        int fin = arr.length - 1;
+        while (debut <= fin) {
+            int milieu = (debut + fin) / 2;
+            if (arr[milieu] == target) {
+                return milieu;
+            } else if (arr[milieu] < target) {
+                debut = milieu + 1;
+            } else {
+                fin = milieu - 1;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        // Exemple d'utilisation
+        int[] tableau = {11, 12, 22, 25, 34, 64, 90};
+        int cible = 25;
+        int resultat = binarySearch(tableau, cible);
+        if (resultat != -1) {
+            System.out.println("Élément " + cible + " trouvé à l'indice : " + resultat);
+        } else {
+            System.out.println("Élément " + cible + " non trouvé dans le tableau.");
+        }
+    }
+}
+{{</inlineJava>}}
+
 
 </details>
