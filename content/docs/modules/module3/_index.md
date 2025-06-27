@@ -25,3 +25,8 @@ En intégrant les principes de la programmation fonctionnelle, ce module introdu
 - Comprendre et appliquer les notions de complexité algorithmique de base (notamment O(n), O(n²)).
 - Manipuler des collections de données à l’aide des flux (streams) pour adopter une approche déclarative dans le traitement des données.
 
+
+## Planification du temps
+
+Nous vous suggérons de consacrer trois semaines au troisième module. Assurez-vous de remettre
+le troisième travail noté à la fin de la neuvième semaine.

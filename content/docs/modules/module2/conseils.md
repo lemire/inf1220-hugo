@@ -105,15 +105,13 @@ est difficile à suivre.
 
 ## Utilisation des commentaires Javadoc
 
-
-
 Les programmeurs Java utilisent généralement Javadoc. Javadoc est un outil fourni par Oracle, intégré à l'environnement de développement Java, qui permet de générer automatiquement une documentation à partir du code source Java. Il analyse les commentaires écrits dans un format spécifique (commentaires Javadoc) pour produire des pages HTML décrivant les classes, interfaces, méthodes, constructeurs et champs d'un programme.
 
 Les commentaires Javadoc sont placés directement dans le code, généralement avant une déclaration, et utilisent une syntaxe particulière commençant par `/*` et se terminant par `*/`. Ces commentaires peuvent inclure des balises spécifiques pour structurer les informations, comme :
 
 - `@param` : décrit un paramètre d'une méthode.
 - `@return` : indique ce que retourne une méthode.
-- `@throws` ou `@exception` : précise les exceptions lancées.
+- `@throws` ou `@exception` : précise les exceptions lancées. (Nous verrons cette notion au module 3.)
 - `@author` : mentionne l'auteur du code.
 - `@version` : indique la version de la classe ou de la méthode.
 

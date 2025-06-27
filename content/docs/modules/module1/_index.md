@@ -17,3 +17,7 @@ Au fil du module, vous découvrirez :
 - Un aperçu historique des langages de programmation et de l’évolution des ordinateurs.
 
 De nombreux exemples concrets et exercices d’autoévaluation vous permettront d’appliquer ces concepts et de développer votre capacité à raisonner de façon logique et méthodique, compétence essentielle pour la suite du cours et pour toute démarche informatique.
+
+## Planification du temps
+
+Nous vous suggérons de consacrer les trois premières semaines du cours au premier module.

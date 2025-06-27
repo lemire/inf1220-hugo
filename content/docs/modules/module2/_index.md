@@ -65,3 +65,10 @@ Ce module a pour objectif de vous donner une compréhension solide des bases de 
 - Écrire et comprendre des programmes Java simples utilisant variables, types, opérateurs, méthodes et classes.
 - Structurer votre code de façon claire et modulaire.
 - Appliquer les bonnes pratiques de base pour progresser efficacement en programmation.
+
+
+
+## Planification du temps
+
+Nous vous suggérons de consacrer trois semaines au second module. Assurez-vous de remettre
+le second travail noté à la fin de la sixième semaine.

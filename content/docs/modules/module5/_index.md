@@ -21,3 +21,11 @@ Le module 5 initie à la programmation orientée objet en explorant des concepts
 - Comprendre et appliquer le principe de substitution de Liskov (LSP) dans la conception de classes.
 - Identifier les avantages et les limites de l’héritage et du polymorphisme dans la conception de programmes robustes et évolutifs.
 - Résoudre des problèmes concrets en appliquant ces concepts à travers des exercices et des projets Java.
+
+
+## Planification du temps
+
+Nous vous suggérons de consacrer trois semaines au cinquième module. Assurez-vous de remettre
+le cinquième travail noté à la fin de la 14e semaine.
+
+La dernière semaine du cours devrait être consacrée à la préparation de l'examen.
