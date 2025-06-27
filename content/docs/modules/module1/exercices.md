@@ -677,11 +677,67 @@ Retourner nouvelle_taille
 ```
 </details>
 
+### Exercice 29
+
+Écrivez un algorithme qui calcule \( a^n \), où \( a \) est un entier et \( n \) un entier positif.
+
+<details>
+<summary>Réponse</summary>
+
+```
+
+Entrée :
+Entier a
+Entier positif ou nul n
+
+Variable :
+Entier résultat = 1
+Entier i = 0
+
+Tant que i < n faire
+    résultat = résultat × a
+    i = i + 1
+Fin tant que
+
+Retourner résultat
+```
+
+</details>
+
+
+
+### Exercice 30
+
+Écrivez un algorithme qui compte le nombre d’occurrences d’un caractère spécifique dans une chaîne de caractères.
+
+
+<details>
+<summary>Réponse</summary>
+
+```
+Entrée :
+Chaîne de caractères S
+Caractère c
+
+Variable :
+Entier compteur = 0
+Entier i = 0
+
+Tant que i < longueur de S faire
+    Si S[i] = c alors
+        compteur = compteur + 1
+    Fin si
+    i = i + 1
+Fin tant que
+
+Retourner compteur
+```
+
+</details>
 
 ### Vidéos
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
-
 
 ### Logiciels
 
