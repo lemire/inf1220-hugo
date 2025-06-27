@@ -75,27 +75,6 @@ Ce pseudocode décrit un algorithme pour trouver la valeur minimale dans un tabl
 
 
 
-Les boucles permettent de résoudre des problèmes difficiles. Par exemple, la méthode d'Euler est une technique numérique pour résoudre des équations différentielles ordinaires de la forme \( y' = f(x, y) \) avec une condition initiale \( y(x_0) = y_0 \). Voici son pseudocode.
-
-Entrée : 
-- fonction \( f(x, y) \) (dérivée)
-- \( x_0 \), \( y_0 \) (conditions initiales)
-- \( x_f \) (valeur finale de \( x \))
-- \( h \) (taille du pas)
-
-Sortie : 
-- liste des points \((x_i, y_i)\) approximant la solution
-
-1. Initialiser \( x = x_0 \), \( y = y_0 \)
-2. Initialiser une liste vide pour stocker les points \((x_i, y_i)\)
-3. Ajouter le point \((x, y)\) à la liste
-4. Tant que \( x < x_f \):
-   - Calculer la pente : \( m = f(x, y) \)
-   - Mettre à jour \( y \): \( y = y + h \cdot m \)
-   - Mettre à jour \( x \): \( x = x + h \)
-   - Ajouter le nouveau point \((x, y)\) à la liste
-5. Retourner la liste des points
-
 
 ### Composition
 
