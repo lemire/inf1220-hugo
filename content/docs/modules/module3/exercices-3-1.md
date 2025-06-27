@@ -958,6 +958,33 @@ Cette équation différentielle décrit un taux de changement proportionnel à l
 - **Intervalle** : Nous modélisons sur \( t \) de 0 à 20 secondes.
 - **Méthode** : Nous utiliserons la méthode d’Euler pour résoudre numériquement cette équation. La méthode d’Euler est une technique numérique simple pour résoudre des équations différentielles ordinaires en approximant la solution par des pas discrets. Elle repose sur l’idée que la dérivée d’une fonction donne la pente locale, permettant d’estimer la valeur suivante à partir de la valeur actuelle et d’un pas de temps \( h \). Pour une  équations différentielles ordinaires  de la forme \( \frac{dy}{dt} = f(t, y) \), la méthode calcule \( y_{n+1} = y_n + h \cdot f(t_n, y_n) \). 
 
+
+Voici le pseudocode de la méthode d'Euler.
+
+---
+
+Entrée : 
+- fonction \( f(x, y) \) (dérivée)
+- \( x_0 \), \( y_0 \) (conditions initiales)
+- \( x_f \) (valeur finale de \( x \))
+- \( h \) (taille du pas)
+
+Sortie : 
+- liste des points \((x_i, y_i)\) approximant la solution
+
+1. Initialiser \( x = x_0 \), \( y = y_0 \)
+2. Initialiser une liste vide pour stocker les points \((x_i, y_i)\)
+3. Ajouter le point \((x, y)\) à la liste
+4. Tant que \( x < x_f \):
+   - Calculer la pente : \( m = f(x, y) \)
+   - Mettre à jour \( y \): \( y = y + h \cdot m \)
+   - Mettre à jour \( x \): \( x = x + h \)
+   - Ajouter le nouveau point \((x, y)\) à la liste
+5. Retourner la liste des points
+
+---
+
+
 Écrivez un programme qui utilise la méthode d’Euler pour résoudre l’équation \( \frac{dN}{dt} = -0.1 N \), avec \( N(0) = 100 \), et affiche la masse restante à chaque pas de temps.
 
 <details><summary>Réponse</summary>

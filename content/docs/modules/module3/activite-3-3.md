@@ -1167,6 +1167,46 @@ public class ExempleStack {
 
 Dans cet exemple, on empile trois entiers ; le <code>pop()</code> retire et retourne le dernier ajouté (30), puis <code>peek()</code> permet de consulter le sommet (20) sans le retirer.
 
+L'exemple suivant illustre les principales méthodes de la classe Stack.
+
+{{<inlineJava path="StackExample.java" lang="java">}}
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        // Création d'une pile
+        Stack<String> stack = new Stack<>();
+
+        // Ajout d'éléments avec push()
+        stack.push("Premier");
+        stack.push("Deuxième");
+        stack.push("Troisième");
+
+        // Affichage de la taille avec size()
+        System.out.println("Taille de la pile : " + stack.size());
+
+        // Consultation du sommet avec peek()
+        System.out.println("Élément au sommet : " + stack.peek());
+
+        // Retrait d'éléments avec pop()
+        System.out.println("Élément retiré : " + stack.pop());
+        System.out.println("Nouvelle taille : " + stack.size());
+
+        // Vérification si la pile est vide avec isEmpty()
+        System.out.println("La pile est-elle vide ? " + stack.isEmpty());
+
+        // Vidage de la pile
+        while (!stack.isEmpty()) {
+            System.out.println("Élément retiré : " + stack.pop());
+        }
+
+        // Vérification finale
+        System.out.println("La pile est-elle vide maintenant ? " + stack.isEmpty());
+    }
+}
+{{</inlineJava>}}
+
+
 ### HashMap (Table de hachage)
 
 Une <strong>HashMap</strong> est une structure de données qui associe des clés à des valeurs. Elle permet de retrouver très rapidement une valeur à partir de sa clé, grâce à une fonction de hachage qui transforme la clé en un index. Les <code>HashMap</code> sont très utiles pour stocker des associations uniques, comme des noms d’étudiants et leurs notes, ou des mots et leurs définitions.
