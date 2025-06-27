@@ -286,46 +286,9 @@ const obj = JSON.parse(donnees);
 console.log(obj.nom); // Affiche "Alice"
 ```
 
-L'API HttpClient offre une approche fluide pour interagir avec des ressources en ligne. Dans l'exemple fourni, la classe SimpleHttpReader de l'exemp,e qui suit utilise cette API pour envoyer une requête GET à l'URL http://worldtimeapi.org/api/timezone/Etc/UTC. Cette URL renvoie des informations sur l'heure universelle coordonnée (UTC) au format JSON. La méthode HttpClient.newHttpClient() crée une instance du client HTTP, qui est ensuite utilisée pour construire et envoyer la requête. Cette approche est non seulement concise, mais aussi adaptée aux applications modernes nécessitant des interactions fréquentes avec des services web.
-La gestion des requêtes dans l'exemple est robuste grâce à la vérification du code de statut HTTP. Si le serveur renvoie un code différent de 200 (indiquant une réussite), une exception est levée avec un message clair, permettant une gestion d'erreur appropriée. De plus, l'utilisation de StandardCharsets.UTF_8 garantit que les données textuelles sont correctement décodées, évitant les problèmes liés aux encodages de caractères. Ce mécanisme illustre comment Java combine simplicité et fiabilité pour accéder aux ressources web.
+La vidéo suivante (optionnelle) explique comment les systèmes peuvent être optimisés pour traitement le JSON efficacement.
 
-{{<inlineJava path="SimpleHttpReader.java" lang="java">}}
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
-
-public class SimpleHttpReader {
-    public static void main(String[] args) {
-        try {
-            String content = readHttpFile();
-            System.out.println(content);
-        } catch (Exception e) {
-            System.err.println("Erreur lors de la requête HTTP : " + e.getMessage());
-            System.exit(1);
-        }
-    }
-
-    public static String readHttpFile() throws Exception {
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://worldtimeapi.org/api/timezone/Etc/UTC"))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request, 
-                HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
-
-        if (response.statusCode() != 200) {
-            throw new RuntimeException("Échec de la requête HTTP : " + response.statusCode());
-        }
-
-        return response.body();
-    }
-}
-{{</inlineJava>}}
-
+{{< youtube id="wlvKAT7SZIQ" >}}
 
 
 Le programme Java suivant récupère et affiche les prévisions météo horaires pour Montréal en interrogeant l’API Open-Meteo. Il commence par définir les coordonnées géographiques de Montréal (latitude 45.5017, longitude -73.5673) et construit une URL pour demander les données de température et de précipitations horaires. À l’aide des classes HttpClient et HttpRequest du module java.net.http, il envoie une requête GET à l’API et récupère la réponse sous forme de chaîne JSON. Plutôt que d’utiliser une bibliothèque externe, le programme parse manuellement cette réponse en extrayant les tableaux de données (heures, températures et précipitations) à l’aide de manipulations de chaînes. Une méthode auxiliaire, extractArray, facilite cette extraction en isolant les tableaux JSON correspondant à chaque variable météo.
