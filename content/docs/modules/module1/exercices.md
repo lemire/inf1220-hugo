@@ -472,7 +472,7 @@ Entier renverse = 0
 
 TANT QUE n > 0 FAIRE
     renverse = renverse × 10 + (reste de la division de n avec 10)
-    n = n // 10
+    n = n ÷ 10
 FIN TANT QUE
 
 SI original = renverse ALORS
