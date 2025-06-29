@@ -40,7 +40,7 @@ Les exercices incluent une solution pour comparer votre approche à la nôtre. I
 
 Dans la plupart des langages informatiques, un tableau correspond à un vecteur en algèbre linéaire, soit une série de nombres, comme \(\langle 1,6,4,10 \rangle\). Dans cet exercice, vous devez proposer un algorithme pour calculer la somme des nombres entiers d’un tableau à une dimension de longueur quelconque (de 0 à plus d’un million de nombres). Utilisez une structure d’itération (boucle) pour parcourir chaque nombre du tableau.
 
-Pour manipuler le tableau, vous pouvez écrire « Récupérer le nombre à l’index i » (où i est une variable contenant l’index) ou utiliser une syntaxe proche des langages de programmation, par exemple : `Entier e = monTableau[i]`. Pour obtenir la longueur du tableau, utilisez « la taille de monTableau ».
+Pour manipuler le tableau, vous pouvez écrire «&nbsp;Récupérer le nombre à l’index i&nbsp;» (où i est une variable contenant l’index) ou utiliser une syntaxe proche des langages de programmation, par exemple : `Entier e = monTableau[i]`. Pour obtenir la longueur du tableau, utilisez «&nbsp;la taille de monTableau&nbsp;».
 
 Testez votre pseudo-code en l’appliquant ligne par ligne à un exemple, comme si vous étiez un robot. Prenez votre temps.
 
@@ -236,7 +236,7 @@ Soit \(P(x) = ax^2 + bx + c\) un polynôme du second degré à coefficients rée
 - Si \(A > 0\), il existe deux racines : \(X_1 = \frac{-b - \sqrt{A}}{2a}\) et \(X_2 = \frac{-b + \sqrt{A}}{2a}\).
 - Si \(A = 0\), il existe une racine double : \(X_1 = X_2 = \frac{-b}{2a}\).
 
-Écrivez un algorithme qui, pour un polynôme donné par ses coefficients, calcule le discriminant, affiche « ce polynôme n’a pas de racine dans R » si A < 0, et calcule les racines sinon.
+Écrivez un algorithme qui, pour un polynôme donné par ses coefficients, calcule le discriminant, affiche «&nbsp;ce polynôme n’a pas de racine dans R&nbsp;» si A < 0, et calcule les racines sinon.
 
 <details>
 <summary>Réponse</summary>
@@ -253,7 +253,7 @@ Nombres réels X1, X2, A // Racines et discriminant
 Début
     A = b² - 4ac
     Si A < 0 Alors
-        Afficher « ce polynôme n’a pas de racine dans R »
+        Afficher «&nbsp;ce polynôme n’a pas de racine dans R&nbsp;»
     Sinon
         Si A égale 0
             X1 = X2 = -b/(2a)
@@ -309,7 +309,7 @@ Suite de caractères alphanumériques S
 Début
     S = chaîne vide
     Si B < 2 Alors
-        Afficher « entrez un entier supérieur ou égal à 2 »
+        Afficher «&nbsp;entrez un entier supérieur ou égal à 2&nbsp;»
     Sinon
         q = M
         Tant que q > 0
@@ -354,7 +354,7 @@ def f(M, B):
 
 ### Exercice 10 : Tester la parité en base 2
 
-En utilisant l’algorithme Algo_base, qui retourne la représentation en base \(B\) d’un nombre \(M\) (\(S = \text{Algo\_base}(B, M)\)), écrivez un algorithme qui teste la parité d’un nombre \(M\) et affiche « pair » ou « impair ».
+En utilisant l’algorithme Algo_base, qui retourne la représentation en base \(B\) d’un nombre \(M\) (\(S = \text{Algo\_base}(B, M)\)), écrivez un algorithme qui teste la parité d’un nombre \(M\) et affiche «&nbsp;pair&nbsp;» ou «&nbsp;impair&nbsp;».
 
 <details>
 <summary>Réponse</summary>
@@ -371,9 +371,9 @@ Suite de caractères alphanumériques S
 Début
     S = Algo_base(2, M)
     Si dernier caractère de S est égal au chiffre 0 Alors
-        Afficher « pair »
+        Afficher «&nbsp;pair&nbsp;»
     Sinon
-        Afficher « impair »
+        Afficher «&nbsp;impair&nbsp;»
     Fin Si
 Fin
 ```
@@ -648,7 +648,7 @@ Quelle est la différence entre un kibioctet et un kilo-octet ?
 <details>
 <summary>Réponse</summary>
 
-Un kilo-octet (ko) correspond à 1 000 octets (selon le système décimal, préfixe SI), tandis qu’un kibioctet (Kio) correspond à 1 024 octets (selon le système binaire, préfixe IEC). Le préfixe « kilo » (k) est utilisé pour les puissances de 10, alors que « kibi » (Ki) est utilisé pour les puissances de 2. Ainsi, 1 Kio = 1 024 octets, 1 ko = 1 000 octets.
+Un kilo-octet (ko) correspond à 1 000 octets (selon le système décimal, préfixe SI), tandis qu’un kibioctet (Kio) correspond à 1 024 octets (selon le système binaire, préfixe IEC). Le préfixe «&nbsp;kilo&nbsp;» (k) est utilisé pour les puissances de 10, alors que «&nbsp;kibi&nbsp;» (Ki) est utilisé pour les puissances de 2. Ainsi, 1 Kio = 1 024 octets, 1 ko = 1 000 octets.
 
 </details>
 

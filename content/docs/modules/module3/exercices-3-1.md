@@ -430,7 +430,7 @@ public class Main {
 
 ## Question 13
 
-<p>Écrivez un programme efficace Java qui prend la chaîne de caractère « 124213 » et en extrait les nombres 1, 2, 4, 2, 1, 3.</p>
+<p>Écrivez un programme efficace Java qui prend la chaîne de caractère «&nbsp;124213&nbsp;» et en extrait les nombres 1, 2, 4, 2, 1, 3.</p>
 
 <details><summary>Réponse</summary>
 <div>
@@ -480,7 +480,7 @@ public class Main {
 <p>Expliquer pourquoi.</p>
 
 <details><summary>Réponse</summary>
-<div> <p>Le code affiche « avant le second else ».</p>
+<div> <p>Le code affiche «&nbsp;avant le second else&nbsp;».</p>
 <p>En effet le second if est évalué à false, et toute l’instruction qui suit (y compris l’évaluation du else qui se rapporte au if de cette instruction) n’est pas exécutée ; l’instruction suivante c’est le tout dernier if, qui est évalué à true, et donc le else qui s’y rapporte n’est pas évalué.</p>
 </div>
 </details>

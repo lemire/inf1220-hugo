@@ -87,7 +87,7 @@ Cependant, il est important de comprendre que la libération de la mémoire n’
 
 L’allocation de mémoire en Java est automatique et la libération est assurée par le ramasse-miettes, ce qui contribue à la robustesse et à la sécurité des programmes Java.
 
-Par contre, le ramasse-miettes a des inconvénients : il peut provoquer des pauses imprévisibles dans l’exécution du programme, appelées « pauses de collecte », lorsque la JVM décide de libérer la mémoire. Ces pauses sont généralement courtes, mais peuvent devenir perceptibles dans des applications nécessitant une grande réactivité (jeux, systèmes temps réel, etc.). De plus, le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, ce qui peut compliquer l’optimisation des performances dans certains cas particuliers. Enfin, le ramasse-miettes consomme lui-même des ressources processeur, ce qui peut avoir un effet sur l’efficacité globale du programme.
+Par contre, le ramasse-miettes a des inconvénients : il peut provoquer des pauses imprévisibles dans l’exécution du programme, appelées «&nbsp;pauses de collecte&nbsp;», lorsque la JVM décide de libérer la mémoire. Ces pauses sont généralement courtes, mais peuvent devenir perceptibles dans des applications nécessitant une grande réactivité (jeux, systèmes temps réel, etc.). De plus, le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, ce qui peut compliquer l’optimisation des performances dans certains cas particuliers. Enfin, le ramasse-miettes consomme lui-même des ressources processeur, ce qui peut avoir un effet sur l’efficacité globale du programme.
 
 Malgré l'existence du ramasse-miettes, il faut donc tenter de minimiser l'allocation de mémoire.
 Il faut éviter de créer des objets temporaires quand on peut réutiliser un objet déjà alloué.
@@ -228,6 +228,12 @@ public class ExempleString {
 
 La méthode split de la classe String en Java est utilisée pour diviser une chaîne en un tableau de sous-chaînes en fonction d’un délimiteur spécifié, qui peut être une chaîne simple ou une *expression régulière*. Par exemple, `split("\\s+")` divise une chaîne sur un ou plusieurs espaces, tandis que `split(",")` utilise une virgule comme séparateur. L'expression `\\s+` signifie 'un ou plusieurs espaces.
 Nous pourrions utiliser `split(";")` pour diviser sur un point-virgule.
+
+{{% hint info %}}
+Dans ce cours, nous ne présenterons pas la notion d'expression régulière davantage. Elle est traitée dans d'autres cours, notamment au sein du cours
+INF 6460 Recherche et filtrage d'informations.
+{{% /hint %}}
+
 
 ## StringBuilder
 
@@ -597,7 +603,7 @@ Le tri d'informations fait partie des nombreuses applications en informatique. I
 
 <p>Un tri simple de données consiste à rechercher la valeur minimale d'un tableau ou sa valeur maximale. Grâce à un algorithme de recherche, nous assignons la valeur minimale à la première valeur, puis parcourons l'ensemble des valeurs pour tester si l'une d'entre elles est plus petite que la valeur minimale. Si tel est le cas, la valeur minimale est assignée à cette valeur, sinon, le tri se poursuit. </p>
 
-<p>Réalisation de l'algorithme « recherche du minimum » en Java :</p>
+<p>Réalisation de l'algorithme «&nbsp;recherche du minimum&nbsp;» en Java :</p>
 
 ```java  {style=github}
 public static int minimum(int a[]) {
@@ -1197,7 +1203,7 @@ Donc, tant que \(K > 1\), la complexité temporelle amortie pour ajouter un él�
 
 ### Stack (Pile)
 
-Une <strong>Stack</strong> (ou pile) est une structure de données fondamentale qui fonctionne selon le principe « dernier arrivé, premier sorti » (LIFO : Last In, First Out). Cela signifie que le dernier élément ajouté à la pile sera le premier à en sortir. Les opérations principales sont <code>push</code> (empiler), <code>pop</code> (dépiler) et <code>peek</code> (regarder le sommet sans retirer). Les piles sont utilisées dans de nombreux contextes : gestion des appels de fonctions, annulation d’actions, analyse d’expressions, etc.
+Une <strong>Stack</strong> (ou pile) est une structure de données fondamentale qui fonctionne selon le principe «&nbsp;dernier arrivé, premier sorti&nbsp;» (LIFO : Last In, First Out). Cela signifie que le dernier élément ajouté à la pile sera le premier à en sortir. Les opérations principales sont <code>push</code> (empiler), <code>pop</code> (dépiler) et <code>peek</code> (regarder le sommet sans retirer). Les piles sont utilisées dans de nombreux contextes : gestion des appels de fonctions, annulation d’actions, analyse d’expressions, etc.
 
 En Java, la classe <code>Stack</code> permet d’utiliser facilement cette structure : on peut y empiler des objets de tout type, puis les dépiler dans l’ordre inverse de leur ajout. Voici un exemple simple :
 

@@ -18,7 +18,7 @@ Pour aborder les concepts mathématiques fondamentaux, il est essentiel de compr
 
 Une proposition mathématique est un énoncé dont on peut dire sans ambiguïté si elle est vraie ou fausse. Le processus qui consiste à déterminer si une proposition mathématique est vraie ou fausse est l’objet du calcul propositionnel ou calcul des propositions et fait partie de la logique mathématique. Le résultat d’un calcul propositionnel est donc l’attribution d’une valeur de vérité à une proposition.
 
-Ainsi, l'énoncé « Le cours INF1220 figure parmi les cours dispensés à la TELUQ au trimestre d’hiver 2021 » est une proposition mathématique et sa valeur de vérité est « vrai ». La proposition « Le cours INF1220 est mon meilleur cours » n'est pas une proposition mathématique. Dans notre contexte, quand nous parlons de proposition, nous parlons de proposition mathématique.
+Ainsi, l'énoncé «&nbsp;Le cours INF1220 figure parmi les cours dispensés à la TELUQ au trimestre d’hiver 2021&nbsp;» est une proposition mathématique et sa valeur de vérité est «&nbsp;vrai&nbsp;». La proposition «&nbsp;Le cours INF1220 est mon meilleur cours&nbsp;» n'est pas une proposition mathématique. Dans notre contexte, quand nous parlons de proposition, nous parlons de proposition mathématique.
 
 #### 1.1.1. Table des valeurs de vérités des propositions
 
@@ -37,7 +37,7 @@ Un ensemble est une collection d’objets. Si on appelle \( E \) cette collectio
 
 Étant donné un objet arbitraire, c’est-à-dire une chose quelconque, on est capable de dire si oui ou non cette chose appartient à \( E \). Si nous notons la chose en question \( o \) et qu’elle n’appartient pas à \( E \), nous traduisons cela par \( o \notin E \).
 
-Une autre façon de déterminer un ensemble est de donner une propriété qui caractérise ses éléments. Par exemple, la collection de toutes les personnes qui sont inscrites à la TELUQ pour suivre le cours INF1220 pour le trimestre d’hiver 2021 à la date du 1er mars 2021 est un ensemble. Nous pouvons le noter \( T \). On convient dans ce cas d’écrire \( T = \{ o \mid o \text{~est~inscrit} \} \). Le symbole \( \mid \) se lit « tel que ». « Être inscrit à la TELUQ pour suivre le cours INF1220 pour le trimestre d’hiver 2021 à la date du 1er mars 2021 » est la propriété caractéristique de l’ensemble \( T \) (ou des éléments de cet ensemble).
+Une autre façon de déterminer un ensemble est de donner une propriété qui caractérise ses éléments. Par exemple, la collection de toutes les personnes qui sont inscrites à la TELUQ pour suivre le cours INF1220 pour le trimestre d’hiver 2021 à la date du 1er mars 2021 est un ensemble. Nous pouvons le noter \( T \). On convient dans ce cas d’écrire \( T = \{ o \mid o \text{~est~inscrit} \} \). Le symbole \( \mid \) se lit «&nbsp;tel que&nbsp;». «&nbsp;Être inscrit à la TELUQ pour suivre le cours INF1220 pour le trimestre d’hiver 2021 à la date du 1er mars 2021&nbsp;» est la propriété caractéristique de l’ensemble \( T \) (ou des éléments de cet ensemble).
 
 Les nombres entiers positifs forment un ensemble ; c’est l’ensemble des entiers naturels. On le note \( \mathbb{N} \). \( \mathbb{N} = \{ 0, 1, \dots \} \).
 

@@ -79,7 +79,7 @@ try {
 <p>Note: dans cet exemple, la variable fichierALire est déclarée comme étant de type FileReader lors de sa première utilisation. On ne peut déclarer une même variable qu'une seule fois. On peut cependant réassigner la variable à une autre valeur. Il est donc légal d'écrire "FileReader fichierALire = new ..." suivi de "fichierALire = new ..." (sans répéter le nom de la classe, FileReader). Par contre, il serait illégal en Java d'écrire "FileReader fichierALire = new ..." suivi de "FileReader fichierALire = new ..." dans le même contexte puisqu'on déclarerait la variable deux fois.
 </p>
 
-<p>Nous venons juste de créer une instance de l'objet FileReader permettant de lire le contenu d'un fichier. Cependant, la classe FileReader ne possède que des méthodes pouvant lire « en bas niveau », c'est-à-dire que la méthode read permet de lire caractère par caractère le contenu d'un fichier. Cette méthode peut lever une exception si, par exemple, nous ne pouvons accéder au disque dur ou si le fichier en question est protégé. Voici comment lire un caractère d'un fichier :</p>
+<p>Nous venons juste de créer une instance de l'objet FileReader permettant de lire le contenu d'un fichier. Cependant, la classe FileReader ne possède que des méthodes pouvant lire «&nbsp;en bas niveau&nbsp;», c'est-à-dire que la méthode read permet de lire caractère par caractère le contenu d'un fichier. Cette méthode peut lever une exception si, par exemple, nous ne pouvons accéder au disque dur ou si le fichier en question est protégé. Voici comment lire un caractère d'un fichier :</p>
 
 ```java  {style=github}
 try {
@@ -757,6 +757,12 @@ La deuxième requête est une requête POST vers une API de test (`https://jsonp
 
 ## Performance
 
+{{% hint info %}}
+
+Dans ce cours, vous n'avez pas à maîtriser la performance.
+{{% /hint %}}
+
+
 La performance est un enjeu crucial lorsqu’on manipule des fichiers ou des flux de données, surtout avec de grands volumes ou des opérations répétées. Un code inefficace peut entraîner des ralentissements importants, une consommation excessive de mémoire ou des blocages inutiles.
 
 Lire ou écrire un fichier caractère par caractère est très lent. Il vaut mieux utiliser des tampons (buffers) pour traiter plusieurs caractères ou octets à la fois. C'est un peu comme essayer d'envoyer un message texte par quelqu'un caractère par caractère.
@@ -833,6 +839,11 @@ Pour les fichiers binaires, il est essentiel d'utiliser des buffers pour garanti
 
 
 #### FileChannel et Buffer
+
+
+{{% hint info %}}
+Dans ce cours, vous n'avez pas à maîtriser les FileChannel et les Buffer.
+{{% /hint %}}
 
 Les classes Buffer en Java, situées dans le package java.nio, sont des conteneurs pour manipuler des données brutes en mémoire, utilisées principalement pour des opérations d’entrée/sortie performantes. Un Buffer encapsule un tableau de données avec des métadonnées comme la position (index de la prochaine donnée à lire/écrire), la limite (fin des données valides) et la capacité (taille totale). Ces classes permettent des opérations comme put() pour écrire, get() pour lire, flip() pour basculer entre modes lecture/écriture, et clear() ou rewind() pour réinitialiser. Elles sont particulièrement utiles pour les applications nécessitant un traitement efficace de données binaires ou textuelles, comme les communications réseau ou la lecture/écriture de fichiers volumineux, offrant un contrôle granulaire par rapport aux flux traditionnels.
 

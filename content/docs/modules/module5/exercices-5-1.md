@@ -629,7 +629,7 @@ public class ClasseB extends ClasseDeBase {
 
 ## Question 10
 
-On dispose de différentes classes d’animaux (Poissons, Reptiles, Oiseaux, Mammifères) qui partagent en commun la méthode seDeplace. On voudrait effectuer un traitement qui consiste juste pour chaque animal d’une classe à afficher comment il se déplace. Ainsi, pour un Poisson p, p.seDeplace doit afficher « je suis un poisson, je nage » ; un Reptile « je suis un reptile, je rampe » ; un Oiseau « je suis un oiseau, je vole » ; un Mammifère « je suis un mammifère, je marche, je vole et je nage ». Proposer une solution en utilisant un seul tableau d’objets.
+On dispose de différentes classes d’animaux (Poissons, Reptiles, Oiseaux, Mammifères) qui partagent en commun la méthode seDeplace. On voudrait effectuer un traitement qui consiste juste pour chaque animal d’une classe à afficher comment il se déplace. Ainsi, pour un Poisson p, p.seDeplace doit afficher «&nbsp;je suis un poisson, je nage&nbsp;» ; un Reptile «&nbsp;je suis un reptile, je rampe&nbsp;» ; un Oiseau «&nbsp;je suis un oiseau, je vole&nbsp;» ; un Mammifère «&nbsp;je suis un mammifère, je marche, je vole et je nage&nbsp;». Proposer une solution en utilisant un seul tableau d’objets.
 
 <details><summary>Réponse</summary>
 

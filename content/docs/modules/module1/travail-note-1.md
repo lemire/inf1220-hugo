@@ -28,7 +28,7 @@ Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tab
 
 Voici quelques indices concernant l'énoncé que vous pouvez prendre en compte pour vous aider. Un indice n'est jamais une question supplémentaire, un ajout à la question, ou une seconde partie. Un indice ne sert qu'à vous inspirer ou à vous aider.  Vous pouvez complètement ignorer les indices. Les indices ne visent qu'à vous aider si vous le souhaitez.
 <ol>
-<li><strong>Indice 1.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Nous souhaitons un algorithme qui détermine si la somme des éléments d’un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l’algorithme doit accéder à aussi peu d’éléments du tableau que possible. Produisez un pseudo-code précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que vous souhaitez, tant que vos explications sont claires. Exécutez votre pseudo-code sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</em> ».</li>
+<li><strong>Indice 1.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Nous souhaitons un algorithme qui détermine si la somme des éléments d’un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l’algorithme doit accéder à aussi peu d’éléments du tableau que possible. Produisez un pseudo-code précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que vous souhaitez, tant que vos explications sont claires. Exécutez votre pseudo-code sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</em>&nbsp;».</li>
 <li><strong>Indice 2.</strong> Votre algorithme doit retourner soit vrai, soit faux.</li>
 <li><strong>Indice 3.</strong> Votre algorithme doit fonctionner même si le tableau a une longueur de zéro.</li>
 <li><strong>Indice 4.</strong> Votre algorithme doit fonctionner même si le tableau contient mille milliards d'éléments.</li>
@@ -104,7 +104,7 @@ FIN TANT QUE
 {{% hint info %}}
 
 
-<p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em> ».</p>
+<p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em>&nbsp;».</p>
 
 {{< youtube id="4jReEOCImds" >}}
 
@@ -120,7 +120,7 @@ FIN TANT QUE
 ## En terminant
 
 
-<p>Dans plusieurs cas, vos travaux sont corrigés par un « correcteur ». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>
+<p>Dans plusieurs cas, vos travaux sont corrigés par un «&nbsp;correcteur&nbsp;». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>
 
 <p>Il est inutile de nous écrire pour obtenir des indices, des exemples de solutions, des pistes de départ, etc. Dans ce cours, nous n'offrons aucun indice par courriel.</p>
 

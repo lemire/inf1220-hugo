@@ -47,7 +47,7 @@ Vrai et Faux: c'est un langage interprété par une machine virtuelle, la JVM. L
 ## Question 3
 Comment est représenté <code>-1</code> en Java ?
 <details><summary>Réponse</summary>
-<p>En Java, les entiers sont représentés en binaire selon le format « complément à deux ». Ainsi, <code>-1</code> est représenté par une suite de bits où tous les bits sont à 1. Par exemple, pour un <code>int</code> (32 bits), <code>-1</code> correspond à <code>0xFFFFFFFF</code> en hexadécimal, soit 32 bits à 1. </p>
+<p>En Java, les entiers sont représentés en binaire selon le format «&nbsp;complément à deux&nbsp;». Ainsi, <code>-1</code> est représenté par une suite de bits où tous les bits sont à 1. Par exemple, pour un <code>int</code> (32 bits), <code>-1</code> correspond à <code>0xFFFFFFFF</code> en hexadécimal, soit 32 bits à 1. </p>
 </details>
 
 ## Question 4

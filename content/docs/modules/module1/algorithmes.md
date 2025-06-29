@@ -33,7 +33,7 @@ Il est essentiel de comprendre ce qu'est le pseudo-code: il s'agit d'une façon 
 
 Pour un programmeur d'expérience, s'exprimer à l'aide d'un pseudo-code est chose aisée. Pour le commun des mortels, c'est un peu plus difficile. La blague suivante illustre le problème.
 
-> Une femme demande à son programmeur de mari : « Va au supermarché acheter une bouteille de lait. Et si ils ont des œufs, prends en 6 ». Le mari revient avec six bouteilles de lait. Sa femme lui demande pourquoi il a pris six bouteilles. « Parce qu'ils avaient des oeufs » répond-il.
+> Une femme demande à son programmeur de mari : «&nbsp;Va au supermarché acheter une bouteille de lait. Et si ils ont des œufs, prends en 6&nbsp;». Le mari revient avec six bouteilles de lait. Sa femme lui demande pourquoi il a pris six bouteilles. «&nbsp;Parce qu'ils avaient des oeufs&nbsp;» répond-il.
 
 Quand on rédige un pseudo-code, il faut tout spécifier, comme si on s'adressait à quelqu'un qui prend tout littéralement, sans aucun jugement. Pour devenir un programmeur, pour penser comme un programmeur, il faut s'habituer à rédiger des séquences d'instructions précises. La lecture et la rédaction de pseudo-codes relativement simples peut être une bonne pratique.
 
@@ -159,7 +159,7 @@ Un tableau est une structure de données qui permet de stocker plusieurs éléme
 tableau est normalement fixée et connue.
 
 
-La numérotation des indices varie selon les langages de programmation ou les contextes. Dans de nombreux langages comme C, Java ou Python, les indices commencent à 0 : le premier élément est `tableau[0]`, le deuxième `tableau[1]`, etc. Cette convention, dite « base 0 », est courante en informatique pour des raisons techniques liées à la gestion de la mémoire. Dans d’autres contextes, comme certaines notations mathématiques ou langages comme Lua, les indices débutent à 1, ce qui peut être plus intuitif pour des utilisateurs non techniques. Le choix de l’index de départ dépend donc du système utilisé, et il est crucial de connaître cette convention pour manipuler correctement les éléments d’un tableau. La convention utilisée est souvent
+La numérotation des indices varie selon les langages de programmation ou les contextes. Dans de nombreux langages comme C, Java ou Python, les indices commencent à 0 : le premier élément est `tableau[0]`, le deuxième `tableau[1]`, etc. Cette convention, dite «&nbsp;base 0&nbsp;», est courante en informatique pour des raisons techniques liées à la gestion de la mémoire. Dans d’autres contextes, comme certaines notations mathématiques ou langages comme Lua, les indices débutent à 1, ce qui peut être plus intuitif pour des utilisateurs non techniques. Le choix de l’index de départ dépend donc du système utilisé, et il est crucial de connaître cette convention pour manipuler correctement les éléments d’un tableau. La convention utilisée est souvent
 claire selon le contexte.
 
 ### Calcul de la moyenne

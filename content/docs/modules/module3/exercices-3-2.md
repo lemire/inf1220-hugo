@@ -60,7 +60,7 @@ try {
 
 ## Question 3
 
-Que se passera-t-il si vous placez l'instruction <code>return</code> dans le bloc « try » ou « catch » ? Le bloc « finally » s'exécutera-t-il ?
+Que se passera-t-il si vous placez l'instruction <code>return</code> dans le bloc «&nbsp;try&nbsp;» ou «&nbsp;catch&nbsp;» ? Le bloc «&nbsp;finally&nbsp;» s'exécutera-t-il ?
 
 <details><summary>Réponse</summary>
 <p>Oui, le bloc <code>finally</code> s'exécutera toujours, même si un <code>return</code> est exécuté dans le bloc <code>try</code> ou <code>catch</code>. Exemple :</p>

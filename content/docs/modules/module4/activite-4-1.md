@@ -8,7 +8,7 @@ weight: 1
 
 <h1>La bibliothèque System</h1>
 
-<p>Les bibliothèques responsables de la gestion des éléments de bas niveau (écran, clavier, etc.), lesquelles nécessitent donc le système de l'ordinateur, s'appellent bibliothèques System. Dans les exemples précédents, nous avons utilisé amplement l'affichage à la console avec la méthode System.out.println(). Ainsi, la gestion de l'affichage d'un message à l'écran ou la saisie de valeurs au clavier font partie des fonctions requérant le système de l'ordinateur. C'est pourquoi leur nom commence toujours par « System ».</p>
+<p>Les bibliothèques responsables de la gestion des éléments de bas niveau (écran, clavier, etc.), lesquelles nécessitent donc le système de l'ordinateur, s'appellent bibliothèques System. Dans les exemples précédents, nous avons utilisé amplement l'affichage à la console avec la méthode System.out.println(). Ainsi, la gestion de l'affichage d'un message à l'écran ou la saisie de valeurs au clavier font partie des fonctions requérant le système de l'ordinateur. C'est pourquoi leur nom commence toujours par «&nbsp;System&nbsp;».</p>
 
 <p>La librairie System est composée de deux sous-ensembles principaux : in et out. L'affichage est une opération de sortie et fait donc partie des éléments out de la classe System. Pour accéder au sous-ensemble out, on écrit System.out. Finalement, pour afficher à l'écran, nous faisons appel à la fonction print du sous-ensemble out.</p>
 
@@ -83,5 +83,5 @@ char[] motDePasse = uneConsole.readPassword("Mot de Passe: "); // le mot de pass
 {{< youtube id="BzFx1dszk4I" >}}
 
 
-<p>Si vous utilisez repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme « javac Main.java » et « java Main arg1 arg2 ».</p>
+<p>Si vous utilisez repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme «&nbsp;javac Main.java&nbsp;» et «&nbsp;java Main arg1 arg2&nbsp;».</p>
 

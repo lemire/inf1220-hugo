@@ -35,7 +35,7 @@ La vidéo suivante illustre l'utilisation de [repl.it](https://repl.it) (il n'es
 
 {{< youtube id="kMqNSZPjBOY" >}}
 
-Truc : Avec repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme « javac Main.java » et « java Main ».
+Truc : Avec repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme «&nbsp;javac Main.java&nbsp;» et «&nbsp;java Main&nbsp;».
 
 Dans le cours, vous trouverez des exemples utilisant [repl.it](https://repl.it), mais l'utilisation de repl.it est optionnelle. Si repl.it ne fonctionne pas bien pour vous, utilisez autre chose.
 
@@ -45,9 +45,9 @@ Notez bien : Certains des exemples [repl.it](https://repl.it) comprennent plusie
 
 ### Instructions détaillées pour Repl.it
 
-Repl.it est une plateforme en ligne qui permet d’écrire, d’exécuter et de tester du code Java directement dans votre navigateur, sans avoir besoin d’installer un environnement de développement sur votre ordinateur. Pour commencer, accédez aux liens Repl.it fournis dans le cours. Cliquez sur un lien pour ouvrir le projet Java correspondant. Vous verrez une interface avec un éditeur de code à gauche, où le code est déjà chargé, et une console à droite pour afficher les résultats. Si vous n’êtes pas encore inscrit, créez un compte gratuit sur Repl.it en utilisant votre adresse e-mail ou un compte Google. Une fois connecté, vous pouvez modifier le code directement dans l’éditeur. Pour exécuter votre programme, cliquez sur le bouton vert « Run » en haut de la page. La console affichera les sorties ou les erreurs, ce qui vous permettra de vérifier si votre code fonctionne comme prévu.
+Repl.it est une plateforme en ligne qui permet d’écrire, d’exécuter et de tester du code Java directement dans votre navigateur, sans avoir besoin d’installer un environnement de développement sur votre ordinateur. Pour commencer, accédez aux liens Repl.it fournis dans le cours. Cliquez sur un lien pour ouvrir le projet Java correspondant. Vous verrez une interface avec un éditeur de code à gauche, où le code est déjà chargé, et une console à droite pour afficher les résultats. Si vous n’êtes pas encore inscrit, créez un compte gratuit sur Repl.it en utilisant votre adresse e-mail ou un compte Google. Une fois connecté, vous pouvez modifier le code directement dans l’éditeur. Pour exécuter votre programme, cliquez sur le bouton vert «&nbsp;Run&nbsp;» en haut de la page. La console affichera les sorties ou les erreurs, ce qui vous permettra de vérifier si votre code fonctionne comme prévu.
 
-Pour travailler efficacement sur Repl.it, familiarisez-vous avec ses fonctionnalités principales. Vous pouvez créer un nouveau fichier ou répertoire dans votre projet en cliquant sur l’icône « + » dans la barre latérale. Si vous modifiez le code fourni dans les liens du cours, assurez-vous de ne pas écraser les instructions ou les parties essentielles sans les comprendre. Avec un peu de pratique, Repl.it deviendra un outil puissant et intuitif pour développer vos compétences en programmation Java.
+Pour travailler efficacement sur Repl.it, familiarisez-vous avec ses fonctionnalités principales. Vous pouvez créer un nouveau fichier ou répertoire dans votre projet en cliquant sur l’icône «&nbsp;+&nbsp;» dans la barre latérale. Si vous modifiez le code fourni dans les liens du cours, assurez-vous de ne pas écraser les instructions ou les parties essentielles sans les comprendre. Avec un peu de pratique, Repl.it deviendra un outil puissant et intuitif pour développer vos compétences en programmation Java.
 
 ## Installation du Java Development Kit (JDK)
 
@@ -89,7 +89,7 @@ Un environnement de développement intégré (IDE) est un logiciel qui facilite 
 
 
 
-Il faut cependant être critique. Les IDE ont la fâcheuse habitude d'automatiser plusieurs opérations ce qui ne pose pas de problème aux programmeurs expérimentés, mais qui est souvent déroutant pour les débutants. Les IDE vont souvent créer des répertoires, des « paquetages » et avoir différentes attentes quant à l'endroit où les différentes fonctions et classes doivent être. Le résultat net est que les étudiants sont souvent confrontés à des messages d'erreur qui les laissent perplexes après des modifications faites en utilisant l'interface graphique (par exemple, après le déplacement d'un fichier). Si vous utilisez un IDE, il faut apprendre à travailler selon les attentes de l'IDE. À terme, certains programmeurs trouvent que l'utilisation d'un IDE les rend plus productifs, mais quand on débute, l'IDE est un obstacle supplémentaire pour certains étudiants.
+Il faut cependant être critique. Les IDE ont la fâcheuse habitude d'automatiser plusieurs opérations ce qui ne pose pas de problème aux programmeurs expérimentés, mais qui est souvent déroutant pour les débutants. Les IDE vont souvent créer des répertoires, des «&nbsp;paquetages&nbsp;» et avoir différentes attentes quant à l'endroit où les différentes fonctions et classes doivent être. Le résultat net est que les étudiants sont souvent confrontés à des messages d'erreur qui les laissent perplexes après des modifications faites en utilisant l'interface graphique (par exemple, après le déplacement d'un fichier). Si vous utilisez un IDE, il faut apprendre à travailler selon les attentes de l'IDE. À terme, certains programmeurs trouvent que l'utilisation d'un IDE les rend plus productifs, mais quand on débute, l'IDE est un obstacle supplémentaire pour certains étudiants.
 
 
 ### Installation de l'IDE IntelliJ IDEA
@@ -114,7 +114,7 @@ Cet IDE possède un éditeur visuel bien fait, stable et complet. Pour installer
 1. Suivre le lien suivant : [https://netbeans.apache.org/download/index.html](https://netbeans.apache.org/download/index.html)
 2. Télécharger la version "binaries" (déjà compilée).
 3. Une fois le fichier .zip téléchargé, veuillez le décompresser dans un répertoire personnel. Ouvrez le répertoire ./netbeans/bin, les exécutables pour lancer Netbeans s'y trouvent.
-4. Vous pouvez démarrer maintenant Netbeans. Au démarrage, vous pouvez spécifier dans quel répertoire vous voulez que vos projets de programmation soient « sauvegardés ». Par défaut, il s'agit de « C:\Users\VotreNomUtilisateur\Documents\NetBeansProjects ».
+4. Vous pouvez démarrer maintenant Netbeans. Au démarrage, vous pouvez spécifier dans quel répertoire vous voulez que vos projets de programmation soient «&nbsp;sauvegardés&nbsp;». Par défaut, il s'agit de «&nbsp;C:\Users\VotreNomUtilisateur\Documents\NetBeansProjects&nbsp;».
 
 Si vous optez pour NetBeans, vous devrez vous en remettre au soutien technique et à la documentation de l'entreprise qui fournit le produit.
 

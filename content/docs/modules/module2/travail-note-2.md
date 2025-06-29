@@ -5,7 +5,7 @@ weight: 8
 
 # Travail noté 2 - Les types, opérateurs et méthodes
 
-Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.
+Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.
 
 Les travaux doivent être remis sous forme de fichier PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le document doit être clair, lisible, permettre le copier-coller du code, et inclure des explications détaillées en français sous forme de texte suivi, en évitant les saisies d’écran ou les travaux manuscrits. Les réponses doivent être précises, personnelles, et accompagnées d’analyses, sans se limiter à du code ou à des extraits recopiés. Une fois soumis, le travail ne peut être modifié, d’où l’importance de le relire attentivement.
 
@@ -28,7 +28,7 @@ Le nom des méthodes aire et perimetre peut être différent si vous le souhaite
 
 
 
-<p>Vous devez expliquer votre solution en détail, une solution insuffisamment expliquée pourra recevoir la note de zéro. Tous les qualifiants que vous utilisez (static, protected, private, public) doivent être justifiés: vous ne pouvez pas utiliser le mot-clé « static » sans le justifier. Les explications sont obligatoires. Toutes les fonctions et variables doivent être justifiées et expliquées. Prenez la peine de bien présenter votre code et de l'expliquer. Prenez le temps de réfléchir à ce qui se produit si un programmeur utilise un rayon de zéro ou un rayon négatif et expliquez comment votre code va se comporter dans de tels cas. Vous pouvez expliquer votre code comme vous le souhaitez, tant que vous êtes clair. Vous n'êtes pas obligé de mettre systématiquement des commentaires dans le code. Utilisez votre bon jugement afin de produire du code clair et facile à lire. Note: Il ne faut pas nous écrire pour nous demander d'expliquer ce que nous voulons dire par « expliquer ». </p>
+<p>Vous devez expliquer votre solution en détail, une solution insuffisamment expliquée pourra recevoir la note de zéro. Tous les qualifiants que vous utilisez (static, protected, private, public) doivent être justifiés: vous ne pouvez pas utiliser le mot-clé «&nbsp;static&nbsp;» sans le justifier. Les explications sont obligatoires. Toutes les fonctions et variables doivent être justifiées et expliquées. Prenez la peine de bien présenter votre code et de l'expliquer. Prenez le temps de réfléchir à ce qui se produit si un programmeur utilise un rayon de zéro ou un rayon négatif et expliquez comment votre code va se comporter dans de tels cas. Vous pouvez expliquer votre code comme vous le souhaitez, tant que vous êtes clair. Vous n'êtes pas obligé de mettre systématiquement des commentaires dans le code. Utilisez votre bon jugement afin de produire du code clair et facile à lire. Note: Il ne faut pas nous écrire pour nous demander d'expliquer ce que nous voulons dire par «&nbsp;expliquer&nbsp;». </p>
 
 
 <p>Si le code de votre solution n'est pas du Java valable, s'il ne compile pas, une note de zéro pourra être attribuée. Pour réussir ce cours, vous devez être capable d'écrire du code Java fonctionnel et correct.</p>
@@ -61,7 +61,7 @@ Le nom des méthodes aire et perimetre peut être différent si vous le souhaite
 
 
 
-<p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: « <em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em> ».</p>
+<p><strong>Indice.</strong> Rendez-vous sur <a href="https://rc-inf1220.teluq.ca/">la page du robot conversationnel du cours</a> et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em>&nbsp;».</p>
 
 {{% /hint %}}
 
@@ -193,4 +193,4 @@ public class Bonhomme {
 
 ## En terminant
 
-<p>Dans plusieurs cas, vos travaux sont corrigés par un « correcteur ». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>
+<p>Dans plusieurs cas, vos travaux sont corrigés par un «&nbsp;correcteur&nbsp;». Il est possible que vous puissiez identifier cette personne en examinant le document de rétroaction que vous recevez au sein du portail étudiant. Vous ne devriez jamais joindre cette personne. Cette personne n'a pas comme mandat de répondre à vos questions suite à la correction. Vos courriels seront ignorés. Il faut plutôt joindre la personne qui vous encadre au sein du cours.</p>

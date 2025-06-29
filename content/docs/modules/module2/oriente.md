@@ -5,7 +5,7 @@ weight: 2
 
 # Création d'une classe en Java
 
-Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.
+Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de «&nbsp;plan&nbsp;» pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.
 
 ## Un premier programme
 
@@ -42,7 +42,7 @@ public class Bienvenue {
 <li>Pour définir une méthode, il faut donner une suite d'instructions situées entre deux nouvelles accolades. Dans le cas qui nous intéresse, la méthode "<tt>main</tt>" ne comporte qu'une seule instruction qui provoque l'affichage du message «<tt>Bienvenue au sein du cours INF 1220!</tt>», à savoir la méthode <tt>System.out.println</tt>. Les lignes contenant une instruction simple comme celle-ci doivent se terminer par un point-virgule.</li>
 </ol>
 
-<strong>Important</strong>: Le code en Java est généralement organisé en « classes ». En Java, une classe doit être déclarée et définie dans un fichier qui porte son nom. Ainsi, si votre classe s'appelle "MonChat", vous devez l'enregistrer dans un fichier nommé MonChat.java.
+<strong>Important</strong>: Le code en Java est généralement organisé en «&nbsp;classes&nbsp;». En Java, une classe doit être déclarée et définie dans un fichier qui porte son nom. Ainsi, si votre classe s'appelle "MonChat", vous devez l'enregistrer dans un fichier nommé MonChat.java.
 
 <p><a id="intro" name="sansIDE"></a></p>
 
@@ -82,8 +82,8 @@ public class Bienvenue {
 <p>Prenez bien note des points suivants:</p>
 
 <ol>
-<li>Les programmes Java sont écrits dans des fichiers au format texte ayant l'extension «.java». Le nom du fichier (par exemple Bienvenue.java) doit correspondre au code: un fichier Java comporte généralement une déclaration « public class » qui détermine le nom du fichier. Ainsi donc si votre code Java contient la déclaration « public class Bienvenue » alors le fichier doit être nommé Bienvenue.java. La plupart des fichiers en Java ne contiennent qu'une seule « classe ».</li>
-<li>Un programme Java exécutable doit contenir une méthode nommée « main ». Tous les fichiers Java n'ont pas une méthode « main », mais ceux qui en contiennent une peuvent souvent être exécutés.</li>
+<li>Les programmes Java sont écrits dans des fichiers au format texte ayant l'extension «.java». Le nom du fichier (par exemple Bienvenue.java) doit correspondre au code: un fichier Java comporte généralement une déclaration «&nbsp;public class&nbsp;» qui détermine le nom du fichier. Ainsi donc si votre code Java contient la déclaration «&nbsp;public class Bienvenue&nbsp;» alors le fichier doit être nommé Bienvenue.java. La plupart des fichiers en Java ne contiennent qu'une seule «&nbsp;classe&nbsp;».</li>
+<li>Un programme Java exécutable doit contenir une méthode nommée «&nbsp;main&nbsp;». Tous les fichiers Java n'ont pas une méthode « main&nbsp;», mais ceux qui en contiennent une peuvent souvent être exécutés.</li>
 <li>Beaucoup des exemples dans le cours peuvent être recopiés et exécutés, mais vous devez choisir le bon nom de fichier (correspondant à la classe). Si vous modifiez du code, même très légèrement, et qu'il ne fonctionne plus, revenez en arrière. Il faut avoir beaucoup de rigueur pour programmer, vous ne pouvez pas juste modifier du code en suivant votre instinct et espérer que tout fonctionne. Vous devez apprendre et comprendre avant de pouvoir modifier du code.</li>
 <li>Vous ne devez en aucun cas copier du code au sein d'autre code en espérant que tout fonctionne. Le copier-coller sans comprendre ce que l'on fait ne fonctionnera pas. Pour commencer, ne changez absolument rien, rien, au code. Copiez le code à l'identique, caractère par caractère.Tout doit être identique. Le nom de fichier, le nom de la classe, le nom des méthodes, etc.</li>
 </ol>

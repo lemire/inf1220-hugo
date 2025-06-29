@@ -77,7 +77,7 @@ Réponse: Non. Tout travail remis après votre date de fin de cours peut recevoi
 
 ### Question: Je n'ai pas reçu de lettre confirmant mon inscription au cours ?
 
-Réponse: Dans ce cas, vous n'êtes pas reconnu comme étant inscrit au cours. Vérifiez auprès de l'Université. Vous devez avoir reçu une confirmation écrite concernant votre inscription. Bien que vous les receviez directement, les documents officiels sont aussi disponibles en cliquant sur l’onglet « Documents reçus » au sein du tableau de bord du portail étudiant.
+Réponse: Dans ce cas, vous n'êtes pas reconnu comme étant inscrit au cours. Vérifiez auprès de l'Université. Vous devez avoir reçu une confirmation écrite concernant votre inscription. Bien que vous les receviez directement, les documents officiels sont aussi disponibles en cliquant sur l’onglet «&nbsp;Documents reçus&nbsp;» au sein du tableau de bord du portail étudiant.
 
 ### Question: J'ai besoin de plus de temps que prévu pour terminer le cours, on m'a dit que le professeur pouvait m'arranger ?
 

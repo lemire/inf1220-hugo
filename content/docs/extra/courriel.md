@@ -20,8 +20,8 @@ Avant de répondre à un courriel, prenez le temps de bien le lire. Si on vous d
 détails additionnels, prenez le temps de le faire, ou expliquez clairement pourquoi cela n'est pas possible ou
 souhaitable.
 
-L'objet d'un courriel doit en refléter le contenu. Il faut éviter les objets génériques (par ex., « une question »). Il
-faut éviter à tout prix les objets qui ne réflètent pas le contenu (par ex. intitulé un cours « travail 2 » alors que
+L'objet d'un courriel doit en refléter le contenu. Il faut éviter les objets génériques (par ex., «&nbsp;une question&nbsp;»). Il
+faut éviter à tout prix les objets qui ne réflètent pas le contenu (par ex. intitulé un cours «&nbsp;travail 2&nbsp;» alors que
 celui-ci porte en fait sur l'examen. Si vous utilisez un objet de courriel vague ou absent, il faut vous attendre à ce
 que votre courriel puisse ne pas être traité correctement.
 
@@ -31,7 +31,7 @@ un objet distinct.
 
 Dans un contexte professionnel, il est nettement préférable d'envoyer un courriel identifié à votre nom. Il n'est pas
 pratique d'envoyer des courriels vous identifiant sous le nom de votre conjoint, par exemple. Il peut être amusant de se
-donner des pseudonymes (« la chouette », « le montréalais ») entre amis, mais ce n'est pas souhaitable dans un contexte
+donner des pseudonymes («&nbsp;la chouette&nbsp;», «&nbsp;le montréalais&nbsp;») entre amis, mais ce n'est pas souhaitable dans un contexte
 professionnel.
 
 Un courriel destiné à un humain doit obligatoirement avoir un corps de texte. Un courriel doit être clair et fournir
@@ -57,7 +57,7 @@ format qui est largement supporté par les divers systèmes d'exploitation (comm
 
 Certains logiciels de courriel (Outlook) ne permettent pas la transmission de fichiers avec certaines extensions. Dans
 de tels cas, il est acceptable de renommer l'extension du fichier et d'inclure dans le corps du message une explication.
-Par exemple, tous les fichiers au format texte (.xml, .html), peuvent être transmis avec l'extension « .txt ».
+Par exemple, tous les fichiers au format texte (.xml, .html), peuvent être transmis avec l'extension «&nbsp;.txt&nbsp;».
 
 Les courriels automatisés non sollicités sont du pourriel. Ainsi, il ne faut pas transmettre des réponses automatisées
 (par ex., des accusés de réception) à des destinateurs non avisés.

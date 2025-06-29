@@ -267,7 +267,7 @@ La différence réside en ceci que l’accès direct nous facilite la mise à jo
 
 ## Question 6
 
-Créez un fichier texte nommé unFichier dans le répertoire courant et écrivez-y « Bonjour, je suis bien créé ». Ce nom sera fourni par l’utilisateur sous forme de chaîne « unFichier.txt ».
+Créez un fichier texte nommé unFichier dans le répertoire courant et écrivez-y «&nbsp;Bonjour, je suis bien créé&nbsp;». Ce nom sera fourni par l’utilisateur sous forme de chaîne «&nbsp;unFichier.txt&nbsp;».
 
 <details><summary>Réponse</summary>
 

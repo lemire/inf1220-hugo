@@ -262,7 +262,7 @@ public class Joe {
 
 ## Question 13
 
-<p>Écrivez une classe représentant une valeur entière à laquelle je peux ajouter la valeur trois par l'entremise d'une méthode « public » nommée « patate ». La méthode doit retourner la valeur entière modifiée. Le constructeur doit me permettre d'initialiser la valeur entière. La classe doit n'avoir que des attributs «&nbsp;private&nbsp;».</p>
+<p>Écrivez une classe représentant une valeur entière à laquelle je peux ajouter la valeur trois par l'entremise d'une méthode «&nbsp;public&nbsp;» nommée «&nbsp;patate&nbsp;». La méthode doit retourner la valeur entière modifiée. Le constructeur doit me permettre d'initialiser la valeur entière. La classe doit n'avoir que des attributs «&nbsp;private&nbsp;».</p>
 
 <details><summary>Réponse</summary>
 
@@ -284,7 +284,7 @@ public class Entier {
 
 ## Question 14
 
-<p>Écrivez une classe représentant une valeur entière. Cette classe doit n'avoir qu'une seule méthode appelée « additionne » qui prend comme paramètre une instance de la classe et qui retourne une nouvelle instance de la classe. L'instance retournée doit comprendre la somme des deux valeurs entières.</p>
+<p>Écrivez une classe représentant une valeur entière. Cette classe doit n'avoir qu'une seule méthode appelée «&nbsp;additionne&nbsp;» qui prend comme paramètre une instance de la classe et qui retourne une nouvelle instance de la classe. L'instance retournée doit comprendre la somme des deux valeurs entières.</p>
 
 <details><summary>Réponse</summary>
 

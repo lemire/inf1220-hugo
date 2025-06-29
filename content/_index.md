@@ -20,18 +20,6 @@ pseudo-code ou en Java. Nous avons inclus un grand nombre d'exercices et d'exemp
 pas et sur le site web du cours.
 
 
-Permettez-moi de vous souhaiter bon succès dans vos études et dans vos travaux.
-
-Daniel Lemire, professeur
-
-## Démarrage
-
-Commencez le cours dès que vous êtes prêt après avoir lu les consignes. Il n’y a pas de contact de démarrage dans ce cours. Vous devez suivre le cours en ligne, en suivant les instructions du site web. Au fur et à mesure que vous progressez, vous prendrez connaissance des consignes ayant trait aux lectures, aux exercices et aux travaux à remettre.
-
-Dans la documentation que vous avez reçu de l’Université, vous avez le nom de la personne qui vous encadre. Ce nom devrait aussi apparaître au sein du portail étudiant. Prenez bien en note le nom de cette personne et son adresse de courriel: vous pouvez lui écrire vos questions et commentaires.
-
-Le cours INF 1220 est un cours en ligne. Vous devrez travailler sur un ordinateur connecté à Internet.
-
 
 ## Présentation du cours
 
@@ -55,13 +43,6 @@ De plus, la plupart des langages de programmation modernes sont ou incluent des 
 
 Le cours est divisé en 5 modules avec un ensemble d'activités introduisant les éléments de programmation. Des exercices pratiques et des travaux notés viennent évaluer vos connaissances, pour enfin terminer le cours avec un examen final. Chaque module se termine par un travail noté.
 
-{{% hint info %}}
-Le site du cours compte plus de **400 exemples de code Java** dont plus d'une centaine peuvent être exécutés directement.
-Le site du cours compte aussi plus de **200 problèmes résolus** couvrant toute la matière du cours. Nous offrons aussi
-des dizaines de laboratoires interactifs en ligne, directement dans le site web. Nous vous suggérerons le visionnement
-de plus de 50 vidéos en lien avec la matière du cours. En plus des travaux
-notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation par semaine.
-{{% /hint %}}
 
 Le site du cours vous permet d'exécuter du code Java directement dans votre 
 navigateur&nbsp;: 
@@ -73,11 +54,11 @@ void main() {
 }
 {{</inlineJava>}}
 
-
+## Manuel
 
 Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf) dès maintenant.
 
-[Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/):
+[Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/) pour une somme modeste&nbsp;:
 
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
@@ -96,12 +77,13 @@ du cours comprend des lectures obligatoires dans le manuel.
 En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.
 
 
+
 {{% hint warning %}}
 
 ## Intelligence artificielle
 
 
-<p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
+<p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise et même recommandée (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
 <ul>
 <li>Décrivez votre utilisation de l'IA.  Une utilisation de l'IA sans déclaration peut être considérée comme une forme de faute. Contrairement à ce que vous pourriez croire, déclarer votre utilisation de l'IA vous protège.</li>
 <li>Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA&nbsp;? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.</li> 
@@ -109,3 +91,32 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 </ul>
 
 {{% /hint  %}}
+
+
+
+## Démarrage
+
+Commencez le cours dès que vous êtes prêt après avoir lu les consignes. Il n’y a pas de contact de démarrage dans ce cours. Vous devez suivre le cours en ligne, en suivant les instructions du site web. Au fur et à mesure que vous progressez, vous prendrez connaissance des consignes ayant trait aux lectures, aux exercices et aux travaux à remettre.
+
+Dans la documentation que vous avez reçu de l’Université, vous avez le nom de la personne qui vous encadre. Ce nom devrait aussi apparaître au sein du portail étudiant. Prenez bien en note le nom de cette personne et son adresse de courriel: vous pouvez lui écrire vos questions et commentaires.
+
+Le cours INF 1220 est un cours en ligne. Vous devrez travailler sur un ordinateur connecté à Internet.
+
+
+Terminez la lecture de cette page de présentation du cours.
+Prenez ensuite le temps de vous familiariser avec le site du cours. Explorez bien le menu à gauche, puis le menu à droite. Quand vous aurez
+bien fait tout le tour, commencez avec le premier module.
+
+
+
+{{% hint info %}}
+_Vous devez bien planifier votre temps._  En plus des travaux
+notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation et de lire des dizaines de pages par semaine.
+Le site du cours compte plus de **400 exemples de code Java** dont plus d'une centaine peuvent être exécutés directement en ligne.
+Le site du cours compte aussi plus de **200 problèmes résolus** couvrant toute la matière du cours. Nous offrons aussi
+des **dizaines de laboratoires interactifs en ligne**, directement dans le site web. 
+Le manuel du cours **fait près de 300 pages**. Le site web du cours compte plus de **cent mille mots**. 
+Nous vous suggérerons le visionnement
+de plus de **50&nbsp;vidéos** en lien avec la matière du cours.
+{{% /hint %}}
+
