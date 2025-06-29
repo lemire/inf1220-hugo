@@ -10,21 +10,21 @@
 
 
 
- &lt;div id="java-runner-1751157298961529963">
+ &lt;div id="java-runner-1751160229976932049">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751157298961529963 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751157298961529963 .export-form { margin-bottom:0; }
- #java-runner-1751157298961529963 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751157298961529963 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751157298961529963 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751157298961529963 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751157298961529963 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751160229976932049 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751160229976932049 .export-form { margin-bottom:0; }
+ #java-runner-1751160229976932049 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751160229976932049 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751160229976932049 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751160229976932049 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751160229976932049 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751157298961529963-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751160229976932049-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
@@ -40,14 +40,14 @@ public class ExemplesMath {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751157298961529963-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751160229976932049-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751157298961529963');
+ var root = document.getElementById('java-runner-1751160229976932049');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -269,21 +269,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1751157298961735495">
+ &lt;div id="java-runner-1751160229976987143">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751157298961735495 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751157298961735495 .export-form { margin-bottom:0; }
- #java-runner-1751157298961735495 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751157298961735495 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751157298961735495 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751157298961735495 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751157298961735495 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751160229976987143 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751160229976987143 .export-form { margin-bottom:0; }
+ #java-runner-1751160229976987143 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751160229976987143 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751160229976987143 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751160229976987143 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751160229976987143 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751157298961735495-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751160229976987143-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
@@ -320,14 +320,14 @@ public class ExemplesString {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751157298961735495-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751160229976987143-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751157298961735495');
+ var root = document.getElementById('java-runner-1751160229976987143');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -549,21 +549,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1751157298961875997">
+ &lt;div id="java-runner-1751160229977078164">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751157298961875997 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751157298961875997 .export-form { margin-bottom:0; }
- #java-runner-1751157298961875997 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751157298961875997 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751157298961875997 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751157298961875997 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751157298961875997 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751160229977078164 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751160229977078164 .export-form { margin-bottom:0; }
+ #java-runner-1751160229977078164 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751160229977078164 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751160229977078164 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751160229977078164 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751160229977078164 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751157298961875997-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751160229977078164-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
@@ -582,14 +582,14 @@ public class ExempleZero {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751157298961875997-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751160229977078164-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751157298961875997');
+ var root = document.getElementById('java-runner-1751160229977078164');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -811,21 +811,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1751157298962057555">
+ &lt;div id="java-runner-1751160229977120403">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751157298962057555 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751157298962057555 .export-form { margin-bottom:0; }
- #java-runner-1751157298962057555 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751157298962057555 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751157298962057555 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751157298962057555 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751157298962057555 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751160229977120403 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751160229977120403 .export-form { margin-bottom:0; }
+ #java-runner-1751160229977120403 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751160229977120403 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751160229977120403 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751160229977120403 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751160229977120403 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751157298962057555-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751160229977120403-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
@@ -840,14 +840,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751157298962057555-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751160229977120403-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751157298962057555');
+ var root = document.getElementById('java-runner-1751160229977120403');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1181,12 +1181,12 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  Connaissances technologiques
  &lt;a class="anchor" href="#connaissances-technologiques">#&lt;/a>
 &lt;/h2>
-&lt;p>Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d'avoir
- une certaine connaissance de base. Vous devriez savoir que les ordinateurs disposent d'un processeur, de mémoire, de
- disques, etc. et qu'ils fonctionnent à l'aide d'un système d'exploitation. Si vous ne vous êtes jamais intéressés à
- ces concepts de base, il peut être utile que vous preniez un peu de votre temps pour faire des recherches sur ces
- questions. Il peut être difficile de suivre ce cours si vous ne savez vraiment pas ce qu'est un processeur ou de la
- mémoire informatique.&lt;/p></description></item><item><title>Exercices sur l’héritage et le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</guid><description>&lt;h1 id="exercices-sur-lhéritage-et-le-polymorphisme">
+&lt;p>Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d&amp;rsquo;avoir
+une certaine connaissance de base. Vous devriez savoir que les ordinateurs disposent d&amp;rsquo;un processeur, de mémoire, de
+disques, etc. et qu&amp;rsquo;ils fonctionnent à l&amp;rsquo;aide d&amp;rsquo;un système d&amp;rsquo;exploitation. Si vous ne vous êtes jamais intéressés à
+ces concepts de base, il peut être utile que vous preniez un peu de votre temps pour faire des recherches sur ces
+questions. Il peut être difficile de suivre ce cours si vous ne savez vraiment pas ce qu&amp;rsquo;est un processeur ou de la
+mémoire informatique.&lt;/p></description></item><item><title>Exercices sur l’héritage et le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</guid><description>&lt;h1 id="exercices-sur-lhéritage-et-le-polymorphisme">
  Exercices sur l&amp;rsquo;héritage et le polymorphisme.
  &lt;a class="anchor" href="#exercices-sur-lh%c3%a9ritage-et-le-polymorphisme">#&lt;/a>
 &lt;/h1>
@@ -1194,13 +1194,10 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  Questions/Réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
-&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p>
-&lt;h2 id="réponses-uniques">
- Réponses uniques?
- &lt;a class="anchor" href="#r%c3%a9ponses-uniques">#&lt;/a>
-&lt;/h2>
-&lt;p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.&lt;/p></description></item><item><title>Exercices sur les flux</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</guid><description>&lt;h1 id="exercices-sur-les-flux">
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Exercices sur les flux</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/exercices-4-1/</guid><description>&lt;h1 id="exercices-sur-les-flux">
  Exercices sur les flux
  &lt;a class="anchor" href="#exercices-sur-les-flux">#&lt;/a>
 &lt;/h1>
@@ -1208,9 +1205,10 @@ Je vous invite donc à faire une autoévaluation.&lt;/p>
  Questions/réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
-&lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.&lt;/p>
-&lt;p>Prenez note qu’il est permis d’utiliser le robot conversationnel du cours lors des exercices. Cependant, vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
+&lt;p>Veuillez répondre mentalement, sur papier ou en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
+&lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
  Introduction aux types de base et à leurs opérateurs
  &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
 &lt;/h1>
@@ -1262,8 +1260,9 @@ utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse 
  Exercices sur les classes, les variables, les types et les opérateurs
  &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
 &lt;/h1>
-&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
-&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
+&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l&amp;rsquo;aide de tout le matériel et de l&amp;rsquo;Internet, de résoudre le problème. Prévoyez jusqu&amp;rsquo;à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
+&lt;p>N&amp;rsquo;allez pas trop vite. Il ne sert à rien de lire la question et d&amp;rsquo;immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n&amp;rsquo;apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n&amp;rsquo;est pas la rapidité.&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
  Court historique des langages de programmation
  &lt;a class="anchor" href="#court-historique-des-langages-de-programmation">#&lt;/a>
 &lt;/h1>
@@ -1303,8 +1302,9 @@ Depuis, la programmation fonctionnelle a influencé de nombreux langages moderne
  Questions/Réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h1>
-&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.&lt;/p>
-&lt;p>Certains étudiants aiment utiliser une &lt;a href="https://cheatography.com/sschaub/cheat-sheets/java-fundamentals/">Java Fundamentals Cheat Sheet&lt;/a> (anglais) pour garder à l'esprit la syntaxe.&lt;/p>
+&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
 &lt;h2 id="comment-faire-ces-exercices-">
  Comment faire ces exercices ?
  &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
@@ -1317,7 +1317,9 @@ Depuis, la programmation fonctionnelle a influencé de nombreux langages moderne
  Questions/Réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
 &lt;p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.&lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
  Les algorithmes : conception et syntaxe
  &lt;a class="anchor" href="#les-algorithmes--conception-et-syntaxe">#&lt;/a>
@@ -1416,7 +1418,337 @@ et des commentaires explicatifs améliorent la compréhension.&lt;/p></descripti
  Les problèmes difficiles
  &lt;a class="anchor" href="#les-probl%c3%a8mes-difficiles">#&lt;/a>
 &lt;/h1>
-&lt;p>Dans un cours d’introduction à la programmation, la plupart des exercices se concentrent sur des problèmes dont les algorithmes sont relativement simples à concevoir, surtout si vous maîtrisez les bases de la programmation et des mathématiques. Ces problèmes, comme calculer une moyenne ou trier une liste, demandent souvent une compréhension des structures de contrôle (conditions et boucles) et une application directe de concepts logiques. Cependant, dans des contextes plus avancés, certains problèmes se révèlent bien plus complexes, non pas à cause de la programmation elle-même, mais en raison de la difficulté à trouver un algorithme efficace. Ces défis, qualifiés de « problèmes difficiles », nécessitent des approches créatives et parfois des compromis, car leurs solutions idéales peuvent être hors de portée avec les ressources informatiques actuelles.&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
+&lt;p>Dans un cours d’introduction à la programmation, la plupart des exercices se concentrent sur des problèmes dont les algorithmes sont relativement simples à concevoir, surtout si vous maîtrisez les bases de la programmation et des mathématiques. Ces problèmes, comme calculer une moyenne ou trier une liste, demandent souvent une compréhension des structures de contrôle (conditions et boucles) et une application directe de concepts logiques. Cependant, dans des contextes plus avancés, certains problèmes se révèlent bien plus complexes, non pas à cause de la programmation elle-même, mais en raison de la difficulté à trouver un algorithme efficace. Ces défis, qualifiés de « problèmes difficiles », nécessitent des approches créatives et parfois des compromis, car leurs solutions idéales peuvent être hors de portée avec les ressources informatiques actuelles.&lt;/p></description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java">
+ Fondamentaux de Java
+ &lt;a class="anchor" href="#fondamentaux-de-java">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="types-de-données-java">
+ Types de données Java
+ &lt;a class="anchor" href="#types-de-donn%c3%a9es-java">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Type&lt;/th>
+ &lt;th>Exemple&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>byte / short / int / long&lt;/td>
+ &lt;td>-123, 10&lt;/td>
+ &lt;td>Entiers de différentes tailles&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>float / double&lt;/td>
+ &lt;td>235.13&lt;/td>
+ &lt;td>Nombres à virgule flottante&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>char&lt;/td>
+ &lt;td>&amp;lsquo;U&amp;rsquo;&lt;/td>
+ &lt;td>Caractère unique&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>boolean&lt;/td>
+ &lt;td>true, false&lt;/td>
+ &lt;td>Valeurs logiques&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>String&lt;/td>
+ &lt;td>&amp;ldquo;Salutations de la Terre&amp;rdquo;&lt;/td>
+ &lt;td>Chaînes de caractères&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="instructions-java">
+ Instructions Java
+ &lt;a class="anchor" href="#instructions-java">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Instruction&lt;/th>
+ &lt;th>Syntaxe&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>if&lt;/td>
+ &lt;td>if (expression) { instructions } else if (expression) { instructions } else { instructions }&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>while&lt;/td>
+ &lt;td>while (expression) { instructions }&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>do-while&lt;/td>
+ &lt;td>do { instructions } while (expression);&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>for&lt;/td>
+ &lt;td>for (int i = 0; i &amp;lt; max; ++i) { instructions }&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>for each&lt;/td>
+ &lt;td>for (var : collection) { instructions }&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>switch&lt;/td>
+ &lt;td>switch (expression) { case valeur: instructions break; case valeur2: instructions break; default: instructions }&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>try-catch&lt;/td>
+ &lt;td>try { instructions } catch (ExceptionType e1) { instructions } catch (Exception e2) { instructions } finally { instructions }&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="conversions-de-données-java">
+ Conversions de données Java
+ &lt;a class="anchor" href="#conversions-de-donn%c3%a9es-java">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Conversion&lt;/th>
+ &lt;th>Syntaxe&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Chaîne vers nombre&lt;/td>
+ &lt;td>int i = Integer.parseInt(str);&lt;br>double d = Double.parseDouble(str);&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Tout type vers chaîne&lt;/td>
+ &lt;td>String s = String.valueOf(valeur);&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Numérique&lt;/td>
+ &lt;td>int i = (int) expression numérique;&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="méthodes-de-chaîne-java">
+ Méthodes de chaîne Java
+ &lt;a class="anchor" href="#m%c3%a9thodes-de-cha%c3%aene-java">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Méthode&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>s.length()&lt;/td>
+ &lt;td>Retourne la longueur de s&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.charAt(i)&lt;/td>
+ &lt;td>Extrait le i-ème caractère&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.substring(début, fin)&lt;/td>
+ &lt;td>Extrait une sous-chaîne de début à fin-1&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.toUpperCase()&lt;/td>
+ &lt;td>Retourne une copie en majuscules&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.toLowerCase()&lt;/td>
+ &lt;td>Retourne une copie en minuscules&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.indexOf(x)&lt;/td>
+ &lt;td>Retourne l’index de la première occurrence de x&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.replace(ancien, nouveau)&lt;/td>
+ &lt;td>Remplace les occurrences&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.split(regex)&lt;/td>
+ &lt;td>Divise la chaîne en jetons&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.trim()&lt;/td>
+ &lt;td>Supprime les espaces autour&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.equals(s2)&lt;/td>
+ &lt;td>Vrai si s est égal à s2&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>s.compareTo(s2)&lt;/td>
+ &lt;td>0 si égaux, + si s &amp;gt; s2, - si s &amp;lt; s2&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="méthodes-javautilarraylist">
+ Méthodes java.util.ArrayList
+ &lt;a class="anchor" href="#m%c3%a9thodes-javautilarraylist">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Méthode&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>l.add(élément)&lt;/td>
+ &lt;td>Ajoute un élément à la liste&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.add(index, élément)&lt;/td>
+ &lt;td>Ajoute un élément à l’index spécifié&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.get(i)&lt;/td>
+ &lt;td>Retourne le i-ème élément&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.size()&lt;/td>
+ &lt;td>Retourne le nombre d’éléments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.remove(i)&lt;/td>
+ &lt;td>Supprime le i-ème élément&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.remove(élément)&lt;/td>
+ &lt;td>Supprime la première occurrence de l’élément&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.set(i, val)&lt;/td>
+ &lt;td>Place val à la position i&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.clear()&lt;/td>
+ &lt;td>Supprime tous les éléments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>l.contains(élément)&lt;/td>
+ &lt;td>Vrai si l’élément est dans la liste&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="méthodes-javautilhashmap">
+ Méthodes java.util.HashMap
+ &lt;a class="anchor" href="#m%c3%a9thodes-javautilhashmap">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Méthode&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>m.put(clé, valeur)&lt;/td>
+ &lt;td>Insère une valeur avec une clé&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.get(clé)&lt;/td>
+ &lt;td>Récupère la valeur associée à la clé&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.containsKey(clé)&lt;/td>
+ &lt;td>Vrai si la clé existe&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.containsValue(valeur)&lt;/td>
+ &lt;td>Vrai si la valeur existe&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.remove(clé)&lt;/td>
+ &lt;td>Supprime l’entrée associée à la clé&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.size()&lt;/td>
+ &lt;td>Retourne le nombre d’entrées&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.clear()&lt;/td>
+ &lt;td>Supprime toutes les entrées&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.keySet()&lt;/td>
+ &lt;td>Retourne un ensemble des clés&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>m.values()&lt;/td>
+ &lt;td>Retourne une collection des valeurs&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="java-hello-world">
+ Java Hello World
+ &lt;a class="anchor" href="#java-hello-world">#&lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">import&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#24292e">java.util.Date&lt;/span>&lt;span style="color:#1f2328">;&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">&lt;/span>&lt;span style="color:#cf222e">public&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">class&lt;/span> &lt;span style="color:#1f2328">Hello&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">{&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">public&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">static&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">void&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#6639ba">main&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>String&lt;span style="color:#0550ae">[]&lt;/span>&lt;span style="color:#fff"> &lt;/span>args&lt;span style="color:#1f2328">)&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">{&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>System&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">out&lt;/span>&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">println&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#34;Bonjour, le monde !&amp;#34;&lt;/span>&lt;span style="color:#1f2328">);&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>Date&lt;span style="color:#fff"> &lt;/span>maintenant&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">new&lt;/span>&lt;span style="color:#fff"> &lt;/span>Date&lt;span style="color:#1f2328">();&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>System&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">out&lt;/span>&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">println&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#34;Heure : &amp;#34;&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#0550ae">+&lt;/span>&lt;span style="color:#fff"> &lt;/span>maintenant&lt;span style="color:#1f2328">);&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">}&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">&lt;/span>&lt;span style="color:#1f2328">}&lt;/span>&lt;span style="color:#fff">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Enregistrer dans &lt;code>Hello.java&lt;/code>&lt;/li>
+&lt;li>Compiler : &lt;code>javac Hello.java&lt;/code>&lt;/li>
+&lt;li>Exécuter : &lt;code>java Hello&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="opérateurs-arithmétiques-java">
+ Opérateurs arithmétiques Java
+ &lt;a class="anchor" href="#op%c3%a9rateurs-arithm%c3%a9tiques-java">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Opérateur&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>x + y&lt;/td>
+ &lt;td>Addition&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>x - y&lt;/td>
+ &lt;td>Soustraction&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>x * y&lt;/td>
+ &lt;td>Multiplication&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>x / y&lt;/td>
+ &lt;td>Division&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>x % y&lt;/td>
+ &lt;td>Modulo&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>++x / x++&lt;/td>
+ &lt;td>Incrémentation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;ndash;x / x&amp;ndash;&lt;/td>
+ &lt;td>Décrémentation&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>Raccourcis d’affectation : x op= y (ex. x += 1 incrémente x)&lt;/em>&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
  Travail noté 2 - Les types, opérateurs et méthodes
  &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
 &lt;/h1>
@@ -1434,7 +1766,9 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
  Questions/Réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
 &lt;p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.&lt;/p></description></item><item><title>FAQ</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</guid><description>&lt;h3 id="question-quest-ce-que-java-et-pourquoi-est-il-utilisé-">
  Question: Qu&amp;rsquo;est-ce que Java et pourquoi est-il utilisé ?
  &lt;a class="anchor" href="#question-quest-ce-que-java-et-pourquoi-est-il-utilis%c3%a9-">#&lt;/a>

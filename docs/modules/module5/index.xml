@@ -31,13 +31,10 @@ En utilisant correctement ces idées, on peut rendre les programmes plus modulai
  Questions/Réponses
  &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
 &lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.&lt;/p>
-&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p>
-&lt;h2 id="réponses-uniques">
- Réponses uniques?
- &lt;a class="anchor" href="#r%c3%a9ponses-uniques">#&lt;/a>
-&lt;/h2>
-&lt;p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
+&lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises&lt;/a>. Cependant vous devriez vous entraîner à produire vos propres réponses.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
  Travail noté 5 - Héritage et polymorphisme
  &lt;a class="anchor" href="#travail-not%c3%a9-5---h%c3%a9ritage-et-polymorphisme">#&lt;/a>
 &lt;/h1>
