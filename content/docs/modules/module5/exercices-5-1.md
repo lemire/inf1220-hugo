@@ -1107,7 +1107,7 @@ Comment les méthodes clone(), equals() et l’opérateur == sont-ils liés en t
 <details><summary>Réponse</summary>
 En Java, clone(), equals() et l’opérateur == servent des objectifs distincts mais sont liés par leur rapport à la gestion des objets. L’opérateur == compare les références des objets, vérifiant s’ils pointent vers la même instance en mémoire. La méthode equals(), définie dans Object, compare par défaut les références (comme ==), mais peut être redéfinie pour comparer le contenu des objets (par exemple, les valeurs de leurs champs). La méthode clone() crée une copie d’un objet, mais le type de copie (superficielle ou profonde) influence la relation entre l’original et la copie. Par exemple, une copie superficielle partage les références des objets imbriqués, ce qui peut affecter les comparaisons avec equals() si ces objets sont modifiés. Une bonne pratique est de s’assurer que equals() reflète les mêmes critères d’égalité pour l’original et sa copie, surtout pour une copie profonde. Exemple :
 
-```java
+```java  {style=github}
 class Personne implements Cloneable {
     String nom;
     Personne(String nom) { this.nom = nom; }
@@ -1142,7 +1142,7 @@ Quelles précautions faut-il prendre lors de la redéfinition de equals() pour u
 <details><summary>Réponse</summary>
 Lorsqu’une classe implémente Cloneable et redéfinit equals(), il est crucial de s’assurer que la méthode equals() est cohérente avec le comportement de clone(). Cela signifie que deux objets, l’original et sa copie, doivent généralement retourner true pour equals() si la copie est une duplication fidèle (surtout pour une copie profonde). Il faut vérifier que tous les champs pertinents pour equals() sont correctement copiés dans clone(), en particulier pour les objets imbriqués. Si clone() effectue une copie superficielle, les références partagées peuvent entraîner des incohérences si les objets imbriqués sont modifiés. De plus, equals() doit respecter les propriétés du contrat d’égalité (réflexivité, symétrie, transitivité, cohérence et non-nullité). Exemple :
 
-```java
+```java  {style=github}
 class Livre implements Cloneable {
     String titre;
     Auteur auteur;

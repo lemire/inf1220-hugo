@@ -15,7 +15,7 @@ weight: 2
 | Implémentation       | InputStreamReader    | PrintWriter           | DataInputStream        | DataOutputStream        |
 | Fichier              | FileReader           | FileWriter            | FileInputStream        | FileOutputStream        |
 | Buffer E/S           | BufferedReader       | BufferedWriter        | BufferedInputStream    | BufferedOutputStream    |
-
+| Mémoire              |  StringReader        | StringWriter          | ByteArrayInputStream   | ByteArrayOutputStream   |
 
 ## La classe File
 
@@ -233,6 +233,94 @@ class MaClasse {
 }
 ```
 
+## StringWriter et StringReader
+
+StringWriter et StringReader sont des classes du package java.io en Java, conçues pour manipuler des données textuelles en mémoire sous forme de chaînes. StringWriter accumule les données écrites dans un StringBuffer interne, permettant de récupérer le contenu sous forme de String via toString() ou getBuffer(). Elle est utile pour générer du texte dynamiquement sans écrire directement dans un fichier ou un flux. StringReader lit des données à partir d’une String comme si elle provenait d’un flux, offrant une interface pratique pour parser ou traiter une chaîne comme un flux de caractères. Ces classes sont particulièrement adaptées pour des opérations intermédiaires, comme la conversion de données avant leur sérialisation ou désérialisation.
+
+{{<inlineJava path="StringWriterReaderExample.java" lang="java">}}
+import java.io.StringWriter;
+import java.io.StringReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class StringWriterReaderExample {
+    public static void main(String[] args) {
+        // Étape 1 : Utilisation de StringWriter pour créer une chaîne
+        StringWriter writer = new StringWriter();
+        try {
+            writer.write("param1=valeur1\n");
+            writer.write("param2=valeur2\n");
+            writer.write("param3=valeur3\n");
+            System.out.println("Contenu généré par StringWriter :\n" + writer.toString());
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
+        }
+
+        // Étape 2 : Utilisation de StringReader pour lire la chaîne
+        StringReader reader = new StringReader(writer.toString());
+        try (BufferedReader bufferedReader = new BufferedReader(reader)) {
+            System.out.println("\nLecture ligne par ligne avec StringReader :");
+            String ligne;
+            while ((ligne = bufferedReader.readLine()) != null) {
+                System.out.println("Ligne : " + ligne);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+## Données binaries en mémoire
+
+
+ByteArrayInputStream et ByteArrayOutputStream sont des classes du package java.io en Java, conçues pour manipuler des données binaires en mémoire. ByteArrayInputStream permet de lire un tableau de bytes (byte[]) comme un flux d’entrée, simulant une source de données sans accès au disque. Elle est utile pour tester, parser des données binaires ou réutiliser des bytes existants. ByteArrayOutputStream accumule les octets écrits dans un buffer interne, que l’on peut récupérer via toByteArray() ou convertir en chaîne. Cette classe est idéale pour générer des données binaires, comme des sérialisations ou des contenus à envoyer sur un réseau, sans écrire immédiatement sur un fichier. 
+
+{{<inlineJava path="ByteArrayStreamExample.java" lang="java">}}
+import java.io.ByteArrayOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+
+public class ByteArrayStreamExample {
+    public static void main(String[] args) {
+        // Étape 1 : Utilisation de ByteArrayOutputStream pour écrire des données
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        try {
+            outputStream.write("Bonjour Java".getBytes("UTF-8"));
+            outputStream.write(33); // Ajout d'un octet (caractère '!')
+            byte[] bytes = outputStream.toByteArray();
+            System.out.println("Contenu ByteArrayOutputStream (taille) : " + bytes.length + " octets");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
+            return;
+        }
+
+        // Étape 2 : Utilisation de ByteArrayInputStream pour lire les données
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
+        try {
+            System.out.println("Lecture avec ByteArrayInputStream :");
+            int octet;
+            while ((octet = inputStream.read()) != -1) {
+                System.out.print((char) octet);
+            }
+            System.out.println();
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+        } finally {
+            try {
+                inputStream.close();
+                outputStream.close();
+            } catch (IOException e) {
+                System.err.println("Erreur lors de la fermeture : " + e.getMessage());
+            }
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+
 ## Path et Files
 
 La lecture de fichiers en Java est une tâche courante qui a évolué avec les versions modernes du langage, notamment à partir de Java 7 avec l’introduction de l’API java.nio.file. Cette API, plus robuste et flexible que l’ancienne java.io, simplifie la gestion des fichiers et des répertoires. À partir de Java 21, les développeurs bénéficient d’une syntaxe encore plus concise grâce aux flux (Stream) et aux améliorations des performances, tout en conservant une gestion efficace des erreurs.
@@ -256,13 +344,241 @@ void main() {
 
 {{</inlineJava>}}
 
+Dans cet exemple, le programme lit le contenu d’un fichier config.txt en une seule chaîne avec Files.readString. L’objet Path est créé pour désigner le fichier, et la méthode Files.readString récupère son contenu directement, éliminant le besoin de boucler sur les lignes. Comme dans l’exemple précédent, une gestion d’exceptions via un bloc try-catch capture les erreurs potentielles, telles qu’un fichier introuvable ou des problèmes d’accès, assurant la robustesse du programme.
+
+## Fichiers *properties*
+
+Le format de fichiers properties est un format de configuration simple et léger, nativement pris en charge par Java via la classe java.util.Properties. Il stocke des données sous forme de paires clé-valeur, où chaque ligne suit la syntaxe clé=valeur ou clé:valeur, avec la possibilité d’ajouter des commentaires commençant par # ou !.
+
+```
+# Configuration de l'application
+# Date de dernière mise à jour : 28 juin 2025
+
+# Paramètres de connexion à la base de données
+db.host=localhost
+db.port=3306
+db.name=mabase
+db.user=admin
+db.password=secret
+
+# Paramètres du serveur
+server.url=https://monapp.com
+server.port=8080
+server.timeout=30
+
+# Autres configurations
+app.version=1.0.0
+app.debug=false
+app.language=fr
+```
+
+
+Ce programme illustre la création, la sauvegarde, et le chargement d'un tel fichier. Il exécute trois étapes : d’abord, il crée un fichier config.properties avec des paires clé-valeur initiales (comme application.nom=MonApp) en utilisant Files.writeString pour écrire le contenu généré par Properties.store. Ensuite, il lit ce fichier avec Files.readString, charge les propriétés dans un objet Properties, et affiche les paires clé-valeur. Enfin, il modifie les propriétés en ajoutant une nouvelle clé (nouveau.param) et en mettant à jour une existante (serveur.port), puis réécrit le fichier. Entre chaque étape, le programme lit et affiche le contenu brut du fichier pour montrer son état.
+
+{{<inlineJava path="PropertiesReadWriteExample.java" lang="java">}}
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+import java.util.Properties;
+import java.io.StringReader;
+import java.io.StringWriter;
+
+public class PropertiesReadWriteExample {
+    public static void main(String[] args) {
+        Path chemin = Path.of("config.properties");
+        Properties props = new Properties();
+
+        // Étape 1 : Création initiale du fichier properties
+        try {
+            props.setProperty("application.nom", "MonApp");
+            props.setProperty("application.version", "1.0.0");
+            props.setProperty("serveur.port", "8080");
+            props.setProperty("serveur.hôte", "localhost");
+            StringWriter writer = new StringWriter();
+            props.store(writer, "Configuration initiale");
+            String contenuInitial = writer.toString();
+            Files.writeString(chemin, contenuInitial);
+            System.out.println("Fichier créé avec succès : " + chemin.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la création du fichier : " + e.getMessage());
+            return;
+        }
+
+        // Lecture et affichage du contenu après création
+        try {
+            String contenu = Files.readString(chemin);
+            System.out.println("\nContenu brut du fichier après création :\n" + contenu);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture post-création : " + e.getMessage());
+            return;
+        }
+
+        // Étape 2 : Lecture du fichier
+        try {
+            String contenu = Files.readString(chemin);
+            props.clear();
+            props.load(new StringReader(contenu));
+            System.out.println("\nContenu du fichier après lecture (paires clé-valeur) :");
+            props.forEach((clé, valeur) -> System.out.println(clé + ": " + valeur));
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+            return;
+        }
+
+        // Lecture et affichage du contenu avant modification
+        try {
+            String contenu = Files.readString(chemin);
+            System.out.println("\nContenu brut du fichier avant modification :\n" + contenu);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture pré-modification : " + e.getMessage());
+            return;
+        }
+
+        // Étape 3 : Modification et réécriture
+        try {
+            props.setProperty("nouveau.param", "valeurAjoutée");
+            props.setProperty("serveur.port", "9090");
+            StringWriter writer = new StringWriter();
+            props.store(writer, "Configuration mise à jour");
+            String nouveauContenu = writer.toString();
+            Files.writeString(chemin, nouveauContenu);
+            System.out.println("\nFichier modifié avec succès : " + chemin.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la modification : " + e.getMessage());
+            return;
+        }
+
+        // Lecture et affichage du contenu après modification
+        try {
+            String contenu = Files.readString(chemin);
+            System.out.println("\nContenu brut du fichier après modification :\n" + contenu);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture post-modification : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+## UTF-8
+
+Depuis Java 11, les accès texte aux fichiers, via des classes comme Files.readString ou Files.writeString de l’API java.nio.file, utilisent par défaut l’encodage UTF-8, remplaçant l’encodage par défaut de la plateforme. UTF-8 est un encodage de longueur variable qui représente les caractères Unicode, utilisant un à quatre octets par caractère : les caractères ASCII (0 à 127) sont codés sur un seul octet, tandis que les caractères non-ASCII, comme les accents ou les idéogrammes, nécessitent plus d’octets. En revanche, les chaînes de caractères en Java sont stockées en mémoire en UTF-16, où chaque caractère occupe généralement deux octets, même pour les caractères ASCII. Lorsqu’un fichier texte contenant uniquement des caractères ASCII est enregistré en UTF-8 avec Files.writeString, chaque caractère est écrit sur un octet, produisant un fichier plus compact. Par exemple, la chaîne "Bonjour" (7 caractères ASCII) génère un fichier de 7 octets en UTF-8, contre 14 octets si elle était enregistrée en UTF-16, où chaque caractère utilise deux octets. Cette différence illustre l’efficacité de l’UTF-8 pour les textes ASCII tout en assurant la compatibilité avec l’Unicode, contrairement à l’UTF-16 utilisé en interne par Java. Voici un exemple pour illustrer ce concept.
+
+
+{{<inlineJava path="EncodageFichierTexte.java" lang="java">}}
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
+public class EncodageFichierTexte {
+    public static void main(String[] args) {
+        String texteAscii = "Bonjour";
+        String fichierUtf8 = "texte_utf8.txt";
+        String fichierUtf16 = "texte_utf16.txt";
+        
+        // Écriture en UTF-8
+        try {
+            Files.writeString(Path.of(fichierUtf8), texteAscii, StandardCharsets.UTF_8);
+            long tailleUtf8 = Files.size(Path.of(fichierUtf8));
+            System.out.println("Taille du fichier UTF-8 (" + fichierUtf8 + ") : " + tailleUtf8 + " octets");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture en UTF-8 : " + e.getMessage());
+        }
+        
+        // Écriture en UTF-16
+        try {
+            Files.writeString(Path.of(fichierUtf16), texteAscii, StandardCharsets.UTF_16);
+            long tailleUtf16 = Files.size(Path.of(fichierUtf16));
+            System.out.println("Taille du fichier UTF-16 (" + fichierUtf16 + ") : " + tailleUtf16 + " octets");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture en UTF-16 : " + e.getMessage());
+        }
+        
+        // Vérification du contenu en lisant le fichier UTF-8
+        try {
+            String contenuUtf8 = Files.readString(Path.of(fichierUtf8), StandardCharsets.UTF_8);
+            System.out.println("Contenu lu depuis le fichier UTF-8 : " + contenuUtf8);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture du fichier UTF-8 : " + e.getMessage());
+        }
+        
+        // Vérification du contenu en lisant le fichier UTF-16
+        try {
+            String contenuUtf16 = Files.readString(Path.of(fichierUtf16), StandardCharsets.UTF_16);
+            System.out.println("Contenu lu depuis le fichier UTF-16 : " + contenuUtf16);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture du fichier UTF-16 : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+## Boutisme
+
+
+Le boutisme, ou endianness, désigne l’ordre dans lequel les octets d’une donnée multi-octets (comme un entier) sont stockés ou lus en mémoire. Il existe deux ordres principaux : big-endian, où l’octet de poids fort est stocké en premier, et little-endian, où l’octet de poids faible est stocké en premier. Par exemple, pour l’entier 258 (représenté en hexadécimal comme `00 00 01 02`), un système big-endian stocke les octets dans l’ordre `00 00 01 02`, tandis qu’un système little-endian les stocke comme `02 01 00 00`. Ce concept est crucial lors de la manipulation de fichiers binaires ou de communications réseau, car une mauvaise interprétation de l’ordre peut produire des résultats erronés.
+
+En Java, des classes comme `DataOutputStream` utilisent par défaut l’ordre big-endian, mais `ByteBuffer` permet de spécifier l’ordre (big-endian ou little-endian) avec `ByteOrder`. Une mauvaise gestion du boutisme peut entraîner des erreurs lors de la lecture de données produites par un système avec un ordre différent. L’exemple suivant illustre ce problème en écrivant des entiers dans un fichier binaire en big-endian et en les lisant en supposant un ordre little-endian.
+
+
+Voici un programme Java qui écrit trois entiers (100, 200, 300) dans un fichier binaire en utilisant l’ordre big-endian, puis lit ce fichier en supposant un ordre little-endian. 
+
+{{<inlineJava path="ImpactBoutismeManuel.java" lang="java">}}
+import java.io.*;
+
+public class ImpactBoutismeManuel {
+    public static void main(String[] args) {
+        String nomFichier = "entiers_manuel.bin";
+        
+        // Écriture en big-endian
+        try (DataOutputStream sortie = new DataOutputStream(new FileOutputStream(nomFichier))) {
+            int[] entiers = {100, 200, 300};
+            for (int valeur : entiers) {
+                sortie.writeInt(valeur); // Big-endian par défaut
+            }
+            System.out.println("Entiers écrits (big-endian) : 100, 200, 300");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
+            return;
+        }
+        
+        // Lecture en supposant little-endian avec conversion manuelle
+        try (DataInputStream entree = new DataInputStream(new FileInputStream(nomFichier))) {
+            System.out.println("Lecture en supposant little-endian (conversion manuelle) :");
+            for (int i = 0; i < 3; i++) {
+                byte[] octets = new byte[4];
+                if (entree.read(octets) != 4) {
+                    System.err.println("Erreur : données insuffisantes.");
+                    return;
+                }
+                // Conversion manuelle : inverser les octets pour little-endian
+                int valeur = ((octets[3] & 0xFF) << 24) |
+                             ((octets[2] & 0xFF) << 16) |
+                             ((octets[1] & 0xFF) << 8)  |
+                             (octets[0] & 0xFF);
+                System.out.println("Entier lu : " + valeur);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+Ce programme illustre l’impact du boutisme sans utiliser ByteBuffer. Dans la phase d’écriture, DataOutputStream écrit les entiers 100, 200 et 300 dans un fichier binaire en big-endian. Par exemple, l’entier 100 (00 00 00 64 en hexadécimal) est stocké comme 00 00 00 64. Lors de la lecture, le programme lit chaque bloc de 4 octets avec DataInputStream et effectue une conversion manuelle pour interpréter les octets en little-endian. Pour cela, il inverse l’ordre des octets : l’octet 0 (le dernier en big-endian) devient le poids faible, et l’octet 3 (le premier) devient le poids fort. La formule ((octets[3] & 0xFF) << 24) | ... reconstruit l’entier en plaçant chaque octet à la bonne position. Ainsi, 00 00 00 64 est interprété comme 64 00 00 00, soit 1 677 721 600 en décimal.
+
+
 ## Accès à l'Internet
 
 *Dans ce cours, vous n'aurez pas à gérer des requêtes HTTP. Il est néanmoins nécessaire d'être familier avec le principle.
 Prenez la peine de lire et d'exécuter les exemples suivants.*
 
 Java permet aussi d'avoir accès à des ressources sur le web. Grâce à ses bibliothèques modernes, comme l'API HttpClient introduite dans Java 11, il est possible d'effectuer des requêtes HTTP de manière simple et efficace, facilitant la récupération de données depuis des serveurs distants.
-
+Le protocole HTTP (HyperText Transfer Protocol) est un protocole de communication utilisé pour transférer des données sur le web, permettant aux clients (comme les navigateurs) de demander des ressources à des serveurs.  HTTP est un protocole sans état fonctionnant en mode client-serveur : un client envoie une requête spécifiant une méthode, une URI, des en-têtes et parfois un corps, et le serveur répond avec un code de statut, des en-têtes et un corps. Par sans état, on veut dire que les requêtes sont traitées de manière indépendante et non comme une conversation continue.
 
 La majorité des services web utilisent le format JSON.
 JSON (JavaScript Object Notation) est un format léger d’échange de données, facile à lire et à écrire pour les humains et les machines. Il est basé sur une syntaxe dérivée des objets JavaScript, mais il est utilisé par de nombreux langages de programmation. JSON est particulièrement populaire pour transmettre des données entre un serveur et une application web, notamment dans les API REST. Un document JSON est constitué de paires clé/valeur, de tableaux et d’objets imbriqués. Il ne supporte que quelques types de données : chaînes de caractères, nombres, booléens, tableaux, objets et null. 
@@ -291,9 +607,13 @@ La vidéo suivante (optionnelle) explique comment les systèmes peuvent être op
 {{< youtube id="wlvKAT7SZIQ" >}}
 
 
-Le programme Java suivant récupère et affiche les prévisions météo horaires pour Montréal en interrogeant l’API Open-Meteo. Il commence par définir les coordonnées géographiques de Montréal (latitude 45.5017, longitude -73.5673) et construit une URL pour demander les données de température et de précipitations horaires. À l’aide des classes HttpClient et HttpRequest du module java.net.http, il envoie une requête GET à l’API et récupère la réponse sous forme de chaîne JSON. Plutôt que d’utiliser une bibliothèque externe, le programme parse manuellement cette réponse en extrayant les tableaux de données (heures, températures et précipitations) à l’aide de manipulations de chaînes. Une méthode auxiliaire, extractArray, facilite cette extraction en isolant les tableaux JSON correspondant à chaque variable météo.
+Le programme Java suivant récupère et affiche les prévisions météo horaires pour Montréal en interrogeant l’API Open-Meteo, illustrant l’utilisation de l’API HTTP Client de Java 11 (java.net.http) et la manipulation de données JSON et temporelles. Les imports java.net.URI, java.net.http.HttpClient, java.net.http.HttpRequest et java.net.http.HttpResponse permettent de gérer les requêtes HTTP, tandis que java.time.LocalDateTime et java.time.format.DateTimeFormatter facilitent le traitement des horodatages. Le programme commence par définir les coordonnées géographiques de Montréal (latitude 45.5017, longitude -73.5673) et construit une URL pour demander les données horaires de température (temperature_2m) et de précipitations (precipitation). Ces imports et cette initialisation posent les bases pour une interaction réseau et une gestion efficace des données météorologiques.
 
-Une fois les données extraites, le programme utilise LocalDateTime et DateTimeFormatter pour traiter les horodatages au format UTC et les convertir en un format lisible (jour/mois/année heure:minute). Il parcourt ensuite les tableaux pour afficher les prévisions des 12 prochaines heures à partir de l’heure actuelle, en filtrant les données antérieures. Pour chaque heure valide, il affiche la date, la température (en °C) et les précipitations (en mm) avec un formatage précis. Une gestion d’exceptions basique capture les erreurs potentielles, comme des problèmes de connexion ou une réponse mal formée. Ce code est simple, évite les dépendances externes et illustre une approche directe pour interagir avec une API REST et traiter des données JSON.
+Un HttpClient est créé avec HttpClient.newHttpClient(), offrant une configuration par défaut pour gérer les connexions HTTP. Une requête GET est construite via HttpRequest.newBuilder(), spécifiant l’URI de l’API Open-Meteo et la méthode GET, puis envoyée avec client.send(). La réponse, un JSON, est récupérée comme une chaîne grâce à HttpResponse.BodyHandlers.ofString(). Dans le contexte du protocole HTTP, cette requête GET récupère des données sans modifier la ressource serveur, et l’API Open-Meteo renvoie un JSON structuré contenant les prévisions. Le programme encapsule cette logique dans un bloc try-catch pour capturer les erreurs, comme les problèmes de connexion ou les réponses mal formées, démontrant une gestion basique mais essentielle des exceptions.
+
+Le traitement du JSON repose sur une approche manuelle, sans bibliothèque externe. La méthode auxiliaire extractArray extrait les tableaux JSON pour les horaires (time), les températures (temperature_2m) et les précipitations (precipitation) en isolant les sous-chaînes entre crochets à partir des clés correspondantes. Cette méthode, bien que fonctionnelle, est sensible aux changements de structure du JSON, contrairement à des bibliothèques comme Jackson. Les données extraites sont divisées en tableaux de chaînes avec split(","), représentant les valeurs horaires. Cette étape illustre comment manipuler des données structurées issues d’une API REST, tout en mettant en lumière les limites d’un parsing manuel pour des applications complexes.
+
+Une fois les données extraites, le programme utilise LocalDateTime et DateTimeFormatter pour traiter les horodatages au format UTC (yyyy-MM-dd'T'HH:mm) et les convertir en un format lisible (dd/MM/yyyy HH:mm). Une boucle parcourt les tableaux horaires, filtrant les prévisions antérieures à l’heure actuelle (LocalDateTime.now()) pour n’afficher que les 12 prochaines heures. Pour chaque heure valide, le programme affiche la date, la température (en °C) et les précipitations (en mm) avec un formatage précis via System.out.printf. Cette gestion temporelle permet de présenter des prévisions pertinentes, montrant l’importance des outils de la bibliothèque java.time pour les applications météorologiques.
 
 {{<inlineJava path="WeatherForecast.java" lang="java">}}
 
@@ -366,6 +686,69 @@ public class WeatherForecast {
     }
 }
 {{</inlineJava>}}
+
+Les méthodes **GET** et **POST** sont deux des principales méthodes du protocole HTTP, utilisées pour interagir avec des serveurs web. Elles définissent l’intention de la requête envoyée par un client (comme une application ou un navigateur) à un serveur. 
+La méthode GET est utilisée pour récupérer des données d’un serveur sans modifier l’état de la ressource ciblée. Dans une requête GET, les paramètres sont généralement inclus dans l’URL, sous forme de chaîne de requête (par exemple, `?latitude=45.5017&longitude=-73.5673`), et aucun corps de requête n’est envoyé. GET est idempotente, c’est-à-dire que plusieurs requêtes identiques produisent le même résultat, et elle est souvent utilisée pour des opérations de lecture, comme récupérer des profils d’utilisateurs ou des prévisions météo. Dans le programme `WeatherForecast`, une requête GET est envoyée à l’API Open-Meteo pour obtenir des données JSON sur la température et les précipitations, illustrant comment GET est adapté pour des requêtes de données publiques ou statiques.
+Dans l’API `HttpClient` de Java, une requête GET est construite avec `HttpRequest.newBuilder().GET().uri(URI.create(url)).build()`. Les en-têtes, comme `Accept: application/json`, peuvent être ajoutés pour spécifier le format de la réponse. Le serveur répond avec un code de statut (par exemple, 200 pour succès) et un corps contenant les données demandées, accessible via `HttpResponse.body()`. GET est idéal pour des scénarios où la sécurité des données n’est pas critique, car les paramètres dans l’URL sont visibles. Cependant, pour des données sensibles ou volumineuses, d’autres méthodes comme POST sont préférables, car GET est limité par la longueur maximale des URLs.
+La méthode POST sert à envoyer des données au serveur pour créer ou modifier une ressource, comme soumettre un formulaire ou ajouter une entrée dans une base de données. Contrairement à GET, POST inclut un corps de requête contenant les données, souvent au format JSON ou formulaire, et les paramètres ne sont pas visibles dans l’URL, offrant une meilleure sécurité et une capacité à transmettre des données plus volumineuses. POST n’est pas idempotente : plusieurs requêtes identiques peuvent créer plusieurs ressources ou modifier l’état du serveur différemment. Dans le programme `HttpClientExample`, une requête POST envoie un JSON (`{"title": "Test", "body": "Test request"}`) à une API de test pour simuler la création d’une publication.
+Avec l’API `HttpClient`, une requête POST est définie en utilisant `HttpRequest.newBuilder().POST(HttpRequest.BodyPublishers.ofString(jsonPayload)).uri(URI.create(url)).build()`, avec un en-tête comme `Content-Type: application/json` pour indiquer le format du corps. Le serveur traite les données envoyées et répond avec un code de statut (par exemple, 201 pour une création réussie) et parfois un corps décrivant la ressource créée. POST est essentiel pour les interactions dynamiques, comme l’envoi de données utilisateur ou la mise à jour de ressources, mais il nécessite une attention particulière à la sécurité, notamment avec HTTPS, pour protéger les données transmises.
+Considérons un autre exemple pour bien illustrer ces concepts.
+
+{{<inlineJava path="HttpClientExample.java" lang="java">}}
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+
+public class HttpClientExample {
+    public static void main(String[] args) {
+        // Création du client HTTP
+        HttpClient client = HttpClient.newBuilder()
+                .build();
+
+        try {
+            // Exemple de requête GET
+            HttpRequest getRequest = HttpRequest.newBuilder()
+                    .uri(URI.create("https://api.github.com/users/octocat"))
+                    .header("Accept", "application/json")
+                    .GET()
+                    .build();
+
+            HttpResponse<String> getResponse = client.send(getRequest, 
+                    HttpResponse.BodyHandlers.ofString());
+            
+            System.out.println("GET Response Status: " + getResponse.statusCode());
+            System.out.println("GET Response Body: " + getResponse.body());
+
+            // Exemple de requête POST
+            String jsonPayload = "{\"title\": \"Test\", \"body\": \"Test request\"}";
+            HttpRequest postRequest = HttpRequest.newBuilder()
+                    .uri(URI.create("https://jsonplaceholder.typicode.com/posts"))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(jsonPayload, StandardCharsets.UTF_8))
+                    .build();
+
+            HttpResponse<String> postResponse = client.send(postRequest, 
+                    HttpResponse.BodyHandlers.ofString());
+            
+            System.out.println("\nPOST Response Status: " + postResponse.statusCode());
+            System.out.println("POST Response Body: " + postResponse.body());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
+Le programme démontre deux cas d’usage : récupérer des données d’une API publique (GET) et simuler la création d’une ressource (POST). 
+Le programme commence par créer un `HttpClient`, l’objet central pour gérer les connexions HTTP. La ligne `HttpClient client = HttpClient.newBuilder().build();` initialise un client avec des paramètres par défaut, capable de gérer plusieurs requêtes tout en optimisant les connexions réseau (par exemple, via HTTP/1.1 ou HTTP/2). Dans le contexte HTTP, le client joue le rôle de l’initiateur des requêtes, envoyant des messages formatés au serveur. Le programme encapsule ensuite le code dans un bloc `try-catch` pour gérer les exceptions, comme les erreurs réseau ou les réponses invalides, qui sont courantes dans les communications HTTP en raison de la nature distribuée du web.
+
+La première requête est une requête GET vers l’API GitHub (`https://api.github.com/users/octocat`). La construction de la requête utilise `HttpRequest.newBuilder()`, où l’URI est définie, un en-tête `Accept: application/json` est ajouté pour demander une réponse JSON, et la méthode `GET()` est spécifiée. En HTTP, GET est utilisé pour récupérer des données sans modifier la ressource, et l’en-tête `Accept` négocie le format de la réponse. La requête est envoyée avec `client.send()`, qui retourne un `HttpResponse` contenant le code de statut (par exemple, 200 pour succès) et le corps (un JSON décrivant l’utilisateur). Le programme affiche ces informations, illustrant comment HTTP structure les réponses pour fournir à la fois des métadonnées (code de statut, en-têtes) et des données utiles.
+
+La deuxième requête est une requête POST vers une API de test (`https://jsonplaceholder.typicode.com/posts`). Une chaîne JSON (`{"title": "Test", "body": "Test request"}`) est préparée comme corps de la requête, et l’en-tête `Content-Type: application/json` indique au serveur que les données envoyées sont du JSON. La méthode `POST()` attache ce corps, encodé en UTF-8, à la requête. En HTTP, POST est utilisé pour créer ou modifier des ressources, et le corps transporte les données à traiter par le serveur. La requête est envoyée de manière similaire à la requête GET, et la réponse (code de statut et corps JSON) est affichée. Cette API de test simule la création d’une ressource, renvoyant un JSON avec un ID généré, ce qui reflète une pratique courante dans les API REST.
 
 
 ## Performance
@@ -442,6 +825,112 @@ public class CopieBinaire {
 ```
 
 Pour les fichiers binaires, il est essentiel d'utiliser des buffers pour garantir des performances optimales. Cela permet de manipuler efficacement de grandes quantités de données, tout en minimisant la sollicitation du disque dur.
+
+
+
+#### FileChannel et Buffer
+
+Les classes Buffer en Java, situées dans le package java.nio, sont des conteneurs pour manipuler des données brutes en mémoire, utilisées principalement pour des opérations d’entrée/sortie performantes. Un Buffer encapsule un tableau de données avec des métadonnées comme la position (index de la prochaine donnée à lire/écrire), la limite (fin des données valides) et la capacité (taille totale). Ces classes permettent des opérations comme put() pour écrire, get() pour lire, flip() pour basculer entre modes lecture/écriture, et clear() ou rewind() pour réinitialiser. Elles sont particulièrement utiles pour les applications nécessitant un traitement efficace de données binaires ou textuelles, comme les communications réseau ou la lecture/écriture de fichiers volumineux, offrant un contrôle granulaire par rapport aux flux traditionnels.
+
+{{<inlineJava path="ByteBufferExample.java" lang="java">}}
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+
+public class ByteBufferExample {
+    public static void main(String[] args) {
+        // Création d’un ByteBuffer avec une capacité de 20 octets
+        ByteBuffer buffer = ByteBuffer.allocate(20);
+        
+        // Écriture d’une chaîne dans le buffer
+        String message = "Bonjour NIO";
+        buffer.put(message.getBytes(StandardCharsets.UTF_8));
+        System.out.println("Après écriture : position = " + buffer.position() + ", limite = " + buffer.limit());
+        
+        // Basculement en mode lecture
+        buffer.flip();
+        System.out.println("Après flip : position = " + buffer.position() + ", limite = " + buffer.limit());
+        
+        // Lecture et affichage des données
+        System.out.print("Contenu lu : ");
+        while (buffer.hasRemaining()) {
+            System.out.print((char) buffer.get());
+        }
+        System.out.println();
+        
+        // Réinitialisation pour réutilisation
+        buffer.clear();
+        System.out.println("Après clear : position = " + buffer.position() + ", limite = " + buffer.limit());
+    }
+}
+{{</inlineJava>}}
+
+FileChannel est une classe du package java.nio.channels en Java, conçue pour des opérations d’entrée/sortie performantes sur des fichiers ou d’autres sources. Elle permet de lire, écrire, ou *mapper* des fichiers en mémoire à l’aide de buffers, tels que ByteBuffer, offrant un contrôle précis sur les positions et les tailles des données manipulées. Ouvert via des méthodes comme FileChannel.open ou à partir de flux comme FileInputStream.getChannel(), il est particulièrement adapté aux applications nécessitant une gestion efficace de fichiers volumineux ou des communications réseau.
+
+Nous allons un programme Java qui utilise l’API java.nio pour créer un fichier, y écrire des données, puis effectuer un mappage en mémoire (*memory mapping*) avec FileChannel et MappedByteBuffer. Le mappage en mémoire permet d’accéder au contenu du fichier comme s’il s’agissait d’un tableau de bytes en mémoire, offrant des performances élevées pour les opérations de lecture et d’écriture, surtout pour les fichiers volumineux.
+Le mappage est efficace pour les fichiers volumineux, car il évite de charger tout le contenu en mémoire à la fois.
+
+{{<inlineJava path="MemoryMappedFileExample.java" lang="java">}}
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.MappedByteBuffer;
+import java.io.IOException;
+
+public class MemoryMappedFileExample {
+    public static void main(String[] args) {
+        Path chemin = Path.of("mapped_data.bin");
+        int nombreEntiers = 10; // Nombre d’entiers à écrire
+        int tailleFichier = nombreEntiers * 4; // 4 octets par int
+
+        // Étape 1 : Création et écriture dans le fichier
+        try (FileChannel canal = FileChannel.open(chemin, StandardOpenOption.CREATE, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)) {
+            ByteBuffer buffer = ByteBuffer.allocate(tailleFichier);
+            for (int i = 1; i <= nombreEntiers; i++) {
+                buffer.putInt(i * 10); // Écriture des entiers 10, 20, ..., 100
+            }
+            buffer.flip();
+            canal.write(buffer);
+            System.out.println("Fichier créé avec succès : " + chemin.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la création du fichier : " + e.getMessage());
+            return;
+        }
+
+        // Étape 2 : Mappage en mémoire et manipulation
+        try (FileChannel canal = FileChannel.open(chemin, StandardOpenOption.READ, StandardOpenOption.WRITE)) {
+            // Mappage du fichier en mémoire
+            MappedByteBuffer mappedBuffer = canal.map(FileChannel.MapMode.READ_WRITE, 0, tailleFichier);
+            System.out.println("\nLecture des valeurs mappées :");
+            
+            // Lecture des 10 entiers
+            for (int i = 0; i < nombreEntiers; i++) {
+                int valeur = mappedBuffer.getInt();
+                System.out.println("Position " + i + " : " + valeur);
+            }
+            
+            // Modification de deux valeurs
+            mappedBuffer.position(2 * 4); // Position pour le 3e entier (offset 8)
+            mappedBuffer.putInt(999); // Remplace la valeur à la position 2
+            mappedBuffer.position(5 * 4); // Position pour le 6e entier (offset 20)
+            mappedBuffer.putInt(888); // Remplace la valeur à la position 5
+            
+            System.out.println("\nAprès modification des positions 2 et 5 :");
+            mappedBuffer.position(0); // Retour au début pour relire
+            for (int i = 0; i < nombreEntiers; i++) {
+                int valeur = mappedBuffer.getInt();
+                System.out.println("Position " + i + " : " + valeur);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors du mappage ou de la manipulation : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+
+MappedByteBuffer est conçu pour mapper un fichier directement en mémoire. Ses principales méthodes incluent get() et put() pour lire et écrire des données (octets, entiers, etc.) à la position actuelle du buffer, avec des variantes comme getInt() ou putInt() pour des types spécifiques. La méthode position(int) définit l’index courant pour les opérations, tandis que limit() et capacity() contrôlent la portée des données accessibles. La méthode flip() bascule le buffer du mode écriture au mode lecture, ajustant la limite à la position actuelle et réinitialisant la position à 0. force() synchronise les modifications avec le fichier sur disque, garantissant la persistance des changements. Enfin, load() charge le contenu mappé en mémoire physique pour optimiser les performances, et isLoaded() vérifie si le mappage est résident. 
 
 ### Conseils génériques
 

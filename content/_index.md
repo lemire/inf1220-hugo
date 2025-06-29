@@ -65,6 +65,11 @@ void main() {
 }
 {{</inlineJava>}}
 
+
+Le site du cours compte plus de 400 exemples de code Java dont plus d'une centaines peuvent être exécutés en ligne.
+Le site du cours compte aussi plus de 200 problèmes résolus couvrant toute la matière du cours. En plus des travaux
+notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation par semaine.
+
 Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf) dès maintenant.
 
 [Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/):
@@ -81,7 +86,6 @@ du cours comprend des lectures obligatoires dans le manuel.
 | 3      | Chapitre 3 : Structures de contrôle                            | Structures de contrôle (conditions, boucles, etc.)      |
 | 4      | Chapitre 9 : Traitement de fichiers                            | Fichiers, entrées/sorties, gestion de données           |
 | 5        | Chapitres 5 à 8 : Graphisme 2D, animation, conception objet, jeu | Programmation objet, graphisme, animation, projet jeu   |
-
 
 
 En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.

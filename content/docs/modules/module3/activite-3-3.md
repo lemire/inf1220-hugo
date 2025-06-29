@@ -225,6 +225,10 @@ public class ExempleString {
 }
 {{</inlineJava>}}
 
+
+La méthode split de la classe String en Java est utilisée pour diviser une chaîne en un tableau de sous-chaînes en fonction d’un délimiteur spécifié, qui peut être une chaîne simple ou une *expression régulière*. Par exemple, `split("\\s+")` divise une chaîne sur un ou plusieurs espaces, tandis que `split(",")` utilise une virgule comme séparateur. L'expression `\\s+` signifie 'un ou plusieurs espaces.
+Nous pourrions utiliser `split(";")` pour diviser sur un point-virgule.
+
 ## StringBuilder
 
 Le type <code>StringBuilder</code> en Java permet de construire et de modifier efficacement des chaînes de caractères. Contrairement à la classe <code>String</code>, qui est immuable (chaque modification crée un nouvel objet), <code>StringBuilder</code> permet d’ajouter, de modifier ou de supprimer des caractères sans créer de nouveaux objets à chaque opération. Cela le rend particulièrement utile lorsqu’on doit faire de nombreuses modifications ou concaténations de chaînes, par exemple lors de la lecture d’un fichier ou la construction dynamique d’un texte.
@@ -365,6 +369,53 @@ System.out.println(sousSeq);
 ```
 
 Utiliser <code>CharSequence</code> rend le code plus flexible : on peut manipuler des chaînes, des buffers ou des builders de la même façon, et extraire facilement des sous-parties avec <code>subSequence()</code>. La méthode `subSequence` évite de faire une copie inutile.
+
+
+## Génération de valeurs aléatoires
+
+Pour tester des structures de données, il est utile de pouvoir générer des valeurs aléatoires. Le plus souvent en programmation logicielle, nous générons des 
+valeurs pseudo-aléatoire. Une valeur pseudo-aléatoire semble aléatoire, mais elle est en réalité pré-déterminée.
+La classe Random en Java, située dans le paquetage java.util, permet de générer des nombres pseudo-aléatoires pour diverses applications, comme les simulations, les jeux ou les tests. Elle utilise un générateur de nombres pseudo-aléatoires basé sur une graine (seed), qui, si spécifiée, garantit la reproductibilité des séquences générées. Par défaut, Random utilise une graine dérivée de l’heure système pour produire des résultats différents à chaque exécution. La classe offre des méthodes comme nextInt(), nextDouble() ou nextBoolean() pour générer respectivement des entiers, des nombres à virgule flottante ou des booléens.
+
+Voici un exemple qui génères des nombres aléatoires.
+
+{{<inlineJava path="GenerationAleatoire.java" lang="java">}}
+import java.util.Random;
+
+public class GenerationAleatoire {
+    public static void main(String[] args) {
+        Random random = new Random();
+        System.out.println("Cinq nombres entiers aléatoires entre 1 et 100 :");
+        for (int i = 0; i < 5; i++) {
+            int nombre = random.nextInt(100) + 1; // Génère un nombre entre 0 et 99, puis ajoute 1
+            System.out.println("Nombre " + (i + 1) + " : " + nombre);
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+Voici un exemple qui génères des chaînes de caractères aléatoires.
+
+{{<inlineJava path="ChaineAleatoire.java" lang="java">}}
+import java.util.Random;
+
+public class ChaineAleatoire {
+    public static void main(String[] args) {
+        Random random = new Random();
+        String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        int longueur = 10;
+        StringBuilder chaine = new StringBuilder();
+        
+        for (int i = 0; i < longueur; i++) {
+            int index = random.nextInt(caracteres.length());
+            chaine.append(caracteres.charAt(index));
+        }
+        
+        System.out.println("Chaîne aléatoire générée : " + chaine.toString());
+    }
+}
+{{</inlineJava>}}
 
 ## Les tableaux et matrices
 
