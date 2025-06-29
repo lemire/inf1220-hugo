@@ -9,11 +9,11 @@ weight: 8
 
 | Type             | Exemple                     | Description                           |
 |------------------|-----------------------------|---------------------------------------|
-| byte / short / int / long | -123, 10                    | Entiers de différentes tailles        |
-| float / double   | 235.13                      | Nombres à virgule flottante           |
-| char             | 'U'                         | Caractère unique                      |
-| boolean          | true, false                 | Valeurs logiques                      |
-| String           | "Salutations de la Terre"   | Chaînes de caractères                 |
+| byte / short / int / long | `-123`, `10`                    | Entiers de différentes tailles        |
+| float / double   | `235.13`                      | Nombres à virgule flottante           |
+| char             | `'U'`                         | Caractère unique                      |
+| boolean          | `true`, `false`                 | Valeurs logiques                      |
+| String           | `"Salutations de la Terre"`   | Chaînes de caractères                 |
 
 ## Instructions Java
 

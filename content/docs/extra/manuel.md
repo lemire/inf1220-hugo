@@ -14,7 +14,7 @@ Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java
 
 >  Le lecteur y apprend les caractéristiques principales du langage Java et les outils et techniques de base du langage Java. Le manuel offre une initiation à la programmation orientée objet, mais il couvre aussi des sujets concrets comme l'accès aux fichiers.
 
-Vous pouvez aussi acheter la version papier du manuel [Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/):
+Vous pouvez aussi acheter la version papier du manuel [Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/) pour une somme modeste&nbsp;:
 
 
 

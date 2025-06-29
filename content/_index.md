@@ -58,7 +58,7 @@ Le cours est divisé en 5 modules avec un ensemble d'activités introduisant les
 {{% hint info %}}
 Le site du cours compte plus de **400 exemples de code Java** dont plus d'une centaine peuvent être exécutés directement.
 Le site du cours compte aussi plus de **200 problèmes résolus** couvrant toute la matière du cours. Nous offrons aussi
-des dizaines de laboratoires intéractifs en ligne, directement dans le site web. Nous vous suggérerons le visionnement
+des dizaines de laboratoires interactifs en ligne, directement dans le site web. Nous vous suggérerons le visionnement
 de plus de 50 vidéos en lien avec la matière du cours. En plus des travaux
 notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation par semaine.
 {{% /hint %}}
@@ -95,6 +95,9 @@ du cours comprend des lectures obligatoires dans le manuel.
 
 En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* est utilisé comme lecture d'appoint optionnelle. Si vous n'avez pas acheté le manuel lors de votre inscription, vous pouvez le commander en écrivant à l'adresse `didactique@teluq.ca`.
 
+
+{{% hint warning %}}
+
 ## Intelligence artificielle
 
 
@@ -104,3 +107,5 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 <li>Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA&nbsp;? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.</li> 
 <li>Assurez-vous de bien expliquer vos résultats, en vos propres mots.</li>
 </ul>
+
+{{% /hint  %}}

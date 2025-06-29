@@ -13,8 +13,12 @@ Nous vous invitons maintenant à lire les chapitres suivants du  manuel Java pas
 - Chapitre 7. Développement de classes : conception objet
 - Chapitre 8. Animation 2D et développement d’un jeu simple
 
+{{% hint info %}}
 
-**Dans ce cours, vous n'avez pas à maîtriser la programmation de jeux vidéos et la conception d'interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrées.**
+Dans ce cours, vous n'avez pas à maîtriser la programmation de jeux vidéos et la conception d'interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrées.
+
+{{% /hint %}}
+
 
 
 Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Par l'entremise de la construction d'un jeu, vous pourrez développer une maîtrise des concepts du module.
@@ -44,7 +48,7 @@ Plusieurs étudiants trouvent qu'il est plus aisé de faire les lectures dans le
 Vous avez accès <a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">au document PDF</a>. Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.
 
 
-<a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:
+<a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>  pour une somme modeste&nbsp;:
 
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
