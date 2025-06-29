@@ -5,18 +5,23 @@ weight: 6
 
 # Questions/Réponses
 
-<p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.</p>
+Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
 
-<p>Certains étudiants aiment utiliser une <a href="https://cheatography.com/sschaub/cheat-sheets/java-fundamentals/">Java Fundamentals Cheat Sheet</a> (anglais) pour garder à l'esprit la syntaxe.</p>
+
+N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
 
 ## Comment faire ces exercices ?
 
 <p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. </p>
 
 
-## Réponses uniques?
+{{% hint info %}}
+
+## Réponses uniques ?
 
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
+{{% /hint %}}
 
 
 ## Question 1

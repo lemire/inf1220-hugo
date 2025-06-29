@@ -55,6 +55,14 @@ De plus, la plupart des langages de programmation modernes sont ou incluent des 
 
 Le cours est divisé en 5 modules avec un ensemble d'activités introduisant les éléments de programmation. Des exercices pratiques et des travaux notés viennent évaluer vos connaissances, pour enfin terminer le cours avec un examen final. Chaque module se termine par un travail noté.
 
+{{% hint info %}}
+Le site du cours compte plus de **400 exemples de code Java** dont plus d'une centaine peuvent être exécutés directement.
+Le site du cours compte aussi plus de **200 problèmes résolus** couvrant toute la matière du cours. Nous offrons aussi
+des dizaines de laboratoires intéractifs en ligne, directement dans le site web. Nous vous suggérerons le visionnement
+de plus de 50 vidéos en lien avec la matière du cours. En plus des travaux
+notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation par semaine.
+{{% /hint %}}
+
 Le site du cours vous permet d'exécuter du code Java directement dans votre 
 navigateur&nbsp;: 
 
@@ -66,9 +74,6 @@ void main() {
 {{</inlineJava>}}
 
 
-Le site du cours compte plus de 400 exemples de code Java dont plus d'une centaines peuvent être exécutés en ligne.
-Le site du cours compte aussi plus de 200 problèmes résolus couvrant toute la matière du cours. En plus des travaux
-notés, nous vous inviterons à résoudre une quinzaine de problèmes de programmation par semaine.
 
 Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf) dès maintenant.
 

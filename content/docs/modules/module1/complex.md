@@ -13,7 +13,12 @@ La complexité algorithmique mesure le temps ou la mémoire qu’un algorithme n
 
 Comprendre la complexité algorithmique permet de choisir ou d’inventer des solutions efficaces, surtout pour de grandes quantités de données. Il est souvent utile de commencer par une solution simple (même lente), puis de chercher à l’optimiser en utilisant des structures de données ou des propriétés mathématiques adaptées.
 
-**Dans ce cours, vous n'avez pas à maîtriser la notation grand-O et la complexité algorithmique. Néanmoins, il est utile d'être familier avec les principales notions.**
+{{% hint info %}}
+
+Dans ce cours, vous n'avez pas à maîtriser la notation grand-O et la complexité algorithmique. Néanmoins, il est utile d'être familier avec les principales notions.
+
+{{% /hint %}}
+
 
 ### Notation grand-O
 

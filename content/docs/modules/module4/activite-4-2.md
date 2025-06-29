@@ -247,14 +247,10 @@ public class StringWriterReaderExample {
     public static void main(String[] args) {
         // Étape 1 : Utilisation de StringWriter pour créer une chaîne
         StringWriter writer = new StringWriter();
-        try {
-            writer.write("param1=valeur1\n");
-            writer.write("param2=valeur2\n");
-            writer.write("param3=valeur3\n");
-            System.out.println("Contenu généré par StringWriter :\n" + writer.toString());
-        } catch (IOException e) {
-            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
-        }
+        writer.write("param1=valeur1\n");
+        writer.write("param2=valeur2\n");
+        writer.write("param3=valeur3\n");
+        System.out.println("Contenu généré par StringWriter :\n" + writer.toString());
 
         // Étape 2 : Utilisation de StringReader pour lire la chaîne
         StringReader reader = new StringReader(writer.toString());
@@ -281,39 +277,35 @@ ByteArrayInputStream et ByteArrayOutputStream sont des classes du package java.i
 import java.io.ByteArrayOutputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets; // Recommandé pour spécifier les jeux de caractères
 
 public class ByteArrayStreamExample {
     public static void main(String[] args) {
         // Étape 1 : Utilisation de ByteArrayOutputStream pour écrire des données
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        try {
-            outputStream.write("Bonjour Java".getBytes("UTF-8"));
+        // Utilisation de try-with-resources pour s'assurer que le flux est fermé automatiquement
+        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+            String message = "Bonjour Java";
+            outputStream.write(message.getBytes(StandardCharsets.UTF_8)); // Utiliser StandardCharsets
             outputStream.write(33); // Ajout d'un octet (caractère '!')
-            byte[] bytes = outputStream.toByteArray();
-            System.out.println("Contenu ByteArrayOutputStream (taille) : " + bytes.length + " octets");
-        } catch (IOException e) {
-            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
-            return;
-        }
 
-        // Étape 2 : Utilisation de ByteArrayInputStream pour lire les données
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
-        try {
-            System.out.println("Lecture avec ByteArrayInputStream :");
-            int octet;
-            while ((octet = inputStream.read()) != -1) {
-                System.out.print((char) octet);
+            byte[] bytesWritten = outputStream.toByteArray();
+            System.out.println("Contenu de ByteArrayOutputStream (taille) : " + bytesWritten.length + " octets");
+            System.out.println("Contenu écrit : " + new String(bytesWritten, StandardCharsets.UTF_8)); // Afficher le contenu écrit
+
+            // Étape 2 : Utilisation de ByteArrayInputStream pour lire les données
+            // ByteArrayInputStream n'a pas strictement besoin d'être fermé car il opère sur un tableau d'octets,
+            // mais c'est une bonne pratique pour la cohérence ou s'il s'agissait d'un autre type de flux.
+            try (ByteArrayInputStream inputStream = new ByteArrayInputStream(bytesWritten)) {
+                System.out.println("\nLecture avec ByteArrayInputStream :");
+                int byteRead;
+                while ((byteRead = inputStream.read()) != -1) {
+                    System.out.print((char) byteRead);
+                }
+                System.out.println();
             }
-            System.out.println();
         } catch (IOException e) {
-            System.err.println("Erreur lors de la lecture : " + e.getMessage());
-        } finally {
-            try {
-                inputStream.close();
-                outputStream.close();
-            } catch (IOException e) {
-                System.err.println("Erreur lors de la fermeture : " + e.getMessage());
-            }
+            // Capture des IOException potentielles lors des opérations de flux ou de l'encodage du jeu de caractères
+            System.err.println("Une erreur s'est produite lors des opérations de flux : " + e.getMessage());
         }
     }
 }
@@ -350,7 +342,7 @@ Dans cet exemple, le programme lit le contenu d’un fichier config.txt en une s
 
 Le format de fichiers properties est un format de configuration simple et léger, nativement pris en charge par Java via la classe java.util.Properties. Il stocke des données sous forme de paires clé-valeur, où chaque ligne suit la syntaxe clé=valeur ou clé:valeur, avec la possibilité d’ajouter des commentaires commençant par # ou !.
 
-```
+```properties
 # Configuration de l'application
 # Date de dernière mise à jour : 28 juin 2025
 
@@ -574,8 +566,14 @@ Ce programme illustre l’impact du boutisme sans utiliser ByteBuffer. Dans la p
 
 ## Accès à l'Internet
 
-*Dans ce cours, vous n'aurez pas à gérer des requêtes HTTP. Il est néanmoins nécessaire d'être familier avec le principle.
-Prenez la peine de lire et d'exécuter les exemples suivants.*
+
+{{% hint info %}}
+
+Dans ce cours, vous n'aurez pas à gérer des requêtes HTTP. Il est néanmoins nécessaire d'être familier avec le principle.
+Prenez la peine de lire et d'exécuter les exemples suivants.
+
+{{% /hint %}}
+
 
 Java permet aussi d'avoir accès à des ressources sur le web. Grâce à ses bibliothèques modernes, comme l'API HttpClient introduite dans Java 11, il est possible d'effectuer des requêtes HTTP de manière simple et efficace, facilitant la récupération de données depuis des serveurs distants.
 Le protocole HTTP (HyperText Transfer Protocol) est un protocole de communication utilisé pour transférer des données sur le web, permettant aux clients (comme les navigateurs) de demander des ressources à des serveurs.  HTTP est un protocole sans état fonctionnant en mode client-serveur : un client envoie une requête spécifiant une méthode, une URI, des en-têtes et parfois un corps, et le serveur répond avec un code de statut, des en-têtes et un corps. Par sans état, on veut dire que les requêtes sont traitées de manière indépendante et non comme une conversation continue.
@@ -689,9 +687,13 @@ public class WeatherForecast {
 
 Les méthodes **GET** et **POST** sont deux des principales méthodes du protocole HTTP, utilisées pour interagir avec des serveurs web. Elles définissent l’intention de la requête envoyée par un client (comme une application ou un navigateur) à un serveur. 
 La méthode GET est utilisée pour récupérer des données d’un serveur sans modifier l’état de la ressource ciblée. Dans une requête GET, les paramètres sont généralement inclus dans l’URL, sous forme de chaîne de requête (par exemple, `?latitude=45.5017&longitude=-73.5673`), et aucun corps de requête n’est envoyé. GET est idempotente, c’est-à-dire que plusieurs requêtes identiques produisent le même résultat, et elle est souvent utilisée pour des opérations de lecture, comme récupérer des profils d’utilisateurs ou des prévisions météo. Dans le programme `WeatherForecast`, une requête GET est envoyée à l’API Open-Meteo pour obtenir des données JSON sur la température et les précipitations, illustrant comment GET est adapté pour des requêtes de données publiques ou statiques.
-Dans l’API `HttpClient` de Java, une requête GET est construite avec `HttpRequest.newBuilder().GET().uri(URI.create(url)).build()`. Les en-têtes, comme `Accept: application/json`, peuvent être ajoutés pour spécifier le format de la réponse. Le serveur répond avec un code de statut (par exemple, 200 pour succès) et un corps contenant les données demandées, accessible via `HttpResponse.body()`. GET est idéal pour des scénarios où la sécurité des données n’est pas critique, car les paramètres dans l’URL sont visibles. Cependant, pour des données sensibles ou volumineuses, d’autres méthodes comme POST sont préférables, car GET est limité par la longueur maximale des URLs.
+Dans l’API `HttpClient` de Java, une requête GET est construite avec 
+```HttpRequest.newBuilder().GET().uri(URI.create(url)).build().``` 
+Les en-têtes, comme `Accept: application/json`, peuvent être ajoutés pour spécifier le format de la réponse. Le serveur répond avec un code de statut (par exemple, 200 pour succès) et un corps contenant les données demandées, accessible via `HttpResponse.body()`. GET est idéal pour des scénarios où la sécurité des données n’est pas critique, car les paramètres dans l’URL sont visibles. Cependant, pour des données sensibles ou volumineuses, d’autres méthodes comme POST sont préférables, car GET est limité par la longueur maximale des URLs.
 La méthode POST sert à envoyer des données au serveur pour créer ou modifier une ressource, comme soumettre un formulaire ou ajouter une entrée dans une base de données. Contrairement à GET, POST inclut un corps de requête contenant les données, souvent au format JSON ou formulaire, et les paramètres ne sont pas visibles dans l’URL, offrant une meilleure sécurité et une capacité à transmettre des données plus volumineuses. POST n’est pas idempotente : plusieurs requêtes identiques peuvent créer plusieurs ressources ou modifier l’état du serveur différemment. Dans le programme `HttpClientExample`, une requête POST envoie un JSON (`{"title": "Test", "body": "Test request"}`) à une API de test pour simuler la création d’une publication.
-Avec l’API `HttpClient`, une requête POST est définie en utilisant `HttpRequest.newBuilder().POST(HttpRequest.BodyPublishers.ofString(jsonPayload)).uri(URI.create(url)).build()`, avec un en-tête comme `Content-Type: application/json` pour indiquer le format du corps. Le serveur traite les données envoyées et répond avec un code de statut (par exemple, 201 pour une création réussie) et parfois un corps décrivant la ressource créée. POST est essentiel pour les interactions dynamiques, comme l’envoi de données utilisateur ou la mise à jour de ressources, mais il nécessite une attention particulière à la sécurité, notamment avec HTTPS, pour protéger les données transmises.
+Avec l’API `HttpClient`, une requête POST est définie en utilisant 
+```HttpRequest.newBuilder().POST(HttpRequest.BodyPublishers.ofString(jsonPayload)).uri(URI.create(url)).build(),``` 
+avec un en-tête comme `Content-Type: application/json` pour indiquer le format du corps. Le serveur traite les données envoyées et répond avec un code de statut (par exemple, 201 pour une création réussie) et parfois un corps décrivant la ressource créée. POST est essentiel pour les interactions dynamiques, comme l’envoi de données utilisateur ou la mise à jour de ressources, mais il nécessite une attention particulière à la sécurité, notamment avec HTTPS, pour protéger les données transmises.
 Considérons un autre exemple pour bien illustrer ces concepts.
 
 {{<inlineJava path="HttpClientExample.java" lang="java">}}
@@ -744,7 +746,9 @@ public class HttpClientExample {
 {{</inlineJava>}}
 
 Le programme démontre deux cas d’usage : récupérer des données d’une API publique (GET) et simuler la création d’une ressource (POST). 
-Le programme commence par créer un `HttpClient`, l’objet central pour gérer les connexions HTTP. La ligne `HttpClient client = HttpClient.newBuilder().build();` initialise un client avec des paramètres par défaut, capable de gérer plusieurs requêtes tout en optimisant les connexions réseau (par exemple, via HTTP/1.1 ou HTTP/2). Dans le contexte HTTP, le client joue le rôle de l’initiateur des requêtes, envoyant des messages formatés au serveur. Le programme encapsule ensuite le code dans un bloc `try-catch` pour gérer les exceptions, comme les erreurs réseau ou les réponses invalides, qui sont courantes dans les communications HTTP en raison de la nature distribuée du web.
+Le programme commence par créer un `HttpClient`, l’objet central pour gérer les connexions HTTP. La ligne 
+```HttpClient client = HttpClient.newBuilder().build();``` 
+initialise un client avec des paramètres par défaut, capable de gérer plusieurs requêtes tout en optimisant les connexions réseau (par exemple, via HTTP/1.1 ou HTTP/2). Dans le contexte HTTP, le client joue le rôle de l’initiateur des requêtes, envoyant des messages formatés au serveur. Le programme encapsule ensuite le code dans un bloc `try-catch` pour gérer les exceptions, comme les erreurs réseau ou les réponses invalides, qui sont courantes dans les communications HTTP en raison de la nature distribuée du web.
 
 La première requête est une requête GET vers l’API GitHub (`https://api.github.com/users/octocat`). La construction de la requête utilise `HttpRequest.newBuilder()`, où l’URI est définie, un en-tête `Accept: application/json` est ajouté pour demander une réponse JSON, et la méthode `GET()` est spécifiée. En HTTP, GET est utilisé pour récupérer des données sans modifier la ressource, et l’en-tête `Accept` négocie le format de la réponse. La requête est envoyée avec `client.send()`, qui retourne un `HttpResponse` contenant le code de statut (par exemple, 200 pour succès) et le corps (un JSON décrivant l’utilisateur). Le programme affiche ces informations, illustrant comment HTTP structure les réponses pour fournir à la fois des métadonnées (code de statut, en-têtes) et des données utiles.
 

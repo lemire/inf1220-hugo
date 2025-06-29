@@ -120,8 +120,14 @@ Les contraintes suivantes sont à respecter dans l'écriture des noms de variabl
 String s = "Chaîne de caractères";
 ```
 
+{{% hint info %}}
 
-<p>Dans ce cours, il n'est pas nécessaire de devenir un expert dans les types du Java. Vous devez tout de même avoir les bases:</p>
+Dans ce cours, il n'est pas nécessaire de devenir un expert dans les types du Java. 
+
+{{% /hint %}}
+
+
+<p>Voici quelques notions importantes :</p>
 <ol>
 <li>Il y a plusieurs types pour représenter les entiers (byte, short, int, long) utilisant une quantité variable de mémoire, et pouvant représenter des nombres plus ou moins volumineux. À l'exception du type « char » qui peut être considéré comme un type représentant des entiers (de 0 à 65536), les types entiers en Java sont toujours signés (ils permettent de représenter à la fois les nombres positifs et négatifs). Notez qu'il y a toujours une valeur négative de plus grande amplitude que n'importe quelle valeur positive (par exemple, -128, -32768, -2147483648, etc.) ce qui signifie qu'on ne peut toujours prendre la valeur absolue d'un entier en Java dans le sens où, par exemple, la valeur 2147483648 ne peut pas être représentée par un « int » alors que -2147483648 est parfaitement légitime.  </li>
 <li>Les types entiers n'ont qu'une seule valeur zéro. Les nombres à virgule flottantes ont deux zéros (-0 et +0). Nous avons que les valeurs zéros sont égales (+0 == -0). Par contre, les deux zéros sont distincts: 1/-0 donne l'infini négatif (1/-0.0 == Double.NEGATIVE_INFINITY) alors que 1/+0 donne l'infini positif (1/0.0 == Double.POSITIF_INFINITY).

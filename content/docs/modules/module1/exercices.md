@@ -29,9 +29,12 @@ Les solutions à ces exercices ne sont pas uniques. Il existe plusieurs syntaxes
 
 Rappel : les mathématiques du collégial sont un préalable obligatoire à ce cours. Une aisance en algèbre, fonctions et arithmétique est nécessaire. Sans ces prérequis, réussir ce cours peut être difficile.
 
+{{% hint info %}}
+
 ### Réponses uniques ?
 
 Les exercices incluent une solution pour comparer votre approche à la nôtre. Il n’existe pas de solution unique ; votre solution peut être meilleure ou moins bonne que celle proposée.
+{{% /hint %}}
 
 ### Exercice 1 : La somme d’un tableau
 

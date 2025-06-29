@@ -7,15 +7,23 @@ weight: 4
 # Exercices sur les classes, les variables, les types et les opérateurs
 
 
-<p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.</p>
+Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.
 
-<p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.</p>
+N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+
+N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
 
-## Réponses uniques?
+
+{{% hint info %}}
+
+## Réponses uniques ?
 
 <p>Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n'y a pas de solution unique aux problèmes en général. Vous pouvez arriver avec une solution qui est préférable ou moins bonne que celle que nous offrons. Pour faire ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour faire les exercices. Nous vous encourageons tout de même à faire vos propres recherches en complément de vos lectures. Dans certains cas, au sein de la solution que nous offrons, nous pouvons utiliser des notions techniques qui n'ont pas été vues directement dans le cours, mais qui devraient vous être facilement accessibles.</p>
+
+{{% /hint %}}
+
 
 ## Questions/Réponses
 
@@ -149,7 +157,7 @@ Expliquez ce qu’est un débordement (overflow) lors d’un calcul avec des ent
 <details><summary>Réponse</summary>
 <p>Un débordement se produit lorsqu’une opération arithmétique dépasse la valeur maximale ou minimale qu’un type peut représenter. Par exemple, un <code>int</code> en Java varie de -2 147 483 648 à 2 147 483 647. Si on additionne 1 à la valeur maximale, on « retourne » à la valeur minimale.</p>
 
-```java
+```java  {style=github}
 int max = Integer.MAX_VALUE;
 System.out.println(max);         // 2147483647
 System.out.println(max + 1);     // -2147483648 (débordement)
@@ -195,7 +203,7 @@ Comment écrit-on un nombre en notation hexadécimale en Java ? Donnez un exem
 <details><summary>Réponse</summary>
 <p>On utilise le préfixe <code>0x</code> pour écrire un nombre en hexadécimal. Exemple :</p>
 
-```java
+```java  {style=github}
 int x = 0xFF; // 255 en décimal
 System.out.println(x); // Affiche 255
 ```

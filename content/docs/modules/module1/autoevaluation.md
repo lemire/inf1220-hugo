@@ -11,12 +11,12 @@ Je vous invite donc à faire une autoévaluation.
 
 ## Connaissances technologiques
 
-<p>Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d'avoir
+Le cours ne nécessite pas une connaissance approfondie du fonctionnement des ordinateurs, mais il est utile d'avoir
     une certaine connaissance de base. Vous devriez savoir que les ordinateurs disposent d'un processeur, de mémoire, de
     disques, etc. et qu'ils fonctionnent à l'aide d'un système d'exploitation. Si vous ne vous êtes jamais intéressés à
     ces concepts de base, il peut être utile que vous preniez un peu de votre temps pour faire des recherches sur ces
     questions. Il peut être difficile de suivre ce cours si vous ne savez vraiment pas ce qu'est un processeur ou de la
-    mémoire informatique.</p>
+    mémoire informatique.
 
 ## Mathématiques
 

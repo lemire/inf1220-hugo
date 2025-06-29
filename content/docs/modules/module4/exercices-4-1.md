@@ -8,14 +8,22 @@ weight: 3
 ## Questions/réponses
 
 Veuillez répondre mentalement, sur papier ou en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
+
+N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
 
 Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.
 
 Prenez note qu’il est permis d’utiliser le robot conversationnel du cours lors des exercices. Cependant, vous devriez vous entraîner à produire vos propres réponses.
 
+{{% hint info %}}
+
 ## Réponses uniques ?
 
 Les exercices comportent une solution vous permettant de comparer votre approche avec la nôtre. Il n’y a pas de solution unique aux problèmes en général. Vous pouvez arriver à une solution préférable ou moins bonne que celle que nous offrons. Pour répondre à ces questions, vous devez avoir fait toutes les lectures préalables. Vous disposez alors toujours des fondements nécessaires pour réaliser les exercices. Nous vous encourageons à faire vos propres recherches en complément des lectures. Dans certains cas, dans la solution que nous offrons, nous pouvons utiliser des notions techniques non vues directement dans le cours, mais qui devraient vous être facilement accessibles.
+
+{{% /hint %}}
+
 
 ## Question 1
 
@@ -533,22 +541,18 @@ import java.io.IOException;
 public class ByteArrayStreamExample {
     public static void main(String[] args) {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
-        try {
-            String texte = "Test Java NIO";
-            output.write(texte.getBytes());
-            byte[] bytes = output.toByteArray();
-            System.out.println("Taille des bytes écrits : " + bytes.length);
+        String texte = "Test Java NIO";
+        output.write(texte.getBytes());
+        byte[] bytes = output.toByteArray();
+        System.out.println("Taille des bytes écrits : " + bytes.length);
 
-            ByteArrayInputStream input = new ByteArrayInputStream(bytes);
-            System.out.print("Contenu lu : ");
-            int octet;
-            while ((octet = input.read()) != -1) {
-                System.out.print((char) octet);
-            }
-            System.out.println();
-        } catch (IOException e) {
-            System.err.println("Erreur : " + e.getMessage());
+        ByteArrayInputStream input = new ByteArrayInputStream(bytes);
+        System.out.print("Contenu lu : ");
+        int octet;
+        while ((octet = input.read()) != -1) {
+            System.out.print((char) octet);
         }
+        System.out.println();
     }
 }
 ```
@@ -881,7 +885,7 @@ Voici cinq questions supplémentaires sur la lecture de fichiers texte en Java, 
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -931,7 +935,7 @@ Ce programme utilise `BufferedReader` pour lire un fichier texte ligne par ligne
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.IOException;
@@ -972,7 +976,7 @@ Ce programme utilise `Files.readString` de l’API `java.nio.file` pour lire l�
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -1014,7 +1018,7 @@ Ce programme lit un fichier texte ligne par ligne avec `BufferedReader` et utili
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -1055,7 +1059,7 @@ Ce programme utilise `BufferedReader` pour lire un fichier texte ligne par ligne
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.IOException;
@@ -1097,7 +1101,7 @@ Voici une question sur le mappage en mémoire en Java, suivant le modèle du doc
 
 <details><summary>Réponse</summary>
 
-```java
+```java  {style=github}
 import java.nio.channels.FileChannel;
 import java.nio.MappedByteBuffer;
 import java.nio.file.Path;
@@ -1133,5 +1137,104 @@ public class SommeEntiersMappage {
 ```
 
 Ce programme utilise le mappage en mémoire via `FileChannel` et `MappedByteBuffer` pour lire un fichier binaire contenant des entiers (4 octets chacun). Le fichier est ouvert avec `FileChannel.open` en mode lecture, et sa taille est vérifiée pour s’assurer qu’elle est un multiple de 4 octets, garantissant des données valides. La méthode `map` crée un `MappedByteBuffer` qui mappe le contenu du fichier directement en mémoire, permettant un accès rapide aux données. La somme des entiers est calculée en lisant chaque entier avec `getInt` jusqu’à ce que le buffer soit épuisé. L’utilisation de `try-with-resources` assure la fermeture du canal, et la gestion des exceptions avec `IOException` garantit la robustesse. Cette approche est particulièrement efficace pour les fichiers volumineux, car le mappage en mémoire réduit les accès disque en déléguant la gestion des données au système d’exploitation.
+
+</details>
+
+
+## Question 27
+
+Écrivez un programme Java qui écrit une séquence de 5 entiers (par exemple, 1 à 5) dans un fichier binaire en utilisant explicitement l’ordre big-endian, puis lit ce fichier en supposant un ordre little-endian pour démontrer l’impact du boutisme incorrect. Affichez les valeurs lues et expliquez pourquoi elles diffèrent des valeurs originales.
+
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+public class BoutismeEcritureLecture {
+    public static void main(String[] args) {
+        String nomFichier = "entiers.bin";
+        
+        // Écriture en big-endian
+        try (DataOutputStream sortie = new DataOutputStream(new FileOutputStream(nomFichier))) {
+            for (int i = 1; i <= 5; i++) {
+                sortie.writeInt(i); // DataOutputStream utilise big-endian par défaut
+            }
+            System.out.println("Écriture des entiers 1 à 5 en big-endian terminée.");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l’écriture : " + e.getMessage());
+            return;
+        }
+        
+        // Lecture en supposant little-endian
+        try (FileInputStream entree = new FileInputStream(nomFichier)) {
+            System.out.println("Lecture en supposant little-endian :");
+            byte[] octets = new byte[4];
+            for (int i = 0; i < 5; i++) {
+                if (entree.read(octets) != 4) {
+                    System.err.println("Erreur : données insuffisantes.");
+                    return;
+                }
+                ByteBuffer buffer = ByteBuffer.wrap(octets).order(ByteOrder.LITTLE_ENDIAN);
+                int valeur = buffer.getInt();
+                System.out.println("Entier lu : " + valeur);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+        }
+    }
+}
+```
+
+Ce programme illustre l’impact du boutisme sur la manipulation des données binaires. Dans la phase d’écriture, `DataOutputStream` utilise par défaut l’ordre big-endian pour écrire les entiers de 1 à 5 dans un fichier binaire, où chaque entier occupe 4 octets (par exemple, l’entier 1 est écrit comme `00 00 00 01`). Lors de la lecture, le programme lit chaque bloc de 4 octets et utilise `ByteBuffer` avec `ByteOrder.LITTLE_ENDIAN` pour interpréter les octets dans l’ordre inverse (par exemple, `00 00 00 01` devient `01 00 00 00`, soit 16 777 216). Les valeurs affichées diffèrent donc fortement des originales (par exemple, 1 devient 16 777 216) en raison de l’inversion des octets. Cette erreur montre l’importance de respecter le même ordre de boutisme lors de l’écriture et de la lecture des données binaires. La gestion des exceptions avec `IOException` et la vérification du nombre d’octets lus garantissent la robustesse du programme.
+
+</details>
+
+## Question 28
+
+Écrivez un programme Java qui lit un fichier binaire contenant une séquence d’entiers (4 octets chacun) et permet à l’utilisateur de choisir l’ordre de boutisme (big-endian ou little-endian) pour interpréter les données. Le programme affiche les entiers lus selon l’ordre choisi et indique si la taille du fichier est valide pour des entiers.
+
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.Scanner;
+
+public class ChoixBoutisme {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Entrez le nom du fichier binaire : ");
+        String nomFichier = scanner.nextLine();
+        System.out.print("Choisissez l’ordre de boutisme (big/little) : ");
+        String ordre = scanner.nextLine().toLowerCase();
+        
+        ByteOrder byteOrder = ordre.equals("little") ? ByteOrder.LITTLE_ENDIAN : ByteOrder.BIG_ENDIAN;
+        
+        try (RandomAccessFile fichier = new RandomAccessFile(nomFichier, "r")) {
+            long taille = fichier.length();
+            if (taille % 4 != 0) {
+                System.out.println("Erreur : la taille du fichier n’est pas un multiple de 4 octets.");
+                return;
+            }
+            
+            System.out.println("Entiers lus en " + ordre + "-endian :");
+            byte[] octets = new byte[4];
+            for (int i = 0; i < taille / 4; i++) {
+                fichier.readFully(octets);
+                ByteBuffer buffer = ByteBuffer.wrap(octets).order(byteOrder);
+                int valeur = buffer.getInt();
+                System.out.println("Entier " + (i + 1) + " : " + valeur);
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture : " + e.getMessage());
+        }
+    }
+}
+```
+
+Ce programme permet à l’utilisateur de spécifier l’ordre de boutisme pour lire un fichier binaire contenant des entiers (4 octets chacun). Il utilise `RandomAccessFile` pour lire les blocs de 4 octets et `ByteBuffer` pour interpréter ces octets selon l’ordre choisi (`ByteOrder.BIG_ENDIAN` ou `ByteOrder.LITTLE_ENDIAN`). La taille du fichier est vérifiée pour s’assurer qu’elle est un multiple de 4 octets, garantissant des données valides. Chaque entier est lu en lisant 4 octets dans un tableau, puis interprété avec `ByteBuffer` configuré avec l’ordre de boutisme sélectionné. Les valeurs sont affichées avec leur position. La gestion des exceptions avec `IOException` et l’utilisation de `try-with-resources` assurent une exécution robuste. Ce programme met en évidence l’importance de connaître l’ordre de boutisme des données binaires pour une lecture correcte, car un mauvais choix peut produire des valeurs erronées (par exemple, 1 en big-endian devient 16 777 216 en little-endian).
 
 </details>
