@@ -67,27 +67,27 @@ nous trouvons des erreurs.&lt;/p>
  &lt;tbody>
  &lt;tr>
  &lt;td>byte / short / int / long&lt;/td>
- &lt;td>-123, 10&lt;/td>
+ &lt;td>&lt;code>-123&lt;/code>, &lt;code>10&lt;/code>&lt;/td>
  &lt;td>Entiers de différentes tailles&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>float / double&lt;/td>
- &lt;td>235.13&lt;/td>
+ &lt;td>&lt;code>235.13&lt;/code>&lt;/td>
  &lt;td>Nombres à virgule flottante&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>char&lt;/td>
- &lt;td>&amp;lsquo;U&amp;rsquo;&lt;/td>
+ &lt;td>&lt;code>'U'&lt;/code>&lt;/td>
  &lt;td>Caractère unique&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>boolean&lt;/td>
- &lt;td>true, false&lt;/td>
+ &lt;td>&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
  &lt;td>Valeurs logiques&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>String&lt;/td>
- &lt;td>&amp;ldquo;Salutations de la Terre&amp;rdquo;&lt;/td>
+ &lt;td>&lt;code>&amp;quot;Salutations de la Terre&amp;quot;&lt;/code>&lt;/td>
  &lt;td>Chaînes de caractères&lt;/td>
  &lt;/tr>
  &lt;/tbody>
