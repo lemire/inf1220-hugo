@@ -11,7 +11,12 @@ weight: 9
 Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
 
-N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+{{% hint info %}}
+
+N'oubliez pas d'utiliser notre [pense-bête Java]({{< ref "/docs/pensebete" >}}) au besoin. Pour les mathématiques, 
+vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
 
 <p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.</p>
 

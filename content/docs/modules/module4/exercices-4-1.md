@@ -10,7 +10,12 @@ weight: 3
 Veuillez répondre mentalement, sur papier ou en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
 
-N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+{{% hint info %}}
+
+N'oubliez pas d'utiliser notre [pense-bête Java]({{< ref "/docs/pensebete" >}}) au besoin. Pour les mathématiques, 
+vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
 
 Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.
 

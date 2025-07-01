@@ -8,6 +8,12 @@ weight: 11
 
 La notion d'algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l'algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.
 
+{{% hint info %}}
+
+Pour les mathématiques, vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
+
 Il est permis d’utiliser le robot conversationnel du cours pour ces exercices ([voir ici](https://rc-inf1220.teluq.ca/)). Toutefois, entraînez-vous à produire vos propres réponses.
 
 Comment procéder pour les exercices :

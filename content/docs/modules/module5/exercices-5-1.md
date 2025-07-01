@@ -11,7 +11,12 @@ weight: 3
 Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
 
-N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+{{% hint info %}}
+
+N'oubliez pas d'utiliser notre [pense-bête Java]({{< ref "/docs/pensebete" >}}) au besoin. Pour les mathématiques, 
+vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
 
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>

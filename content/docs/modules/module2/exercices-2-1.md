@@ -9,7 +9,12 @@ weight: 4
 
 Prenez en note chaque question. Tentez par vos propres moyens, mais avec l'aide de tout le matériel et de l'Internet, de résoudre le problème. Prévoyez jusqu'à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.
 
-N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+{{% hint info %}}
+
+N'oubliez pas d'utiliser notre [pense-bête Java]({{< ref "/docs/pensebete" >}}) au besoin. Pour les mathématiques, 
+vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
 
 N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.
 

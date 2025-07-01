@@ -9,7 +9,12 @@ Veuillez répondre mentalement ou sur papier à ces questions avant de regarder 
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.
 
 
-N'oubliez pas d'utiliser notre [pense-bête](/docs/pensebete) au besoin.
+{{% hint info %}}
+
+N'oubliez pas d'utiliser notre [pense-bête Java]({{< ref "/docs/pensebete" >}}) au besoin. Pour les mathématiques, 
+vous pouvez faire référence à notre rappel sur [les principales notions mathématiques]({{< ref "/docs/extra/math" >}}) du cours.
+
+{{% /hint %}}
 
 ## Comment faire ces exercices ?
 
