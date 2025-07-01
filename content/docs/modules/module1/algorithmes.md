@@ -88,6 +88,12 @@ Voici la table de vérité des principaux opérateurs logiques :
 - **A ET B** : vrai seulement si A et B sont vrais
 - **A OU B** : vrai si au moins un des deux est vrai
 
+
+Utilisez ce jeu pour tester votre compréhension.
+
+{{< webapp path="truthgame.html" >}}
+
+
 #### Exemple 1 : Contrôle d’accès selon l’âge
 
 ```pseudo

@@ -1,0 +1,246 @@
+
+  <div id="logicalGame_container" style="font-family: Arial, sans-serif; display: block; background-color: #e0e0e0; margin: 20px auto; padding: 10px; width: fit-content; border: 1px solid #ccc;">
+    <div id="logicalGame_gameInfo" style="margin: 10px; font-size: 24px;">
+      Points : <span id="logicalGame_score">0</span> | Vies : <span id="logicalGame_lives">5</span>
+    </div>
+    <div id="logicalGame_expression" style="font-size: 20px; margin: 10px;">Expression : TRUE AND FALSE</div>
+    <canvas id="logicalGame_gameCanvas" width="500" height="600" style="border: 2px solid black; background-color: #fff; position: relative;"></canvas>
+    <div id="logicalGame_feedbackMessage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: bold; padding: 15px 25px; border-radius: 8px; z-index: 100; display: none; white-space: nowrap; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"></div>
+    <div id="logicalGame_gameOver" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: bold; color: #ff0000; text-align: center; background-color: rgba(255,255,255,0.9); padding: 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>
+
+    <div style="margin-top: 10px;">
+      <button id="logicalGame_startButton" style="font-size: 18px; margin: 5px; padding: 10px 20px; cursor: pointer;">Démarrer le jeu</button>
+      <button id="logicalGame_leftButton" style="font-size: 18px; margin: 5px; padding: 10px 20px; cursor: pointer;">Gauche</button>
+      <button id="logicalGame_rightButton" style="font-size: 18px; margin: 5px; padding: 10px 20px; cursor: pointer;">Droite</button>
+      <button id="logicalGame_shootButton" style="font-size: 18px; margin: 5px; padding: 10px 20px; cursor: pointer;">Tirer</button>
+    </div>
+
+    <audio id="logicalGame_shootSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3" preload="auto"></audio>
+    <audio id="logicalGame_correctSound" src="https://www.soundjay.com/success-fanfare/sounds/success-fanfare-sound-2.mp3" preload="auto"></audio>
+    <audio id="logicalGame_incorrectSound" src="https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3" preload="auto"></audio>
+  </div>
+
+  <script>
+    (function () {
+      const prefix = 'logicalGame_';
+
+      const canvas = document.getElementById(`${prefix}gameCanvas`);
+      const ctx = canvas.getContext('2d');
+      const scoreDisplay = document.getElementById(`${prefix}score`);
+      const livesDisplay = document.getElementById(`${prefix}lives`);
+      const expressionDisplay = document.getElementById(`${prefix}expression`);
+      const startButton = document.getElementById(`${prefix}startButton`);
+      const leftButton = document.getElementById(`${prefix}leftButton`);
+      const rightButton = document.getElementById(`${prefix}rightButton`);
+      const shootButton = document.getElementById(`${prefix}shootButton`);
+      const feedbackMessage = document.getElementById(`${prefix}feedbackMessage`);
+      const gameOverDiv = document.getElementById(`${prefix}gameOver`); // Get game over div
+
+      const shootSound = document.getElementById(`${prefix}shootSound`);
+      const correctSound = document.getElementById(`${prefix}correctSound`);
+      const incorrectSound = document.getElementById(`${prefix}incorrectSound`);
+
+      let score = 0;
+      let lives = 5;
+      let gameRunning = false;
+      let car = { x: canvas.width / 2 - 25, y: 550, width: 50, height: 30, speed: 5 };
+      let barrels = [];
+      let bullets = [];
+      let explosions = [];
+      let expression = { p: true, q: false, result: false, text: 'TRUE AND FALSE' };
+      let lastBarrelTime = 0;
+      let lastShootTime = 0;
+      const shootCooldown = 200; // milliseconds
+
+      function showFeedback(message, isCorrect) {
+        feedbackMessage.textContent = message;
+        feedbackMessage.style.display = 'block';
+        feedbackMessage.style.backgroundColor = isCorrect ? 'rgba(144, 238, 144, 0.9)' : 'rgba(255, 99, 71, 0.9)';
+        feedbackMessage.style.color = isCorrect ? '#006400' : '#8B0000';
+
+        // Position feedback message relative to the canvas container
+        const canvasRect = canvas.getBoundingClientRect();
+        const containerRect = canvas.parentElement.getBoundingClientRect(); // Get the parent container for relative positioning
+        feedbackMessage.style.left = `${canvasRect.left - containerRect.left + canvasRect.width / 2}px`;
+        feedbackMessage.style.top = `${canvasRect.top - containerRect.top + canvasRect.height / 2}px`;
+
+
+        setTimeout(() => {
+          feedbackMessage.style.display = 'none';
+        }, 1500);
+      }
+
+      function createExplosion(x, y) {
+        explosions.push({
+          x: x,
+          y: y,
+          radius: 5,
+          maxRadius: 40, // Larger explosion
+          opacity: 1,
+          color: 'orange'
+        });
+      }
+
+      function drawExplosions() {
+        for (let i = explosions.length - 1; i >= 0; i--) {
+          let exp = explosions[i];
+          ctx.beginPath();
+          ctx.arc(exp.x, exp.y, exp.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 165, 0, ${exp.opacity})`; // Orange
+          ctx.fill();
+
+          exp.radius += 3; // Expand faster
+          exp.opacity -= 0.07; // Fade out faster
+
+          if (exp.opacity <= 0) {
+            explosions.splice(i, 1);
+          }
+        }
+      }
+
+      function generateExpression() {
+        const operators = ['AND', 'OR', 'XOR'];
+        const p = Math.random() > 0.5;
+        const q = Math.random() > 0.5;
+        const op = operators[Math.floor(Math.random() * operators.length)];
+        let result;
+        let text = `${String(p).toUpperCase()} ${op} ${String(q).toUpperCase()}`;
+        if (op === 'AND') result = p && q;
+        else if (op === 'OR') result = p || q;
+        else result = (p || q) && !(p && q); // XOR
+        expression = { p, q, result, text };
+        expressionDisplay.textContent = `Expression : ${text}`;
+      }
+
+      function spawnBarrel() {
+        const value = Math.random() > 0.5;
+        const x = Math.random() * (canvas.width - 50); // Adjust for larger barrel width
+        barrels.push({ x, y: 0, width: 50, height: 40, value, speed: 2 }); // Larger barrel
+      }
+
+      function moveCar(direction) {
+        if (direction === 'left' && car.x > 0) car.x -= car.speed;
+        if (direction === 'right' && car.x < canvas.width - car.width) car.x += car.speed;
+      }
+
+      function shoot() {
+        const currentTime = Date.now();
+        if (currentTime - lastShootTime > shootCooldown) {
+          bullets.push({ x: car.x + car.width / 2 - 2.5, y: car.y, width: 5, height: 10, speed: 7 });
+          shootSound.currentTime = 0;
+          shootSound.play();
+          lastShootTime = currentTime;
+        }
+      }
+
+      function checkCollision(bullet, barrel) {
+        return bullet.x < barrel.x + barrel.width &&
+               bullet.x + bullet.width > barrel.x &&
+               bullet.y < barrel.y + barrel.height &&
+               bullet.y + bullet.height > barrel.y;
+      }
+
+      function update() {
+        if (!gameRunning) return;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw car
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(car.x, car.y, car.width, car.height);
+
+        // Generate barrels
+        if (Date.now() - lastBarrelTime > 1000) {
+          spawnBarrel();
+          lastBarrelTime = Date.now();
+        }
+
+        // Update and draw barrels
+        barrels = barrels.filter(b => b.y < canvas.height);
+        barrels.forEach(barrel => {
+          barrel.y += barrel.speed;
+          ctx.fillStyle = barrel.value ? 'green' : 'red';
+          ctx.fillRect(barrel.x, barrel.y, barrel.width, barrel.height);
+          ctx.fillStyle = 'white';
+          ctx.font = '16px Arial';
+          ctx.textAlign = 'center';
+          ctx.fillText(String(barrel.value).toUpperCase(), barrel.x + barrel.width / 2, barrel.y + barrel.height / 2 + 5);
+        });
+
+        // Update and draw bullets
+        bullets = bullets.filter(b => b.y > 0);
+        bullets.forEach(bullet => {
+          bullet.y -= bullet.speed;
+          ctx.fillStyle = 'black';
+          ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        });
+
+        // Check collisions
+        for (let i = bullets.length - 1; i >= 0; i--) {
+          const bullet = bullets[i];
+          for (let j = barrels.length - 1; j >= 0; j--) {
+            const barrel = barrels[j];
+            if (checkCollision(bullet, barrel)) {
+              createExplosion(barrel.x + barrel.width / 2, barrel.y + barrel.height / 2);
+              bullets.splice(i, 1);
+              barrels.splice(j, 1);
+
+              if (barrel.value === expression.result) {
+                score += 10;
+                scoreDisplay.textContent = score;
+                correctSound.currentTime = 0;
+                correctSound.play();
+                showFeedback("Bonne réponse !", true);
+                generateExpression(); // New expression on success
+              } else {
+                lives -= 1;
+                livesDisplay.textContent = lives;
+                incorrectSound.currentTime = 0;
+                incorrectSound.play();
+                showFeedback("Mauvaise réponse !", false);
+                if (lives <= 0) {
+                  gameRunning = false;
+                  gameOverDiv.textContent = `Partie terminée ! Points : ${score}\nCliquez pour recommencer`;
+                  gameOverDiv.style.display = 'block';
+                  gameOverDiv.onclick = startGame; // Make game over clickable to restart
+                }
+              }
+              break;
+            }
+          }
+        }
+
+        // Draw explosions
+        drawExplosions();
+
+        requestAnimationFrame(update);
+      }
+
+      function startGame() {
+        gameRunning = true;
+        score = 0;
+        lives = 5;
+        barrels = [];
+        bullets = [];
+        explosions = [];
+        car.x = canvas.width / 2 - car.width / 2;
+        scoreDisplay.textContent = score;
+        livesDisplay.textContent = lives;
+        generateExpression();
+        startButton.textContent = 'Jeu en cours';
+        gameOverDiv.style.display = 'none'; // Hide game over message
+        update();
+      }
+
+      startButton.addEventListener('click', startGame);
+      leftButton.addEventListener('click', () => moveCar('left'));
+      rightButton.addEventListener('click', () => moveCar('right'));
+      shootButton.addEventListener('click', shoot);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') moveCar('left');
+        if (e.key === 'ArrowRight') moveCar('right');
+        if (e.key === ' ') shoot();
+      });
+    })();
+  </script>
