@@ -1,0 +1,366 @@
+<div>
+  <div id="mathGame_container" style="font-family: Arial, sans-serif; display: block; background-color: #e0e0e0; margin: 20px auto; padding: 10px; width: fit-content; border: 1px solid #ccc;">
+    <div style="display: flex; flex-direction: row; align-items: flex-start;">
+      <div id="mathGame_gameContainer" style="width: 400px; height: 300px; background-color: #f0f0f0; position: relative; overflow: hidden; border: 2px solid #333; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+        <div id="mathGame_backgroundText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; font-family: Arial, sans-serif; color: rgba(0,0,0,0.1); z-index: -1;">INF 1220</div>
+        <div id="mathGame_expression" style="position: absolute; top: 10px; left: 10px; font-size: 14px; font-family: 'Courier New', monospace; color: #333; padding: 5px; background-color: rgba(255,255,255,0.8); border-radius: 3px; max-width: 70%; overflow-wrap: break-word;"></div>
+        <div id="mathGame_score" style="position: absolute; top: 10px; right: 10px; font-size: 14px; font-family: 'Courier New', monospace; color: #333; padding: 5px; background-color: rgba(255,255,255,0.8); border-radius: 3px;">Points : 0</div>
+        <div id="mathGame_lives" style="position: absolute; top: 35px; right: 10px; font-size: 14px; font-family: 'Courier New', monospace; color: #333; padding: 5px; background-color: rgba(255,255,255,0.8); border-radius: 3px;">Vies : 5</div>
+        <div id="mathGame_gameOver" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: bold; color: #ff0000; text-align: center; background-color: rgba(255,255,255,0.9); padding: 15px; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>
+        <div id="mathGame_feedbackMessage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; padding: 8px 12px; border-radius: 5px; z-index: 100; display: none; text-align: center; white-space: nowrap;"></div>
+      </div>
+
+      <div id="mathGame_controls" style="display: flex; flex-direction: column; margin-left: 10px; justify-content: flex-start;">
+        <button id="mathGame_startButton" style="padding: 8px 15px; font-size: 14px; cursor: pointer; margin: 3px; border: none; border-radius: 3px; background-color: #4CAF50; color: white; transition: background-color 0.3s ease;">Démarrer le jeu</button>
+        <button id="mathGame_upButton" style="padding: 8px 15px; font-size: 14px; cursor: pointer; margin: 3px; border: none; border-radius: 3px; background-color: #4CAF50; color: white; transition: background-color 0.3s ease;">Haut</button>
+        <button id="mathGame_downButton" style="padding: 8px 15px; font-size: 14px; cursor: pointer; margin: 3px; border: none; border-radius: 3px; background-color: #4CAF50; color: white; transition: background-color 0.3s ease;">Bas</button>
+        <button id="mathGame_shootButton" style="padding: 8px 15px; font-size: 14px; cursor: pointer; margin: 3px; border: none; border-radius: 3px; background-color: #4CAF50; color: white; transition: background-color 0.3s ease;">Tirer</button>
+      </div>
+    </div>
+
+    <audio id="mathGame_shootSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3" preload="auto"></audio>
+    <audio id="mathGame_correctSound" src="https://www.soundjay.com/success-fanfare/sounds/success-fanfare-sound-2.mp3" preload="auto"></audio>
+    <audio id="mathGame_incorrectSound" src="https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3" preload="auto"></audio>
+
+    <script>
+      (function () {
+        // Create a unique identifier to avoid conflicts
+        const prefix = 'mathGame_';
+
+        // Get elements by their new unique IDs
+        const gameContainer = document.getElementById(`${prefix}gameContainer`);
+        const expressionDiv = document.getElementById(`${prefix}expression`);
+        const scoreDiv = document.getElementById(`${prefix}score`);
+        const livesDiv = document.getElementById(`${prefix}lives`);
+        const gameOverDiv = document.getElementById(`${prefix}gameOver`);
+        const startButton = document.getElementById(`${prefix}startButton`);
+        const upButton = document.getElementById(`${prefix}upButton`);
+        const downButton = document.getElementById(`${prefix}downButton`);
+        const shootButton = document.getElementById(`${prefix}shootButton`);
+        const feedbackMessage = document.getElementById(`${prefix}feedbackMessage`);
+        const shootSound = document.getElementById(`${prefix}shootSound`);
+        const correctSound = document.getElementById(`${prefix}correctSound`);
+        const incorrectSound = document.getElementById(`${prefix}incorrectSound`);
+
+        if (!gameContainer || !expressionDiv || !scoreDiv || !livesDiv || !gameOverDiv || !startButton || !upButton || !downButton || !shootButton || !feedbackMessage || !shootSound || !correctSound || !incorrectSound) {
+          console.error('One or more DOM elements are missing. Check the IDs in the HTML.');
+          return;
+        }
+
+        let score = 0;
+        let vies = 5;
+        let valeurCorrecte = 0;
+        let cibles = [];
+        let projectiles = [];
+        let jeuActif = false;
+        let vaisseau = null;
+        let touches = {};
+        let dernierTir = 0;
+        const delaiTir = 200;
+        const vitesseCible = 0.05; // Adjusted for smaller play area
+        const vitesseProjectile = 5; // Adjusted for smaller play area
+        const vitesseVaisseau = 5; // Adjusted for smaller play area
+
+        function showFeedback(message, isCorrect) {
+          feedbackMessage.textContent = message;
+          feedbackMessage.style.display = 'block';
+          feedbackMessage.style.backgroundColor = isCorrect ? 'rgba(144, 238, 144, 0.9)' : 'rgba(255, 99, 71, 0.9)';
+          feedbackMessage.style.color = isCorrect ? '#006400' : '#8B0000';
+
+          setTimeout(() => {
+            feedbackMessage.style.display = 'none';
+          }, 1500);
+        }
+
+        function creerExplosion(x, y) {
+          const explosionEl = document.createElement('div');
+          explosionEl.style.position = 'absolute';
+          explosionEl.style.width = '10px'; // Scaled down
+          explosionEl.style.height = '10px'; // Scaled down
+          explosionEl.style.left = `${x}px`;
+          explosionEl.style.top = `${y}px`;
+          explosionEl.style.backgroundColor = 'yellow';
+          explosionEl.style.borderRadius = '50%';
+          explosionEl.style.opacity = '1';
+          explosionEl.style.zIndex = '50';
+          explosionEl.style.transform = 'scale(0)';
+          explosionEl.style.transition = 'transform 0.3s, opacity 0.3s, background-color 0.3s';
+
+          gameContainer.appendChild(explosionEl);
+
+          // Animate the explosion using JavaScript
+          setTimeout(() => {
+            explosionEl.style.transform = 'scale(1.5)';
+            explosionEl.style.opacity = '0.7';
+            explosionEl.style.backgroundColor = 'orange';
+          }, 50);
+
+          setTimeout(() => {
+            explosionEl.style.transform = 'scale(2)';
+            explosionEl.style.opacity = '0';
+            explosionEl.style.backgroundColor = 'red';
+          }, 150);
+
+          setTimeout(() => {
+            explosionEl.remove();
+          }, 300);
+        }
+
+        function genererExpression() {
+          const operateurs = ['+', '-', '*', '/', '%'];
+          const operateursComparaison = ['==', '!=', '<', '>', '<=', '>='];
+          const maxNombre = 5;
+
+
+          const num1 = Math.floor(Math.random() * maxNombre) + 1;
+          const num2 = Math.floor(Math.random() * maxNombre) + 1;
+          const num3 = Math.floor(Math.random() * maxNombre) + 1;
+          const op1 = operateurs[Math.floor(Math.random() * operateurs.length)];
+          const op2 = operateurs[Math.floor(Math.random() * operateurs.length)];
+          return [`(${num1} ${op1} ${num2} ${op2} ${num3})`, `(${num1}n ${op1} ${num2}n ${op2} ${num3}n)`];
+        }
+
+        function evaluerExpression(expr) {
+          try {
+            return Number(eval(expr));
+          } catch (e) {
+            console.error("Erreur lors de l'évaluation de l'expression:", expr, e);
+            return 0;
+          }
+        }
+
+        function creerCible(valeur) {
+          const cible = document.createElement('div');
+          cible.textContent = valeur;
+          cible.style.position = 'absolute';
+          cible.style.width = '30px'; // Scaled down
+          cible.style.height = '30px'; // Scaled down
+          cible.style.backgroundColor = '#007bff';
+          cible.style.color = '#fff';
+          cible.style.textAlign = 'center';
+          cible.style.lineHeight = '30px'; // Scaled down
+          cible.style.borderRadius = '50%';
+          cible.style.fontWeight = 'bold';
+          cible.style.boxShadow = '1px 1px 3px rgba(0,0,0,0.2)'; // Scaled down
+          cible.style.left = '0px';
+          const initialY = Math.floor(Math.random() * (gameContainer.offsetHeight - 30)); // Scaled down
+          cible.style.top = `${initialY}px`;
+          gameContainer.appendChild(cible);
+          const vitesse = vitesseCible + Math.random() * 0.05; // Adjusted
+          const vitesseY = (Math.random() < 0.5 ? 1 : -1) * (Math.random() * 0.25 + 0.25); // Adjusted
+          return { element: cible, x: 0, y: initialY, vitesse, vitesseY, valeur };
+        }
+
+        function creerVaisseau() {
+          const vaisseauEl = document.createElement('div');
+          vaisseauEl.style.position = 'absolute';
+          vaisseauEl.style.width = '20px'; // Scaled down
+          vaisseauEl.style.height = '20px'; // Scaled down
+          vaisseauEl.style.backgroundColor = '#ff4500';
+          vaisseauEl.style.borderRadius = '3px'; // Scaled down
+          vaisseauEl.style.left = '370px'; // Adjusted for new width
+          vaisseauEl.style.top = '140px'; // Adjusted for new height
+          gameContainer.appendChild(vaisseauEl);
+          return { element: vaisseauEl, y: 140, vitesse: vitesseVaisseau };
+        }
+
+        function creerProjectile(x, y) {
+          const projectile = document.createElement('div');
+          projectile.style.position = 'absolute';
+          projectile.style.width = '5px'; // Scaled down
+          projectile.style.height = '5px'; // Scaled down
+          projectile.style.backgroundColor = '#000';
+          projectile.style.borderRadius = '50%';
+          projectile.style.boxShadow = '0 0 3px rgba(0,0,0,0.5)'; // Scaled down
+          projectile.style.left = `${x}px`;
+          projectile.style.top = `${y}px`;
+          gameContainer.appendChild(projectile);
+          return { element: projectile, x, y, vitesse: -vitesseProjectile };
+        }
+
+        function demarrerJeu() {
+          score = 0;
+          vies = 5;
+          jeuActif = true;
+          scoreDiv.textContent = `Points : ${score}`;
+          livesDiv.textContent = `Vies : ${vies}`;
+          gameOverDiv.style.display = 'none';
+          feedbackMessage.style.display = 'none';
+          cibles.forEach(t => t.element.remove());
+          projectiles.forEach(p => p.element.remove());
+          if (vaisseau) vaisseau.element.remove();
+          cibles = [];
+          projectiles = [];
+          vaisseau = creerVaisseau();
+          genererNouveauTour();
+          animer();
+          document.addEventListener('keydown', gererToucheEnfoncee);
+          document.addEventListener('keyup', gererToucheRelachee);
+        }
+
+        function genererNouveauTour() {
+          try {
+            const [expr, exprjs] = genererExpression();
+            valeurCorrecte = evaluerExpression(exprjs);
+            expressionDiv.textContent = `Expression : ${expr}`;
+            cibles.forEach(t => t.element.remove());
+            cibles = [];
+            const valeurs = [valeurCorrecte];
+            while (valeurs.length < 3) {
+              let mauvaiseValeur = Math.floor(Math.random() * 50);
+              if (!valeurs.includes(mauvaiseValeur) && Math.abs(mauvaiseValeur - valeurCorrecte) > 0) {
+                valeurs.push(mauvaiseValeur);
+              }
+            }
+            valeurs.sort(() => Math.random() - 0.5);
+            valeurs.forEach(val => cibles.push(creerCible(val)));
+          } catch (e) {
+            console.error('Erreur lors de la génération d\'un nouveau tour :', e);
+            perdreVie();
+            if (jeuActif) genererNouveauTour();
+          }
+        }
+
+        function perdreVie() {
+          vies -= 1;
+          livesDiv.textContent = `Vies : ${vies}`;
+          if (vies <= 0) {
+            terminerJeu();
+          } else {
+            genererNouveauTour();
+          }
+        }
+
+        function terminerJeu() {
+          jeuActif = false;
+          gameOverDiv.textContent = `Partie terminée ! Points : ${score}\nCliquez pour recommencer`;
+          gameOverDiv.style.display = 'block';
+          gameOverDiv.onclick = demarrerJeu;
+          document.removeEventListener('keydown', gererToucheEnfoncee);
+          document.removeEventListener('keyup', gererToucheRelachee);
+        }
+
+        function gererToucheEnfoncee(e) {
+          touches[e.key] = true;
+          if ((e.key === ' ' || e.key === 'Control') && jeuActif && Date.now() - dernierTir > delaiTir) {
+            tirerProjectile();
+          }
+        }
+
+        function gererToucheRelachee(e) {
+          touches[e.key] = false;
+        }
+
+        function deplacerVaisseauHaut() {
+          if (jeuActif && vaisseau) {
+            vaisseau.y = Math.max(0, vaisseau.y - vaisseau.vitesse);
+            vaisseau.element.style.top = `${vaisseau.y}px`;
+          }
+        }
+
+        function deplacerVaisseauBas() {
+          if (jeuActif && vaisseau) {
+            vaisseau.y = Math.min(gameContainer.offsetHeight - vaisseau.element.offsetHeight, vaisseau.y + vaisseau.vitesse);
+            vaisseau.element.style.top = `${vaisseau.y}px`;
+          }
+        }
+
+        function tirerProjectile() {
+          if (jeuActif && vaisseau && Date.now() - dernierTir > delaiTir) {
+            const projectile = creerProjectile(vaisseau.element.offsetLeft, vaisseau.y + vaisseau.element.offsetHeight / 2 - 2.5); // Adjusted for smaller projectile
+            projectiles.push(projectile);
+            shootSound.currentTime = 0;
+            shootSound.play();
+            dernierTir = Date.now();
+          }
+        }
+
+        startButton.addEventListener('click', demarrerJeu);
+        upButton.addEventListener('click', deplacerVaisseauHaut);
+        downButton.addEventListener('click', deplacerVaisseauBas);
+        shootButton.addEventListener('click', tirerProjectile);
+
+        function verifierCollision(obj1, obj2) {
+          const rect1 = obj1.element.getBoundingClientRect();
+          const rect2 = obj2.element.getBoundingClientRect();
+          return !(
+            rect1.right < rect2.left ||
+            rect1.left > rect2.right ||
+            rect1.bottom < rect2.top ||
+            rect1.top > rect2.bottom
+          );
+        }
+
+        function animer() {
+          if (!jeuActif) return;
+
+          if (touches['ArrowUp'] || touches['w']) deplacerVaisseauHaut();
+          if (touches['ArrowDown'] || touches['s']) deplacerVaisseauBas();
+
+          for (let i = cibles.length - 1; i >= 0; i--) {
+            const cible = cibles[i];
+            cible.x += cible.vitesse;
+            cible.y += cible.vitesseY;
+            cible.element.style.left = `${cible.x}px`;
+            cible.element.style.top = `${cible.y}px`;
+
+            if (cible.y <= 0 || (cible.y + cible.element.offsetHeight) >= gameContainer.offsetHeight) {
+              cible.vitesseY *= -1;
+              if (cible.y <= 0) {
+                cible.y = 0;
+              } else {
+                cible.y = gameContainer.offsetHeight - cible.element.offsetHeight;
+              }
+            }
+
+            if (cible.x > gameContainer.offsetWidth) {
+              cible.element.remove();
+              cibles.splice(i, 1);
+              incorrectSound.currentTime = 0;
+              incorrectSound.play();
+              showFeedback(`Mauvaise réponse ! La bonne réponse était ${valeurCorrecte}`, false);
+              perdreVie();
+            }
+          }
+
+          for (let i = projectiles.length - 1; i >= 0; i--) {
+            const projectile = projectiles[i];
+            projectile.x += projectile.vitesse;
+            projectile.element.style.left = `${projectile.x}px`;
+            let touche = false;
+            for (let j = cibles.length - 1; j >= 0; j--) {
+              const cible = cibles[j];
+              if (verifierCollision(projectile, cible)) {
+                touche = true;
+                creerExplosion(cible.x + cible.element.offsetWidth / 2 - 5, cible.y + cible.element.offsetHeight / 2 - 5); // Scaled explosion
+                projectile.element.remove();
+                projectiles.splice(i, 1);
+                cible.element.remove();
+                cibles.splice(j, 1);
+                if (cible.valeur === valeurCorrecte) {
+                  score += 10;
+                  scoreDiv.textContent = `Points : ${score}`;
+                  correctSound.currentTime = 0;
+                  correctSound.play();
+                  showFeedback("Bonne réponse !", true);
+                  genererNouveauTour();
+                } else {
+                  incorrectSound.currentTime = 0;
+                  incorrectSound.play();
+                  showFeedback(`Mauvaise réponse ! La bonne réponse était ${valeurCorrecte}`, false);
+                  perdreVie();
+                }
+                break;
+              }
+            }
+            if (!touche && projectile.x < 0) {
+              projectile.element.remove();
+              projectiles.splice(i, 1);
+            }
+          }
+
+          requestAnimationFrame(animer);
+        }
+      })();
+    </script>
+  </div>

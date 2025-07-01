@@ -1,0 +1,96 @@
+
+  <div id="app-container-deborde"></div>
+  <script>
+    // Encapsulation dans une IIFE pour éviter les conflits
+    (function() {
+      // Constantes pour les limites des entiers 32 bits
+      const MAX_INT = 2147483647;  // 2^31 - 1
+      const MIN_INT = -2147483648; // -2^31
+
+      // Création du conteneur principal
+      const appContainer = document.getElementById('app-container-deborde');
+      if (!appContainer) return;
+
+      // HTML avec CSS en ligne
+      appContainer.innerHTML = `
+        <div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: Arial, sans-serif;">
+          <h2 style="text-align: center; margin-bottom: 20px;">Addition d'entiers 32 bits</h2>
+          <div style="margin-bottom: 15px;">
+            <label for="num1" style="display: block; margin-bottom: 5px;">Nombre 1 :</label>
+            <input type="number" value="2147483647" id="debordenum1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label for="num2" style="display: block; margin-bottom: 5px;">Nombre 2 :</label>
+            <input type="number" value="2147483647" id="debordenum2" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+          </div>
+          <button id="debordecalculate" style="width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Calculer</button>
+          <div id="deborderesult" style="margin-top: 20px; padding: 10px; border: 1px solid #eee; border-radius: 4px; min-height: 60px;"></div>
+        </div>
+      `;
+
+      // Éléments DOM
+      const num1Input = document.getElementById('debordenum1');
+      const num2Input = document.getElementById('debordenum2');
+      const calculateButton = document.getElementById('debordecalculate');
+      const resultDiv = document.getElementById('deborderesult');
+
+      // Validation et sanitisation des entrées
+      function sanitizeInput(value) {
+        const num = parseInt(value);
+        if (isNaN(num)) return null;
+        if (num > MAX_INT || num < MIN_INT) return null;
+        return num;
+      }
+
+      // Calcul et détection du débordement
+      function calculateSum(a, b) {
+        const sum = a + b;
+        let explanation = '';
+
+        // Vérification du débordement
+        if (sum > MAX_INT) {
+          const overflowedSum = sum - (MAX_INT + 1) + MIN_INT;
+          explanation = `Débordement positif détecté. La somme ${sum} dépasse la limite de ${MAX_INT}. Résultat après ajustement : ${overflowedSum}.`;
+          return { result: overflowedSum, explanation };
+        } else if (sum < MIN_INT) {
+          const overflowedSum = sum - MIN_INT + (MAX_INT + 1);
+          explanation = `Débordement négatif détecté. La somme ${sum} est inférieure à ${MIN_INT}. Résultat après ajustement : ${overflowedSum}.`;
+          return { result: overflowedSum, explanation };
+        } else {
+          explanation = `Aucun débordement. La somme est : ${sum}.`;
+          return { result: sum, explanation };
+        }
+      }
+
+      // Gestionnaire d'événement pour le calcul
+      calculateButton.addEventListener('click', () => {
+        const num1 = sanitizeInput(num1Input.value);
+        const num2 = sanitizeInput(num2Input.value);
+
+        if (num1 === null || num2 === null) {
+          resultDiv.innerHTML = `
+            <p style="color: red;">Veuillez entrer des nombres valides entre ${MIN_INT} et ${MAX_INT}.</p>
+          `;
+          return;
+        }
+
+        const { result, explanation } = calculateSum(num1, num2);
+        resultDiv.innerHTML = `
+          <p><strong>Résultat :</strong> ${result}</p>
+          <p><strong>Explication :</strong> ${explanation}</p>
+        `;
+      });
+
+      // Protection contre les entrées non valides en temps réel
+      [num1Input, num2Input].forEach(input => {
+        input.addEventListener('input', () => {
+          const value = parseInt(input.value);
+          if (isNaN(value) || value > MAX_INT || value < MIN_INT) {
+            input.style.borderColor = 'red';
+          } else {
+            input.style.borderColor = '#ccc';
+          }
+        });
+      });
+    })();
+  </script>
