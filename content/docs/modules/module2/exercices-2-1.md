@@ -300,8 +300,6 @@ public static boolean f(int x, int y) {
 <p>La fonction retourne la valeur vraie si et seulement si un seul des deux paramètres est négatif. Par exemple, f(-1,1) est vrai, f(2,2) et f(-1,-3) sont faux.</p>
 </details>
 
-shit
-
 
 
 ## Question 18

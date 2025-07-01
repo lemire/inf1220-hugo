@@ -339,8 +339,14 @@ déclarée dans une fonction n'est accessible que dans la fonction.
 | +         | Addition                     | 5 + 3 = 8       |
 | -         | Soustraction                 | 5 - 3 = 2       |
 | *         | Multiplication               | 5 * 3 = 15      |
-| /         | Division                     | 5 / 3 = 1.666...|
+| /         | Division                     | 5 / 3 = 1       |
 | %         | Modulo (reste de la division)| 5 % 3 = 2       |
+
+Testez votre compréhension des opérations de base sur les entiers avec 
+ce jeu.
+
+{{< webapp path="game.html" >}}
+
 
 ### Les opérateurs de comparaison
 
