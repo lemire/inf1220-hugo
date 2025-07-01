@@ -30,7 +30,10 @@
 &lt;/h2>
 &lt;p>Veuillez répondre mentalement, sur papier ou en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete">pense-bête&lt;/a> au besoin.&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p>
+&lt;/blockquote>
 &lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.&lt;/p></description></item><item><title>Développement web</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/web/</guid><description>&lt;h1 id="développement-web-en-java">
  Développement web en Java
  &lt;a class="anchor" href="#d%c3%a9veloppement-web-en-java">#&lt;/a>
