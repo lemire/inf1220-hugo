@@ -15,6 +15,9 @@ Avant Java 8 (2014), la programmation fonctionnelle était absente ou limitée. 
 
 **Dans ce cours, vous n'avez pas à maîtriser la programmation fonctionnelle, mais il est utile d'être familier avec cette notion.**
 
+
+
+
 ## Lambdas
 
 Une fonction lambda, ou expression lambda, est une fonction anonyme concise définie sans nom, souvent utilisée pour des opérations simples et ponctuelles. Elle permet d'écrire du code plus compact, notamment dans des contextes où une fonction est passée en argument, comme pour des opérations de filtrage ou de tri. En Java, par exemple, les lambdas s'appuient sur les interfaces fonctionnelles, qui possèdent une unique méthode abstraite. Leur syntaxe est de la forme (paramètres) -> expression ou (paramètres) -> { instructions; } pour des blocs plus complexes.
@@ -773,6 +776,12 @@ public class FunctionPredicateExemples {
 {{</inlineJava>}}
 
 
+
+## Vidéo optionnelle 
+
+Nous vous invitons à regarder cette vidéo qui résume certaines des grandes idées de la programmation fonctionnelle en Java.
+
+{{< youtube id="y6Moc0jVEgM" >}}
 
 ## Conclusion 
 
