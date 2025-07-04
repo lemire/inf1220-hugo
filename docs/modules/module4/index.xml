@@ -41,7 +41,9 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 &lt;p>Le développement web en Java repose sur l’utilisation de technologies et de frameworks
 ermettant de créer des applications accessibles via un navigateur. Java est largement
 utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse de son écosystème.&lt;/p>
-&lt;p>&lt;strong>Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la programmation web. Nous vous présentons un exemple pour motiver votre apprentissage.&lt;/strong>&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la programmation web. Nous vous présentons un exemple pour motiver votre apprentissage.&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="concepts-de-base">
  Concepts de base
  &lt;a class="anchor" href="#concepts-de-base">#&lt;/a>
