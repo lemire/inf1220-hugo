@@ -71,6 +71,7 @@ En résumé, un algorithme est une méthode pour résoudre un problème, tandis 
 
 {{< youtube id="1ANpkDxJHo4" >}}
 
+
 ### Logique booléenne
 
 Un des fondements des algorithmes est la logique booléenne.

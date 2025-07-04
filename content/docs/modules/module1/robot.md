@@ -178,6 +178,16 @@ Quand vous construisez des applications LLM, j'ai décrit certaines façons de t
 
 </details>
 
+
+Après avoir écouté la vidéo, je vous invite à réfléchir aux questions suivantes.
+
+1. Comment les paradigmes du logiciel 1.0, 2.0 et 3.0 diffèrent-ils dans leur approche de la programmation, et quelles implications cela a-t-il pour les choix que vous feriez en tant que développeur face à une tâche spécifique ?
+
+2. En quoi l’analogie des grands modèles de langage (LLM) avec un système d’exploitation vous aide-t-elle à comprendre leur rôle dans le développement logiciel actuel, et quelles limites cette analogie pourrait-elle avoir ?
+
+3. Quels problèmes éthiques ou pratiques pourraient surgir de l’utilisation croissante de la programmation en langage naturel, comme le « vibe coding », et comment les développeurs peuvent-ils y répondre pour garantir des applications fiables et accessibles ?
+
+
 ## Robot
 
 
