@@ -10,7 +10,12 @@ Le développement web en Java repose sur l’utilisation de technologies et de f
  utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse de son écosystème.
 
 
-**Dans ce cours, vous n'avez pas à maîtriser la programmation web. Nous vous présentons un exemple pour motiver votre apprentissage.**
+{{% hint info %}}
+
+Dans ce cours, vous n'avez pas à maîtriser la programmation web. Nous vous présentons un exemple pour motiver votre apprentissage.
+
+{{% /hint %}}
+
 
 ## Concepts de base
 

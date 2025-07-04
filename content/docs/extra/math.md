@@ -31,6 +31,9 @@ Tableau 1 : Table de vérités et connecteurs logiques
 | F     | V     | V           | V             | V             | F           | V               | F                   |
 | F     | F     | V           | F             | F             | F           | V               | V                   |
 
+Cette table de vérité présente les valeurs logiques des propositions \( p \), \( q \) et de plusieurs connecteurs logiques pour toutes leurs combinaisons possibles. La colonne \( \neg p \) indique la négation de \( p \), vraie lorsque \( p \) est faux. Le connecteur \( p \vee q \) (ou) est vrai si au moins l'une des propositions est vraie. Le ou exclusif \( p \oplus q \) est vrai uniquement si exactement une des propositions est vraie. Le et \( p \wedge q \) est vrai seulement si les deux propositions sont vraies. L'implication \( p \Rightarrow q \) est fausse uniquement si \( p \) est vrai et \( q \) est faux. Enfin, la biconditionnelle \( p \Leftrightarrow q \) est vraie lorsque \( p \) et \( q \) ont la même valeur logique. Chaque ligne correspond à une combinaison des valeurs de vérité de \( p \) et \( q \), illustrant ainsi le comportement de ces connecteurs.
+
+
 ### 1.2. Les ensembles
 
 Un ensemble est une collection d’objets. Si on appelle \( E \) cette collection, alors pour chacun de ces objets, on peut affirmer qu’il appartient à \( E \). On peut déterminer \( E \) en énumérant ses éléments, par exemple \( E = \{ o_1, o_2, \dots \} \), où \( o_i \) est un des objets de la collection (et où on admet que pour tout objet de la collection, il y a un \( o_i \) qui lui soit identique). On dit alors qu’on a défini \( E \) en extension. Un objet \( o_i \) est appelé un élément de \( E \). On note \( o_i \in E \). 
