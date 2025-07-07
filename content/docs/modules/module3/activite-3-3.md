@@ -514,12 +514,12 @@ System.out.println (tableau.length); // Affiche 5 à la console
 
 ### Utilisation de la mémoire
 
-Un tableau en Java est un objet, ce qui signifie qu'il inclut un en-tête d'objet (métadonnées comme la taille et le type) et les données elles-mêmes. L'en-tête occupe généralement 16&nbsp;octets (selon la JVM). Les données sont stockées contiguément en mémoire, chaque élément occupant la taille correspondant à son type primitif ou à une référence (pour les objets).
+Un tableau en Java est un objet, ce qui signifie qu'il inclut un en-tête d'objet (métadonnées comme la taille et le type) et les données elles-mêmes. L'en-tête occupe environ 16&nbsp;octets (selon la JVM). Les données sont stockées contiguément en mémoire, chaque élément occupant la taille correspondant à son type primitif ou à une référence (pour les objets).
 
-- Un tableau de 10 int : 10 × 4 octets (pour les int) + en-tête (16&nbsp;octets) ≈ 52 octets.
-Un tableau de 10 double : 10 × 8 octets + en-tête ≈ 92 octets.
-Pour les objets (ex. String[]), chaque élément est une référence (4 ou 8 octets selon la JVM), et les objets eux-mêmes sont stockés ailleurs en mémoire.
-Un tableau de boolean peut être optimisé par certaines JVM, stockant plusieurs booléens dans un seul octet, mais cela dépend de l'implémentation.
+- Un tableau de 10&nbsp;int : 10 × 4 octets (pour les int) + en-tête (16&nbsp;octets) ≈ 56 octets.
+- Un tableau de 10&nbsp;double : 10 × 8 octets + en-tête ≈ 96 octets.
+
+Pour les objets (ex. String[]), chaque élément est une référence (8&nbsp;octets, selon la JVM), et les objets eux-mêmes sont stockés ailleurs en mémoire. Un tableau de boolean peut être optimisé par certaines JVM, stockant plusieurs booléens dans un seul octet, mais cela dépend de la JVM.
 
 
 ## Instanciation d'un tableau
