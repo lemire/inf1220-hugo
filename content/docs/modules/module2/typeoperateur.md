@@ -281,6 +281,10 @@ Cependant, des phénomènes comme la perte de précision (par exemple, lors de s
 
 Le standard IEEE 754 gère également des cas spéciaux comme l'**infini**, les **NaN** (Not a Number) et les nombres **dénormalisés**. Par exemple, un exposant de \( e = 255 \) (tous les bits à 1) avec une mantisse nulle représente \( \pm \infty \), tandis qu'une mantisse non nulle indique un NaN. Ces cas sont essentiels pour gérer les erreurs mathématiques, comme la division par zéro. Le standard garantit une portabilité et une cohérence des calculs à virgule flottante sur différentes architectures, ce qui est crucial pour les applications scientifiques, les simulations numériques et les algorithmes d'apprentissage automatique, où la précision et la stabilité numérique sont critiques.
 
+### Utilisation de la mémoire
+
+En Java, les types primitifs ont des tailles de mémoire fixes : `byte` occupe 1&nbsp;octet (8&nbsp;bits), `short` 2&nbsp;octets (16&nbsp;bits), `int` 4&nbsp;octets (32&nbsp;bits), `long` 8&nbsp;octets (64&nbsp;bits), float 4&nbsp;octets (32&nbsp;bits), double 8&nbsp;octets (64&nbsp;bits), `char` 2&nbsp;octets (16&nbsp;bits), et boolean, bien que théoriquement 1&nbsp;bit, a une taille de 1&nbsp;octet ou plus en pratique.
+
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur sur les types (optionnel), vous pouvez  lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 3:</p>
