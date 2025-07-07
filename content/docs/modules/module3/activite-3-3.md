@@ -512,14 +512,6 @@ int[] tableau = new int[5];
 System.out.println (tableau.length); // Affiche 5 à la console
 ```
 
-### Utilisation de la mémoire
-
-Un tableau en Java est un objet, ce qui signifie qu'il inclut un en-tête d'objet (métadonnées comme la taille et le type) et les données elles-mêmes. L'en-tête occupe environ 16&nbsp;octets (selon la JVM). Les données sont stockées contiguément en mémoire, chaque élément occupant la taille correspondant à son type primitif ou à une référence (pour les objets).
-
-- Un tableau de 10&nbsp;int : 10 × 4 octets (pour les int) + en-tête (16&nbsp;octets) ≈ 56 octets.
-- Un tableau de 10&nbsp;double : 10 × 8 octets + en-tête ≈ 96 octets.
-
-Pour les objets (ex. String[]), chaque élément est une référence (8&nbsp;octets, selon la JVM), et les objets eux-mêmes sont stockés ailleurs en mémoire. Un tableau de boolean peut être optimisé par certaines JVM, stockant plusieurs booléens dans un seul octet, mais cela dépend de la JVM.
 
 
 ## Instanciation d'un tableau
@@ -585,12 +577,38 @@ public class AfficheDeplacer {
 
 ### Tableaux d'objets
 
-<p>Dans tous les exemples que nous avons vus jusqu'à présent, les tableaux contenaient uniquement des types primitifs. Dans la dernière partie de la section précédente, nous avons vu des tableaux qui pouvaient contenir des objets, ou plus précisément des références vers des objets. 
-Il est possible de stocker des objets dans un tableau. La ligne de code suivant crée un tableau de 20 objets de type String.</p>
+Dans tous les exemples que nous avons vus jusqu'à présent, les tableaux contenaient uniquement des types primitifs. Dans la dernière partie de la section précédente, nous avons vu des tableaux qui pouvaient contenir des objets, ou plus précisément des références vers des objets. 
+Il est possible de stocker des objets dans un tableau. La ligne de code suivant crée un tableau de 20 objets de type String.
 
 ```java  {style=github}
 String[] phrases = new String[20];
 ```
+
+Il est important de comprendre ici que le tableau ne stocke par les chaînes de caractères elle-mêmes, mais des références.
+
+
+{{< mermaid >}}
+classDiagram
+    class Tableau_String {
+        -String[] phrases
+        -taille : 20
+    }
+
+    class String {
+        -valeur : char[]
+    }
+
+    Tableau_String --> "20" String : références
+{{< /mermaid >}}
+
+### Utilisation de la mémoire
+
+Un tableau en Java est un objet, ce qui signifie qu'il inclut un en-tête d'objet (métadonnées comme la taille et le type) et les données elles-mêmes. L'en-tête occupe environ 16&nbsp;octets (selon la JVM). Les données sont stockées contiguément en mémoire, chaque élément occupant la taille correspondant à son type primitif ou à une référence (pour les objets).
+
+- Un tableau de 10&nbsp;int : 10 × 4 octets (pour les int) + en-tête (16&nbsp;octets) ≈ 56 octets.
+- Un tableau de 10&nbsp;double : 10 × 8 octets + en-tête ≈ 96 octets.
+
+Pour les objets (ex. String[]), chaque élément est une référence (8&nbsp;octets, selon la JVM), et les objets eux-mêmes sont stockés ailleurs en mémoire. Un tableau de boolean peut être optimisé par certaines JVM, stockant plusieurs booléens dans un seul octet, mais cela dépend de la JVM.
 
 ### Quelques techniques utiles
 
