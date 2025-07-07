@@ -6,6 +6,12 @@ weight: 8
 
 # Les problèmes difficiles
 
+{{% hint info %}}
+
+Dans ce cours, vous n'avez pas à maîtriser la notion de problème difficile, mais vous devriez être familier avec le concept.
+
+{{% /hint %}}
+
 Dans un cours d’introduction à la programmation, la plupart des exercices se concentrent sur des problèmes dont les algorithmes sont relativement simples à concevoir, surtout si vous maîtrisez les bases de la programmation et des mathématiques. Ces problèmes, comme calculer une moyenne ou trier une liste, demandent souvent une compréhension des structures de contrôle (conditions et boucles) et une application directe de concepts logiques. Cependant, dans des contextes plus avancés, certains problèmes se révèlent bien plus complexes, non pas à cause de la programmation elle-même, mais en raison de la difficulté à trouver un algorithme efficace. Ces défis, qualifiés de «&nbsp;problèmes difficiles&nbsp;», nécessitent des approches créatives et parfois des compromis, car leurs solutions idéales peuvent être hors de portée avec les ressources informatiques actuelles.
 
 Les problèmes difficiles se rencontrent fréquemment dans des domaines comme l’intelligence artificielle, l’optimisation ou la cryptographie. Par exemple, développer une intelligence artificielle capable de rivaliser avec un grand maître aux échecs exige non seulement de programmer des règles du jeu, mais aussi de concevoir un algorithme capable d’évaluer des millions de positions possibles en un temps raisonnable. Ce type de problème est complexe, car il combine une exploration stratégique (choisir les meilleurs coups) avec des contraintes de performance (limiter le temps de calcul). De même, des problèmes d’optimisation, comme déterminer le chemin le plus court pour un livreur effectuant plusieurs arrêts, peuvent sembler simples en théorie, mais deviennent rapidement ingérables à mesure que le nombre de destinations augmente, en raison du nombre exponentiel de combinaisons possibles.

@@ -5,15 +5,76 @@ weight: 7
 
 # Les structures de contrôle
 
-Les structures de contrôle sont au cœur de la conception d’algorithmes, car elles permettent de guider l’exécution en fonction de conditions ou de répéter des opérations sur des données. Elles offrent la flexibilité nécessaire pour traiter des situations dynamiques, comme des données de taille variable, et évitent la répétition inutile d’instructions. En combinant des branchements (choix conditionnels) et des boucles (répétitions), elles permettent de construire des solutions logiques et efficaces, adaptées à une grande variété de problèmes.
-
-### Les structures de contrôle alternatives (l'embranchement)
+Nous avons déjà présenté les notions d'embranchement et de boucle. C'est ce que nous appelons des structures de contrôle. Il est essentiel
+d'en comprendre la fonction.
 
 On peut concevoir un algorithme qui ne comprend qu'une liste d'opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d'éléments, et on risque de devoir répéter beaucoup d'opérations.
-Les structures de contrôle permettent à l'algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d'autres composantes de l'ordinateur. Une structure de contrôle correspond à l'action de tester des variables de contrôle et selon les résultats d'effectuer des opérations ou non. En pratique, ces structures correspondent à poser des questions avec la syntaxe suivante : SI conditions ALORS opérations FIN SI. Il peut y avoir plusieurs conditions dans une structure de contrôle et la logique booléenne est utilisée pour les construire. Par exemple, SI a est égal 0 ET b est égal 1 ALORS faire c FIN SI. 
+Les structures de contrôle permettent à l'algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d'autres composantes de l'ordinateur. Une structure de contrôle correspond à l'action de tester des variables de contrôle et selon les résultats d'effectuer des opérations ou non.
+
+
+
+## Le saut
+
+Le saut est une structure de contrôle fondamentale en informatique qui permet de modifier le flux d'exécution d’un algorithme en redirigeant l’exécution vers une autre partie du programme. Contrairement aux structures comme les embranchements (qui choisissent entre plusieurs chemins selon une condition) ou les boucles (qui répètent un bloc d’instructions), le saut est une instruction explicite qui transfère immédiatement le contrôle à une position spécifique dans le code, souvent marquée par une étiquette ou une adresse.
+Un saut peut être inconditionnel, où l’exécution est toujours redirigée vers une nouvelle position, ou conditionnel, où le saut dépend d’une condition booléenne.
+
+Un saut inconditionnel redirige l’exécution vers une étiquette ou une ligne spécifique sans vérifier de condition. En pseudo-code, cela peut être représenté ainsi :
+
+```
+ÉTIQUETTE debut
+écrire "Bonjour"
+SAUTER À debut
+```
+
+Dans cet exemple, l’algorithme affiche "Bonjour" et saute immédiatement à l’étiquette debut, créant une boucle infinie. Bien que rarement utilisé seul en pseudo-code, ce type de saut est courant dans les langages de bas niveau pour organiser le flux du programme
+
+## L'embranchement comme structure de contrôle
+
+Un saut conditionnel (ou embranchement) dépend d’une condition booléenne. Si la condition est vraie, l’exécution saute à une étiquette donnée ; sinon, elle continue séquentiellement. Voici un exemple en pseudo-code :
+
+```
+lire nombre
+SI nombre < 0 ALORS
+    SAUTER À negatif
+FIN SI
+écrire "Le nombre est positif ou nul"
+SAUTER À fin
+ÉTIQUETTE negatif
+écrire "Le nombre est négatif"
+ÉTIQUETTE fin
+```
+
+En pratique, ces structures correspondent à poser des questions avec la syntaxe suivante : SI conditions ALORS opérations FIN SI. Il peut y avoir plusieurs conditions dans une structure de contrôle et la logique booléenne est utilisée pour les construire. Par exemple, SI a est égal 0 ET b est égal 1 ALORS faire c FIN SI. 
 
 Dans la notion de pseudo-code, il est également possible de faire une suite de structures de contrôle avec la syntaxe suivante : SI conditionA ALORS opérations SINON SI conditionB ALORS opérations SINON SI conditionC ALORS [et ainsi de suite] FIN SI. 
 
+
+Voici un exemple en pseudo-code illustrant une suite de structures de contrôle avec plusieurs conditions pour classer un score obtenu à un examen :
+
+```
+lire score
+SI score ≥ 90 ALORS
+    écrire "Note : A"
+SINON SI score ≥ 80 ALORS
+    écrire "Note : B"
+SINON SI score ≥ 70 ALORS
+    écrire "Note : C"
+SINON SI score ≥ 60 ALORS
+    écrire "Note : D"
+SINON
+    écrire "Note : F"
+FIN SI
+```
+
+Dans cet exemple, l’algorithme lit une variable score (un nombre entier représentant un score d’examen). Il utilise une série de conditions pour déterminer la note correspondante :
+
+- Si score est supérieur ou égal à 90, la note est "A".
+- Sinon, si score est supérieur ou égal à 80, la note est "B".
+- Sinon, si score est supérieur ou égal à 70, la note est "C".
+- Sinon, si score est supérieur ou égal à 60, la note est "D".
+- Sinon (pour tout score inférieur à 60), la note est "F".
+
+Chaque condition est évaluée séquentiellement, et dès qu’une condition est vraie, l’algorithme exécute l’opération associée (afficher la note) et sort de la structure avec FIN SI. Si aucune condition n’est vraie, l’opération par défaut (afficher "Note : F") est exécutée.
 
 Considérons l'exemple suivant. Il s'agit d'un outil interactif qui t’aide à comprendre comment un algorithme utilise des conditions pour classer une personne selon son âge. Pour commencer, saisis un âge entier positif dans le champ prévu, par exemple «&nbsp;25&nbsp;». Ensuite, clique sur «&nbsp;Prochaine étape&nbsp;» pour exécuter l’algorithme étape par étape. À chaque clic, une ligne du pseudocode s’illumine, et un message explicatif apparaît dans la zone de journalisation en bas. Tu verras également l’état mis à jour : l’âge saisi et la catégorie déterminée (comme «&nbsp;Vous êtes un adulte&nbsp;»). Si tu veux recommencer, clique sur «&nbsp;Réinitialiser&nbsp;» pour effacer les résultats. Attention, l’âge doit être un nombre entier positif, sinon un message te demandera de corriger.
 
@@ -24,7 +85,7 @@ Cet outil vous permet de suivre le raisonnement de l’algorithme de manière cl
 
 Après avoir utilisé l’outil, prends un moment pour réfléchir à la flexibilité de cet algorithme. Comment pourrais-tu le modifier pour ajouter de nouvelles catégories, comme «&nbsp;bébé&nbsp;» pour les âges de 0 à 2 ans, ou pour inclure des critères supplémentaires, comme une distinction entre «&nbsp;jeune adulte&nbsp;» et «&nbsp;adulte senior&nbsp;» ? Que se passerait-il si l’âge pouvait être négatif ou non entier ? Comment adapterais-tu le pseudocode pour gérer ces cas ? En explorant ces questions, tu commenceras à voir comment personnaliser un algorithme pour répondre à des besoins spécifiques, une étape essentielle pour devenir un programmeur créatif.
 
-### Les structures de contrôle itératives (la boucle)
+## La boucle comme structure de contrôle
 
 Il arrive régulièrement dans la résolution d'un problème qu'il est nécessaire de réaliser à plusieurs reprises une ou des opérations sur un ensemble de données. Par exemple, supposons qu'il est nécessaire de trouver le plus petit nombre dans un tableau d'entiers. Il sera forcément nécessaire d'itérer dans le tableau, une ligne à la fois, et de comparer les nombres entre eux. Pour ce faire, nous utiliserons deux éléments de syntaxe, soit le TANT QUE _ FAIRE ou bien le POUR TOUT _ FAIRE. Voici deux exemples de l'utilisation de ces deux approches :
 
@@ -74,9 +135,13 @@ Ce pseudocode décrit un algorithme pour trouver la valeur minimale dans un tabl
 </details>
 
 
+Au niveau fondamental, une boucle peut être vue comme un saut conditionnel dans le flux d'exécution d’un algorithme. Un saut conditionnel est une instruction qui, en fonction d’une condition, redirige l’exécution vers une autre partie du programme. Dans le cas d’une boucle, ce saut ramène l’exécution au début du bloc d’instructions tant que la condition associée à la boucle reste vraie.
 
+Prenons l’exemple de la boucle TANT QUE. La condition iterateur < 100 est évaluée à chaque itération. Si elle est vraie, l’algorithme exécute le corps de la boucle (comparaison et mise à jour de minimum, incrémentation de iterateur), puis retourne au début de la boucle pour réévaluer la condition. Ce retour au début est un saut conditionnel : l’algorithme "saute" en arrière dans le code pour répéter le processus. Lorsque la condition devient fausse (quand iterateur atteint 100), le saut n’a plus lieu, et l’exécution continue après la boucle.
 
-### Composition
+De même, dans la boucle POUR TOUT du Pseudocode 1, bien que la syntaxe soit plus abstraite, le mécanisme sous-jacent est similaire. La boucle parcourt chaque élément du tableau, ce qui peut être traduit en une série de sauts conditionnels gérés implicitement : après avoir traité un élément, l’algorithme "saute" à l’élément suivant tant qu’il reste des éléments à traiter.
+
+## Composition
 
 Dans la pratique, un algorithme peut comporter plusieurs structures de contrôle itératives, plusieurs structures de contrôle alternatives et plusieurs opérations. On peut les combiner de diverses manières. Il est possible, par exemple, d'avoir une boucle TANT QUE au sein d'une autre boucle TANT QUE.
 
@@ -90,7 +155,7 @@ FIN TANT QUE
 
 Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable x jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (TANT QUE x > 0 FAIRE) continue tant que x est strictement positif. À l'intérieur, la boucle interne (TANT QUE x > 10 FAIRE) s'exécute uniquement si x est supérieur à 10, et dans ce cas, elle décrémente x de 1 à chaque itération (x = x - 1). Une fois que x devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si x > 0. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier x lorsque x ≤ 10, le programme entre dans une boucle infinie si x est compris entre 1 et 10 inclus. Si x est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si x est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
 
-### La fin d'un algorithme
+## La fin d'un algorithme
 
 Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudo-code ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demander à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
 

@@ -42,6 +42,13 @@ Rappel : les mathématiques du collégial sont un préalable obligatoire à ce c
 Les exercices incluent une solution pour comparer votre approche à la nôtre. Il n’existe pas de solution unique ; votre solution peut être meilleure ou moins bonne que celle proposée.
 {{% /hint %}}
 
+
+### Logiciels
+
+
+Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/) ou [PseudoFlow](https://online.pseudoflow.app). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outil. C’est l’essence du pseudo-code&nbsp;: il est indépendant des syntaxes et des outils.
+
+
 ### Exercice 1 : La somme d’un tableau
 
 Dans la plupart des langages informatiques, un tableau correspond à un vecteur en algèbre linéaire, soit une série de nombres, comme \(\langle 1,6,4,10 \rangle\). Dans cet exercice, vous devez proposer un algorithme pour calculer la somme des nombres entiers d’un tableau à une dimension de longueur quelconque (de 0 à plus d’un million de nombres). Utilisez une structure d’itération (boucle) pour parcourir chaque nombre du tableau.
@@ -525,16 +532,8 @@ Retourner min, max
 </details>
 
 
-### Exercice 16
-Expliquez la différence entre la complexité en temps et la complexité en espace d’un algorithme.
+### Exercice 16 : Recherche dans un tableau
 
-<details>
-<summary>Solution</summary>
-
-La complexité en temps mesure la quantité d’opérations ou le temps d’exécution d’un algorithme en fonction de la taille des données d’entrée. La complexité en espace mesure la quantité de mémoire supplémentaire nécessaire à l’algorithme pour fonctionner. Un algorithme peut être rapide (faible complexité en temps) mais utiliser beaucoup de mémoire (complexité en espace élevée), ou l’inverse.
-</details>
-
-### Exercice 17
 Quel est le nombre maximal de comparaisons nécessaires pour rechercher un élément dans un tableau non trié de taille \( n \) ? Justifiez votre réponse.
 
 <details>
@@ -543,7 +542,8 @@ Quel est le nombre maximal de comparaisons nécessaires pour rechercher un élé
 Dans un tableau non trié de taille \( n \), il faut au pire comparer l’élément recherché à chaque élément du tableau, soit \( n \) comparaisons. Cela correspond à une recherche linéaire, de complexité \( O(n) \).
 </details>
 
-### Exercice 18
+### Exercice 17 : Recherche binaire
+
 Pourquoi la recherche binaire n’est-elle applicable qu’aux tableaux triés ? Quelle est sa complexité en temps ?
 
 <details>
@@ -552,7 +552,8 @@ Pourquoi la recherche binaire n’est-elle applicable qu’aux tableaux triés 
 La recherche binaire n’est applicable qu’aux tableaux triés, car elle repose sur le fait que l’on peut éliminer la moitié des éléments à chaque étape en comparant la valeur recherchée à l’élément du milieu. Si le tableau n’est pas trié, on ne peut pas savoir dans quelle moitié chercher. Sa complexité en temps est \( O(\log n) \).
 </details>
 
-### Exercice 19
+### Exercice 18 : Algorithme quadratique
+
 Donnez un exemple d’algorithme ayant une complexité en \( O(n^2) \) et expliquez pourquoi.
 
 <details>
@@ -561,7 +562,7 @@ Donnez un exemple d’algorithme ayant une complexité en \( O(n^2) \) et expliq
 Un exemple classique est le tri à bulles (bubble sort). Pour chaque élément, on compare avec tous les autres, ce qui fait environ \( n^2 \) comparaisons pour un tableau de taille \( n \). C’est pourquoi sa complexité est \( O(n^2) \).
 </details>
 
-### Exercice 20
+### Exercice 19 : Algorithme de tri efficace
 Un algorithme de tri efficace comme le tri fusion (merge sort) a une complexité en \( O(n \log n) \). Expliquez ce que cela signifie et pourquoi c’est plus rapide qu’un tri naïf pour de grands tableaux.
 
 <details>
@@ -570,7 +571,7 @@ Un algorithme de tri efficace comme le tri fusion (merge sort) a une complexité
 Une complexité en \( O(n \log n) \) signifie que le nombre d’opérations croît plus vite que linéairement, mais beaucoup moins vite que quadratiquement. Par exemple, le tri fusion (merge sort) divise le tableau en deux à chaque étape (logarithmique) et traite chaque élément à chaque niveau de division (linéaire), d’où le \( n \log n \). Pour de grands tableaux, c’est beaucoup plus rapide qu’un tri naïf en \( O(n^2) \).
 </details>
 
-### Exercice 21
+### Exercice 20 : Alan Kay
 
 Alan Kay est considéré comme l’un des pères de la programmation orientée objet. Quelles étaient ses motivations principales lorsqu’il a conçu ce paradigme ? En quoi sa vision différait-elle de l’utilisation courante de la programmation orientée objet aujourd’hui ? Résumez brièvement ses objectifs et l’esprit original de la programmation orientée objet selon Kay.
 
@@ -581,7 +582,7 @@ Alan Kay est considéré comme l’un des pères de la programmation orientée o
 <p>De nos jours, la programmation orientée objet est souvent réduite à l’organisation du code et des données, alors que la vision originale de Kay mettait l’accent sur la modularité, la flexibilité et l’autonomie des objets. Sa conception visait à rendre la programmation plus naturelle, intuitive et proche du fonctionnement des systèmes vivants.</p>
 </details>
 
-### Exercice 22
+### Exercice 21 : Dahl et Nygaard
 
 Ole-Johan Dahl et Kristen Nygaard sont les créateurs du premier langage orienté objet, Simula. Quelles étaient leurs motivations principales lors de la création de ce langage ? Expliquez en quoi leur approche a influencé la programmation moderne.
 
@@ -591,7 +592,7 @@ Ole-Johan Dahl et Kristen Nygaard sont les créateurs du premier langage orient�
 <p>Ils voulaient permettre l’encapsulation, la réutilisation du code grâce à l’héritage, et la création de structures hiérarchiques. Cette approche a posé les bases de la programmation orientée objet moderne, en rendant la conception de logiciels plus flexible, évolutive et adaptée à la complexité des systèmes réels.</p>
 </details>
 
-### Exercice 23
+### Exercice 22 : James Gosling
 
 Qui est James Gosling et quel a été son rôle dans la création du langage Java ? Quelles étaient les motivations principales derrière la conception de Java ?
 
@@ -600,7 +601,7 @@ Qui est James Gosling et quel a été son rôle dans la création du langage Jav
 <p>James Gosling est un informaticien canadien considéré comme le principal créateur du langage Java, développé chez Sun Microsystems dans les années 1990. Son objectif était de concevoir un langage portable, sécurisé, simple et adapté aux systèmes embarqués et aux réseaux. Java devait permettre d’écrire un programme une seule fois et de l’exécuter partout (« Write Once, Run Anywhere »), grâce à la machine virtuelle Java (JVM).</p>
 </details>
 
-### Exercice 24
+### Exercice 23 : domaines industriels
 
 Citez trois domaines ou secteurs industriels où Java est largement utilisé aujourd’hui. Expliquez brièvement pourquoi Java est apprécié dans ces contextes.
 
@@ -614,7 +615,7 @@ Citez trois domaines ou secteurs industriels où Java est largement utilisé auj
 </ul>
 </details>
 
-### Exercice 25
+### Exercice 24 : Backus-Naur
 
 Qu’est-ce que la notation de Backus-Naur (BNF) ? À quoi sert-elle en informatique ? Donnez un exemple simple de BNF décrivant la syntaxe d’une expression arithmétique composée de chiffres et de l’opérateur +.
 
@@ -632,7 +633,7 @@ Qu’est-ce que la notation de Backus-Naur (BNF) ? À quoi sert-elle en inform
 <p>Cela décrit une expression composée d’un ou plusieurs chiffres séparés par des +.</p>
 </details>
 
-### Exercice 26
+### Exercice 25 : Cycles
 
 Mon ordinateur roule à une fréquence de 3 GHz. À tous les cycles, il exécute ses opérations.
 Quelle distance est-ce que la vitesse de la lumière traverse pendant un cycle&nbsp;?
@@ -647,7 +648,7 @@ Quelle distance est-ce que la vitesse de la lumière traverse pendant un cycle&n
 </details>
 
 
-### Exercice 27
+### Exercice 26 : kibioctet
 
 Quelle est la différence entre un kibioctet et un kilo-octet ?
 
@@ -659,7 +660,7 @@ Un kilo-octet (ko) correspond à 1 000 octets (selon le système décimal, préf
 </details>
 
 
-### Exercice 28
+### Exercice 27 : doublons
 
 Écrivez un algorithme qui supprime les doublons d’un tableau d’entiers trié en ordre croissant, en renvoyant la nouvelle taille du tableau.
 
@@ -686,7 +687,7 @@ Retourner nouvelle_taille
 ```
 </details>
 
-### Exercice 29
+### Exercice 28 : puissance
 
 Écrivez un algorithme qui calcule \( a^n \), où \( a \) est un entier et \( n \) un entier positif.
 
@@ -715,7 +716,7 @@ Retourner résultat
 
 
 
-### Exercice 30
+### Exercice 29 : occurrences d’un caractère spécifique
 
 Écrivez un algorithme qui compte le nombre d’occurrences d’un caractère spécifique dans une chaîne de caractères.
 
@@ -747,10 +748,5 @@ Retourner compteur
 ### Vidéos
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
-
-### Logiciels
-
-
-Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outils. C’est l’essence du pseudo-code : il est indépendant des syntaxes et des outils.
 
 

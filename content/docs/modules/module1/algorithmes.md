@@ -12,9 +12,9 @@ weight: 5
 
 ## Préalables
 
-Nous supposons dans ce cours que vous avez complété les mathématiques du collégial et que vous avez de bonnes aptitudes en ce qui a trait aux raisonnements formels. Dans ce premier module, vous aurez à exprimer la solution de certains problèmes en terme de variables, de boucles et d'embranchement. Il ne s'agit pas de notions avancées : vous devriez être familier avec ces notions. Les boucles font partie implicitement du calcul d'une somme ou d'un produit scalaire. Les variables en informatique sont une notion voisine des variables en algèbre. Les embranchements sont des notions de base en logique élémentaire. 
-
-Nous supposons une maîtrise de ces notions. Vous êtes responsables de vous assurez que vous avez la préparation nécessaire pour suivre le cours INF 1220.
+Dans ce cours, nous présentons les notions de manière exhaustive, avec beaucoup d'exemples et des activités d'approfondissement.
+Néanmoins, nous supposons dans ce cours que vous avez complété les mathématiques du collégial et que vous avez de bonnes aptitudes en ce qui a trait aux raisonnements formels. Dans ce premier module, vous aurez à exprimer la solution de certains problèmes en terme de variables, de boucles et d'embranchement. Il ne s'agit pas de notions avancées&nbsp;: vous devriez être familier avec ces notions. Les boucles font partie implicitement du calcul d'une somme ou d'un produit scalaire. Les variables en informatique sont une notion voisine des variables en algèbre. Les embranchements sont des notions de base en logique élémentaire. 
+Nous supposons une familiarité avec ces notions. Vous êtes responsables de vous assurez que vous avez la préparation nécessaire pour suivre le cours INF&nbsp;1220. 
 
 {{% /hint %}}
 
@@ -72,11 +72,51 @@ En résumé, un algorithme est une méthode pour résoudre un problème, tandis 
 {{< youtube id="1ANpkDxJHo4" >}}
 
 
+
+### Variables et valeurs
+
+Une *variable* en informatique est un espace de stockage nommé qui contient une valeur. Elle peut être vue comme une boîte étiquetée dans laquelle on place une donnée, et cette donnée peut changer au cours de l'exécution d'un algorithme. Les variables permettent de manipuler des informations de manière dynamique, en les stockant temporairement pour les utiliser ou les modifier plus tard.
+
+Les variables peuvent contenir différents types de données, selon leur nature et leur usage. Les types courants incluent :
+- **Entier** : un nombre sans partie décimale, comme 5, -12 ou 0.
+- **Réel** : un nombre avec une partie décimale, comme 3.14, -0.001 ou 10.4.
+- **Booléen** : une valeur logique qui peut être soit vrai, soit faux.
+- **Chaîne de caractères** : une séquence de caractères, comme "bonjour" ou "INF1220".
+
+Dans le pseudo-code, le type de la variable est souvent implicite, mais il est essentiel de comprendre quel type de donnée une variable contient pour éviter des erreurs lors de la manipulation. Une variable doit être *nommée* de manière claire et descriptive (par exemple, `age`, `somme`, `notes`). On lui attribue une valeur à l'aide de l'opérateur d'affectation, souvent représenté par `←` ou `=`. Par exemple :
+
+```
+age ← 18
+somme ← 0
+```
+Ici, la variable `age` reçoit la valeur entière 18, et `somme` reçoit la valeur entière 0.
+
+Considérons un algorithme simple qui calcule le carré d’un nombre entré par l’utilisateur :
+```
+lire nombre
+carre ← nombre * nombre
+écrire carre
+```
+
+Dans cet exemple :
+- `nombre` est une variable qui stocke la valeur entrée (par exemple, un réel comme 4.5).
+- `carre` est une variable qui stocke le résultat de l’opération `nombre * nombre` (par exemple, 20.25 si `nombre` vaut 4.5).
+- L’instruction `écrire carre` affiche la valeur de la variable `carre`.
+
+Chaque variable doit avoir un nom distinct dans un algorithme pour éviter toute confusion.
+Il est recommandé d’initialiser une variable (lui donner une valeur de départ) avant de l’utiliser, pour éviter des comportements imprévisibles. Par exemple, avant d’additionner des nombres dans une variable `somme`, on écrit souvent `somme ← 0`.
+Certaines variables ont une une portée et elles ne sont accessibles que dans la partie de l’algorithme où elles sont définies. Par exemple, nous
+nous pouvons utiliser la valeur de la variable  `somme` avant de lui avoir assigné une valeur (`somme ← 0`).
+
+
+Les variables sont essentielles pour écrire des algorithmes flexibles et réutilisables. Elles permettent de travailler avec des données qui varient, comme des entrées utilisateur ou des résultats intermédiaires, et de suivre l’état d’un algorithme tout au long de son exécution. En pseudo-code, les variables servent à rendre les instructions claires et compréhensibles, tout en préparant la transition vers un langage de programmation réel.
+
 ### Logique booléenne
 
-Un des fondements des algorithmes est la logique booléenne.
+Un des fondements des algorithmes est la logique booléenne. Elle permet de manipuler des valeurs logiques, appelées booléennes, qui ne peuvent prendre que deux états : vrai ou faux. Ces valeurs sont utilisées pour prendre des décisions, contrôler le flux d’un algorithme ou évaluer des conditions dans des structures comme les boucles et les embranchements.
 
-Voici la table de vérité des principaux opérateurs logiques :
+
+Les principaux opérateurs booléens sont décrits ci-dessous, accompagnés de leur table de vérité, qui montre le résultat de chaque opération pour toutes les combinaisons possibles des entrées A et B.
 
 | A     | B     | NON A | A ET B | A OU B |
 |-------|-------|-------|--------|--------|
@@ -90,9 +130,15 @@ Voici la table de vérité des principaux opérateurs logiques :
 - **A OU B** : vrai si au moins un des deux est vrai
 
 
-Utilisez ce jeu pour tester votre compréhension.
+En informatique, nous utilisons le plus souvent l'anglais.
 
-{{< webapp path="truthgame.html" >}}
+
+- **NON A** : **NOT A**
+- **A ET B** : **A AND B**
+- **A OU B** : **A OR B**
+
+
+
 
 
 #### Exemple 1 : Contrôle d’accès selon l’âge
@@ -107,6 +153,42 @@ FIN SI
 ```
 
 Ce pseudocode décrit un algorithme simple de contrôle d’accès basé sur l’âge d’une personne. L’instruction lire age récupère une valeur (l’âge) entrée par l’utilisateur ou une source externe, stockée dans la variable age. Une structure conditionnelle (SI ... ALORS ... SINON) vérifie si age est supérieur ou égal à 18. Si la condition est vraie (age >= 18), l’algorithme affiche le message "Accès autorisé", indiquant que la personne est majeure et peut accéder à une ressource ou un lieu. Sinon, si age est inférieur à 18, il affiche "Accès refusé", signalant que l’accès est interdit. L’algorithme se termine après l’affichage.
+
+
+
+La logique booléenne est essentielle pour écrire des conditions dans les algorithmes. Par exemple, dans une structure conditionnelle ou une boucle, les opérateurs booléens permettent de combiner plusieurs critères. Voici un exemple en pseudo-code pour vérifier si une personne peut voter :
+
+```
+lire age
+lire est_citoyen
+SI age >= 19 ET est_citoyen = vrai ALORS
+    écrire "Vous pouvez voter"
+SINON
+    écrire "Vous ne pouvez pas voter"
+FIN SI
+```
+
+Ici, la condition `age >= 19 ET est_citoyen = vrai` utilise l’opérateur ET pour vérifier que deux critères sont remplis avant d’autoriser le vote.
+
+Lorsqu’on combine plusieurs opérateurs booléens, il est important de connaître leur ordre de priorité :
+1. **NON** (évalué en premier).
+2. **ET**.
+3. **OU** (évalué en dernier).
+Pour éviter toute ambiguïté, on utilise des parenthèses pour préciser l’ordre des opérations. Par exemple :
+
+```
+vrai ET faux OU vrai
+```
+Sans parenthèses, ET est évalué avant OU, donc cela donne `(vrai ET faux) OU vrai`, qui vaut `faux OU vrai`, soit `vrai`. Avec des parenthèses, on peut changer le résultat : `vrai ET (faux OU vrai)` donne `vrai ET vrai`, soit `vrai`.
+
+
+Pour renforcer votre compréhension, utilisez l’application suivante. 
+
+{{< webapp path="truthgame.html" >}}
+
+En maîtrisant la logique booléenne, vous serez mieux équipé pour concevoir des algorithmes clairs et efficaces, en particulier lorsqu’il s’agit de prendre des décisions complexes basées sur plusieurs conditions.
+
+
 
 
 #### Exemple 2 : Vérifier si un nombre est dans un intervalle
@@ -134,7 +216,7 @@ graph TD
 {{< /mermaid >}}
 
 
-#### Notation des programmeurs
+### Notation des programmeurs
 
 Pour des raisons historiques, les programmeurs remplacent souvent ET par `&&`, OU par `||` et
 NON par `!`. C'est le cas notamment en Java.
@@ -144,7 +226,7 @@ Utilisez l'application suivante pour tester votre compréhension.
 {{< webapp path="bool.html" >}}
 
 
-### La boucle
+## La boucle
 
 Un algorithme prend habituellement des données et produit un résultat.  Par exemple, un algorithme cherchant à déterminer si un nombre est pair, pourra recevoir un nombre en paramètre et il pourra produire comme réponse une valeur booléenne (vrai ou faux). Un même algorithme va donc généralement pouvoir être exécuté sur différentes données et pouvoir fournir des réponses différentes. En ce sens, une fonction (au sens mathématique) comme f(x) = a x + b peut être décrite comme étant un algorithme. Une fonction doit toujours produire la même valeur étant donnée les mêmes données. Un algorithme n'est pas limité de cette manière. Par exemple, un algorithme pourrait servir à choisir un nom aléatoirement au sein d'une liste. D'une exécution à l'autre, l'algorithme pourrait produire des valeurs différentes avec les mêmes données. 
 
@@ -160,7 +242,7 @@ Nous obtenons alors la notion de boucle: nous effectuons une tâche donnée tant
 En informatique, on fait souvent référence à la notion d'impression à l'écran. Le plus souvent cela fait référence à l'affichage à l'écran d'un message ou d'un texte.
 
 
-### Tableau
+## Tableau
 
 Un tableau est une structure de données qui permet de stocker plusieurs éléments, comme des nombres ou des chaînes de caractères, dans une seule variable. Ces éléments sont organisés séquentiellement et accessibles via un indice, un nombre entier qui indique leur position. Par exemple, dans un tableau nommé tableau, l’élément à la position 1 est noté `tableau[1]`, celui à la position 2 est `tableau[2]`, et ainsi de suite. La taille du 
 tableau est normalement fixée et connue.
@@ -169,7 +251,7 @@ tableau est normalement fixée et connue.
 La numérotation des indices varie selon les langages de programmation ou les contextes. Dans de nombreux langages comme C, Java ou Python, les indices commencent à 0 : le premier élément est `tableau[0]`, le deuxième `tableau[1]`, etc. Cette convention, dite «&nbsp;base 0&nbsp;», est courante en informatique pour des raisons techniques liées à la gestion de la mémoire. Dans d’autres contextes, comme certaines notations mathématiques ou langages comme Lua, les indices débutent à 1, ce qui peut être plus intuitif pour des utilisateurs non techniques. Le choix de l’index de départ dépend donc du système utilisé, et il est crucial de connaître cette convention pour manipuler correctement les éléments d’un tableau. La convention utilisée est souvent
 claire selon le contexte.
 
-### Calcul de la moyenne
+## Exemple : Calcul de la moyenne
 
 Pour illustrer la notion de pseudo-code, commençons par un exemple relativement simple.
 Supposons que nous avons un tableau de notes (par ex., les notes 10.4, 12.6, 18.7, 5.0) et que nous désirons calculer la moyenne. On utilise le convention que si le tableau se nomme 'notes', alors la première note (par ex., 10.4) est notes[0], la seconde note est notes[1]... et ainsi de suite jusqu'à notes[3]. Évidemment, dans ce cas, on sait qu'il y'a 4 notes, mais il plus pratique d'écrire le pseudo-code de manière générale. On fera donc référence à la longueur du tableau (au nombre d'éléments qu'il contient) comme étant un paramètre. Pour visiter tous les éléments, on peut initialiser une valeur entière à 0, et l'incrémenter de 1 tant qu'elle demeure plus petite que la longueur du tableau.
