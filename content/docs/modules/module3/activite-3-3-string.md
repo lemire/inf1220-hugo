@@ -169,7 +169,7 @@ Dans cet exemple, toutes les lignes sont ajoutées efficacement à la même cha�
 Voici un exemple en Java qui illustre la plupart des propriétés et méthodes de la classe StringBuilder.
 
 {{<inlineJava path="ExempleStringBuilder.java" lang="java">}}
-ublic class ExempleStringBuilder {
+public class ExempleStringBuilder {
     public static void main(String[] args) {
         // Initialisation d'un StringBuilder avec une chaîne initiale
         StringBuilder sb = new StringBuilder("Bonjour le Monde !");
