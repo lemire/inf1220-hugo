@@ -1,1068 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accueil on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/</link><description>Recent content in Accueil on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
- Java pas à pas
- &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
-&lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.&lt;/p>
-&lt;div class="java-inline">
-
-
-
-
-
-
- &lt;div id="java-runner-1751895843123664716">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1751895843123664716 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123664716 .export-form { margin-bottom:0; }
- #java-runner-1751895843123664716 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123664716 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123664716 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123664716 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123664716 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1751895843123664716-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
-public class ExemplesMath {
-
- public static void main(String args[]) {
- System.out.println(&amp;#34;Math.log(1.0)=&amp;#34; &amp;#43; Math.log(1.0));
- System.out.println(&amp;#34;Math.exp(1.0)=&amp;#34; &amp;#43; Math.exp(1.0));
- System.out.println(&amp;#34;Math.cos(0)=&amp;#34; &amp;#43; Math.cos(0));
- System.out.println(&amp;#34;Math.sin(0)=&amp;#34; &amp;#43; Math.sin(0));
- System.out.println(&amp;#34;Math.sqrt(4)=&amp;#34; &amp;#43; Math.sqrt(4));
- }
-}
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123664716-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123664716');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else {
- resultDiv.textContent = t;
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
-
-
-
-
-
-
- &lt;div id="java-runner-1751895843123721112">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1751895843123721112 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123721112 .export-form { margin-bottom:0; }
- #java-runner-1751895843123721112 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123721112 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123721112 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123721112 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123721112 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1751895843123721112-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
-public class ExemplesString {
-
- public static void main(String args[]) {
-
- String string1 = &amp;#34;abc&amp;#34;;
- String string2 = &amp;#34;def&amp;#34;;
- String string3 = &amp;#34;abcdef&amp;#34;;
- String string4 = new String(&amp;#34;abcdef&amp;#34;);
-
- // Tous les litéraux identiques (� la compilation) sont traduits
- // par une référence au même objet
- System.out.println(string3 == &amp;#34;abcdef&amp;#34;); // true
- System.out.println(&amp;#34;abc&amp;#34; &amp;#43; &amp;#34;def&amp;#34; == &amp;#34;abcdef&amp;#34;); // true
-
- // Par contre, si le litéral est calculé à l&amp;#39;exécution, ce n&amp;#39;est pas le cas
- System.out.println(string1 &amp;#43; string2 == &amp;#34;abcdef&amp;#34;); // false
-
- // Le constructeur String produit toujours un objet différent de l&amp;#39;objet
- // correspondant au litéral
- System.out.println(string4 == &amp;#34;abcdef&amp;#34;); // false
-
- // La méthode intern() de la classe String permet de convertir
- // la référence à l&amp;#39;objet correspondant au litéral
- System.out.println((string1 &amp;#43; string2).intern() == &amp;#34;abcdef&amp;#34;); // true
- System.out.println(string4.intern() == &amp;#34;abcdef&amp;#34;); // true
-
- // La méthode equals() permet de comparer le contenu de l&amp;#39;objet plutôt que la référence
- System.out.println((string1 &amp;#43; string2).equals(&amp;#34;abcdef&amp;#34;)); // true
- System.out.println(string4.equals(&amp;#34;abcdef&amp;#34;)); // true
- }
-}
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123721112-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123721112');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else {
- resultDiv.textContent = t;
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
-
-
-
-
-
-
- &lt;div id="java-runner-1751895843123769824">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1751895843123769824 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123769824 .export-form { margin-bottom:0; }
- #java-runner-1751895843123769824 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123769824 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123769824 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123769824 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123769824 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1751895843123769824-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
-public class ExempleZero {
- public static void main(String[] s) {
- double minus_zero = -0.0;
- double plus_zero = &amp;#43;0.0;
- System.out.println(minus_zero == plus_zero);
- System.out.println(1/minus_zero);
- System.out.println(1/plus_zero);
- System.out.println(1/minus_zero == 1/plus_zero);
- double n = 0.0 / 0.0;
- System.out.println(n);
- System.out.println(n == n);
- }
-}
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123769824-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123769824');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else {
- resultDiv.textContent = t;
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
-
-
-
-
-
-
- &lt;div id="java-runner-1751895843123807785">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1751895843123807785 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123807785 .export-form { margin-bottom:0; }
- #java-runner-1751895843123807785 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123807785 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123807785 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123807785 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123807785 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1751895843123807785-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
-public class ExerciceForFor {
- public static void main(String args[]) {
- for (int compteur1 = 1; compteur1 &amp;lt;= 9; compteur1 = compteur1 &amp;#43; 1) {
- for (int compteur2 = 1; compteur2 &amp;lt;= compteur1; compteur2 = compteur2 &amp;#43; 1)
- System.out.print(compteur2);
- System.out.println();
- }
- }
-}
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123807785-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123807785');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
- } else {
- resultDiv.textContent = t;
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accueil on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/</link><description>Recent content in Accueil on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module4/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
@@ -1126,11 +62,7 @@ en ligne de ce type.&lt;/p>
  Création d&amp;rsquo;une classe en Java
  &lt;a class="anchor" href="#cr%c3%a9ation-dune-classe-en-java">#&lt;/a>
 &lt;/h1>
-&lt;p>Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
- GitHub (optionnel)
- &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
-&lt;/h1>
-&lt;p>&lt;a href="https://github.com">GitHub&lt;/a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git&lt;/a>, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire">Vous trouverez le professeur responsable du cours sur GitHub&lt;/a>. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+&lt;p>Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
@@ -1159,12 +91,7 @@ en ligne de ce type.&lt;/p>
  Les flux de données: lecture dans des fichiers et autres
  &lt;a class="anchor" href="#les-flux-de-donn%c3%a9es-lecture-dans-des-fichiers-et-autres">#&lt;/a>
 &lt;/h1>
-&lt;p>Nous avons couvert la façon d'afficher des données à l'écran et de lire des données à partir du clavier en utilisant les flux de données (streams) dans les leçons précédentes. Quand nous avons utilisé les méthodes System.out.print ou System.out.println pour afficher des données à l'écran, ces dernières ont été envoyées sur un flux de sortie (output stream). Nous nous servirons des flux d'entrée et de sortie pour lire et écrire des données dans un fichier texte. Mais auparavant, il nous faut savoir comment créer le fichier dans lequel ces données seront archivées.&lt;/p></description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle">
- Les structures de contrôle
- &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
-&lt;/h1>
-&lt;p>Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong>if-else&lt;/strong> et &lt;strong>switch-case&lt;/strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p>
-&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Programmation Java en ligne</title><link>https://lemire.github.io/inf1220-hugo/docs/environnement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/environnement/</guid><description>&lt;h1 id="programmation-java-en-ligne">
+&lt;p>Nous avons couvert la façon d'afficher des données à l'écran et de lire des données à partir du clavier en utilisant les flux de données (streams) dans les leçons précédentes. Quand nous avons utilisé les méthodes System.out.print ou System.out.println pour afficher des données à l'écran, ces dernières ont été envoyées sur un flux de sortie (output stream). Nous nous servirons des flux d'entrée et de sortie pour lire et écrire des données dans un fichier texte. Mais auparavant, il nous faut savoir comment créer le fichier dans lequel ces données seront archivées.&lt;/p></description></item><item><title>Programmation Java en ligne</title><link>https://lemire.github.io/inf1220-hugo/docs/environnement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/environnement/</guid><description>&lt;h1 id="programmation-java-en-ligne">
  Programmation Java en ligne
  &lt;a class="anchor" href="#programmation-java-en-ligne">#&lt;/a>
 &lt;/h1>
@@ -1238,11 +165,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 &lt;li>Expliquez ce qu’est un système de gestion de fichiers et son rôle dans l’organisation des données en mémoire secondaire. À l’aide d’un exemple de chemin de fichier sous Windows (comme C:\Users\Robert\Documents\HelloWorld.java), décrivez comment un fichier est localisé.&lt;/li>
 &lt;li>Qu’est-ce que le pseudo-parallélisme dans un système monoprocesseur ? Expliquez comment le système d’exploitation crée l’illusion d’une exécution simultanée de plusieurs programmes, et précisez en quoi cela diffère du parallélisme réel dans un système multi-cœur.&lt;/li>
 &lt;/ul>
-&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
- Les structures itératives
- &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
-&lt;/h1>
-&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours">
+&lt;p>Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p></description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours">
  Amélioration continue du cours
  &lt;a class="anchor" href="#am%c3%a9lioration-continue-du-cours">#&lt;/a>
 &lt;/h1>
@@ -1274,24 +197,13 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Court historique des langages de programmation
  &lt;a class="anchor" href="#court-historique-des-langages-de-programmation">#&lt;/a>
 &lt;/h1>
-&lt;p>L’idée de programmer des machines remonte au 19e siècle, époque marquée par l’émergence des premières machines de calcul et d’automatisation. Dès 1801, les métiers à tisser Jacquard utilisaient des cartes perforées pour programmer des motifs textiles, préfigurant les concepts de codage. Cependant, c’est au milieu du 19e siècle qu’un jalon historique est posé avec les travaux d’Ada Lovelace (1815-1852) sur la machine analytique de Charles Babbage. Considérée comme la première programmeuse, elle rédigea des notes détaillées incluant un algorithme pour calculer les nombres de Bernoulli, démontrant qu’une machine pouvait exécuter des instructions complexes. Le langage Ada, créé dans les années 1980, rend hommage à cette contribution pionnière.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
- Les structures de données de base
- &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
-&lt;/h1>
-&lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
-Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
+&lt;p>L’idée de programmer des machines remonte au 19e siècle, époque marquée par l’émergence des premières machines de calcul et d’automatisation. Dès 1801, les métiers à tisser Jacquard utilisaient des cartes perforées pour programmer des motifs textiles, préfigurant les concepts de codage. Cependant, c’est au milieu du 19e siècle qu’un jalon historique est posé avec les travaux d’Ada Lovelace (1815-1852) sur la machine analytique de Charles Babbage. Considérée comme la première programmeuse, elle rédigea des notes détaillées incluant un algorithme pour calculer les nombres de Bernoulli, démontrant qu’une machine pouvait exécuter des instructions complexes. Le langage Ada, créé dans les années 1980, rend hommage à cette contribution pionnière.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
  Travail noté 5 - Héritage et polymorphisme
  &lt;a class="anchor" href="#travail-not%c3%a9-5---h%c3%a9ritage-et-polymorphisme">#&lt;/a>
 &lt;/h1>
 &lt;p>Pour le cours INF1220, les travaux notés doivent être soumis sous forme d’un unique fichier PDF via l’outil de dépôt officiel de la TÉLUQ, avant la date de fin de cours indiquée sur le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code Java. L’utilisation du robot conversationnel du cours est autorisée, mais les réponses et analyses doivent être personnelles. Avant de commencer, il est crucial d’avoir complété toutes les lectures et exercices préparatoires et de maîtriser la matière, en posant des questions si nécessaire.&lt;/p></description></item><item><title>Feuille de route</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/feuille-de-route/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/feuille-de-route/</guid><description>&lt;h1>Feuille de route&lt;/h1>
 &lt;p>Prévoyez environ 9 heures de travail pendant quinze semaines. Il n'est pas possible, pour la plupart des étudiants, de réussir ce cours en ne prenant qu'une poignée d'heures par semaine. &lt;/p>
-&lt;p>Chaque étudiant a sa propre date de départ et date de fin de cours personnalisée. La date à laquelle l'étudiant doit passer son examen est déterminé par l'Université: celle-ci vous fera parvenir les détails en temps opportun. Vous devez joindre l'Université si vous souhaitez les modifier. &lt;/p></description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java">
- La programmation fonctionnelle en Java
- &lt;a class="anchor" href="#la-programmation-fonctionnelle-en-java">#&lt;/a>
-&lt;/h1>
-&lt;p>La programmation fonctionnelle tire ses origines des mathématiques, en particulier du calcul lambda développé par Alonzo Church dans les années 1930. Ce formalisme a posé les bases théoriques pour décrire les calculs comme des fonctions pures, sans effets de bord. Dans les années 1950, John McCarthy a créé Lisp, le premier langage explicitement inspiré de ces idées, introduisant des concepts comme les fonctions de première classe. Les années 1980 ont vu l’émergence de langages comme Haskell, qui a mis l’accent sur les fonctions pures et l’évaluation paresseuse.
-L&amp;rsquo;évaluation paresseuse est une stratégie en programmation fonctionnelle où l&amp;rsquo;évaluation d&amp;rsquo;une expression est retardée jusqu&amp;rsquo;à ce que sa valeur soit réellement nécessaire. Cela permet d&amp;rsquo;optimiser les performances en évitant les calculs inutiles et de supporter des structures de données potentiellement infinies.
-Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p></description></item><item><title>Les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</guid><description>&lt;h1 id="les-algorithmes">
+&lt;p>Chaque étudiant a sa propre date de départ et date de fin de cours personnalisée. La date à laquelle l'étudiant doit passer son examen est déterminé par l'Université: celle-ci vous fera parvenir les détails en temps opportun. Vous devez joindre l'Université si vous souhaitez les modifier. &lt;/p></description></item><item><title>Les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</guid><description>&lt;h1 id="les-algorithmes">
  Les algorithmes
  &lt;a class="anchor" href="#les-algorithmes">#&lt;/a>
 &lt;/h1>
@@ -1320,19 +232,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Comment faire ces exercices ?
  &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
 &lt;/h2>
-&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
- Exercices sur les structures de contrôle, les structures de données, les structures itératives
- &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="questionsréponses">
- Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
+&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
  Les algorithmes : conception et syntaxe
  &lt;a class="anchor" href="#les-algorithmes--conception-et-syntaxe">#&lt;/a>
 &lt;/h1>
@@ -1363,11 +263,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Les structures de contrôle
  &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
 &lt;/h1>
-&lt;p>Les structures de contrôle sont au cœur de la conception d’algorithmes, car elles permettent de guider l’exécution en fonction de conditions ou de répéter des opérations sur des données. Elles offrent la flexibilité nécessaire pour traiter des situations dynamiques, comme des données de taille variable, et évitent la répétition inutile d’instructions. En combinant des branchements (choix conditionnels) et des boucles (répétitions), elles permettent de construire des solutions logiques et efficaces, adaptées à une grande variété de problèmes.&lt;/p></description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions">
- Les exceptions
- &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
-&lt;/h1>
-&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+&lt;p>Les structures de contrôle sont au cœur de la conception d’algorithmes, car elles permettent de guider l’exécution en fonction de conditions ou de répéter des opérations sur des données. Elles offrent la flexibilité nécessaire pour traiter des situations dynamiques, comme des données de taille variable, et évitent la répétition inutile d’instructions. En combinant des branchements (choix conditionnels) et des boucles (répétitions), elles permettent de construire des solutions logiques et efficaces, adaptées à une grande variété de problèmes.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
  Recommandations
  &lt;a class="anchor" href="#recommandations">#&lt;/a>
 &lt;/h1>
@@ -1422,11 +318,7 @@ et des commentaires explicatifs améliorent la compréhension.&lt;/p></descripti
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Avant de faire les travaux, il faut avoir fait les lectures et les exercices de préparation. Essayez d'aller directement aux travaux notés est une stratégie perdante pour la plupart des étudiants. Prenez le temps d'étudier la matière! &lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
- La récursivité
- &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
-&lt;/h1>
-&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Les problèmes difficiles</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/difficile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/difficile/</guid><description>&lt;h1 id="les-problèmes-difficiles">
+&lt;p>Avant de faire les travaux, il faut avoir fait les lectures et les exercices de préparation. Essayez d'aller directement aux travaux notés est une stratégie perdante pour la plupart des étudiants. Prenez le temps d'étudier la matière! &lt;/p></description></item><item><title>Les problèmes difficiles</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/difficile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/difficile/</guid><description>&lt;h1 id="les-problèmes-difficiles">
  Les problèmes difficiles
  &lt;a class="anchor" href="#les-probl%c3%a8mes-difficiles">#&lt;/a>
 &lt;/h1>
@@ -1770,19 +662,7 @@ et des commentaires explicatifs améliorent la compréhension.&lt;/p></descripti
 &lt;/h1>
 &lt;p>La plupart des problèmes ne sont pas fondamentalement difficiles, mais toutes les solutions
 ne sont pas également efficaces. La complexité algorithmique fournit une mesure de cette efficacité.&lt;/p>
-&lt;p>La complexité algorithmique mesure le temps ou la mémoire qu’un algorithme nécessite en fonction de la taille de l’entrée (souvent notée \( n \)). Pour comparer les algorithmes, on utilise la notation grand-O (ou O-grande), qui donne un ordre de grandeur du nombre d’opérations à effectuer lorsque la taille des données augmente.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
- Exercices sur les exceptions et la récursivité
- &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="questionsréponses">
- Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>FAQ</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</guid><description>&lt;h3 id="question-quest-ce-que-java-et-pourquoi-est-il-utilisé-">
+&lt;p>La complexité algorithmique mesure le temps ou la mémoire qu’un algorithme nécessite en fonction de la taille de l’entrée (souvent notée \( n \)). Pour comparer les algorithmes, on utilise la notation grand-O (ou O-grande), qui donne un ordre de grandeur du nombre d’opérations à effectuer lorsque la taille des données augmente.&lt;/p></description></item><item><title>FAQ</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/faq/</guid><description>&lt;h3 id="question-quest-ce-que-java-et-pourquoi-est-il-utilisé-">
  Question: Qu&amp;rsquo;est-ce que Java et pourquoi est-il utilisé ?
  &lt;a class="anchor" href="#question-quest-ce-que-java-et-pourquoi-est-il-utilis%c3%a9-">#&lt;/a>
 &lt;/h3>
@@ -1798,14 +678,1073 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 &lt;p>Rédiger du pseudo-code n&amp;rsquo;a rien de sorcier, mais plusieurs étudiants font des erreurs. Voici quelques erreurs communes.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Certains étudiants rédigent du pseudo-code qui a l&amp;rsquo;air formel et correct, mais qui est en fait ambigu et inutilisable. Prenons cet exemple: &lt;code> SI j'ai mal aux dos ALORS je prend des aspirines OU SI j'ai faim ALORS je mange&lt;/code>. Bien sûr, je n&amp;rsquo;ai utilisé que des expressions logiques. Des SI, des ALORS des OU. Mais qu&amp;rsquo;est-ce que ça signifie ? Par exemple, est-ce que je peux à la fois manger et prendre des aspirines dans ce scénario ? La réponse est subjective. Votre pseudo-code doit être exécutable sans interprétation. Un pseudo-code n&amp;rsquo;est pas un texte à interprétation subjective. Vous ne pouvez pas faire semblant d&amp;rsquo;écrire du pseudo-code en utilisant simplement les termes qu&amp;rsquo;on trouve fréquemment au sein des pseudo-codes. Ce n&amp;rsquo;est pas une question de syntaxe. On peut parfaitement écrire du pseudo-code sans jamais utiliser SI, TANT QUE, etc. Plusieurs étudiants obsèdent sur la syntaxe, croyant à tort que si on leur donne les bons termes, la bonne grammaire, ils trouveront comment comprendre ce qu&amp;rsquo;est un pseudo-code. Or, c&amp;rsquo;est justement le contraire de la leçon ici: nous voulons que vous compreniez que la syntaxe exacte est secondaire dans la pensée algorithmique. On peut être imprécis et incohérent en utilisant une syntaxe formelle, et on peut être précis et cohérent en utilisant du français usuel. Ce n&amp;rsquo;est pas parce que vous utilisez des expressions qui vous semblent précises que vous l&amp;rsquo;êtes. Vous devez avoir une idée précise en tête et vous devez l&amp;rsquo;exprimer avec précision.&lt;/p></description></item><item><title>Manuel</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</guid><description>&lt;p>Nous utilisons un manuel d&amp;rsquo;introduction à la programmation Java intitulé &lt;em>Java pas à pas&lt;/em> par Robert Godin et Daniel Lemire. Vous pouvez &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF&lt;/a> dès maintenant.&lt;/p>
-&lt;blockquote>
-&lt;p>Cet ouvrage présente les concepts de base de la programmation et du langage Java. Le livre s’adresse à un auditoire très large, aussi bien un débutant qui désire apprendre la programmation pour le plaisir qu’à un étudiant qui entreprend une carrière d’informaticien. L’approche proposée introduit graduellement les concepts de base de la programmation et leur incarnation dans le langage Java à l’aide d’une série d’exemples et d’exercices.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
- Recommandations
- &lt;a class="anchor" href="#recommandations">#&lt;/a>
+&lt;p>Certains étudiants rédigent du pseudo-code qui a l&amp;rsquo;air formel et correct, mais qui est en fait ambigu et inutilisable. Prenons cet exemple: &lt;code> SI j'ai mal aux dos ALORS je prend des aspirines OU SI j'ai faim ALORS je mange&lt;/code>. Bien sûr, je n&amp;rsquo;ai utilisé que des expressions logiques. Des SI, des ALORS des OU. Mais qu&amp;rsquo;est-ce que ça signifie ? Par exemple, est-ce que je peux à la fois manger et prendre des aspirines dans ce scénario ? La réponse est subjective. Votre pseudo-code doit être exécutable sans interprétation. Un pseudo-code n&amp;rsquo;est pas un texte à interprétation subjective. Vous ne pouvez pas faire semblant d&amp;rsquo;écrire du pseudo-code en utilisant simplement les termes qu&amp;rsquo;on trouve fréquemment au sein des pseudo-codes. Ce n&amp;rsquo;est pas une question de syntaxe. On peut parfaitement écrire du pseudo-code sans jamais utiliser SI, TANT QUE, etc. Plusieurs étudiants obsèdent sur la syntaxe, croyant à tort que si on leur donne les bons termes, la bonne grammaire, ils trouveront comment comprendre ce qu&amp;rsquo;est un pseudo-code. Or, c&amp;rsquo;est justement le contraire de la leçon ici: nous voulons que vous compreniez que la syntaxe exacte est secondaire dans la pensée algorithmique. On peut être imprécis et incohérent en utilisant une syntaxe formelle, et on peut être précis et cohérent en utilisant du français usuel. Ce n&amp;rsquo;est pas parce que vous utilisez des expressions qui vous semblent précises que vous l&amp;rsquo;êtes. Vous devez avoir une idée précise en tête et vous devez l&amp;rsquo;exprimer avec précision.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+ Java pas à pas
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
-&lt;p>Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudo-code ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.&lt;/p>
-&lt;p>Privilégiez un code lisible avec des noms de variables explicites. Testez chaque étape avec des cas simples avant d’explorer des scénarios complexes. Cette validation progressive permet de repérer rapidement les anomalies et de garantir la robustesse de la solution.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
+&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.&lt;/p>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1751903203480936730">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1751903203480936730 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203480936730 .export-form { margin-bottom:0; }
+ #java-runner-1751903203480936730 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203480936730 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203480936730 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203480936730 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203480936730 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1751903203480936730-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
+public class ExemplesMath {
+
+ public static void main(String args[]) {
+ System.out.println(&amp;#34;Math.log(1.0)=&amp;#34; &amp;#43; Math.log(1.0));
+ System.out.println(&amp;#34;Math.exp(1.0)=&amp;#34; &amp;#43; Math.exp(1.0));
+ System.out.println(&amp;#34;Math.cos(0)=&amp;#34; &amp;#43; Math.cos(0));
+ System.out.println(&amp;#34;Math.sin(0)=&amp;#34; &amp;#43; Math.sin(0));
+ System.out.println(&amp;#34;Math.sqrt(4)=&amp;#34; &amp;#43; Math.sqrt(4));
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1751903203480936730-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1751903203480936730');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1751903203480989508">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1751903203480989508 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203480989508 .export-form { margin-bottom:0; }
+ #java-runner-1751903203480989508 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203480989508 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203480989508 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203480989508 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203480989508 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1751903203480989508-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
+public class ExemplesString {
+
+ public static void main(String args[]) {
+
+ String string1 = &amp;#34;abc&amp;#34;;
+ String string2 = &amp;#34;def&amp;#34;;
+ String string3 = &amp;#34;abcdef&amp;#34;;
+ String string4 = new String(&amp;#34;abcdef&amp;#34;);
+
+ // Tous les litéraux identiques (� la compilation) sont traduits
+ // par une référence au même objet
+ System.out.println(string3 == &amp;#34;abcdef&amp;#34;); // true
+ System.out.println(&amp;#34;abc&amp;#34; &amp;#43; &amp;#34;def&amp;#34; == &amp;#34;abcdef&amp;#34;); // true
+
+ // Par contre, si le litéral est calculé à l&amp;#39;exécution, ce n&amp;#39;est pas le cas
+ System.out.println(string1 &amp;#43; string2 == &amp;#34;abcdef&amp;#34;); // false
+
+ // Le constructeur String produit toujours un objet différent de l&amp;#39;objet
+ // correspondant au litéral
+ System.out.println(string4 == &amp;#34;abcdef&amp;#34;); // false
+
+ // La méthode intern() de la classe String permet de convertir
+ // la référence à l&amp;#39;objet correspondant au litéral
+ System.out.println((string1 &amp;#43; string2).intern() == &amp;#34;abcdef&amp;#34;); // true
+ System.out.println(string4.intern() == &amp;#34;abcdef&amp;#34;); // true
+
+ // La méthode equals() permet de comparer le contenu de l&amp;#39;objet plutôt que la référence
+ System.out.println((string1 &amp;#43; string2).equals(&amp;#34;abcdef&amp;#34;)); // true
+ System.out.println(string4.equals(&amp;#34;abcdef&amp;#34;)); // true
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1751903203480989508-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1751903203480989508');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1751903203481035735">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1751903203481035735 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203481035735 .export-form { margin-bottom:0; }
+ #java-runner-1751903203481035735 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203481035735 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203481035735 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203481035735 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203481035735 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1751903203481035735-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
+public class ExempleZero {
+ public static void main(String[] s) {
+ double minus_zero = -0.0;
+ double plus_zero = &amp;#43;0.0;
+ System.out.println(minus_zero == plus_zero);
+ System.out.println(1/minus_zero);
+ System.out.println(1/plus_zero);
+ System.out.println(1/minus_zero == 1/plus_zero);
+ double n = 0.0 / 0.0;
+ System.out.println(n);
+ System.out.println(n == n);
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1751903203481035735-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1751903203481035735');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;div class="java-inline">
+
+
+
+
+
+
+ &lt;div id="java-runner-1751903203481072554">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
+ &lt;style>
+ #java-runner-1751903203481072554 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203481072554 .export-form { margin-bottom:0; }
+ #java-runner-1751903203481072554 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203481072554 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203481072554 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203481072554 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203481072554 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style>
+ &lt;form class="export-form java-runner-1751903203481072554-form" style="margin-bottom:0;">
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
+ &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
+public class ExerciceForFor {
+ public static void main(String args[]) {
+ for (int compteur1 = 1; compteur1 &amp;lt;= 9; compteur1 = compteur1 &amp;#43; 1) {
+ for (int compteur2 = 1; compteur2 &amp;lt;= compteur1; compteur2 = compteur2 &amp;#43; 1)
+ System.out.print(compteur2);
+ System.out.println();
+ }
+ }
+}
+&lt;/textarea>&lt;/div>
+ &lt;/div>
+ &lt;button type="submit" class="export-btn java-runner-1751903203481072554-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;/form>
+ &lt;div class="export-result">&lt;/div>
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
+ &lt;script>(function(){
+ var root = document.getElementById('java-runner-1751903203481072554');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ var tooltip = root.querySelector('.java-error-tooltip');
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ if(name.endsWith('.java')) {
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: "text/x-java",
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4
+ });
+ block._cm = cm;
+ 
+ block._javaErrorLines = {};
+ 
+ cm.on('cursorActivity', function() {
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (!statusBar) return;
+ var cursor = cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ 
+ if(name.endsWith('.java')) {
+ if (!block.querySelector('.java-error-status-bar')) {
+ var statusBar = document.createElement('div');
+ statusBar.className = 'java-error-status-bar';
+ statusBar.style.marginTop = '4px';
+ statusBar.style.fontSize = '0.95em';
+ statusBar.style.color = '#c00';
+ statusBar.style.minHeight = '1.2em';
+ statusBar.style.visibility = 'hidden';
+ block.appendChild(statusBar);
+ }
+ }
+ });
+ 
+ function showTooltip(msg, x, y) {
+ tooltip.textContent = msg;
+ tooltip.style.display = 'block';
+ tooltip.style.left = (x+10) + 'px';
+ tooltip.style.top = (y+10) + 'px';
+ }
+ function hideTooltip() {
+ tooltip.style.display = 'none';
+ }
+ form.onsubmit = function(e){
+ e.preventDefault();
+ var java_files = [], txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var content = block._cm ? block._cm.getValue() : ta.value;
+ if(name.endsWith('.java')) java_files.push({name: name, content: content});
+ else txt_files.push({name: name, content: content});
+ });
+ 
+ var dots = 0;
+ resultDiv.textContent = 'Exécution en cours';
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(function(r){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.text();
+ })
+ .then(function(t){
+ try {
+ var j=JSON.parse(t);
+ 
+ if(j.status==='ran_successfully') {
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='compiling') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else if(j.status==='runtime_error') {
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ } else {
+ resultDiv.textContent = t;
+ }
+ 
+ if(j.status==='compiling') {
+ var errorText = j.error || '';
+ var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
+ var match;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ 
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
+ var line = parseInt(lineStr, 10) - 1;
+ var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameInput = block.querySelector('.export-file-name');
+ if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
+ if (block._cm) {
+ block._cm.operation(function() {
+ block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: errorMsg
+ });
+ });
+ }
+ 
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[line] = errorMsg;
+ }
+ });
+ }
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
+ 
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ var cursor = block._cm.getCursor();
+ var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
+ if (errMsg) {
+ statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
+ statusBar.style.visibility = 'visible';
+ } else {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ }
+ }
+ });
+ } else {
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function() {
+ var marks = block._cm.getAllMarks();
+ for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
+ });
+ }
+ block._javaErrorLines = {};
+ var statusBar = block.querySelector('.java-error-status-bar');
+ if (statusBar) {
+ statusBar.textContent = '';
+ statusBar.style.visibility = 'hidden';
+ }
+ });
+ }
+ } catch(e){ console.log(e); resultDiv.textContent=t; }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ };
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var cm = block._cm;
+ if (!cm) return;
+ cm.on('mouseover', function(cm, event) {
+ var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
+ var line = pos.line, ch = pos.ch;
+ var cursor = cm.getCursor();
+ if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
+ var msg = block._javaErrorLines[line];
+ showTooltip(msg, event.clientX, event.clientY);
+ }
+ });
+ cm.on('mouseout', function(cm, event) {
+ hideTooltip();
+ });
+ });
+ })();&lt;/script>
+ &lt;/div>
+&lt;/div>
+&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p></description></item><item><title>Manuel</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</guid><description>&lt;p>Nous utilisons un manuel d&amp;rsquo;introduction à la programmation Java intitulé &lt;em>Java pas à pas&lt;/em> par Robert Godin et Daniel Lemire. Vous pouvez &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF&lt;/a> dès maintenant.&lt;/p>
+&lt;blockquote>
+&lt;p>Cet ouvrage présente les concepts de base de la programmation et du langage Java. Le livre s’adresse à un auditoire très large, aussi bien un débutant qui désire apprendre la programmation pour le plaisir qu’à un étudiant qui entreprend une carrière d’informaticien. L’approche proposée introduit graduellement les concepts de base de la programmation et leur incarnation dans le langage Java à l’aide d’une série d’exemples et d’exercices.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
  Exercices sur les algorithmes et problèmes
  &lt;a class="anchor" href="#exercices-sur-les-algorithmes-et-probl%c3%a8mes">#&lt;/a>
 &lt;/h1>
@@ -1818,11 +1757,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  1. Les propositions, les ensembles, les relations et les nombres
  &lt;a class="anchor" href="#1-les-propositions-les-ensembles-les-relations-et-les-nombres">#&lt;/a>
 &lt;/h2>
-&lt;p>Pour aborder les concepts mathématiques fondamentaux, il est essentiel de comprendre les notions de base qui sous-tendent la logique et la théorie des ensembles. Cette section introduit les propositions, les ensembles, les relations et les nombres, en posant les fondations nécessaires à une étude rigoureuse.&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1 id="travail-noté-3---les-structures-de-données-de-contrôle-et-ditération">
- Travail noté 3 - Les structures de données, de contrôle et d&amp;rsquo;itération
- &lt;a class="anchor" href="#travail-not%c3%a9-3---les-structures-de-donn%c3%a9es-de-contr%c3%b4le-et-dit%c3%a9ration">#&lt;/a>
-&lt;/h1>
-&lt;p>Les travaux notés du cours INF1220 évaluent la capacité à comprendre des énoncés logiques et à les transcrire en code Java de manière autonome, une compétence essentielle testée également à l’examen final. Les étudiants doivent effectuer des recherches sur le web, une pratique courante en programmation, et soumettre leurs travaux sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, avant la date de fin de cours indiquée dans le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code. Les travaux, d’un niveau comparable à ceux d’autres universités québécoises, doivent inclure des explications claires et personnelles, l’utilisation du robot conversationnel du cours étant autorisée à condition de produire ses propres analyses.&lt;/p></description></item><item><title>Intelligence artificielle</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</guid><description>&lt;p>Dans le cadre de ce cours, l’utilisation d’outils d’intelligence artificielle (tels que Claude, ChatGPT, Copilot, Grok, ou autres) est autorisée, mais demeure facultative. Ces outils peuvent servir de soutien pour approfondir votre compréhension, structurer vos idées ou générer des contenus préliminaires. Toutefois, leur usage doit être responsable, transparent et rigoureusement documenté. L’objectif est de garantir que votre travail reflète vos compétences et votre compréhension personnelle, tout en tirant parti des possibilités offertes par ces technologies. Une utilisation non déclarée ou inappropriée de l’IA peut être considérée comme une faute académique, tandis qu’une déclaration claire de son usage renforce la crédibilité de votre démarche.&lt;/p></description></item><item><title>Travail noté 1</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</guid><description>&lt;h1 id="travail-noté-1---les-algorithmes">
+&lt;p>Pour aborder les concepts mathématiques fondamentaux, il est essentiel de comprendre les notions de base qui sous-tendent la logique et la théorie des ensembles. Cette section introduit les propositions, les ensembles, les relations et les nombres, en posant les fondations nécessaires à une étude rigoureuse.&lt;/p></description></item><item><title>Intelligence artificielle</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/ia/</guid><description>&lt;p>Dans le cadre de ce cours, l’utilisation d’outils d’intelligence artificielle (tels que Claude, ChatGPT, Copilot, Grok, ou autres) est autorisée, mais demeure facultative. Ces outils peuvent servir de soutien pour approfondir votre compréhension, structurer vos idées ou générer des contenus préliminaires. Toutefois, leur usage doit être responsable, transparent et rigoureusement documenté. L’objectif est de garantir que votre travail reflète vos compétences et votre compréhension personnelle, tout en tirant parti des possibilités offertes par ces technologies. Une utilisation non déclarée ou inappropriée de l’IA peut être considérée comme une faute académique, tandis qu’une déclaration claire de son usage renforce la crédibilité de votre démarche.&lt;/p></description></item><item><title>Travail noté 1</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/travail-note-1/</guid><description>&lt;h1 id="travail-noté-1---les-algorithmes">
  Travail noté 1 - Les algorithmes
  &lt;a class="anchor" href="#travail-not%c3%a9-1---les-algorithmes">#&lt;/a>
 &lt;/h1>
@@ -1832,4 +1767,87 @@ etc.&lt;/p>
 messages reçus des sentiments. Dans un contexte professionnel, évitez d&amp;rsquo;écrire un courriel alors que vous êtes énervé.&lt;/p>
 &lt;p>Choisissez les destinataires de votre courriel avec soin. Il est pratiquement toujours mal avisé de transmettre un
 courriel à un grand groupe, à moins que le courriel soit une communication formelle. Dans le doute, écrivez un courriel
-à un seul destinataire.&lt;/p></description></item></channel></rss>
+à un seul destinataire.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
+ GitHub (optionnel)
+ &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
+&lt;/h1>
+&lt;p>&lt;a href="https://github.com">GitHub&lt;/a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git&lt;/a>, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire">Vous trouverez le professeur responsable du cours sur GitHub&lt;/a>. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p></description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+ Les structures de contrôle
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong>if-else&lt;/strong> et &lt;strong>switch-case&lt;/strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p>
+&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+ Les structures itératives
+ &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Les chaînes de caractères (String)</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</guid><description>&lt;h1 id="string">
+ String
+ &lt;a class="anchor" href="#string">#&lt;/a>
+&lt;/h1>
+&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+ Les structures de données de base
+ &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
+&lt;/h1>
+&lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
+Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p></description></item><item><title>Les valeurs aléatoires</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</guid><description>&lt;h1 id="génération-de-valeurs-aléatoires">
+ Génération de valeurs aléatoires
+ &lt;a class="anchor" href="#g%c3%a9n%c3%a9ration-de-valeurs-al%c3%a9atoires">#&lt;/a>
+&lt;/h1>
+&lt;blockquote class="book-hint info">
+&lt;p>Vous n&amp;rsquo;avez pas à maîtriser la génération de valeurs aléatoires dans ce cours.&lt;/p>
+&lt;/blockquote>
+&lt;p>Pour tester des structures de données, il est utile de pouvoir générer des valeurs aléatoires. Le plus souvent en programmation logicielle, nous générons des valeurs pseudo-aléatoires. Une valeur pseudo-aléatoire semble aléatoire, mais elle est en réalité pré-déterminée. La classe &lt;code>Random&lt;/code> en Java, située dans le paquetage &lt;code>java.util&lt;/code>, permet de générer des nombres pseudo-aléatoires pour diverses applications, comme les simulations, les jeux ou les tests. Elle utilise un générateur de nombres pseudo-aléatoires basé sur une graine (seed), qui, si spécifiée, garantit la reproductibilité des séquences générées. Par défaut, &lt;code>Random&lt;/code> utilise une graine dérivée de l’heure système pour produire des résultats différents à chaque exécution. La classe offre des méthodes comme &lt;code>nextInt()&lt;/code>, &lt;code>nextDouble()&lt;/code> ou &lt;code>nextBoolean()&lt;/code> pour générer respectivement des entiers, des nombres à virgule flottante ou des booléens.&lt;/p></description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java">
+ La programmation fonctionnelle en Java
+ &lt;a class="anchor" href="#la-programmation-fonctionnelle-en-java">#&lt;/a>
+&lt;/h1>
+&lt;p>La programmation fonctionnelle tire ses origines des mathématiques, en particulier du calcul lambda développé par Alonzo Church dans les années 1930. Ce formalisme a posé les bases théoriques pour décrire les calculs comme des fonctions pures, sans effets de bord. Dans les années 1950, John McCarthy a créé Lisp, le premier langage explicitement inspiré de ces idées, introduisant des concepts comme les fonctions de première classe. Les années 1980 ont vu l’émergence de langages comme Haskell, qui a mis l’accent sur les fonctions pures et l’évaluation paresseuse.
+L&amp;rsquo;évaluation paresseuse est une stratégie en programmation fonctionnelle où l&amp;rsquo;évaluation d&amp;rsquo;une expression est retardée jusqu&amp;rsquo;à ce que sa valeur soit réellement nécessaire. Cela permet d&amp;rsquo;optimiser les performances en évitant les calculs inutiles et de supporter des structures de données potentiellement infinies.
+Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+ Exercices sur les structures de contrôle, les structures de données, les structures itératives
+ &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h2>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions">
+ Les exceptions
+ &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
+&lt;/h1>
+&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+ La récursivité
+ &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h1>
+&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
+ Exercices sur les exceptions et la récursivité
+ &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h2>
+&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Exemple : modèle de langue</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</guid><description>&lt;h1 id="exemple--modèle-de-langue">
+ Exemple : modèle de langue
+ &lt;a class="anchor" href="#exemple--mod%c3%a8le-de-langue">#&lt;/a>
+&lt;/h1>
+&lt;blockquote class="book-hint info">
+&lt;p>Ce exemple est une application des notions du module. Il s&amp;rsquo;agit de matériel optionnel.&lt;/p>
+&lt;/blockquote>
+&lt;p>Pour illustrer l&amp;rsquo;utilisation des tableaux, considérons l&amp;rsquo;exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d&amp;rsquo;un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
+ Recommandations
+ &lt;a class="anchor" href="#recommandations">#&lt;/a>
+&lt;/h1>
+&lt;p>Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudo-code ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.&lt;/p>
+&lt;p>Privilégiez un code lisible avec des noms de variables explicites. Testez chaque étape avec des cas simples avant d’explorer des scénarios complexes. Cette validation progressive permet de repérer rapidement les anomalies et de garantir la robustesse de la solution.&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1 id="travail-noté-3---les-structures-de-données-de-contrôle-et-ditération">
+ Travail noté 3 - Les structures de données, de contrôle et d&amp;rsquo;itération
+ &lt;a class="anchor" href="#travail-not%c3%a9-3---les-structures-de-donn%c3%a9es-de-contr%c3%b4le-et-dit%c3%a9ration">#&lt;/a>
+&lt;/h1>
+&lt;p>Les travaux notés du cours INF1220 évaluent la capacité à comprendre des énoncés logiques et à les transcrire en code Java de manière autonome, une compétence essentielle testée également à l’examen final. Les étudiants doivent effectuer des recherches sur le web, une pratique courante en programmation, et soumettre leurs travaux sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, avant la date de fin de cours indiquée dans le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code. Les travaux, d’un niveau comparable à ceux d’autres universités québécoises, doivent inclure des explications claires et personnelles, l’utilisation du robot conversationnel du cours étant autorisée à condition de produire ses propres analyses.&lt;/p></description></item></channel></rss>

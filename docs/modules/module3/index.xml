@@ -10,21 +10,21 @@
 
 
 
- &lt;div id="java-runner-1751895843123664716">
+ &lt;div id="java-runner-1751903203480936730">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751895843123664716 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123664716 .export-form { margin-bottom:0; }
- #java-runner-1751895843123664716 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123664716 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123664716 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123664716 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123664716 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751903203480936730 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203480936730 .export-form { margin-bottom:0; }
+ #java-runner-1751903203480936730 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203480936730 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203480936730 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203480936730 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203480936730 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751895843123664716-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751903203480936730-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
@@ -40,14 +40,14 @@ public class ExemplesMath {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123664716-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751903203480936730-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123664716');
+ var root = document.getElementById('java-runner-1751903203480936730');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -269,21 +269,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1751895843123721112">
+ &lt;div id="java-runner-1751903203480989508">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751895843123721112 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123721112 .export-form { margin-bottom:0; }
- #java-runner-1751895843123721112 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123721112 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123721112 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123721112 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123721112 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751903203480989508 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203480989508 .export-form { margin-bottom:0; }
+ #java-runner-1751903203480989508 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203480989508 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203480989508 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203480989508 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203480989508 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751895843123721112-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751903203480989508-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
@@ -320,14 +320,14 @@ public class ExemplesString {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123721112-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751903203480989508-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123721112');
+ var root = document.getElementById('java-runner-1751903203480989508');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -549,21 +549,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1751895843123769824">
+ &lt;div id="java-runner-1751903203481035735">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751895843123769824 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123769824 .export-form { margin-bottom:0; }
- #java-runner-1751895843123769824 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123769824 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123769824 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123769824 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123769824 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751903203481035735 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203481035735 .export-form { margin-bottom:0; }
+ #java-runner-1751903203481035735 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203481035735 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203481035735 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203481035735 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203481035735 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751895843123769824-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751903203481035735-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
@@ -582,14 +582,14 @@ public class ExempleZero {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123769824-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751903203481035735-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123769824');
+ var root = document.getElementById('java-runner-1751903203481035735');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -811,21 +811,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1751895843123807785">
+ &lt;div id="java-runner-1751903203481072554">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751895843123807785 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751895843123807785 .export-form { margin-bottom:0; }
- #java-runner-1751895843123807785 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751895843123807785 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751895843123807785 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751895843123807785 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751895843123807785 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751903203481072554 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751903203481072554 .export-form { margin-bottom:0; }
+ #java-runner-1751903203481072554 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751903203481072554 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751903203481072554 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751903203481072554 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751903203481072554 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751895843123807785-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751903203481072554-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
@@ -840,14 +840,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751895843123807785-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751903203481072554-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751895843123807785');
+ var root = document.getElementById('java-runner-1751903203481072554');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1075,12 +1075,23 @@ public class ExerciceForFor {
  Les structures itératives
  &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
 &lt;/h1>
-&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+&lt;p>Les structures itératives permettent d'itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d'entier), de lire un flux de données caractère par caractère, etc. Elles sont l'implémentation des "tant que", des "pour i de 1 à 10 faire", etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Les chaînes de caractères (String)</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</guid><description>&lt;h1 id="string">
+ String
+ &lt;a class="anchor" href="#string">#&lt;/a>
+&lt;/h1>
+&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
  Les structures de données de base
  &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
 &lt;/h1>
 &lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
-Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p></description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java">
+Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p></description></item><item><title>Les valeurs aléatoires</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</guid><description>&lt;h1 id="génération-de-valeurs-aléatoires">
+ Génération de valeurs aléatoires
+ &lt;a class="anchor" href="#g%c3%a9n%c3%a9ration-de-valeurs-al%c3%a9atoires">#&lt;/a>
+&lt;/h1>
+&lt;blockquote class="book-hint info">
+&lt;p>Vous n&amp;rsquo;avez pas à maîtriser la génération de valeurs aléatoires dans ce cours.&lt;/p>
+&lt;/blockquote>
+&lt;p>Pour tester des structures de données, il est utile de pouvoir générer des valeurs aléatoires. Le plus souvent en programmation logicielle, nous générons des valeurs pseudo-aléatoires. Une valeur pseudo-aléatoire semble aléatoire, mais elle est en réalité pré-déterminée. La classe &lt;code>Random&lt;/code> en Java, située dans le paquetage &lt;code>java.util&lt;/code>, permet de générer des nombres pseudo-aléatoires pour diverses applications, comme les simulations, les jeux ou les tests. Elle utilise un générateur de nombres pseudo-aléatoires basé sur une graine (seed), qui, si spécifiée, garantit la reproductibilité des séquences générées. Par défaut, &lt;code>Random&lt;/code> utilise une graine dérivée de l’heure système pour produire des résultats différents à chaque exécution. La classe offre des méthodes comme &lt;code>nextInt()&lt;/code>, &lt;code>nextDouble()&lt;/code> ou &lt;code>nextBoolean()&lt;/code> pour générer respectivement des entiers, des nombres à virgule flottante ou des booléens.&lt;/p></description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java">
  La programmation fonctionnelle en Java
  &lt;a class="anchor" href="#la-programmation-fonctionnelle-en-java">#&lt;/a>
 &lt;/h1>
@@ -1118,7 +1129,14 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
 &lt;blockquote class="book-hint info">
 &lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Exemple : modèle de langue</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</guid><description>&lt;h1 id="exemple--modèle-de-langue">
+ Exemple : modèle de langue
+ &lt;a class="anchor" href="#exemple--mod%c3%a8le-de-langue">#&lt;/a>
+&lt;/h1>
+&lt;blockquote class="book-hint info">
+&lt;p>Ce exemple est une application des notions du module. Il s&amp;rsquo;agit de matériel optionnel.&lt;/p>
+&lt;/blockquote>
+&lt;p>Pour illustrer l&amp;rsquo;utilisation des tableaux, considérons l&amp;rsquo;exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d&amp;rsquo;un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
  Recommandations
  &lt;a class="anchor" href="#recommandations">#&lt;/a>
 &lt;/h1>
