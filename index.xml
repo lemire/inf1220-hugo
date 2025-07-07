@@ -264,7 +264,10 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Les structures de contrôle
  &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
 &lt;/h1>
-&lt;p>Les structures de contrôle sont au cœur de la conception d’algorithmes, car elles permettent de guider l’exécution en fonction de conditions ou de répéter des opérations sur des données. Elles offrent la flexibilité nécessaire pour traiter des situations dynamiques, comme des données de taille variable, et évitent la répétition inutile d’instructions. En combinant des branchements (choix conditionnels) et des boucles (répétitions), elles permettent de construire des solutions logiques et efficaces, adaptées à une grande variété de problèmes.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+&lt;p>Nous avons déjà présenté les notions d&amp;rsquo;embranchement et de boucle. C&amp;rsquo;est ce que nous appelons des structures de contrôle. Il est essentiel
+d&amp;rsquo;en comprendre la fonction.&lt;/p>
+&lt;p>On peut concevoir un algorithme qui ne comprend qu&amp;rsquo;une liste d&amp;rsquo;opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d&amp;rsquo;éléments, et on risque de devoir répéter beaucoup d&amp;rsquo;opérations.
+Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d&amp;rsquo;autres composantes de l&amp;rsquo;ordinateur. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
  Recommandations
  &lt;a class="anchor" href="#recommandations">#&lt;/a>
 &lt;/h1>
@@ -332,6 +335,9 @@ Planifiez bien votre temps !&lt;/p></description></item><item><title>Les probl�
  Les problèmes difficiles
  &lt;a class="anchor" href="#les-probl%c3%a8mes-difficiles">#&lt;/a>
 &lt;/h1>
+&lt;blockquote class="book-hint info">
+&lt;p>Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la notion de problème difficile, mais vous devriez être familier avec le concept.&lt;/p>
+&lt;/blockquote>
 &lt;p>Dans un cours d’introduction à la programmation, la plupart des exercices se concentrent sur des problèmes dont les algorithmes sont relativement simples à concevoir, surtout si vous maîtrisez les bases de la programmation et des mathématiques. Ces problèmes, comme calculer une moyenne ou trier une liste, demandent souvent une compréhension des structures de contrôle (conditions et boucles) et une application directe de concepts logiques. Cependant, dans des contextes plus avancés, certains problèmes se révèlent bien plus complexes, non pas à cause de la programmation elle-même, mais en raison de la difficulté à trouver un algorithme efficace. Ces défis, qualifiés de « problèmes difficiles », nécessitent des approches créatives et parfois des compromis, car leurs solutions idéales peuvent être hors de portée avec les ressources informatiques actuelles.&lt;/p></description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java">
  Fondamentaux de Java
  &lt;a class="anchor" href="#fondamentaux-de-java">#&lt;/a>
@@ -700,21 +706,21 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
 
 
 
- &lt;div id="java-runner-1751907626804477455">
+ &lt;div id="java-runner-1751930142841141970">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751907626804477455 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751907626804477455 .export-form { margin-bottom:0; }
- #java-runner-1751907626804477455 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751907626804477455 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751907626804477455 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751907626804477455 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751907626804477455 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751930142841141970 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751930142841141970 .export-form { margin-bottom:0; }
+ #java-runner-1751930142841141970 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751930142841141970 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751930142841141970 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751930142841141970 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751930142841141970 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751907626804477455-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751930142841141970-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
@@ -730,14 +736,14 @@ public class ExemplesMath {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751907626804477455-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751930142841141970-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751907626804477455');
+ var root = document.getElementById('java-runner-1751930142841141970');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -959,21 +965,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1751907626804522699">
+ &lt;div id="java-runner-1751930142841225757">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751907626804522699 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751907626804522699 .export-form { margin-bottom:0; }
- #java-runner-1751907626804522699 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751907626804522699 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751907626804522699 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751907626804522699 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751907626804522699 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751930142841225757 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751930142841225757 .export-form { margin-bottom:0; }
+ #java-runner-1751930142841225757 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751930142841225757 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751930142841225757 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751930142841225757 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751930142841225757 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751907626804522699-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751930142841225757-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
@@ -1010,14 +1016,14 @@ public class ExemplesString {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751907626804522699-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751930142841225757-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751907626804522699');
+ var root = document.getElementById('java-runner-1751930142841225757');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1239,21 +1245,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1751907626804615833">
+ &lt;div id="java-runner-1751930142841308613">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751907626804615833 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751907626804615833 .export-form { margin-bottom:0; }
- #java-runner-1751907626804615833 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751907626804615833 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751907626804615833 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751907626804615833 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751907626804615833 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751930142841308613 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751930142841308613 .export-form { margin-bottom:0; }
+ #java-runner-1751930142841308613 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751930142841308613 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751930142841308613 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751930142841308613 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751930142841308613 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751907626804615833-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751930142841308613-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
@@ -1272,14 +1278,14 @@ public class ExempleZero {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751907626804615833-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751930142841308613-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751907626804615833');
+ var root = document.getElementById('java-runner-1751930142841308613');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1501,21 +1507,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1751907626804658622">
+ &lt;div id="java-runner-1751930142841461962">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751907626804658622 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751907626804658622 .export-form { margin-bottom:0; }
- #java-runner-1751907626804658622 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751907626804658622 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751907626804658622 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751907626804658622 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751907626804658622 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751930142841461962 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751930142841461962 .export-form { margin-bottom:0; }
+ #java-runner-1751930142841461962 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751930142841461962 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751930142841461962 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751930142841461962 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751930142841461962 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751907626804658622-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751930142841461962-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
@@ -1530,14 +1536,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751907626804658622-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751930142841461962-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751907626804658622');
+ var root = document.getElementById('java-runner-1751930142841461962');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
