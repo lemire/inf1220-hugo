@@ -14,6 +14,9 @@ Ce exemple est une application des notions du module. Il s'agit de matériel opt
 
 Pour illustrer l'utilisation des tableaux, considérons l'exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d'un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.
 
+Le résultat est loin de pouvoir entre en compétition contre ChatGPT. Pourtant, le principe de base est le même. Vous pouvez tester le programme
+suivant qui génère du texte qui est quasiment du français. Testez-le plusieur fois.
+
 {{<inlineJava path="ModeleLangue.java" lang="java">}}
 
 import java.util.Random;
