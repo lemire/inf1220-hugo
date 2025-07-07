@@ -34,19 +34,18 @@ vous pouvez faire référence à notre rappel sur [les principales notions math�
 <p>Proposez une classe Etudiant dont le constructeur prend en paramètre un identifiant (sous la forme d'un entier) et qui comprend une méthode monIdentifiant retournant l'identifiant en question.</p>
 <details><summary>Réponse</summary>
 
-{{<inlineJava path="Etudiant.java">}}
+```java  {style=github}
 public class Etudiant {
-  int mIdentifiant;
+  int Identifiant;
   public Etudiant(int identifiant) {
-    mIdentifiant = identifiant;
+    Identifiant = identifiant;
   }
 
   public int monIdentifiant() {
-    return mIdentifiant;
+    return Identifiant;
   }
 }
-{{</inlineJava>}}
-
+```
 </details>
 
 
@@ -77,7 +76,7 @@ public class Patate {
 }
 ```
 
-<p>Que va afficher le code suivant:</p>
+<p>Que va afficher le code suivant&nbsp;:</p>
 
 ```java  {style=github}
     Patate z1 = new Patate(1);
