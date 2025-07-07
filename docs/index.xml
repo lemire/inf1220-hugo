@@ -13,42 +13,51 @@ nous trouvons des erreurs.&lt;/p>
  Évaluation
  &lt;a class="anchor" href="#%c3%a9valuation">#&lt;/a>
 &lt;/h1>
-&lt;p>Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d'un examen final à réaliser à la fin du cours. Voici la grille de pondération des travaux :&lt;/p>
+&lt;p>Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d&amp;rsquo;un examen final à réaliser à la fin du cours.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
  &lt;th>Évaluations&lt;/th>
  &lt;th>Sujets&lt;/th>
+ &lt;th>semaine de remise&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
  &lt;td>Travail Noté #1&lt;/td>
  &lt;td>Les algorithmes&lt;/td>
+ &lt;td>3&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Travail Noté #2&lt;/td>
  &lt;td>Types, opérateurs et méthodes&lt;/td>
+ &lt;td>6&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Travail Noté #3&lt;/td>
  &lt;td>Structures de contrôle, itérations et données&lt;/td>
+ &lt;td>9&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Travail Noté #4&lt;/td>
  &lt;td>Les flux d&amp;rsquo;entrée et de sortie&lt;/td>
+ &lt;td>11&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Travail Noté #5&lt;/td>
  &lt;td>Héritage et polymorphismes&lt;/td>
+ &lt;td>14&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Examen&lt;/td>
  &lt;td>L&amp;rsquo;ensemble du cours&lt;/td>
+ &lt;td>15&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Avant de faire les travaux, il faut avoir fait les lectures et les exercices de préparation. Essayez d'aller directement aux travaux notés est une stratégie perdante pour la plupart des étudiants. Prenez le temps d'étudier la matière! &lt;/p></description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java">
+&lt;p>La semaine de remise des travaux est une suggestion. Néanmoins, vous devez compléter tous les travaux avant la date de fin de cours.
+Votre date de fin de cours apparaît sur votre portail étudiant : elle est différente pour chaque étudiant.
+Planifiez bien votre temps !&lt;/p></description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java">
  Fondamentaux de Java
  &lt;a class="anchor" href="#fondamentaux-de-java">#&lt;/a>
 &lt;/h1>
