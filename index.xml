@@ -267,7 +267,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 &lt;p>Nous avons déjà présenté les notions d&amp;rsquo;embranchement et de boucle. C&amp;rsquo;est ce que nous appelons des structures de contrôle. Il est essentiel
 d&amp;rsquo;en comprendre la fonction.&lt;/p>
 &lt;p>On peut concevoir un algorithme qui ne comprend qu&amp;rsquo;une liste d&amp;rsquo;opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d&amp;rsquo;éléments, et on risque de devoir répéter beaucoup d&amp;rsquo;opérations.
-Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d&amp;rsquo;autres composantes de l&amp;rsquo;ordinateur. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
  Recommandations
  &lt;a class="anchor" href="#recommandations">#&lt;/a>
 &lt;/h1>
@@ -706,21 +706,21 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
 
 
 
- &lt;div id="java-runner-1751931023122667041">
+ &lt;div id="java-runner-1751932513101835904">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751931023122667041 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751931023122667041 .export-form { margin-bottom:0; }
- #java-runner-1751931023122667041 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751931023122667041 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751931023122667041 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751931023122667041 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751931023122667041 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751932513101835904 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751932513101835904 .export-form { margin-bottom:0; }
+ #java-runner-1751932513101835904 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751932513101835904 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751932513101835904 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751932513101835904 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751932513101835904 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751931023122667041-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751932513101835904-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
@@ -736,14 +736,14 @@ public class ExemplesMath {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751931023122667041-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751932513101835904-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751931023122667041');
+ var root = document.getElementById('java-runner-1751932513101835904');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -965,21 +965,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1751931023122715342">
+ &lt;div id="java-runner-1751932513101914481">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751931023122715342 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751931023122715342 .export-form { margin-bottom:0; }
- #java-runner-1751931023122715342 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751931023122715342 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751931023122715342 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751931023122715342 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751931023122715342 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751932513101914481 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751932513101914481 .export-form { margin-bottom:0; }
+ #java-runner-1751932513101914481 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751932513101914481 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751932513101914481 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751932513101914481 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751932513101914481 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751931023122715342-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751932513101914481-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
@@ -1016,14 +1016,14 @@ public class ExemplesString {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751931023122715342-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751932513101914481-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751931023122715342');
+ var root = document.getElementById('java-runner-1751932513101914481');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1245,21 +1245,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1751931023122759215">
+ &lt;div id="java-runner-1751932513101959505">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751931023122759215 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751931023122759215 .export-form { margin-bottom:0; }
- #java-runner-1751931023122759215 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751931023122759215 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751931023122759215 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751931023122759215 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751931023122759215 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751932513101959505 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751932513101959505 .export-form { margin-bottom:0; }
+ #java-runner-1751932513101959505 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751932513101959505 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751932513101959505 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751932513101959505 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751932513101959505 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751931023122759215-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751932513101959505-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
@@ -1278,14 +1278,14 @@ public class ExempleZero {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751931023122759215-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751932513101959505-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751931023122759215');
+ var root = document.getElementById('java-runner-1751932513101959505');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1507,21 +1507,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1751931023122798479">
+ &lt;div id="java-runner-1751932513101998077">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751931023122798479 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751931023122798479 .export-form { margin-bottom:0; }
- #java-runner-1751931023122798479 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751931023122798479 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751931023122798479 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751931023122798479 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751931023122798479 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751932513101998077 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751932513101998077 .export-form { margin-bottom:0; }
+ #java-runner-1751932513101998077 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751932513101998077 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751932513101998077 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751932513101998077 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751932513101998077 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751931023122798479-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751932513101998077-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
@@ -1536,14 +1536,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751931023122798479-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751932513101998077-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751931023122798479');
+ var root = document.getElementById('java-runner-1751932513101998077');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
