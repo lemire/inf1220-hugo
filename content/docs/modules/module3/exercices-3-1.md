@@ -1,7 +1,6 @@
 ---
-
 title: "Exercices sur les structures de contrôle, les structures de données, les structures itératives"
-weight: 6
+weight: 60
 ---
 
 # Exercices sur les structures de contrôle, les structures de données, les structures itératives

@@ -1,6 +1,6 @@
 ---
 title: "La programmation fonctionnelle en Java"
-weight: 5
+weight: 50
 ---
 
 # La programmation fonctionnelle en Java
@@ -13,8 +13,12 @@ Depuis, la programmation fonctionnelle a influencé de nombreux langages moderne
 Avant Java 8 (2014), la programmation fonctionnelle était absente ou limitée. Les programmeurs utilisaient des solutions comme les classes anonymes pour simuler des comportements fonctionnels, mais cela était verbeux. Avec Java 8, l’introduction des expressions lambda, de l’API Stream et des interfaces fonctionnelles (comme Function, Predicate) a marqué un tournant, permettant de manipuler les fonctions comme des objets de première classe et de traiter les données de manière déclarative. Les références de méthodes et les types fonctionnels ont renforcé cette approche. 
 
 
-**Dans ce cours, vous n'avez pas à maîtriser la programmation fonctionnelle, mais il est utile d'être familier avec cette notion.**
+{{% hint info %}}
 
+
+Dans ce cours, vous n'avez pas à maîtriser la programmation fonctionnelle, mais il est utile d'être familier avec cette notion.
+
+{{% /hint  %}}
 
 
 

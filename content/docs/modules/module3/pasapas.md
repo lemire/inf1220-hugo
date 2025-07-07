@@ -1,6 +1,6 @@
 ---
 title: "Java pas à pas"
-weight: 1
+weight: 10
 ---
 
 # Java pas à pas

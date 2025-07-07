@@ -1,6 +1,6 @@
 ---
 title: "Les exceptions"
-weight: 7
+weight: 70
 ---
 
 # Les exceptions
