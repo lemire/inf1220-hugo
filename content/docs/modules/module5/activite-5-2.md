@@ -395,7 +395,7 @@ Voici les trois formes principales de polymorphisme en Java, avec leur principe 
 
 
 
-## Vidéos
+## Vidéos suggérées
 
 
 {{<youtube id="CPxrEntMxsQ" >}}

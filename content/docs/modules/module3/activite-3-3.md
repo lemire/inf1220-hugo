@@ -1040,7 +1040,7 @@ En résumé, le choix de la structure de données influence fortement la perform
 
 <p>Pour aller plus en profondeur sur les structures de données(optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
 
-## Vidéos
+## Vidéos suggérées
 
 {{< youtube id="VdvUYGs17Ek" >}}
 

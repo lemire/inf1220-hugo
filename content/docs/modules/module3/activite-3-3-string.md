@@ -345,10 +345,7 @@ public class ExempleAllocationMemoire {
 - Approche 2 (StringBuilder) : En utilisant StringBuilder, un seul objet est créé et modifié à chaque itération. Cela réduit considérablement le nombre d’allocations mémoire et la charge sur le ramasse-miettes, ce qui améliore les performances.
 
 
-
-
-
-## Vidéos
+## Vidéos suggérées
 
 
 {{< youtube id="wvQQ5263pvI" >}}

@@ -282,6 +282,11 @@ FIN FONCTION
 
 Le tri par niches (ou bucket sort) est un algorithme de tri non comparatif adapté aux données uniformément réparties dans une plage de valeurs connue (de min à max). Le pseudocode décrit un processus en deux étapes. D’abord, il calcule la taille de la plage (k ← max - min + 1) et crée un tableau niches de taille k, où chaque niche correspond à une valeur possible. Dans l’étape 1, chaque élément du tableau est placé dans la niche correspondante (index ← élément - min), ce qui regroupe les éléments de même valeur. Dans l’étape 2, le tableau est reconstruit en parcourant les niches dans l’ordre (de 0 à k-1) et en extrayant leurs éléments pour les placer séquentiellement dans le tableau (tableau[index]). L’indice index suit la position d’insertion.
 
+
+#### Vidéo suggérée
+
+{{< youtube id="GJRkOxG5RmM" >}}
+
 ### Table de hachage
 
 Une table de hachage (ou « hash table ») est une structure de données qui permet d’associer des clés à des valeurs et d’accéder très rapidement à une valeur à partir de sa clé. Le principe repose sur l’utilisation d’une fonction de hachage qui transforme la clé (par exemple, un texte ou un nombre) en un indice de tableau. Les opérations d’insertion, de recherche et de suppression se font en temps moyen \( O(1) \), c’est-à-dire en temps constant, quelle que soit la taille de la table (si la fonction de hachage est bonne et la table bien dimensionnée). La table de hachage est efficace pour retrouver rapidement une information à partir d’une clé.
@@ -329,6 +334,10 @@ Les tables de hachage sont omniprésentes en informatique car elles rendent poss
 Imaginons que l’on souhaite stocker un ensemble de chaînes de caractères de différentes longueurs, par exemple «&nbsp;chat&nbsp;», «&nbsp;chien&nbsp;», «&nbsp;girafe&nbsp;», «&nbsp;lion&nbsp;». Pour retrouver rapidement une chaîne, on peut utiliser une table de hachage où la fonction de hachage choisie est simplement la longueur de la chaîne. Ainsi, «&nbsp;chat&nbsp;» (4 lettres) sera stocké à l’indice 4, «&nbsp;chien&nbsp;» (5 lettres) à l’indice 5, «&nbsp;girafe&nbsp;» (6 lettres) à l’indice 6, et ainsi de suite. Pour rechercher une chaîne, il suffit de calculer sa longueur et d’aller directement à l’indice correspondant dans le tableau. Cette opération ne dépend pas du nombre total de chaînes stockées, ce qui explique pourquoi la recherche est dite «&nbsp;en temps constant&nbsp;» : on ne parcourt pas toute la table, on accède directement à la bonne case.
 
 Cependant, ce choix de fonction de hachage est très simple et peut provoquer des «&nbsp;collisions&nbsp;» : deux chaînes de même longueur, comme «&nbsp;lion&nbsp;» et «&nbsp;chat&nbsp;», auraient le même indice. Dans ce cas, il faut une méthode pour gérer ces collisions, par exemple en stockant les deux chaînes dans une liste à cet indice. En pratique, les tables de hachage utilisent des fonctions de hachage beaucoup plus sophistiquées, capables de transformer n’importe quelle clé (texte, nombre, etc.) en un indice réparti de façon plus uniforme dans le tableau. L’objectif reste toujours de minimiser les collisions, car tant qu’il y en a peu, la recherche, l’insertion et la suppression restent très rapides et efficaces, même avec de très grands ensembles de données.
+
+#### Vidéo suggérée
+
+{{< youtube id="9mxrYSJ3xgs" >}}
 
 ### Un problème résoluble en \( O(n^2) \) ou en \( O(n) \)
 

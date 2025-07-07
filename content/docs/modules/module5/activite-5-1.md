@@ -1602,7 +1602,7 @@ System.out.println(liste); // Affiche [1, 2, 3, 4]
 	<li>Section 12 : Les interfaces</li>
 </ul>
 
-## Vidéos
+## Vidéos suggérées
 
 {{< youtube id="8TSVW7SV0KA" >}}
 

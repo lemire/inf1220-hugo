@@ -123,7 +123,7 @@ public class ExempleRecursivite {
 	<li>Section 10 : La récursivité des méthodes</li>
 </ul>
 
-## Vidéos
+## Vidéos suggérées
 
 {{< youtube id="o0sfEUuqy40" >}}
 

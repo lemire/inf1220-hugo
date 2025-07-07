@@ -423,7 +423,7 @@ void afficher(String message, int nombre)
 ```
 Ici, chaque méthode a une signature différente, même si le nom est identique.
 
-### Vidéos
+### Vidéos suggérées
 
 {{< youtube id="IZ8wKErw0_Y" >}}
 
@@ -520,7 +520,7 @@ Contrairement aux méthodes, les constructeurs doivent avoir le même nom que la
 
 <p>Concrètement, dans ce cours, vous ne serez jamais pénalisé si vous écrivez des programmes Java qui répondent aux consignes sans nécessairement créer plus de classes que nécessaire. Par contre, il est probable que vous ne pourrez pas réussir le cours si vous ne comprenez pas les notions de classe, constructeur et méthode.</p>
 
-### Vidéos
+### Vidéos suggérées
 
 
 {{< youtube id="cGpJ0o9z5GQ" >}}
