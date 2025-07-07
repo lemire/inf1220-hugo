@@ -745,7 +745,7 @@ Retourner compteur
 
 </details>
 
-### Vidéos
+### Vidéos suggérées
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
 

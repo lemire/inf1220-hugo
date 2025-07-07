@@ -9,7 +9,7 @@ Nous avons déjà présenté les notions d'embranchement et de boucle. C'est ce 
 d'en comprendre la fonction.
 
 On peut concevoir un algorithme qui ne comprend qu'une liste d'opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d'éléments, et on risque de devoir répéter beaucoup d'opérations.
-Les structures de contrôle permettent à l'algorithme de faire des choix de traitement en fonction de conditions. On peut également parler de branchement, terme provenant des premiers ordinateurs où les sorties de cartes de contrôle correspondaient littéralement à des câbles menant à d'autres composantes de l'ordinateur. Une structure de contrôle correspond à l'action de tester des variables de contrôle et selon les résultats d'effectuer des opérations ou non.
+Les structures de contrôle permettent à l'algorithme de faire des choix de traitement en fonction de conditions. Une structure de contrôle correspond à l'action de tester des variables de contrôle et selon les résultats d'effectuer des opérations ou non.
 
 
 
@@ -83,7 +83,7 @@ Cet outil vous permet de suivre le raisonnement de l’algorithme de manière cl
 {{< webapp path="age.html" >}}
 
 
-Après avoir utilisé l’outil, prends un moment pour réfléchir à la flexibilité de cet algorithme. Comment pourrais-tu le modifier pour ajouter de nouvelles catégories, comme «&nbsp;bébé&nbsp;» pour les âges de 0 à 2 ans, ou pour inclure des critères supplémentaires, comme une distinction entre «&nbsp;jeune adulte&nbsp;» et «&nbsp;adulte senior&nbsp;» ? Que se passerait-il si l’âge pouvait être négatif ou non entier ? Comment adapterais-tu le pseudocode pour gérer ces cas ? En explorant ces questions, tu commenceras à voir comment personnaliser un algorithme pour répondre à des besoins spécifiques, une étape essentielle pour devenir un programmeur créatif.
+Après avoir utilisé l’outil, prenez un moment pour réfléchir à la flexibilité de cet algorithme. Comment pourriez-vous le modifier pour ajouter de nouvelles catégories, comme «&nbsp;bébé&nbsp;» pour les âges de 0 à 2 ans, ou pour inclure des critères supplémentaires, comme une distinction entre «&nbsp;jeune adulte&nbsp;» et «&nbsp;adulte senior&nbsp;»&nbsp;? Que se passerait-il si l’âge pouvait être négatif ou non entier&nbsp;? Comment adapteriez-vous le pseudocode pour gérer ces cas&nbsp;? 
 
 ## La boucle comme structure de contrôle
 
@@ -157,7 +157,7 @@ Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur
 
 ## La fin d'un algorithme
 
-Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudo-code ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demander à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
+Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudo-code ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demande à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
 
 ```plaintext
 x = 0
