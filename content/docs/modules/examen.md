@@ -54,7 +54,7 @@ Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en 
 <p>En cas d’irrégularité, un dossier de dénonciation pour infraction à l’intégrité intellectuelle pourrait être déposé.<p>
 Qui puis-je contacter si j’ai des questions?
 <p>En cas de besoin, n’hésitez pas à communiquer avec la personne responsable de votre encadrement.</p>
-</div>
+
 
 ## Se préparer
 

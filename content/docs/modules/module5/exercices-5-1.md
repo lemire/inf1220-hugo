@@ -84,7 +84,6 @@ public class PNGGradientExtractor {
 <p>À l'aide de l'héritage et des classes abstraites, veuillez implémenter les classes qui permettront de : a. Créer une classe abstraite GradientExtractor; b. Créer une classe GIFGradientExtractor; c. modifier PNGGradientExtractor pour tenir compte des changements précédent. Pour simplifier l'exercice, ce qui diffère le GIF du PNG est le chargement de l'image dans la matrice gradientMatrix. VOUS DEVEZ FAIRE SEULEMENT LA STRUCTURE (CLASSES ET MÉTHODES) SANS IMPLÉMENTATION!</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 public abstract class GradientExtractor {
@@ -132,7 +131,6 @@ public class PNGGradientExtractor extends GradientExtractor {
 }
 ```
 
-</div>
 </details>
 
 ## Question 3
@@ -217,7 +215,6 @@ public class SerieTemporelle {
 <p>À l'aide du polymorphisme paramétrique (les templates), veuillez modifier le code afin de permettre des séries temporelles de plusieurs classes (ex. Double, Integer, etc.).</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 {{<inlineJava path="SerieTemporelle.java" lang="java" >}}
 public class SerieTemporelle<T>  {
@@ -296,7 +293,6 @@ public class SerieTemporelle<T>  {
 }
 {{</inlineJava>}}
 
-</div>
 </details>
 
 ## Question 4
@@ -337,7 +333,6 @@ public class VoitureElectrique {
 ```
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 public class Voiture {
@@ -383,7 +378,6 @@ public interface MoteurEssence {
 }
 ```
 
-</div>
 </details>
 
 ## Question 5

@@ -376,7 +376,6 @@ public class ArrayListUtils {
 </p>
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 import java.util.ArrayList;
@@ -429,7 +428,6 @@ public class Main {
 }
 ```
 
-</div>
 </details>
 
 ## Question 13
@@ -437,7 +435,6 @@ public class Main {
 <p>Écrivez un programme efficace Java qui prend la chaîne de caractère «&nbsp;124213&nbsp;» et en extrait les nombres 1, 2, 4, 2, 1, 3.</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 class Exemple {
@@ -457,7 +454,6 @@ class Exemple {
 }
 ```
 
-</div>
 </details>
 
 ## Question 14
@@ -484,9 +480,8 @@ public class Main {
 <p>Expliquer pourquoi.</p>
 
 <details><summary>Réponse</summary>
-<div> <p>Le code affiche «&nbsp;avant le second else&nbsp;».</p>
+<p>Le code affiche «&nbsp;avant le second else&nbsp;».</p>
 <p>En effet le second if est évalué à false, et toute l’instruction qui suit (y compris l’évaluation du else qui se rapporte au if de cette instruction) n’est pas exécutée ; l’instruction suivante c’est le tout dernier if, qui est évalué à true, et donc le else qui s’y rapporte n’est pas évalué.</p>
-</div>
 </details>
 
 ## Question 15
@@ -518,11 +513,9 @@ for (int j=0; j < 10;j++) {
 <p>Que se passe-t-il dans chacun des cas quant à l’exécution de Instruction quand j vaut 5?</p>
 
 <details><summary>Réponse</summary>
-<div>
 <p>En a) Instruction n’est pas exécutée et on passe au tour suivant, le 7eme tour de la boucle (i=6) où, comme lors des autres tours précédant i=5, Instruction sera exécutée.</p>
 
 <p>En b) on sort de la boucle, Instruction ne sera plus jamais exécutée.</p>
-</div>
 </details>
 
 ## Question 16
@@ -561,11 +554,9 @@ for (int i=0; i < 10; i++) {
 <p>Dans quel cas (quel bout de code et quelle condition) Instruction1 n'est pas exécuté? Y'a-t-il une situation où Instruction2 n'est pas exécuté? Si oui laquelle?</p>
 
 <details><summary>Réponse</summary>
-<div>
 <p>Instruction1 n’est pas exécuté, dans tous les cas lorsque condition est vraie.</p>
 
 <p>Instruction2 est toujours exécuté.</p>
-</div>
 </details>
 
 ## Question 17
@@ -591,7 +582,6 @@ public class Main {
 <p>Réécrire le même code en utilisant les syntaxes de l’instruction while et de l’instruction do…while.</p>
 
 <details><summary>Réponse</summary>
-<div>
 <p>Instruction while.</p>
 
 ```java  {style=github}
@@ -630,7 +620,6 @@ public class Main {
 }
 ```
 
-</div>
 </details>
 
 ## Question 18
@@ -660,7 +649,6 @@ public class Main {
 <p>Réécrire le même programme avec l'instruction switch.</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 import java.util.Scanner;
@@ -688,7 +676,6 @@ public class Main {
 }
 ```
 
-</div>
 </details>
 
 ## Question 19
@@ -696,9 +683,7 @@ public class Main {
 <p>Étant donné le tableau <tt>String[] x = new String[10]</tt>, que vaut <tt>x[0]</tt>.</p>
 
 <details><summary>Réponse</summary>
-<div>
 <p>En Java, les tableaux sont initialisées à une valeur nulle par défaut. Dans ce cas, <tt>x[0]</tt> prendra donc la valeur <tt>null</tt>. Cette valeur spéciale ne correspond pas à une instance de la classe String. On peut, par contre, assigner une valeur (<tt>x[0]="123"</tt>).</p>
-</div>
 </details>
 
 ## Question 20
@@ -706,7 +691,6 @@ public class Main {
 <p>Énumérer toutes les paires d'entiers entre 0 et 1000 en ordre lexicographique.</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 ```java  {style=github}
 public class Liste {
@@ -720,7 +704,6 @@ public class Liste {
 }
 ```
 
-</div>
 </details>
 
 ## Question 21
@@ -731,7 +714,6 @@ public class Liste {
 La lambda (s1, s2) -> s1.compareToIgnoreCase(s2) signifie : s1 et s2 sont deux chaînes de caractères à comparer, la méthode compareToIgnoreCase est appelée pour déterminer l'ordre alphabétique sans tenir compte de la casse, le résultat de cette comparaison est retourné directement.</p>
 
 <details><summary>Réponse</summary>
-<div>
 
 {{<inlineJava path="TriChainesSansCasse.java" lang="java" >}}
 import java.util.Arrays;
@@ -753,7 +735,6 @@ public class TriChainesSansCasse {
 {{</inlineJava>}}
 
 
-</div>
 </details>
 
 ## Question 22
