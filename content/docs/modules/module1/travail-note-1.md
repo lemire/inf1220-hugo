@@ -125,4 +125,3 @@ FIN TANT QUE
 <p>Il est inutile de nous écrire pour obtenir des indices, des exemples de solutions, des pistes de départ, etc. Dans ce cours, nous n'offrons aucun indice par courriel.</p>
 
 <p>Il s'agit d'un travail noté individuel.</p>
-</div>

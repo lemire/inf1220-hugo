@@ -1,5 +1,5 @@
 ---
 title: "Autres ressources"
-weight: 4
+weight: 40
 bookCollapseSection: true
 ---
