@@ -1,6 +1,6 @@
 ---
 title: "Méthodes et constructeurs"
-weight: 5
+weight: 50
 ---
 
 # La conception de méthodes/fonctions et leur appel

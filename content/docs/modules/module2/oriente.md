@@ -1,6 +1,6 @@
 ---
 title: "Création d'une classe en Java"
-weight: 2
+weight: 20
 ---
 
 # Création d'une classe en Java

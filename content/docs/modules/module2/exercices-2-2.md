@@ -1,6 +1,6 @@
 ---
 title: "Exercices sur les classes et méthodes"
-weight: 6
+weight: 60
 ---
 
 # Questions/Réponses

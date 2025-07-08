@@ -1,6 +1,6 @@
 ---
 title: "Travail noté 2"
-weight: 8
+weight: 80
 ---
 
 # Travail noté 2 - Les types, opérateurs et méthodes

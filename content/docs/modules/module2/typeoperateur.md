@@ -1,6 +1,6 @@
 ---
 title: "Introduction aux types de base et à leurs opérateurs"
-weight: 3
+weight: 30
 ---
 
 # Introduction aux types de base et à leurs opérateurs

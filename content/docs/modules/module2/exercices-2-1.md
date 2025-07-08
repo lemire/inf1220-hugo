@@ -1,6 +1,6 @@
 ---
 title: "Exercices sur les classes, les variables, les types et les opérateurs"
-weight: 4
+weight: 40
 ---
 
 

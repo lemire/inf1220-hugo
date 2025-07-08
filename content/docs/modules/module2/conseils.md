@@ -1,6 +1,6 @@
 ---
 title: "Recommandations"
-weight: 7
+weight: 70
 ---
 
 # Recommandations
