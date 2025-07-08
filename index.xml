@@ -54,36 +54,7 @@ en ligne de ce type.&lt;/p>
  Le modèle de l’Université TÉLUQ
  &lt;a class="anchor" href="#le-mod%c3%a8le-de-luniversit%c3%a9-t%c3%a9luq">#&lt;/a>
 &lt;/h2>
-&lt;p>Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.&lt;/p></description></item><item><title>Préparation de l’espace de travail</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</guid><description>&lt;h1 id="préparation-de-lespace-de-travail">
- Préparation de l&amp;rsquo;espace de travail
- &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail">#&lt;/a>
-&lt;/h1>
-&lt;p>Comme langage de support à l&amp;rsquo;introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l&amp;rsquo;introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d&amp;rsquo;instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d&amp;rsquo;exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d&amp;rsquo;exploitation et aux processeurs spécifiques de l&amp;rsquo;ordinateur.&lt;/p></description></item><item><title>Création d'une classe en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="création-dune-classe-en-java">
- Création d&amp;rsquo;une classe en Java
- &lt;a class="anchor" href="#cr%c3%a9ation-dune-classe-en-java">#&lt;/a>
-&lt;/h1>
-&lt;p>Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
- Java pas à pas
- &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
-&lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p>
-&lt;ul>
-&lt;li>Chapitre 2. Introduction à la programmation Java&lt;/li>
-&lt;li>Chapitre 4. Types et expressions Java&lt;/li>
-&lt;/ul>
-&lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
-&lt;p>Après votre lecture, répondez aux questions suivantes.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Chapitre 2. Introduction à la programmation Java&lt;/p>
-&lt;ul>
-&lt;li>Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li>
-&lt;li>Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li>
-&lt;li>Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Chapitre 4. Types et expressions Java&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
+&lt;p>Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
  Le polymorphisme
  &lt;a class="anchor" href="#le-polymorphisme">#&lt;/a>
 &lt;/h1>
@@ -140,15 +111,7 @@ Certaines questions sont difficiles, et il est normal de ne pas toutes les réus
 &lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
 vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p>
 &lt;/blockquote>
-&lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
- Introduction aux types de base et à leurs opérateurs
- &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="mise-en-garde-pédagogique">
- Mise en garde pédagogique
- &lt;a class="anchor" href="#mise-en-garde-p%c3%a9dagogique">#&lt;/a>
-&lt;/h2>
-&lt;p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+&lt;p>Si vous ne faites pas honnêtement les exercices et les lectures dans ce cours, il est possible que vous n’arriviez pas à faire les travaux notés et les examens.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
 &lt;/h1>
@@ -186,14 +149,7 @@ utilisé côté serveur grâce à sa robustesse, sa portabilité et la richesse 
  Concepts de base
  &lt;a class="anchor" href="#concepts-de-base">#&lt;/a>
 &lt;/h2>
-&lt;p>Un serveur web est un programme qui reçoit les requêtes des clients (navigateurs) et renvoie des réponses (pages HTML, données JSON, etc.). Le protocole de communication qui permet l’échange de données entre le navigateur (client) et le serveur web est le HTTP. Toutes les requêtes et réponses web transitent via HTTP ou HTTPS (version sécurisée).&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
- Exercices sur les classes, les variables, les types et les opérateurs
- &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
-&lt;/h1>
-&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l&amp;rsquo;aide de tout le matériel et de l&amp;rsquo;Internet, de résoudre le problème. Prévoyez jusqu&amp;rsquo;à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
+&lt;p>Un serveur web est un programme qui reçoit les requêtes des clients (navigateurs) et renvoie des réponses (pages HTML, données JSON, etc.). Le protocole de communication qui permet l’échange de données entre le navigateur (client) et le serveur web est le HTTP. Toutes les requêtes et réponses web transitent via HTTP ou HTTPS (version sécurisée).&lt;/p></description></item><item><title>Les ordinateurs et leurs langages</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/ordinateurs/</guid><description>&lt;h1 id="court-historique-des-langages-de-programmation">
  Court historique des langages de programmation
  &lt;a class="anchor" href="#court-historique-des-langages-de-programmation">#&lt;/a>
 &lt;/h1>
@@ -209,31 +165,13 @@ beaucoup moins de temps.&lt;/p>
  &lt;a class="anchor" href="#les-algorithmes">#&lt;/a>
 &lt;/h1>
 &lt;blockquote>
-&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Méthodes et constructeurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</guid><description>&lt;h1 id="la-conception-de-méthodesfonctions-et-leur-appel">
- La conception de méthodes/fonctions et leur appel
- &lt;a class="anchor" href="#la-conception-de-m%c3%a9thodesfonctions-et-leur-appel">#&lt;/a>
-&lt;/h1>
-&lt;p>La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.&lt;/p></description></item><item><title>Examen</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</guid><description>&lt;h1 id="examen-final">
+&lt;p>&lt;em>The etymology of program is pro ‘before’ + graphein ‘write’. I think of programming as making a plan that will be executed in the future, something that every human does from time to time. The hard part is that a computer has to execute the plan, and computers are incredibly stupid. Dealing with such stupidity requires more patience and determination than many people have.&lt;/em> (Peter Turney)&lt;/p></description></item><item><title>Examen</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/examen/</guid><description>&lt;h1 id="examen-final">
  Examen final
  &lt;a class="anchor" href="#examen-final">#&lt;/a>
 &lt;/h1>
 &lt;p>L&amp;rsquo;objectif principal de l&amp;rsquo;examen est de valider le savoir-faire que vous avez intégré tout au long du cours. Comme la question revient sans cesse, soyons clair sur ce point: &lt;strong>l'examen couvre toute la matière du cours.&lt;/strong> &lt;/p>
 &lt;p>Prenez note qu'&lt;a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors de l'examen&lt;/a>. Cependant vous devez produire vos propres réponses et vos propres analyses.&lt;/p>
-&lt;p>Si vous ne maîtrisez pas la matière du cours, vous ne réussirez probablement pas l'examen. Prenez le temps d'étudier, de réviser et de poser des questions le cas échéant. Pratiquez-vous à programmer.&lt;/p></description></item><item><title>Exercices sur les classes et méthodes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</guid><description>&lt;h1 id="questionsréponses">
- Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h1>
-&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="comment-faire-ces-exercices-">
- Comment faire ces exercices ?
- &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
-&lt;/h2>
-&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
+&lt;p>Si vous ne maîtrisez pas la matière du cours, vous ne réussirez probablement pas l'examen. Prenez le temps d'étudier, de réviser et de poser des questions le cas échéant. Pratiquez-vous à programmer.&lt;/p></description></item><item><title>Les algorithmes : conception et syntaxe</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes2/</guid><description>&lt;h1 id="les-algorithmes--conception-et-syntaxe">
  Les algorithmes : conception et syntaxe
  &lt;a class="anchor" href="#les-algorithmes--conception-et-syntaxe">#&lt;/a>
 &lt;/h1>
@@ -267,23 +205,7 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
 &lt;p>Nous avons déjà présenté les notions d&amp;rsquo;embranchement et de boucle. C&amp;rsquo;est ce que nous appelons des structures de contrôle. Il est essentiel
 d&amp;rsquo;en comprendre la fonction.&lt;/p>
 &lt;p>On peut concevoir un algorithme qui ne comprend qu&amp;rsquo;une liste d&amp;rsquo;opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d&amp;rsquo;éléments, et on risque de devoir répéter beaucoup d&amp;rsquo;opérations.
-Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
- Recommandations
- &lt;a class="anchor" href="#recommandations">#&lt;/a>
-&lt;/h1>
-&lt;p>Il est important d&amp;rsquo;écrire du code lisible et bien documenté. Il s&amp;rsquo;agit d&amp;rsquo;un compétence
-nécessaire pour développer du logiciel en pratique.&lt;/p>
-&lt;h2 id="importance-de-la-lisibilité-du-code-en-java">
- Importance de la lisibilité du code en Java
- &lt;a class="anchor" href="#importance-de-la-lisibilit%c3%a9-du-code-en-java">#&lt;/a>
-&lt;/h2>
-&lt;p>La lisibilité du code est essentielle en Java pour faciliter la maintenance et la collaboration.
-Un code lisible réduit les erreurs et permet à d&amp;rsquo;autres développeurs (ou à vous-même dans le
-futur) de comprendre rapidement l&amp;rsquo;intention du programme. Pour y parvenir, il faut adopter
-des conventions de nommage claires et commenter judicieusement. Les normes de codage,
-comme celles définies par Oracle ou Google, standardisent la structure du code, rendant
-les projets cohérents. Une variable bien nommée, comme &lt;code>nombreEtudiants&lt;/code> au lieu de &lt;code>n&lt;/code>,
-et des commentaires explicatifs améliorent la compréhension.&lt;/p></description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/evaluation/</guid><description>&lt;h1 id="évaluation">
+Les structures de contrôle permettent à l&amp;rsquo;algorithme de faire des choix de traitement en fonction de conditions. Une structure de contrôle correspond à l&amp;rsquo;action de tester des variables de contrôle et selon les résultats d&amp;rsquo;effectuer des opérations ou non.&lt;/p></description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/evaluation/</guid><description>&lt;h1 id="évaluation">
  Évaluation
  &lt;a class="anchor" href="#%c3%a9valuation">#&lt;/a>
 &lt;/h1>
@@ -668,11 +590,7 @@ Planifiez bien votre temps !&lt;/p></description></item><item><title>Les probl�
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;em>Raccourcis d’affectation : x op= y (ex. x += 1 incrémente x)&lt;/em>&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
- Travail noté 2 - Les types, opérateurs et méthodes
- &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
-&lt;/h1>
-&lt;p>Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.&lt;/p></description></item><item><title>Complexité algorithmique</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/complex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/complex/</guid><description>&lt;h1 id="complexité-algorithmique">
+&lt;p>&lt;em>Raccourcis d’affectation : x op= y (ex. x += 1 incrémente x)&lt;/em>&lt;/p></description></item><item><title>Complexité algorithmique</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/complex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/complex/</guid><description>&lt;h1 id="complexité-algorithmique">
  Complexité algorithmique
  &lt;a class="anchor" href="#complexit%c3%a9-algorithmique">#&lt;/a>
 &lt;/h1>
@@ -706,21 +624,21 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
 
 
 
- &lt;div id="java-runner-1751986498636421319">
+ &lt;div id="java-runner-1751988016198187442">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751986498636421319 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751986498636421319 .export-form { margin-bottom:0; }
- #java-runner-1751986498636421319 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751986498636421319 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751986498636421319 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751986498636421319 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751986498636421319 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751988016198187442 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751988016198187442 .export-form { margin-bottom:0; }
+ #java-runner-1751988016198187442 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751988016198187442 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751988016198187442 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751988016198187442 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751988016198187442 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751986498636421319-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751988016198187442-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
@@ -736,14 +654,14 @@ public class ExemplesMath {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751986498636421319-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751988016198187442-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751986498636421319');
+ var root = document.getElementById('java-runner-1751988016198187442');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -965,21 +883,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1751986498636464821">
+ &lt;div id="java-runner-1751988016198264938">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751986498636464821 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751986498636464821 .export-form { margin-bottom:0; }
- #java-runner-1751986498636464821 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751986498636464821 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751986498636464821 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751986498636464821 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751986498636464821 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751988016198264938 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751988016198264938 .export-form { margin-bottom:0; }
+ #java-runner-1751988016198264938 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751988016198264938 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751988016198264938 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751988016198264938 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751988016198264938 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751986498636464821-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751988016198264938-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
@@ -1016,14 +934,14 @@ public class ExemplesString {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751986498636464821-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751988016198264938-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751986498636464821');
+ var root = document.getElementById('java-runner-1751988016198264938');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1245,21 +1163,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1751986498636511659">
+ &lt;div id="java-runner-1751988016198337543">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751986498636511659 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751986498636511659 .export-form { margin-bottom:0; }
- #java-runner-1751986498636511659 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751986498636511659 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751986498636511659 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751986498636511659 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751986498636511659 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751988016198337543 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751988016198337543 .export-form { margin-bottom:0; }
+ #java-runner-1751988016198337543 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751988016198337543 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751988016198337543 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751988016198337543 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751988016198337543 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751986498636511659-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751988016198337543-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
@@ -1278,14 +1196,14 @@ public class ExempleZero {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751986498636511659-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751988016198337543-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751986498636511659');
+ var root = document.getElementById('java-runner-1751988016198337543');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1507,21 +1425,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1751986498636547687">
+ &lt;div id="java-runner-1751988016198410099">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
  &lt;style>
- #java-runner-1751986498636547687 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1751986498636547687 .export-form { margin-bottom:0; }
- #java-runner-1751986498636547687 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1751986498636547687 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1751986498636547687 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1751986498636547687 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1751986498636547687 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1751988016198410099 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1751988016198410099 .export-form { margin-bottom:0; }
+ #java-runner-1751988016198410099 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1751988016198410099 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1751988016198410099 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1751988016198410099 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1751988016198410099 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style>
- &lt;form class="export-form java-runner-1751986498636547687-form" style="margin-bottom:0;">
+ &lt;form class="export-form java-runner-1751988016198410099-form" style="margin-bottom:0;">
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
  &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
@@ -1536,14 +1454,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea>&lt;/div>
  &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1751986498636547687-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
+ &lt;button type="submit" class="export-btn java-runner-1751988016198410099-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
  &lt;/form>
  &lt;div class="export-result">&lt;/div>
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
  &lt;script>(function(){
- var root = document.getElementById('java-runner-1751986498636547687');
+ var root = document.getElementById('java-runner-1751988016198410099');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1760,7 +1678,11 @@ public class ExerciceForFor {
 &lt;/div>
 &lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p></description></item><item><title>Manuel</title><link>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/extra/manuel/</guid><description>&lt;p>Nous utilisons un manuel d&amp;rsquo;introduction à la programmation Java intitulé &lt;em>Java pas à pas&lt;/em> par Robert Godin et Daniel Lemire. Vous pouvez &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf">charger le document PDF&lt;/a> dès maintenant.&lt;/p>
 &lt;blockquote>
-&lt;p>Cet ouvrage présente les concepts de base de la programmation et du langage Java. Le livre s’adresse à un auditoire très large, aussi bien un débutant qui désire apprendre la programmation pour le plaisir qu’à un étudiant qui entreprend une carrière d’informaticien. L’approche proposée introduit graduellement les concepts de base de la programmation et leur incarnation dans le langage Java à l’aide d’une série d’exemples et d’exercices.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
+&lt;p>Cet ouvrage présente les concepts de base de la programmation et du langage Java. Le livre s’adresse à un auditoire très large, aussi bien un débutant qui désire apprendre la programmation pour le plaisir qu’à un étudiant qui entreprend une carrière d’informaticien. L’approche proposée introduit graduellement les concepts de base de la programmation et leur incarnation dans le langage Java à l’aide d’une série d’exemples et d’exercices.&lt;/p></description></item><item><title>Préparation de l’espace de travail</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</guid><description>&lt;h1 id="préparation-de-lespace-de-travail">
+ Préparation de l&amp;rsquo;espace de travail
+ &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail">#&lt;/a>
+&lt;/h1>
+&lt;p>Comme langage de support à l&amp;rsquo;introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l&amp;rsquo;introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d&amp;rsquo;instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d&amp;rsquo;exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d&amp;rsquo;exploitation et aux processeurs spécifiques de l&amp;rsquo;ordinateur.&lt;/p></description></item><item><title>Exercices sur les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/exercices/</guid><description>&lt;h1 id="exercices-sur-les-algorithmes-et-problèmes">
  Exercices sur les algorithmes et problèmes
  &lt;a class="anchor" href="#exercices-sur-les-algorithmes-et-probl%c3%a8mes">#&lt;/a>
 &lt;/h1>
@@ -1783,7 +1705,32 @@ etc.&lt;/p>
 messages reçus des sentiments. Dans un contexte professionnel, évitez d&amp;rsquo;écrire un courriel alors que vous êtes énervé.&lt;/p>
 &lt;p>Choisissez les destinataires de votre courriel avec soin. Il est pratiquement toujours mal avisé de transmettre un
 courriel à un grand groupe, à moins que le courriel soit une communication formelle. Dans le doute, écrivez un courriel
-à un seul destinataire.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
+à un seul destinataire.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+ Java pas à pas
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
+&lt;/h1>
+&lt;p>Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p>
+&lt;ul>
+&lt;li>Chapitre 2. Introduction à la programmation Java&lt;/li>
+&lt;li>Chapitre 4. Types et expressions Java&lt;/li>
+&lt;/ul>
+&lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
+&lt;p>Après votre lecture, répondez aux questions suivantes.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Chapitre 2. Introduction à la programmation Java&lt;/p>
+&lt;ul>
+&lt;li>Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li>
+&lt;li>Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li>
+&lt;li>Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Chapitre 4. Types et expressions Java&lt;/p></description></item><item><title>Création d'une classe en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="création-dune-classe-en-java">
+ Création d&amp;rsquo;une classe en Java
+ &lt;a class="anchor" href="#cr%c3%a9ation-dune-classe-en-java">#&lt;/a>
+&lt;/h1>
+&lt;p>Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
  GitHub (optionnel)
  &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
 &lt;/h1>
@@ -1792,7 +1739,15 @@ courriel à un grand groupe, à moins que le courriel soit une communication for
  &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
 &lt;/h1>
 &lt;p>Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong>if-else&lt;/strong> et &lt;strong>switch-case&lt;/strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p>
-&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
+ Introduction aux types de base et à leurs opérateurs
+ &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="mise-en-garde-pédagogique">
+ Mise en garde pédagogique
+ &lt;a class="anchor" href="#mise-en-garde-p%c3%a9dagogique">#&lt;/a>
+&lt;/h2>
+&lt;p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
  Les structures itératives
  &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
 &lt;/h1>
@@ -1800,7 +1755,14 @@ courriel à un grand groupe, à moins que le courriel soit une communication for
  String
  &lt;a class="anchor" href="#string">#&lt;/a>
 &lt;/h1>
-&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
+ Exercices sur les classes, les variables, les types et les opérateurs
+ &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
+&lt;/h1>
+&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l&amp;rsquo;aide de tout le matériel et de l&amp;rsquo;Internet, de résoudre le problème. Prévoyez jusqu&amp;rsquo;à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
  Les structures de données de base
  &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
 &lt;/h1>
@@ -1818,7 +1780,25 @@ Faisons-en rapidement le tour. En Java, les types de données sont organisés en
 &lt;/h1>
 &lt;p>La programmation fonctionnelle tire ses origines des mathématiques, en particulier du calcul lambda développé par Alonzo Church dans les années 1930. Ce formalisme a posé les bases théoriques pour décrire les calculs comme des fonctions pures, sans effets de bord. Dans les années 1950, John McCarthy a créé Lisp, le premier langage explicitement inspiré de ces idées, introduisant des concepts comme les fonctions de première classe. Les années 1980 ont vu l’émergence de langages comme Haskell, qui a mis l’accent sur les fonctions pures et l’évaluation paresseuse.
 L&amp;rsquo;évaluation paresseuse est une stratégie en programmation fonctionnelle où l&amp;rsquo;évaluation d&amp;rsquo;une expression est retardée jusqu&amp;rsquo;à ce que sa valeur soit réellement nécessaire. Cela permet d&amp;rsquo;optimiser les performances en évitant les calculs inutiles et de supporter des structures de données potentiellement infinies.
-Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p></description></item><item><title>Méthodes et constructeurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</guid><description>&lt;h1 id="la-conception-de-méthodesfonctions-et-leur-appel">
+ La conception de méthodes/fonctions et leur appel
+ &lt;a class="anchor" href="#la-conception-de-m%c3%a9thodesfonctions-et-leur-appel">#&lt;/a>
+&lt;/h1>
+&lt;p>La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.&lt;/p></description></item><item><title>Exercices sur les classes et méthodes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</guid><description>&lt;h1 id="questionsréponses">
+ Questions/Réponses
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
+&lt;/h1>
+&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="comment-faire-ces-exercices-">
+ Comment faire ces exercices ?
+ &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
+&lt;/h2>
+&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
  Exercices sur les structures de contrôle, les structures de données, les structures itératives
  &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
 &lt;/h1>
@@ -1834,11 +1814,31 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Les exceptions
  &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
 &lt;/h1>
-&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+ Recommandations
+ &lt;a class="anchor" href="#recommandations">#&lt;/a>
+&lt;/h1>
+&lt;p>Il est important d&amp;rsquo;écrire du code lisible et bien documenté. Il s&amp;rsquo;agit d&amp;rsquo;un compétence
+nécessaire pour développer du logiciel en pratique.&lt;/p>
+&lt;h2 id="importance-de-la-lisibilité-du-code-en-java">
+ Importance de la lisibilité du code en Java
+ &lt;a class="anchor" href="#importance-de-la-lisibilit%c3%a9-du-code-en-java">#&lt;/a>
+&lt;/h2>
+&lt;p>La lisibilité du code est essentielle en Java pour faciliter la maintenance et la collaboration.
+Un code lisible réduit les erreurs et permet à d&amp;rsquo;autres développeurs (ou à vous-même dans le
+futur) de comprendre rapidement l&amp;rsquo;intention du programme. Pour y parvenir, il faut adopter
+des conventions de nommage claires et commenter judicieusement. Les normes de codage,
+comme celles définies par Oracle ou Google, standardisent la structure du code, rendant
+les projets cohérents. Une variable bien nommée, comme &lt;code>nombreEtudiants&lt;/code> au lieu de &lt;code>n&lt;/code>,
+et des commentaires explicatifs améliorent la compréhension.&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
  La récursivité
  &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
 &lt;/h1>
-&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
+&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
+ Travail noté 2 - Les types, opérateurs et méthodes
+ &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
+&lt;/h1>
+&lt;p>Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
  Exercices sur les exceptions et la récursivité
  &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9">#&lt;/a>
 &lt;/h1>
