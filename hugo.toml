@@ -3,7 +3,7 @@ languageCode = 'fr'
 defaultContentLanguage = 'fr'
 
 title = "INF 1220 - Introduction à la programmation"
-theme = 'hugo-book'
+theme = 'hugo-book-teluq'
 
 # --- Paramètres du thème hugo-book ---
 [params]
