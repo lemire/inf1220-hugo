@@ -421,6 +421,8 @@ public class StreamDemo {
 }
 {{</inlineJava>}}
 
+Cet exemple illustre un autre concept intéressant. Le même fichier Java peut comporter plus d'une classe
+(ici Personne et StreamDemo), tant qu'une seule classe publique y est apparaît.
 
 ### Conversion vers les types primitifs
 Les flux standards opèrent sur des objets, mais pour optimiser les performances avec les types primitifs, Java propose des flux spécialisés : IntStream, LongStream et DoubleStream. Par exemple, un IntStream manipule directement des valeurs int.

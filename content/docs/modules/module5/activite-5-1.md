@@ -230,6 +230,9 @@ public class Main {
 }
 {{</inlineJava>}}
 
+Cette exemple illustre que dans un même fichier Java, nous pouvons avoir plusieurs classes tant qu'une seule classe est publique.
+Ainsi il est possible de définir les classes Chien, Chat et Animal dans un seul fichier.
+
 
 La méthode getClass(), définie dans la classe Object, retourne l'objet de type Class représentant la classe exacte de l'instance à l'exécution. Contrairement à instanceof, qui teste la compatibilité avec un type ou ses sous-types, getClass() fournit une information précise sur la classe réelle de l'objet, sans tenir compte de la hiérarchie d'héritage. Par exemple, appeler getClass() sur un objet permet d'obtenir des métadonnées sur sa classe, comme son nom ou ses méthodes, via l'API de réflexion de Java. Cette méthode est particulièrement utile dans des scénarios nécessitant une introspection, comme les frameworks de sérialisation ou de mapping. Toutefois, son utilisation doit être prudente, car elle peut rendre le code moins flexible en liant étroitement le comportement à des classes spécifiques.
 
@@ -610,7 +613,7 @@ public class NiveauxJoueurs extends AbstractMap<String, Integer> {
         NiveauxJoueurs niveaux = new NiveauxJoueurs();
         System.out.println("Niveau d'Alice : " + niveaux.get("Alice")); // Affiche 3
         System.out.println("Contient Bob ? " + niveaux.containsKey("Bob")); // Affiche true
-        for (Map.Entry<String, Integer> entree : niveaux) {
+        for (Map.Entry<String, Integer> entree : niveaux.entrySet()) {
             System.out.println(entree.getKey() + " : " + entree.getValue());
         }
     }
@@ -619,6 +622,8 @@ public class NiveauxJoueurs extends AbstractMap<String, Integer> {
 
 Dans cet exemple, `NiveauxJoueurs` étend `AbstractMap` et implémente la méthode abstraite `entrySet`, qui retourne un ensemble d’entrées clé-valeur. Les autres méthodes de `Map`, comme `get` et `containsKey`, sont héritées de `AbstractMap` et fonctionnent automatiquement grâce à l’implémentation d’`entrySet`. Cet exemple illustre comment `AbstractMap` permet de créer un mapping personnalisé avec un minimum de code, tout en respectant le contrat de l’interface `Map`.
 
+La boucle `for` sur `niveaux.entrySet()` illustre comment il est possible d'itérer sur les clé/valeur d'une classe de type `AbstractMap`. Le
+mécanisme est similaire à l'itération sur les tableaux.
 
 Les classes `AbstractList` et `AbstractMap` incarnent les principes de l’héritage et de l’abstraction en Java. En tant que classes abstraites, elles ne peuvent pas être instanciées directement, mais elles servent de superclasses pour des implémentations concrètes. Leur rôle est double : elles réduisent la duplication de code en fournissant des implémentations génériques, et elles garantissent que les sous-classes respectent les contrats des interfaces `List` et `Map`. Cette conception modulaire permet aux développeurs de se concentrer sur les aspects spécifiques de leurs implémentations, tout en bénéficiant d’une base robuste.
 

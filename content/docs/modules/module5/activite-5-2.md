@@ -255,9 +255,9 @@ Dans cette dernière classe, nous avons donc redéfini la méthode afin de spéc
 Pour illustrer davantage le polymorphisme par héritage, considérons une application simulant des instruments de musique. Une superclasse Instrument définit une méthode jouer, que des sous-classes comme Guitare et Piano redéfinissent pour produire des sons spécifiques. En manipulant ces objets via une référence de type Instrument, le comportement propre à chaque sous-classe est préservé.
 
 
-{{<inlineJava path="Instrument.java" lang="java">}}
+{{<inlineJava path="Orchestre.java" lang="java">}}
 
-public class Instrument {
+class Instrument {
     public void jouer() {
         System.out.println("L'instrument produit un son générique.");
     }
