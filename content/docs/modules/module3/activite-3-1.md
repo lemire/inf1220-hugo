@@ -109,13 +109,13 @@ char, byte, short, int, ainsi que leurs classes enveloppes (Character, Byte, Sho
 
 ```java  {style=github}
 switch (i % 2) {
-            case 0:
-                System.out.println("C'est un nombre pair");
-                break;
-            case 1:
-                System.out.println("C'est un nombre impair");
-                break;
-        }
+    case 0:
+        System.out.println("C'est un nombre pair");
+        break;
+    case 1:
+        System.out.println("C'est un nombre impair");
+        break;
+}
 ```
 
 Considérons un exemple avec une chaîne de caractères.
@@ -148,7 +148,7 @@ class SwitchStringExemple {
 
 Dans cet exemple, l'instruction switch évalue une chaîne de caractères représentant un jour de la semaine. Selon la valeur de jour, une variable typeJour est définie pour indiquer si c'est un jour ouvrable, un week-end ou un jour invalide. L'instruction break est utilisée pour éviter la traversée des cas.
 
-Voici un exemple avec un enum.
+Le prochain exemple illustre l'utilisation d'une énumération (enum) en Java, permettant de définir un ensemble de valeurs constantes pour représenter des couleurs de manière claire et structurée.
 
 {{<inlineJava path="GestionCouleurs.java" lang="java">}}
 public class GestionCouleurs {
@@ -197,8 +197,46 @@ public class GestionCouleurs {
 
 Dans le prochain exemple, une énumération Saison est définie avec quatre valeurs. L'instruction switch évalue une variable de type Saison et assigne une description textuelle à la variable description en fonction de la saison. Comme pour l'exemple précédent, break est utilisé pour terminer chaque cas.
 
-<p style="text-align: left; ">Le programme suivant montre l'utilisation de l'instruction switch. Il s'agit ici d'une banque qui définit quatre catégories de classes afin de donner des commissions à ses employés. Pour la classe 1, nous avons un taux de commission de 2 %, de 3,5 % pour la classe 2, de 5 % pour la classe 3 et de 0 % pour la classe 4.</p> 
-<p style="text-align: left; ">Voici le programme qui permet de réaliser cette opération :</p> 
+{{<inlineJava path="ExempleSaison.java" lang="java">}}
+public class ExempleSaison {
+    // Définition de l'énumération Saison
+    enum Saison {
+        PRINTEMPS, ETE, AUTOMNE, HIVER
+    }
+
+    public static void main(String[] args) {
+        // Déclaration d'une variable de type Saison
+        Saison saisonActuelle = Saison.AUTOMNE;
+        String description;
+
+        // Utilisation de switch pour assigner une description
+        switch (saisonActuelle) {
+            case PRINTEMPS:
+                description = "Les fleurs éclosent et les températures se réchauffent.";
+                break;
+            case ETE:
+                description = "Il fait chaud et les journées sont longues.";
+                break;
+            case AUTOMNE:
+                description = "Les feuilles tombent et l'air devient frais.";
+                break;
+            case HIVER:
+                description = "Il fait froid et il peut neiger.";
+                break;
+            default:
+                description = "Saison inconnue.";
+                break;
+        }
+
+        // Affichage du résultat
+        System.out.println("Saison : " + saisonActuelle);
+        System.out.println("Description : " + description);
+    }
+}
+{{</inlineJava>}}
+
+
+Le programme suivant montre l'utilisation de l'instruction switch. Il s'agit ici d'une banque qui définit quatre catégories de classes afin de donner des commissions à ses employés. Pour la classe 1, nous avons un taux de commission de 2 %, de 3,5 % pour la classe 2, de 5 % pour la classe 3 et de 0 % pour la classe 4.
 
 ```java  {style=github}
 class SwitchExemple {
@@ -223,6 +261,9 @@ class SwitchExemple {
     }
 } 
 ```
+
+### Syntaxe switch-case avec des flèches
+
 
 La nouvelle syntaxe des expressions switch en Java, introduite avec Java 12 (JEP 325) et finalisée dans Java 14 (JEP 361), permet d'utiliser des flèches (->) pour rendre les instructions switch plus concises et de les transformer en expressions qui renvoient une valeur. Cette syntaxe améliore la lisibilité et réduit la verbosité par rapport au switch traditionnel.
 
@@ -275,7 +316,7 @@ class SwitchExemple {
 
 
 Cet exemple montre comment la nouvelle syntaxe simplifie le code tout en conservant la même fonctionnalité.
-Les différences entre la syntaxe traditionnelle et la nouvelle syntaxe des expressions switch résident principalement dans leur structure et leur comportement. Dans la syntaxe traditionnelle, le switch est une instruction qui exécute un bloc de code pour chaque clause case, nécessitant un break pour éviter la traversée des cas suivants (fall-through). Elle est verbeuse, car elle exige une variable temporaire pour stocker le résultat et des affectations explicites. En revanche, la nouvelle syntaxe utilise des flèches (->) pour associer directement une valeur ou un bloc à un cas, éliminant le besoin de break, car il n’y a pas de fall-through. De plus, le switch devient une expression qui renvoie une valeur, permettant une affectation directe, comme dans l’exemple où tauxCommission est initialisé en une ligne. La nouvelle syntaxe supporte également des cases multiples (séparés par des virgules) et le mot-clé yield pour renvoyer des valeurs depuis des blocs complexes, rendant le code plus concis, lisible et moins sujet aux erreurs.
+Les différences entre la syntaxe traditionnelle et la nouvelle syntaxe des expressions switch résident principalement dans leur structure et leur comportement. Dans la syntaxe traditionnelle, le switch est une instruction qui exécute un bloc de code pour chaque clause case, nécessitant un break pour éviter la traversée des cas suivants (fall-through). Elle est verbeuse, car elle exige une variable temporaire pour stocker le résultat et des affectations explicites. En revanche, la nouvelle syntaxe utilise des flèches (->) pour associer directement une valeur ou un bloc à un cas, éliminant le besoin de break. De plus, le switch devient une expression qui renvoie une valeur, permettant une affectation directe, comme dans l’exemple où tauxCommission est initialisé en une ligne. La nouvelle syntaxe supporte également des cases multiples (séparés par des virgules) et le mot-clé yield pour renvoyer des valeurs depuis des blocs complexes, rendant le code plus concis, lisible et moins sujet aux erreurs.
 
 ### Lecture optionnelle dans le livre de référence (Delannoy)
 
