@@ -13,13 +13,14 @@ En utilisant correctement ces idées, on peut rendre les programmes plus modulai
 ## L'héritage
 
 
-<p> <p align="left" style="text-align: justify;">Après avoir présenté les objets et les classes dans les leçons précédentes, nous abordons ici la notion d'héritage. Cette technique, appliquée à la programmation Java, permet de créer de nouvelles classes fondées sur celles qui existent déjà. Lorsque nous héritons d'une classe, nous réutilisons ses méthodes et champs, auxquels nous pouvons ajouter de nouveaux champs en vue de l'adapter à de nouvelles situations.</p> 
+Après avoir présenté les objets et les classes dans les leçons précédentes, nous abordons ici la notion d'héritage. Cette technique, appliquée à la programmation Java, permet de créer de nouvelles classes fondées sur celles qui existent déjà. Lorsque nous héritons d'une classe, nous réutilisons ses méthodes et champs, auxquels nous pouvons ajouter de nouveaux champs en vue de l'adapter à de nouvelles situations.
 
-<p><a id="intro" name="section1"></a></p>
 
 ## Classe - superclasse - sous-classe
-<p align="left" style="text-align: justify;">Pour illustrer ce concept, essayons de concevoir un jeu. Tous les jeux ont un nom, un but, un nombre de joueurs requis pour faire une partie, des règles à respecter… Nous pourrions donc envisager de créer une classe Jeu pour représenter les jeux. <br />Toutefois, les règles du jeu Tetris diffèrent de celles de Sudoku, et le nombre de joueurs d'une partie de football n'est pas le même que celui d'une partie de tennis… <br />Supposons que nous implantions une méthode jouer() pour la classe Jeu. Un joueur de tennis ne joue pas de la même façon qu'un joueur de football. Il est par conséquent impossible d'obtenir une implémentation de jouer() qui peut correspondre à tous les jeux.</p> 
-<p align="left" style="text-align: justify;">L'héritage est un mécanisme qui permet de résoudre ce genre de problème. En fait, nous spécifions dans la classe Jeu, appelée superclasse, l'ensemble des comportements communs à tous les jeux sans fournir une implémentation. Nous créons ensuite des sous-classes qui fournissent pour chaque jeu une implémentation appropriée. D'une manière générale, le format de déclaration d'une sous-classe est le suivant :</p> 
+
+Pour illustrer ce concept, essayons de concevoir un jeu. Tous les jeux ont un nom, un but, un nombre de joueurs requis pour faire une partie, des règles à respecter… Nous pourrions donc envisager de créer une classe Jeu pour représenter les jeux. <br />Toutefois, les règles du jeu Tetris diffèrent de celles de Sudoku, et le nombre de joueurs d'une partie de football n'est pas le même que celui d'une partie de tennis… <br />Supposons que nous implantions une méthode jouer() pour la classe Jeu. Un joueur de tennis ne joue pas de la même façon qu'un joueur de football. Il est par conséquent impossible d'obtenir une implémentation de jouer() qui peut correspondre à tous les jeux.
+
+L'héritage est un mécanisme qui permet de résoudre ce genre de problème. En fait, nous spécifions dans la classe Jeu, appelée superclasse, l'ensemble des comportements communs à tous les jeux sans fournir une implémentation. Nous créons ensuite des sous-classes qui fournissent pour chaque jeu une implémentation appropriée. D'une manière générale, le format de déclaration d'une sous-classe est le suivant&nbsp;:
 
 ```java  {style=github}
 public class SousClasse extends SuperClasse {
@@ -28,8 +29,9 @@ public class SousClasse extends SuperClasse {
 }
 ```
 
-<p align="left">Pour signifier l'héritage, nous employons le mot clé <em>extends.</em> Nous créons ainsi une classe qui dérive d'une classe existante, qui portera le nom de <em>superclasse,</em> et la nouvelle classe sera nommée <em>sous-classe</em>.</p> 
-<p align="left">Voici maintenant la façon de définir une classe Sudoku qui hérite de la superclasse Jeu :</p> 
+Pour signifier l'héritage, nous employons le mot clé <em>extends.</em> Nous créons ainsi une classe qui dérive d'une classe existante, qui portera le nom de <em>superclasse,</em> et la nouvelle classe sera nommée <em>sous-classe</em>.
+
+Voici maintenant la façon de définir une classe Sudoku qui hérite de la superclasse Jeu&nbsp;:
 
 ```java  {style=github}
 public class Sudoku extends Jeu {
@@ -38,7 +40,7 @@ public class Sudoku extends Jeu {
 }
 ```
 
-<p align="left">Dans l'exemple ci-dessus, la superclasse est la classe Jeu tandis que la sous-classe est la classe Sudoku. La sous-classe hérite automatiquement de tous les champs et de toutes méthodes de la superclasse. Voici quelques principes fondamentaux de l'héritage :</p> 
+<p align="left">Dans l'exemple ci-dessus, la superclasse est la classe Jeu tandis que la sous-classe est la classe Sudoku. La sous-classe hérite automatiquement de tous les champs et de toutes méthodes de la superclasse. Voici quelques principes fondamentaux de l'héritage&nbsp;:</p> 
 <ul> 
   <li>une sous-classe hérite de tous les membres de la superclasse. Les constructeurs n'étant pas considérés comme étant membres d'une classe, la sous-classe ne peut donc pas hériter des constructeurs de la superclasse; </li> 
   <li>la visibilité (<em>public ou private</em>) de n'importe quels membres de la superclasse est la même dans la sous-classe. Cela voudra dire que si une méthode ou un champ est déclaré <em>private</em> dans la superclasse, la sous-classe ne peut y avoir accès; </li> 
@@ -290,9 +292,67 @@ public class Sudoku extends Jeu {
   </li> 
 </ul> 
 
+
+### Conversion de type (cast)
+
+La conversion de type, ou *cast* en anglais, désigne en Java l'opération qui consiste à transformer explicitement un objet d'un type en un autre type compatible, généralement dans le cadre d'une hiérarchie d'héritage. Cette opération est nécessaire lorsque l'on souhaite traiter un objet d'une classe plus générale (superclasse) comme un objet d'une classe plus spécifique (sous-classe), ou vice versa. Le *cast* permet ainsi d'accéder aux membres spécifiques de la sous-classe qui ne sont pas disponibles dans la superclasse. Il existe deux types principaux de *cast* : le *cast* descendant (*downcast*), qui convertit un type général en un type plus spécifique, et le *cast* ascendant (*upcast*), qui convertit un type spécifique en un type plus général, bien que ce dernier soit souvent implicite.
+
+Le *cast* descendant est l'opération la plus courante et nécessite une syntaxe explicite, car elle peut entraîner des erreurs à l'exécution si l'objet n'est pas réellement une instance du type cible. Pour effectuer un *cast*, on utilise le nom de la classe cible entre parenthèses avant l'objet à convertir. Cependant, avant de procéder à un *cast* descendant, il est prudent de vérifier le type de l'objet avec l'opérateur *instanceof* pour éviter une exception de type *ClassCastException*. Le *cast* est particulièrement utile dans des contextes où le polymorphisme est utilisé, par exemple lorsque des objets de différentes sous-classes sont manipulés via une référence de la superclasse.
+
+
+Imaginons une application de gestion d'animaux dans un zoo, où une classe *Animal* est la superclasse et *Lion* une sous-classe qui hérite d'*Animal*. La classe *Lion* possède une méthode spécifique *rugir()* qui n'existe pas dans *Animal*. Si nous avons une référence de type *Animal* pointant vers un objet *Lion*, un *cast* est nécessaire pour appeler *rugir()*.
+
+
+shit
+```java {style=github}
+class Animal {
+    public void manger() {
+        System.out.println("L'animal mange.");
+    }
+}
+
+class Lion extends Animal {
+    public void rugir() {
+        System.out.println("Le lion rugit : Roooar !");
+    }
+}
+
+public class Zoo {
+    public static void main(String[] args) {
+        // Upcast implicite : un Lion est assigné à une référence Animal
+        Animal animal = new Lion();
+        
+        // Appel d'une méthode commune
+        animal.manger(); // Affiche : L'animal mange.
+        
+        // Vérification avant cast descendant
+        if (animal instanceof Lion) {
+            // Cast explicite pour accéder à la méthode rugir()
+            Lion lion = (Lion) animal;
+            lion.rugir(); // Affiche : Le lion rugit : Roooar !
+        } else {
+            System.out.println("Cet animal n'est pas un lion.");
+        }
+        
+        // Exemple avec un animal qui n'est pas un Lion
+        Animal autreAnimal = new Animal();
+        if (autreAnimal instanceof Lion) {
+            Lion autreLion = (Lion) autreAnimal; // Ne sera pas exécuté
+            autreLion.rugir();
+        } else {
+            System.out.println("Cet animal n'est pas un lion.");
+        }
+    }
+}
+```
+
+Dans cet exemple, l'*upcast* est implicite lorsque nous assignons un objet *Lion* à une variable de type *Animal*. Cela ne pose aucun problème, car un *Lion* est un *Animal*. Cependant, pour appeler la méthode *rugir()*, qui est spécifique à *Lion*, nous devons effectuer un *cast* descendant explicite avec *(Lion)*. La vérification avec *instanceof* garantit que le *cast* est sûr, évitant une *ClassCastException*. Lors de l'exécution, le premier *cast* réussit et affiche "Le lion rugit : Roooar !", tandis que le second échoue car *autreAnimal* n'est pas un *Lion*, affichant "Cet animal n'est pas un lion.".
+
 ### Protection des membres
-<p align="left" style="text-align: justify;">Nous connaissons déjà les mots-clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.</p> 
-<p align="left" style="text-align: justify;">Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant :</p> 
+
+Nous connaissons déjà les mots-clés <em>public</em> et <em>private</em> qui sont utilisés pour indiquer si les membres d'une classe sont visibles ou non à l'extérieur de cette classe. Quand nous héritons d'une classe, tous les membres publics de la superclasse sont visibles pour les sous-classes, mais pas les membres privés. Ces membres privés sont des membres des sous-classes, mais nous ne pouvons pas accéder à ces membres privés directement à partir des sous-classes.
+
+Java nous fournit une troisième option quant à la visibilité des membres d'une classe. Nous pouvons ainsi créer des membres protégés d'une classe avec le mot clé<em> protected</em>. Ainsi les membres <em>protected</em> de la superclasse sont visibles pour les sous-classes, mais pas pour les autres classes. Considérons l'exemple suivant&nbsp;:
 
 ```java  {style=github}
 class Jeu {
@@ -313,10 +373,8 @@ public class Sudoku extends Jeu {
     }
 }
 ```
-
-<p style="text-align: justify;">Dans l'exemple ci-dessus, les méthodes <em>getnomdujeu</em> et <em>setnomdujeu</em> sont déclarées <em>protected</em> et donc visibles </p> 
-<p style="text-align: justify;">à la sous-classe Sudoku. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.</p> 
-<p style="text-align: justify;"> </p> 
+Dans l'exemple ci-dessus, les méthodes <em>getnomdujeu</em> et <em>setnomdujeu</em> sont déclarées <em>protected</em> et donc visibles
+ à la sous-classe Sudoku. Ces méthodes sont seulement visibles pour les classes qui héritent de la classe Jeu.
 
 ## Utilisation des mots-clés this et super dans une sous-classe
 
@@ -371,8 +429,9 @@ public class Sudoku {
 }
 ```
 
-<p dir="ltr" style="text-align: justify;">Quand nous voulons nous référer à un champ ou à une méthode qui appartient à une classe de base, nous utilisons le mot clé <em>super</em>. Cela fonctionne de la même façon qu'avec <em>this,</em> mais super renvoie à une instance de la classe de base au lieu de celle de la classe courante.</p> 
-<p dir="ltr" style="text-align: justify;">Considérons les deux classes suivantes :</p> 
+Quand nous voulons nous référer à un champ ou à une méthode qui appartient à une classe de base, nous utilisons le mot clé <em>super</em>. Cela fonctionne de la même façon qu'avec <em>this,</em> mais super renvoie à une instance de la classe de base au lieu de celle de la classe courante.
+
+Considérons les deux classes suivantes&nbsp;:
 
 ```java  {style=github}
 class Jeu {
@@ -418,12 +477,12 @@ public class Sudoku extends Jeu {
 }
 ```
 
-<p>Cet exemple montre comment appeler le constructeur de la superclasse.</p>
-
-<p><a id="intro" name="section2"></a></p>
+Cet exemple montre comment appeler le constructeur de la superclasse.
 
 ## Classes abstraites
-<p>Les classes abstraites permettent de créer des concepts de haut-niveau, ne pouvant être instanciés et rendant obligatoire la conception de sous-classes pour leur utilisation. Les classes abstraites sont donc souvent utilisées dans des API ou autres bibliothèques de code.  Afin de rendre possible la redéfinition de méthode par héritage, les méthodes d'une superclasse doivent être déclarées avec le modificateur <em>abstract</em>. Ainsi, une classe abstraite est une classe qui contient des méthodes abstraites. L'intérêt de ceci est de rendre la classe «&nbsp;héritable&nbsp;». <br />La sous-classe peut implémenter ou non les méthodes abstraites héritées. Si elles ne les implémentent pas, elle est elle-même une classe abstraite. <br />Une sous-classe dérivant d'une classe non abstraite peut définir des nouvelles méthodes abstraites, et par le fait même, devenir à leur tour abstraite.</p> 
+
+Les classes abstraites permettent de créer des concepts de haut-niveau, ne pouvant être instanciés et rendant obligatoire la conception de sous-classes pour leur utilisation. Les classes abstraites sont donc souvent utilisées dans des API ou autres bibliothèques de code.  Afin de rendre possible la redéfinition de méthode par héritage, les méthodes d'une superclasse doivent être déclarées avec le modificateur <em>abstract</em>. Ainsi, une classe abstraite est une classe qui contient des méthodes abstraites. L'intérêt de ceci est de rendre la classe «&nbsp;héritable&nbsp;». <br />La sous-classe peut implémenter ou non les méthodes abstraites héritées. Si elles ne les implémentent pas, elle est elle-même une classe abstraite. <br />Une sous-classe dérivant d'une classe non abstraite peut définir des nouvelles méthodes abstraites, et par le fait même, devenir à leur tour abstraite.
+
 <p>Remarque : Nous ne pouvons instancier des objets d'une classe abstraite. Ce sont des classes qui sont destinées à subir le processus d'héritage.</p> 
 
 

@@ -6,13 +6,13 @@ weight: 2
 # Le polymorphisme
 
 
-<p>Le polymorphisme est la capacité d’un même nom de méthode à s’adapter à différents contextes, selon l’objet qui l’utilise. Cela permet de manipuler des objets de différentes classes de façon uniforme, sans se soucier de leur type précis. En Java, la machine virtuelle (JVM) choisit automatiquement la bonne méthode à exécuter selon la classe réelle de l’objet. On distingue trois formes principales de polymorphisme : ad hoc (surcharge), par héritage (redéfinition), et paramétrique (génériques). Chacune permet d’écrire du code plus flexible et réutilisable.</p>
+Le polymorphisme est la capacité d’un même nom de méthode à s’adapter à différents contextes, selon l’objet qui l’utilise. Cela permet de manipuler des objets de différentes classes de façon uniforme, sans se soucier de leur type précis. En Java, la machine virtuelle (JVM) choisit automatiquement la bonne méthode à exécuter selon la classe réelle de l’objet. On distingue trois formes principales de polymorphisme : ad hoc (surcharge), par héritage (redéfinition), et paramétrique (génériques). Chacune permet d’écrire du code plus flexible et réutilisable.
 
 ## Le polymorphisme ad hoc
 
-<p>Le polymorphisme ad hoc, aussi appelé surcharge de méthodes (overloading), consiste à définir plusieurs méthodes portant le même nom mais acceptant des paramètres différents (par leur nombre ou leur type). C’est la signature de la méthode qui change. Lorsqu’on appelle la méthode, Java choisit la version appropriée selon les arguments fournis. Par exemple, on peut écrire plusieurs méthodes `calculMoyenne` : l’une prenant un tableau d’entiers, l’autre un tableau de réels. Ce mécanisme permet d’adapter un même nom d’opération à différents types de données, ce qui rend le code plus lisible et modulaire. Dans d’autres langages comme C++, la surcharge permet aussi de redéfinir des opérateurs (par exemple, l’opérateur == pour comparer deux objets).</p>
+Le polymorphisme ad hoc, aussi appelé surcharge de méthodes (overloading), consiste à définir plusieurs méthodes portant le même nom mais acceptant des paramètres différents (par leur nombre ou leur type). C’est la signature de la méthode qui change. Lorsqu’on appelle la méthode, Java choisit la version appropriée selon les arguments fournis. Par exemple, on peut écrire plusieurs méthodes `calculMoyenne` : l’une prenant un tableau d’entiers, l’autre un tableau de réels. Ce mécanisme permet d’adapter un même nom d’opération à différents types de données, ce qui rend le code plus lisible et modulaire. Dans d’autres langages comme C++, la surcharge permet aussi de redéfinir des opérateurs (par exemple, l’opérateur == pour comparer deux objets).
 
-<p>L’exemple suivant montre trois méthodes `ajouterGradient` dans la classe `MixageCouleur`, chacune acceptant des types de paramètres différents (entiers, flottants, ou un objet Color). Selon le type d’argument passé, la bonne méthode est appelée automatiquement.</p>
+L’exemple suivant montre trois méthodes `ajouterGradient` dans la classe `MixageCouleur`, chacune acceptant des types de paramètres différents (entiers, flottants, ou un objet Color). Selon le type d’argument passé, la bonne méthode est appelée automatiquement.
 
 
 {{<inlineJava path="MixageCouleur.java" lang="java">}}
@@ -60,13 +60,12 @@ public class MixageCouleur {
 }
 {{</inlineJava>}}
 
-<p><a id="intro" name="section2"></a></p>
 
 ## Le polymorphisme par héritage
 
-<p>Le polymorphisme par héritage, ou redéfinition de méthode (overriding), consiste à réécrire dans une sous-classe une méthode déjà définie dans la classe parente. Cela permet à chaque sous-classe de personnaliser le comportement hérité. Lorsqu’on manipule un objet via une référence de la classe parente, c’est toujours la version la plus spécifique (celle de la sous-classe) qui est exécutée. Ce mécanisme est au cœur de la programmation orientée objet, car il permet d’utiliser des collections d’objets variés de façon uniforme, tout en conservant leur comportement propre.</p>
+Le polymorphisme par héritage, ou redéfinition de méthode (overriding), consiste à réécrire dans une sous-classe une méthode déjà définie dans la classe parente. Cela permet à chaque sous-classe de personnaliser le comportement hérité. Lorsqu’on manipule un objet via une référence de la classe parente, c’est toujours la version la plus spécifique (celle de la sous-classe) qui est exécutée. Ce mécanisme est au cœur de la programmation orientée objet, car il permet d’utiliser des collections d’objets variés de façon uniforme, tout en conservant leur comportement propre.
 
-<p>Dans l’exemple, la classe `CerclePointille` définit une méthode `dessiner` pour tracer un cercle en pointillé. La sous-classe `OvalePointille` redéfinit cette méthode pour dessiner un ovale pointillé. Même si on manipule un `OvalePointille` via une référence de type `CerclePointille`, c’est la méthode redéfinie qui sera appelée.</p>
+Dans l’exemple, la classe `CerclePointille` définit une méthode `dessiner` pour tracer un cercle en pointillé. La sous-classe `OvalePointille` redéfinit cette méthode pour dessiner un ovale pointillé. Même si on manipule un `OvalePointille` via une référence de type `CerclePointille`, c’est la méthode redéfinie qui sera appelée.
 
 ```java  {style=github}
 import java.awt.Color;
@@ -162,7 +161,10 @@ public class CerclePointille extends JPanel {
 }
 ```
 
-<p>Cette classe permet de tracer un cercle en pointillé dans une fenêtre appelée JFrame. Nous viendrons surcharger la méthode dessiner dans une sous-classe afin de permettre de tracer des ovales pointillés :</p>
+Notons l'utilisation de l'annotatio `@override` qui demande au compilateur Java de vérifier que nous avons bel et bien une forme de polymorphisme
+par héritage.
+
+Cette classe permet de tracer un cercle en pointillé dans une fenêtre appelée JFrame. Nous viendrons surcharger la méthode dessiner dans une sous-classe afin de permettre de tracer des ovales pointillés.
 
 ```java  {style=github}
 import java.awt.Color;
@@ -247,55 +249,111 @@ public class OvalePointille extends CerclePointille {
 }
 ```
 
-<p>Dans cette dernière classe, nous avons donc redéfini la méthode afin de spécialiser la méthode dessiner. Même si nous faisons un "cast" de la classe en CerclePointille (CerclePointille cercle = new OvalePointille(10)), ce sera tout de même la méthode surchargée qui sera appelée.</p>
+Dans cette dernière classe, nous avons donc redéfini la méthode afin de spécialiser la méthode dessiner. Même si nous faisons un *cast* de la classe en `CerclePointille` (`CerclePointille cercle = new OvalePointille(10)`), ce sera tout de même la méthode surchargée qui sera appelée.
 
-<p><a id="intro" name="section3"></a></p>
 
-## Le polymorphisme paramétrique (génériques)
+Pour illustrer davantage le polymorphisme par héritage, considérons une application simulant des instruments de musique. Une superclasse Instrument définit une méthode jouer, que des sous-classes comme Guitare et Piano redéfinissent pour produire des sons spécifiques. En manipulant ces objets via une référence de type Instrument, le comportement propre à chaque sous-classe est préservé.
 
-<p>Le polymorphisme paramétrique, ou utilisation de génériques, permet d’écrire des classes ou des méthodes qui fonctionnent avec différents types d’objets, sans dupliquer le code. En Java, cela se fait grâce aux « templates » (génériques). Par exemple, la classe `ArrayList<T>` peut contenir des éléments de n’importe quel type : `ArrayList<String>`, `ArrayList<Double>`, etc. On peut aussi écrire des méthodes génériques, comme une fonction `equals` qui compare deux objets de n’importe quel type. Les génériques rendent le code plus sûr (détection d’erreurs à la compilation) et plus réutilisable.</p>
 
-<p>L’exemple montre comment déclarer une méthode générique avec `<T>` ou une classe générique avec `<T>`. On peut aussi utiliser plusieurs paramètres génériques si besoin.</p>
+{{<inlineJava path="Instrument.java" lang="java">}}
 
-```java  {style=github}
-public class TestGenerique {
-    
-    public static <T> boolean equals(T a, T b) {
-        return a.equals(b);
+public class Instrument {
+    public void jouer() {
+        System.out.println("L'instrument produit un son générique.");
     }
-    
-    public static void main(String[] args) {
-        
-        String allo = "allo";
-        String bonjour = "bonjour";
-        
-        System.out.println(equals(allo, bonjour));
-        
-    }
-    
 }
-```
 
-```java  {style=github}
-public class TestGenerique {
-    
-    public static <T,U> boolean equals(T a, U b) {
-        return a.equals(b);
+class Guitare extends Instrument {
+    @Override
+    public void jouer() {
+        System.out.println("La guitare joue : Strum strum !");
     }
-    
-    public static void main(String[] args) {
-        
-        String allo = "allo";
-        String bonjour = "bonjour";
-        
-        System.out.println(equals(allo, bonjour));
-        
-    }
-    
 }
-```
 
-```java  {style=github}
+class Piano extends Instrument {
+    @Override
+    public void jouer() {
+        System.out.println("Le piano joue : Pling pling !");
+    }
+}
+
+public class Orchestre {
+    public static void main(String[] args) {
+        Instrument[] orchestre = new Instrument[3];
+        orchestre[0] = new Guitare();
+        orchestre[1] = new Piano();
+        orchestre[2] = new Instrument();
+
+        for (Instrument i : orchestre) {
+            i.jouer();
+        }
+
+        // Exemple avec cast
+        Instrument instrument = new Guitare();
+        instrument.jouer(); // Affiche : La guitare joue : Strum strum !
+    }
+}
+{{</inlineJava>}}
+
+
+Dans cet exemple, la classe Instrument fournit une méthode jouer générique. Les sous-classes Guitare et Piano redéfinissent cette méthode pour produire des sons distincts. Dans la classe Orchestre, un tableau d’Instrument contient des instances des différentes sous-classes. En parcourant le tableau, la méthode jouer appelée sur chaque élément exécute l’implémentation spécifique à la sous-classe, affichant successivement "La guitare joue : Strum strum !", "Le piano joue : Pling pling !" et "L'instrument produit un son générique.". Même dans le cas du cast implicite (Instrument instrument = new Guitare()), la méthode de Guitare est invoquée, démontrant la puissance du polymorphisme par héritage pour gérer des comportements variés de manière uniforme.
+
+
+## Polymorphisme paramétrique : les génériques
+
+Le polymorphisme paramétrique, réalisé en Java par les génériques, permet de concevoir des classes et des méthodes capables de manipuler différents types d’objets sans nécessiter de code spécifique pour chaque type. Introduits dans Java 5, les génériques utilisent une syntaxe de « templates » pour définir des types paramétrés, notés par des lettres comme `<T>` ou `<U>`. Par exemple, la classe `ArrayList<T>` peut stocker des éléments de type `String`, `Integer` ou tout autre type spécifié lors de son instanciation, comme `ArrayList<String>` ou `ArrayList<Double>`. Cette approche rend le code plus flexible, car une seule implémentation peut être réutilisée pour divers types, tout en renforçant la sécurité du typage : les erreurs de type sont détectées à la compilation plutôt qu’à l’exécution.
+
+Les génériques ne se limitent pas aux classes ; ils s’appliquent également aux méthodes. Une méthode générique, déclarée avec un paramètre de type comme `<T>`, peut opérer sur des objets de types variés tout en maintenant une logique commune. Par exemple, une méthode comparant deux objets peut être écrite pour accepter n’importe quel type, à condition que les objets implémentent la méthode `equals`. Les génériques permettent aussi de spécifier des contraintes, comme exiger qu’un type étende une classe ou implémente une interface, via la syntaxe `<T extends Comparable>`. Cette flexibilité réduit la duplication de code et facilite la maintenance, tout en garantissant que le compilateur vérifie la cohérence des types utilisés, évitant ainsi des erreurs courantes comme des conversions de type incorrectes.
+
+Un autre avantage des génériques réside dans leur intégration avec les structures de données et les algorithmes. Avant leur introduction, les collections comme `ArrayList` stockaient des objets de type `Object`, obligeant à effectuer des conversions explicites (casts) pour récupérer les types d’origine, ce qui pouvait provoquer des erreurs à l’exécution. Avec les génériques, une `List<String>` garantit que seuls des `String` sont ajoutés, et les éléments récupérés sont directement utilisables comme `String` sans cast. Cependant, omettre la spécification du type, comme dans `ArrayList al = new ArrayList()`, revient à utiliser un type brut (*raw type*), ce qui désactive les vérifications de type et génère un avertissement à la compilation. Cette pratique, bien que possible pour la rétrocompatibilité, est déconseillée, car elle compromet la sécurité du code.
+
+
+Pour illustrer davantage les génériques, considérons une application de gestion de paires de valeurs, où chaque paire contient deux éléments de types potentiellement différents. Une classe générique `Paire<T, U>` peut être définie pour stocker et manipuler ces éléments de manière type-sûre.
+
+{{<inlineJava path="Paire.java" lang="java">}}
+
+public class Paire<T, U> {
+    private T premier;
+    private U second;
+
+    public Paire(T premier, U second) {
+        this.premier = premier;
+        this.second = second;
+    }
+
+    public T getPremier() {
+        return premier;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void afficherPaire() {
+        System.out.println("Premier : " + premier + ", Second : " + second);
+    }
+
+    public static void main(String[] args) {
+        Paire<String, Integer> paire1 = new Paire<>("Âge", 25);
+        Paire<Double, String> paire2 = new Paire<>(3.14, "Pi");
+
+        paire1.afficherPaire(); // Affiche : Premier : Âge, Second : 25
+        paire2.afficherPaire(); // Affiche : Premier : 3.14, Second : Pi
+
+        // Exemple d'erreur détectée à la compilation
+        // Paire<String, Integer> erreur = new Paire<>("Test", "Chaîne"); // Erreur : second doit être Integer
+    }
+}
+{{</inlineJava>}}
+
+
+Dans cet exemple, la classe `Paire<T, U>` utilise deux paramètres de type, `T` et `U`, pour représenter respectivement le type du premier et du second élément. Lors de l’instanciation, on précise les types, comme `Paire<String, Integer>`, ce qui garantit que le premier élément est un `String` et le second un `Integer`. La méthode `afficherPaire` fonctionne avec n’importe quelle combinaison de types, et le compilateur vérifie que les types utilisés sont corrects. Si l’on tente d’instancier une `Paire<String, Integer>` avec un second élément de type `String`, le compilateur signale une erreur, illustrant la sécurité des génériques. Cet exemple montre comment les génériques permettent de créer des structures réutilisables tout en préservant la cohérence des types.
+
+Considérons un autre exemple.
+
+
+
+{{<inlineJava path="Chainon.java" lang="java">}}
 public class Chainon<T> {
     
     protected T donnee = null;
@@ -358,15 +416,23 @@ public class Chainon<T> {
         } 
     } 
 }
-```
+{{</inlineJava>}}
 
-<p> Il est possible d'omettre le type. Dans un tel cas, Java va omettre la vérification de la classe, comme dans cet exemple:</p>
+
+
+L’exemple de la classe `Chainon<T>` montre une implémentation d’une liste chaînée générique, où chaque nœud contient une donnée de type `T` et un lien vers le nœud suivant. En instanciant `Chainon<String>`, on s’assure que tous les nœuds manipulent des `String`, et le compilateur interdit l’ajout d’autres types, comme des `Integer`. La boucle dans l’exemple illustre comment parcourir la liste pour afficher les données, produisant la sortie : "Veni", "Vidi", "Vici".
+
+L’exemple de la méthode générique `equals<T, U>` démontre comment une méthode peut comparer deux objets de types différents en s’appuyant sur la méthode `equals` de la classe `Object`. Bien que fonctionnelle, cette méthode suppose que les types implémentent `equals` correctement, ce qui peut poser problème avec des types incompatibles. Dans l’exemple, comparer "allo" et "bonjour" retourne `false`, car les chaînes sont différentes.
+
+
+Il est possible d'omettre le type. Dans un tel cas, Java va omettre la vérification de la classe, comme dans cet exemple.
 
 ```java  {style=github}
     ArrayList al = new ArrayList();
     al.add(1);
 ```
-<p>Dans un tel cas, Java peut émettre un avertissement à la compilation.</p>
+
+En écrivant `ArrayList al = new ArrayList()`, on perd les vérifications de type, permettant d’ajouter un `Integer` comme `al.add(1)`, mais cela peut entraîner des erreurs ultérieures si l’on tente de récupérer cet élément en supposant un autre type. Le compilateur émet un avertissement pour encourager l’usage des génériques, comme `ArrayList<Integer>`.
 
 ## En résumé
 

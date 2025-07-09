@@ -321,13 +321,8 @@ public class ArrayListUtils {
     }
     
     public static ArrayList fusion(ArrayList a, ArrayList b) {
-        
-        // Permet de cloner la structure. Nécessite un cast
         ArrayList liste = (ArrayList) a.clone();
-        
-        // Ajouter l'ArrayList b à la fin de liste
         liste.addAll(b);
-        
         return liste;
     }
     
