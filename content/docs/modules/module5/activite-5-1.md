@@ -303,8 +303,8 @@ Le *cast* descendant est l'opération la plus courante et nécessite une syntaxe
 Imaginons une application de gestion d'animaux dans un zoo, où une classe *Animal* est la superclasse et *Lion* une sous-classe qui hérite d'*Animal*. La classe *Lion* possède une méthode spécifique *rugir()* qui n'existe pas dans *Animal*. Si nous avons une référence de type *Animal* pointant vers un objet *Lion*, un *cast* est nécessaire pour appeler *rugir()*.
 
 
-shit
-```java {style=github}
+{{<inlineJava path="Zoo.java">}}
+
 class Animal {
     public void manger() {
         System.out.println("L'animal mange.");
@@ -344,7 +344,8 @@ public class Zoo {
         }
     }
 }
-```
+{{</inlineJava>}}
+
 
 Dans cet exemple, l'*upcast* est implicite lorsque nous assignons un objet *Lion* à une variable de type *Animal*. Cela ne pose aucun problème, car un *Lion* est un *Animal*. Cependant, pour appeler la méthode *rugir()*, qui est spécifique à *Lion*, nous devons effectuer un *cast* descendant explicite avec *(Lion)*. La vérification avec *instanceof* garantit que le *cast* est sûr, évitant une *ClassCastException*. Lors de l'exécution, le premier *cast* réussit et affiche "Le lion rugit : Roooar !", tandis que le second échoue car *autreAnimal* n'est pas un *Lion*, affichant "Cet animal n'est pas un lion.".
 
