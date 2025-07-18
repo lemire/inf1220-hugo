@@ -1656,7 +1656,221 @@ List<Integer> liste = Arrays.stream(tab)
 System.out.println(liste); // Affiche [1, 2, 3, 4]
 ```
 
-### Lecture optionnelle dans le livre de référence (Delannoy)
+## Composition
+
+
+En Java, la composition est un principe de conception orientée objet où une classe contient une ou plusieurs instances d'autres classes comme attributs. La composition permet de construire des objets complexes en combinant des objets plus simples, favorisant la réutilisation et la modularité. Elle est souvent utilisée pour modéliser des relations où une entité est composée d'autres entités qui ne peuvent exister indépendamment.
+
+Imaginons une classe Voiture qui est composée d'un moteur et de roues. Le moteur et les roues sont des parties intégrantes de la voiture, et leur existence dépend de celle de la voiture.
+
+{{<inlineJava path="Main.java">}}
+
+// Classe représentant un moteur
+class Moteur {
+    private String type;
+
+    public Moteur(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void demarrer() {
+        System.out.println("Le moteur de type " + type + " démarre.");
+    }
+}
+
+// Classe représentant une roue
+class Roue {
+    private int taille;
+
+    public Roue(int taille) {
+        this.taille = taille;
+    }
+
+    public int getTaille() {
+        return taille;
+    }
+
+    public void tourner() {
+        System.out.println("La roue de taille " + taille + " pouces tourne.");
+    }
+}
+
+// Classe représentant une voiture (composition)
+class Voiture {
+    private String marque;
+    private Moteur moteur; // Composition : la voiture "a un" moteur
+    private Roue[] roues;  // Composition : la voiture "a des" roues
+
+    public Voiture(String marque, String typeMoteur, int tailleRoue) {
+        this.marque = marque;
+        this.moteur = new Moteur(typeMoteur); // Création de l'instance du moteur
+        this.roues = new Roue[4]; // Création de 4 roues
+        for (int i = 0; i < 4; i++) {
+            this.roues[i] = new Roue(tailleRoue);
+        }
+    }
+
+    public void conduire() {
+        moteur.demarrer();
+        for (Roue roue : roues) {
+            roue.tourner();
+        }
+        System.out.println("La voiture " + marque + " roule.");
+    }
+}
+
+// Classe principale pour tester
+public class Main {
+    public static void main(String[] args) {
+        Voiture voiture = new Voiture("Toyota", "Essence", 17);
+        voiture.conduire();
+    }
+}
+{{</inlineJava>}}
+
+## Notion avancée: Entity-component-system (optionnel)
+
+L'Entity-component-system (ECS) est un motif architectural logiciel couramment utilisé dans le développement de jeux et les simulations. Il privilégie la composition plutôt que l'héritage, rendant les systèmes plus flexibles, évolutifs et performants. Dans l'ECS, les entités comprenent un indentifiant unique représentant des objets dans le monde; les composants sont des structures de données pures contenant des attributs (comme la position ou la santé); et les systèmes sont la logique qui opère sur les entités possédant des composants spécifiques.
+
+Une application de l'ECS pourrait être dans un moteur de jeu 2D simple, tel qu'un roguelike basique où les entités comme les joueurs, les monstres et les objets sont composées de composants tels que Position, Vitesse, Santé et Rendu. Les systèmes traitent ensuite ces éléments: un système de mouvement met à jour les positions en fonction de la vitesse, un système de rendu dessine les entités dotées d'un composant de rendu, etc. Cela permet d'ajouter facilement de nouveaux comportements sans modifier les classes existantes.
+
+Pour ajouter une fonctionnalité comme la santé, il suffit de créer un composant Santé et un système de dommages, sans sous-classer les entités.
+Voici une implémentation basique de l'ECS en Java. Nous créons une simulation simple avec des entités qui peuvent se déplacer et être rendues. 
+
+{{<inlineJava path="ECSDemo.java">}}
+import java.util.*;
+
+// Interface Component : Tous les composants étendent cela (interface marqueur pour la sécurité de type)
+interface Component {}
+
+// Exemples de composants
+class Position implements Component {
+    double x, y;
+
+    Position(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class Velocity implements Component {
+    double dx, dy;
+
+    Velocity(double dx, double dy) {
+        this.dx = dx;
+        this.dy = dy;
+    }
+}
+
+class Renderable implements Component {
+    String symbol;  // par exemple, "@" pour le joueur
+
+    Renderable(String symbol) {
+        this.symbol = symbol;
+    }
+}
+
+// Entité : Juste un ID avec une map de composants
+class Entity {
+    private static int nextId = 0;
+    final int id;
+    private Map<Class<? extends Component>, Component> components = new HashMap<>();
+
+    Entity() {
+        this.id = nextId++;
+    }
+
+    <T extends Component> void addComponent(T component) {
+        components.put(component.getClass(), component);
+    }
+
+    <T extends Component> T getComponent(Class<T> type) {
+        return type.cast(components.get(type));
+    }
+
+    boolean hasComponent(Class<? extends Component> type) {
+        return components.containsKey(type);
+    }
+}
+
+// Interface System : Les systèmes traitent les entités
+abstract class System {
+    abstract void update(List<Entity> entities, double deltaTime);
+}
+
+// MovementSystem : Met à jour la position en fonction de la vitesse
+class MovementSystem extends System {
+    @Override
+    void update(List<Entity> entities, double deltaTime) {
+        for (Entity entity : entities) {
+            if (entity.hasComponent(Position.class) && entity.hasComponent(Velocity.class)) {
+                Position pos = entity.getComponent(Position.class);
+                Velocity vel = entity.getComponent(Velocity.class);
+                pos.x += vel.dx * deltaTime;
+                pos.y += vel.dy * deltaTime;
+                System.out.println("Entité " + entity.id + " déplacée à (" + pos.x + ", " + pos.y + ")");
+            }
+        }
+    }
+}
+
+// RenderSystem : "Rend" en imprimant les symboles
+class RenderSystem extends System {
+    @Override
+    void update(List<Entity> entities, double deltaTime) {
+        for (Entity entity : entities) {
+            if (entity.hasComponent(Position.class) && entity.hasComponent(Renderable.class)) {
+                Position pos = entity.getComponent(Position.class);
+                Renderable rend = entity.getComponent(Renderable.class);
+                System.out.println("Rendu de " + rend.symbol + " à (" + pos.x + ", " + pos.y + ")");
+            }
+        }
+    }
+}
+
+// Classe principale pour exécuter la simulation
+public class ECSDemo {
+    public static void main(String[] args) {
+        List<Entity> entities = new ArrayList<>();
+        List<System> systems = new ArrayList<>();
+
+        // Créer les systèmes
+        systems.add(new MovementSystem());
+        systems.add(new RenderSystem());
+
+        // Créer une entité joueur
+        Entity player = new Entity();
+        player.addComponent(new Position(0, 0));
+        player.addComponent(new Velocity(1, 1));
+        player.addComponent(new Renderable("@"));
+        entities.add(player);
+
+        // Créer une entité objet statique (sans vitesse)
+        Entity item = new Entity();
+        item.addComponent(new Position(5, 5));
+        item.addComponent(new Renderable("!"));
+        entities.add(item);
+
+        // Simuler les mises à jour (boucle de jeu)
+        double deltaTime = 0.1;  // Pas de temps
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Mise à jour " + (i + 1) + " :");
+            for (System system : systems) {
+                system.update(entities, deltaTime);
+            }
+            System.out.println();
+        }
+    }
+}
+{{</inlineJava>}}
+
+Dans cet exemple, les entités sont de simples conteneurs pour les composants. Les composants contiennent uniquement des données (sans logique), comme Position, Velocity et Renderable. Les systèmes contiennent le comportement: MovementSystem traite les entités avec Position et Velocity, tandis que RenderSystem gère celles avec Position et Renderable. 
+
+## Lecture optionnelle dans le livre de référence (Delannoy)
 
 <p>Pour aller plus en profondeur (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, Chapitre 8:</p>
 <ul>
