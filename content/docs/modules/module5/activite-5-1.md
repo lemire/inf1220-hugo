@@ -1798,12 +1798,12 @@ class Entity {
 }
 
 // Interface System : Les systèmes traitent les entités
-abstract class System {
+abstract class SystemInt {
     abstract void update(List<Entity> entities, double deltaTime);
 }
 
 // MovementSystem : Met à jour la position en fonction de la vitesse
-class MovementSystem extends System {
+class MovementSystem extends SystemInt {
     @Override
     void update(List<Entity> entities, double deltaTime) {
         for (Entity entity : entities) {
@@ -1819,7 +1819,7 @@ class MovementSystem extends System {
 }
 
 // RenderSystem : "Rend" en imprimant les symboles
-class RenderSystem extends System {
+class RenderSystem extends SystemInt {
     @Override
     void update(List<Entity> entities, double deltaTime) {
         for (Entity entity : entities) {
@@ -1836,7 +1836,7 @@ class RenderSystem extends System {
 public class ECSDemo {
     public static void main(String[] args) {
         List<Entity> entities = new ArrayList<>();
-        List<System> systems = new ArrayList<>();
+        List<SystemInt> systems = new ArrayList<>();
 
         // Créer les systèmes
         systems.add(new MovementSystem());
@@ -1859,13 +1859,14 @@ public class ECSDemo {
         double deltaTime = 0.1;  // Pas de temps
         for (int i = 0; i < 5; i++) {
             System.out.println("Mise à jour " + (i + 1) + " :");
-            for (System system : systems) {
+            for (SystemInt system : systems) {
                 system.update(entities, deltaTime);
             }
             System.out.println();
         }
     }
 }
+
 {{</inlineJava>}}
 
 Dans cet exemple, les entités sont de simples conteneurs pour les composants. Les composants contiennent uniquement des données (sans logique), comme Position, Velocity et Renderable. Les systèmes contiennent le comportement: MovementSystem traite les entités avec Position et Velocity, tandis que RenderSystem gère celles avec Position et Renderable. 
