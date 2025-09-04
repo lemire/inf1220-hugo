@@ -192,7 +192,7 @@ Après avoir écouté la vidéo, je vous invite à réfléchir aux questions sui
 
 
 Dans ce cours, vous êtes encouragé à utiliser l'intelligence artificielle pour mieux apprendre 
-à programmer. [L'Université TÉLUQ met à votre disposition un robot conversationnel dédié au cours](https://rc-inf1220.teluq.ca/#). Ce robot, basé sur des technologies avancées d'IA, vous permettra d'obtenir des réponses personnalisées à vos questions, de clarifier des concepts complexes et de recevoir des exemples de code pertinents. En interagissant avec cet outil, vous pourrez approfondir votre compréhension des notions abordées, pratiquer vos compétences en programmation et progresser à votre rythme, tout en bénéficiant d'un soutien adapté à vos besoins. Vous pouvez aussi utiliser d'autres outils comme ChatGTP, copilot, Grok, etc.
+à programmer. [L'Université TÉLUQ met à votre disposition un robot conversationnel dédié au cours](https://rc-inf1220.teluq.ca/#). Ce robot, basé sur des technologies avancées d'IA, vous permettra d'obtenir des réponses personnalisées à vos questions, de clarifier des concepts complexes et de recevoir des exemples de code pertinents. En interagissant avec cet outil, vous pourrez approfondir votre compréhension des notions abordées, pratiquer vos compétences en programmation et progresser à votre rythme, tout en bénéficiant d'un soutien adapté à vos besoins. Vous pouvez aussi utiliser d'autres outils comme ChatGPT, copilot, Grok, etc.
 
 Le cours INF 1220 a probablement été le premier cours au Québec à disposer d'un robot conversationnel. Je vous invite à consulter cet article par madame Roy de Radio-Canada:
 
