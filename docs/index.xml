@@ -1,391 +1,391 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/</link><description>Recent content in Docs on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Programmation Java en ligne</title><link>https://lemire.github.io/inf1220-hugo/docs/environnement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/environnement/</guid><description>&lt;h1 id="programmation-java-en-ligne">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/</link><description>Recent content in Docs on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Programmation Java en ligne</title><link>https://lemire.github.io/inf1220-hugo/docs/environnement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/environnement/</guid><description>&lt;h1 id="programmation-java-en-ligne"&gt;
  Programmation Java en ligne
- &lt;a class="anchor" href="#programmation-java-en-ligne">#&lt;/a>
-&lt;/h1>
-&lt;p>Vous pouvez faire une grande partie des exercices et des travaux du cours en ligne, dans votre navigateur.
-Pour commencer à programmer dans cet environnement Java en ligne, familiarisez-vous avec son interface intuitive. La page principale affiche une zone où vous pouvez ajouter des fichiers Java ou texte. Cliquez sur « Ajouter un fichier Java » pour créer un fichier avec l&amp;rsquo;extension .java, ou « Ajouter un fichier texte » pour un fichier .txt. Chaque fichier apparaît dans une boîte avec un champ pour le nom et un éditeur de texte. Pour les fichiers Java, l&amp;rsquo;éditeur offre une coloration syntaxique et des numéros de ligne, facilitant la lecture et l&amp;rsquo;écriture du code. Vous pouvez aussi sélectionner des exemples prédéfinis (comme « Bonjour le monde » ou « Fibonacci ») via le menu déroulant « Exemples » pour charger automatiquement des fichiers modèles. Une fois vos fichiers prêts, cliquez sur « Exécuter » pour compiler et exécuter le code.&lt;/p></description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours">
+ &lt;a class="anchor" href="#programmation-java-en-ligne"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Vous pouvez faire une grande partie des exercices et des travaux du cours en ligne, dans votre navigateur.
+Pour commencer à programmer dans cet environnement Java en ligne, familiarisez-vous avec son interface intuitive. La page principale affiche une zone où vous pouvez ajouter des fichiers Java ou texte. Cliquez sur « Ajouter un fichier Java » pour créer un fichier avec l&amp;rsquo;extension .java, ou « Ajouter un fichier texte » pour un fichier .txt. Chaque fichier apparaît dans une boîte avec un champ pour le nom et un éditeur de texte. Pour les fichiers Java, l&amp;rsquo;éditeur offre une coloration syntaxique et des numéros de ligne, facilitant la lecture et l&amp;rsquo;écriture du code. Vous pouvez aussi sélectionner des exemples prédéfinis (comme « Bonjour le monde » ou « Fibonacci ») via le menu déroulant « Exemples » pour charger automatiquement des fichiers modèles. Une fois vos fichiers prêts, cliquez sur « Exécuter » pour compiler et exécuter le code.&lt;/p&gt;</description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours"&gt;
  Amélioration continue du cours
- &lt;a class="anchor" href="#am%c3%a9lioration-continue-du-cours">#&lt;/a>
-&lt;/h1>
-&lt;p>Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 
-nous trouvons des erreurs.&lt;/p>
-&lt;p>&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform">Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site&lt;/a>. Nous apprécions toujours vos commentaires constructifs.&lt;/p>
-&lt;p>Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p></description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/evaluation/</guid><description>&lt;h1 id="évaluation">
+ &lt;a class="anchor" href="#am%c3%a9lioration-continue-du-cours"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le site web de ce cours est continuellement mis à jour avec de nouveaux exemples, de nouvelles explications, de nouvelles références. Le manuel est aussi mis à jour quand 
+nous trouvons des erreurs.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe8pU6ypxDsx-cZjcMURa6o2LRG8NODa3qYIcWLNGU2RcvaWQ/viewform"&gt;Vous pouvez, de manière anonyme, nous faire parvenir vos corrections lorsque vous trouvez des erreurs sur le site&lt;/a&gt;. Nous apprécions toujours vos commentaires constructifs.&lt;/p&gt;
+&lt;p&gt;Note: plusieurs étudiants partagent avec nous des suggestions de sites ou de vidéos en anglais. Bien que le cours fait quelques liens vers des sites en anglais, nous évitons l'anglais autant que possible. Si vous avez des suggestions, essayez de rester en français.&lt;/p&gt;</description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf1220-hugo/docs/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/evaluation/</guid><description>&lt;h1 id="évaluation"&gt;
  Évaluation
- &lt;a class="anchor" href="#%c3%a9valuation">#&lt;/a>
-&lt;/h1>
-&lt;p>Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d&amp;rsquo;un examen final à réaliser à la fin du cours.&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Évaluations&lt;/th>
- &lt;th>Sujets&lt;/th>
- &lt;th>semaine de remise&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Travail Noté #1&lt;/td>
- &lt;td>Les algorithmes&lt;/td>
- &lt;td>3&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Travail Noté #2&lt;/td>
- &lt;td>Types, opérateurs et méthodes&lt;/td>
- &lt;td>6&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Travail Noté #3&lt;/td>
- &lt;td>Structures de contrôle, itérations et données&lt;/td>
- &lt;td>9&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Travail Noté #4&lt;/td>
- &lt;td>Les flux d&amp;rsquo;entrée et de sortie&lt;/td>
- &lt;td>11&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Travail Noté #5&lt;/td>
- &lt;td>Héritage et polymorphismes&lt;/td>
- &lt;td>14&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Examen&lt;/td>
- &lt;td>L&amp;rsquo;ensemble du cours&lt;/td>
- &lt;td>15&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>La semaine de remise des travaux est une suggestion. Néanmoins, vous devez compléter tous les travaux avant la date de fin de cours.
+ &lt;a class="anchor" href="#%c3%a9valuation"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d&amp;rsquo;un examen final à réaliser à la fin du cours.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Évaluations&lt;/th&gt;
+ &lt;th&gt;Sujets&lt;/th&gt;
+ &lt;th&gt;semaine de remise&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Travail Noté #1&lt;/td&gt;
+ &lt;td&gt;Les algorithmes&lt;/td&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Travail Noté #2&lt;/td&gt;
+ &lt;td&gt;Types, opérateurs et méthodes&lt;/td&gt;
+ &lt;td&gt;6&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Travail Noté #3&lt;/td&gt;
+ &lt;td&gt;Structures de contrôle, itérations et données&lt;/td&gt;
+ &lt;td&gt;9&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Travail Noté #4&lt;/td&gt;
+ &lt;td&gt;Les flux d&amp;rsquo;entrée et de sortie&lt;/td&gt;
+ &lt;td&gt;11&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Travail Noté #5&lt;/td&gt;
+ &lt;td&gt;Héritage et polymorphismes&lt;/td&gt;
+ &lt;td&gt;14&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Examen&lt;/td&gt;
+ &lt;td&gt;L&amp;rsquo;ensemble du cours&lt;/td&gt;
+ &lt;td&gt;15&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;La semaine de remise des travaux est une suggestion. Néanmoins, vous devez compléter tous les travaux avant la date de fin de cours.
 Votre date de fin de cours apparaît sur votre portail étudiant : elle est différente pour chaque étudiant.
-Planifiez bien votre temps !&lt;/p></description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java">
+Planifiez bien votre temps !&lt;/p&gt;</description></item><item><title>Pense-bête java</title><link>https://lemire.github.io/inf1220-hugo/docs/pensebete/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/pensebete/</guid><description>&lt;h1 id="fondamentaux-de-java"&gt;
  Fondamentaux de Java
- &lt;a class="anchor" href="#fondamentaux-de-java">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="types-de-données-java">
+ &lt;a class="anchor" href="#fondamentaux-de-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="types-de-données-java"&gt;
  Types de données Java
- &lt;a class="anchor" href="#types-de-donn%c3%a9es-java">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Type&lt;/th>
- &lt;th>Exemple&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>byte / short / int / long&lt;/td>
- &lt;td>&lt;code>-123&lt;/code>, &lt;code>10&lt;/code>&lt;/td>
- &lt;td>Entiers de différentes tailles&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>float / double&lt;/td>
- &lt;td>&lt;code>235.13&lt;/code>&lt;/td>
- &lt;td>Nombres à virgule flottante&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>char&lt;/td>
- &lt;td>&lt;code>'U'&lt;/code>&lt;/td>
- &lt;td>Caractère unique&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>boolean&lt;/td>
- &lt;td>&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
- &lt;td>Valeurs logiques&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>String&lt;/td>
- &lt;td>&lt;code>&amp;quot;Salutations de la Terre&amp;quot;&lt;/code>&lt;/td>
- &lt;td>Chaînes de caractères&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="instructions-java">
+ &lt;a class="anchor" href="#types-de-donn%c3%a9es-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Type&lt;/th&gt;
+ &lt;th&gt;Exemple&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;byte / short / int / long&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-123&lt;/code&gt;, &lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Entiers de différentes tailles&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;float / double&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;235.13&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Nombres à virgule flottante&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;char&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;'U'&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Caractère unique&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;boolean&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Valeurs logiques&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;String&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;&amp;quot;Salutations de la Terre&amp;quot;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Chaînes de caractères&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="instructions-java"&gt;
  Instructions Java
- &lt;a class="anchor" href="#instructions-java">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Instruction&lt;/th>
- &lt;th>Syntaxe&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>if&lt;/td>
- &lt;td>if (expression) { instructions } else if (expression) { instructions } else { instructions }&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>while&lt;/td>
- &lt;td>while (expression) { instructions }&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>do-while&lt;/td>
- &lt;td>do { instructions } while (expression);&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>for&lt;/td>
- &lt;td>for (int i = 0; i &amp;lt; max; ++i) { instructions }&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>for each&lt;/td>
- &lt;td>for (var : collection) { instructions }&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>switch&lt;/td>
- &lt;td>switch (expression) { case valeur: instructions break; case valeur2: instructions break; default: instructions }&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>try-catch&lt;/td>
- &lt;td>try { instructions } catch (ExceptionType e1) { instructions } catch (Exception e2) { instructions } finally { instructions }&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="conversions-de-données-java">
+ &lt;a class="anchor" href="#instructions-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Instruction&lt;/th&gt;
+ &lt;th&gt;Syntaxe&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;if&lt;/td&gt;
+ &lt;td&gt;if (expression) { instructions } else if (expression) { instructions } else { instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;while&lt;/td&gt;
+ &lt;td&gt;while (expression) { instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;do-while&lt;/td&gt;
+ &lt;td&gt;do { instructions } while (expression);&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;for&lt;/td&gt;
+ &lt;td&gt;for (int i = 0; i &amp;lt; max; ++i) { instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;for each&lt;/td&gt;
+ &lt;td&gt;for (var : collection) { instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;switch&lt;/td&gt;
+ &lt;td&gt;switch (expression) { case valeur: instructions break; case valeur2: instructions break; default: instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;try-catch&lt;/td&gt;
+ &lt;td&gt;try { instructions } catch (ExceptionType e1) { instructions } catch (Exception e2) { instructions } finally { instructions }&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="conversions-de-données-java"&gt;
  Conversions de données Java
- &lt;a class="anchor" href="#conversions-de-donn%c3%a9es-java">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Conversion&lt;/th>
- &lt;th>Syntaxe&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Chaîne vers nombre&lt;/td>
- &lt;td>int i = Integer.parseInt(str);&lt;br>double d = Double.parseDouble(str);&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Tout type vers chaîne&lt;/td>
- &lt;td>String s = String.valueOf(valeur);&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Numérique&lt;/td>
- &lt;td>int i = (int) expression numérique;&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="méthodes-de-chaîne-java">
+ &lt;a class="anchor" href="#conversions-de-donn%c3%a9es-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Conversion&lt;/th&gt;
+ &lt;th&gt;Syntaxe&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Chaîne vers nombre&lt;/td&gt;
+ &lt;td&gt;int i = Integer.parseInt(str);&lt;br&gt;double d = Double.parseDouble(str);&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Tout type vers chaîne&lt;/td&gt;
+ &lt;td&gt;String s = String.valueOf(valeur);&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Numérique&lt;/td&gt;
+ &lt;td&gt;int i = (int) expression numérique;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="méthodes-de-chaîne-java"&gt;
  Méthodes de chaîne Java
- &lt;a class="anchor" href="#m%c3%a9thodes-de-cha%c3%aene-java">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Méthode&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>s.length()&lt;/td>
- &lt;td>Retourne la longueur de s&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.charAt(i)&lt;/td>
- &lt;td>Extrait le i-ème caractère&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.substring(début, fin)&lt;/td>
- &lt;td>Extrait une sous-chaîne de début à fin-1&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.toUpperCase()&lt;/td>
- &lt;td>Retourne une copie en majuscules&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.toLowerCase()&lt;/td>
- &lt;td>Retourne une copie en minuscules&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.indexOf(x)&lt;/td>
- &lt;td>Retourne l’index de la première occurrence de x&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.replace(ancien, nouveau)&lt;/td>
- &lt;td>Remplace les occurrences&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.split(regex)&lt;/td>
- &lt;td>Divise la chaîne en jetons&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.trim()&lt;/td>
- &lt;td>Supprime les espaces autour&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.equals(s2)&lt;/td>
- &lt;td>Vrai si s est égal à s2&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>s.compareTo(s2)&lt;/td>
- &lt;td>0 si égaux, + si s &amp;gt; s2, - si s &amp;lt; s2&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="méthodes-javautilarraylist">
+ &lt;a class="anchor" href="#m%c3%a9thodes-de-cha%c3%aene-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Méthode&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.length()&lt;/td&gt;
+ &lt;td&gt;Retourne la longueur de s&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.charAt(i)&lt;/td&gt;
+ &lt;td&gt;Extrait le i-ème caractère&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.substring(début, fin)&lt;/td&gt;
+ &lt;td&gt;Extrait une sous-chaîne de début à fin-1&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.toUpperCase()&lt;/td&gt;
+ &lt;td&gt;Retourne une copie en majuscules&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.toLowerCase()&lt;/td&gt;
+ &lt;td&gt;Retourne une copie en minuscules&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.indexOf(x)&lt;/td&gt;
+ &lt;td&gt;Retourne l’index de la première occurrence de x&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.replace(ancien, nouveau)&lt;/td&gt;
+ &lt;td&gt;Remplace les occurrences&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.split(regex)&lt;/td&gt;
+ &lt;td&gt;Divise la chaîne en jetons&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.trim()&lt;/td&gt;
+ &lt;td&gt;Supprime les espaces autour&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.equals(s2)&lt;/td&gt;
+ &lt;td&gt;Vrai si s est égal à s2&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;s.compareTo(s2)&lt;/td&gt;
+ &lt;td&gt;0 si égaux, + si s &amp;gt; s2, - si s &amp;lt; s2&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="méthodes-javautilarraylist"&gt;
  Méthodes java.util.ArrayList
- &lt;a class="anchor" href="#m%c3%a9thodes-javautilarraylist">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Méthode&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>l.add(élément)&lt;/td>
- &lt;td>Ajoute un élément à la liste&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.add(index, élément)&lt;/td>
- &lt;td>Ajoute un élément à l’index spécifié&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.get(i)&lt;/td>
- &lt;td>Retourne le i-ème élément&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.size()&lt;/td>
- &lt;td>Retourne le nombre d’éléments&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.remove(i)&lt;/td>
- &lt;td>Supprime le i-ème élément&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.remove(élément)&lt;/td>
- &lt;td>Supprime la première occurrence de l’élément&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.set(i, val)&lt;/td>
- &lt;td>Place val à la position i&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.clear()&lt;/td>
- &lt;td>Supprime tous les éléments&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>l.contains(élément)&lt;/td>
- &lt;td>Vrai si l’élément est dans la liste&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="méthodes-javautilhashmap">
+ &lt;a class="anchor" href="#m%c3%a9thodes-javautilarraylist"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Méthode&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.add(élément)&lt;/td&gt;
+ &lt;td&gt;Ajoute un élément à la liste&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.add(index, élément)&lt;/td&gt;
+ &lt;td&gt;Ajoute un élément à l’index spécifié&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.get(i)&lt;/td&gt;
+ &lt;td&gt;Retourne le i-ème élément&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.size()&lt;/td&gt;
+ &lt;td&gt;Retourne le nombre d’éléments&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.remove(i)&lt;/td&gt;
+ &lt;td&gt;Supprime le i-ème élément&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.remove(élément)&lt;/td&gt;
+ &lt;td&gt;Supprime la première occurrence de l’élément&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.set(i, val)&lt;/td&gt;
+ &lt;td&gt;Place val à la position i&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.clear()&lt;/td&gt;
+ &lt;td&gt;Supprime tous les éléments&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;l.contains(élément)&lt;/td&gt;
+ &lt;td&gt;Vrai si l’élément est dans la liste&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="méthodes-javautilhashmap"&gt;
  Méthodes java.util.HashMap
- &lt;a class="anchor" href="#m%c3%a9thodes-javautilhashmap">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Méthode&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>m.put(clé, valeur)&lt;/td>
- &lt;td>Insère une valeur avec une clé&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.get(clé)&lt;/td>
- &lt;td>Récupère la valeur associée à la clé&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.containsKey(clé)&lt;/td>
- &lt;td>Vrai si la clé existe&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.containsValue(valeur)&lt;/td>
- &lt;td>Vrai si la valeur existe&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.remove(clé)&lt;/td>
- &lt;td>Supprime l’entrée associée à la clé&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.size()&lt;/td>
- &lt;td>Retourne le nombre d’entrées&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.clear()&lt;/td>
- &lt;td>Supprime toutes les entrées&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.keySet()&lt;/td>
- &lt;td>Retourne un ensemble des clés&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>m.values()&lt;/td>
- &lt;td>Retourne une collection des valeurs&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="java-hello-world">
+ &lt;a class="anchor" href="#m%c3%a9thodes-javautilhashmap"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Méthode&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.put(clé, valeur)&lt;/td&gt;
+ &lt;td&gt;Insère une valeur avec une clé&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.get(clé)&lt;/td&gt;
+ &lt;td&gt;Récupère la valeur associée à la clé&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.containsKey(clé)&lt;/td&gt;
+ &lt;td&gt;Vrai si la clé existe&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.containsValue(valeur)&lt;/td&gt;
+ &lt;td&gt;Vrai si la valeur existe&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.remove(clé)&lt;/td&gt;
+ &lt;td&gt;Supprime l’entrée associée à la clé&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.size()&lt;/td&gt;
+ &lt;td&gt;Retourne le nombre d’entrées&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.clear()&lt;/td&gt;
+ &lt;td&gt;Supprime toutes les entrées&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.keySet()&lt;/td&gt;
+ &lt;td&gt;Retourne un ensemble des clés&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;m.values()&lt;/td&gt;
+ &lt;td&gt;Retourne une collection des valeurs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="java-hello-world"&gt;
  Java Hello World
- &lt;a class="anchor" href="#java-hello-world">#&lt;/a>
-&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">import&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#24292e">java.util.Date&lt;/span>&lt;span style="color:#1f2328">;&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">&lt;/span>&lt;span style="color:#cf222e">public&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">class&lt;/span> &lt;span style="color:#1f2328">Hello&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">{&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">public&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">static&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">void&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#6639ba">main&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>String&lt;span style="color:#0550ae">[]&lt;/span>&lt;span style="color:#fff"> &lt;/span>args&lt;span style="color:#1f2328">)&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">{&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>System&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">out&lt;/span>&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">println&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#34;Bonjour, le monde !&amp;#34;&lt;/span>&lt;span style="color:#1f2328">);&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>Date&lt;span style="color:#fff"> &lt;/span>maintenant&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#cf222e">new&lt;/span>&lt;span style="color:#fff"> &lt;/span>Date&lt;span style="color:#1f2328">();&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>System&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">out&lt;/span>&lt;span style="color:#1f2328">.&lt;/span>&lt;span style="color:#1f2328">println&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#34;Heure : &amp;#34;&lt;/span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#0550ae">+&lt;/span>&lt;span style="color:#fff"> &lt;/span>maintenant&lt;span style="color:#1f2328">);&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff"> &lt;/span>&lt;span style="color:#1f2328">}&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fff">&lt;/span>&lt;span style="color:#1f2328">}&lt;/span>&lt;span style="color:#fff">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Enregistrer dans &lt;code>Hello.java&lt;/code>&lt;/li>
-&lt;li>Compiler : &lt;code>javac Hello.java&lt;/code>&lt;/li>
-&lt;li>Exécuter : &lt;code>java Hello&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="opérateurs-arithmétiques-java">
+ &lt;a class="anchor" href="#java-hello-world"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;java.util.Date&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Hello&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;static&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;void&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#6639ba"&gt;main&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;String&lt;span style="color:#0550ae"&gt;[]&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;args&lt;span style="color:#1f2328"&gt;)&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;System&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;out&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;println&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;Bonjour, le monde !&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;Date&lt;span style="color:#fff"&gt; &lt;/span&gt;maintenant&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;new&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;Date&lt;span style="color:#1f2328"&gt;();&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;System&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;out&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;println&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;Heure : &amp;#34;&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0550ae"&gt;+&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;maintenant&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Enregistrer dans &lt;code&gt;Hello.java&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Compiler : &lt;code&gt;javac Hello.java&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Exécuter : &lt;code&gt;java Hello&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="opérateurs-arithmétiques-java"&gt;
  Opérateurs arithmétiques Java
- &lt;a class="anchor" href="#op%c3%a9rateurs-arithm%c3%a9tiques-java">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Opérateur&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>x + y&lt;/td>
- &lt;td>Addition&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>x - y&lt;/td>
- &lt;td>Soustraction&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>x * y&lt;/td>
- &lt;td>Multiplication&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>x / y&lt;/td>
- &lt;td>Division&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>x % y&lt;/td>
- &lt;td>Modulo&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>++x / x++&lt;/td>
- &lt;td>Incrémentation&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&amp;ndash;x / x&amp;ndash;&lt;/td>
- &lt;td>Décrémentation&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>&lt;em>Raccourcis d’affectation : x op= y (ex. x += 1 incrémente x)&lt;/em>&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#op%c3%a9rateurs-arithm%c3%a9tiques-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Opérateur&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;x + y&lt;/td&gt;
+ &lt;td&gt;Addition&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;x - y&lt;/td&gt;
+ &lt;td&gt;Soustraction&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;x * y&lt;/td&gt;
+ &lt;td&gt;Multiplication&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;x / y&lt;/td&gt;
+ &lt;td&gt;Division&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;x % y&lt;/td&gt;
+ &lt;td&gt;Modulo&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;++x / x++&lt;/td&gt;
+ &lt;td&gt;Incrémentation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&amp;ndash;x / x&amp;ndash;&lt;/td&gt;
+ &lt;td&gt;Décrémentation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Raccourcis d’affectation : x op= y (ex. x += 1 incrémente x)&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

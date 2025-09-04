@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/</link><description>Recent content in Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module3/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/</link><description>Recent content in Module 3: Les structures de données, de contrôle et d'itération en Java on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module3/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas"&gt;
  Java pas à pas
- &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
-&lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire le chapitre &lt;em>Structures de contrôle&lt;/em> (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.&lt;/p>
-&lt;div class="java-inline">
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Nous vous invitons maintenant à lire le chapitre &lt;em&gt;Structures de contrôle&lt;/em&gt; (chapitre 3) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel. Vous pouvez aussi exécuter certains exemples du manuel sur cette page.&lt;/p&gt;
+&lt;div class="java-inline"&gt;
 
 
 
 
 
 
- &lt;div id="java-runner-1752978526113747259">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1752978526113747259 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1752978526113747259 .export-form { margin-bottom:0; }
- #java-runner-1752978526113747259 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1752978526113747259 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1752978526113747259 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1752978526113747259 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1752978526113747259 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ &lt;div id="java-runner-1757017717319989092"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-runner-1757017717319989092 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1757017717319989092 .export-form { margin-bottom:0; }
+ #java-runner-1757017717319989092 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1757017717319989092 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1757017717319989092 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1757017717319989092 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1757017717319989092 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1752978526113747259-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesMath.java&lt;/div>&lt;textarea>
+ &lt;/style&gt;
+ &lt;form class="export-form java-runner-1757017717319989092-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesMath.java&lt;/div&gt;&lt;textarea&gt;
 public class ExemplesMath {
 
  public static void main(String args[]) {
@@ -38,16 +38,16 @@ public class ExemplesMath {
  System.out.println(&amp;#34;Math.sqrt(4)=&amp;#34; &amp;#43; Math.sqrt(4));
  }
 }
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1752978526113747259-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1752978526113747259');
+&lt;/textarea&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-runner-1757017717319989092-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+ &lt;script&gt;(function(){
+ var root = document.getElementById('java-runner-1757017717319989092');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -146,11 +146,11 @@ public class ExemplesMath {
  var j=JSON.parse(t);
  
  if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+(j.output||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -259,34 +259,34 @@ public class ExemplesMath {
  hideTooltip();
  });
  });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
+ })();&lt;/script&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="java-inline"&gt;
 
 
 
 
 
 
- &lt;div id="java-runner-1752978526113795029">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1752978526113795029 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1752978526113795029 .export-form { margin-bottom:0; }
- #java-runner-1752978526113795029 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1752978526113795029 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1752978526113795029 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1752978526113795029 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1752978526113795029 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ &lt;div id="java-runner-1757017717320038344"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-runner-1757017717320038344 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1757017717320038344 .export-form { margin-bottom:0; }
+ #java-runner-1757017717320038344 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1757017717320038344 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1757017717320038344 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1757017717320038344 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1757017717320038344 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1752978526113795029-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExemplesString.java&lt;/div>&lt;textarea>
+ &lt;/style&gt;
+ &lt;form class="export-form java-runner-1757017717320038344-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesString.java&lt;/div&gt;&lt;textarea&gt;
 public class ExemplesString {
 
  public static void main(String args[]) {
@@ -318,16 +318,16 @@ public class ExemplesString {
  System.out.println(string4.equals(&amp;#34;abcdef&amp;#34;)); // true
  }
 }
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1752978526113795029-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1752978526113795029');
+&lt;/textarea&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-runner-1757017717320038344-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+ &lt;script&gt;(function(){
+ var root = document.getElementById('java-runner-1757017717320038344');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -426,11 +426,11 @@ public class ExemplesString {
  var j=JSON.parse(t);
  
  if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+(j.output||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -539,34 +539,34 @@ public class ExemplesString {
  hideTooltip();
  });
  });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
+ })();&lt;/script&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="java-inline"&gt;
 
 
 
 
 
 
- &lt;div id="java-runner-1752978526113841236">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1752978526113841236 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1752978526113841236 .export-form { margin-bottom:0; }
- #java-runner-1752978526113841236 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1752978526113841236 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1752978526113841236 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1752978526113841236 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1752978526113841236 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ &lt;div id="java-runner-1757017717320083318"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-runner-1757017717320083318 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1757017717320083318 .export-form { margin-bottom:0; }
+ #java-runner-1757017717320083318 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1757017717320083318 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1757017717320083318 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1757017717320083318 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1757017717320083318 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1752978526113841236-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExempleZero.java&lt;/div>&lt;textarea>
+ &lt;/style&gt;
+ &lt;form class="export-form java-runner-1757017717320083318-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExempleZero.java&lt;/div&gt;&lt;textarea&gt;
 public class ExempleZero {
  public static void main(String[] s) {
  double minus_zero = -0.0;
@@ -580,16 +580,16 @@ public class ExempleZero {
  System.out.println(n == n);
  }
 }
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1752978526113841236-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1752978526113841236');
+&lt;/textarea&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-runner-1757017717320083318-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+ &lt;script&gt;(function(){
+ var root = document.getElementById('java-runner-1757017717320083318');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -688,11 +688,11 @@ public class ExempleZero {
  var j=JSON.parse(t);
  
  if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+(j.output||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -801,34 +801,34 @@ public class ExempleZero {
  hideTooltip();
  });
  });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;div class="java-inline">
+ })();&lt;/script&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="java-inline"&gt;
 
 
 
 
 
 
- &lt;div id="java-runner-1752978526113905887">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
- &lt;style>
- #java-runner-1752978526113905887 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1752978526113905887 .export-form { margin-bottom:0; }
- #java-runner-1752978526113905887 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1752978526113905887 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1752978526113905887 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1752978526113905887 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1752978526113905887 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ &lt;div id="java-runner-1757017717320120367"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-runner-1757017717320120367 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1757017717320120367 .export-form { margin-bottom:0; }
+ #java-runner-1757017717320120367 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1757017717320120367 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1757017717320120367 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1757017717320120367 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1757017717320120367 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style>
- &lt;form class="export-form java-runner-1752978526113905887-form" style="margin-bottom:0;">
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run">
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;">
- &lt;div class='export-file-block'>&lt;div class='export-file-name'>ExerciceForFor.java&lt;/div>&lt;textarea>
+ &lt;/style&gt;
+ &lt;form class="export-form java-runner-1757017717320120367-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExerciceForFor.java&lt;/div&gt;&lt;textarea&gt;
 public class ExerciceForFor {
  public static void main(String args[]) {
  for (int compteur1 = 1; compteur1 &amp;lt;= 9; compteur1 = compteur1 &amp;#43; 1) {
@@ -838,16 +838,16 @@ public class ExerciceForFor {
  }
  }
 }
-&lt;/textarea>&lt;/div>
- &lt;/div>
- &lt;button type="submit" class="export-btn java-runner-1752978526113905887-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter&lt;/button>
- &lt;/form>
- &lt;div class="export-result">&lt;/div>
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;">&lt;/div>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js">&lt;/script>
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js">&lt;/script>
- &lt;script>(function(){
- var root = document.getElementById('java-runner-1752978526113905887');
+&lt;/textarea&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-runner-1757017717320120367-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+ &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+ &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+ &lt;script&gt;(function(){
+ var root = document.getElementById('java-runner-1757017717320120367');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -946,11 +946,11 @@ public class ExerciceForFor {
  var j=JSON.parse(t);
  
  if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+(j.output||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'&lt;br>')+'&lt;/pre>';
+ resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+(j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -1059,90 +1059,90 @@ public class ExerciceForFor {
  hideTooltip();
  });
  });
- })();&lt;/script>
- &lt;/div>
-&lt;/div>
-&lt;p>Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p></description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel">
+ })();&lt;/script&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Après la lecture du chapitre, répondez aux questions suivantes.&lt;/p&gt;</description></item><item><title>GitHub</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/github/</guid><description>&lt;h1 id="github-optionnel"&gt;
  GitHub (optionnel)
- &lt;a class="anchor" href="#github-optionnel">#&lt;/a>
-&lt;/h1>
-&lt;p>&lt;a href="https://github.com">GitHub&lt;/a> est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk">apprenez à utiliser Git&lt;/a>, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire">Vous trouverez le professeur responsable du cours sur GitHub&lt;/a>. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p></description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle">
+ &lt;a class="anchor" href="#github-optionnel"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com"&gt;GitHub&lt;/a&gt; est un site où les programmeurs partagent leur code et travaillent de manière collaborative sur des projets de programmation. Si vous créez un compte et &lt;a href="https://www.youtube.com/watch?v=hPfgekYUKgk"&gt;apprenez à utiliser Git&lt;/a&gt;, vous pourrez y partager votre code, ou contribuer au code d&amp;rsquo;autres projets. C&amp;rsquo;est une excellente manière de développer un portfolio afin d&amp;rsquo;impressionner les employeurs potentiels. &lt;a href="https://github.com/lemire"&gt;Vous trouverez le professeur responsable du cours sur GitHub&lt;/a&gt;. Encore une fois, tout s&amp;rsquo;y déroule en anglais, mais si vous ne maîtrisez pas l&amp;rsquo;anglais, vous aurez du mal à faire carrière en informatique.&lt;/p&gt;</description></item><item><title>Les structures de contrôle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-1/</guid><description>&lt;h1 id="les-structures-de-contrôle"&gt;
  Les structures de contrôle
- &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le">#&lt;/a>
-&lt;/h1>
-&lt;p>Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong>if-else&lt;/strong> et &lt;strong>switch-case&lt;/strong> pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p>
-&lt;p>Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p></description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives">
+ &lt;a class="anchor" href="#les-structures-de-contr%c3%b4le"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Les structures de contrôle sont des outils essentiels en programmation : elles permettent de prendre des décisions et de répéter des actions selon certaines conditions. En Java, les structures de contrôle principales sont &lt;strong&gt;if-else&lt;/strong&gt; et &lt;strong&gt;switch-case&lt;/strong&gt; pour le choix, ainsi que les boucles (qui seront vues plus loin).&lt;/p&gt;
+&lt;p&gt;Une structure de contrôle permet d’exécuter différentes instructions selon la valeur d’une variable ou le résultat d’une expression logique. Cela rend les programmes dynamiques et capables de s’adapter à différentes situations.&lt;/p&gt;</description></item><item><title>Les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-2/</guid><description>&lt;h1 id="les-structures-itératives"&gt;
  Les structures itératives
- &lt;a class="anchor" href="#les-structures-it%c3%a9ratives">#&lt;/a>
-&lt;/h1>
-&lt;p>Les structures itératives permettent d&amp;rsquo;itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d&amp;rsquo;entier), de lire un flux de données caractère par caractère, etc. Elles sont l&amp;rsquo;implémentation des &amp;ldquo;tant que&amp;rdquo;, des &amp;ldquo;pour i de 1 à 10 faire&amp;rdquo;, etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p></description></item><item><title>Les chaînes de caractères (String)</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</guid><description>&lt;h1 id="string">
+ &lt;a class="anchor" href="#les-structures-it%c3%a9ratives"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Les structures itératives permettent d&amp;rsquo;itérer un certain nombre de fois, basé sur des variables de contrôle. Elles permettent par exemple de chercher une valeur dans une structure de données (ex. un tableau d&amp;rsquo;entier), de lire un flux de données caractère par caractère, etc. Elles sont l&amp;rsquo;implémentation des &amp;ldquo;tant que&amp;rdquo;, des &amp;ldquo;pour i de 1 à 10 faire&amp;rdquo;, etc. Dans le langage Java, il existe trois structures itératives : le while, le for et le do-while.&lt;/p&gt;</description></item><item><title>Les chaînes de caractères (String)</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-string/</guid><description>&lt;h1 id="string"&gt;
  String
- &lt;a class="anchor" href="#string">#&lt;/a>
-&lt;/h1>
-&lt;p>En Java, le type &lt;code>String&lt;/code> représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code>String&lt;/code> sont &lt;strong>immuables&lt;/strong> : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code>String&lt;/code> en mémoire, sans changer l’original.&lt;/p></description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base">
+ &lt;a class="anchor" href="#string"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;En Java, le type &lt;code&gt;String&lt;/code&gt; représente une séquence de caractères. Il est très utilisé pour manipuler du texte : noms, messages, fichiers, etc. Une particularité essentielle à comprendre est que les objets de type &lt;code&gt;String&lt;/code&gt; sont &lt;strong&gt;immuables&lt;/strong&gt; : une fois créés, ils ne peuvent pas être modifiés. Toute opération qui semble modifier une chaîne (comme la concaténation, le remplacement ou la suppression de caractères) crée en réalité un nouvel objet &lt;code&gt;String&lt;/code&gt; en mémoire, sans changer l’original.&lt;/p&gt;</description></item><item><title>Les structures de données de base</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3/</guid><description>&lt;h1 id="les-structures-de-données-de-base"&gt;
  Les structures de données de base
- &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base">#&lt;/a>
-&lt;/h1>
-&lt;p>Le langage Java possède toutes les stuctures de données nécessaires.
-Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p></description></item><item><title>Les valeurs aléatoires</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</guid><description>&lt;h1 id="génération-de-valeurs-aléatoires">
+ &lt;a class="anchor" href="#les-structures-de-donn%c3%a9es-de-base"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le langage Java possède toutes les stuctures de données nécessaires.
+Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.&lt;/p&gt;</description></item><item><title>Les valeurs aléatoires</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-random/</guid><description>&lt;h1 id="génération-de-valeurs-aléatoires"&gt;
  Génération de valeurs aléatoires
- &lt;a class="anchor" href="#g%c3%a9n%c3%a9ration-de-valeurs-al%c3%a9atoires">#&lt;/a>
-&lt;/h1>
-&lt;blockquote class="book-hint info">
-&lt;p>Vous n&amp;rsquo;avez pas à maîtriser la génération de valeurs aléatoires dans ce cours.&lt;/p>
-&lt;/blockquote>
-&lt;p>Pour tester des structures de données, il est utile de pouvoir générer des valeurs aléatoires. Le plus souvent en programmation logicielle, nous générons des valeurs pseudo-aléatoires. Une valeur pseudo-aléatoire semble aléatoire, mais elle est en réalité pré-déterminée. La classe &lt;code>Random&lt;/code> en Java, située dans le paquetage &lt;code>java.util&lt;/code>, permet de générer des nombres pseudo-aléatoires pour diverses applications, comme les simulations, les jeux ou les tests. Elle utilise un générateur de nombres pseudo-aléatoires basé sur une graine (seed), qui, si spécifiée, garantit la reproductibilité des séquences générées. Par défaut, &lt;code>Random&lt;/code> utilise une graine dérivée de l’heure système pour produire des résultats différents à chaque exécution. La classe offre des méthodes comme &lt;code>nextInt()&lt;/code>, &lt;code>nextDouble()&lt;/code> ou &lt;code>nextBoolean()&lt;/code> pour générer respectivement des entiers, des nombres à virgule flottante ou des booléens.&lt;/p></description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java">
+ &lt;a class="anchor" href="#g%c3%a9n%c3%a9ration-de-valeurs-al%c3%a9atoires"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;Vous n&amp;rsquo;avez pas à maîtriser la génération de valeurs aléatoires dans ce cours.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pour tester des structures de données, il est utile de pouvoir générer des valeurs aléatoires. Le plus souvent en programmation logicielle, nous générons des valeurs pseudo-aléatoires. Une valeur pseudo-aléatoire semble aléatoire, mais elle est en réalité pré-déterminée. La classe &lt;code&gt;Random&lt;/code&gt; en Java, située dans le paquetage &lt;code&gt;java.util&lt;/code&gt;, permet de générer des nombres pseudo-aléatoires pour diverses applications, comme les simulations, les jeux ou les tests. Elle utilise un générateur de nombres pseudo-aléatoires basé sur une graine (seed), qui, si spécifiée, garantit la reproductibilité des séquences générées. Par défaut, &lt;code&gt;Random&lt;/code&gt; utilise une graine dérivée de l’heure système pour produire des résultats différents à chaque exécution. La classe offre des méthodes comme &lt;code&gt;nextInt()&lt;/code&gt;, &lt;code&gt;nextDouble()&lt;/code&gt; ou &lt;code&gt;nextBoolean()&lt;/code&gt; pour générer respectivement des entiers, des nombres à virgule flottante ou des booléens.&lt;/p&gt;</description></item><item><title>La programmation fonctionnelle en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/fonctionnel/</guid><description>&lt;h1 id="la-programmation-fonctionnelle-en-java"&gt;
  La programmation fonctionnelle en Java
- &lt;a class="anchor" href="#la-programmation-fonctionnelle-en-java">#&lt;/a>
-&lt;/h1>
-&lt;p>La programmation fonctionnelle tire ses origines des mathématiques, en particulier du calcul lambda développé par Alonzo Church dans les années 1930. Ce formalisme a posé les bases théoriques pour décrire les calculs comme des fonctions pures, sans effets de bord. Dans les années 1950, John McCarthy a créé Lisp, le premier langage explicitement inspiré de ces idées, introduisant des concepts comme les fonctions de première classe. Les années 1980 ont vu l’émergence de langages comme Haskell, qui a mis l’accent sur les fonctions pures et l’évaluation paresseuse.
+ &lt;a class="anchor" href="#la-programmation-fonctionnelle-en-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;La programmation fonctionnelle tire ses origines des mathématiques, en particulier du calcul lambda développé par Alonzo Church dans les années 1930. Ce formalisme a posé les bases théoriques pour décrire les calculs comme des fonctions pures, sans effets de bord. Dans les années 1950, John McCarthy a créé Lisp, le premier langage explicitement inspiré de ces idées, introduisant des concepts comme les fonctions de première classe. Les années 1980 ont vu l’émergence de langages comme Haskell, qui a mis l’accent sur les fonctions pures et l’évaluation paresseuse.
 L&amp;rsquo;évaluation paresseuse est une stratégie en programmation fonctionnelle où l&amp;rsquo;évaluation d&amp;rsquo;une expression est retardée jusqu&amp;rsquo;à ce que sa valeur soit réellement nécessaire. Cela permet d&amp;rsquo;optimiser les performances en évitant les calculs inutiles et de supporter des structures de données potentiellement infinies.
-Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p></description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives">
+Depuis, la programmation fonctionnelle a influencé de nombreux langages modernes (Scala, Clojure, F#) et a été intégrée dans des langages impératifs comme Python, JavaScript et Java, en réponse à la nécessité de parallélisme et de code plus robuste.&lt;/p&gt;</description></item><item><title>Exercices sur les structures de contrôle, les structures de données, les structures itératives</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-1/</guid><description>&lt;h1 id="exercices-sur-les-structures-de-contrôle-les-structures-de-données-les-structures-itératives"&gt;
  Exercices sur les structures de contrôle, les structures de données, les structures itératives
- &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="questionsréponses">
+ &lt;a class="anchor" href="#exercices-sur-les-structures-de-contr%c3%b4le-les-structures-de-donn%c3%a9es-les-structures-it%c3%a9ratives"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="questionsréponses"&gt;
  Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions">
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/"&gt;pense-bête Java&lt;/a&gt; au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/"&gt;les principales notions mathématiques&lt;/a&gt; du cours.&lt;/p&gt;</description></item><item><title>Les exceptions</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-4/</guid><description>&lt;h1 id="les-exceptions"&gt;
  Les exceptions
- &lt;a class="anchor" href="#les-exceptions">#&lt;/a>
-&lt;/h1>
-&lt;p>En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p></description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité">
+ &lt;a class="anchor" href="#les-exceptions"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;En programmation, il est essentiel de pouvoir gérer les erreurs qui peuvent survenir lors de l’exécution d’un programme. Java propose un mécanisme puissant et structuré : les exceptions. Plutôt que de laisser le programme s’arrêter brutalement en cas de problème (comme une division par zéro ou l’ouverture d’un fichier inexistant), Java permet de « lancer » une exception. Cette exception peut alors être capturée et traitée, ce qui rend le code plus robuste, plus lisible et plus facile à maintenir.&lt;/p&gt;</description></item><item><title>La récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-5/</guid><description>&lt;h1 id="la-récursivité"&gt;
  La récursivité
- &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9">#&lt;/a>
-&lt;/h1>
-&lt;p>La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p></description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité">
+ &lt;a class="anchor" href="#la-r%c3%a9cursivit%c3%a9"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;La récursivité est une technique fondamentale en informatique qui consiste pour une fonction à s’appeler elle-même afin de résoudre un problème en le divisant en sous-problèmes plus simples. Cette approche permet d’exprimer élégamment des solutions à des problèmes complexes, comme le calcul de suites, la recherche dans des structures arborescentes ou la résolution de certains algorithmes mathématiques. Comprendre la récursivité est essentiel pour progresser en algorithmique et en programmation.&lt;/p&gt;</description></item><item><title>Exercices sur les exceptions et la récursivité</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/exercices-3-2/</guid><description>&lt;h1 id="exercices-sur-les-exceptions-et-la-récursivité"&gt;
  Exercices sur les exceptions et la récursivité
- &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="questionsréponses">
+ &lt;a class="anchor" href="#exercices-sur-les-exceptions-et-la-r%c3%a9cursivit%c3%a9"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="questionsréponses"&gt;
  Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Exemple : modèle de langue</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</guid><description>&lt;h1 id="exemple--modèle-de-langue">
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/"&gt;pense-bête Java&lt;/a&gt; au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/"&gt;les principales notions mathématiques&lt;/a&gt; du cours.&lt;/p&gt;</description></item><item><title>Exemple : modèle de langue</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/activite-3-3-modele/</guid><description>&lt;h1 id="exemple--modèle-de-langue"&gt;
  Exemple : modèle de langue
- &lt;a class="anchor" href="#exemple--mod%c3%a8le-de-langue">#&lt;/a>
-&lt;/h1>
-&lt;blockquote class="book-hint info">
-&lt;p>Ce exemple est une application des notions du module. Il s&amp;rsquo;agit de matériel optionnel.&lt;/p>
-&lt;/blockquote>
-&lt;p>Pour illustrer l&amp;rsquo;utilisation des tableaux, considérons l&amp;rsquo;exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d&amp;rsquo;un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.&lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations">
+ &lt;a class="anchor" href="#exemple--mod%c3%a8le-de-langue"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;Ce exemple est une application des notions du module. Il s&amp;rsquo;agit de matériel optionnel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pour illustrer l&amp;rsquo;utilisation des tableaux, considérons l&amp;rsquo;exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d&amp;rsquo;un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme compte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.&lt;/p&gt;</description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/conseils/</guid><description>&lt;h1 id="recommandations"&gt;
  Recommandations
- &lt;a class="anchor" href="#recommandations">#&lt;/a>
-&lt;/h1>
-&lt;p>Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudo-code ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.&lt;/p>
-&lt;p>Privilégiez un code lisible avec des noms de variables explicites. Testez chaque étape avec des cas simples avant d’explorer des scénarios complexes. Cette validation progressive permet de repérer rapidement les anomalies et de garantir la robustesse de la solution.&lt;/p></description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1 id="travail-noté-3---les-structures-de-données-de-contrôle-et-ditération">
+ &lt;a class="anchor" href="#recommandations"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudo-code ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.&lt;/p&gt;
+&lt;p&gt;Privilégiez un code lisible avec des noms de variables explicites. Testez chaque étape avec des cas simples avant d’explorer des scénarios complexes. Cette validation progressive permet de repérer rapidement les anomalies et de garantir la robustesse de la solution.&lt;/p&gt;</description></item><item><title>Travail noté 3</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/travail-note-3/</guid><description>&lt;h1 id="travail-noté-3---les-structures-de-données-de-contrôle-et-ditération"&gt;
  Travail noté 3 - Les structures de données, de contrôle et d&amp;rsquo;itération
- &lt;a class="anchor" href="#travail-not%c3%a9-3---les-structures-de-donn%c3%a9es-de-contr%c3%b4le-et-dit%c3%a9ration">#&lt;/a>
-&lt;/h1>
-&lt;p>Les travaux notés du cours INF1220 évaluent la capacité à comprendre des énoncés logiques et à les transcrire en code Java de manière autonome, une compétence essentielle testée également à l’examen final. Les étudiants doivent effectuer des recherches sur le web, une pratique courante en programmation, et soumettre leurs travaux sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, avant la date de fin de cours indiquée dans le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code. Les travaux, d’un niveau comparable à ceux d’autres universités québécoises, doivent inclure des explications claires et personnelles, l’utilisation du robot conversationnel du cours étant autorisée à condition de produire ses propres analyses.&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#travail-not%c3%a9-3---les-structures-de-donn%c3%a9es-de-contr%c3%b4le-et-dit%c3%a9ration"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Les travaux notés du cours INF1220 évaluent la capacité à comprendre des énoncés logiques et à les transcrire en code Java de manière autonome, une compétence essentielle testée également à l’examen final. Les étudiants doivent effectuer des recherches sur le web, une pratique courante en programmation, et soumettre leurs travaux sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, avant la date de fin de cours indiquée dans le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code. Les travaux, d’un niveau comparable à ceux d’autres universités québécoises, doivent inclure des explications claires et personnelles, l’utilisation du robot conversationnel du cours étant autorisée à condition de produire ses propres analyses.&lt;/p&gt;</description></item></channel></rss>

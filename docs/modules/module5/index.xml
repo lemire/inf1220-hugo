@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 5. La programmation orientée objet: héritage et le polymorphisme on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/</link><description>Recent content in Module 5. La programmation orientée objet: héritage et le polymorphisme on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module5/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 5. La programmation orientée objet: héritage et le polymorphisme on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/</link><description>Recent content in Module 5. La programmation orientée objet: héritage et le polymorphisme on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module5/index.xml" rel="self" type="application/rss+xml"/><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas"&gt;
  Java pas à pas
- &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
-&lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p>
-&lt;ul>
-&lt;li>Chapitre 5. Graphisme 2D et concepts de programmation objet&lt;/li>
-&lt;li>Chapitre 6. Introduction à l’animation 2D&lt;/li>
-&lt;li>Chapitre 7. Développement de classes : conception objet&lt;/li>
-&lt;li>Chapitre 8. Animation 2D et développement d’un jeu simple&lt;/li>
-&lt;/ul>
-&lt;blockquote class="book-hint info">
-&lt;p>Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la programmation de jeux vidéos et la conception d&amp;rsquo;interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrées.&lt;/p></description></item><item><title>L'héritage, les classes abstraites et les interfaces</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</guid><description>&lt;h1 id="lhéritage-les-classes-abstraites-et-les-interfaces">
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapitre 5. Graphisme 2D et concepts de programmation objet&lt;/li&gt;
+&lt;li&gt;Chapitre 6. Introduction à l’animation 2D&lt;/li&gt;
+&lt;li&gt;Chapitre 7. Développement de classes : conception objet&lt;/li&gt;
+&lt;li&gt;Chapitre 8. Animation 2D et développement d’un jeu simple&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;Dans ce cours, vous n&amp;rsquo;avez pas à maîtriser la programmation de jeux vidéos et la conception d&amp;rsquo;interfaces graphiques. Le tout est utilisé pour illustrer et motiver les notions du cours. On ne vous demandera pas de programmer un jeu vidéo, mais vous devez comprendre les notions de programmation Java illustrées.&lt;/p&gt;</description></item><item><title>L'héritage, les classes abstraites et les interfaces</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-1/</guid><description>&lt;h1 id="lhéritage-les-classes-abstraites-et-les-interfaces"&gt;
  L&amp;rsquo;héritage, les classes abstraites et les interfaces
- &lt;a class="anchor" href="#lh%c3%a9ritage-les-classes-abstraites-et-les-interfaces">#&lt;/a>
-&lt;/h1>
-&lt;p>L’héritage, les classes abstraites et les interfaces sont des concepts centraux de la programmation orientée objet en Java. Ils permettent de structurer le code.
-En utilisant correctement ces idées, on peut rendre les programmes plus modulaires, évolutifs et faciles à maintenir. Comprendre ces notions est essentiel pour concevoir des applications robustes et flexibles.&lt;/p>
-&lt;h2 id="lhéritage">
+ &lt;a class="anchor" href="#lh%c3%a9ritage-les-classes-abstraites-et-les-interfaces"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;L’héritage, les classes abstraites et les interfaces sont des concepts centraux de la programmation orientée objet en Java. Ils permettent de structurer le code.
+En utilisant correctement ces idées, on peut rendre les programmes plus modulaires, évolutifs et faciles à maintenir. Comprendre ces notions est essentiel pour concevoir des applications robustes et flexibles.&lt;/p&gt;
+&lt;h2 id="lhéritage"&gt;
  L&amp;rsquo;héritage
- &lt;a class="anchor" href="#lh%c3%a9ritage">#&lt;/a>
-&lt;/h2>
-&lt;p>Après avoir présenté les objets et les classes dans les leçons précédentes, nous abordons ici la notion d&amp;rsquo;héritage. Cette technique, appliquée à la programmation Java, permet de créer de nouvelles classes fondées sur celles qui existent déjà. Lorsque nous héritons d&amp;rsquo;une classe, nous réutilisons ses méthodes et champs, auxquels nous pouvons ajouter de nouveaux champs en vue de l&amp;rsquo;adapter à de nouvelles situations.&lt;/p></description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme">
+ &lt;a class="anchor" href="#lh%c3%a9ritage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Après avoir présenté les objets et les classes dans les leçons précédentes, nous abordons ici la notion d&amp;rsquo;héritage. Cette technique, appliquée à la programmation Java, permet de créer de nouvelles classes fondées sur celles qui existent déjà. Lorsque nous héritons d&amp;rsquo;une classe, nous réutilisons ses méthodes et champs, auxquels nous pouvons ajouter de nouveaux champs en vue de l&amp;rsquo;adapter à de nouvelles situations.&lt;/p&gt;</description></item><item><title>Le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/activite-5-2/</guid><description>&lt;h1 id="le-polymorphisme"&gt;
  Le polymorphisme
- &lt;a class="anchor" href="#le-polymorphisme">#&lt;/a>
-&lt;/h1>
-&lt;p>Le polymorphisme est la capacité d’un même nom de méthode à s’adapter à différents contextes, selon l’objet qui l’utilise. Cela permet de manipuler des objets de différentes classes de façon uniforme, sans se soucier de leur type précis. En Java, la machine virtuelle (JVM) choisit automatiquement la bonne méthode à exécuter selon la classe réelle de l’objet. On distingue trois formes principales de polymorphisme : ad hoc (surcharge), par héritage (redéfinition), et paramétrique (génériques). Chacune permet d’écrire du code plus flexible et réutilisable.&lt;/p></description></item><item><title>Exercices sur l’héritage et le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</guid><description>&lt;h1 id="exercices-sur-lhéritage-et-le-polymorphisme">
+ &lt;a class="anchor" href="#le-polymorphisme"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le polymorphisme est la capacité d’un même nom de méthode à s’adapter à différents contextes, selon l’objet qui l’utilise. Cela permet de manipuler des objets de différentes classes de façon uniforme, sans se soucier de leur type précis. En Java, la machine virtuelle (JVM) choisit automatiquement la bonne méthode à exécuter selon la classe réelle de l’objet. On distingue trois formes principales de polymorphisme : ad hoc (surcharge), par héritage (redéfinition), et paramétrique (génériques). Chacune permet d’écrire du code plus flexible et réutilisable.&lt;/p&gt;</description></item><item><title>Exercices sur l’héritage et le polymorphisme</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/exercices-5-1/</guid><description>&lt;h1 id="exercices-sur-lhéritage-et-le-polymorphisme"&gt;
  Exercices sur l&amp;rsquo;héritage et le polymorphisme.
- &lt;a class="anchor" href="#exercices-sur-lh%c3%a9ritage-et-le-polymorphisme">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="questionsréponses">
+ &lt;a class="anchor" href="#exercices-sur-lh%c3%a9ritage-et-le-polymorphisme"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="questionsréponses"&gt;
  Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h2>
-&lt;p>Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme">
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Veuillez répondre mentalement, sur papier ou bien en créant le code nécessaire pour répondre à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/"&gt;pense-bête Java&lt;/a&gt; au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/"&gt;les principales notions mathématiques&lt;/a&gt; du cours.&lt;/p&gt;</description></item><item><title>Travail noté 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module5/travail-note-5/</guid><description>&lt;h1 id="travail-noté-5---héritage-et-polymorphisme"&gt;
  Travail noté 5 - Héritage et polymorphisme
- &lt;a class="anchor" href="#travail-not%c3%a9-5---h%c3%a9ritage-et-polymorphisme">#&lt;/a>
-&lt;/h1>
-&lt;p>Pour le cours INF1220, les travaux notés doivent être soumis sous forme d’un unique fichier PDF via l’outil de dépôt officiel de la TÉLUQ, avant la date de fin de cours indiquée sur le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code Java. L’utilisation du robot conversationnel du cours est autorisée, mais les réponses et analyses doivent être personnelles. Avant de commencer, il est crucial d’avoir complété toutes les lectures et exercices préparatoires et de maîtriser la matière, en posant des questions si nécessaire.&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#travail-not%c3%a9-5---h%c3%a9ritage-et-polymorphisme"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Pour le cours INF1220, les travaux notés doivent être soumis sous forme d’un unique fichier PDF via l’outil de dépôt officiel de la TÉLUQ, avant la date de fin de cours indiquée sur le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code Java. L’utilisation du robot conversationnel du cours est autorisée, mais les réponses et analyses doivent être personnelles. Avant de commencer, il est crucial d’avoir complété toutes les lectures et exercices préparatoires et de maîtriser la matière, en posant des questions si nécessaire.&lt;/p&gt;</description></item></channel></rss>

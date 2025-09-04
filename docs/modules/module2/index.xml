@@ -1,83 +1,83 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 2: Introduction au langage Java on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/</link><description>Recent content in Module 2: Introduction au langage Java on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module2/index.xml" rel="self" type="application/rss+xml"/><item><title>Préparation de l’espace de travail</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</guid><description>&lt;h1 id="préparation-de-lespace-de-travail">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Module 2: Introduction au langage Java on INF 1220 - Introduction à la programmation</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/</link><description>Recent content in Module 2: Introduction au langage Java on INF 1220 - Introduction à la programmation</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf1220-hugo/docs/modules/module2/index.xml" rel="self" type="application/rss+xml"/><item><title>Préparation de l’espace de travail</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/preparation/</guid><description>&lt;h1 id="préparation-de-lespace-de-travail"&gt;
  Préparation de l&amp;rsquo;espace de travail
- &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail">#&lt;/a>
-&lt;/h1>
-&lt;p>Comme langage de support à l&amp;rsquo;introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l&amp;rsquo;introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d&amp;rsquo;instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d&amp;rsquo;exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d&amp;rsquo;exploitation et aux processeurs spécifiques de l&amp;rsquo;ordinateur.&lt;/p></description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas">
+ &lt;a class="anchor" href="#pr%c3%a9paration-de-lespace-de-travail"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Comme langage de support à l&amp;rsquo;introduction des concepts de programmation, nous utiliserons le langage Java. Tel que présenté dans l&amp;rsquo;introduction du cours, le langage Java est un langage interprété multi-plateforme où le code est pré-compilé dans un ensemble d&amp;rsquo;instructions intermédiaires (appelé Java bytecode), puis interprété sur chaque système d&amp;rsquo;exploitation à partir de la machine virtuelle Java. Celle-ci transforme alors le bytecode en instructions machine propre au système d&amp;rsquo;exploitation et aux processeurs spécifiques de l&amp;rsquo;ordinateur.&lt;/p&gt;</description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas"&gt;
  Java pas à pas
- &lt;a class="anchor" href="#java-pas-%c3%a0-pas">#&lt;/a>
-&lt;/h1>
-&lt;p>Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p>
-&lt;ul>
-&lt;li>Chapitre 2. Introduction à la programmation Java&lt;/li>
-&lt;li>Chapitre 4. Types et expressions Java&lt;/li>
-&lt;/ul>
-&lt;p>Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p>
-&lt;p>Après votre lecture, répondez aux questions suivantes.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Chapitre 2. Introduction à la programmation Java&lt;/p>
-&lt;ul>
-&lt;li>Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li>
-&lt;li>Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li>
-&lt;li>Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Chapitre 4. Types et expressions Java&lt;/p></description></item><item><title>Création d'une classe en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="création-dune-classe-en-java">
+ &lt;a class="anchor" href="#java-pas-%c3%a0-pas"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Nous vous invitons maintenant à lire les chapitres suivants du manuel Java pas à pas par Robert Godin et Daniel Lemire.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapitre 2. Introduction à la programmation Java&lt;/li&gt;
+&lt;li&gt;Chapitre 4. Types et expressions Java&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les chapitres comprennent plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p&gt;
+&lt;p&gt;Après votre lecture, répondez aux questions suivantes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Chapitre 2. Introduction à la programmation Java&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quelles sont les principales étapes de la création et de l&amp;rsquo;exécution d’un programme Java, et pourquoi la méthode main() est-elle essentielle dans ce processus ?&lt;/li&gt;
+&lt;li&gt;Expliquez la différence entre une déclaration de variable et une initialisation de variable à la déclaration dans une méthode Java. Donnez un exemple concret pour illustrer votre réponse.&lt;/li&gt;
+&lt;li&gt;Comment la classe Scanner est-elle utilisée pour lire des données saisies par l’utilisateur, et quelles précautions doivent être prises lors de son importation et de son utilisation ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chapitre 4. Types et expressions Java&lt;/p&gt;</description></item><item><title>Création d'une classe en Java</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/oriente/</guid><description>&lt;h1 id="création-dune-classe-en-java"&gt;
  Création d&amp;rsquo;une classe en Java
- &lt;a class="anchor" href="#cr%c3%a9ation-dune-classe-en-java">#&lt;/a>
-&lt;/h1>
-&lt;p>Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p></description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs">
+ &lt;a class="anchor" href="#cr%c3%a9ation-dune-classe-en-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de « plan » pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.&lt;/p&gt;</description></item><item><title>Introduction aux types de base et à leurs opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/typeoperateur/</guid><description>&lt;h1 id="introduction-aux-types-de-base-et-à-leurs-opérateurs"&gt;
  Introduction aux types de base et à leurs opérateurs
- &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="mise-en-garde-pédagogique">
+ &lt;a class="anchor" href="#introduction-aux-types-de-base-et-%c3%a0-leurs-op%c3%a9rateurs"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="mise-en-garde-pédagogique"&gt;
  Mise en garde pédagogique
- &lt;a class="anchor" href="#mise-en-garde-p%c3%a9dagogique">#&lt;/a>
-&lt;/h2>
-&lt;p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.&lt;/p></description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs">
+ &lt;a class="anchor" href="#mise-en-garde-p%c3%a9dagogique"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.&lt;/p&gt;</description></item><item><title>Exercices sur les classes, les variables, les types et les opérateurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-1/</guid><description>&lt;h1 id="exercices-sur-les-classes-les-variables-les-types-et-les-opérateurs"&gt;
  Exercices sur les classes, les variables, les types et les opérateurs
- &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs">#&lt;/a>
-&lt;/h1>
-&lt;p>Prenez en note chaque question. Tentez par vos propres moyens, mais avec l&amp;rsquo;aide de tout le matériel et de l&amp;rsquo;Internet, de résoudre le problème. Prévoyez jusqu&amp;rsquo;à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p></description></item><item><title>Méthodes et constructeurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</guid><description>&lt;h1 id="la-conception-de-méthodesfonctions-et-leur-appel">
+ &lt;a class="anchor" href="#exercices-sur-les-classes-les-variables-les-types-et-les-op%c3%a9rateurs"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Prenez en note chaque question. Tentez par vos propres moyens, mais avec l&amp;rsquo;aide de tout le matériel et de l&amp;rsquo;Internet, de résoudre le problème. Prévoyez jusqu&amp;rsquo;à 15 minutes de travail par question. Après avoir bien travaillé la question, consultez la réponse.&lt;/p&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/"&gt;pense-bête Java&lt;/a&gt; au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/"&gt;les principales notions mathématiques&lt;/a&gt; du cours.&lt;/p&gt;</description></item><item><title>Méthodes et constructeurs</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/methodes/</guid><description>&lt;h1 id="la-conception-de-méthodesfonctions-et-leur-appel"&gt;
  La conception de méthodes/fonctions et leur appel
- &lt;a class="anchor" href="#la-conception-de-m%c3%a9thodesfonctions-et-leur-appel">#&lt;/a>
-&lt;/h1>
-&lt;p>La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.&lt;/p></description></item><item><title>Exercices sur les classes et méthodes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</guid><description>&lt;h1 id="questionsréponses">
+ &lt;a class="anchor" href="#la-conception-de-m%c3%a9thodesfonctions-et-leur-appel"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.&lt;/p&gt;</description></item><item><title>Exercices sur les classes et méthodes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/exercices-2-2/</guid><description>&lt;h1 id="questionsréponses"&gt;
  Questions/Réponses
- &lt;a class="anchor" href="#questionsr%c3%a9ponses">#&lt;/a>
-&lt;/h1>
-&lt;p>Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
-Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p>
-&lt;blockquote class="book-hint info">
-&lt;p>N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/">pense-bête Java&lt;/a> au besoin. Pour les mathématiques,
-vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/">les principales notions mathématiques&lt;/a> du cours.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="comment-faire-ces-exercices-">
+ &lt;a class="anchor" href="#questionsr%c3%a9ponses"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Veuillez répondre mentalement ou sur papier à ces questions avant de regarder la réponse.
+Certaines questions sont difficiles, et il est normal de ne pas toutes les réussir.&lt;/p&gt;
+&lt;blockquote class="book-hint info"&gt;
+&lt;p&gt;N&amp;rsquo;oubliez pas d&amp;rsquo;utiliser notre &lt;a href="https://lemire.github.io/inf1220-hugo/docs/pensebete/"&gt;pense-bête Java&lt;/a&gt; au besoin. Pour les mathématiques,
+vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.github.io/inf1220-hugo/docs/extra/math/"&gt;les principales notions mathématiques&lt;/a&gt; du cours.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="comment-faire-ces-exercices-"&gt;
  Comment faire ces exercices ?
- &lt;a class="anchor" href="#comment-faire-ces-exercices-">#&lt;/a>
-&lt;/h2>
-&lt;p>N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p></description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations">
+ &lt;a class="anchor" href="#comment-faire-ces-exercices-"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. &lt;/p&gt;</description></item><item><title>Recommandations</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/conseils/</guid><description>&lt;h1 id="recommandations"&gt;
  Recommandations
- &lt;a class="anchor" href="#recommandations">#&lt;/a>
-&lt;/h1>
-&lt;p>Il est important d&amp;rsquo;écrire du code lisible et bien documenté. Il s&amp;rsquo;agit d&amp;rsquo;un compétence
-nécessaire pour développer du logiciel en pratique.&lt;/p>
-&lt;h2 id="importance-de-la-lisibilité-du-code-en-java">
+ &lt;a class="anchor" href="#recommandations"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Il est important d&amp;rsquo;écrire du code lisible et bien documenté. Il s&amp;rsquo;agit d&amp;rsquo;un compétence
+nécessaire pour développer du logiciel en pratique.&lt;/p&gt;
+&lt;h2 id="importance-de-la-lisibilité-du-code-en-java"&gt;
  Importance de la lisibilité du code en Java
- &lt;a class="anchor" href="#importance-de-la-lisibilit%c3%a9-du-code-en-java">#&lt;/a>
-&lt;/h2>
-&lt;p>La lisibilité du code est essentielle en Java pour faciliter la maintenance et la collaboration.
+ &lt;a class="anchor" href="#importance-de-la-lisibilit%c3%a9-du-code-en-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;La lisibilité du code est essentielle en Java pour faciliter la maintenance et la collaboration.
 Un code lisible réduit les erreurs et permet à d&amp;rsquo;autres développeurs (ou à vous-même dans le
 futur) de comprendre rapidement l&amp;rsquo;intention du programme. Pour y parvenir, il faut adopter
 des conventions de nommage claires et commenter judicieusement. Les normes de codage,
 comme celles définies par Oracle ou Google, standardisent la structure du code, rendant
-les projets cohérents. Une variable bien nommée, comme &lt;code>nombreEtudiants&lt;/code> au lieu de &lt;code>n&lt;/code>,
-et des commentaires explicatifs améliorent la compréhension.&lt;/p></description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes">
+les projets cohérents. Une variable bien nommée, comme &lt;code&gt;nombreEtudiants&lt;/code&gt; au lieu de &lt;code&gt;n&lt;/code&gt;,
+et des commentaires explicatifs améliorent la compréhension.&lt;/p&gt;</description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes"&gt;
  Travail noté 2 - Les types, opérateurs et méthodes
- &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes">#&lt;/a>
-&lt;/h1>
-&lt;p>Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Avant de commencer le travail noté, il est essentiel de maîtriser la matière en ayant complété toutes les lectures et exercices préparatoires, et de poser des questions si nécessaire. L’utilisation du robot conversationnel du cours est autorisée pour les travaux notés, mais les réponses et analyses doivent être personnelles. Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un « incomplet », même si l’examen a lieu plus tard.&lt;/p&gt;</description></item></channel></rss>
