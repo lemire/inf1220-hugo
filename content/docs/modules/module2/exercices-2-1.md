@@ -279,8 +279,8 @@ Que va afficher ce code à l'écran?
 ```java  {style=github}
 class Main {
   public static void main(String[] args) {
+    System.out.println(-1 >> 4);
     System.out.println(-1 >>> 4);
-    System.out.println(-1 >>>> 4);
   }
 }
 ```
