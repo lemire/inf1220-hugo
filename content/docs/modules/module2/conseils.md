@@ -239,7 +239,7 @@ Markdown permet de structurer un texte avec des titres, des listes, des liens, d
 - *Listes :* Listes à puces avec `-`, `*` ou `+`, listes numérotées avec des chiffres suivis d’un point.
 - *Liens :* `[texte du lien](URL)`
 - *Images :* `![texte alternatif](URL)`
-- *Texte en gras :* `*gras*` ou `__gras__`
+- *Texte en gras :* `**gras**` ou `__gras__`
 - *Texte en italique :* `*italique*` ou `_italique_`
 - *Citations :* `> citation`
 
