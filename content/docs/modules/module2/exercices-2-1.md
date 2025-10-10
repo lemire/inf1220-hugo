@@ -511,6 +511,23 @@ Quels sont, selon vous, les principaux avantages et inconvénients de Java par r
 
 
 
+## Question 36
+
+Expliquez la différence entre les expressions `A & B` et `A && B`.
+
+<details>
+<summary>Réponse</summary>
+
+Dans le contexte de Java, les expressions `A & B` et `A && B` sont toutes deux des opérateurs de type "et logique" (AND) appliqués à des opérandes booléens A et B, mais elles diffèrent fondamentalement par leur comportement d'évaluation.
+
+L'opérateur `&&` est l'opérateur AND logique à court-circuit. Il évalue d'abord A : si A est faux, l'expression entière retourne immédiatement faux sans évaluer B, ce qui optimise les performances et évite des calculs inutiles (ou potentiellement dangereux, comme une division par zéro dans B). Par exemple, dans `if (x > 0 && 10 / x > 1)`, si x vaut zéro, B ne sera pas évalué, évitant une exception.
+
+En revanche, l'opérateur `&` est un AND logique non court-circuit : il évalue toujours A et B, quel que soit le résultat de A, avant de retourner le résultat logique (vrai si les deux sont vrais, faux sinon). Cela peut être utile dans des contextes où les effets secondaires de B doivent toujours se produire, mais cela rend le code moins efficace et plus risqué si B dépend de A.
+
+Notez que `&` peut aussi servir d'opérateur bit à bit pour des entiers, alors que `&&` est exclusivement logique pour les booléens. En pratique, pour les conditions booléennes, `&&` est préféré pour sa sémantique plus sûre.
+
+</details>
+
 
 
 
