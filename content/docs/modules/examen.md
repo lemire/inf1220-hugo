@@ -21,7 +21,7 @@ weight: 6
 
 <p>Vérifiez si vous êtes dans une version du cours qui nécessite un entretien de suivi. <strong>Vous trouverez cette information sur le portail étudiant.</strong> En cas de doute, vous pouvez communiquer avec la personne qui vous encadre au sein du cours.</p>
 
-<p>Si vous êtes inscrits dans un version du cours avec entretien de suivi, cet entretien est est obligatoire. L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen.</p>
+<p>Si vous êtes inscrits dans un version du cours avec entretien de suivi, cet entretien est obligatoire. L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen.</p>
 
 ### Qu’est-ce que l’entretien de suivi?
 <p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
