@@ -134,10 +134,11 @@ switch (index) {
 
 ## Question 7
 
-<p>Est-ce possible de créer une structure de données de type ArrayList d'entier en utilisant la déclaration suivante : ArrayList<int> = new ArrayList<int>(); ?</p>
+Est-ce possible de créer une structure de données de type `ArrayList` contenant des entiers en utilisant l'expression  suivante&nbsp;: `ArrayList<int> = new ArrayList();`&nbsp;?
 
 <details><summary>Réponse</summary>
-<p>Le Java est un langage OO et même si le Java intègre des types de base (int, float, etc.) qui ne sont pas des objets.  L'objet ArrayList ne peut que contenir des objets. Il faut donc utiliser plutôt : ArrayList<Integer> = new ArrayList<Integer>(); où l'objet Integer est la version objet de int. Dans les dernières versions de Java, une mécanique de conversion automatique permet d'assigner des types à leur objet équivalent. Par exemple : Integer i = 5; ou bien :</p>
+
+Le type `int` n'est pas une classe. Il faut plutôt utiliser la syntaxe `ArrayList<Integer> = new ArrayList<Integer>();`. Une mécanique de conversion automatique permet d'assigner des types à leur objet équivalent. Par exemple  `Integer i = 5;` ou bien&nbsp;:
 
 ```java  {style=github}
 ArrayList<Integer> list = new ArrayList<Integer>();
