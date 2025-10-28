@@ -509,7 +509,7 @@ for (int j=0; j < 10;j++) {
 <p>Que se passe-t-il dans chacun des cas quant à l’exécution de Instruction quand j vaut 5?</p>
 
 <details><summary>Réponse</summary>
-<p>En a) Instruction n’est pas exécutée et on passe au tour suivant, le 7eme tour de la boucle (i=6) où, comme lors des autres tours précédant i=5, Instruction sera exécutée.</p>
+<p>En a) Instruction n’est pas exécutée et on passe au tour suivant.</p>
 
 <p>En b) on sort de la boucle, Instruction ne sera plus jamais exécutée.</p>
 </details>
