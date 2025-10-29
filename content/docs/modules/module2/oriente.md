@@ -3,7 +3,6 @@ title: "Création d'une classe en Java"
 weight: 20
 ---
 
-> "The most disastrous thing that you can ever learn is your first programming language" - Alan Kay  
 
 # Création d'une classe en Java
 
