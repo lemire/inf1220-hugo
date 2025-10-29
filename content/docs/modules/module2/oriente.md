@@ -3,6 +3,8 @@ title: "Création d'une classe en Java"
 weight: 20
 ---
 
+> "The most disastrous thing that you can ever learn is your first programming language" - Alan Kay  
+
 # Création d'une classe en Java
 
 Créer une classe en Java, c’est définir un nouveau type d’objet qui regroupe à la fois des données (appelées attributs ou champs) et des comportements (appelés méthodes). Cette approche permet de modéliser des entités du monde réel ou conceptuel de façon structurée et réutilisable. Une classe sert de «&nbsp;plan&nbsp;» pour fabriquer des objets : chaque objet créé à partir d’une classe possède ses propres valeurs pour les attributs, mais partage les mêmes méthodes. La programmation orientée objet favorise ainsi la modularité, la clarté et la maintenance du code, car chaque classe peut être développée, testée et améliorée indépendamment des autres.
