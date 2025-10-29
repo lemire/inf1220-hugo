@@ -20,5 +20,6 @@ De nombreux exemples concrets et exercices d’autoévaluation vous permettront 
 
 ## Planification du temps
 
-Nous vous suggérons de consacrer les trois premières semaines du cours au premier module  (environ 27 heures). Assurez-vous de remettre
-le premier travail noté à la fin de la troisième semaine.
+Nous vous suggérons de consacrer (au maximum) les trois premières semaines du cours au premier module  (environ 27 heures). 
+Assurez-vous de remettre le premier travail noté à la fin de la troisième semaine ou avant. 
+**Vous ne devriez pas prendre plus de trois semaines**.
