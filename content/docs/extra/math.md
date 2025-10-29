@@ -271,11 +271,6 @@ V_Z = V_N \cup \{-, +\}
 
 - Tout entier naturel est un entier rationnel.
 - Si \( a \) est un entier naturel, \( -a \) et \( +a \) sont des entiers rationnels.
-
-\[
-V_Q = V_Z \cup \{/, ,\}
-\]
-
 - Tout entier rationnel est un nombre rationnel.
 - Si \( a \) et \( b \) sont des entiers rationnels, \( a, b \) est un nombre rationnel ; de plus, si \( b \neq 0 \), \( \frac{a}{b} \) est un nombre rationnel.
 - Si \( a \) et \( b \) sont des nombres rationnels, \( \frac{a}{b} \) est aussi un nombre rationnel si \( b \neq 0 \).
