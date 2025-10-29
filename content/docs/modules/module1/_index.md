@@ -18,6 +18,13 @@ Au fil du module, vous découvrirez :
 
 De nombreux exemples concrets et exercices d’autoévaluation vous permettront d’appliquer ces concepts et de développer votre capacité à raisonner de façon logique et méthodique, compétence essentielle pour la suite du cours et pour toute démarche informatique.
 
+## Pourquoi ce premier module ?
+
+Vous êtes peut-être surpris que le premier module ne débute pas immédiatement avec de la programmation Java. Nous croyons
+qu'il est essentiel d'établir au préalable des concepts plus fondamentaux. Notre objectif n'est pas de simplement vous
+aidez à apprendre la programmation en général, mais de vous donner des bases solides.
+
+
 ## Planification du temps
 
 Nous vous suggérons de consacrer (au maximum) les trois premières semaines du cours au premier module  (environ 27 heures). 
