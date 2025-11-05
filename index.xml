@@ -115,20 +115,8 @@ vous pouvez faire référence à notre rappel sur &lt;a href="https://lemire.git
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;Nous vous invitons maintenant à lire le chapitre suivants &lt;em&gt;Concepts de base&lt;/em&gt; (chapitre 1) du manuel Java pas à pas par Robert Godin et Daniel Lemire. Le chapitre comprend plusieurs exemples et exercices. Vous devez compléter les exercices du manuel.&lt;/p&gt;
-&lt;p&gt;Après votre lecture du chapitre, répondez aux questions suivantes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Décrivez les principales composantes matérielles d’un ordinateur typique, telles que le processeur, la mémoire centrale et les unités périphériques. Expliquez brièvement le rôle du bus dans la communication entre ces composantes.&lt;/li&gt;
-&lt;li&gt;Expliquez le fonctionnement de base du processeur central (CPU) dans l’exécution d’un programme. Décrivez le cycle de traitement (chercher et exécuter une instruction) et donnez un exemple simple d’instruction que le processeur pourrait exécuter.&lt;/li&gt;
-&lt;li&gt;Quelles sont les caractéristiques principales de la mémoire centrale (RAM) en termes de rapidité et de volatilité ? Expliquez pourquoi un programme doit être chargé dans la mémoire centrale avant son exécution et ce qui se passe en cas d’interruption de courant.&lt;/li&gt;
-&lt;li&gt;Distinguez les périphériques d’entrée, de sortie et d’entrée/sortie. À l’aide d’exemples concrets (comme le clavier, l’écran ou le disque dur), expliquez comment ces périphériques permettent l’échange d’informations entre l’ordinateur et le monde extérieur.&lt;/li&gt;
-&lt;li&gt;Quelle est la différence entre le matériel (hardware) et le logiciel (software) ? Décrivez le rôle du système d’exploitation dans la gestion des ressources d’un ordinateur, en citant un exemple de système d’exploitation mentionné dans le chapitre.&lt;/li&gt;
-&lt;li&gt;Expliquez ce qu’est le langage binaire et pourquoi il est utilisé dans les ordinateurs. À l’aide d’un exemple, montrez comment l’entier décimal 42 est représenté en binaire sur 8 bits, en détaillant le calcul.&lt;/li&gt;
-&lt;li&gt;Décrivez le processus de compilation dans le contexte de la programmation Java. Expliquez pourquoi il est nécessaire de traduire un programme Java en langage machine avant son exécution par le processeur.&lt;/li&gt;
-&lt;li&gt;Expliquez ce qu’est un système de gestion de fichiers et son rôle dans l’organisation des données en mémoire secondaire. À l’aide d’un exemple de chemin de fichier sous Windows (comme C:\Users\Robert\Documents\HelloWorld.java), décrivez comment un fichier est localisé.&lt;/li&gt;
-&lt;li&gt;Qu’est-ce que le pseudo-parallélisme dans un système monoprocesseur ? Expliquez comment le système d’exploitation crée l’illusion d’une exécution simultanée de plusieurs programmes, et précisez en quoi cela diffère du parallélisme réel dans un système multi-cœur.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Plusieurs étudiants trouvent qu&amp;rsquo;il est plus aisé de faire les lectures dans le manuel Java pas à pas après avoir terminé la lecture du module sur notre site web. Vous pouvez choisir quand il vous convient le mieux d&amp;rsquo;utiliser le manuel Java pas à pas.&lt;/p&gt;</description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours"&gt;
+&lt;p&gt;Vous devez vous procurer le manuel Java pas à pas. Vous avez accès &lt;a href="https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf"&gt;au document PDF&lt;/a&gt;. Si vous devez lire un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l&amp;rsquo;ouvrir au sein d&amp;rsquo;un outil dédié (par ex. Adobe Acrobat). Il n&amp;rsquo;est pas très pratique de lire un document PDF au sein d&amp;rsquo;un navigateur web.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"&gt;Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon &lt;/a&gt; pour une somme modeste :&lt;/p&gt;</description></item><item><title>Vous avez trouvé une erreur?</title><link>https://lemire.github.io/inf1220-hugo/docs/erreurs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/erreurs/</guid><description>&lt;h1 id="amélioration-continue-du-cours"&gt;
  Amélioration continue du cours
  &lt;a class="anchor" href="#am%c3%a9lioration-continue-du-cours"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -612,7 +600,30 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
 &lt;p&gt;Rédiger du pseudo-code n&amp;rsquo;a rien de sorcier, mais plusieurs étudiants font des erreurs. Voici quelques erreurs communes.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Certains étudiants rédigent du pseudo-code qui a l&amp;rsquo;air formel et correct, mais qui est en fait ambigu et inutilisable. Prenons cet exemple: &lt;code&gt; SI j'ai mal aux dos ALORS je prend des aspirines OU SI j'ai faim ALORS je mange&lt;/code&gt;. Bien sûr, je n&amp;rsquo;ai utilisé que des expressions logiques. Des SI, des ALORS des OU. Mais qu&amp;rsquo;est-ce que ça signifie ? Par exemple, est-ce que je peux à la fois manger et prendre des aspirines dans ce scénario ? La réponse est subjective. Votre pseudo-code doit être exécutable sans interprétation. Un pseudo-code n&amp;rsquo;est pas un texte à interprétation subjective. Vous ne pouvez pas faire semblant d&amp;rsquo;écrire du pseudo-code en utilisant simplement les termes qu&amp;rsquo;on trouve fréquemment au sein des pseudo-codes. Ce n&amp;rsquo;est pas une question de syntaxe. On peut parfaitement écrire du pseudo-code sans jamais utiliser SI, TANT QUE, etc. Plusieurs étudiants obsèdent sur la syntaxe, croyant à tort que si on leur donne les bons termes, la bonne grammaire, ils trouveront comment comprendre ce qu&amp;rsquo;est un pseudo-code. Or, c&amp;rsquo;est justement le contraire de la leçon ici: nous voulons que vous compreniez que la syntaxe exacte est secondaire dans la pensée algorithmique. On peut être imprécis et incohérent en utilisant une syntaxe formelle, et on peut être précis et cohérent en utilisant du français usuel. Ce n&amp;rsquo;est pas parce que vous utilisez des expressions qui vous semblent précises que vous l&amp;rsquo;êtes. Vous devez avoir une idée précise en tête et vous devez l&amp;rsquo;exprimer avec précision.&lt;/p&gt;</description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas"&gt;
+&lt;p&gt;Certains étudiants rédigent du pseudo-code qui a l&amp;rsquo;air formel et correct, mais qui est en fait ambigu et inutilisable. Prenons cet exemple: &lt;code&gt; SI j'ai mal aux dos ALORS je prend des aspirines OU SI j'ai faim ALORS je mange&lt;/code&gt;. Bien sûr, je n&amp;rsquo;ai utilisé que des expressions logiques. Des SI, des ALORS des OU. Mais qu&amp;rsquo;est-ce que ça signifie ? Par exemple, est-ce que je peux à la fois manger et prendre des aspirines dans ce scénario ? La réponse est subjective. Votre pseudo-code doit être exécutable sans interprétation. Un pseudo-code n&amp;rsquo;est pas un texte à interprétation subjective. Vous ne pouvez pas faire semblant d&amp;rsquo;écrire du pseudo-code en utilisant simplement les termes qu&amp;rsquo;on trouve fréquemment au sein des pseudo-codes. Ce n&amp;rsquo;est pas une question de syntaxe. On peut parfaitement écrire du pseudo-code sans jamais utiliser SI, TANT QUE, etc. Plusieurs étudiants obsèdent sur la syntaxe, croyant à tort que si on leur donne les bons termes, la bonne grammaire, ils trouveront comment comprendre ce qu&amp;rsquo;est un pseudo-code. Or, c&amp;rsquo;est justement le contraire de la leçon ici: nous voulons que vous compreniez que la syntaxe exacte est secondaire dans la pensée algorithmique. On peut être imprécis et incohérent en utilisant une syntaxe formelle, et on peut être précis et cohérent en utilisant du français usuel. Ce n&amp;rsquo;est pas parce que vous utilisez des expressions qui vous semblent précises que vous l&amp;rsquo;êtes. Vous devez avoir une idée précise en tête et vous devez l&amp;rsquo;exprimer avec précision.&lt;/p&gt;</description></item><item><title>Présentation du pseudocode</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/syntaxe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/syntaxe/</guid><description>&lt;h1 id="guide-pour-présenter-du-pseudocode"&gt;
+ Guide pour présenter du pseudocode
+ &lt;a class="anchor" href="#guide-pour-pr%c3%a9senter-du-pseudocode"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Adoptez un style simple. Testez la lisibilité de votre pseudocode en le lisant à haute voix.&lt;/p&gt;
+&lt;p&gt;Voici un exemple de pseudocode difficile à comprendre.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;entrée : un nombre
+si mon nombre nombre &amp;gt; 0 alors &amp;#34;positif&amp;#34;
+ autrement
+ afficher &amp;#34;négatif ou zéro&amp;#34;
+fin du code
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Voici un bon exemple.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;entrée : nombre
+si nombre &amp;gt; 0 alors
+ afficher &amp;#34;positif&amp;#34;
+sinon
+ afficher &amp;#34;négatif ou zéro&amp;#34;
+fin si
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="indentation"&gt;
+ Indentation
+ &lt;a class="anchor" href="#indentation"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;indentation est utile pour montrer la structure hiérarchique (boucles, conditions, blocs). Utilisez systématiquement 2 à 4 espaces par niveau, vous pouvez aussi utiliser des tabulations. Ne mélangez pas espaces et tabulations.
+Indentez chaque bloc intérieur d&amp;rsquo;un niveau supplémentaire. Alignez les instructions de fin de bloc (comme &amp;ldquo;fin si&amp;rdquo; ou &amp;ldquo;fin pour&amp;rdquo;) avec le début du bloc. Conservez une indentation cohérente dans tout le document.&lt;/p&gt;</description></item><item><title>Java pas à pas</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module3/pasapas/</guid><description>&lt;h1 id="java-pas-à-pas"&gt;
  Java pas à pas
  &lt;a class="anchor" href="#java-pas-%c3%a0-pas"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -624,21 +635,21 @@ ne sont pas également efficaces. La complexité algorithmique fournit une mesur
 
 
 
- &lt;div id="java-runner-1761761242502882493"&gt;
+ &lt;div id="java-runner-1762359617695907088"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1761761242502882493 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1761761242502882493 .export-form { margin-bottom:0; }
- #java-runner-1761761242502882493 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1761761242502882493 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1761761242502882493 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1761761242502882493 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1761761242502882493 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1762359617695907088 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1762359617695907088 .export-form { margin-bottom:0; }
+ #java-runner-1762359617695907088 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1762359617695907088 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1762359617695907088 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1762359617695907088 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1762359617695907088 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1761761242502882493-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1762359617695907088-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesMath.java&lt;/div&gt;&lt;textarea&gt;
@@ -654,14 +665,14 @@ public class ExemplesMath {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1761761242502882493-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1762359617695907088-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1761761242502882493');
+ var root = document.getElementById('java-runner-1762359617695907088');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -883,21 +894,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1761761242502927304"&gt;
+ &lt;div id="java-runner-1762359617695952964"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1761761242502927304 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1761761242502927304 .export-form { margin-bottom:0; }
- #java-runner-1761761242502927304 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1761761242502927304 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1761761242502927304 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1761761242502927304 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1761761242502927304 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1762359617695952964 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1762359617695952964 .export-form { margin-bottom:0; }
+ #java-runner-1762359617695952964 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1762359617695952964 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1762359617695952964 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1762359617695952964 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1762359617695952964 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1761761242502927304-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1762359617695952964-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesString.java&lt;/div&gt;&lt;textarea&gt;
@@ -934,14 +945,14 @@ public class ExemplesString {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1761761242502927304-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1762359617695952964-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1761761242502927304');
+ var root = document.getElementById('java-runner-1762359617695952964');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1163,21 +1174,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1761761242502987346"&gt;
+ &lt;div id="java-runner-1762359617695997257"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1761761242502987346 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1761761242502987346 .export-form { margin-bottom:0; }
- #java-runner-1761761242502987346 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1761761242502987346 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1761761242502987346 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1761761242502987346 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1761761242502987346 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1762359617695997257 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1762359617695997257 .export-form { margin-bottom:0; }
+ #java-runner-1762359617695997257 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1762359617695997257 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1762359617695997257 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1762359617695997257 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1762359617695997257 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1761761242502987346-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1762359617695997257-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExempleZero.java&lt;/div&gt;&lt;textarea&gt;
@@ -1196,14 +1207,14 @@ public class ExempleZero {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1761761242502987346-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1762359617695997257-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1761761242502987346');
+ var root = document.getElementById('java-runner-1762359617695997257');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1425,21 +1436,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1761761242503064111"&gt;
+ &lt;div id="java-runner-1762359617696036560"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1761761242503064111 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1761761242503064111 .export-form { margin-bottom:0; }
- #java-runner-1761761242503064111 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1761761242503064111 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1761761242503064111 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1761761242503064111 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1761761242503064111 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1762359617696036560 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1762359617696036560 .export-form { margin-bottom:0; }
+ #java-runner-1762359617696036560 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1762359617696036560 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1762359617696036560 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1762359617696036560 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1762359617696036560 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1761761242503064111-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1762359617696036560-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExerciceForFor.java&lt;/div&gt;&lt;textarea&gt;
@@ -1454,14 +1465,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1761761242503064111-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1762359617696036560-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1761761242503064111');
+ var root = document.getElementById('java-runner-1762359617696036560');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
