@@ -79,7 +79,29 @@ La plupart des langages de programmation s'utilisent avec des fichiers de texte.
 
 Le meilleur éditeur de fichier texte est sans doute [Visual Studio Code](https://code.visualstudio.com) (à ne pas confondre avec Visual Studio). Microsoft rend disponible [un guide d'utilisation de Visual Studio Code avec Java](https://code.visualstudio.com/docs/java/java-tutorial).
 
+
+Installez Visual Studio Code depuis le site officiel ([code.visualstudio.com](https://code.visualstudio.com)). Une fois Visual Studio Code installé et ouvert, suivez ces étapes précises pour installer l'Extension Pack for Java.
+
+1. Cliquez sur l'icône **Extensions** dans la barre latérale gauche (l’icône carrée divisée en quatre).  
+2. Dans la barre de recherche en haut, tapez **Extension Pack for Java**.  
+3. Sélectionnez le pack officiel publié par **Microsoft** (icône avec le logo Java).  
+4. Cliquez sur le bouton **Installer** ou **Install**.  
+
+L'installation télécharge automatiquement les six extensions incluses (Language Support for Java, Debugger for Java, etc.).
+Créez ensuite un dossier projet, ouvrez-le dans Visual Studio Code et ajoutez un fichier `Hello.java`; le Java Language Server s'active automatiquement. L'éditeur vous assistera dans vos activités de programmation.
+
 {{< youtube id="hN86e5-uYrc" >}}
+
+Pour bénéficier d’une assistance par intelligence artificielle directement dans l’éditeur, il est possible d’ajouter GitHub Copilot, un outil d’autocomplétion alimenté par l’intelligence artificielle. Voici comment procéder.
+
+- Créez-vous un compte sur le [site GitHub](https://github.com/).
+- Installez Visual Studio Code depuis le site officiel ([code.visualstudio.com](https://code.visualstudio.com)) si ce n’est pas déjà fait.
+- Ouvrez l’éditeur, puis accédez à la vue des extensions en cliquant sur l’icône carrée divisée en quatre dans la barre latérale gauche.
+- Dans la barre de recherche des extensions, tapez *GitHub Copilot* et sélectionnez l’extension officielle publiée par GitHub.
+- Cliquez sur *Installer* ou *Install*. Une fois l’installation terminée, une invite vous demandera de vous connecter avec votre compte GitHub. Suivez les instructions pour autoriser l’extension.
+- Copilot est désormais actif. Il proposera des suggestions de code en temps réel pendant que vous tapez. Acceptez-les avec la touche Tab, ou explorez les alternatives avec `Alt+]` (ou `Cmd+]` sur macOS).
+
+Notez que GitHub Copilot nécessite un abonnement payant après une période d’essai gratuite.
 
 
 
