@@ -54,6 +54,10 @@ void main() {
 }
 {{</inlineJava>}}
 
+## Courriel
+
+Si vous nous écrivez, n'oubliez pas d'ajouter `[INF1220]` dans l'objet de votre message.
+
 ## Manuel
 
 Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java pas à pas* par Robert Godin et Daniel Lemire. Vous pouvez [charger le document PDF](https://raw.githubusercontent.com/RobertGodin/JavaPasAPas/master/JavaPasAPas.pdf) dès maintenant.
