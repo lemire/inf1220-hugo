@@ -26,7 +26,7 @@ public class Bienvenue {
 
 </details>
 
-<p>Vous devez choisir comment vous allez exécuter ce programme. Vous pouvez le faire sans IDE (avec Bloc-Note et un accès en ligne de commande), avec repl.it en ligne, avec IntelliJ IDEA, avec Netbeans. Vous pouvez même faire des expériences avec plus d'une approche et ne retenir que celle qui vous convient le mieux.</p>
+<p>Vous devez choisir comment vous allez exécuter ce programme. Vous pouvez le faire sans IDE (avec Bloc-Note et un accès en ligne de commande), en ligne, avec IntelliJ IDEA, avec Netbeans. Vous pouvez même faire des expériences avec plus d'une approche et ne retenir que celle qui vous convient le mieux.</p>
 
 <p>Nous reviendrons dans le cours sur les éléments de programmation nécessaires pour comprendre ce programme. Néanmoins, en voici l'essentiel:</p>
 <ol>
@@ -93,18 +93,6 @@ public class Bienvenue {
 
 <p>Après la réussite de la compilation et la création du fichier Bienvenue.class, il faut l'exécuter avec l'interpréteur (la JVM) java.exe (java sous OSX et Linux). À partir de la console/invite de commande, il suffit d'exécuter la commande "java Bienvenue". Si tout se passe bien, on voit apparaître le message prévu : Bienvenue au cours INF 1220!  Sinon, il y a sans doute un problème de répertoire actif ou de chemin d'accès à java.exe</p>
 
-## Création d'une classe avec repl.it
-
-<p>Vous pouvez aussi utiliser repl.it. Dans ce cas, il suffit d'aller en ligne et d'utiliser l'interface graphique.</p>
-<p>En général, vous pouvez créez vos propres programmes sur repl.it. Repl.it est une plateforme en ligne pour écrire et tester du code Java sans installation. Cliquez sur les liens Repl.it du cours pour ouvrir les projets Java. </p>
-
-<p>Voici un exemple pertinent déjà en place.</p>
-<iframe height="800px" width="100%" src="https://repl.it/@lemire/b1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-
-
-<p>Si vous utilisez <tt>repl.it</tt>, vous devez tenir compte que la classe contenant la fonction exécutable (<tt>main</tt>) doit être nommée <tt>Main</tt>, mais c'est un détail technique spécifique à <tt>repl.it</tt> qui ne change pas la nature de l'exercice.</p>
-
 ## Vidéo suggérée
 
 
@@ -113,11 +101,6 @@ public class Bienvenue {
 
 
 
-# Création d'une classe avec ideone.com 
-
-<p><a href="https://ideone.com/kWZuP3">Vous pouvez aussi utiliser ideone.com</a>. Le fonctionnement est similaire à repl.it. Encore une fois, vous devrez créer un compte gratuit.</p>
-
-<p><a id="intro" name="avecIDEa"></a></p>
 
 ## Création d'une classe avec IntelliJ IDEA, sa compilation et son exécution
 

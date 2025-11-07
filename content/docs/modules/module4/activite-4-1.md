@@ -162,5 +162,4 @@ Vous pouvez regarder la vidéo suivante pour en apprendre davantage sur ce méca
 {{< youtube id="BzFx1dszk4I" >}}
 
 
-<p>Si vous utilisez repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme «&nbsp;javac Main.java&nbsp;» et «&nbsp;java Main arg1 arg2&nbsp;».</p>
 

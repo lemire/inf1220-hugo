@@ -267,7 +267,6 @@ Dans la classe TransformeurTexte, la référence this est utilisée dans la mét
 
 
 <p>Peu importe l'environnement que vous utilisez pour tester nos exemples, prenez la peine de vous familiariser avec celui-ci.</p>
-<p>Prenez note que sur repl.it, la méthode <tt>main</tt> est définie dans une classe distincte appelée Main. La classe TransformateurTexte doit apparaître dans un fichier nommé TransformateurTexte.java selon les conventions propres au Java.</p>
 
 ### La structure d'une méthode
 

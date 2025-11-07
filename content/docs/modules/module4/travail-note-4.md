@@ -37,7 +37,7 @@ Les travaux sont strictement individuels, et tout échange, notamment sur les r�
 <p>Dans ces exemples, les données ne sont pas nécessairement correctes. C'est votre travail de créer un programme qui peut traiter les erreurs.</p>
 
 <p>Vous pouvez créer un tel fichier sur votre machine avec un éditeur de texte, vous pouvez
-utiliser le système du site du cours,  ou vous pouvez utiliser <a href="https://repl.it/@lemire/hw?lite=true">le projet repl.it préconfiguré</a> où ces fichiers apparaissent déjà.</p>
+utiliser le système du site du cours.</p>
 
 <strong>Fonctionnalités/classes demandées</strong>
 
@@ -63,10 +63,6 @@ Vous pouvez écrire votre programme directement sur le site du cours.
 
 {{<javaMultiRunner files="Travail4.java;partie1.txt;partie2.txt;partie3.txt">}}
 
-<h2>Repl.it</h2>
-<p>Vous pouvez écrire votre programme en ligne avec repl.it.</p>
-
-<iframe height="1000px" width="100%" src="https://repl.it/@lemire/hw?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>Vous avez un certain degré de liberté dans la réalisation de ce travail. Par exemple...</p>
 <ul>

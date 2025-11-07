@@ -22,33 +22,6 @@ Plusieurs étudiants préfèrent un environnement de développement conventionne
 
 Au sein même du cours, nous mettons à votre disposition un environnement de développement entièrement en ligne, suffisant pour les travaux du cours. Vous pouvez y avoir accès [dès maintenant]({{< ref "/docs/environnement" >}}). Suivez le lien qui se trouve dans le menu du cours. Vous y trouverez des instructions.
 
-### Autres systèmes en ligne
-
-Outre le système inclut dans le cours, il y a plusieurs autres environnements en ligne, nous vous invitons à les explorer, en commençant par les suggestions suivantes :
-
-- [repl.it](https://repl.it)
-- [ideone.com](http://ideone.com)
-
-Ces outils en ligne vous permettent de saisir votre code, dans le navigateur, et de l'exécuter par la suite. Vous pouvez faire une grande partie du cours en utilisant seulement un outil comme [repl.it](https://repl.it). En effet, le cours se concentre principalement sur la programmation de base. Les outils d'aide à la programmation sont moins importants. Nous ne ferons pas de grands projets dans ce cours qui nécessitent beaucoup de gestion de code.
-
-La vidéo suivante illustre l'utilisation de [repl.it](https://repl.it) (il n'est pas nécessaire d'écouter la narration en anglais pour comprendre) :
-
-{{< youtube id="kMqNSZPjBOY" >}}
-
-Truc : Avec repl.it, vous pouvez ouvrir une console avec les touches ctrl-shift-s où vous pouvez exécuter des commandes comme «&nbsp;javac Main.java&nbsp;» et «&nbsp;java Main&nbsp;».
-
-Dans le cours, vous trouverez des exemples utilisant [repl.it](https://repl.it), mais l'utilisation de repl.it est optionnelle. Si repl.it ne fonctionne pas bien pour vous, utilisez autre chose.
-
-Une des limites d'un environnement comme repl.it est qu'ils ne permettent pas la production d'interfaces graphiques. Ainsi, certains exemples ne peuvent fonctionner sous repl.it.
-
-Notez bien : Certains des exemples [repl.it](https://repl.it) comprennent plusieurs fichiers. Comme dans plusieurs interfaces, repl.it ne permet de voir le contenu que d'un seul fichier à la fois. Par contre, il vous permet de naviguer entre différents fichiers. Nous verrons dans ce cours que Java exige que les "classes" soient définies au sein de fichiers du même nom, ce qui implique souvent que nous utilisions plusieurs fichiers avec des noms prédéterminés. Cette contrainte en ce qui a trait aux fichiers n'est pas spécifique à repl.it. En Java, il y a un lien direct entre le nom des fichiers et leur contenu. Dans ce cours, vous devez faire preuve de débrouillardise et nous supposons que vous trouverez comment faire pour naviguer et voir les différents fichiers.
-
-### Instructions détaillées pour Repl.it
-
-Repl.it est une plateforme en ligne qui permet d’écrire, d’exécuter et de tester du code Java directement dans votre navigateur, sans avoir besoin d’installer un environnement de développement sur votre ordinateur. Pour commencer, accédez aux liens Repl.it fournis dans le cours. Cliquez sur un lien pour ouvrir le projet Java correspondant. Vous verrez une interface avec un éditeur de code à gauche, où le code est déjà chargé, et une console à droite pour afficher les résultats. Si vous n’êtes pas encore inscrit, créez un compte gratuit sur Repl.it en utilisant votre adresse e-mail ou un compte Google. Une fois connecté, vous pouvez modifier le code directement dans l’éditeur. Pour exécuter votre programme, cliquez sur le bouton vert «&nbsp;Run&nbsp;» en haut de la page. La console affichera les sorties ou les erreurs, ce qui vous permettra de vérifier si votre code fonctionne comme prévu.
-
-Pour travailler efficacement sur Repl.it, familiarisez-vous avec ses fonctionnalités principales. Vous pouvez créer un nouveau fichier ou répertoire dans votre projet en cliquant sur l’icône «&nbsp;+&nbsp;» dans la barre latérale. Si vous modifiez le code fourni dans les liens du cours, assurez-vous de ne pas écraser les instructions ou les parties essentielles sans les comprendre. Avec un peu de pratique, Repl.it deviendra un outil puissant et intuitif pour développer vos compétences en programmation Java.
-
 ## Installation du Java Development Kit (JDK)
 
 ### Système d'exploitation Microsoft Windows
