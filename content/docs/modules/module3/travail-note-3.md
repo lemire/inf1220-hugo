@@ -11,6 +11,13 @@ La date de fin de cours, fixée par l’Université, est non négociable par les
 
 En cas d’incapacité à résoudre complètement un problème, les étudiants sont encouragés à expliquer leur démarche et leurs difficultés, mais aucune solution ne sera fournie après la correction. Aucun indice supplémentaire ne sera donné au-delà de l’énoncé pour garantir l’équité. La planification rigoureuse du temps est cruciale, car le dépôt dans les délais est de la responsabilité de l’étudiant. Les consignes insistent sur la nécessité de relire attentivement son travail avant soumission, car aucune modification n’est possible une fois le fichier déposé.
 
+
+
+### Mettre en forme votre code Java
+
+Nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Une indentation cohérente, avec généralement quatre espaces par niveau, facilite la lecture et la compréhension du flux logique du programme. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
+
+
 ## Question #1
 <p>Écrivez un programme Java qui calcule la somme des nombres de 1 jusqu'à 10,000 (incluant 1 et 10,000) mais en omettant les nombres qui sont divisibles par trois et en omettant aussi les nombres dont le chiffre de la centaine est 2 ou 3 (par exemple 1201 ou 3313). Expliquez votre solution. Un travail remis sans explications suffisantes peut se voir attribué la note de zéro, sans droit de reprise. Vous devez justifier tous les qualifiants utilisés (private, public, protected, static): vous ne pouvez pas utiliser le mot-clé «&nbsp;static&nbsp;» sans le justifier.</p>
 

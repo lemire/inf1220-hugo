@@ -11,6 +11,14 @@ Les travaux doivent être soumis sous forme de fichier PDF via l’outil de dép
 
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, constitue une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Les étudiants doivent répartir leur code sur plusieurs pages si nécessaire pour en faciliter la lecture et accompagner celui-ci d’explications claires. La responsabilité du dépôt dans les délais et de la résolution des problèmes techniques avec l’outil de dépôt incombe à l’étudiant, qui doit contacter l’Université en cas de difficulté. Une préparation sérieuse et une vérification rigoureuse du travail avant soumission sont essentielles pour éviter les erreurs et maximiser la réussite.
 
+
+
+### Mettre en forme votre code Java
+
+
+Nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Une indentation cohérente, avec généralement quatre espaces par niveau, facilite la lecture et la compréhension du flux logique du programme. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
+
+
 <strong>Problème</strong>
 <p>Dans un jeu de Sudoku, nous devons re-construire une grille comprenant 9 rangées et 9 colonnes. Chaque rangée et chaque colonne doit contenir tous les entiers de 1 à 9.</p>
 
@@ -49,6 +57,8 @@ Votre programme doit faire trois opérations spécifiques:
 <li>Votre programme doit ensuite appliquer une transposition au tableau correspondant à un calcul de <a href="https://fr.wikipedia.org/wiki/Matrice_transposée">matrice transposée</a> et afficher le résultat à l'écran. Au lieu de l'afficher à l'écran, vous (en tant que programmeur) pouvez l'enregistrer comme nouveau fichier ou utiliser un autre moyen de transmission. Choisissez l'approche qui vous plaît le plus en tant que programmeur. Vous devez tester votre solution avec plus d'une grille; en particulier, incluez une grille qui est asymétrique (qui n'est pas identique à sa transposée) dans vos tests. Donnez le résultat d'au moins deux tests différents, au-delà du fichier partie1.txt. Vous pouvez utiliser des saisies d'écran pour présenter vos résultats.</li>
 </ol>
 
+
+Il n'y a pas de limites strictes quant à la longueur du code, mais nous vous encourageons fortement à vous limiter à moins de 300 lignes de code (au plus trois pages).
 
 
 <p>Vous devez expliquer votre programme avec soin et en détail. Chaque fonction et chaque variable du programme doit être justifiée. Les qualifiants (static, public, protected et private) doivent être justifiés un par un: vous ne pouvez pas utiliser le mot-clé «&nbsp;static&nbsp;» sans le justifier. Si vous remettez votre code sans explications claires et sans tout justifier, une note de zéro pourra être attribuée, sans possibilité de reprise.</p>

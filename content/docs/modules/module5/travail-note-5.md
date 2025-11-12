@@ -11,9 +11,15 @@ La date de fin de cours, fixée par l’Université, est non négociable par les
 
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Le fichier PDF doit contenir le code Java, intégré de manière à faciliter la correction, sans fichiers séparés. La préparation rigoureuse, incluant la maîtrise des concepts et la vérification du travail, est essentielle pour éviter les erreurs et répondre aux attentes du cours.
 
+
+
+### Mettre en forme votre code Java
+
+Nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Une indentation cohérente, avec généralement quatre espaces par niveau, facilite la lecture et la compréhension du flux logique du programme. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
+
 # Question #1
 
-<p>Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes lors de l'utilisation de ces classes dans la classe TestAnimaux.java:</p>
+Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes lors de l'utilisation de ces classes dans la classe `TestAnimaux.java`.
 
 
 {{< javaMultiRunner files="TestAnimaux.java;Animaux.java;Chat.java;Chien.java;GrosChien.java" >}}
@@ -21,14 +27,14 @@ Les travaux sont strictement individuels, et tout échange, notamment sur les r�
 
 # Question #2
 
-<p>En tant que programmeur, vous recevez le code suivant. Vous devez appliquer l'héritage afin que Cercle et Carré héritent à la fois de Forme et Resizable. Vous pouvez bien entendu modifier le code reçu. Utilisez votre bon jugement. Votre solution doit comprendre au moins une classe abstraite. Vous devez expliquer vos choix de manière détaillée: un travail remis avec des explications insuffisantes pourra se voir attribué la note de zéro, sans droit de reprise.</p>
+En tant que programmeur, vous recevez le code suivant. Vous devez appliquer l'héritage afin que Cercle et Carré héritent à la fois de Forme et Resizable. Vous pouvez bien entendu modifier le code reçu. Utilisez votre bon jugement. Votre solution doit comprendre au moins une classe abstraite. Vous devez expliquer vos choix de manière détaillée: un travail remis avec des explications insuffisantes pourra se voir attribué la note de zéro, sans droit de reprise.
 
 
 {{< javaMultiRunner files="TestCercle.java;Cercle.java;Carre.java;Resizable.java;Forme.java" >}}
 
 # Question #3
 
-<p> À quoi servent les interfaces en Java ? Utilisez la question précédente (2) comme base de discussion. Maximum 5 phrases.</p>
+À quoi servent les interfaces en Java ? Utilisez la question précédente (2) comme base de discussion. Maximum 5 phrases.
 
 
 

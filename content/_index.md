@@ -54,6 +54,8 @@ void main() {
 }
 {{</inlineJava>}}
 
+La compilation et l'exécution d'un programme Java peut prendre quelques secondes.
+
 ## Courriel
 
 Si vous nous écrivez, n'oubliez pas d'ajouter `[INF1220]` dans l'objet de votre message.

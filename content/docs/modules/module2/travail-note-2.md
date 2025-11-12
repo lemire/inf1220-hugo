@@ -10,6 +10,15 @@ Avant de commencer le travail noté, il est essentiel de maîtriser la matière 
 Les travaux doivent être remis sous forme de fichier PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le document doit être clair, lisible, permettre le copier-coller du code, et inclure des explications détaillées en français sous forme de texte suivi, en évitant les saisies d’écran ou les travaux manuscrits. Les réponses doivent être précises, personnelles, et accompagnées d’analyses, sans se limiter à du code ou à des extraits recopiés. Une fois soumis, le travail ne peut être modifié, d’où l’importance de le relire attentivement.
 
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant mener à une note de zéro ou à une exclusion. La recherche sur le web est encouragée, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La présentation, l’analyse et la clarté des explications sont prioritaires lors de la correction, qui valorise le raisonnement et la qualité du texte en français, plus que le code seul.
+
+
+### Mettre en forme votre code Java
+
+
+Nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Une indentation cohérente, avec généralement quatre espaces par niveau, facilite la lecture et la compréhension du flux logique du programme. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne.
+
+
+
 ## Question #1
 
 <p>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer <tt>Cercle</tt>.</p>
@@ -69,8 +78,7 @@ Le nom des méthodes aire et perimetre peut être différent si vous le souhaite
 ### Mettre en forme votre code Java
 
 
-<p>Certains étudiants souhaitent publier leur code au sein de site web ou au sein de documents. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java. Certains éditeurs vous permettent aussi d'enjoliver votre code. </p>
-
+Nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Une indentation cohérente, avec généralement quatre espaces par niveau, facilite la lecture et la compréhension du flux logique du programme. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Vous pouvez utiliser un site comme <a href="https://tohtml.com">tohtml.com</a> pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne.
 
 
 
