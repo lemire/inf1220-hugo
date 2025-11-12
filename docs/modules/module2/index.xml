@@ -76,7 +76,20 @@ futur) de comprendre rapidement l&amp;rsquo;intention du programme. Pour y parve
 des conventions de nommage claires et commenter judicieusement. Les normes de codage,
 comme celles définies par Oracle ou Google, standardisent la structure du code, rendant
 les projets cohérents. Une variable bien nommée, comme &lt;code&gt;nombreEtudiants&lt;/code&gt; au lieu de &lt;code&gt;n&lt;/code&gt;,
-et des commentaires explicatifs améliorent la compréhension.&lt;/p&gt;</description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes"&gt;
+et des commentaires explicatifs améliorent la compréhension.&lt;/p&gt;</description></item><item><title>Gabarit pour les travaux notés 2, 3, 4 et 5</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/gabarit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/gabarit/</guid><description>&lt;h1 id="gabarit-pour-les-travaux-notés-2-3-4-et-5"&gt;
+ Gabarit pour les travaux notés 2, 3, 4 et 5
+ &lt;a class="anchor" href="#gabarit-pour-les-travaux-not%c3%a9s-2-3-4-et-5"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Les travaux notés 3, 4 et 5 comprennent du code que vous devez expliquer. Nous vous demandons de remettre des
+rapports comprenant du code facile à consulter et bien expliqué. Pour vous aider, nous vous proposons le gabarit suivant.&lt;/p&gt;
+&lt;h2 id="travail-noté-3--inf-1220"&gt;
+ Travail noté 3 – INF 1220
+ &lt;a class="anchor" href="#travail-not%c3%a9-3--inf-1220"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Nom :&lt;/strong&gt; &lt;em&gt;Votre nom&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Prénom :&lt;/strong&gt; &lt;em&gt;Votre prénom&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Code permanent :&lt;/strong&gt; &lt;em&gt;ABCD12345678&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Date de remise :&lt;/strong&gt; 12 novembre 2025&lt;/p&gt;</description></item><item><title>Travail noté 2</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module2/travail-note-2/</guid><description>&lt;h1 id="travail-noté-2---les-types-opérateurs-et-méthodes"&gt;
  Travail noté 2 - Les types, opérateurs et méthodes
  &lt;a class="anchor" href="#travail-not%c3%a9-2---les-types-op%c3%a9rateurs-et-m%c3%a9thodes"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
