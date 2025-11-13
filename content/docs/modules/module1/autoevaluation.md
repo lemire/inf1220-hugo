@@ -121,7 +121,7 @@ Si vous n'avez pas les aptitudes requises, le cours peut vous paraître inaccess
 
 ## Un cours difficile ?
 
-<p>Le cours est un cours d'informatique universitaire, il conçu de manière à vous préparer à suivre une formation plus
+<p>Le cours est un cours d'informatique universitaire, il est conçu de manière à vous préparer à suivre une formation plus
     poussée en informatique. Il ne s'agit donc pas d'un cours technique qui vise à vous former pour un travail pratique
     et immédiat. On ne cherche pas à apprendre la programmation le plus rapidement possible, mais bien à établir des
     bases solides en étudiant les principes de base comme la notion d'algorithme. Notre objectif premier est de vous
