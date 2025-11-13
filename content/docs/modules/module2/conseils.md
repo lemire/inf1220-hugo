@@ -36,7 +36,7 @@ une documentation automatique. Les commentaires doivent être concis, pertinents
 de paraphraser le code. Par exemple, un commentaire comme `// Incrémente i` est inutile 
 si le code dit `i++`, mais `// Calcule la moyenne des notes pour chaque étudiant` est utile.
 
-## 4. Exemple de bonne pratique : nommage et commentaires
+## Exemple de bonne pratique : nommage et commentaires
 Voici un exemple de code Java bien écrit, respectant les normes et utilisant des commentaires 
 utiles :
 
@@ -301,3 +301,77 @@ dans ce cours, mais vous devriez comprendre le principle.
 Pour utiliser les packages dans votre propre code, commencez par structurer votre projet en créant une arborescence de répertoires qui correspond à la hiérarchie des packages. Par exemple, pour un package nommé `com.monentreprise.monapplication`, créez un dossier `com/monentreprise/monapplication` dans votre répertoire source. Placez vos fichiers Java, comme `MaClasse.java`, dans ce dossier, et ajoutez la ligne `package com.monentreprise.monapplication;` en haut de chaque fichier. Cette organisation permet de regrouper les classes par fonctionnalité, par exemple, un package `com.monentreprise.monapplication.model` pour les classes de données et un autre `com.monentreprise.monapplication.util` pour les utilitaires. Compilez et exécutez votre code en veillant à ce que le répertoire racine des packages soit inclus dans le chemin de classe (classpath).
 
 Lors de l’utilisation de vos propres packages, vous pouvez importer vos classes dans d’autres parties du projet avec `import`. Par exemple, si une classe `Utilisateur` est définie dans `com.monentreprise.monapplication.model`, vous pouvez l’importer dans une autre classe avec `import com.monentreprise.monapplication.model.Utilisateur;`. Si vos classes se trouvent dans le même package, aucune importation n’est nécessaire. Pour partager votre code ou le déployer, vous pouvez empaqueter vos classes dans un fichier JAR, en respectant la structure des packages. Une convention courante pour nommer les packages est d’utiliser le domaine de votre organisation en sens inverse (par exemple, `com.monentreprise`), ce qui garantit l’unicité des noms et facilite la collaboration ou l’intégration avec d’autres projets.
+
+
+## Longueur des lignes
+
+Pour garder les lignes de code Java courtes (idéalement 80–100 caractères maximum), voici les techniques les plus efficaces. L’objectif est que le code reste lisible quand il est imprimé ou inséré dans un document Word/PDF sans débordement.
+
+Au lieu de :
+```java
+return utilisateurService.findById(id).map(u -> mapper.toDto(u)).orElseThrow(() -> new RessourceIntrouvableException("Utilisateur non trouvé"));
+```
+
+Faire :
+```java
+return utilisateurService.findById(id)
+        .map(u -> mapper.toDto(u))
+        .orElseThrow(() -> new RessourceIntrouvableException(
+                "Utilisateur non trouvé"));
+```
+
+Au lieu de :
+```java
+repository.save(Utilisateur.builder().nom(nom).prenom(prenom).email(email).dateNaissance(date).actif(true).build());
+```
+
+Faire :
+```java
+Utilisateur utilisateur = Utilisateur.builder()
+        .nom(nom)
+        .prenom(prenom)
+        .email(email)
+        .dateNaissance(date)
+        .actif(true)
+        .build();
+
+repository.save(utilisateur);
+```
+
+Au lieu de : 
+
+```java
+boolean estValide = age >= 18 && possedePermis && !estSuspendu && soldeCompte > 0;
+```
+
+Faire :
+
+```java
+boolean estValide = age >= 18 
+        && possedePermis 
+        && !estSuspendu 
+        && soldeCompte > 0;
+```
+
+
+
+Organiser les déclarations sur plusieurs lignes : 
+
+```java
+public void traiterCommande(Long id, 
+                            String reference, 
+                            BigDecimal montant, 
+                            LocalDate date) {
+    // ...
+}
+```
+
+
+Définir les longues chaînes avec l'operateur `+` :
+
+```java
+String sql = "SELECT u.* FROM utilisateurs u " +
+             "WHERE u.actif = true " +
+             "AND u.age >= ? " +
+             "ORDER BY u.nom";
+```

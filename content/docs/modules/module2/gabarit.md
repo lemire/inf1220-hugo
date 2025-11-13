@@ -27,8 +27,8 @@ Expliquez comment vous allez attaquer le problème. Décomposez le problème en 
 #### Code source (copiable)
 
 Votre code source doit être aussi simple que possible, et il doit apparaître de façon lisible dans votre document. N'utilisez pas plus de 100 caractères
-par ligne et optez pour une police de caractères à taille fixe suffisamment petite pour pouvoir afficher 100 caractères par ligne. La plupart des problèmes du cours peuvent être résolus avec un programme qui peut être présenté sur une seule page. Assurez-vous de bien formatter votre code. Vous pouvez utiliser
-un outil comme [tohtml](https://tohtml.com) pour mettre en forme votre code.
+par ligne et optez pour une police de caractères à taille fixe suffisamment petite pour pouvoir afficher 100 caractères par ligne. La plupart des problèmes du cours peuvent être résolus avec un programme qui peut être présenté sur une seule page. Assurez-vous de bien formatter votre code. Vous pouvez utiliser 
+[notre outil de formattage](/docs/format/) pour mettre en forme votre code.
 
 ```java
 public class MonProgramme {
