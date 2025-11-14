@@ -9,6 +9,18 @@ weight: 78
 Les travaux notés 3, 4 et 5 comprennent du code que vous devez expliquer. Nous vous demandons de remettre des 
 rapports comprenant du code  facile à consulter et bien expliqué. Pour vous aider, nous vous proposons le gabarit suivant.
 
+## MarkDown
+
+Nous vous suggérons de rédiger vos travaux notés avec  MarkDown plutôt qu'avec 
+Microsoft Word. Vous
+pouvez [copier une version MarkDown de ce gabarit](https://gist.githubusercontent.com/lemire/7300657e883f0a3c14a0ab83dab56bd0/raw/891c011873da4d782c903ed7eb16299b11686388/gabarit.md) dans votre espace de travail.
+Nous vous suggérons d'utiliser Visual Studio Code pour convertir votre MarkDown
+en PDF.
+
+{{< youtube id="G3RuYho2zDA" >}}
+
+
+
 
 ## Travail noté 3 – INF 1220  
 **Nom :** *Votre nom*  
