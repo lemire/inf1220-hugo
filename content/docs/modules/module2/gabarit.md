@@ -14,11 +14,6 @@ rapports comprenant du code  facile à consulter et bien expliqué. Pour vous ai
 Nous vous suggérons de rédiger vos travaux notés avec  MarkDown plutôt qu'avec 
 Microsoft Word. Vous
 pouvez [copier une version MarkDown de ce gabarit](https://gist.githubusercontent.com/lemire/7300657e883f0a3c14a0ab83dab56bd0/raw/891c011873da4d782c903ed7eb16299b11686388/gabarit.md) dans votre espace de travail.
-Nous vous suggérons d'utiliser Visual Studio Code pour convertir votre MarkDown
-en PDF.
-
-{{< youtube id="G3RuYho2zDA" >}}
-
 
 
 
