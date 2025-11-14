@@ -19,8 +19,6 @@ L'approche pédagogique du cours repose sur la pratique. Dans ce cours, vous éc
 pseudo-code ou en Java. Nous avons inclus un grand nombre d'exercices et d'exemples, à la fois dans le manuel Java pas à
 pas et sur le site web du cours.
 
-
-
 ## Présentation du cours
 
 De nos jours, l'informatique est devenue omniprésente dans notre quotidien. Que ce soit à partir de nos téléphones intelligents, nos montres, nos véhicules ou dans notre maison, des systèmes ordinés nous aident à réaliser des tâches ou à nous divertir. Ces systèmes sont tous à des degrés divers (selon leur complexité) programmés à l'aide de langages de programmation : du système embarqué du micro-onde aux systèmes d'exploitation de nos tablettes. Au cours du 21e siècle, savoir programmer et être apte à lire du code sera un atout important sur le marché du travail, plusieurs utilisent le terme littératie numérique.
@@ -67,6 +65,8 @@ Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java
 [Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/) pour une somme modeste&nbsp;:
 
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+
+Amazon expédie normalement le manuel en environ trois jours.
 
 Le manuel *Java pas à pas* commence à la base et vous fournit une introduction par étape. Chacun des cinq modules
 du cours comprend des lectures obligatoires dans le manuel.
