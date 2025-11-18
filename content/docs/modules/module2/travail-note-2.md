@@ -19,6 +19,13 @@ Nous vous demandons d'apporter une attention particulière à la mise en page de
 rédiger vos travaux en [MarkDown]({{< relref "/docs/modules/module2/markdown/" >}}). Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
 
 
+## Utilisation d'un environnement de programmation en ligne
+
+Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),
+directement dans le site du cours, vous pouvez utiliser le bouton *partager* pour obtenir un URL pointant
+vers votre code informatique exécutable. Nous vous encourageons à inclure cet URL dans votre travail noté
+pour rendre la correction plus aisée.
+
 ## Question #1
 
 <p>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer <tt>Cercle</tt>.</p>

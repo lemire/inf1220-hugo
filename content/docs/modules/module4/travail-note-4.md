@@ -20,6 +20,13 @@ Nous vous demandons d'apporter une attention particulière à la mise en page de
 rédiger vos travaux en [MarkDown]({{< relref "/docs/modules/module2/markdown/" >}}). Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
 
 
+## Utilisation d'un environnement de programmation en ligne
+
+Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),
+directement dans le site du cours, vous pouvez utiliser le bouton *partager* pour obtenir un URL pointant
+vers votre code informatique exécutable. Nous vous encourageons à inclure cet URL dans votre travail noté
+pour rendre la correction plus aisée.
+
 
 <strong>Problème</strong>
 <p>Dans un jeu de Sudoku, nous devons re-construire une grille comprenant 9 rangées et 9 colonnes. Chaque rangée et chaque colonne doit contenir tous les entiers de 1 à 9.</p>

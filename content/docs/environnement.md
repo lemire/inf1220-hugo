@@ -11,6 +11,11 @@ Pour commencer à programmer dans cet environnement Java en ligne, familiarisez-
 
 Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'exécuter votre code. Le résultat s'affiche dans la zone «&nbsp;Résultat&nbsp;» en bas de la page. Si le programme s'exécute correctement, vous verrez la sortie attendue, comme du texte affiché par System.out.println. En cas d'erreur de compilation, le message d'erreur apparaît avec des détails précis, et les lignes problématiques dans vos fichiers Java sont surlignées en rouge dans l'éditeur. Passez la souris sur ces lignes pour voir le message d'erreur complet dans la barre d'état sous l'éditeur. Vous pouvez modifier le code directement dans l'éditeur et réexécuter pour tester vos corrections. Pour supprimer un fichier, cliquez sur le «&nbsp;×&nbsp;» en haut à droite de sa boîte.
 
+Le bouton «&nbsp;partager&nbsp;» copie un URL dans votre presse-papiers. Vous pouvez ensuite partager
+cet URL avec quelqu'un d'autre pour qu'il puisse voir l'état de votre code informatique au moment
+où vous avez appuyé sur le bouton «&nbsp;partager&nbsp;». Cette option est pratique notamment lors
+de la remise de vos travaux notés. Avant de transmettre votre URL à quelqu'un d'autre, nous vous
+encoourageons à le tester sur votre propre machine en le collant dans la barre d'adresse de votre navigateur.
 
   <style>
     /*.container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 32px; }*/
@@ -85,6 +90,7 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
       <div id="files" class="files"></div>
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:0; margin-top:12px;">
         <button type="submit">Exécuter</button>
+        <button type="button" id="shareBtn">Partager</button>
         <div class="add-btns" style="margin:0;">
           <button type="button" class="add-file" onclick="addFile('java')">Ajouter un fichier Java</button>
           <button type="button" class="add-file" onclick="addFile('txt')">Ajouter un fichier texte</button>
@@ -298,13 +304,51 @@ Lorsque vous exécutez votre programme, l'environnement tente de compiler et d'e
       }
     };
     window.onload = () => {
-      addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
+      const urlParams = new URLSearchParams(window.location.search);
+      const javacode = urlParams.get('javacode');
+      if (javacode) {
+        try {
+          const json = JSON.parse(atob(javacode));
+          clearFiles();
+          json.files.forEach(file => {
+            addFile(file.type, file.name, file.content);
+          });
+        } catch (e) {
+          console.error('Invalid javacode parameter', e);
+          addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
+        }
+      } else {
+        addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
+      }
     };
     fetch('{{<endpoint>}}/../java-version').then(r => r.json()).then(data => {
       if (data.version) {
         document.getElementById('java-version').textContent = 'Java : ' + data.version;
       }
     });
+    document.getElementById('shareBtn').onclick = () => {
+      const files = [];
+      document.querySelectorAll('.file-block').forEach(block => {
+        const type = block.querySelector('.file-type b').textContent === 'Java' ? 'java' : 'txt';
+        const nameInput = block.querySelector('input[type=text]');
+        let content;
+        if (type === 'java' && block._cm) {
+          content = block._cm.getValue();
+        } else {
+          content = block.querySelector('textarea').value;
+        }
+        files.push({ name: nameInput.value, type, content });
+      });
+      const json = { files };
+      const encoded = btoa(JSON.stringify(json));
+      const url = window.location.href.split('?')[0] + '?javacode=' + encodeURIComponent(encoded);
+      navigator.clipboard.writeText(url).then(() => {
+        alert('URL copiée dans le presse-papiers !');
+      }).catch(err => {
+        console.error('Erreur lors de la copie', err);
+        prompt('Copiez cette URL :', url);
+      });
+    };
     function clearFiles() {
       document.getElementById('files').innerHTML = '';
       fileCount = 0;
