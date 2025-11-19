@@ -336,7 +336,41 @@ void main() {
 
 {{</inlineJava>}}
 
-Dans cet exemple, le programme lit le contenu d’un fichier config.txt en une seule chaîne avec Files.readString. L’objet Path est créé pour désigner le fichier, et la méthode Files.readString récupère son contenu directement, éliminant le besoin de boucler sur les lignes. Comme dans l’exemple précédent, une gestion d’exceptions via un bloc try-catch capture les erreurs potentielles, telles qu’un fichier introuvable ou des problèmes d’accès, assurant la robustesse du programme.
+Dans le prochain exemple, le programme lit le contenu d’un fichier config.txt en une seule chaîne avec Files.readString. L’objet Path est créé pour désigner le fichier, et la méthode Files.readString récupère son contenu directement, éliminant le besoin de boucler sur les lignes. Comme dans l’exemple précédent, une gestion d’exceptions via un bloc try-catch capture les erreurs potentielles, telles qu’un fichier introuvable ou des problèmes d’accès, assurant la robustesse du programme.
+
+{{<inlineJava path="LectureConfig.java" lang="java">}}
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.NoSuchFileException;
+import java.io.IOException;
+
+public class LectureConfig {
+
+    public static void main(String[] args) {
+        // Chemin vers le fichier config.txt (ici placé dans le répertoire courant du projet)
+        Path chemin = Path.of("config.txt");
+
+        try {
+            // Lecture complète du fichier en une seule String
+            String contenu = Files.readString(chemin);
+
+            // Affichage du contenu lu
+            System.out.println("Contenu du fichier config.txt :");
+            System.out.println(contenu);
+
+            // Vous pouvez maintenant traiter la chaîne comme bon vous semble
+            // par exemple : analyser des propriétés, parser du JSON, etc.
+
+        } catch (NoSuchFileException e) {
+            System.err.println("Erreur : le fichier config.txt n'existe pas à l'emplacement : " + chemin.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture du fichier : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
 
 ## Fichiers *properties*
 
