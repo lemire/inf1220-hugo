@@ -566,7 +566,7 @@ Ils ont tous une histoire, et heureusement, je les ai pour la plupart oubliés. 
 
 Avec votre amour précoce ou votre appréciation de la beauté des mathématiques, voyez-vous un parallèle entre ce monde et celui de la programmation ?
 
-La programmation, c’est tout au sujet de la structure logique, de la compréhension des motifs qui émergent du calcul, de la compréhension, je veux dire, c’est souvent comme tracer un chemin à travers le graphe des possibilités pour trouver une route courte, c’est-à-dire trouver un programme court qui fait le travail. Mais sur le sujet des nombres irrationnels, voyez-vous la programmation comme fondamentalement désordonnée, peut-être contrairement aux mathématiques ? Je ne la considère pas comme désordonnée. Vous savez, vous regardez quelqu’un qui est bon en mathématiques faire des mathématiques, et souvent, c’est assez désordonné. Parfois, c’est un peu magique. Quand j’étais étudiant diplômé, l’un des étudiants, Jim Sax, avait cette réputation d’être une sorte de machine humaine de preuve de théorèmes ambulante et parlante. Si vous aviez un problème difficile avec quelque chose, vous pouviez l’aborder dans le couloir et dire « Jim », et il faisait cette chose amusante où il se redressait, ses yeux se déconcentraient un peu, il disait « hum », comme dans les films d’aujourd’hui, puis il se redressait et disait « n log n » et s’en allait. Et vous vous disiez, eh bien, d’accord, donc n log n est la réponse, comment est-il arrivé là ? À ce moment-là, il était déjà au bout du couloir. C’est juste l’oracle, la boîte noire qui vous donne la réponse, et ensuite vous devez trouver le chemin de la question à la réponse.
+La programmation, c’est tout au sujet de la structure logique, de la compréhension des motifs qui émergent du calcul, de la compréhension, je veux dire, c’est souvent comme tracer un chemin à travers le graphe des possibilités pour trouver une route courte, c’est-à-dire trouver un programme court qui fait le travail. Mais sur le sujet des nombres irrationnels, voyez-vous la programmation comme fondamentalement désordonnée, peut-être contrairement aux mathématiques ? Je ne la considère pas comme désordonnée. Vous savez, vous regardez quelqu’un qui est bon en mathématiques faire des mathématiques, et souvent, c'est assez désordonné. Parfois, c'est un peu magique. Quand j’étais étudiant diplômé, l’un des étudiants, Jim Sax, avait cette réputation d’être une sorte de machine humaine de preuve de théorèmes ambulante et parlante. Si vous aviez un problème difficile avec quelque chose, vous pouviez l’aborder dans le couloir et dire « Jim », et il faisait cette chose amusante où il se redressait, ses yeux se déconcentraient un peu, il disait « hum », comme dans les films d’aujourd’hui, puis il se redressait et disait « n log n » et s’en allait. Et vous vous disiez, eh bien, d’accord, donc n log n est la réponse, comment est-il arrivé là ? À ce moment-là, il était déjà au bout du couloir. C’est juste l’oracle, la boîte noire qui vous donne la réponse, et ensuite vous devez trouver le chemin de la question à la réponse.
 
 ### Style de codage
 
@@ -644,7 +644,7 @@ Il y a une tension avec M. Richard Stallman, sur cette question de logiciel libr
 
 Vous avez créé l’un des langages de programmation les plus populaires au monde, le langage avec lequel j’ai appris la programmation orientée objet. C’est un langage que beaucoup de gens utilisent dans de nombreux endroits et sur des millions d’appareils aujourd’hui, Java. La question absurde, mais pouvez-vous raconter l’histoire de l’origine de Java ?
 
-Il y a longtemps, chez Sun, vers 1990, un groupe d’entre nous s’inquiétait du fait qu’il se passait des choses dans l’univers de l’informatique que l’industrie informatique ratait. Quelques-uns d’entre nous ont lancé ce projet chez Sun, qui a vraiment démarré en 1991. Il s’agissait de ce qui se passait en termes de matériel informatique, de processeurs, de réseautage, tout ça, en dehors de l’industrie informatique. Cela allait des premières lueurs des téléphones portables à l’époque, aux ascenseurs, locomotives, systèmes de contrôle de processus dans les usines, équipements audio et vidéo. Ils avaient tous des processeurs, et ils faisaient des choses avec. On avait l’impression qu’il se passait quelque chose là-dedans qu’on devait comprendre. C, C++ étaient déjà dans l’air. Oh non, C et C++ dominaient complètement l’univers à ce moment-là, tout était écrit en C et C++. Alors, d’où venait l’intuition qu’il y avait besoin d’une révolution ? Le besoin d’une révolution ne concernait pas un langage, c’était juste aussi simple et vague qu’il se passe des choses là dehors, et nous devons les comprendre.
+Il y a longtemps, chez Sun, vers 1990, un groupe d’entre nous s’inquiétait du fait qu’il se passait des choses dans l’univers de l’informatique que l’industrie informatique ratait. Quelques-uns d’entre nous ont lancé ce projet chez Sun, qui a vraiment démarré en 1991. Il s’agissait de ce qui se passait en termes de matériel informatique, de processeurs, de réseautage, tout ça, en dehors de l’industrie informatique. Cela allait des premières lueurs des téléphones portables à l’époque, aux ascenseurs, locomotives, systèmes de contrôle de processus dans les usines, équipements audio et vidéo. Ils avaient tous des processeurs, et ils faisaient des choses avec. On avait l’impression qu’il se passait quelque chose là-dedans qu’on devait comprendre. C, C++ étaient déjà dans l’air. Oh non, C et C++ dominaient complètement l’univers à ce moment-là, tout était écrit en C et C++. Alors, d’où venait l’intuition qu’il y avait besoin d’une révolution ? Le besoin d’une révolution ne concernait pas un langage, c’était juste aussi simple et vague qu’il se passait des choses là dehors, et nous devons les comprendre.
 
 Quelques-uns d’entre nous sont partis pour plusieurs voyages épiques, littéralement des voyages. On prenait l’avion, on allait au Japon, on visitait Toshiba, Sharp, Mitsubishi, Sony, et comme nous travaillions pour Sun, nous avions des gens prêts à nous présenter. Nous avons visité Samsung, un tas d’entreprises coréennes, nous sommes allés partout en Europe, chez Philips, Siemens, Thompson. Qu’avez-vous vu là-bas ? Pour moi, ce qui m’a marqué, c’est qu’ils faisaient toutes les choses informatiques habituelles que les gens faisaient 20 ans auparavant. Ce qui m’a vraiment sauté aux yeux, c’est qu’ils réinventaient le réseautage informatique, et ils faisaient toutes les erreurs que l’industrie informatique avait faites. Comme j’avais beaucoup travaillé dans le domaine du réseautage, on visitait une entreprise X, ils décrivaient leur truc de réseautage, et sans réfléchir, je pouvais leur dire les 25 choses qui allaient être des catastrophes complètes avec ce qu’ils faisaient. Je ne sais pas si ça a eu un impact sur eux, mais cette histoire de répéter les désastres de l’industrie informatique était là. On pensait qu’on pourrait peut-être faire quelque chose d’utile en les faisant avancer un peu, mais en même temps, nous avons appris beaucoup de ces entreprises d’électronique grand public.
 
@@ -664,11 +664,11 @@ L’une des idées les plus belles, philosophiquement et techniquement, est cell
 
 La machine virtuelle Java, on peut la voir de différentes manières, car elle a été soigneusement conçue pour être vue de différentes façons. Une vision, que la plupart des gens ne réalisent pas vraiment, est qu’on peut la voir comme une sorte d’encodage de l’arbre de syntaxe abstraite en notation polonaise inversée. Je ne sais pas si ça a du sens. Je pourrais l’expliquer, mais ça prendrait tout notre temps. Une autre manière de la penser, et celle qui est généralement expliquée, est que c’est comme l’ensemble d’instructions d’une machine abstraite conçue de telle sorte qu’on peut traduire cette machine abstraite vers une machine physique. La raison pour laquelle c’est important, c’est que, si vous remontez au début des années 90, quand nous parlions à toutes ces entreprises d’électronique grand public, les discussions avec les acheteurs étaient intéressantes. Si vous regardez comment ces appareils sont assemblés, ce sont de la tôle, des engrenages, des circuits imprimés, des condensateurs, des résistances, et tout ce que vous achetez a plusieurs sources. Vous pouvez acheter un condensateur ici ou là, et vous avez un marché, donc vous pouvez obtenir un prix décent. Mais les CPU, particulièrement au début des années 90, étaient tous différents et tous propriétaires. Si vous utilisiez une puce d’Intel, vous deviez être client d’Intel jusqu’à la fin des temps, car si vous écriviez un logiciel, il était lié à cette machine particulière. Cela rendait les acheteurs absolument fous, qu’ils soient soudés à cette décision, et qu’ils doivent la prendre avant que la première ligne de logiciel ne soit écrite.
 
-C’est drôle que vous parliez des acheteurs, c’est une perspective. Il y a probablement beaucoup d’autres perspectives qui détestaient cette idée. Mais d’un point de vue technique, créer une couche d’abstraction agnostique de la machine sous-jacente, du point de vue du développeur, c’est brillant, non ? Oui, et en plus, il y a la question du temps. D’une génération à la prochaine, elles étaient toutes différentes, et il fallait souvent réécrire votre logiciel. Une des choses qui m’a pris un an de ma vie, c’est quand Sun est passé du processeur Motorola 68010 au 68020. Ils avaient plusieurs différences, et l’une d’elles nous a durement touchés. J’ai fini par être le gars en pointe sur le pire cas où l’architecture du nouveau cache d’instructions nous a fait mal.
+C’est drôle que vous parliez des acheteurs, c’est une perspective. Il y a probablement beaucoup d’autres perspectives qui détestaient cette idée. Mais d’un point de vue technique, créer une couche d’abstraction agnostique de la machine sous-jacente, du point de vue du développeur, c’est brillant, non ? Oui, et en plus, il y a la question du temps. D’une génération à la prochaine, elles étaient toutes différentes, et il fallait souvent réécrire votre logiciel. Une des choses qui m’a vraiment pris un an de ma vie, c’est quand Sun est passé du processeur Motorola 68010 au 68020. Ils avaient plusieurs différences, et l’une d’elles nous a durement touchés. J’ai fini par être le gars en pointe sur le pire cas où l’architecture du nouveau cache d’instructions nous a fait mal.
 
 Vous articulez un problème fondamental dans toute l’informatique, mais d’où tirez-vous le courage de penser qu’on peut vraiment résoudre ça ? Dans nos conversations avec tous ces vendeurs, ces problèmes ont commencé à apparaître. J’ai eu une sorte d’épiphanie, car ça me rappelait un job d’été que j’avais eu en école doctorale. À l’époque, j’avais deux directeurs de thèse, pour des raisons bizarres, Raj Reddy et Bob Sproul. Le département avait acheté un tas de stations de travail précoces d’une entreprise appelée Three Rivers Computer Company. Cette entreprise était composée d’ingénieurs électriciens qui voulaient faire le moins de logiciels possible. Ils savaient qu’ils auraient besoin de compilateurs, d’OS, et tout ça, mais ils ne voulaient pas le faire, et pour presque rien. Ils ont construit une machine dont l’ensemble d’instructions était littéralement le bytecode pour UCSD Pascal, le P-code. Nous avions un tas de logiciels écrits pour cette machine, et pour diverses raisons, l’entreprise ne se portait pas très bien. Nous voulions que ces logiciels tournent sur d’autres machines, principalement des VAX. Raj m’a demandé si je pouvais trouver un moyen de porter tout ce logiciel, de traduire des machines Perq vers les VAX. Je pense qu’il avait en tête quelque chose qui traduirait du Pascal vers du C. À l’époque, vous pouviez traduire en C, et si vous n’aimiez pas traduire en C, eh bien, vous traduisiez en C. C’était comme Henry Ford : n’importe quelle couleur, tant que c’est noir.
 
-J’ai pensé que c’était vraiment difficile. En regardant les choses, je me suis dit : je parie que je pourrais réécrire le P-code en code assembleur VAX. J’ai commencé à réaliser que certaines propriétés du P-code rendaient ça vraiment facile, d’autres vraiment difficile. J’ai fini par écrire ce truc qui traduisait du P-code des Perq Three Rivers en code assembleur sur les VAX, et j’ai obtenu un code de meilleure qualité que le compilateur C. Tout est devenu vraiment rapide, vraiment facile. J’ai pensé que c’était un hack minable parce que j’étais paresseux, mais en fait, ça fonctionnait vraiment bien. J’ai essayé de convaincre les gens que c’était peut-être un bon sujet de thèse, mais personne n’était convaincu. Avancez de quelques années, et nous devions permettre de passer d’un microprocesseur bizarre à un autre totalement différent. Je me suis dit : peut-être en faisant quelque chose dans l’espace du P-code Pascal, je pourrais faire plusieurs traducteurs. J’ai passé du temps à réfléchir à ce qui avait fonctionné et ce qui n’avait pas fonctionné quand j’ai fait le traducteur P-code vers VAX. J’ai parlé à des gens impliqués dans Smalltalk, car Smalltalk utilisait aussi du bytecode. Puis je me suis dit : oui, je veux faire ça. Ça avait l’avantage qu’on pouvait soit l’interpréter, soit le compiler. Les interpréteurs sont généralement plus faciles à faire, mais pas aussi rapides qu’un compilateur. J’ai pensé : super, je peux encore être paresseux. Parfois, je pense que la plupart de mes bonnes idées sont motivées par la paresse. Souvent, je trouve que certaines des idées les plus stupides des gens viennent du fait qu’ils ne sont pas assez paresseux. Ils veulent construire quelque chose de vraiment compliqué, alors que ça n’a pas besoin de l’être.
+J’ai pensé que c’était vraiment difficile. En regardant les choses, je me suis dit : je parie que je pourrais réécrire le P-code en code assembleur VAX. J’ai commencé à réaliser que certaines propriétés du P-code rendaient ça vraiment facile, d’autres vraiment difficile. J’ai fini par écrire ce truc qui traduisait du P-code des Perq Three Rivers en code assembleur sur les VAX, et j’ai obtenu un code de meilleure qualité que le compilateur C. Tout est devenu vraiment rapide, vraiment facile. J’ai pensé que c’était un hack minable parce que j’étais paresseux, mais en fait, ça fonctionnait vraiment bien. J’ai essayé de convaincre les gens que c’était peut-être un bon sujet de thèse, mais personne n’était convaincu. Avancez de quelques années, et nous devions permettre de passer d’un microprocesseur bizarre à un autre totalement différent. Je me suis dit, peut-être en faisant quelque chose dans l’espace du P-code Pascal, je pourrais faire plusieurs traducteurs. J’ai passé du temps à réfléchir à ce qui avait fonctionné et ce qui n’avait pas fonctionné quand j’ai fait le traducteur P-code vers VAX. J’ai parlé à des gens impliqués dans Smalltalk, car Smalltalk utilisait aussi du bytecode. Puis je me suis dit : oui, je veux faire ça. Ça avait l’avantage qu’on pouvait soit l’interpréter, soit le compiler. Les interpréteurs sont généralement plus faciles à faire, mais pas aussi rapides qu’un compilateur. J’ai pensé : super, je peux encore être paresseux. Parfois, je pense que la plupart de mes bonnes idées sont motivées par la paresse. Elles sont souvent le résultat de la souffrance, mais d’une manière ou d’une autre, elles finissent par être de bonnes idées.
 
 C’est ainsi que ça s’est fait. Ça s’est transformé en une position presque religieuse de ma part, ce qui m’a valu plusieurs autres conflits. Par exemple, la manière dont l’arithmétique fonctionnait. Il fut un temps où ce n’était pas toujours l’arithmétique en complément à deux. Certaines machines avaient une arithmétique en complément à un, comme presque tout ce qui était construit par CDC. Occasionnellement, il y avait des machines avec une arithmétique décimale. J’ai pensé : c’est fou. L’arithmétique entière en complément à deux a gagné, alors faisons juste ça. Un autre endroit où il y avait beaucoup de variabilité, c’était dans la manière dont les nombres à virgule flottante se comportaient, ce qui causait beaucoup de douleur dans l’industrie du logiciel. Vous ne pouviez pas faire une bibliothèque de calcul numérique qui fonctionnait sur CDC, puis sur une machine IBM, puis sur une machine DEC. À travers cette lutte, il y avait eu tout un travail sur les normes de virgule flottante, et cette chose appelée IEEE 754 est apparue, la norme de virgule flottante qui a pratiquement pris le contrôle de tout l’univers. À l’époque où je faisais Java, elle avait presque fini de conquérir l’univers, il restait quelques poches de résistants. J’ai pensé : il est important de pouvoir dire ce que deux plus deux signifie. J’ai eu des conflits avec des gens, car quelques machines n’implémentaient pas correctement IEEE 754. Bien sûr, ce sont des combats à court terme, je pense qu’à long terme, cette vision a triomphé. Les plus gros combats étaient avec Intel, car ils avaient fait des choses étranges avec l’arrondi, des choses étranges avec leurs fonctions transcendantales, ce qui pouvait devenir une explosion de bizarreries au nom de l’optimisation. Leurs problèmes avec les fonctions transcendantales étaient juste stupides, ils faisaient une réduction de plage pour le sinus et le cosinus en utilisant une valeur légèrement fausse pour pi.
 
@@ -720,6 +720,127 @@ Le terme <strong>API</strong> signifie « Application Programming Interface »
 Par exemple, l’<strong>API Stream</strong> introduite en Java 8 fournit des outils puissants pour traiter des collections de données de façon déclarative et fonctionnelle (filtrer, transformer, trier, agréger…). L’API Swing permet de créer des interfaces graphiques, l’API JDBC permet d’accéder à des bases de données, etc. Chaque API définit un « contrat » : si vous respectez la façon d’utiliser ses classes et méthodes, vous pouvez profiter de fonctionnalités avancées sans réinventer la roue.
 
 En résumé, une API est une boîte à outils logicielle, conçue pour être utilisée par d’autres développeurs, qui facilite l’accès à des fonctionnalités complexes (réseau, interface graphique, traitement de données, etc.) tout en masquant les détails techniques.
+
+
+## Taille des processeurs et des transistors
+
+Les processeurs modernes sont construits à l'aide de milliards de transistors. Le transistor est l'unité
+de base des circuits informatiques et il permet de réaliser les différentes opérations de calcul.
+Nos processeurs modernes sont relativement petits, la plupart pouvant tenir sur le bout d'un doigt.
+Les transistors sont très petits. Cliquez sur le bouton *Zoomer* pour vous faire une idée.
+
+
+
+<div style="margin:auto; display:flex; flex-direction:column; align-items:center;">
+  <div style="width:10cm; margin-bottom:10px; text-align:center; font-size:2em;">Zoom ×<span id="zoomval">1</span></div>
+  <button id="zoombtn" style="width:10cm; margin-bottom:10px; font-size:2em;">Zoomer</button>
+  <div style="width:10cm; height:10cm; border:1px solid #fff; background:#222; display:flex; align-items:center; justify-content:center;">
+    <svg id="mysvg" width="10cm" height="10cm" viewBox="0 0 1000 1000" style="background:#222;"></svg>
+  </div>
+  <div id="labels" style="width:10cm; margin-top:20px; text-align:left;">
+    <ol style="font-size:32px;">
+      <li style="color:#888;">Processeur Intel (45 mm × 37,5 mm)</li>
+      <li style="color:#ccc;">Grain de sel (~1 mm)</li>
+      <li style="color:#8cf;">Cellule de peau (~35 µm)</li>
+      <li style="color:#f44;">Globule rouge (~7,5 µm)</li>
+      <li style="color:#F6BE00;">Mitochondrie (~2 µm)</li>
+      <li style="color:#0f0;">Transistor moderne (~2,5 nm)</li>
+    </ol>
+  </div>
+</div>
+
+<script>
+const info = document.getElementById('info');
+const hint = document.getElementById('hint');
+const svg = document.getElementById('mysvg');
+
+let zoom = 1;
+const zoomMax = 1000000;
+const zoomInterval = 50; // ms (plus rapide)
+let zoomTimer = null;
+
+// Toutes les tailles sont des diamètres ou longueurs caractéristiques en mètres
+const levels = [
+  { name: "processeur Intel", width: 0.045, height: 0.0375, color: "#888", label: "Processeur Intel (45 mm × 37,5 mm)", type: "rect" },
+  { name: "grain de sel", size: 1e-3, color: "#ccc", label: "Grain de sel (~1 mm)", type: "circle" },
+  { name: "cellule de peau", size: 35e-6, color: "#8cf", label: "Cellule de peau (~35 µm)", type: "circle" },
+  { name: "globule rouge", size: 7.5e-6, color: "#f44", label: "Globule rouge (~7,5 µm)", type: "circle" },
+  { name: "mitochondrie", size: 2e-6, color: "#F6BE00", label: "Mitochondrie (~2 µm)", type: "circle" },
+  { name: "transistor", size: 2.5e-9, color: "#0f0", label: "Transistor moderne (~2,5 nm)", type: "transistor" }
+];
+
+function drawSVG() {
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  let centerX = 500, centerY = 500;
+  levels.forEach(obj => {
+    if (obj.type === "rect") {
+      let w = obj.width * zoom * 1e4;
+      let h = obj.height * zoom * 1e4;
+      let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      rect.setAttribute("x", centerX - w/2);
+      rect.setAttribute("y", centerY - h/2);
+      rect.setAttribute("width", w);
+      rect.setAttribute("height", h);
+      rect.setAttribute("fill", obj.color);
+      rect.setAttribute("stroke", "#fff");
+      svg.appendChild(rect);
+    } else if (obj.type === "circle") {
+      let objPixelSize = obj.size * zoom * 1e4;
+      let circ = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circ.setAttribute("cx", centerX);
+      circ.setAttribute("cy", centerY);
+      circ.setAttribute("r", objPixelSize / 2);
+      circ.setAttribute("fill", obj.color);
+      circ.setAttribute("stroke", "#fff");
+      circ.setAttribute("stroke-width", 4);
+      svg.appendChild(circ);
+    } else if (obj.type === "transistor") {
+      let objPixelSize = obj.size * zoom * 1e4;
+      let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      rect.setAttribute("x", centerX-objPixelSize*3);
+      rect.setAttribute("y", centerY-objPixelSize*2);
+      rect.setAttribute("width", objPixelSize*6);
+      rect.setAttribute("height", objPixelSize*4);
+      rect.setAttribute("fill", obj.color);
+      rect.setAttribute("stroke", "#fff");
+      svg.appendChild(rect);
+      let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", centerX-objPixelSize*2);
+      line.setAttribute("y1", centerY);
+      line.setAttribute("x2", centerX+objPixelSize*2);
+      line.setAttribute("y2", centerY);
+      line.setAttribute("stroke", "#fff");
+      line.setAttribute("stroke-width", objPixelSize*0.8);
+      svg.appendChild(line);
+    }
+  });
+  document.getElementById('zoomval').textContent = Math.round(zoom);
+  // Sécurisé : ne pas utiliser hint si non défini
+  var hintElem = document.getElementById('hint');
+  if (hintElem) hintElem.textContent = "";
+}
+
+function startZoomTimer() {
+  if (zoomTimer) clearInterval(zoomTimer);
+  zoom = 1;
+  drawSVG();
+  zoomTimer = setInterval(() => {
+    if (zoom < zoomMax) {
+      zoom = Math.min(zoom * 1.10, zoomMax); // incrémentation de 10%
+      drawSVG();
+    } else {
+      clearInterval(zoomTimer);
+    }
+  }, zoomInterval);
+}
+
+document.getElementById('zoombtn').addEventListener('click', startZoomTimer);
+
+window.addEventListener('DOMContentLoaded', drawSVG);
+
+</script>
+
+
 
 ## Unités de mesures
 

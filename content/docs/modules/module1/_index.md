@@ -24,9 +24,17 @@ Vous êtes peut-être surpris que le premier module ne débute pas immédiatemen
 qu'il est essentiel d'établir au préalable des concepts plus fondamentaux. Notre objectif n'est pas de simplement vous
 aidez à apprendre la programmation en général, mais de vous donner des bases solides.
 
+Il est difficile d'apprendre à programmer sans savoir ce qu'est un algorithme. Vous devez bien maîtriser cette notion fondamentale.
 
 ## Planification du temps
 
+Assurez-vous de bien planifier votre temps. N'oubliez pas de consacrer environ 9 heures par semaine au cous. Le cours
+nécessite plus d'une journée par semaine, pendant quinze semaine.
+
 Nous vous suggérons de consacrer (au maximum) les trois premières semaines du cours au premier module  (environ 27 heures). 
-Assurez-vous de remettre le premier travail noté à la fin de la troisième semaine ou avant. 
-**Vous ne devriez pas prendre plus de trois semaines**.
+Assurez-vous de remettre le premier travail noté à la fin de la troisième semaine ou avant.
+
+
+**Vous ne devriez pas prendre plus de trois semaines**. Le cours est riche en contenu, si vous prenez plus de trois
+semaines pour le premier module vous risquez de manquer de temps pour le reste du cours.
+
