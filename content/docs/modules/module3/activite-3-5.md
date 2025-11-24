@@ -10,10 +10,10 @@ La récursivité est une technique fondamentale en informatique qui consiste pou
 
 ## Le concept de récursivité
 
-<p>La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. 
+La récursivité est un concept de programmation qui remonte aux premières années des langages de programmation (avec LISP et Algol'60). Il s'agit de faire un appel à la méthode/fonction dans la propre portée d'une méthode. Donc d'appeler, par exemple, la méthode calcul à l'intérieur même de la fonction calcul. En quelque sorte, la récursivité peut permettre de remplacer ou imiter des algorithmes itératifs, en faisant un nombre fini d'itérations sur une portion de code. 
 
 
-La suite de Fibonacci est une suite mathématique célèbre dans laquelle chaque terme est la somme des deux termes précédents. Elle commence généralement par 0 et 1, puis se poursuit ainsi : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... Cette suite apparaît dans de nombreux domaines des mathématiques, de l’informatique et même de la nature (croissance des plantes, spirales, etc.
+La suite de Fibonacci est une suite mathématique célèbre dans laquelle chaque terme est la somme des deux termes précédents. Elle commence généralement par 0 et 1, puis se poursuit ainsi : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... Cette suite apparaît dans de nombreux domaines des mathématiques, de l’informatique et même de la nature (croissance des plantes, spirales, etc.).
 
 En programmation, le calcul des nombres de Fibonacci est un exemple classique pour illustrer la récursivité. La version récursive du calcul est élégante.
 
@@ -36,7 +36,7 @@ public class ExempleRecursivite {
 }
 ```
 
-Malheureusement, cette fonction est inefficace pour de grandes valeurs de n, car elle recalcule plusieurs fois les mêmes valeurs, ce qui entraîne une explosion du nombre d’appels récursifs et peut provoquer un dépassement de pile. Par exemple, calculer le 40e ou le 100e nombre de Fibonacci de façon récursive est très lent et peut faire planter le programme.
+Malheureusement, cette fonction est inefficace pour de grandes valeurs de `n`, car elle recalcule plusieurs fois les mêmes valeurs, ce qui entraîne une explosion du nombre d’appels récursifs et peut provoquer un dépassement de pile. Par exemple, calculer le 40e ou le 100e nombre de Fibonacci de façon récursive est très lent et peut faire planter le programme.
 
 ```java  {style=github}
 public class ExempleRecursivite {
@@ -111,6 +111,109 @@ public class ExempleRecursivite {
         } else {         
             return plusGrandCommunDiviseur(q, p % q);
         }
+    }
+}
+{{</inlineJava>}}
+
+
+Une application intéressante de la récursivité est l'[algorithme de Heap](https://fr.wikipedia.org/wiki/Algorithme_de_Heap). Cet algorithme
+peut générer toutes les permutations possibles d'une liste de départ. 
+
+{{<inlineJava path="HeapPermutationLettres.java" lang="java">}}
+import java.util.Arrays;
+
+public class HeapPermutationLettres {
+
+    public static void genererPermutations(char[] tableau) {
+        generer(tableau, tableau.length);
+    }
+
+    private static void generer(char[] a, int n) {
+        if (n == 1) {
+            System.out.println(new String(a));
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            generer(a, n - 1);
+
+            if (n % 2 == 0) {
+                echanger(a, i, n - 1);
+            } else {
+                echanger(a, 0, n - 1);
+            }
+        }
+    }
+
+    private static void echanger(char[] a, int i, int j) {
+        char temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        char[] lettres = {'A', 'B', 'C', 'D'};
+        genererPermutations(lettres);
+    }
+}
+{{</inlineJava>}}
+
+
+Il est aussi possible de faire une version itérative de l'algorithme de Heap, mais celle-ci est
+un peu moins élégante.
+
+{{<inlineJava path="HeapPermutationIterative.java" lang="java">}}
+
+import java.util.Arrays;
+
+public class HeapPermutationIterative {
+
+    public static void permuterIteratif(int[] a) {
+        int n = a.length;
+
+        // Tableau de contrôle c[] initialisé à 0 partout
+        int[] c = new int[n];
+
+        // Afficher la première permutation (l'originale)
+        System.out.println(Arrays.toString(a));
+
+        int i = 0;  // indice de contrôle
+        while (i < n) {
+            if (c[i] < i) {
+                // Échange selon la parité de i
+                if (i % 2 == 0) {
+                    echanger(a, 0, i);
+                } else {
+                    echanger(a, c[i], i);
+                }
+
+                // Afficher la nouvelle permutation
+                System.out.println(Arrays.toString(a));
+
+                // Incrémenter le compteur à la position i
+                c[i] += 1;
+
+                // Remettre i à 0 pour repartir du début
+                i = 0;
+            } else {
+                // Réinitialiser c[i] et passer à l’indice suivant
+                c[i] = 0;
+                i += 1;
+            }
+        }
+    }
+
+    private static void echanger(int[] tab, int x, int y) {
+        int temp = tab[x];
+        tab[x] = tab[y];
+        tab[y] = temp;
+    }
+
+    // Test
+    public static void main(String[] args) {
+        int[] tableau = {1, 2, 3, 4};
+        System.out.println("Permutations de " + Arrays.toString(tableau) + " :\n");
+        permuterIteratif(tableau);
     }
 }
 {{</inlineJava>}}

@@ -15,6 +15,11 @@ weight: 6
 
 **Nous vous suggérons de prévoir au moins 4 heures pour vous préparer à l'examen.**
 
+## Mise en forme de votre examen
+
+Que ce soit pendant un examen ou lors d'un travail noté, nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Nous vous suggérons de 
+rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/" >}}) si vous l'avez fait pendant vos travaux notés (vous devrez alors remettre un document PDF). Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. N'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
+
 <div style=" border: 2px solid red; margin: 2em; padding:2em;">
 
 ## Entretien de suivi
