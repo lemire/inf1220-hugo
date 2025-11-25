@@ -31,6 +31,14 @@ pouvez [copier une version MarkDown de ce gabarit](https://gist.githubuserconten
 
 Expliquez comment vous allez attaquer le problème. Décomposez le problème en sous-problème et analysez chaque sous-problème. 
 
+
+#### URL de votre solution
+
+Nous vous suggérons d'utiliser notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}) et
+son bouton *partager* qui permet à la personne qui corrige votre travail d'exécuter votre solution directement.
+L'URL comprend votre solution complète parce nous ne stockons jamais vos données, il peut donc être un peu long.
+Avant de remettre votre travail, testez votre URL.
+
 #### Code source (copiable)
 
 Votre code source doit être aussi simple que possible, et il doit apparaître de façon lisible dans votre document. N'utilisez pas plus de 100 caractères

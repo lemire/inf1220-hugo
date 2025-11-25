@@ -24,7 +24,8 @@ rédiger vos travaux en [MarkDown]({{< relref "/docs/modules/module2/markdown/" 
 Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),
 directement dans le site du cours, vous pouvez utiliser le bouton *partager* pour obtenir un URL pointant
 vers votre code informatique exécutable. Nous vous encourageons à inclure cet URL dans votre travail noté
-pour rendre la correction plus aisée.
+pour rendre la correction plus aisée.  Par ailleurs, vous pouvez ainsi prouver que votre code compile et
+s'exécute.
 
 
 

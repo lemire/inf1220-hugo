@@ -24,7 +24,8 @@ rédiger vos travaux en [MarkDown]({{< relref "/docs/modules/module2/markdown/" 
 Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),
 directement dans le site du cours, vous pouvez utiliser le bouton *partager* pour obtenir un URL pointant
 vers votre code informatique exécutable. Nous vous encourageons à inclure cet URL dans votre travail noté
-pour rendre la correction plus aisée.
+pour rendre la correction plus aisée. Par ailleurs, vous pouvez ainsi prouver que votre code compile et
+s'exécute.
 
 ## Question #1
 
@@ -43,6 +44,9 @@ System.out.println(c.perimetre());
 Le nom des méthodes aire et perimetre peut être différent si vous le souhaitez.
 
 
+
+Nous vous suggérons d'utiliser notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}/?javacode=eyJmaWxlcyI6W3sibmFtZSI6IkNlcmNsZS5qYXZhIiwidHlwZSI6ImphdmEiLCJjb250ZW50IjoicHVibGljIGNsYXNzIENlcmNsZSB7XG59In0seyJuYW1lIjoiVGVzdENlcmNsZS5qYXZhIiwidHlwZSI6ImphdmEiLCJjb250ZW50IjoicHVibGljIGNsYXNzIFRlc3RDZXJjbGUge1xuICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBtYWluKFN0cmluZ1tdIGFyZ3MpIHtcbiAgICAgICAgLy8gVGVzdCBhdmVjIHVuIHJheW9uIGRlIDFcbiAgICAgICAgQ2VyY2xlIGMgPSBuZXcgQ2VyY2xlKDEpO1xuICAgICAgICBTeXN0ZW0ub3V0LnByaW50bG4oXCJBaXJlIGR1IGNlcmNsZSBkZSByYXlvbiAxOiBcIiArIGMuYWlyZSgpKTtcbiAgICAgICAgU3lzdGVtLm91dC5wcmludGxuKFwiUOlyaW3odHJlIGR1IGNlcmNsZSBkZSByYXlvbiAxOiBcIiArIGMucGVyaW1ldHJlKCkpO1xuICAgICAgICAvLyBUZXN0IGF2ZWMgdW4gcmF5b24gZGUgMFxuICAgICAgICBDZXJjbGUgYzIgPSBuZXcgQ2VyY2xlKDApO1xuICAgICAgICBTeXN0ZW0ub3V0LnByaW50bG4oXCJBaXJlIGR1IGNlcmNsZSBkZSByYXlvbiAwOiBcIiArIGMyLmFpcmUoKSk7XG4gICAgICAgIFN5c3RlbS5vdXQucHJpbnRsbihcIlDpcmlt6HRyZSBkdSBjZXJjbGUgZGUgcmF5b24gMDogXCIgKyBjMi5wZXJpbWV0cmUoKSk7XG4gICAgfVxufSJ9XX0%3D) qui est préconfiguré pour cette question.
+Utilisez ensuite le bouton *partager* pour inclure un hyperlien vers votre solution avec votre rapport.
 
 <p>Vous devez expliquer votre solution en détail, une solution insuffisamment expliquée pourra recevoir la note de zéro. Tous les qualifiants que vous utilisez (static, protected, private, public) doivent être justifiés: vous ne pouvez pas utiliser le mot-clé «&nbsp;static&nbsp;» sans le justifier. Les explications sont obligatoires. Toutes les fonctions et variables doivent être justifiées et expliquées. Prenez la peine de bien présenter votre code et de l'expliquer. Prenez le temps de réfléchir à ce qui se produit si un programmeur utilise un rayon de zéro ou un rayon négatif et expliquez comment votre code va se comporter dans de tels cas. Vous pouvez expliquer votre code comme vous le souhaitez, tant que vous êtes clair. Vous n'êtes pas obligé de mettre systématiquement des commentaires dans le code. Utilisez votre bon jugement afin de produire du code clair et facile à lire. Note: Il ne faut pas nous écrire pour nous demander d'expliquer ce que nous voulons dire par «&nbsp;expliquer&nbsp;». </p>
 

@@ -85,6 +85,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
           <option value="ex3">Fibonacci (package, commentaires FR)</option>
           <option value="ex4">Mario</option>
           <option value="ex5">Chargement des articles du blogue de Daniel Lemire</option>
+          <option value="travail-note-2">Travail noté 2</option>
           <option value="travail-note-4">Travail noté 4</option>
         </select>
       </div>
@@ -518,6 +519,23 @@ public class Travail4 {
         addFile('txt', 'partie1.txt', '001 012 023 034 045 056 067 078 089 102 113 124 135 146 157 168 179 181 203 214 225 236 247 258 269 271 282 304 315 326 337 348 359 361 372 383 405 416 427 438 449 451 462 473 484 506 517 528 539 541 552 563 574 585 607 618 629 631 642 653 664 675 686 708 719 721 732 743 754 765 776 787 809 811 822 833 844 855 866 877 888');
         addFile('txt', 'partie2.txt', '016 112 214 319 417 511 618 713 815 027 129 221 328 425 523 626 722 824 033 138 235 332 436 534 631 737 839 048 141 243 347 449 545 644 746 842 059 157 252 351 454 556 655 758 853 065 164 266 363 462 568 667 769 861 074 173 279 376 471 577 672 775 878 081 186 288 385 483 582 689 784 887 092 195 297 394 498 599 693 791 893');
         addFile('txt', 'partie3.txt', '014 116 218 313 411 517 615 712 819 022 127 225 324 428 529 623 726 821 031 133 239 335 436 532 637 734 838 045 148 246 349 447 541 642 743 844 057 159 252 356 454 553 651 758 855 063 161 264 362 465 568 669 767 866 079 174 273 371 472 576 678 775 877 086 182 287 388 489 585 684 781 883 098 195 291 397 493 594 696 799 892');
+      } else if (v === 'travail-note-2') {
+        addFile('java', 'Cercle.java',
+`public class Cercle {
+}`);
+        addFile('java', 'TestCercle.java',
+`public class TestCercle {
+    public static void main(String[] args) {
+        // Test avec un rayon de 1
+        Cercle c = new Cercle(1);
+        System.out.println("Aire du cercle de rayon 1: " + c.aire());
+        System.out.println("Périmètre du cercle de rayon 1: " + c.perimetre());
+        // Test avec un rayon de 0
+        Cercle c2 = new Cercle(0);
+        System.out.println("Aire du cercle de rayon 0: " + c2.aire());
+        System.out.println("Périmètre du cercle de rayon 0: " + c2.perimetre());
+    }
+}`);
       }
       }
   </script>
@@ -529,6 +547,8 @@ public class Travail4 {
 - Fibonacci : La classe Fibo, placée dans le paquetage ca.teluq.informatique, implémente une fonction récursive fibonacci pour calculer les termes de la suite de Fibonacci. Le programme affiche les dix premiers termes (de F(0) à F(9)) en bouclant sur la fonction et en montrant chaque résultat. Cet exemple démontre l’utilisation de la récursivité en Java, bien que cette approche puisse être inefficace pour de grands nombres en raison de calculs redondants.
 - Mario : L’exemple Mario utilise des caractères Unicode pour créer une représentation graphique inspirée du jeu Super Mario dans la console. La méthode main affiche une scène avec des nuages, un soleil, des blocs, des pièces, un personnage, une tortue et un champignon. Ce programme montre comment manipuler des caractères spéciaux pour produire un affichage visuel simple, offrant une approche ludique de la sortie console.
 - Chargement des articles du blogue de Daniel Lemire : La classe RssFeedReader illustre la récupération et le traitement d’un flux RSS à partir de l’URL https://lemire.me/blog/feed/. Elle établit une connexion HTTP, parse le XML avec DocumentBuilder, puis extrait les informations du canal (titre, description, lien) et des articles (titre, lien, date de publication). Les données sont affichées dans la console, avec une gestion des erreurs pour les problèmes de connexion ou de parsing, démontrant ainsi l’interaction avec des données web en Java.
+- Code initial pour le travail 2 du cours.
+- Code initial pour le travail 4 du cours.
 
 ## Conseils
 
