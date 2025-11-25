@@ -85,6 +85,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
           <option value="ex3">Fibonacci (package, commentaires FR)</option>
           <option value="ex4">Mario</option>
           <option value="ex5">Chargement des articles du blogue de Daniel Lemire</option>
+          <option value="travail-note-4">Travail noté 4</option>
         </select>
       </div>
       <div id="files" class="files"></div>
@@ -486,11 +487,40 @@ public class RssFeedReader {
         System.out.println("🟫     🟫        🟫       🟫");
         System.out.println("🟫 👨‍🚒 🟫 🟫 🐢 🟫 🟫 🍄 🟫 🟫");
         System.out.println("🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫");
-}`);}
-    };
+}`);
+       } else if (v === 'travail-note-4') {
+        addFile('java', 'Travail4.java',
+`import java.io.*;
+import java.util.*;
+public class Travail4 {
+    public static void main(String[] args) {
+        String filename = "partie1.txt";
+        try {
+          //
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+    private static int[][] loadGrid(String filename) throws IOException {
+        int[][] grid = new int[9][9];
+        return grid;
+    }
+    private static boolean validateGrid(int[][] grid) {
+        return true;
+    }
+    private static int[][] transposeGrid(int[][] grid) {
+        int[][] transposed = new int[9][9];
+        return transposed;
+    }
+    private static void printGrid(int[][] grid) {
+    }
+}`);
+        addFile('txt', 'partie1.txt', '001 012 023 034 045 056 067 078 089 102 113 124 135 146 157 168 179 181 203 214 225 236 247 258 269 271 282 304 315 326 337 348 359 361 372 383 405 416 427 438 449 451 462 473 484 506 517 528 539 541 552 563 574 585 607 618 629 631 642 653 664 675 686 708 719 721 732 743 754 765 776 787 809 811 822 833 844 855 866 877 888');
+        addFile('txt', 'partie2.txt', '016 112 214 319 417 511 618 713 815 027 129 221 328 425 523 626 722 824 033 138 235 332 436 534 631 737 839 048 141 243 347 449 545 644 746 842 059 157 252 351 454 556 655 758 853 065 164 266 363 462 568 667 769 861 074 173 279 376 471 577 672 775 878 081 186 288 385 483 582 689 784 887 092 195 297 394 498 599 693 791 893');
+        addFile('txt', 'partie3.txt', '014 116 218 313 411 517 615 712 819 022 127 225 324 428 529 623 726 821 031 133 239 335 436 532 637 734 838 045 148 246 349 447 541 642 743 844 057 159 252 356 454 553 651 758 855 063 161 264 362 465 568 669 767 866 079 174 273 371 472 576 678 775 877 086 182 287 388 489 585 684 781 883 098 195 291 397 493 594 696 799 892');
+      }
+      }
   </script>
-
-
 
 ## Description des exemples
 
