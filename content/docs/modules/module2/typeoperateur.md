@@ -8,7 +8,7 @@ weight: 30
 
 ## Mise en garde pédagogique
 
-<p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a un syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.</p>
+<p>Si on prend un cours de Mandarin, on ne s'attend pas à comprendre tout le Mandarin lu ou écouté du premier coup ou même du deuxième. Il en va de même lorsqu'on étudie un langage de programmation, surtout s'il s'agit du premier langage de programmation appris. La première fois, la seconde fois, ou même la troisième fois que vous verrez un bout de code, il est parfaitement normal de ne pas le comprendre entièrement. C'est d'autant plus vrai que le langage Java a une syntaxe plutôt lourde avec beaucoup de mots réservés à la signification abstraite. Vous verrez beaucoup de mots comme "class", "public", "static", "void" dans ce cours. Si ça vous semble être du jargon, c'est parce que c'est exactement ce dont il s'agit. Monter un programme en Java n'est pas chose aisée, il faut comprendre que les "classes" vont dans des fichiers avec un nom correspondant à la classe, il faut comprendre que seule la méthode "public static void main(String[])" est exécutable, etc., etc. Il est impossible d'absorber tout ça en un jour, en une semaine ou même en quelques courtes semaines. Ça prend du temps avant de s'y retrouver.</p>
 
 <p>Et c'est pire que vous pouvez peut-être l'imaginer. Même après avoir fait du Java pendant 30 années, on ne comprend pas tout. La grammaire, la syntaxe, est lourde, complexe, nuancée. C'est pire encore avec certains langages comme C++ que peu de gens au monde maîtrisent entièrement. Et même quand on comprend la syntaxe, comprendre ce que fait le code n'est pas toujours évident. Ce n'est pas parce qu'on connaît la grammaire française qu'on sait lire tous les textes en français.</p>
 
@@ -80,7 +80,7 @@ public class Exemple1 {
 
 ### Les noms des variables
 
-<p>Dans la déclaration des noms des variables, il est fortement conseillé d'utiliser des noms indicatifs. Il s'agit donc d'utiliser le nom qui évoque le mieux l'information stockée. 
+<p>Dans la déclaration des noms des variables, il est fortement conseillé d'utiliser des noms ayant un sens clair. Il s'agit donc d'utiliser le nom qui évoque le mieux l'information stockée. 
 Les contraintes suivantes sont à respecter dans l'écriture des noms de variables :</p>
 <ul> 
 <li>Le premier caractère d'une variable ne doit pas être un chiffre. </li> 
@@ -91,6 +91,32 @@ Les contraintes suivantes sont à respecter dans l'écriture des noms de variabl
 </ul> 
 
 <p>Le nombre de lettres composant le nom d'une variable est indéfini. Néanmoins, l'objectif principal d'un nom de variable est de renseigner le programmeur sur son contenu.</p> 
+
+
+Certains mots sont réservés en Java et ne peuvent servir de noms pour des variables.
+En Java, les mots-clés sont séparés en deux grandes catégories : les **mots-clés réservés** (strictement réservés) et les **mots-clés contextuels** (parfois appelés mots-clés restreints).
+
+
+Les mots-clés réservés sont intégralement réservés par la spécification du langage. Ils ne peuvent **jamais** être utilisés comme identifiants (noms de variables, de méthodes, de classes, etc.), en aucune circonstance.
+
+
+```
+abstract   assert       boolean     break        byte
+case       catch        char        class        const*
+continue   default      do          double       else
+enum       extends      final       float        for
+goto*      if           implements  import       instanceof
+int        interface    long        native       new
+package    private      protected   public       return
+short      static       strictfp    super        switch
+synchronized this      throw       throws       transient
+try        void         volatile    while
+```
+
+Let mots`const` et `goto` sont réservés mais jamais utilisés dans le code Java actuel. Ils le restent pour des raisons historiques.
+
+Les mots-clés contextuels ne sont traités comme des mots-clés que dans certains contextes syntaxiques précis. En dehors de ces contextes, ils peuvent être utilisés comme de simples identifiants.
+Les mots-clés contextuels sont : `sealed` `non-sealed` `permits` `yields` `when` `record` `var` `_` (underscore seul).
 
 ### La notion de type
 

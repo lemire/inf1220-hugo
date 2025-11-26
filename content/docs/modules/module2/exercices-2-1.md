@@ -193,12 +193,12 @@ System.out.println(max + 1);     // -2147483648 (débordement)
 
 <details><summary>Réponse</summary>
 
-<p>Nom corrects : 1, 2, 4, 5, 6.</p>
+<p>Nom corrects : 1, 2, 4, 5, 6. En effet, vous pouvez utiliser <tt>var</tt> comme nom de variable.</p>
 
-<p>Noms conseillés : 5, 6. En effet à moins d&#x2019;avoir de sérieuses raisons
+<p>Nom conseillé : 6. En effet à moins d&#x2019;avoir de sérieuses raisons
 de faire autrement, il faut utiliser les minuscules pour les noms de variables
 simples en java, et les majuscules pour articuler les noms de variables
-composés comme monEntier.</p>
+composés comme monEntier. Le mot <tt>var</tt> est déconseillé puisque c'est un mot-clé contextuel. </p>
 
 </details>
 
