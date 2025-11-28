@@ -180,6 +180,32 @@ Si vous avez aimé le cours...
 - [Laissez une évaluation positive sur la page du manuel chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
 - [Consultez les autres livres écrits par le professeur](https://www.amazon.ca/stores/Daniel-Lemire/author/B0CR7YMZT2)
 
+
+
+
+<div style="margin: 40px auto; padding: 30px; max-width: 680px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); font-family: 'Segoe UI', Arial, sans-serif; color: white; text-align: center;">
+  <p style="font-size: 18px; line-height: 1.6; margin: 0 0 24px 0; opacity: 0.95;">
+    Si  vous avez acheté le manuel sur Amazon, et que le manuel vous a été utile, si une explication vous a fait gagner du temps ou si un exercice vous a enfin fait comprendre un concept difficile…
+  </p>
+  <p style="font-size: 20px; font-weight: 600; margin: 20px 0;">
+    Votre avis compte énormément ❤️
+  </p>
+  <p style="font-size: 17px; line-height: 1.6; margin: 0 0 30px 0; opacity: 0.95;">
+    Prendre 30 secondes pour laisser 5 étoiles et quelques mots gentils sur Amazon fait une différence énorme : 
+    cela permet à d’autres étudiants de trouver plus facilement ce livre et me motive à continuer à créer du contenu de qualité.
+  </p>
+  <a href="https://www.amazon.ca/dp/B0CR7RW87Y/#customerReviews" 
+     style="display: inline-block; background: #fff; color: #764ba2; font-size: 18px; font-weight: bold; padding: 14px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2); transition: all 0.3s;"
+     onmouseover="this.style.background='#f0e6ff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';"
+     onmouseout="this.style.background='#fff'; this.style.transform='none'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.2)';">
+    ⭐ Laisser un avis sur Amazon (30 secondes)
+  </a>
+  <p style="margin: 24px 0 0 0; font-size: 14px; opacity: 0.8;">
+    Merci infiniment pour votre soutien !<br>
+  </p>
+</div>
+
+
 ## Vous voulez continuer votre apprentissage ?
 
 Je vous recommande les cours suivants.
