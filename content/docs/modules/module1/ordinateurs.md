@@ -705,13 +705,181 @@ Tous ces langages partagent un objectif commun : permettre aux programmeurs de d
 
 Les ordinateurs modernes s’appuient sur deux concepts fondamentaux : la machine de Turing, théorisée par Alan Turing, qui définit une machine capable d’exécuter n’importe quel algorithme, et l’architecture de von Neumann, qui structure les ordinateurs autour de quatre composantes principales. Premièrement, la mémoire stocke à la fois les données et les programmes, une innovation clé par rapport aux machines antérieures où les instructions étaient fixes. Deuxièmement, l’unité de contrôle orchestre l’exécution des instructions en suivant un séquençage précis. Troisièmement, l’unité arithmétique et logique effectue les calculs de base, comme les additions ou les comparaisons. Enfin, les interfaces d’entrée/sortie permettent d’interagir avec l’utilisateur ou d’autres systèmes, via des périphériques comme les claviers, écrans ou réseaux.
 
-Dans un langage plus accessible, un ordinateur contemporain se compose de processeurs (CPU), de mémoire vive (RAM) pour les calculs temporaires, de stockage à long terme (disques durs ou SSD), de processeurs graphiques (GPU) pour le rendu visuel, et de cartes d’entrée/sortie pour la connectivité. La carte mère agit comme un chef d’orchestre, coordonnant les échanges entre ces éléments. Par exemple, lorsqu’un programme s’exécute, le CPU lit les instructions depuis la RAM, effectue les calculs nécessaires, et envoie les résultats vers la mémoire ou un périphérique de sortie, comme un écran.
+Un ordinateur contemporain se compose de processeurs (CPU), de mémoire vive (RAM) pour les calculs temporaires, de stockage à long terme (disques durs ou SSD), de processeurs graphiques (GPU) pour le rendu visuel, et de cartes d’entrée/sortie pour la connectivité. La carte mère agit comme un chef d’orchestre, coordonnant les échanges entre ces éléments. Par exemple, lorsqu’un programme s’exécute, le CPU lit les instructions depuis la RAM, effectue les calculs nécessaires, et envoie les résultats vers la mémoire ou un périphérique de sortie, comme un écran.
 
 Les processeurs se déclinent en plusieurs architectures. Dans les ordinateurs personnels, les puces x64 (ou x86-64), produites par Intel et AMD, dominent grâce à leur puissance et leur compatibilité. Dans les appareils mobiles, comme les smartphones, les processeurs ARM, plus économes en énergie, sont privilégiés. La mémoire vive repose sur la technologie DRAM, rapide mais volatile, tandis que le stockage à long terme utilise majoritairement la mémoire flash, comme dans les SSD, pour sa rapidité et sa fiabilité.
 
 Les langages de programmation jouent un rôle crucial en traduisant des instructions humaines en commandes compréhensibles par ces composants matériels. Leur niveau d’abstraction varie : les langages de bas niveau, comme l’assembleur, sont proches du matériel et offrent un contrôle précis mais exigent une expertise technique. À l’opposé, les langages de haut niveau, comme Python ou Java, simplifient le développement en masquant les détails matériels, ce qui les rend plus accessibles et adaptés à des applications complexes, comme le développement web ou l’intelligence artificielle.
 
 Dans ce cours, nous explorerons le langage Java, largement adopté dans l’industrie pour sa portabilité, sa robustesse et sa polyvalence. Utilisé dans des domaines variés, des applications mobiles Android aux systèmes d’entreprise, Java illustre parfaitement comment un langage de haut niveau peut répondre à des besoins modernes tout en s’appuyant sur les principes fondamentaux de l’informatique.
+
+## Langage machine
+
+Votre ordinateur ne connaît pas le language Java.
+L'ordinateur contient un microprocesseur (CPU) qui traite des suites de bits. Ces bits sont regroupés en paquets de taille fixe (par ex. 32, 64 ou 128 bits) et peuvent représenter soit une valeur, soit une instruction.  Le flot de bits exposé au CPU (en mémoire ou sur un support) est un programme. Le CPU exécute ce programme séquentiellement : lire un mot, l'interpréter, exécuter son action, passer au mot suivant.
+Des ingénieurs permettent à votre ordinateur de faire fonctionner un langage Java en transformant le code Java
+en instructions que la machine peut comprendre. L'ordinateur stocke ses données dans un petit nombre de registres (très rapides) ou en mémoire (un peu plus lent).
+
+Les instructions exactes que votre ordinateur peut exécuter dépendent de son architecture. À titre
+d'illustration, voici quelques instructions fictives qu'un ordinateur pourrait comprendre.
+
+
+- `SETA` : stocke la valeur qui suit dans le registre A
+- `SETB` : stocke la valeur qui suit dans le registre B
+- `ADD A→B` : ajoute la valeur du registre A au registre B et stocke le résultat dans le register B
+- `DEC A` : diminue la valeur contenu dans le registre A par 1
+- `JNZ` : si le registre A contient une valeur non-nulle, déplace toi à l'instruction indiquée (00: première instructions, 01: deuxième instruction, 03: troisième instruction, etc.)
+- `HTL` : met fin au programme
+
+Avec ces instructions, nous pouvons créer un programme en langage machine capable de faire la somme
+des entiers de 0 à `N`. 
+Par exemple, pour $N=10$, nous avons que $1+2+3+\cdots+10 = 55$.
+
+Vous pouvez tester le programme avec la petite application suivante.
+Exécutez le programme pas à pas. Essayez de comprendre comment le programme arrive à calculer
+la somme. Il n'est pas nécessaire à ce point-ci dans le cours que vous compreniez le
+fonctionnement du programme.
+
+Bien que le mécanisme puisse semble mécanique et limité, c'est ainsi que nos ordinateurs
+fonctionnent. Naturellement, la programmation avec des instructions spécifiques à un
+processeur a des inconvénients. Elle ne fonctionnera que sur un processeur du même type.
+C'est une des raisons pour préférer la programmation dans un langage comme Java: un programme
+Java ne dépend pas de l'architecture de votre processeur.
+
+<div class="input-n" style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+  <label>Entrez N : </label>
+  <input type="number" id="userN" min="1" max="1000" value="10" style="padding: .5rem; font-size: 1.1rem; width: 100px;">
+</div>
+<ul class="instructions" id="program" style="list-style: none; padding: 0; margin: 2rem 0;">
+  <!-- Le programme sera injecté ici dynamiquement -->
+</ul>
+<div class="registers" style="display: flex; gap: 3rem; margin: 2rem 0; font-size: 1.3rem;">
+  <div>Registre <strong>A</strong> (compteur) : <span class="reg" id="regA" style="display:inline-block; padding: .6rem 1.2rem; border: 3px solid #333; border-radius: 10px; background: #fff; min-width: 100px; text-align: center; font-weight: bold;">–</span></div>
+  <div>Registre <strong>B</strong> (somme)   : <span class="reg" id="regB" style="display:inline-block; padding: .6rem 1.2rem; border: 3px solid #333; border-radius: 10px; background: #fff; min-width: 100px; text-align: center; font-weight: bold;">–</span></div>
+</div>
+<div class="buttons" style="margin: 2rem 0;">
+  <button id="stepBtn" style="padding: .7rem 1.5rem; margin-right: .8rem; font-size: 1rem; cursor: pointer;">Pas à pas</button>
+  <button id="resetBtn" style="padding: .7rem 1.5rem; margin-right: .8rem; font-size: 1rem; cursor: pointer;">Réinitialiser</button>
+</div>
+<script>
+(function () {
+  const programList = document.getElementById('program');
+  const userNInput = document.getElementById('userN');
+  const regA = document.getElementById('regA');
+  const regB = document.getElementById('regB');
+  const stepBtn = document.getElementById('stepBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  let instructions = [];  // tableau des <li>
+  let pc = 0;
+  let A = 0;
+  let B = 0;
+  let zeroFlag = false;
+  function buildProgram() {
+    const N = Math.max(1, parseInt(userNInput.value) || 1);
+    const code = [
+      `SETA ${N.toString().padStart(4, '0')}     ; A ← N (compteur décroissant)`,
+      `SETB 0000         ; B ← 0 (somme)`,
+      `ADD  A→B          ; B ← B + A`,
+      `DEC  A            ; A ← A - 1`,
+      `JNZ  02           ; si A ≠ 0, revenir à l'instruction 2`,
+      `HLT               ; fin du programme – B = somme de 1 à N`
+    ];
+    programList.innerHTML = '';
+    instructions = [];
+    code.forEach((line, idx) => {
+      const li = document.createElement('li');
+      const [opArg, comment] = line.split(';');
+      const [op, arg] = opArg.trim().split(/\s+/);
+      li.textContent = line.trim();
+      // inline styles for each instruction line (was in CSS before)
+      li.style.padding = '0.5rem 0.9rem';
+      li.style.border = '1px solid #ddd';
+      li.style.borderRadius = '8px';
+      li.style.marginBottom = '0.5rem';
+      li.style.background = '#f8f8f8';
+      li.style.fontFamily = 'Courier New, monospace';
+      li.dataset.op = op;
+      li.dataset.arg = arg || '';
+      programList.appendChild(li);
+      instructions.push(li);
+    });
+    reset();
+  }
+  function highlight() {
+    instructions.forEach((li, i) => {
+      if (i === pc) {
+        li.style.background = 'rgba(33,150,243,0.25)';
+        li.style.borderColor = '#2196f3';
+        li.style.fontWeight = 'bold';
+      } else {
+        li.style.background = '#f8f8f8';
+        li.style.borderColor = '#ddd';
+        li.style.fontWeight = 'normal';
+      }
+    });
+  }
+  function updateDisplay() {
+    regA.textContent = A;
+    regB.textContent = B;
+    highlight();
+    const finished = pc >= instructions.length;
+    stepBtn.disabled = finished;
+    // emulate CSS :disabled
+    stepBtn.style.opacity = finished ? '0.4' : '1';
+    stepBtn.style.cursor = finished ? 'not-allowed' : 'pointer';
+  }
+  function reset() {
+    pc = 0;
+    A = 0;
+    B = 0;
+    zeroFlag = false;
+    updateDisplay();
+  }
+  function execute() {
+    if (pc >= instructions.length) return false;
+    const li = instructions[pc];
+    const op = li.dataset.op;
+    const arg = li.dataset.arg;
+    switch (op) {
+      case 'SETA': A = parseInt(arg, 10); break;
+      case 'SETB': B = parseInt(arg, 10); break;
+      case 'ADD':
+        if (arg === 'A→B') B += A;
+        break;
+      case 'DEC':
+        if (arg === 'A') { A--; zeroFlag = (A === 0); }
+        break;
+      case 'JNZ':
+        if (!zeroFlag) pc = parseInt(arg, 10) - 1; // -1 car pc++ juste après
+        break;
+      case 'HLT':
+        return false;
+    }
+    pc++;
+    return true;
+  }
+  function step() {
+    execute();
+    updateDisplay();
+  }
+  function run() {
+    const interval = setInterval(() => {
+      if (!execute()) {
+        clearInterval(interval);
+      }
+      updateDisplay();
+    }, 400);
+  }
+  // Événements
+  // reconstruire le programme dès que l'utilisateur change N
+  userNInput.addEventListener('input', buildProgram);
+  stepBtn.addEventListener('click', step);
+  resetBtn.addEventListener('click', reset);
+  // Chargement initial
+  buildProgram();
+})();
+</script>
+
 
 ## API
 
