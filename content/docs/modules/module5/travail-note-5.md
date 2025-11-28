@@ -7,6 +7,14 @@ weight: 4
 
 Pour le cours INF1220, les travaux notés doivent être soumis sous forme d’un unique fichier PDF via l’outil de dépôt officiel de la TÉLUQ, avant la date de fin de cours indiquée sur le portail étudiant. Les soumissions par courriel ne sont pas acceptées et entraînent une note de zéro, tout comme les documents manuscrits, les saisies d’écran ou ceux ne permettant pas le copier-coller du code Java. L’utilisation du robot conversationnel du cours est autorisée, mais les réponses et analyses doivent être personnelles. Avant de commencer, il est crucial d’avoir complété toutes les lectures et exercices préparatoires et de maîtriser la matière, en posant des questions si nécessaire.
 
+{{% hint warning %}}
+
+Si vous utilisez l'intelligence artificielle pour produire des réponses que vous
+ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsable et vous pourriez obtenir la note de zéro.
+
+{{% /hint %}}
+
+
 La date de fin de cours, fixée par l’Université, est non négociable par les enseignants, et tout travail soumis tardivement risque une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard. En cas de difficultés personnelles (maladie, deuil, etc.), les étudiants doivent contacter l’Université pour demander un report. Les problèmes techniques avec l’outil de dépôt doivent également être résolus via l’Université. Aucun indice supplémentaire ne sera fourni au-delà de l’énoncé pour garantir l’équité, et les étudiants sont responsables de planifier leur temps et de vérifier soigneusement leur travail avant soumission.
 
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Le fichier PDF doit contenir le code Java, intégré de manière à faciliter la correction, sans fichiers séparés. La préparation rigoureuse, incluant la maîtrise des concepts et la vérification du travail, est essentielle pour éviter les erreurs et répondre aux attentes du cours.

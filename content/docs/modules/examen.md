@@ -9,6 +9,14 @@ weight: 6
 
 <p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors de l'examen</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
 
+{{% hint warning %}}
+
+Si vous utilisez l'intelligence artificielle pour produire des réponses que vous
+ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsable et vous pourriez obtenir la note de zéro.
+
+{{% /hint %}}
+
+
 <p>Si vous ne maîtrisez pas la matière du cours, vous ne réussirez probablement pas l'examen. Prenez le temps d'étudier, de réviser et de poser des questions le cas échéant. Pratiquez-vous à programmer.</p>
 
 <p>Quand il s'agit de programmer, plusieurs étudiants remettent du code qui n'est pas fonctionnel, qui ne peut en aucun cas répondre à la question. Vous devez autant que possible vous assurez que votre code est fonctionnel. Pour y arriver, vous pouvez le relire et l'exécuter dans votre esprit, en traçant la valeur des variables. Comme vous devez de toute manière toujours expliquer vos solutions, vous pouvez en profiter pour y inclure une séquence d'exécution de votre programme. Un programmeur doit toujours se relire, et tester, et retester son code. Il est facile de se tromper complètement en écrivant même du code simple si on ne se relit pas avec soin.</p>

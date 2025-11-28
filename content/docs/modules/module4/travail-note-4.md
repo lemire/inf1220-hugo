@@ -5,7 +5,18 @@ weight: 6
 
 # Travail noté 4 - Les flux d'entrées et de sorties
 
-Ce travail noté du cours INF1220 requiert de lire un fichier, valider ses données selon des règles spécifiques et afficher les résultats dans un autre format, exigeant une maîtrise des entrées/sorties, des chaînes de caractères et des structures de données en Java. Avant de commencer, il est impératif d’avoir complété et compris les lectures et exercices préparatoires, car sans cette préparation, la réussite du travail et des questions d’examen est compromise. L’utilisation du robot conversationnel du cours est permise, mais les réponses et analyses doivent être personnelles. Les étudiants doivent planifier leur temps rigoureusement, car la manipulation des entrées/sorties peut être complexe, et les travaux doivent être soumis avant la date de fin de cours, disponible sur le portail étudiant, sans possibilité de report sauf validation par l’Université pour des raisons exceptionnelles (maladie, deuil, etc.).
+Ce travail noté du cours INF1220 requiert de lire un fichier, valider ses données selon des règles spécifiques et afficher les résultats dans un autre format, exigeant une maîtrise des entrées/sorties, des chaînes de caractères et des structures de données en Java. Avant de commencer, il est impératif d’avoir complété et compris les lectures et exercices préparatoires, car sans cette préparation, la réussite du travail et des questions d’examen est compromise. L’utilisation du robot conversationnel du cours est permise, mais les réponses et analyses doivent être personnelles. 
+
+{{% hint warning %}}
+
+Si vous utilisez l'intelligence artificielle pour produire des réponses que vous
+ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsable et vous pourriez obtenir la note de zéro.
+
+{{% /hint %}}
+
+
+
+Les étudiants doivent planifier leur temps rigoureusement, car la manipulation des entrées/sorties peut être complexe, et les travaux doivent être soumis avant la date de fin de cours, disponible sur le portail étudiant, sans possibilité de report sauf validation par l’Université pour des raisons exceptionnelles (maladie, deuil, etc.).
 
 Les travaux doivent être soumis sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le PDF doit permettre le copier-coller du code, être exempt de saisies d’écran ou de contenu manuscrit, et inclure du code testé et fonctionnel, car un code non fonctionnel peut entraîner une note de zéro. Les recherches sur Internet sont encouragées, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La date de fin de cours, non négociable par les enseignants, marque la limite pour les soumissions, et tout travail remis tardivement risque une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.
 
