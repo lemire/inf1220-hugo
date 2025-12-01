@@ -36,6 +36,14 @@ rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/"
 
 <p>Si vous êtes inscrits dans un version du cours avec entretien de suivi, cet entretien est obligatoire. L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen.</p>
 
+
+### Microsoft Teams
+
+En préparation de l'entretien de suivi, nous vous demandons d'installer
+[Microsoft Teams](https://www.teluq.ca/site/etudes/office365.php). Si vous
+rencontrez des difficultés, communiquez avec [support@teluq.ca](mailto:support@teluq.ca).
+Il est de votre responsabilité de disposer de Microsoft Teams.
+
 ### Qu’est-ce que l’entretien de suivi?
 <p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
 Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer une réponse.</p>

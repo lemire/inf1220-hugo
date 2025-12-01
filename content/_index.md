@@ -54,6 +54,12 @@ void main() {
 
 La compilation et l'exécution d'un programme Java peut prendre quelques secondes.
 
+## Microsoft 365
+
+
+Nous vous demandons d'installer [Microsoft 365, incluant Microsoft Teams](https://www.teluq.ca/site/etudes/office365.php). Si vous
+rencontrez des difficultés, communiquez avec [support@teluq.ca](mailto:support@teluq.ca).
+
 ## Courriel
 
 Si vous nous écrivez, n'oubliez pas d'ajouter `[INF1220]` dans l'objet de votre message.
