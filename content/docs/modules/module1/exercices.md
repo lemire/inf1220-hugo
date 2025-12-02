@@ -21,7 +21,7 @@ Comment procéder pour les exercices :
 1. Lisez attentivement la question.
 2. Cherchez une solution. Si vous ne trouvez pas immédiatement, consacrez 10 à 15 minutes à y réfléchir. Si le problème exact vous résiste, tentez une solution partielle. Pour cet exercice, vous devez produire du pseudo-code, et non du Java.
 3. Rédigez votre solution avec précision, comme une suite de consignes qu’un enfant pourrait suivre.
-4. Exécutez votre pseudo-code (voir l’exécution d’un pseudo-code à l’activité 1.2).
+4. Exécutez votre pseudo-code.
 5. Consultez ensuite la ou les solutions proposées.
 6. Assurez-vous de comprendre toutes les solutions. Posez des questions si nécessaire, en fournissant votre propre solution pour appuyer vos interrogations. Comprendre les solutions proposées est impératif.
 
