@@ -531,5 +531,37 @@ Notez que `&` peut aussi servir d'opérateur bit à bit pour des entiers, alors 
 
 
 
+## Question 37
+
+La moyenne entière de deux entiers a et b est le résultat de `(a + b) / 2` avec une division entière (tronquée vers 
+le bas). Écrivez une fonction en Java qui calcule la moyenne entière de deux `int`, sans causer de débordement
+et sans utiliser un type autre que `int`.
+
+<details>
+<summary>Réponse</summary>
 
 
+Voici une solution possible.
+
+```java  {style=github}
+public static int safeAverageWithBranch(int a, int b) {
+    // Cas 1 : signes différents (un positif, un négatif ou l’un des deux est zéro)
+    // → a + b ne peut pas déborder car la somme reste dans les limites d’un int
+    if ((a < 0) != (b < 0)) {
+        return (a + b) / 2;
+    }
+
+    // Cas 2 : même signe (les deux positifs ou les deux négatifs)
+    // → on utilise la formule sans risque de débordement : a + (b - a)/2
+    // La soustraction b - a ne déborde jamais quand a et b ont le même signe
+    return a + (b - a) / 2;
+}
+```
+
+Voici pourquoi cette fonction est correcte.
+
+- Quand les signes sont différents → la somme `a + b` est mathématiquement comprise entre `Integer.MIN_VALUE` et `Integer.MAX_VALUE`, donc aucun overflow possible en Java (même avec `MIN_VALUE` et `MAX_VALUE`).
+- Quand les signes sont identiques → `b - a` a une valeur absolue plus petite que chacun des deux nombres, donc la soustraction reste dans les limites d’un `int`, puis on divise par 2 et on ajoute à `a` : aucun débordement.
+
+
+</details>
