@@ -94,3 +94,10 @@ public class Example {
 Vous pouvez convertir un fichier MarkDown en PDF à l'aide d'un plugin Visual Studio Code comme MarkDown PDF.
 
 {{< youtube id="G3RuYho2zDA" >}}
+
+Vous pouvez aussi utiliser les éditeurs MarkDown suivants qui vous permettent d'exporter
+votre MarkDown en PDF.
+
+- [marktext](https://marktext.me)
+- [Typora](https://typora.io)
+- [iA Writer](https://ia.net/writer)
