@@ -683,6 +683,95 @@ La vidéo suivante (optionnelle) vous permettra d'en apprendre davantage.
 {{< youtube id="9P6SH-zgHME" >}}
 
 
+## Exécution du code Java
+
+Quand on écrit du code Java, la première étape est toujours la compilation en **bytecode** par le compilateur `javac`. Ce bytecode est un langage intermédiaire portable, indépendant de l'architecture matérielle, qui s'exécute sur la machine virtuelle Java (Java Virtual Machine ou JVM). Vous ne pouvez pas exécuter de code Java sans une machine virtuelle Java
+
+Prenons l’exemplesimple suivant.
+
+```java
+class Square {
+    static int square(int num) {
+        return num * num;
+    }
+}
+```
+
+Après compilation avec `javac Square.java`, on obtient un fichier `Square.class`. Si on désassemble ce fichier avec `javap -c Square`, on voit le bytecode de la méthode statique qui nous intéresse.
+
+```
+static int square(int);
+    Code:
+       0: iload_0          // charge la première variable locale (le paramètre num) sur la pile
+       1: iload_0          // charge à nouveau la même valeur sur la pile
+       2: imul             // multiplie les deux valeurs au sommet de la pile (int multiply)
+       3: ireturn          // retourne la valeur au sommet de la pile comme int
+```
+
+Ces quatre instructions forment l’intégralité de la méthode `square`. Les instructions ont le sens suivant.
+
+- `iload_0` : charge (load) sur la pile d’opérandes la variable locale d’index 0. Pour une méthode statique, l’index 0 correspond au premier (et ici seul) paramètre. Comme la méthode n’a pas d’instance (`this`), il n’y a pas de variable locale 0 réservée pour `this`.
+- Le deuxième `iload_0` charge une deuxième fois la même valeur : on a maintenant deux copies de `num` au sommet de la pile.
+- `imul` dépile les deux entiers, les multiplie, et empile le résultat.
+- `ireturn` dépile cette valeur et la renvoie au code appelant.
+
+
+Ces instructions sont spécifiques au bytecode Java (fichier .class) et ils ne correspondent
+pas aux instructions de  votre processeur. C'est pour cela qu'on parle de *machine virtuelle Java*: le code Java est compilé vers des instructions qui ne correspondent pas au processeur sur lequel elles seront exécutés. 
+
+Une addition `return a + b;` dans une méthode `static int add(int a, int b)` donne les 4 instructions suivantes.
+
+```
+0: iload_0
+1: iload_1
+2: iadd
+3: ireturn
+```
+
+Une soustraction `return x - 1;` donnera les instructions suivantes.
+
+```
+0: iload_0
+1: iconst_1
+2: isub
+3: ireturn
+```
+
+
+Quand on lance un programme Java, voici la séquence d'exécution.
+
+1. Le fichier `.class` est chargé en mémoire et analysé.
+2. La JVM crée les structures internes (method area, constant pool, etc.).
+3. La première invocation de `Square.square(5)` passe par l’interpréteur bytecode L’interpréteur exécute instruction par instruction le bytecode. C’est relativement lent comparé au code natif.
+
+La JVM surveille quelles méthodes sont exécutées fréquemment. Dès qu’une méthode comme `square` dépasse un certain seuil d’invocations (typiquement quelques milliers) ou que d'autres conditions sont réunies, elle est compilée en code natif.
+Pour notre méthode `square`, le code x86-64 (Intel ou AMD) généré prendra une nouvelle forme.
+
+```
+mov    eax, edi        ; edi contient le paramètre num (convention d'appel)
+imul   eax, edi        ; multiplication eax = eax * edi
+ret
+```
+
+Ce code prend en compte votre machine et son processeur.
+Une fois compilée, toutes les invocations suivantes de `Square.square()` sautent directement à ce code natif ultra-rapide, sans repasser par l’interpréteur ni par le bytecode.
+
+Cette approche de compilation en code natif est souvent appelée compilation juste à temps (*just in time* ou JIT).
+C'est ainsi que le code Java peut offrir des performances qui rivalisent le code natif (produit par le C ou le C++). Le langage C# fonctionne de manière similaire.
+
+Le code JavaScript qui s'exécute dans votre navigateur bénéficie aussi de la compilation
+juste à temps. C'est en partie pourquoi il est possible de jouer à des jeux vidéos 
+demandant beaucoup de calculs directement
+dans votre navigateur.
+
+Une des conséquences de l'utilisation de la compilation juste à temps est qu'il est difficile de mesurer la performance d'un code Java. En effet, sa performance peut évoluer dans le temps
+alors que les différentes fonctions sont compilées en code natif.
+
+Il est parfois recommandé d'écrire des fonctions courtes en Java qui sont fréquemment appelées par votre code. Celles-ci ont plus de chances d'être compilées en code natif que si vous avez des fonctions volumineuses qui sont moins souvent appelées.
+
+
+{{< youtube id="8pfixE9aM3Y" >}}
+
 ## Exercices
 
 <p>Voici quelques exercices pour pratiquer ce que vous venez d'apprendre :</p>
@@ -694,6 +783,7 @@ La vidéo suivante (optionnelle) vous permettra d'en apprendre davantage.
 <li>Utilisez les opérateurs logiques pour combiner des expressions booléennes.</li>
 <li>Utilisez l'opérateur ternaire pour simplifier une expression conditionnelle.</li>
 <li>Pratiquez l'affectation de valeurs à des variables en utilisant les opérateurs d'affectation.</li>
+<li>Créez une classe Java, compilez-la pour obtenir son <tt>.class</tt> et examinez le résultat avec la commande <tt>javap -c</tt>.
 </ol>
 
 <p>Références :</p>
