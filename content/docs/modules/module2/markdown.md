@@ -101,3 +101,5 @@ votre MarkDown en PDF.
 - [marktext](https://marktext.me)
 - [Typora](https://typora.io)
 - [iA Writer](https://ia.net/writer)
+
+Vous ne pouvez pas utiliser Microsoft Word pour écrire du MarkDown.
