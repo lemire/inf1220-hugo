@@ -990,16 +990,11 @@ données de votre choix. En réalité, un fichier .xlsx n’est rien d’autre q
 
 Le programme part d'un tableau à deux dimensions (`double[][]`), et illustre  la gestion des fichiers avec FileOutputStream, l’utilisation de ZipOutputStream pour créer une archive ZIP, et même la construction de chaînes de caractères avec StringBuilder. 
 
-ZipOutputStream est une classe spéciale de Java qui fonctionne comme un `OutputStream` classique, mais qui sait créer des fichiers ZIP (exactement comme quand vous faites « clic droit → compresser » sur votre ordinateur).  
-Au lieu d’écrire directement dans un fichier, on l’enveloppe autour d’un `FileOutputStream` : on obtient ainsi un flot qui comprend la structure d’une archive ZIP.  
+ZipOutputStream est une classe spéciale de Java qui fonctionne comme un `OutputStream` classique, mais qui sait créer des fichiers ZIP (exactement comme quand vous faites « clic droit → compresser » sur votre ordinateur).  Au lieu d’écrire directement dans un fichier, on l’enveloppe autour d’un `FileOutputStream` : on obtient ainsi un flux qui comprend la structure d’une archive ZIP.  
 
-Avec `ZipOutputStream`, on peut ajouter autant de fichiers que l’on veut dans un archive ZIP en appelant simplement `putNextEntry(new ZipEntry("nom/du/fichier.xml"))`, écrire le contenu avec les méthodes habituelles `write()`, puis fermer l’entrée avec `closeEntry()`.  
-C’est exactement ce que fait notre programme : il ajoute un par un tous les petits fichiers obligatoires à l’intérieur du .xlsx, et Java s’occupe automatiquement de compresser et d’organiser tout cela correctement.  
-Pour vous, c’est comme écrire plusieurs fichiers, mais ils finissent tous dans un seul fichier .xlsx que Excel sait ouvrir.
+Avec `ZipOutputStream`, on peut ajouter autant de fichiers que l’on veut dans un archive ZIP en appelant simplement `putNextEntry(new ZipEntry("nom/du/fichier.xml"))`, écrire le contenu avec les méthodes habituelles `write()`, puis fermer l’entrée avec `closeEntry()`.   C’est exactement ce que fait notre programme : il ajoute un par un tous les petits fichiers obligatoires à l’intérieur du .xlsx, et Java s’occupe automatiquement de compresser et d’organiser tout cela correctement.   Pour vous, c’est comme écrire plusieurs fichiers, mais ils finissent tous dans un seul fichier .xlsx que Excel sait ouvrir.
 
 À la fin de l’exécution, vous obtenez un fichier `resultat.xlsx` valide, avec les nombres bien alignés dans les bonnes cellules (A1, B1, A2…). Nous vous invitons à faire l'exercice d'exécuter le fichier `MatriceVersExcel`. Pouvez-vous modifier les valeurs enregistrées&nbsp;?
-
-
 
 
 ```java {style=github}
@@ -1122,6 +1117,8 @@ public class MatriceVersExcel {
     }
 }
 ```
+
+Vous pourriez aussi générer des documents Microsoft Word ou en consulter le contenu.
 
 ### Conseils génériques
 
