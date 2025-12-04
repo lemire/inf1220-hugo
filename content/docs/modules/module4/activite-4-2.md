@@ -981,6 +981,148 @@ public class MemoryMappedFileExample {
 
 MappedByteBuffer est conçu pour mapper un fichier directement en mémoire. Ses principales méthodes incluent get() et put() pour lire et écrire des données (octets, entiers, etc.) à la position actuelle du buffer, avec des variantes comme getInt() ou putInt() pour des types spécifiques. La méthode position(int) définit l’index courant pour les opérations, tandis que limit() et capacity() contrôlent la portée des données accessibles. La méthode flip() bascule le buffer du mode écriture au mode lecture, ajustant la limite à la position actuelle et réinitialisant la position à 0. force() synchronise les modifications avec le fichier sur disque, garantissant la persistance des changements. Enfin, load() charge le contenu mappé en mémoire physique pour optimiser les performances, et isLoaded() vérifie si le mappage est résident. 
 
+
+### Création d'un chiffrier Excel (Microsoft)
+
+
+À titre d'exemple, voici un  petit programme Java qui permet de créer un vrai fichier Excel (.xlsx) avec les
+données de votre choix. En réalité, un fichier .xlsx n’est rien d’autre qu’une archive ZIP qui contient plusieurs fichiers au format texte avec des balises XML. Le programme va donc créer cette archive et écrire lui-même les fichiers XML nécessaires pour qu’Excel comprenne qu’il s’agit d’un classeur avec une feuille contenant des nombres.
+
+Le programme part d'un tableau à deux dimensions (`double[][]`), et illustre  la gestion des fichiers avec FileOutputStream, l’utilisation de ZipOutputStream pour créer une archive ZIP, et même la construction de chaînes de caractères avec StringBuilder. 
+
+ZipOutputStream est une classe spéciale de Java qui fonctionne comme un `OutputStream` classique, mais qui sait créer des fichiers ZIP (exactement comme quand vous faites « clic droit → compresser » sur votre ordinateur).  
+Au lieu d’écrire directement dans un fichier, on l’enveloppe autour d’un `FileOutputStream` : on obtient ainsi un flot qui comprend la structure d’une archive ZIP.  
+
+Avec `ZipOutputStream`, on peut ajouter autant de fichiers que l’on veut dans un archive ZIP en appelant simplement `putNextEntry(new ZipEntry("nom/du/fichier.xml"))`, écrire le contenu avec les méthodes habituelles `write()`, puis fermer l’entrée avec `closeEntry()`.  
+C’est exactement ce que fait notre programme : il ajoute un par un tous les petits fichiers obligatoires à l’intérieur du .xlsx, et Java s’occupe automatiquement de compresser et d’organiser tout cela correctement.  
+Pour vous, c’est comme écrire plusieurs fichiers, mais ils finissent tous dans un seul fichier .xlsx que Excel sait ouvrir.
+
+À la fin de l’exécution, vous obtenez un fichier `resultat.xlsx` valide, avec les nombres bien alignés dans les bonnes cellules (A1, B1, A2…). Nous vous invitons à faire l'exercice d'exécuter le fichier `MatriceVersExcel`. Pouvez-vous modifier les valeurs enregistrées&nbsp;?
+
+
+
+
+```java {style=github}
+import java.io.*;
+import java.util.zip.*;
+
+public class MatriceVersExcel {
+
+    public static void main(String[] args) throws Exception {
+
+        // Exemple de matrice — remplace par la tienne
+        double[][] matrice = {
+            {1.1, 2.2, 3.3},
+            {4.4, 5.5, 6.6},
+            {7.7, 8.8, 9.9},
+            {10.0, 11.1, 12.2}
+        };
+
+        creerExcelDepuisMatrice(matrice, "resultat.xlsx");
+        System.out.println("Fichier Excel créé avec succès : resultat.xlsx");
+    }
+
+    /** Crée un vrai fichier .xlsx à partir d’une matrice de double */
+    public static void creerExcelDepuisMatrice(double[][] donnees, String nomFichier) throws IOException {
+        try (ZipOutputStream zip = new ZipOutputStream(new FileOutputStream(nomFichier))) {
+            // Un fichier XLSX est un conteneur ZIP, qui doit contenir ces fichiers/dossiers minimums
+            
+            // Les deux premiers fichiers doivent être à la racine
+            ajouterFichier(zip, "[Content_Types].xml", typesContenuXml());
+            ajouterFichier(zip, "_rels/.rels", relationsRacine());
+            
+            // L'arborescence du classeur commence par 'xl/'
+            ajouterDossier(zip, "xl/"); // Ajout de l'entrée de dossier pour la structure
+            ajouterFichier(zip, "xl/workbook.xml", classeurXml());
+            ajouterDossier(zip, "xl/_rels/"); // Ajout de l'entrée de dossier
+            ajouterFichier(zip, "xl/_rels/workbook.xml.rels", relationsClasseur());
+            ajouterDossier(zip, "xl/worksheets/"); // Ajout de l'entrée de dossier
+            ajouterFichier(zip, "xl/worksheets/sheet1.xml", feuilleXml(donnees));
+        }
+    }
+
+    private static void ajouterDossier(ZipOutputStream zip, String nom) throws IOException {
+        zip.putNextEntry(new ZipEntry(nom));
+        zip.closeEntry();
+    }
+
+    private static void ajouterFichier(ZipOutputStream zip, String nom, String contenu) throws IOException {
+        // Le contenu de l'OpenXML doit être UTF-8
+        zip.putNextEntry(new ZipEntry(nom));
+        zip.write(contenu.getBytes("UTF-8"));
+        zip.closeEntry();
+    }
+
+    private static String typesContenuXml() {
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+               "<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">\n" +
+               "  <Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>\n" +
+               "  <Default Extension=\"xml\" ContentType=\"application/xml\"/>\n" +
+               "  <Override PartName=\"/xl/workbook.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\"/>\n" +
+               "  <Override PartName=\"/xl/worksheets/sheet1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\"/>\n" +
+               "</Types>";
+    }
+
+    private static String relationsRacine() {
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+               "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">\n" +
+               "  <Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"xl/workbook.xml\"/>\n" +
+               "</Relationships>";
+    }
+
+    // CORRIGÉ: Ajout de l'attribut 'xmlns:r' qui est nécessaire dans le 'workbook.xml' pour utiliser 'r:id'.
+    private static String classeurXml() {
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" + // Ajout de standalone="yes"
+               "<workbook xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" " +
+               "xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\">\n" + // AJOUTÉ: l'attribut xmlns:r
+               "  <sheets>\n" +
+               "    <sheet name=\"Données\" sheetId=\"1\" r:id=\"rId1\"/>\n" +
+               "  </sheets>\n" +
+               "</workbook>";
+    }
+
+    private static String relationsClasseur() {
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+               "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">\n" +
+               "  <Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"worksheets/sheet1.xml\"/>\n" +
+               "</Relationships>";
+    }
+
+    private static String feuilleXml(double[][] donnees) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n"); // Ajout de standalone="yes"
+        sb.append("<worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">\n");
+        sb.append("  <sheetData>\n");
+
+        for (int ligne = 0; ligne < donnees.length; ligne++) {
+            sb.append("    <row r=\"").append(ligne + 1).append("\">\n");
+            for (int col = 0; col < donnees[ligne].length; col++) {
+                String cellule = colonneExcel(col + 1) + (ligne + 1);
+                // Utilisation de Double.toString() ou String.valueOf() pour éviter la locale par défaut
+                String valeurStr = Double.toString(donnees[ligne][col]); 
+                sb.append("      <c r=\"").append(cellule).append("\"><v>")
+                  .append(valeurStr).append("</v></c>\n");
+            }
+            sb.append("    </row>\n");
+        }
+
+        sb.append("  </sheetData>\n");
+        sb.append("</worksheet>");
+        return sb.toString();
+    }
+
+    private static String colonneExcel(int numero) {
+        StringBuilder col = new StringBuilder();
+        while (numero > 0) {
+            int reste = (numero - 1) % 26;
+            col.insert(0, (char) ('A' + reste));
+            numero = (numero - 1) / 26;
+        }
+        return col.toString();
+    }
+}
+```
+
 ### Conseils génériques
 
 Il faut privilégier les lectures/écritures en bloc (bufferisées). Il faut limiter les accès réseau (en réduire le nombre). 
