@@ -225,3 +225,22 @@ Je vous recommande les cours suivants.
 - Au sein du cours [INF 9004 Informatique des entrepôts de données](https://www.teluq.ca/site/etudes/offre/cours/teluq/inf%209004), vous développerez des compétences en conception, gestion et analyse d’entrepôts de données pour soutenir la prise de décision stratégique. Vous y apprendrez à faire des requêtes sophistiquées au sein de bases de données avec des langages comme MDX et le SQL.
 
 
+### INF 2007
+
+{{< youtube id="LRTqmtgIzj4" >}}
+
+### INF 2020
+
+{{< youtube id="T77xeGaMt98" >}}
+
+### INF 6450
+
+{{< youtube id="h9v9uuu0OKg" >}}
+
+### INF 6460
+
+{{< youtube id="89I3JMsTDKY" >}}
+
+### INF 9004
+
+{{< youtube id="aHwp05QZil8" >}}
