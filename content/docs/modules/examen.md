@@ -227,20 +227,20 @@ Je vous recommande les cours suivants.
 
 ### INF 2007
 
-{{< youtube id="LRTqmtgIzj4" >}}
+{{< youtube id="Of7vbY4eAGI" >}}
 
 ### INF 2020
 
-{{< youtube id="T77xeGaMt98" >}}
+{{< youtube id="F6fI-1dtxxw" >}}
 
 ### INF 6450
 
-{{< youtube id="h9v9uuu0OKg" >}}
+{{< youtube id="VpxyCuuTInA" >}}
 
 ### INF 6460
 
-{{< youtube id="89I3JMsTDKY" >}}
+{{< youtube id="xh_l-2qhe48" >}}
 
 ### INF 9004
 
-{{< youtube id="aHwp05QZil8" >}}
+{{< youtube id="Qq3W6OUfrc0" >}}
