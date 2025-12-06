@@ -164,6 +164,151 @@ donnons ici la base, mais si vous souhaitez prendre cette approche, vous devrez 
 
 
 
+
+## Compiler et exécuter un petit jeu
+
+Pour vérifier votre maîtrise de votre environnement, suivez les étapes suivantes.
+
+- Crééez un nouveau fichier nommé `Pong.java`.
+- Copiez dans le fichier le code suivant (comprenant la ligne `public class Pong ...`).
+- Compilez le code.
+- Exécutez le code. Vous devriez voir apparaître un petit jeu de pong sur votre ordinateur.
+
+
+![Jeu Pong](/pong.png)
+
+Dans une console, vous pouvez obtenir le résultat souhaité avec ces commandes:
+
+- `javac Pong.java`
+- `java Pong`.
+
+Puisque le programme ne comporte qu'une seule classe, vous pouvez aussi omettre la compilation 
+et l'exécutez avec la commande.
+
+- `java Pong.java`
+
+Dans un tel scénario, le programme est compilé et exécuté dans une seule opération.
+
+
+Voici le code à utiliser. À ce point-ci dans le cours, il est normal de ne pas comprendre
+le contenu du programme. Le programme doit être exécuté sur un ordinateur avec un système
+d'exploitation comme Windows, macOS ou Linux. Vous ne pouvez pas exécuter le programme
+en ligne ou sur un serveur distant.
+
+```java {style=github}
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Pong extends JPanel implements ActionListener, KeyListener {
+    private Timer timer;
+    private int ballX = 200, ballY = 200;
+    private int ballVelX = 3, ballVelY = 3;
+    private int paddle1Y = 150, paddle2Y = 150;
+    private int paddleSpeed = 5;
+    private int player1Score = 0, player2Score = 0;
+    private final int PADDLE_HEIGHT = 80;
+    private final int PADDLE_WIDTH = 15;
+    private final int BALL_SIZE = 15;
+    private final int AI_PADDLE_HEIGHT = 60;
+    private boolean upPressed = false, downPressed = false;
+
+    public Pong() {
+        setPreferredSize(new Dimension(600, 400));
+        setBackground(Color.BLACK);
+        setFocusable(true);
+        addKeyListener(this);
+        timer = new Timer(10, this);
+        timer.start();
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.WHITE);
+        g.fillRect(20, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT);
+        g.fillRect(565, paddle2Y, PADDLE_WIDTH, AI_PADDLE_HEIGHT);
+        g.fillOval(ballX, ballY, BALL_SIZE, BALL_SIZE);
+        g.setColor(Color.GRAY);
+        for (int i = 0; i < getHeight(); i += 20) {
+            g.fillRect(300, i, 2, 10);
+        }
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 40));
+        g.drawString(String.valueOf(player1Score), 220, 50);
+        g.drawString(String.valueOf(player2Score), 360, 50);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (upPressed && paddle1Y > 0) paddle1Y -= paddleSpeed;
+        if (downPressed && paddle1Y < getHeight() - PADDLE_HEIGHT) paddle1Y += paddleSpeed;
+        if (ballVelX > 0) {
+            if (paddle2Y + AI_PADDLE_HEIGHT / 2 < ballY && paddle2Y < getHeight() - AI_PADDLE_HEIGHT) paddle2Y += 3;
+            else if (paddle2Y + AI_PADDLE_HEIGHT / 2 > ballY && paddle2Y > 0) paddle2Y -= 3;
+        }
+        ballX += ballVelX;
+        ballY += ballVelY;
+        if (ballY <= 0 || ballY >= getHeight() - BALL_SIZE) {
+            ballVelY = -ballVelY;
+        }
+        if (ballX <= 35 && ballX >= 20 && ballY >= paddle1Y - BALL_SIZE && ballY <= paddle1Y + PADDLE_HEIGHT) {
+            if (ballVelX < 0) ballVelX = -ballVelX;
+            ballVelX++;
+        }
+        if (ballX >= 550 && ballX <= 565 && ballY >= paddle2Y - BALL_SIZE && ballY <= paddle2Y + AI_PADDLE_HEIGHT) {
+            if (ballVelX > 0) ballVelX = -ballVelX;
+            ballVelX--;
+        }
+        if (ballX < 0) {
+            player2Score++;
+            resetBall();
+        }
+        if (ballX > getWidth()) {
+            player1Score++;
+            resetBall();
+        }
+        repaint();
+    }
+
+    private void resetBall() {
+        ballX = getWidth() / 2 - BALL_SIZE / 2;
+        ballY = getHeight() / 2 - BALL_SIZE / 2;
+        ballVelX = (Math.random() > 0.5 ? 3 : -3);
+        ballVelY = (Math.random() > 0.5 ? 3 : -3);
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_UP -> upPressed = true;
+            case KeyEvent.VK_DOWN -> downPressed = true;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_UP -> upPressed = false;
+            case KeyEvent.VK_DOWN -> downPressed = false;
+        }
+    }
+
+    @Override public void keyTyped(KeyEvent e) {}
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Pong");
+        Pong game = new Pong();
+        frame.add(game);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+}
+```
+
+
 ### Lecture optionnelle dans le livre de référence (Delannoy) (optionnel)
 
 <p>Vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy, le premier chapitre. Le manuel de Delannoy  est à son mieux comme manuel de référence. On vous invite à faire les lectures à et garder le manuel avec vous lors que vous étudiez si vous en avez fait l'acquisition. Le manuel de Delannoy n'est pas obligatoire.</p>
