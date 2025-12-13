@@ -149,7 +149,7 @@ Dans cet exemple, le client envoie une requête GET à l’URL de l’API, reço
 
 ## Serveur web simpliste
 
-Il arrive que l'on souhaite lancer rapidement un petit serveur web. Créez un fichier `ExempleServeurFichiersSimple.java``
+Il arrive que l'on souhaite lancer rapidement un petit serveur web. Créez un fichier `ExempleServeurFichiersSimple.java`
 avec le contenu suivant, compilez et exécutez-le dans un dossier. Si le port 8000 n'est pas utilisé sur votre ordinateur
 vous aurez un serveur web fonctionnant sur votre machine. (Dans le cas contraire, remplacez le port 8000 par 8001 ou 8002.)
 
