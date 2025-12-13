@@ -147,6 +147,42 @@ fetch('https://api.exemple.com/utilisateurs/123')
 
 Dans cet exemple, le client envoie une requête GET à l’URL de l’API, reçoit une réponse au format JSON, puis affiche les données reçues. Les API REST sont au cœur du développement web moderne, notamment pour les applications à architecture « front-end/back-end » séparée.
 
+## Serveur web simpliste
+
+Il arrive que l'on souhaite lancer rapidement un petit serveur web. Créez un fichier `ExempleServeurFichiersSimple.java``
+avec le contenu suivant, compilez et exécutez-le dans un dossier. Si le port 8000 n'est pas utilisé sur votre ordinateur
+vous aurez un serveur web fonctionnant sur votre machine. (Dans le cas contraire, remplacez le port 8000 par 8001 ou 8002.)
+
+
+```java {style=github}
+import com.sun.net.httpserver.HttpServer;
+import com.sun.net.httpserver.SimpleFileServer;
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.file.Path;
+
+public class ExempleServeurFichiersSimple {
+    public static void main(String[] args) throws IOException {
+        int port = 8000;
+        Path repertoireCourant = Path.of(".").toAbsolutePath();  // Répertoire courant
+
+        HttpServer serveur = HttpServer.create(new InetSocketAddress(port), 0);
+        serveur.createContext("/", SimpleFileServer.createFileHandler(repertoireCourant));
+        serveur.start();
+
+        System.out.println("Serveur démarré sur le port " + port + ", servant les fichiers depuis " 
+            + repertoireCourant.toAbsolutePath());
+        System.out.println("Accédez-y via http://localhost:" + port + "/");
+    }
+}
+```
+
+Ce code Java définit une classe simple nommée ExempleServeurFichiersSimple qui permet de lancer un serveur HTTP minimal capable de servir des fichiers statiques depuis le répertoire courant de l'application. Il utilise la bibliothèque intégrée com.sun.net.httpserver, qui fait partie du JDK et fournit une implémentation légère d'un serveur HTTP sans besoin de dépendances externes comme un serveur d'applications complet. La méthode main est le point d'entrée du programme, et elle configure tout le nécessaire pour démarrer le serveur rapidement.
+
+Dans un premier temps, le code définit un port d'écoute sur 8000 et récupère le chemin absolu du répertoire courant à l'aide de Path.of(".").toAbsolutePath(). Cela signifie que le serveur servira tous les fichiers et sous-répertoires présents dans le dossier où le programme est exécuté. Ensuite, il crée une instance de HttpServer en la liant à l'adresse locale sur le port choisi, avec une file d'attente de connexions par défaut. Un contexte racine "/" est alors défini, associé à un handler spécialisé fourni par SimpleFileServer.createFileHandler, qui gère automatiquement la diffusion de fichiers statiques (HTML, images, CSS, etc.) depuis le répertoire spécifié.
+
+Enfin, le serveur est lancé avec serveur.start(), ce qui le met en écoute permanente pour les requêtes entrantes. Des messages sont affichés dans la console pour confirmer le démarrage, indiquer le port utilisé, le répertoire servi et l'URL d'accès locale (http://localhost:8000/). Ce type de serveur est particulièrement utile pour des tests rapides, du développement local ou pour partager des fichiers temporairement sans configuration complexe, bien qu'il ne soit pas destiné à un usage en production en raison de ses limitations en termes de sécurité et de performances.
+
 ## Développement d'un serveur web simple
 
 Pour développer un serveur web simple, nous pouvons utiliser Javalin.
