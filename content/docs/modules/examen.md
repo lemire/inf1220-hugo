@@ -237,6 +237,9 @@ Je vous recommande les cours suivants.
 
 {{< youtube id="VpxyCuuTInA" >}}
 
+[Le contenu du cours INF 6450 est en accès libre](https://lemire.github.io/inf6450-hugo/). Il s'agit d'une
+excellente suite au cours INF 1220.
+
 ### INF 6460
 
 {{< youtube id="xh_l-2qhe48" >}}
