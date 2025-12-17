@@ -326,7 +326,7 @@ import java.io.IOException;
 
 void main() {
   try {
-    Path chemin = Path.of("Main.java");
+    Path chemin = Path.of("templates/index.html");
     Files.lines(chemin)
           .forEach(ligne -> System.out.println("Lue : " + ligne));
   } catch (IOException e) {

@@ -664,7 +664,7 @@ class Main {
 
 
       // Solution de rechange simple : 
-      String[] tableau = list.toArray(new String[0]); 
+      // String[] tableau = list.toArray(new String[0]); 
       // ou
       // String[] tableau = list.toArray(String[]::new);
   }

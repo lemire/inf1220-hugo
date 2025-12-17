@@ -91,6 +91,16 @@
       function hideTooltip() {
         tooltip.style.display = 'none';
       }
+      // Escape HTML special characters to safely insert output into the page
+      function escapeHtml(str) {
+        if (str == null) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
       form.onsubmit = function(e){
         e.preventDefault();
         var java_files = [], txt_files = [];
@@ -130,11 +140,11 @@
             var j=JSON.parse(t);
             // Affiche toujours la sortie ou l'erreur d'exécution dans la zone de résultat
             if(j.status==='ran_successfully') {
-              resultDiv.innerHTML='<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+(j.output||'').replace(/\n/g,'<br>')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+escapeHtml(j.output||'').replace(/\n/g,'<br>')+'</pre>';
             } else if(j.status==='compiling') {
-              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'<br>')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+escapeHtml(j.error||'').replace(/\n/g,'<br>')+'</pre>';
             } else if(j.status==='runtime_error') {
-              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+(j.error||'').replace(/\n/g,'<br>')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+escapeHtml(j.error||'').replace(/\n/g,'<br>')+'</pre>';
             } else {
               resultDiv.textContent = t;
             }

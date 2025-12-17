@@ -732,8 +732,9 @@ d'illustration, voici quelques instructions fictives qu'un ordinateur pourrait c
 - `HTL` : met fin au programme
 
 Avec ces instructions, nous pouvons créer un programme en langage machine capable de faire la somme
-des entiers de 0 à `N`. 
-Par exemple, pour $N=10$, nous avons que $1+2+3+\cdots+10 = 55$.
+des entiers de 0 à \( N \). 
+Par exemple, pour \( N=10 \), nous avons que \( 1+2+3+\cdots+10 = N(N + 1)/2 = 55 \).
+
 
 Vous pouvez tester le programme avec la petite application suivante.
 Exécutez le programme pas à pas. Essayez de comprendre comment le programme arrive à calculer
