@@ -129,6 +129,7 @@ Le site du cours compte aussi plus de **200 problèmes résolus** couvrant toute
 des **dizaines de laboratoires interactifs en ligne**, directement dans le site web. 
 Le manuel du cours **fait près de 300 pages**. Le site web du cours compte plus de **cent mille mots**. 
 Nous vous suggérerons le visionnement
-de plus de **50&nbsp;vidéos** en lien avec la matière du cours.
+de plus de **50&nbsp;vidéos** en lien avec la matière du cours. Le cours nécessite 9&nbsp;heures de travail actif par semaine pendant quinze semaines. Si vous n'avez pas complété les mathématiques du collégial, il est possible que vous
+deviez ajouter à ce travail des efforts de mise à niveau.
 {{% /hint %}}
 
