@@ -8,9 +8,42 @@ weight: 40
 Le langage Java possède toutes les stuctures de données nécessaires.
 Faisons-en rapidement le tour. En Java, les types de données sont organisés en deux grandes catégories : les types primitifs et les types référence. Les types primitifs, tels que int, double, float, long, short, byte, char et boolean, sont des types de base qui stockent directement des valeurs simples et ne sont pas des objets. Chaque type primitif possède une classe enveloppe correspondante (par exemple, Integer pour int, Double pour double) dans la catégorie des classes enveloppes. Ces classes permettent de représenter les primitifs sous forme d’objets, offrant des fonctionnalités supplémentaires comme l’utilisation dans des collections ou la conversion entre types.
 
+
+
+
 Les types référence, quant à eux, incluent les objets tels que String, StringBuilder, ArrayList, HashMap, HashSet, PriorityQueue et Stack. Ces types, qui font partie des classes Java, sont utilisés pour manipuler des données complexes. Les classes enveloppes appartiennent également aux types référence, car elles sont des objets. Les types référence comme ArrayList et HashMap sont des collections génériques capables de stocker d’autres objets, y compris des instances de classes enveloppes ou d’autres types référence. Cette organisation permet une gestion flexible des données, avec des relations où les types primitifs sont enveloppés par leurs classes correspondantes, et les types référence servent de conteneurs ou de structures pour organiser et manipuler ces données.
 
 Le diagramme suivant résume l'organisation des types que vous allez découvrir.
+
+
+
+
+{{% hint info %}}
+
+Dans ce cours, vous n'avez pas à maîtriser l'ensemble des structures de données. Néanmoins,
+il est utile d'être familier avec les principales structures de données. Vous devriez
+maîtriser les tableaux à une ou deux dimensions.
+
+{{% /hint %}}
+
+### Allocation de mémoire et ramasse-miettes
+
+Lorsque vous créez un objet  en Java, la mémoire nécessaire est automatiquement allouée dans une zone appelée le « tas » (heap). Contrairement à certains langages comme C ou C++, il n’est pas nécessaire de libérer explicitement la mémoire des objets qui ne sont plus utilisés. Java intègre un mécanisme appelé ramasse-miettes (ou garbage collector) qui se charge de détecter et de libérer automatiquement la mémoire occupée par les objets devenus inaccessibles. Il partage
+cette caractéristique avec d'autres langages comme C#, JavaScript et Python.
+
+Le ramasse-miettes fonctionne en arrière-plan : il identifie les objets qui ne sont plus référencés par aucune variable ou structure de données, puis récupère la mémoire correspondante pour la rendre disponible à de nouveaux objets. Cela simplifie la gestion de la mémoire et réduit les risques de fuites de mémoire (memory leaks) ou d’erreurs de libération (comme les double free en C).
+
+Cependant, il est important de comprendre que la libération de la mémoire n’est pas instantanée : le ramasse-miettes intervient à des moments choisis par la machine virtuelle Java (JVM), ce qui peut parfois entraîner de légères pauses dans l’exécution du programme. Pour la plupart des applications, ce fonctionnement automatique est un avantage, car il permet de se concentrer sur la logique du programme sans se soucier de la gestion manuelle de la mémoire.
+
+L’allocation de mémoire en Java est automatique et la libération est assurée par le ramasse-miettes, ce qui contribue à la robustesse et à la sécurité des programmes Java.
+
+Par contre, le ramasse-miettes a des inconvénients : il peut provoquer des pauses imprévisibles dans l’exécution du programme, appelées « pauses de collecte », lorsque la JVM décide de libérer la mémoire. Ces pauses sont généralement courtes, mais peuvent devenir perceptibles dans des applications nécessitant une grande réactivité (jeux, systèmes temps réel, etc.). De plus, le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, ce qui peut compliquer l’optimisation des performances dans certains cas particuliers. Enfin, le ramasse-miettes consomme lui-même des ressources processeur, ce qui peut avoir un effet sur l’efficacité globale du programme.
+
+Malgré l'existence du ramasse-miettes, il faut donc tenter de minimiser l'allocation de mémoire.
+Il faut éviter de créer des objets temporaires quand on peut réutiliser un objet déjà alloué.
+
+## Vue d'ensemble
+
 
 {{<mermaid>}}
 classDiagram
@@ -69,25 +102,6 @@ classDiagram
     Types_Reference --> ArrayList : stocké dans
     Types_Reference --> HashMap : stocké dans
 {{</mermaid>}}
-
-
-
-
-### Allocation de mémoire et ramasse-miettes
-
-Lorsque vous créez un objet  en Java, la mémoire nécessaire est automatiquement allouée dans une zone appelée le « tas » (heap). Contrairement à certains langages comme C ou C++, il n’est pas nécessaire de libérer explicitement la mémoire des objets qui ne sont plus utilisés. Java intègre un mécanisme appelé ramasse-miettes (ou garbage collector) qui se charge de détecter et de libérer automatiquement la mémoire occupée par les objets devenus inaccessibles. Il partage
-cette caractéristique avec d'autres langages comme C#, JavaScript et Python.
-
-Le ramasse-miettes fonctionne en arrière-plan : il identifie les objets qui ne sont plus référencés par aucune variable ou structure de données, puis récupère la mémoire correspondante pour la rendre disponible à de nouveaux objets. Cela simplifie la gestion de la mémoire et réduit les risques de fuites de mémoire (memory leaks) ou d’erreurs de libération (comme les double free en C).
-
-Cependant, il est important de comprendre que la libération de la mémoire n’est pas instantanée : le ramasse-miettes intervient à des moments choisis par la machine virtuelle Java (JVM), ce qui peut parfois entraîner de légères pauses dans l’exécution du programme. Pour la plupart des applications, ce fonctionnement automatique est un avantage, car il permet de se concentrer sur la logique du programme sans se soucier de la gestion manuelle de la mémoire.
-
-L’allocation de mémoire en Java est automatique et la libération est assurée par le ramasse-miettes, ce qui contribue à la robustesse et à la sécurité des programmes Java.
-
-Par contre, le ramasse-miettes a des inconvénients : il peut provoquer des pauses imprévisibles dans l’exécution du programme, appelées « pauses de collecte », lorsque la JVM décide de libérer la mémoire. Ces pauses sont généralement courtes, mais peuvent devenir perceptibles dans des applications nécessitant une grande réactivité (jeux, systèmes temps réel, etc.). De plus, le développeur a moins de contrôle sur le moment précis où la mémoire est libérée, ce qui peut compliquer l’optimisation des performances dans certains cas particuliers. Enfin, le ramasse-miettes consomme lui-même des ressources processeur, ce qui peut avoir un effet sur l’efficacité globale du programme.
-
-Malgré l'existence du ramasse-miettes, il faut donc tenter de minimiser l'allocation de mémoire.
-Il faut éviter de créer des objets temporaires quand on peut réutiliser un objet déjà alloué.
 
 ## String
 
