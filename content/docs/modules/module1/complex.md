@@ -575,6 +575,238 @@ fonction rechercher(racine, valeur_cible)
 fin fonction
 ```
 
+Pour mieux comprendre le fonctionnement d'un arbre de recherche binaire,
+utilisez l'application suivante.
+
+
+<div id="controls" style="margin-bottom: 20px;">
+    <input type="number" id="value" placeholder="Valeur (ex: 42)" style="margin: 5px; padding: 8px;">
+    <button onclick="insertValue()" style="margin: 5px; padding: 8px;">Insérer</button>
+    <button onclick="searchValue()" style="margin: 5px; padding: 8px;">Rechercher</button>
+    <button onclick="deleteValue()" style="margin: 5px; padding: 8px;">Supprimer</button>
+    <button onclick="clearTree()" style="margin: 5px; padding: 8px;">Effacer</button>
+</div>
+<canvas id="canvas" width="600" height="600" style="border: 1px solid #ccc; background: #f9f9f9;"></canvas>
+
+<script>
+    class Node {
+        constructor(value) {
+            this.value = value;
+            this.left = null;
+            this.right = null;
+            this.x = 400;
+            this.y = 50;
+        }
+    }
+
+    let root = null;
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const nodeRadius = 20;
+    let animating = false;
+
+    function buildBalanced(arr, start, end) {
+        if (start > end) return null;
+        let mid = Math.floor((start + end) / 2);
+        let node = new Node(arr[mid]);
+        node.left = buildBalanced(arr, start, mid - 1);
+        node.right = buildBalanced(arr, mid + 1, end);
+        return node;
+    }
+
+    // Initialiser l'arbre équilibré avec les valeurs spécifiées
+    let values = [10, 20, 30, 40, 50, 55, 70, 80].sort((a, b) => a - b);
+    root = buildBalanced(values, 0, values.length - 1);
+
+    function drawTree() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (root) drawNode(root, canvas.width / 2, 50, canvas.width / 4);
+    }
+
+    function drawNode(node, x, y, offset) {
+        if (!node) return;
+        node.x = x;
+        node.y = y;
+
+        // Dessiner les liens
+        if (node.left) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x - offset, y + 80);
+            ctx.stroke();
+        }
+        if (node.right) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x + offset, y + 80);
+            ctx.stroke();
+        }
+
+        // Dessiner le nœud
+        ctx.fillStyle = '#f0f0f0';
+        ctx.beginPath();
+        ctx.arc(x, y, nodeRadius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+        ctx.fillStyle = '#000';
+        ctx.font = '14px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(node.value, x, y);
+
+        // Récursion
+        drawNode(node.left, x - offset, y + 80, offset / 2);
+        drawNode(node.right, x + offset, y + 80, offset / 2);
+    }
+
+    async function insert(value) {
+        if (animating) return;
+        animating = true;
+        value = parseInt(value);
+        if (isNaN(value)) { animating = false; return; }
+
+        if (!root) {
+            root = new Node(value);
+            drawTree();
+            animating = false;
+            return;
+        }
+
+        let current = root;
+        while (true) {
+            ctx.fillStyle = 'rgba(0, 255, 0, 0.3)';
+            ctx.beginPath();
+            ctx.arc(current.x, current.y, nodeRadius + 5, 0, Math.PI * 2);
+            ctx.fill();
+            drawTree();
+            //await sleep(800);
+
+            if (value < current.value) {
+                if (!current.left) {
+                    current.left = new Node(value);
+                    drawTree();
+                    break;
+                }
+                current = current.left;
+            } else if (value > current.value) {
+                if (!current.right) {
+                    current.right = new Node(value);
+                    drawTree();
+                    break;
+                }
+                current = current.right;
+            } else {
+                break; // Duplicata ignoré
+            }
+        }
+        animating = false;
+    }
+
+    async function search(value) {
+        if (animating || !root) return;
+        animating = true;
+        value = parseInt(value);
+
+        let current = root;
+        let found = false;
+        while (current) {
+            drawTree();
+            ctx.fillStyle = 'rgba(255, 255, 0, 0.4)';
+            ctx.beginPath();
+            ctx.arc(current.x, current.y, nodeRadius + 5, 0, Math.PI * 2);
+            ctx.fill();
+            await sleep(800);
+
+            if (value === current.value) {
+                found = true;
+                ctx.fillStyle = 'rgba(0, 255, 0, 0.5)';
+                ctx.beginPath();
+                ctx.arc(current.x, current.y, nodeRadius + 5, 0, Math.PI * 2);
+                ctx.fill();
+                await sleep(1000);
+                drawTree();
+                break;
+            }
+            current = value < current.value ? current.left : current.right;
+        }
+        if (!found) {
+            alert("Valeur non trouvée");
+            drawTree();
+        }
+        animating = false;
+    }
+
+    // Suppression simple (sans rééquilibrage)
+    async function remove(value) {
+        if (animating || !root) return;
+        animating = true;
+        root = await removeNode(root, parseInt(value));
+        drawTree();
+        animating = false;
+    }
+
+    async function removeNode(node, value) {
+        if (!node) return null;
+
+        ctx.fillStyle = 'rgba(255, 255, 0, 0.4)';
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, nodeRadius + 5, 0, Math.PI * 2);
+        ctx.fill();
+        drawTree();
+        //await sleep(800);
+
+        if (value < node.value) {
+            node.left = await removeNode(node.left, value);
+        } else if (value > node.value) {
+            node.right = await removeNode(node.right, value);
+        } else {
+            // Nœud trouvé
+            ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, nodeRadius + 5, 0, Math.PI * 2);
+            ctx.fill();
+            drawTree();
+            //await sleep(1000);
+
+            if (!node.left) return node.right;
+            if (!node.right) return node.left;
+
+            // Deux enfants : trouver le min à droite
+            let min = node.right;
+            while (min.left) min = min.left;
+            node.value = min.value;
+            node.right = await removeNode(node.right, min.value);
+        }
+        return node;
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function insertValue() {
+        const val = document.getElementById('value').value;
+        insert(val);
+    }
+
+    function searchValue() {
+        const val = document.getElementById('value').value;
+        search(val);
+    }
+
+    function deleteValue() {
+        const val = document.getElementById('value').value;
+        remove(val);
+    }
+
+    function clearTree() {
+        root = null;
+        drawTree();
+    }
+
+    drawTree();
+</script>
 
 Nous souhaitons garder la distance entre le sommet et les feuilles aussi
 petite que possible. 
