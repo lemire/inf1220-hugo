@@ -987,9 +987,159 @@ public class ExempleHashMap {
 Dans cet exemple, la note d’Alice est d’abord 85, puis remplacée par 90. La recherche d’une clé absente ("Charlie") retourne <code>null</code>.
 
 ### LinkedList (Liste chaînée)
-Une <strong>LinkedList</strong> en Java est une implémentation de liste qui utilise une structure de liste chaînée doublement liée. Chaque élément (appelé nœud) contient une référence vers l’élément précédent et vers l’élément suivant, ce qui permet une navigation dans les deux sens. Contrairement à <code>ArrayList</code>, qui repose sur un tableau redimensionnable, la <code>LinkedList</code> n’utilise pas de stockage contigu en mémoire. Elle implémente à la fois l’interface <code>List</code> et <code>Deque</code>, ce qui la rend utilisable comme liste, pile, file ou deque.
+Une <strong>LinkedList</strong> en Java est une implémentation de liste qui utilise une structure de *liste chaînée*. Chaque élément (appelé nœud) contient une référence vers l’élément précédent et vers l’élément suivant, ce qui permet une navigation dans les deux sens. Contrairement à <code>ArrayList</code>, qui repose sur un tableau redimensionnable, la <code>LinkedList</code> n’utilise pas de stockage contigu en mémoire.
 
-Les <code>LinkedList</code> sont particulièrement efficaces pour les insertions et suppressions fréquentes au début ou au milieu de la liste, car ces opérations ne nécessitent pas de déplacement massif d’éléments : il suffit de modifier quelques références. En revanche, l’accès à un élément par son indice (opération <code>get(index)</code>) est coûteux, car il faut parcourir la liste à partir d’une extrémité (généralement la plus proche) jusqu’à atteindre la position demandée.
+
+
+Les <code>LinkedList</code> sont particulièrement efficaces pour les insertions et suppressions fréquentes au début ou au milieu de la liste, car ces opérations ne nécessitent pas de déplacement massif d’éléments&nbsp;: il suffit de modifier quelques références. En revanche, l’accès à un élément par son indice (opération <code>get(index)</code>) est coûteux, car il faut parcourir la liste à partir d’une extrémité (généralement la plus proche) jusqu’à atteindre la position demandée.
+
+
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background: #f9f9f9;">
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center;">
+    <input type="text" id="linkedlist-value" placeholder="Enter value" style="padding: 8px; width: 120px;">
+    <button onclick="addFirst()" style="padding: 8px 12px; cursor: pointer;">Ajout au début</button>
+    <button onclick="addLast()" style="padding: 8px 12px; cursor: pointer;">Ajout à la fin</button>
+    <button onclick="removeFirst()" style="padding: 8px 12px; cursor: pointer;">Retirer le premier</button>
+    <button onclick="removeLast()" style="padding: 8px 12px; cursor: pointer;">Retirer le dernier</button>
+  </div>
+  <div id="linkedlist-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; min-height: 60px; align-items: center;"></div>
+</div>
+<script>
+// Simple doubly linked list implementation
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+    this.prev = null;
+  }
+}
+let head = null;
+let tail = null;
+function render() {
+  const container = document.getElementById('linkedlist-container');
+  container.innerHTML = '';
+  if (!head) {
+    return;
+  }
+  let current = head;
+  while (current) {
+    const nodeDiv = document.createElement('div');
+    nodeDiv.style.cssText = `
+      background: #4a90e2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      position: relative;
+      min-width: 60px;
+      text-align: center;
+      display: inline-block;
+    `;
+    nodeDiv.textContent = current.value;
+    if (current === head) {
+      const headLabel = document.createElement('div');
+      headLabel.textContent = 'tête';
+      headLabel.style.cssText = `
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        background: #333;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+      `;
+      nodeDiv.appendChild(headLabel);
+    }
+    container.appendChild(nodeDiv);
+    if (current.next) {
+      const arrow = document.createElement('div');
+      arrow.textContent = '→';
+      arrow.style.cssText = `
+        font-size: 24px;
+        color: #333;
+        display: inline-block;
+        margin: 0 4px;
+      `;
+      container.appendChild(arrow);
+    }
+    current = current.next;
+  }
+  // Add tail label on the last node (skip if only one node)
+  if (tail && tail !== head) {
+    const nodes = container.querySelectorAll('div[style*="background: #4a90e2"]');
+    const lastNode = nodes[nodes.length - 1];
+    const tailLabel = document.createElement('div');
+    tailLabel.textContent = 'tail';
+    tailLabel.style.cssText = `
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      background: #333;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+    `;
+    lastNode.style.position = 'relative';
+    lastNode.appendChild(tailLabel);
+  }
+}
+function addFirst() {
+  const input = document.getElementById('linkedlist-value');
+  const value = input.value.trim();
+  if (!value) return;
+  const node = new Node(value);
+  if (!head) {
+    head = tail = node;
+  } else {
+    node.next = head;
+    head.prev = node;
+    head = node;
+  }
+  input.value = '';
+  render();
+}
+function addLast() {
+  const input = document.getElementById('linkedlist-value');
+  const value = input.value.trim();
+  if (!value) return;
+  const node = new Node(value);
+  if (!head) {
+    head = tail = node;
+  } else {
+    node.prev = tail;
+    tail.next = node;
+    tail = node;
+  }
+  input.value = '';
+  render();
+}
+function removeFirst() {
+  if (!head) return;
+  if (head === tail) {
+    head = tail = null;
+  } else {
+    head = head.next;
+    head.prev = null;
+  }
+  render();
+}
+function removeLast() {
+  if (!head) return;
+  if (head === tail) {
+    head = tail = null;
+  } else {
+    tail = tail.prev;
+    tail.next = null;
+  }
+  render();
+}
+// Initial render
+render();
+</script>
+
 
 En termes de complexité algorithmique, les opérations principales sur une <code>LinkedList</code> en Java sont les suivantes : l’accès par indice (<code>get(index)</code>), la modification par indice (<code>set(index)</code>) et la recherche d’une valeur (<code>contains</code> ou <code>indexOf</code>) s’exécutent en \( O(n) \) dans le pire cas, car un parcours linéaire peut être nécessaire. L’ajout ou la suppression en début ou en fin de liste (<code>addFirst</code>, <code>addLast</code>, <code>removeFirst</code>, <code>removeLast</code>) est en \( O(1) \). L’insertion ou la suppression à une position donnée (si on dispose déjà de l’itérateur ou de l’indice) est également en \( O(1) \) pour la modification des liens, mais atteindre cette position coûte \( O(n) \) si on part de zéro.
 
@@ -1017,7 +1167,7 @@ public class ExempleLinkedList {
     }
 }
 {{</inlineJava>}}
-Dans cet exemple, on voit comment les qajouts et suppressions aux extrémités ou à des positions spécifiques sont simples et efficaces. La liste finale ne contient plus que l’élément inséré au milieu après les diverses suppressions.
+Dans cet exemple, on voit comment les ajouts et suppressions aux extrémités ou à des positions spécifiques sont simples et efficaces. La liste finale ne contient plus que l’élément inséré au milieu après les diverses suppressions.
 
 
 
