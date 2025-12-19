@@ -185,11 +185,20 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
         let resultText = await resp.text();
         clearInterval(execAnim);
         let displayDiv = document.getElementById('result');
+        function escapeHtml(str) {
+          if (str == null) return '';
+          return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
         try {
           const resultJson = JSON.parse(resultText);
           if (resultJson.status === 'ran_successfully') {
             displayDiv.innerHTML = '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
-              (resultJson.output || '').replace(/\n/g, '<br>') + '</pre>';
+              escapeHtml(resultJson.output || '').replace(/\n/g, '<br>') + escapeHtml(resultJson.stderr || '') + '</pre>';
             // Nettoie les erreurs précédentes
             document.querySelectorAll('.file-block').forEach(block => {
               if (block._cm && block.querySelector('.file-type b').textContent === 'Java') {
