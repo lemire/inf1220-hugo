@@ -716,6 +716,7 @@ Retourner résultat
 
 
 
+
 ### Exercice 29 : occurrences d’un caractère spécifique
 
 Écrivez un algorithme qui compte le nombre d’occurrences d’un caractère spécifique dans une chaîne de caractères.
@@ -742,6 +743,20 @@ Fin tant que
 
 Retourner compteur
 ```
+
+</details>
+
+
+
+
+### Exercice 30 : recherche d'une clé
+
+Quelle est la complexité algorithme de la recherche d'un clé dans une table de hachage ?
+
+<details>
+<summary>Réponse</summary>
+
+Un temps moyen de \( O(1) \).
 
 </details>
 

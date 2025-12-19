@@ -1019,6 +1019,57 @@ public class ExempleLinkedList {
 {{</inlineJava>}}
 Dans cet exemple, on voit comment les qajouts et suppressions aux extrémités ou à des positions spécifiques sont simples et efficaces. La liste finale ne contient plus que l’élément inséré au milieu après les diverses suppressions.
 
+
+
+
+Une queue (file d'attente en français) est une structure de données linéaire qui suit le principe FIFO (First In, First Out) : le premier élément ajouté est le premier à être retiré. On peut la comparer à une file d'attente réelle, comme au supermarché : les clients qui arrivent en premier sont servis en premier. Les opérations principales sur une queue sont l'ajout d'un élément à la fin (enqueue, souvent appelée offer ou addLast) et le retrait de l'élément au début (dequeue, souvent appelée poll ou removeFirst). On peut aussi consulter l'élément au début sans le retirer (peek).
+
+
+
+La LinkedList est particulièrement adaptée pour implémenter une queue parce qu'elle est doublement chaînée : chaque nœud possède une référence vers le suivant et vers le précédent. La classe maintient internement deux références directes : une vers le premier nœud (head) et une vers le dernier nœud (tail). Grâce à cela, les opérations typiques d'une queue sont  efficaces.
+
+- L'ajout à la fin (enqueue) consiste à créer un nouveau nœud, le lier au nœud actuel en fin de liste, et mettre à jour la référence tail. Cela se fait en O(1).
+- Le retrait au début (dequeue) consiste à détacher le nœud head, mettre à jour la référence head vers le suivant, et éventuellement ajuster tail si la liste devient vide. Cela se fait également en O(1).
+- La consultation du début (peek) revient simplement à accéder à la donnée du nœud head, en O(1).
+
+Aucun parcours de la liste n'est nécessaire pour ces opérations, ce qui rend LinkedList bien plus performante qu'une ArrayList pour cet usage (dans ArrayList, le retrait au début nécessiterait de décaler tous les éléments, en O(n)).
+
+Voici un exemple concret d'utilisation de LinkedList comme queue.
+
+{{<inlineJava path="ExempleQueueLinkedList.java">}}
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ExempleQueueLinkedList {
+    public static void main(String[] args) {
+        Queue<String> file = new LinkedList<>();
+
+        // Enqueue : ajout à la fin
+        file.offer("Client 1");
+        file.offer("Client 2");
+        file.offer("Client 3");
+
+        System.out.println("File actuelle : " + file); // [Client 1, Client 2, Client 3]
+
+        // Peek : consulter le premier sans retirer
+        System.out.println("Prochain à servir : " + file.peek()); // Client 1
+
+        // Dequeue : retrait du premier
+        String servi = file.poll();
+        System.out.println("Servi : " + servi); // Client 1
+
+        servi = file.poll();
+        System.out.println("Servi : " + servi); // Client 2
+
+        System.out.println("File restante : " + file); // [Client 3]
+    }
+}
+{{</inlineJava>}}
+
+Dans cet exemple, on traite les éléments dans l'ordre exact d'arrivée. On utilise les méthodes offer (ajout), peek (consultation) et poll (retrait) qui sont recommandées pour les queues, car elles retournent null ou false en cas de liste vide au lieu de lever une exception (contrairement à add, element et remove).
+
+En résumé, grâce à sa structure doublement chaînée avec accès direct aux extrémités, LinkedList offre une implémentation naturelle et très efficace d'une queue FIFO, avec toutes les opérations principales en temps constant. C'est pourquoi elle est souvent choisie dans les scénarios où l'on simule des files d'attente, des buffers ou des traitements ordonnés.
+
 ### HashSet
 
 Un <strong>HashSet</strong> est une structure de données qui stocke une collection d’éléments uniques, sans ordre particulier et sans duplication. Il repose sur une fonction de hachage qui transforme chaque élément en un index, permettant des opérations très rapides d’ajout, de recherche et de suppression. Les <code>HashSet</code> sont particulièrement utiles lorsqu’on veut conserver uniquement des valeurs distinctes, par exemple une liste de mots uniques dans un texte, ou les identifiants d’utilisateurs connectés.
@@ -1317,7 +1368,45 @@ public class Exemple {
 
 De toute manière, une instance de la classe String ne peut pas être modifiée en Java.
 
-m
+
+## Complexité algorithmique
+La complexité algorithmique mesure le coût (en temps ou en espace) des opérations selon la taille des données manipulées. Voici un survol de la complexité des principales opérations sur les structures de données abordées dans ce module :
+### Tableaux (array)
+- *Accès à un élément* : \(O(1)\) (accès direct par indice)
+- *Modification d’un élément* : \(O(1)\)
+- *Recherche d’une valeur* : \(O(n)\) dans le pire cas (il faut parcourir tout le tableau) ; \(O(\log n)\) avec recherche binaire si le tableau est trié
+- *Insertion/Suppression* : \(O(n)\) (il faut déplacer les éléments suivants)
+- *Tri* : \(O(n \log n)\) avec Arrays.sort() en Java
+### ArrayList
+- *Accès à un élément* : \(O(1)\)
+- *Ajout à la fin* : \(O(1)\) en moyenne (amortie), mais \(O(n)\) lors d’un redimensionnement
+- *Insertion/Suppression à une position donnée* : \(O(n)\) (déplacement des éléments)
+- *Recherche d’une valeur* : \(O(n)\) ; \(O(\log n)\) avec recherche binaire si la liste est triée
+- *Tri* : \(O(n \log n)\) avec Collections.sort() en Java
+### Stack (Pile)
+- *Ajout (push) ou retrait (pop) d’un élément* : \(O(1)\)
+- *Accès au sommet* : \(O(1)\)
+### LinkedList
+- *Accès à un élément par indice* : \(O(n)\) (parcours depuis l’extrémité la plus proche)
+- *Ajout/Suppression en début ou en fin* : \(O(1)\)
+- *Insertion/Suppression à une position donnée* : \(O(n)\) pour atteindre la position + \(O(1)\) pour modifier les liens
+- *Recherche d’une valeur* : \(O(n)\)
+### HashMap
+- *Insertion, suppression, recherche par clé* : \(O(1)\) en moyenne, mais les clés ne sont pas ordonnées
+### LinkedHashMap
+- *Insertion, suppression, recherche par clé* : \(O(1)\) en moyenne, les clés conservent l’ordre d’insertion (ou d’accès si configuré)
+### HashSet
+- *Insertion (add), suppression (remove), recherche (contains)* : \(O(1)\) en moyenne, mais les éléments ne sont pas ordonnés
+### LinkedHashSet
+- *Insertion (add), suppression (remove), recherche (contains)* : \(O(1)\) en moyenne, les éléments conservent l’ordre d’insertion
+### TreeSet
+- *Insertion (add), suppression (remove), recherche (contains)* : \(O(\log n)\) mais les éléments sont naturellement triés
+### TreeMap
+- *Insertion (put), suppression (remove), recherche par clé (get, containsKey)* : \(O(\log n)\) mais les clés sont naturellement triées
+### PriorityQueue
+- *Ajout d’un élément* : \(O(\log n)\) (le nouvel élément est placé à la fin puis remonté)
+- *Extraction du plus prioritaire (poll)* : \(O(\log n)\) (le dernier élément est placé en tête puis redescendu)
+- *Consultation du plus prioritaire (peek)* : \(O(1)\)
 ### Opérations sur les streams et lambdas
 - *Filtrage, transformation (map, filter, etc.)* : \(O(n)\), car chaque élément est traité une fois
 - *Tri d’une liste* : \(O(n \log n)\) (par exemple, avec `Collections.sort()` ou `List.sort()`)
@@ -1330,9 +1419,10 @@ m
 En résumé, le choix de la structure de données influence fortement la performance des algorithmes. Il est essentiel de comprendre la complexité des opérations pour écrire du code efficace, surtout lorsque les ensembles de données deviennent volumineux.
 
 
-### Lecture optionnelle dans le livre de référence (Delannoy)
 
-<p>Pour aller plus en profondeur sur les structures de données(optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
+## Lecture optionnelle dans le livre de référence (Delannoy)
+
+<p>Pour aller plus en profondeur sur les structures de données (optionnel), vous pouvez lire dans <em>Programmer en Java</em> de Claude Delannoy les chapitres 7 et 22.</p>
 
 ## Vidéos
 
@@ -1346,3 +1436,82 @@ En résumé, le choix de la structure de données influence fortement la perform
 
 {{< youtube id="eXYLsxQvIF4" >}}
 
+## Questions de révision 
+
+
+
+<details>
+    <summary>Question 1 : Pourquoi les objets String sont-ils immuables en Java, et quelle est la conséquence lors d'une concaténation répétée ?</summary>
+    <p>Réponse : L'immuabilité garantit la sécurité et permet le partage efficace des instances. Une concaténation répétée crée de nombreux objets temporaires, ce qui peut dégrader les performances et augmenter les allocations mémoire.</p>
+</details>
+
+<details>
+    <summary>Question 2 : Dans quel cas faut-il préférer StringBuilder à String ?</summary>
+    <p>Réponse : Lorsque l'on effectue de nombreuses modifications ou concaténations, car StringBuilder modifie la séquence en place sans créer de nouveaux objets à chaque opération.</p>
+</details>
+
+<details>
+    <summary>Question 3 : En Java, les tableaux ont-ils une taille fixe ou dynamique ? Comment connaître leur taille ?</summary>
+    <p>Réponse : Ils ont une taille fixe, définie à la création. La taille est accessible via la propriété length (exemple : tableau.length).</p>
+</details>
+
+
+<details>
+    <summary>Question 4 : Quand passe-t-on un tableau en paramètre d'une méthode, qu'est-ce qui est réellement transmis ?</summary>
+    <p>Réponse : Une copie de la référence vers le tableau est transmise, donc les modifications sur les éléments du tableau sont visibles à l'extérieur de la méthode.</p>
+</details>
+
+<details>
+    <summary>Question 5 : Quelle est la différence principale entre ArrayList et LinkedList en termes d'accès par indice ?</summary>
+    <p>Réponse : ArrayList offre un accès par indice en \( O(1) \) grâce à son tableau interne, tandis que LinkedList nécessite un parcours en \( O(n) \) car elle utilise des nœuds chaînés.</p>
+</details>
+
+<details>
+    <summary>Question 6 : Pourquoi l'ajout en fin d'ArrayList est-il considéré comme \( O(1) \) amorti ?</summary>
+    <p>Réponse : La plupart des ajouts sont rapides, mais un redimensionnement occasionnel coûte  \( O(n) \). L'analyse amortie répartit ce coût sur toutes les opérations pour obtenir \( O(1) \) en moyenne.</p>
+</details>
+
+<details>
+    <summary>Question 7 : Quelle méthode utilise-t-on pour trier une ArrayList en Java ?</summary>
+    <p>Réponse : Collections.sort(liste) pour l'ordre naturel, ou Collections.sort(liste, comparator) pour un ordre personnalisé.</p>
+</details>
+
+<details>
+    <summary>Question 8 : Quelle est la complexité de la recherche binaire sur une liste triée ?</summary>
+    <p>Réponse : \( O(\log n) \), car elle divise l'intervalle de recherche par deux à chaque étape.</p>
+</details>
+
+<details>
+    <summary>Question 9 : Quel principe suit la structure Stack (pile) ?</summary>
+    <p>Réponse : LIFO (Last In, First Out) : le dernier élément ajouté est le premier retiré.</p>
+</details>
+
+<details>
+    <summary>Question 10 : Qu'est-ce qui distingue HashMap de TreeMap ?</summary>
+    <p>Réponse : HashMap offre des opérations en \( O(1) \) en moyenne sans ordre sur les clés, tandis que TreeMap trie les clés et a une complexité \( O(\log n) \).</p>
+</details>
+
+<details>
+    <summary>Question 11 : Quel avantage offre LinkedHashMap par rapport à HashMap ?</summary>
+    <p>Réponse : Il conserve l'ordre d'insertion des éléments (ou d'accès si configuré), ce qui permet une itération prévisible.</p>
+</details>
+
+<details>
+    <summary>Question 12 : Quelle structure garantit l'unicité des éléments tout en les maintenant triés ?</summary>
+    <p>Réponse : TreeSet trie les éléments selon leur ordre naturel ou un comparateur et n'autorise pas les doublons.</p>
+</details>
+
+<details>
+    <summary>Question 13 : Quel est le principe de fonctionnement d'une PriorityQueue ?</summary>
+    <p>Réponse : Elle extrait toujours l'élément de plus haute priorité (par défaut le plus petit), en maintenant un ordre interne via un tas (heap).</p>
+</details>
+
+<details>
+    <summary>Question 14 : En Java, comment les types primitifs et les types référence sont-ils passés en paramètres de méthodes ?</summary>
+    <p>Réponse : Les primitifs sont passés par valeur (copie), les références par copie de la référence : les modifications internes à l'objet sont visibles, mais une réassignation de la référence ne l'est pas.</p>
+</details>
+
+<details>
+    <summary>Question 15 : Quelle est la complexité typique des opérations d'insertion, recherche et suppression dans un HashSet ?</summary>
+    <p>Réponse : \(O(1)\) en moyenne grâce à la fonction de hachage, bien que le pire cas puisse dégénérer en O(n) en cas de nombreuses collisions.</p>
+</details>

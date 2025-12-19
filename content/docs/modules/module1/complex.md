@@ -24,8 +24,176 @@ Dans ce cours, vous n'avez pas à maîtriser la notation grand-O et la complexit
 
 La notation \( O(f(n)) \) signifie que, pour des entrées de taille \( n \), l’algorithme effectue au plus un nombre d’opérations proportionnel à \( f(n) \) (à une constante près). On ne s’intéresse qu’au comportement pour de grandes valeurs de \( n \), et on ignore les détails d’implémentation ou les constantes cachées.
 
-On considère souvent que l'accès à un élément d'un tableau par son index a une complexité \( O(1) \) puisqu'il s'agit d'une seul opération. Les operations arithmétique (+, -, etc.) ont 
+On considère souvent que l'accès à un élément d'un tableau par son index a une complexité \( O(1) \) puisqu'il s'agit d'une seule opération. Les operations arithmétique (+, -, etc.) ont 
 aussi une complexité  \( O(1) \).
+
+
+### Notation grand-O
+
+La notation \( O(f(n)) \) signifie que, pour des entrées de taille \( n \), l’algorithme effectue au plus un nombre d’opérations proportionnel à \( f(n) \) (à une constante près). On ne s’intéresse qu’au comportement pour de grandes valeurs de \( n \), et on ignore les détails d’implémentation ou les constantes cachées.
+
+On considère souvent que l'accès à un élément d'un tableau par son index a une complexité \( O(1) \) puisqu'il s'agit d'une seule opération. Les opérations arithmétiques (+, -, etc.) ont aussi une complexité \( O(1) \).
+
+Cette notation permet également de comparer différentes classes de complexité. Une hiérarchie courante observe que les algorithmes en complexité constante sont les plus efficaces pour de grandes entrées, suivis de ceux en complexité logarithmique (\(O(\log n)\)), puis linéaire (\(O(n)\)), linéarithmique (\(O(n\log n)\)), et enfin quadratique (\(O(n^2\)). Formellement, cela se traduit par des inclusions entre les classes : \( O(1) \subseteq O(\log n) \subseteq O(n) \subseteq O(n \log n) \subseteq O(n^2) \), où le logarithme est pris en base quelconque supérieure à 1 (la base n’affecte la définition qu’à une constante multiplicative près).
+
+Pour établir ces inclusions, rappelons la définition : une fonction \( g(n) \) appartient à \( O(f(n)) \) s’il existe une constante positive \( c \) et un entier \( n_0 \) tels que, pour tout \( n \geq n_0 \), \( g(n) \leq c \cdot f(n) \) (en considérant des fonctions positives pour \( n \) grand).
+
+Considérons le logarithme en base 2 pour les preuves explicites, sans perte de généralité.
+
+Pour \( O(1) \subseteq O(\log n) \) : toute fonction constante, disons \( g(n) = k \), satisfait l’inclusion. Comme \( \log_2 n \to \infty \) lorsque \( n \to \infty \), il existe \( n_0 \) tel que \( \log_2 n \geq k \) pour \( n \geq n_0 \). Ainsi, avec \( c = 1 \), \( k \leq \log_2 n \) pour \( n \geq n_0 \).
+
+Pour \( O(\log n) \subseteq O(n) \) : prenons \( g(n) = \log_2 n \). Il est clair que \( \log_2 n \leq n \) pour tout \( n \geq 1 \) (vérifiable pour petits \( n \), et évident asymptotiquement puisque la fonction exponentielle croît plus vite). Plus précisément, le limite \( \frac{\log_2 n}{n} \to 0 \) quand \( n \to \infty \) implique l’existence de \( c = 1 \) et \( n_0 = 1 \) tels que \( \log_2 n \leq n \).
+
+Pour \( O(n) \subseteq O(n \log n) \) : pour \( g(n) = n \), observons que \( \log_2 n \geq 1 \) pour \( n \geq 2 \). Donc \( n \leq n \cdot \log_2 n \) pour \( n \geq 2 \), avec \( c = 1 \) et \( n_0 = 2 \).
+
+Pour \( O(n \log n) \subseteq O(n^2) \) : pour \( g(n) = n \log_2 n \), notons que \( \log_2 n \leq n \) pour \( n \geq 1 \) (comme ci-dessus). Il suit que \( n \log_2 n \leq n \cdot n = n^2 \), avec \( c = 1 \) et \( n_0 = 1 \).
+
+
+
+Utilisez l'application suivante pour comprendre la différence entre \(\log n\), \(\n\), \(\n log n\) et
+\(n^2\). Assurez-vous d'avoir une bonne intuition concernant la forme de ces fonctions.
+
+<body style="font-family: sans-serif; font-size: 16px; display: flex; flex-direction: column; align-items: center; background: #f8f8f8; margin: 0; padding: 20px;">
+    <div style="margin-bottom: 20px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <label>
+            Max n: <input type="range" id="nMaxSlider" min="3" max="20" value="5" step="1">
+            <span id="nMaxValue">5</span>
+        </label>
+    </div>
+    <canvas id="graph" width="900" height="600" style="border: 1px solid #ccc; background: white;"></canvas>
+    <div style="margin-top: 20px; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width:20px; height:3px; background:#2ca02c; display:inline-block;"></span>
+            <span>1 (constante)</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width:20px; height:3px; background:#1f77b4; display:inline-block;"></span>
+            <span>log n</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width:20px; height:3px; background:#ff7f0e; display:inline-block;"></span>
+            <span>n (linéaire)</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width:20px; height:3px; background:#d62728; display:inline-block;"></span>
+            <span>n log n</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width:20px; height:3px; background:#9467bd; display:inline-block;"></span>
+            <span>n² (quadratique)</span>
+        </div>
+    </div>
+    <script>
+    (function() {
+        const canvas = document.getElementById('graph');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+        const margin = { top: 40, right: 60, bottom: 60, left: 80 };
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+        const nMin = 2;
+        let nMax = 5;
+        const nMaxSlider = document.getElementById('nMaxSlider');
+        const nMaxValue = document.getElementById('nMaxValue');
+        nMaxSlider.addEventListener('input', function() {
+            nMax = parseInt(this.value);
+            nMaxValue.textContent = nMax;
+            drawGraph();
+        });
+        function drawGraph() {
+            ctx.clearRect(0, 0, width, height);
+            const yMax = nMax * nMax;
+            function xScale(n) {
+                return margin.left + (n - nMin) / (nMax - nMin) * plotWidth;
+            }
+            function yScale(val) {
+                return margin.top + plotHeight * (1 - val / yMax);
+            }
+            // Axes
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 1;
+            // Axe x
+            ctx.beginPath();
+            ctx.moveTo(margin.left, margin.top + plotHeight);
+            ctx.lineTo(margin.left + plotWidth, margin.top + plotHeight);
+            ctx.stroke();
+            // Axe y
+            ctx.beginPath();
+            ctx.moveTo(margin.left, margin.top);
+            ctx.lineTo(margin.left, margin.top + plotHeight);
+            ctx.stroke();
+            // Étiquettes axe x (linear)
+            ctx.font = '16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            const xTicks = [nMin, nMin + (nMax - nMin)/4, nMin + 2*(nMax - nMin)/4, nMin + 3*(nMax - nMin)/4, nMax];
+            xTicks.forEach(n => {
+                if (n >= nMin && n <= nMax) {
+                    const x = xScale(n);
+                    ctx.fillText(Math.round(n), x, margin.top + plotHeight + 10);
+                    ctx.beginPath();
+                    ctx.moveTo(x, margin.top + plotHeight);
+                    ctx.lineTo(x, margin.top + plotHeight + 5);
+                    ctx.stroke();
+                }
+            });
+            // Étiquettes axe y (linear)
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            const yTicks = [0, yMax/4, yMax/2, 3*yMax/4, yMax];
+            yTicks.forEach(val => {
+                const y = yScale(val);
+                ctx.fillText(Math.round(val), margin.left - 10, y);
+                ctx.beginPath();
+                ctx.moveTo(margin.left - 5, y);
+                ctx.lineTo(margin.left, y);
+                ctx.stroke();
+            });
+            // Titres des axes
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.fillText('n', width / 2, height - 20);
+            ctx.save();
+            ctx.translate(20, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillText('valeur de la fonction', 0, 0);
+            ctx.restore();
+            // Fonction de tracé d’une courbe
+            function drawCurve(color, func) {
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                let first = true;
+                const step = Math.max(1, (nMax - nMin) / 1000);
+                for (let n = Math.max(1, nMin); n <= nMax; n += step) {
+                    const val = func(n);
+                    if (!isNaN(val) && val >= 0 && val <= yMax) {
+                        const x = xScale(n);
+                        const y = yScale(val);
+                        if (first) {
+                            ctx.moveTo(x, y);
+                            first = false;
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    }
+                }
+                ctx.stroke();
+            }
+            // Tracé des courbes
+            drawCurve('#2ca02c', () => 1);
+            drawCurve('#1f77b4', n => Math.log(n));
+            drawCurve('#ff7f0e', n => n);
+            drawCurve('#d62728', n => n * Math.log(n));
+            drawCurve('#9467bd', n => n * n);
+        }
+        drawGraph();
+    })();
+    </script>
 
 ### Exemples d’algorithmes en \( O(n) \)
 
@@ -94,11 +262,6 @@ l'application suivante.
 Observez comment vous faites toujours moins de recherche qu'il y a d'éléments dans le tableau. Pouvez-vous faire en sorte qu'une seule étape soit nécessaire&nbsp;? Quel est le nombre maximal d'étapes nécessaires&nbsp;? 
 
 Cet algorithme a une complexité en \( O(\log n) \), ce qui le rend très efficace pour les grands tableaux triés. 
-
-
-
-
-
 Cela signifie que le nombre d’opérations nécessaires pour trouver (ou ne pas trouver) un élément ne croît pas proportionnellement à la taille du tableau, mais beaucoup plus lentement. Par exemple, pour un tableau de 1 000 000 d’éléments, la recherche binaire nécessite au maximum environ 20 comparaisons (car \( \log_2 1\,000\,000 \approx 20 \)), alors qu’une recherche linéaire pourrait en demander jusqu’à 1 000 000 dans le pire cas. Plus le tableau est grand, plus l’avantage de la recherche binaire est important.
 
 À chaque étape de la recherche binaire, on divise le nombre d’éléments restants par deux. Si on commence avec \( n \) éléments, après une comparaison il en reste \( n/2 \), puis \( n/4 \), puis \( n/8 \), etc. On répète ce processus jusqu’à ce qu’il ne reste qu’un seul élément à examiner.
@@ -380,6 +543,51 @@ Ici, chaque élément est traité une seule fois, et si la recherche dans l’en
 Dans la solution optimisée, la vérification « (cible - x) est dans l’ensemble » est cruciale.
 Il n'est pas garanti que la recherche se fasse en temps \( O(1) \), mais c'est possible avec
 une table de hachage.
+
+
+
+
+### Les arbres en informatique
+
+Les arbres sont des structures de données hiérarchiques non linéaires, composées de nœuds reliés par des arêtes. Un arbre possède une racine unique, à partir de laquelle descendent des sous-arbres. Chaque nœud peut avoir zéro ou plusieurs enfants, mais un seul parent (sauf la racine). 
+À partir du sommet, nous progressons vers les feuilles qui où se terminent la progression.
+Les arbres permettent de représenter des relations hiérarchiques naturelles, comme des dossiers dans un système de fichiers, des expressions arithmétiques ou des structures organisationnelles.
+
+Parmi les arbres les plus utilisés figure l'arbre binaire, où chaque nœud a au plus deux enfants (gauche et droit). L'arbre binaire de recherche (ABR) est une variante particulièrement utile : pour tout nœud, les valeurs dans le sous-arbre gauche sont inférieures à celle du nœud, et celles dans le sous-arbre droit sont supérieures. Cela permet des opérations de recherche, insertion et suppression efficaces dans un arbre équilibré.
+
+
+```
+fonction rechercher(racine, valeur_cible)
+    courant ← racine
+    tant que courant n'est pas null
+        si valeur_cible = courant.valeur
+            retourner courant
+        fin si
+        
+        si valeur_cible < courant.valeur
+            courant ← courant.gauche
+        sinon
+            courant ← courant.droit
+        fin si
+    fin tant que
+    
+    retourner null  // valeur non trouvée
+fin fonction
+```
+
+
+Nous souhaitons garder la distance entre le sommet et les feuilles aussi
+petite que possible. 
+Cette distance détermine notre complexité de recherche.
+L'arbre rouge-noir (red-black tree) est une des arbres les plus populaires, utilisée notamment dans les implémentations de Map et Set en Java (TreeMap, TreeSet). Chaque nœud est coloré en rouge ou noir, et l'arbre respecte cinq propriétés strictes : la racine est noire, chaque feuille (nil) est noire, un nœud rouge a des enfants noirs, tout chemin d'un nœud à une feuille contient le même nombre de nœuds noirs, et aucun chemin ne contient deux rouges consécutifs. Ces règles assurent que l'arbre reste approximativement équilibré, avec une hauteur maximale d'environ  \( 2 \log n \). Lors d'insertions ou suppressions, des violations de couleur peuvent survenir ; elles sont corrigées par des opérations locales qui maintiennent l'équilibre.
+Les arbres rouge-noir offrent des performances garanties. Les opérations de recherche, insertion et suppression s'exécutent en \( O(\log n) \) dans le pire cas, où \( n \) est le nombre de nœuds. 
+Dans ce cours, il n'est pas nécessaire de concevoir des structures en arbres.
+
+
+
+#### Vidéo suggérée
+
+{{< youtube id="YXNq_i4HTJ4" >}}
 
 
 ## Analyse amortie
