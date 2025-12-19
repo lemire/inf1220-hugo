@@ -608,108 +608,6 @@ typeDeTableau nomDuTableau [][] = { { }, {}, {}, etc...};
 String etudiants[][] = { {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"}, {"nom", "cours"} etc...};
 ```
 
-
-Considérons l'exemple suivant. Le code implémente un modèle de langue simple en Java qui calcule les probabilités de transition entre caractères ASCII dans une chaîne donnée, puis génère une séquence de 100 caractères à partir d'un caractère initial. Il utilise un tableau à deux dimensions double[][] transitions de taille 128x128 pour stocker les probabilités qu’un caractère ASCII (0-127) soit suivi d’un autre. Dans calculerTransitions, le programme com// pte les occurrences des paires de caractères consécutifs dans le texte d’entrée et normalise ces comptes pour obtenir des probabilités, stockées dans transitions[i][j], où i est le caractère courant et j le suivant. Lors de la génération dans genererCaractereSuivant, ce tableau est utilisé pour sélectionner aléatoirement le caractère suivant en fonction des probabilités associées au caractère courant. Cette application des tableaux à deux dimensions permet de modéliser efficacement les relations entre caractères, chaque cellule représentant une probabilité de transition, et facilite la génération de texte en s’appuyant sur une structure matricielle claire et organisée.
-
-{{<inlineJava path="ModeleLangue.java" lang="java">}}
-
-import java.util.Random;
-
-public class ModeleLangue {
-    private static final int ASCII_SIZE = 128; // Taille de la table ASCII (0-127)
-    private double[][] transitions; // Matrice des probabilités de transition
-    private Random random;
-
-    // Constructeur qui calcule les probabilités de transition à partir d'une chaîne
-    public ModeleLangue(String texte) {
-        transitions = new double[ASCII_SIZE][ASCII_SIZE];
-        random = new Random();
-        calculerTransitions(texte);
-    }
-
-    // Calcule les probabilités de transition
-    private void calculerTransitions(String texte) {
-        // Compter les transitions
-        int[][] compte = new int[ASCII_SIZE][ASCII_SIZE];
-        int[] totalParCaractere = new int[ASCII_SIZE];
-
-        // Parcourir la chaîne pour compter les transitions
-        for (int i = 0; i < texte.length() - 1; i++) {
-            char courant = texte.charAt(i);
-            char suivant = texte.charAt(i + 1);
-            // Vérifier que les caractères sont dans la plage ASCII
-            if (courant < ASCII_SIZE && suivant < ASCII_SIZE) {
-                compte[courant][suivant]++;
-                totalParCaractere[courant]++;
-            }
-        }
-
-        // Calculer les probabilités
-        for (int i = 0; i < ASCII_SIZE; i++) {
-            if (totalParCaractere[i] > 0) {
-                for (int j = 0; j < ASCII_SIZE; j++) {
-                    transitions[i][j] = (double) compte[i][j] / totalParCaractere[i];
-                }
-            }
-        }
-    }
-
-    // Génère un caractère suivant basé sur les probabilités
-    private char genererCaractereSuivant(char courant) {
-        if (courant >= ASCII_SIZE) {
-            return (char) random.nextInt(ASCII_SIZE); // Caractère hors plage
-        }
-
-        double somme = 0.0;
-        for (double prob : transitions[courant]) {
-            somme += prob;
-        }
-
-        // Si aucune transition n'existe, choisir un caractère aléatoire
-        if (somme == 0.0) {
-            return (char) random.nextInt(ASCII_SIZE);
-        }
-
-        // Sélection aléatoire basée sur les probabilités
-        double r = random.nextDouble();
-        double cumul = 0.0;
-        for (int i = 0; i < ASCII_SIZE; i++) {
-            cumul += transitions[courant][i];
-            if (r <= cumul) {
-                return (char) i;
-            }
-        }
-        // En cas d'erreur (arrondi), retourner le dernier caractère possible
-        return (char) (ASCII_SIZE - 1);
-    }
-
-    // Génère une séquence de longueur donnée à partir d'un caractère initial
-    public String genererSequence(char debut, int longueur) {
-        StringBuilder sequence = new StringBuilder();
-        sequence.append(debut);
-        char courant = debut;
-
-        for (int i = 0; i < longueur - 1; i++) {
-            courant = genererCaractereSuivant(courant);
-            sequence.append(courant);
-        }
-
-        return sequence.toString();
-    }
-
-    public static void main(String[] args) {
-        // Exemple de texte d'entraînement
-        String texte = "bonjour le monde c'est un test simple pour modeller une langue en java";
-        ModeleLangue modele = new ModeleLangue(texte);
-        
-        // Générer une séquence de 100 caractères à partir du caractère 'b'
-        String sequence = modele.genererSequence('b', 100);
-        System.out.println("Séquence générée : " + sequence);
-    }
-}
-{{</inlineJava>}}
-
-
 ### Tableaux multidimensionnels
 
   <p>Java ne se limite pas seulement aux tableaux à deux dimensions. Nous pouvons aussi déclarer des tableaux à plus de deux dimensions. Pour déclarer un tableau à trois dimensions, par exemple, il suffit de faire : </p> 
@@ -813,6 +711,9 @@ Pour comprendre le mécanisme, utilisez l'application suivante.
 
 {{< webapp path="arraylist.html" >}}
 
+
+Il est possible de mettre un ArrayList dans un ArrayList. Il devient alors possible de créer
+des ArrayList qui soient multidimensionnels.
 
 ### Les tableaux dynamiques ont un coût amorti de \(O(1)\) ?
 
