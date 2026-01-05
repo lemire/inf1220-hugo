@@ -111,6 +111,40 @@ nous pouvons utiliser la valeur de la variable  `somme` avant de lui avoir assig
 
 Les variables sont essentielles pour écrire des algorithmes flexibles et réutilisables. Elles permettent de travailler avec des données qui varient, comme des entrées utilisateur ou des résultats intermédiaires, et de suivre l’état d’un algorithme tout au long de son exécution. En pseudo-code, les variables servent à rendre les instructions claires et compréhensibles, tout en préparant la transition vers un langage de programmation réel.
 
+Pour illustrer simplement la déclaration et l’affectation d’une variable, voici comment on déclare une variable nommée `age` et on lui assigne la valeur 18 dans différents langages.
+
+En Java, la déclaration exige de préciser le type :
+
+```java
+int age = 18;  // déclaration et affectation en une seule ligne
+```
+
+En JavaScript, le type est inféré automatiquement :
+
+```javascript
+let age = 18;  // déclaration et affectation
+```
+
+En Go, on peut utiliser la déclaration courte quand le type est évident :
+
+```go
+age := 18  // déclaration et affectation, type int inféré
+```
+
+Ou de manière plus explicite :
+
+```go
+var age int = 18
+```
+
+En C++, le type doit aussi être indiqué explicitement :
+
+```cpp
+int age = 18;  // déclaration et affectation
+```
+
+Ces lignes montrent la forme la plus basique de création et d’initialisation d’une variable, équivalente à l’instruction `age ← 18` du pseudo-code. La syntaxe varie légèrement selon le langage, mais le principe reste identique : nommer un espace mémoire et y placer une valeur.
+
 ### Logique booléenne
 
 Un des fondements des algorithmes est la logique booléenne. Elle permet de manipuler des valeurs logiques, appelées booléennes, qui ne peuvent prendre que deux états : vrai ou faux. Ces valeurs sont utilisées pour prendre des décisions, contrôler le flux d’un algorithme ou évaluer des conditions dans des structures comme les boucles et les embranchements.
@@ -242,6 +276,51 @@ Nous obtenons alors la notion de boucle: nous effectuons une tâche donnée tant
 En informatique, on fait souvent référence à la notion d'impression à l'écran. Le plus souvent cela fait référence à l'affichage à l'écran d'un message ou d'un texte.
 
 
+Pour illustrer concrètement ces concepts, considérons un exemple simple : afficher les nombres de 1 à 10 à l'écran, en utilisant une boucle qui incrémente un compteur à chaque itération. Cela montre comment un compteur agit comme un itérateur et comment la boucle répète l'impression jusqu'à ce que la condition soit satisfaite.
+
+En Java, une boucle for classique s'écrit ainsi :
+
+```java
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}
+```
+
+Ici, i est initialisé à 1, la boucle continue tant que i est inférieur ou égal à 10, et i est incrémenté de 1 à chaque tour.
+
+En JavaScript, la syntaxe est très similaire :
+
+```javascript
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+```
+
+La différence principale réside dans l'utilisation de let pour déclarer la variable i, ce qui limite sa portée à la boucle.
+
+En Go, on utilise également une boucle for (la seule structure de boucle disponible dans le langage) :
+
+```go
+for i := 1; i <= 10; i++ {
+    fmt.Println(i)
+}
+```
+
+L'initialisation, la condition et l'incrémentation sont regroupées dans l'en-tête de la boucle, comme dans les langages précédents.
+
+En C++, la boucle for prend une forme proche de celle de Java :
+
+```cpp
+#include <iostream>
+
+for (int i = 1; i <= 10; i++) {
+    std::cout << i << std::endl;
+}
+```
+
+Ces exemples montrent à quel point le concept de boucle avec compteur est universel dans les langages impératifs, même si les syntaxes varient légèrement. Dans tous les cas, l'impression à l'écran (via println, console.log, fmt.Println ou cout) est répétée 10 fois, en incrémentant l'itérateur à chaque passage. Cet usage évite d'écrire manuellement dix instructions d'impression identiques, rendant le code plus concis et plus facile à modifier (par exemple, pour changer la borne supérieure).
+
+
 ## Tableau
 
 Un tableau est une structure de données qui permet de stocker plusieurs éléments, comme des nombres ou des chaînes de caractères, dans une seule variable. Ces éléments sont organisés séquentiellement et accessibles via un indice, un nombre entier qui indique leur position. Par exemple, dans un tableau nommé tableau, l’élément à la position 1 est noté `tableau[1]`, celui à la position 2 est `tableau[2]`, et ainsi de suite. La taille du 
@@ -250,6 +329,46 @@ tableau est normalement fixée et connue.
 
 La numérotation des indices varie selon les langages de programmation ou les contextes. Dans de nombreux langages comme C, Java ou Python, les indices commencent à 0 : le premier élément est `tableau[0]`, le deuxième `tableau[1]`, etc. Cette convention, dite «&nbsp;base 0&nbsp;», est courante en informatique pour des raisons techniques liées à la gestion de la mémoire. Dans d’autres contextes, comme certaines notations mathématiques ou langages comme Lua, les indices débutent à 1, ce qui peut être plus intuitif pour des utilisateurs non techniques. Le choix de l’index de départ dépend donc du système utilisé, et il est crucial de connaître cette convention pour manipuler correctement les éléments d’un tableau. La convention utilisée est souvent
 claire selon le contexte.
+
+Tous les langages de programmation supportent les tableaux.
+
+En Java, nous pouvons créer un tableau d'entiers comprenant 5 éléments comme suit.
+
+```java {style=github}
+int [] tableau = new int[5];
+```
+
+Dans ce cas, le tableau comprendra la valeur 0 répétée 5 fois.
+Nous pouvons aussi initialiser un tableau avec les entiers `1,2,3` comme suit.
+
+
+```java {style=github}
+int [] tableau = [1,2,3];
+```
+
+En JavaScript, la syntaxe équivalente est celle-ci.
+
+```JavaScript {style=github}
+let tableau = Array(5).fill(0);
+let tableau = [1, 2, 3];
+```
+
+En Go, nous utiliserions la syntaxe suivante.
+
+
+```Go {style=github}
+tableau := make([]int, 5)
+tableau := []int{1, 2, 3}
+```
+
+En C++, nous pourrions faire l'équivalent.
+
+```C++
+int tableau[5]{};
+int tableau[]{1, 2, 3};
+```
+
+Dans tous ces langages, l'expression `tableau[0]` fait référence au premier élément du tableau.
 
 ## Exemple : Calcul de la moyenne
 
@@ -276,3 +395,61 @@ Ce pseudocode calcule la moyenne de quatre nombres rationnels stockés dans un t
 
 Observez comment on termine la boucle "TANT QUE" avec une ligne "FIN TANT QUE". Ce n'est pas nécessaire, mais vous devez être clair et précis quant au début et à la fin de vos opérations. On peut aussi indiquer le début et la fin d'une boucle avec l'indentation, ou tout autre moyen compris par les êtres humains.
 L'expression "TANT QUE" est associée à une condition qui peut être vraie ou fausse. L'exécution se poursuit tant que l'expression est vraie, et elle se termine lorsque l'expression est fausse.
+
+
+
+
+Pour montrer comment ce pseudo-code se traduit dans des langages réels, considérons un tableau contenant les notes {10.4, 12.6, 18.7, 5.0} et calculons sa moyenne en utilisant une boucle qui parcourt les indices.
+
+En Java, on utilise un tableau ou un ArrayList, mais ici avec un tableau fixe :
+
+```java
+double[] notes = {10.4, 12.6, 18.7, 5.0};
+double somme = 0;
+for (int i = 0; i < notes.length; i++) {
+    somme += notes[i];
+}
+double moyenne = somme / notes.length;
+System.out.println(moyenne);
+```
+
+En JavaScript, les tableaux sont dynamiques et la propriété length donne directement la taille :
+
+```javascript
+let notes = [10.4, 12.6, 18.7, 5.0];
+let somme = 0;
+for (let i = 0; i < notes.length; i++) {
+    somme += notes[i];
+}
+let moyenne = somme / notes.length;
+console.log(moyenne);
+```
+
+En Go, on utilise un slice et la fonction len pour obtenir la longueur :
+
+```go
+notes := []float64{10.4, 12.6, 18.7, 5.0}
+somme := 0.0
+for i := 0; i < len(notes); i++ {
+    somme += notes[i]
+}
+moyenne := somme / float64(len(notes))
+fmt.Println(moyenne)
+```
+
+En C++, on peut utiliser un std::vector ou un tableau classique ; ici avec un initializer list et un vector :
+
+```cpp
+#include <iostream>
+#include <vector>
+
+std::vector<double> notes = {10.4, 12.6, 18.7, 5.0};
+double somme = 0;
+for (size_t i = 0; i < notes.size(); i++) {
+    somme += notes[i];
+}
+double moyenne = somme / notes.size();
+std::cout << moyenne << std::endl;
+```
+
+Dans chaque cas, la structure reste fidèle au pseudo-code : initialisation d'une somme à zéro, parcours des indices de 0 à longueur-1 avec incrémentation, accumulation des valeurs, puis division finale par le nombre d'éléments. Cette approche rend l'algorithme indépendant de la taille exacte du tableau, exactement comme souhaité dans la version générale en pseudo-code.

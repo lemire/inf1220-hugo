@@ -171,8 +171,7 @@ public class Main {
 }
 {{</inlineJava>}}
 
-Cet exemple illustre l’utilisation d’une boucle `for` classique en Java pour compter les voyelles dans la chaîne `"veni vidi vici"`. Le programme convertit la chaîne en un tableau de caractères avec `toCharArray()`, puis parcourt chaque caractère à l’aide d’une boucle `for(int i = 0; i < caracteres.length; i++)`. À chaque itération, la variable `c` prend la valeur du caractère à l’index `i`, et une condition `if` vérifie si `c` est une voyelle (`a`, `e`, `i`, `o`, `u`, ou `y`). Si c’est le cas, la variable `nbVoyelle` est incrémentée. À la fin, `System.out.println(nbVoyelle)` affiche `6`, correspondant aux voyelles `e`, `i`, `i`, `i`, `i`, `i` trouvées dans la chaîne.
-Cette syntaxe est un peu verbeuse.
+Cet exemple illustre l’utilisation d’une boucle `for` classique en Java pour compter les voyelles dans la chaîne `"veni vidi vici"`. Le programme convertit la chaîne en un tableau de caractères avec `toCharArray()`, puis parcourt chaque caractère à l’aide d’une boucle `for(int i = 0; i < caracteres.length; i++)`. À chaque itération, la variable `c` prend la valeur du caractère à l’index `i`, et une condition `if` vérifie si `c` est une voyelle (`a`, `e`, `i`, `o`, `u`, ou `y`). Si c’est le cas, la variable `nbVoyelle` est incrémentée. À la fin, `System.out.println(nbVoyelle)` affiche `6`, correspondant aux voyelles `e`, `i`, `i`, `i`, `i`, `i` trouvées dans la chaîne. Observez comment le tableau est déclaré avec la syntaxe `char[] tableau`.
 
 La boucle `for` améliorée (ou "for-each") permet de  parcourir facilement les éléments d'une structure comme un tableau, simplifiant l'écriture du code pour traiter chaque élément individuellement.
 Dans le prochain exemple, la boucle `for(char c : chaine.toCharArray())` parcourt chaque caractère, assignant successivement chaque caractère à la variable `c`. 

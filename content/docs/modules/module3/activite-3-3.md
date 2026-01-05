@@ -284,7 +284,14 @@ int[] tableau = {20, 17, 21, 19, 18, 20};
 ### Initialisateur
 
 
-Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. De plus, il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.</p> 
+Nous ne pouvons utiliser une liste d'initialisation que pour la première déclaration. 
+
+```java  {style=github}
+int[] tab = {1, 2, 3};
+```
+
+
+Il faut impérativement la combiner avec la déclaration de la variable. Il est impossible de le faire en deux étapes. Par exemple, le code ci-dessous produit une erreur de compilation.
 
 ```java  {style=github}
 int[] tab = new int[3];
@@ -295,6 +302,14 @@ tab = {1, 2, 3};
 <pre>java.lang.Error: Unresolved compilation problem: </pre> 
 <pre>        Array constants can only be used in initializers 
 </pre> 
+
+
+Si vous utilisez la syntaxe `var`, vous devez déclarer le type du tableau comme suit.
+
+```java  {style=github}
+var tab = new int[]{1, 2, 3};
+```
+
 
 ### Passer des tableaux en paramètre
 
