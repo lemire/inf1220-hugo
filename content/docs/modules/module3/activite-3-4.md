@@ -97,6 +97,107 @@ Les exceptions peuvent être causées par :
 - Des événements extérieurs (ex. : fichier absent, réseau coupé)
 - Des conditions prévues par le programmeur (qui peut lancer une exception volontairement)
 
+## Le try-with-resources
+
+Il existe une variante de la structure try-catch appelée try-with-resources, qui permet de gérer automatiquement la fermeture des ressources à la fin du bloc try, même en cas d'exception.
+
+### L'interface AutoCloseable
+
+Pour qu'une ressource puisse être utilisée dans un try-with-resources, elle doit implémenter l'interface AutoCloseable. Cette interface définit une seule méthode : close(), qui est appelée automatiquement à la fin du bloc try.
+
+Voici la définition de l'interface AutoCloseable :
+
+```java {style=github}
+public interface AutoCloseable {
+    void close() throws Exception;
+}
+```
+
+La méthode close() peut lancer une Exception, ce qui permet de gérer les erreurs lors de la fermeture de la ressource.
+
+### Implémenter AutoCloseable
+
+Pour créer une ressource personnalisée, on définit une classe qui implémente AutoCloseable et fournit une implémentation de la méthode close().
+
+Exemple d'une classe de ressource personnalisée :
+
+```java {style=github}
+public class MaRessource implements AutoCloseable {
+    private boolean ouverte = false;
+
+    public MaRessource() {
+        // Simulation de l'ouverture de la ressource
+        System.out.println("Ressource ouverte");
+        ouverte = true;
+    }
+
+    public void utiliser() {
+        if (!ouverte) {
+            throw new IllegalStateException("Ressource fermée");
+        }
+        System.out.println("Utilisation de la ressource");
+    }
+
+    @Override
+    public void close() throws Exception {
+        if (ouverte) {
+            System.out.println("Fermeture de la ressource");
+            ouverte = false;
+        }
+    }
+}
+```
+
+Dans cet exemple, la classe MaRessource simule une ressource qui peut être ouverte et fermée. La méthode close() est appelée automatiquement par le try-with-resources.
+
+### Exemple d'utilisation
+
+La syntaxe du try-with-resources est :
+
+```java {style=github}
+try (TypeRessource ressource = new TypeRessource()) {
+    // Code utilisant la ressource
+} catch (Exception e) {
+    // Gestion de l'exception
+}
+```
+
+Exemple avec notre ressource personnalisée :
+
+```java {style=github}
+public class TestRessource {
+    public static void main(String[] args) {
+        try (MaRessource res = new MaRessource()) {
+            res.utiliser();
+            // La ressource sera automatiquement fermée ici
+        } catch (Exception e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
+    }
+}
+```
+
+Sortie attendue :
+
+<pre>
+Ressource ouverte
+Utilisation de la ressource
+Fermeture de la ressource
+</pre>
+
+On peut déclarer plusieurs ressources en les séparant par des points-virgules :
+
+```java {style=github}
+try (MaRessource res1 = new MaRessource();
+     MaRessource res2 = new MaRessource()) {
+    res1.utiliser();
+    res2.utiliser();
+} catch (Exception e) {
+    // Gestion...
+}
+```
+
+
 ## Lancer des exceptions
 
 Pour signaler une situation anormale, un programmeur peut lancer une exception avec le mot-clé <code>throw</code> :
