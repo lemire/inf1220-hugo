@@ -197,6 +197,7 @@ try (MaRessource res1 = new MaRessource();
 }
 ```
 
+Dans le cas de plusieurs ressources, les méthodes close() sont appelées dans l'ordre inverse de leur déclaration. Ainsi, pour l'exemple ci-dessus, close() de res2 sera appelé en premier, suivi de close() de res1. 
 
 ## Lancer des exceptions
 
