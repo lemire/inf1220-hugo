@@ -414,7 +414,7 @@ Le fait de faire : "entier + string" n'est pas une erreur. La JVM va convertir a
 
 ## Question 21
 
-<p>Expliquer pourquoi exercice1.resultat vaut 30 et non 80 à la fin de la méthode main. Que faudrait-il corriger dans le code suivant si on souhaite obtenir 80 ?</p>
+<p>Expliquer pourquoi e1.resultat vaut 30 et non 80 à la fin de la méthode main. Que faudrait-il corriger dans le code suivant si on souhaite obtenir 80?</p>
 
 ```java  {style=github}
 public class Exercice {
@@ -422,6 +422,11 @@ public class Exercice {
     protected boolean reussi = false;
     protected static short resultat = 0;
     public static void main(String[] args) {
+        Exercice e1 = new Exercice();
+        e1.resultat = 80;
+        Exercice e2 = new Exercice();
+        e2.resultat = 30;
+        System.out.println("e1.resultat: " + e1.resultat);
     }
 }
 ```
