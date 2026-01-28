@@ -28,7 +28,7 @@ Il est difficile d'apprendre à programmer sans savoir ce qu'est un algorithme. 
 
 ## Planification du temps
 
-Assurez-vous de bien planifier votre temps. N'oubliez pas de consacrer environ 9 heures par semaine au cous. Le cours
+Assurez-vous de bien planifier votre temps. N'oubliez pas de consacrer environ 9 heures par semaine au cours. Le cours
 nécessite plus d'une journée par semaine, pendant quinze semaine.
 
 Nous vous suggérons de consacrer (au maximum) les trois premières semaines du cours au premier module  (environ 27 heures). 
