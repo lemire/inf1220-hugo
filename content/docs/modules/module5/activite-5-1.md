@@ -499,6 +499,7 @@ Comprendre le rôle de `Object` est essentiel pour maîtriser l’héritage, le 
 
 
 ## Utilisation du modificateur final
+
 <p>Il arrive que nous ne souhaitions pas offrir une possibilité d'héritage à une certaine classe. Dans ce cas, nous la définissons avec le mot clé <em>final</em>. <br />Si le mot clé <em>final</em> est utilisé dans la définition d'une méthode, celle-ci ne pourra plus être redéfinie par héritage. <br />Enfin, nous définissons une constante en écrivant <em>final</em> dans la déclaration de la variable.<br/> Voici un exemple d'utilisation d'une classe abstraite. Ici, la méthode analyse est abstraite et oblige donc les sous-classes à implémenter celle-ci :</p> 
 
 ```java  {style=github}
@@ -1731,6 +1732,54 @@ public class Main {
     }
 }
 {{</inlineJava>}}
+
+
+## Interaces et héritage
+
+Il est possible d'utiliser à la fois les interfaces et l'héritage. Par exemple, une classe abstraite peut aussi implémenter des interfaces, et une classe concrète peut hériter d'une classe abstraite tout en implémentant plusieurs interfaces.
+
+Voici un exemple :
+
+{{<inlineJava path="ExempleHeritageInterface.java" lang="java" >}}
+// Interface
+interface Volant {
+    void voler();
+}
+
+// Classe abstraite
+abstract class Animal {
+    abstract void manger();
+    
+    void dormir() {
+        System.out.println("L'animal dort.");
+    }
+}
+
+// Classe concrète héritant d'Animal et implémentant Volant
+class Oiseau extends Animal implements Volant {
+    @Override
+    public void voler() {
+        System.out.println("L'oiseau vole.");
+    }
+    
+    @Override
+    void manger() {
+        System.out.println("L'oiseau mange des graines.");
+    }
+}
+
+public class ExempleHeritageInterface {
+    public static void main(String[] args) {
+        Oiseau oiseau = new Oiseau();
+        oiseau.manger();
+        oiseau.dormir();
+        oiseau.voler();
+    }
+}
+{{</inlineJava>}}
+
+Dans cet exemple, la classe Oiseau hérite de la classe abstraite Animal et implémente l'interface Volant. Cela permet de combiner les avantages de l'héritage (réutilisation de code via la classe de base) et des interfaces (contrats multiples et polymorphisme).
+
 
 ## Notion avancée: Entity-component-system (optionnel)
 

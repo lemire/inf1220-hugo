@@ -103,7 +103,7 @@ public class Voiture {
 
 La portée des variables influence leur usage dans les méthodes. Une variable d’instance, comme vitesse, ne peut être utilisée que dans un contexte non statique, car elle est liée à un objet. Une méthode accelerer pourrait modifier vitesse en utilisant this. En revanche, une variable de classe, comme nombreTotalVoitures, est accessible dans des méthodes statiques, comme getNombreTotalVoitures, sans nécessiter d’instance. Cette distinction reflète leur rôle : les variables d’instance décrivent l’état d’un objet, les variables de classe définissent des propriétés globales.
 
-Un dernier exemple combine les deux types de variables et illustre l’impact des modificateurs d’accès :
+Un dernier exemple combine les deux types de variables et illustre l'effet des modificateurs d’accès :
 
 {{<inlineJava path="Voiture.java" lang="java" >}}
 public class Voiture {
@@ -366,6 +366,39 @@ public class Exercice {
     }
 }
 {{</inlineJava>}}
+
+
+### Bloc static
+
+Un bloc static en Java est un bloc de code qui est exécuté une seule fois lorsque la classe est chargée en mémoire par la JVM. Il est utilisé pour initialiser des variables statiques ou effectuer des opérations de configuration qui doivent se produire avant que la classe ne soit utilisée.
+
+La syntaxe d'un bloc static est la suivante :
+
+```java {style=github}
+static {
+    // code d'initialisation
+}
+```
+
+Voici un exemple :
+
+{{<inlineJava path="BlocStaticExemple.java" lang="java" >}}
+public class BlocStaticExemple {
+    static int compteur;
+    
+    static {
+        compteur = 0;
+        System.out.println("Bloc static exécuté : compteur initialisé à " + compteur);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Valeur du compteur : " + compteur);
+    }
+}
+{{</inlineJava>}}
+
+Les blocs static sont exécutés dans l'ordre où ils apparaissent dans le code source, et avant tout constructeur ou méthode de la classe.
+
 
 ### Surdéfinition de méthodes
 
