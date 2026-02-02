@@ -103,3 +103,18 @@ votre MarkDown en PDF.
 - [iA Writer](https://ia.net/writer)
 
 Vous ne pouvez pas utiliser Microsoft Word pour écrire du MarkDown.
+
+## Activités
+
+Pour consolider vos connaissances sur Markdown, réalisez les activités suivantes :
+
+1. **Création d'un document Markdown de base** : Créez un nouveau fichier avec l'extension `.md`. Ajoutez un titre principal, des sous-titres, une liste à puces et une liste numérotée. Incluez également un lien vers un site web et une image (si possible).
+
+2. **Insertion de code** : Dans votre document, ajoutez un bloc de code en utilisant la syntaxe appropriée pour un langage de programmation de votre choix (par exemple, Java ou Python). Expliquez brièvement ce que fait ce code.
+
+3. **Mise en forme du texte** : Utilisez les balises pour mettre en gras et en italique certains mots ou phrases dans votre document. Ajoutez également une citation en bloc.
+
+4. **Conversion en PDF** : Une fois votre document terminé, convertissez-le en PDF en utilisant l'un des outils mentionnés ci-dessus (comme un plugin VS Code ou un éditeur Markdown). Vérifiez que la mise en forme est préservée dans le PDF.
+
+
+Ces activités vous permettront de pratiquer les concepts clés de Markdown et de découvrir comment l'utiliser efficacement pour la rédaction technique.
