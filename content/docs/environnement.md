@@ -319,7 +319,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
       const javacode = urlParams.get('javacode');
       if (javacode) {
         try {
-          const json = JSON.parse(atob(javacode));
+          const json = JSON.parse(decodeURIComponent(escape(atob(javacode))));
           clearFiles();
           json.files.forEach(file => {
             addFile(file.type, file.name, file.content);
@@ -351,7 +351,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
         files.push({ name: nameInput.value, type, content });
       });
       const json = { files };
-      const encoded = btoa(JSON.stringify(json));
+      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(json))));
       const url = window.location.href.split('?')[0] + '?javacode=' + encodeURIComponent(encoded);
       navigator.clipboard.writeText(url).then(() => {
         alert('URL copiée dans le presse-papiers !');
