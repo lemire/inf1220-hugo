@@ -32,9 +32,7 @@ rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/"
 
 ## Entretien de suivi
 
-<p>Vérifiez si vous êtes dans une version du cours qui nécessite un entretien de suivi. <strong>Vous trouverez cette information sur le portail étudiant.</strong> En cas de doute, vous pouvez communiquer avec la personne qui vous encadre au sein du cours.</p>
-
-<p>Si vous êtes inscrits dans un version du cours avec entretien de suivi, cet entretien est obligatoire. L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen.</p>
+<p>L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen. Il nous permet de vérifier que vous êtes capable d'expliquer les solutions que vous avez soumises de vive voix.</p>
 
 
 ### Microsoft Teams
@@ -46,7 +44,7 @@ Il est de votre responsabilité de disposer de Microsoft Teams.
 
 ### Qu’est-ce que l’entretien de suivi?
 <p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
-Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer une réponse.</p>
+Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses.</p>
 
 ### L’entretien de suivi est-il obligatoire?
 <p>Oui. L'entretien de suivi constitue une étape obligatoire.

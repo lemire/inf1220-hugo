@@ -102,6 +102,8 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 <li>Assurez-vous de bien expliquer vos résultats, en vos propres mots.</li>
 </ul>
 
+<p>Vous devez toujours être capable d'expliquer pleinement vos solutions, sans aide.</p>
+
 {{% /hint  %}}
 
 
