@@ -64,11 +64,15 @@ Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en 
 ### L’entretien de suivi est-il noté?
 <p>Oui. L’entretien de suivi fait l’objet d’une notation indiquant votre capacité d’expliquer vos réponses à l’examen de vive voix.<p>
 
-### Dans quelles conditions est-ce que l’entretien de suivi peut mener à une note de zéro dans le cours?
+### Dans quelles conditions est-ce que l’entretien de suivi peut mener à un échec dans le cours?
+
+<p>La réussite de l'entretien de suivi est requise pour réussir le cours. Vous pouvez échouer l'entretien de suivi
+pour les raisons suivantes.</p>
 
 <ul>
 <li>Vous ne vous présentez pas à l'entretien;</li>
 <li>Vous ne présentez pas de pièce d'identité avec photo;</li>
+<li>Vous n'arrivez pas à répondre aux questions portant sur votre examen de manière satisfaisante;</li>
 <li>Il y a apparence d’infraction liée aux études.</li>
 </ul>
 
