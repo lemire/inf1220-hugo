@@ -14,7 +14,7 @@ Pour les mathématiques, vous pouvez faire référence à notre rappel sur [les 
 
 {{% /hint %}}
 
-Il est permis d’utiliser le robot conversationnel du cours pour ces exercices ([voir ici](https://rc-inf1220.teluq.ca/)). Toutefois, entraînez-vous à produire vos propres réponses.
+Il est permis d’utiliser l'intelligence artificielle pour aider à comprendre les solutions. Toutefois, entraînez-vous à produire vos propres réponses.
 
 Comment procéder pour les exercices :
 

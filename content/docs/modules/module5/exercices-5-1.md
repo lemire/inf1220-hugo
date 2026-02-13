@@ -19,7 +19,7 @@ vous pouvez faire référence à notre rappel sur [les principales notions math�
 {{% /hint %}}
 
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
+<p>Il est permis d’utiliser l'intelligence artificielle pour aider à comprendre les solutions. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
 
 {{% hint info %}}
 

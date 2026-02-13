@@ -19,7 +19,7 @@ vous pouvez faire référence à notre rappel sur [les principales notions math�
 
 <p>Quand on vous demande de produire du code, vous devez le tester. C'est une erreur commune chez les étudiants: ils produisent rapidement du code en supposant qu'il est fonctionnel. Prenez le temps de vous relire, d'être attentif. Et testez votre code. Encore et encore.</p>
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors des exercises</a>. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
+<p>Il est permis d’utiliser l'intelligence artificielle pour aider à comprendre les solutions. Cependant vous devriez vous entraîner à produire vos propres réponses.</p>
 
 
 {{% hint info %}}

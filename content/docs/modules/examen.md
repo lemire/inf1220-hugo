@@ -7,7 +7,7 @@ weight: 6
 
 <p>L&rsquo;objectif principal de l&rsquo;examen est de valider le savoir-faire que vous avez intégré tout au long du cours. Comme la question revient sans cesse, soyons clair sur ce point: <strong>l'examen couvre toute la matière du cours.</strong> </p>
 
-<p>Prenez note qu'<a href="https://rc-inf1220.teluq.ca/">il est permis d'utiliser le robot conversationnel du cours lors de l'examen</a>. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
+<p>Il est permis d'utiliser une intelligence artificielle pendant l'examen. Cependant vous devez produire vos propres réponses et vos propres analyses.</p>
 
 {{% hint warning %}}
 
@@ -79,6 +79,9 @@ Qui puis-je contacter si j’ai des questions?
 <p>En cas de besoin, n’hésitez pas à communiquer avec la personne responsable de votre encadrement.</p>
 
 </div>
+
+
+
 
 ## Se préparer
 
@@ -169,7 +172,15 @@ Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
 ## Résultat et rétroaction sur l'examen
 
-<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception).</p>
+<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception). Quant à l'entretien de suivi&nbsp;: un échec à l'entretien de suivi est sans appel.</p>
+
+{{% hint danger %}}
+
+
+Que ce soit pour l'examen ou pour l'entretien de suivi, il n'y a aucune possibilité de reprise.
+
+
+{{% /hint  %}}
 
 ## Rétroaction sur le cours
 

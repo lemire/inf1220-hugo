@@ -95,7 +95,7 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 ## Intelligence artificielle
 
 
-<p>Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise et même recommandée (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
+<p>Dans ce cours, l'utilisation de l'intelligence artificielle (<a href="https://grok.com">Grok</a>, <a href="https://gemini.google.com/app">Gemini</a>, etc.) est permise et même recommandée (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable&nbsp;:</p>
 <ul>
 <li>Décrivez votre utilisation de l'IA.  Une utilisation de l'IA sans déclaration peut être considérée comme une forme de faute. Contrairement à ce que vous pourriez croire, déclarer votre utilisation de l'IA vous protège.</li>
 <li>Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA&nbsp;? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.</li> 
@@ -106,7 +106,18 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 
 {{% /hint  %}}
 
+{{% hint danger %}}
 
+
+## Entretien de suivi
+
+Que ce soit dans les travaux notés ou à l'examen, vous devez produire vos propres réponses. Vous devez pleinement
+maîtriser ces réponses. Le cours se termine par un entretien de suivi obligatoire. Au cours de cet entretien, nous allons vérifier que vous êtes capable d'expliquer vos solutions de vive voix, sans aide. Un échec à l'entretien de suivi entraîne un échec au  cours. Il n'y a aucune possibilité  de reprise.
+
+
+
+
+{{% /hint  %}}
 
 ## Démarrage
 
