@@ -832,8 +832,8 @@ public class ExempleRechercheBinaireList {
         int indice30 = Collections.binarySearch(nombres, 30);
         int indice25 = Collections.binarySearch(nombres, 25);
 
-        System.out.println("Indice retourné pour 30 : " + indice30); // Affiche 2 ou 3 (une des positions)
-        System.out.println("Indice pour 25 : " + indice25); // Affiche -4 (position d'insertion serait 3)
+        System.out.println("Indice retourné pour 30 : " + indice30); // Affiche 2 (une des positions)
+        System.out.println("Indice pour 25 : " + indice25); // Affiche -3 (position d'insertion serait 2)
         System.out.println(indice25 >= 0 ? "Présent" : "Absent");
     }
 }
@@ -855,13 +855,14 @@ public class ExempleRechercheBinaireTableau {
         int indice25 = Arrays.binarySearch(nombres, 25);
 
         System.out.println("Indice retourné pour 30 : " + indice30); // Affiche 2 ou 3
-        System.out.println("Indice pour 25 : " + indice25); // Affiche -4
+        System.out.println("Indice pour 25 : " + indice25); // Affiche -3
     }
 }
 {{</inlineJava>}}
 
 
-Dans les deux exemples, la collection doit être triée au préalable. La recherche de 30 retourne un indice valide parmi les doublons possibles, tandis que celle de 25 indique par une valeur négative qu’il n’est pas présent et où il pourrait être ajouté sans rompre l’ordre. Cette approche est idéale quand on effectue de nombreuses recherches sur une collection statique ou peu modifiée après le tri initial.
+Dans les deux exemples, la collection doit être triée au préalable. La recherche de 30 retourne un indice valide parmi les doublons possibles, tandis que celle de 25 indique par une valeur négative qu’il n’est pas présent et où il pourrait être ajouté sans rompre l’ordre. Cette approche est idéale quand on effectue de nombreuses recherches sur une collection statique ou peu modifiée après le tri initial. Quand une valeur négative est retournée, nous pouvons obtenir la position
+d'insertion à prenant la valeur absolue et en soustrayant 1. Ainsi, un index de -1 signifie que la position d'insertion est au tout début.
 
 ## Autres structures de données
 
