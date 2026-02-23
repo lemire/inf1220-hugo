@@ -38,8 +38,21 @@ Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pou
 Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),
 directement dans le site du cours, vous pouvez utiliser le bouton *partager* pour obtenir un URL pointant
 vers votre code informatique exécutable. Nous vous encourageons à inclure cet URL dans votre travail noté
-pour rendre la correction plus aisée. Par ailleurs, vous pouvez ainsi prouver que votre code compile et
-s'exécute. L'URL peut être un peu long, assurez-vous de tester le lien avant de remettre votre travail noté.
+sous la forme d'un hyperlien pour rendre la correction plus aisée. Par ailleurs, vous pouvez ainsi prouver 
+que votre code compile et s'exécute. L'URL peut être un peu long, assurez-vous de tester le lien avant 
+de remettre votre travail noté. 
+
+{{% hint info %}}
+
+Un URL (Uniform Resource Locator) est l'adresse d'une ressource sur internet. C'est une chaîne de caractères normalisée qui indique où se trouve quelque chose : une page web, une image, un fichier PDF, une vidéo, une API, etc.
+Par exemple, http://google.com est un URL.
+
+Un hyperlien (souvent appelé simplement « lien » ou « hyperlink » en anglais) est un élément interactif dans une page web, un courriel, un document PDF, une application, etc. En MarkDown, un hyperlien peut être créé avec la syntaxe `[sujet](http://...)`.
+
+Incluez donc l'URL en tant [qu'hyperlien](https://lemire.github.io/inf1220-hugo/docs/environnement/?javacode=eyJmaWxlcyI6W3sibmFtZSI6IkJvbmpvdXIuamF2YSIsInR5cGUiOiJqYXZhIiwiY29udGVudCI6InZvaWQgbWFpbigpIHtcbiAgICBTeXN0ZW0ub3V0LnByaW50bG4oXCJCb25qb3VyIGxlIG1vbmRlIVwiKTtcbn0ifV19).
+
+{{% /hint %}}
+
 
 ## Question #1
 
