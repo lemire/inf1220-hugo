@@ -713,6 +713,90 @@ Les langages de programmation jouent un rôle crucial en traduisant des instruct
 
 Dans ce cours, nous explorerons le langage Java, largement adopté dans l’industrie pour sa portabilité, sa robustesse et sa polyvalence. Utilisé dans des domaines variés, des applications mobiles Android aux systèmes d’entreprise, Java illustre parfaitement comment un langage de haut niveau peut répondre à des besoins modernes tout en s’appuyant sur les principes fondamentaux de l’informatique.
 
+
+
+### Le système d'exploitation
+
+Le système d'exploitation (OS, Operating System) est un logiciel essentiel qui agit comme une interface entre l'utilisateur, les applications et le matériel de l'ordinateur. Il gère les ressources matérielles et logicielles, permettant aux programmes de s'exécuter efficacement et en toute sécurité.
+Le système d'exploitation alloue et contrôle l'accès aux ressources comme le processeur (CPU), la mémoire (RAM), les périphériques d'entrée/sortie (E/S) et le stockage. Par exemple, il décide quel processus utilise le CPU à un moment donné via l'ordonnancement (scheduling).
+Il fournit une interface graphique (GUI) ou en ligne de commande (CLI) pour interagir avec l'ordinateur. Des systèmes comme Windows ou macOS offrent des environnements graphiques intuitifs, tandis que Linux propose souvent des interfaces en terminal.
+Il charge les programmes en mémoire, gère leur exécution et assure la communication entre eux. Il isole les processus pour éviter les conflits, utilisant des mécanismes comme la mémoire virtuelle pour protéger l'espace mémoire de chaque programme.
+Il contrôle les accès aux fichiers et aux périphériques, applique des politiques de sécurité et gère le système de fichiers (par exemple, NTFS sur Windows, ext4 sur Linux). Il peut également inclure des fonctionnalités de réseau pour connecter l'ordinateur à Internet ou à d'autres appareils.
+En cas de panne ou d'erreur, le système d'exploitation tente de récupérer ou d'informer l'utilisateur, tout en maintenant la stabilité du système.
+
+#### Exemples de systèmes d'exploitation
+
+- **Windows** : Développé par Microsoft, largement utilisé sur les ordinateurs personnels. Il offre une interface graphique conviviale et supporte une multitude d'applications.
+
+- **macOS** : Créé par Apple, intégré aux ordinateurs Mac. Il est connu pour sa stabilité et son intégration avec l'écosystème Apple.
+
+- **Linux** : Un système open-source populaire dans les serveurs, les appareils embarqués et les ordinateurs personnels (via des distributions comme Ubuntu). Il est hautement personnalisable et gratuit.
+
+- **Android et iOS** : Pour les appareils mobiles, basés respectivement sur Linux et un noyau dérivé d'Unix. Ils gèrent les ressources limitées des smartphones et tablettes.
+
+#### Le noyau et les composants clés
+
+Au cœur du système d'exploitation se trouve le noyau (kernel), qui gère directement le matériel. Les autres composants incluent les pilotes (drivers) pour les périphériques, les bibliothèques système et les utilitaires. Le système d'exploitation permet le multitâche (exécution simultanée de plusieurs programmes) et le multithreading (gestion des threads au sein d'un processus), optimisant l'utilisation des processeurs multi-cœurs.
+
+### Les processeurs 
+
+Le processeur (CPU, Central Processing Unit) est le "cerveau" de l'ordinateur, responsable de l'exécution des instructions des programmes. Il lit les instructions depuis la mémoire, les décode et les exécute, effectuant des calculs, des comparaisons et des transferts de données.
+Les processeurs modernes sont souvent multi-cœurs : un seul processeur contient plusieurs cœurs indépendants, chacun capable d'exécuter des instructions simultanément. Par exemple, un processeur quad-core a 4 cœurs, permettant de traiter plusieurs tâches en parallèle (multitâche).
+
+Un  processus est une instance d'un programme en cours d'exécution, avec son propre espace mémoire isolé. Le système d'exploitation gère plusieurs processus simultanément via l'ordonnancement (scheduling), alternant entre eux pour donner l'illusion de simultanéité. À l'intérieur d'un processus, les threads sont des unités d'exécution plus légères, partageant la même mémoire. Ils permettent la programmation concurrente au sein d'un programme (par exemple, un thread pour l'interface utilisateur, un autre pour les calculs). Le système alterne entre processus et threads pour maximiser l'utilisation du CPU, évitant les blocages.
+
+
+
+### La mémoire
+
+La mémoire est l’espace où l’ordinateur conserve les données et les programmes pendant leur exécution. On distingue plusieurs niveaux, organisés en hiérarchie : plus une mémoire est rapide, plus elle est petite et coûteuse. L’objectif est de rapprocher au maximum les données du processeur sans exploser les coûts.
+
+#### Mémoire vive (RAM)
+La RAM (Random Access Memory) est la mémoire principale. Elle contient les programmes et les données en cours d’utilisation. Elle est rapide mais volatile: tout son contenu disparaît quand l’ordinateur s’éteint. Elle utilise généralement de la DRAM (Dynamic Random Access Memory), qui nécessite une recharge périodique pour maintenir les données, offrant un bon compromis entre vitesse et coût.
+
+#### Mémoire cache
+La mémoire cache est une petite mémoire très rapide, située entre le processeur et la RAM. Elle garde les données les plus utilisées pour éviter des accès lents à la RAM. Elle utilise généralement de la SRAM (Static Random Access Memory), une technologie plus rapide et coûteuse que la DRAM, permettant des accès en quelques cycles d'horloge.
+Sur plusieurs systèmes, nous trouvons trois niveaux de mémoire cache.
+
+- **L1** : la plus petite et la plus rapide (souvent au plus près des cœurs du CPU).
+- **L2** : un peu plus grande, légèrement plus lente.
+- **L3** : partagée entre plusieurs cœurs, plus grande encore.
+
+L’idée clé est la localité : un programme a tendance à réutiliser les mêmes données (localité temporelle) et des données proches en mémoire (localité spatiale). Le cache exploite ces habitudes pour accélérer l’exécution.
+
+#### Mémoire virtuelle
+
+Sur la plupart des systèmes, le logiciel n'accède pas directement à la mémoire physique. Au lieu de cela, le logiciel accède à une mémoire virtuelle gérée par le système d'exploitation.
+Le système d’exploitation divise la mémoire en pages (par exemple, 4 Ko chacune) et peut échanger des pages entre la RAM et le disque (fichier d’échange ou *swap file*). Un processus donné reçoit donc un certain nombre de pages de mémoire.
+Le processeur utilise une unité de gestion de mémoire (MMU) pour traduire les adresses virtuelles (utilisées par les programmes) en adresses physiques (réelles en RAM). Si une page n’est pas en RAM, une faute de page se produit, et le système charge la page depuis le disque.
+
+### Entrées/sorties
+
+Les entrées/sorties (E/S) désignent toutes les interactions entre l’ordinateur et le monde extérieur. Cela inclut les périphériques de saisie, d’affichage, de stockage, ainsi que les communications réseau. Les périphériques sont gérés par des *ontrôleurs et des pilotes (drivers). Le processeur communique avec eux via des registres d’E/S ou en écrivant dans des zones mémoire spéciales (E/S mappées en mémoire).
+Les périphériques communiquent avec le système par deux moyens principaux. Un interruption  avertit le CPU quand il a terminé une opération. Le périphérique peut
+aussi utiliser le DMA (Direct Memory Access), dans ce cas  le périphérique transfère directement des données vers la RAM sans monopoliser le CPU.
+Dans la pratique, les E/S sont beaucoup plus lentes que le CPU. C’est pourquoi les systèmes utilisent des tampons (*buffers*) et des files d’attente afin de lisser les échanges et éviter de bloquer l’exécution.
+
+
+
+#### Périphériques d’entrée
+- Clavier, souris, écran tactile
+- Microphone, caméra
+- Capteurs (accéléromètre, GPS, etc.)
+
+#### Périphériques de sortie
+- Écran, projecteur
+- Haut-parleurs
+- Imprimante
+
+#### Stockage et réseau
+- Disques durs/SSD, clés USB
+- Réseau filaire ou Wi‑Fi (Internet)
+
+
+
+
+
 ## Langage machine
 
 Votre ordinateur ne connaît pas le language Java.
@@ -891,6 +975,7 @@ Par exemple, l’<strong>API Stream</strong> introduite en Java 8 fournit des ou
 En résumé, une API est une boîte à outils logicielle, conçue pour être utilisée par d’autres développeurs, qui facilite l’accès à des fonctionnalités complexes (réseau, interface graphique, traitement de données, etc.) tout en masquant les détails techniques.
 
 
+
 ## Taille des processeurs et des transistors
 
 Les processeurs modernes sont construits à l'aide de milliards de transistors. Le transistor est l'unité
@@ -1008,8 +1093,6 @@ document.getElementById('zoombtn').addEventListener('click', startZoomTimer);
 window.addEventListener('DOMContentLoaded', drawSVG);
 
 </script>
-
-
 
 ## Unités de mesures
 

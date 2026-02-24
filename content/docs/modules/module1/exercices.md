@@ -1,11 +1,10 @@
 ---
-title: Exercices sur les algorithmes
+title: Exercices sur les algorithmes et les ordinateurs
 weight: 11
 ---
 
 
-# Exercices sur les algorithmes et problèmes
-
+# Exercices sur les algorithmes et les ordinateurs
 La notion d'algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l'algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.
 
 {{% hint info %}}
@@ -760,8 +759,233 @@ Un temps moyen de \( O(1) \).
 
 </details>
 
+### Exercice 31 : Définition du système d'exploitation
+
+Qu'est-ce qu'un système d'exploitation ? Décrivez brièvement ses rôles principaux.
+
+<details>
+<summary>Réponse</summary>
+
+Un système d'exploitation est un logiciel qui agit comme interface entre l'utilisateur, les applications et le matériel. Ses rôles incluent la gestion des ressources, l'interface utilisateur, l'exécution des programmes, la sécurité et la gestion des erreurs.
+
+</details>
+
+### Exercice 32 : Gestion des ressources par le système d'exploitation
+
+Vrai ou Faux : Le système d'exploitation gère uniquement l'interface utilisateur et ne contrôle pas les ressources matérielles.
+
+<details>
+<summary>Réponse</summary>
+
+Faux : Le système d'exploitation gère aussi les ressources matérielles.
+
+</details>
+
+### Exercice 33 : Exemples de systèmes d'exploitation
+
+Nommez trois exemples de systèmes d'exploitation et décrivez brièvement leurs utilisations principales.
+
+<details>
+<summary>Réponse</summary>
+
+Windows (ordinateurs personnels), macOS (Mac), Linux (serveurs et personnalisation), Android/iOS (mobiles).
+
+</details>
+
+### Exercice 34 : Rôle du noyau
+
+Quel est le rôle du noyau dans un système d'exploitation ?
+
+<details>
+<summary>Réponse</summary>
+
+Le noyau gère directement le matériel et les ressources de base.
+
+</details>
+
+### Exercice 35 : Multitâche et multithreading
+
+Expliquez comment le système d'exploitation permet le multitâche et le multithreading.
+
+<details>
+<summary>Réponse</summary>
+
+Le multitâche permet l'exécution simultanée de plusieurs programmes via l'ordonnancement. Le multithreading gère les threads légers au sein d'un processus pour la concurrence.
+
+</details>
+
+### Exercice 36 : Fonction du processeur
+
+Que fait le processeur (CPU) dans un ordinateur ?
+
+<details>
+<summary>Réponse</summary>
+
+Le CPU exécute les instructions des programmes, effectuant calculs et transferts.
+
+</details>
+
+### Exercice 37 : Processeur multi-cœurs
+
+Qu'est-ce qu'un processeur multi-cœurs ? Donnez un exemple d'avantage.
+
+<details>
+<summary>Réponse</summary>
+
+Un processeur avec plusieurs cœurs indépendants, permettant le traitement parallèle (ex. : multitâche plus efficace).
+
+</details>
+
+### Exercice 38 : Différence entre processus et thread
+
+Quelle est la différence entre un processus et un thread ?
+
+<details>
+<summary>Réponse</summary>
+
+Un processus est une instance isolée d'un programme ; un thread est une unité d'exécution légère partageant la mémoire du processus.
+
+</details>
+
+### Exercice 39 : Ordonnancement des processus
+
+Comment le système d'exploitation gère-t-il l'ordonnancement des processus ?
+
+<details>
+<summary>Réponse</summary>
+
+Via l'ordonnancement, en alternant entre processus pour maximiser l'utilisation du CPU.
+
+</details>
+
+### Exercice 40 : Partage de mémoire des threads
+
+Vrai ou Faux : Les threads partagent la même mémoire au sein d'un processus.
+
+<details>
+<summary>Réponse</summary>
+
+Vrai.
+
+</details>
+
+### Exercice 41 : Hiérarchie de la mémoire
+
+Expliquez la hiérarchie de la mémoire et pourquoi elle existe.
+
+<details>
+<summary>Réponse</summary>
+
+Hiérarchie : RAM, cache, etc., pour équilibrer vitesse et coût.
+
+</details>
+
+### Exercice 42 : Différence RAM et cache
+
+Quelle est la différence entre RAM et mémoire cache en termes de vitesse et de volatilité ?
+
+<details>
+<summary>Réponse</summary>
+
+RAM : rapide mais volatile ; cache : très rapide, non volatile pour les données fréquentes.
+
+</details>
+
+### Exercice 43 : DRAM vs SRAM
+
+Comparez brièvement la DRAM et la SRAM.
+
+<details>
+<summary>Réponse</summary>
+
+DRAM : recharge périodique, bon compromis ; SRAM : accès rapide, coûteuse.
+
+</details>
+
+### Exercice 44 : Faute de page en mémoire virtuelle
+
+Que se passe-t-il lors d'une faute de page en mémoire virtuelle ?
+
+<details>
+<summary>Réponse</summary>
+
+Une faute de page charge la page depuis le disque en RAM.
+
+</details>
+
+### Exercice 45 : Localité temporelle et spatiale
+
+Qu'est-ce que la localité temporelle et spatiale, et comment le cache l'exploite-t-il ?
+
+<details>
+<summary>Réponse</summary>
+
+Localité temporelle : réutilisation des mêmes données ; spatiale : données proches. Le cache stocke les données récentes/proches pour accélérer.
+
+</details>
+
+### Exercice 46 : Définition des E/S
+
+Qu'est-ce que les entrées/sorties (E/S) dans un ordinateur ?
+
+<details>
+<summary>Réponse</summary>
+
+Interactions avec le monde extérieur via périphériques.
+
+</details>
+
+### Exercice 47 : Méthodes de communication E/S
+
+Expliquez les deux méthodes principales de communication entre le CPU et les périphériques.
+
+<details>
+<summary>Réponse</summary>
+
+Interruptions (alerte CPU) et DMA (transfert direct vers RAM).
+
+</details>
+
+### Exercice 48 : DMA
+
+Que signifie DMA et pourquoi est-il utile ?
+
+<details>
+<summary>Réponse</summary>
+
+Direct Memory Access : transfert sans monopoliser le CPU, utile pour la performance.
+
+</details>
+
+### Exercice 49 : Classification des périphériques
+
+Classez les exemples suivants en périphériques d'entrée, de sortie ou de stockage/réseau :
+- Clavier
+- Écran
+- Disque dur
+- Microphone
+- Réseau Wi-Fi
+
+<details>
+<summary>Réponse</summary>
+
+Entrée : Clavier, Microphone ; Sortie : Écran ; Stockage/Réseau : Disque dur, Réseau Wi-Fi.
+
+</details>
+
+### Exercice 50 : Utilité des tampons en E/S
+
+Pourquoi utilise-t-on des tampons (buffers) dans les E/S ?
+
+<details>
+<summary>Réponse</summary>
+
+Pour lisser les échanges lents et éviter les blocages du CPU.
+
+</details>
+
+
+
 ### Vidéos suggérées
 
 Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
-
-
