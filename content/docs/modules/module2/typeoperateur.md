@@ -259,6 +259,22 @@ public class RecordExample {
 record Personne(String nom, int age) {}
 {{</inlineJava>}}
 
+
+
+Voici un autre exempe:  `record Compteur(int somme, int compte) {}` définit automatiquement une classe finale appelée `Compteur` avec deux champs immuables (`somme` et `compte`), un constructeur canonique qui prend ces deux valeurs. Dans la méthode `main()`, on crée une instance avec `new Compteur(1, 2)`, puis on l’affiche avec `System.out.println`. Grâce à l’implémentation automatique de `toString()` fournie par le record, cela affiche quelque chose comme :  
+`mon compteur Compteur[somme=1, compte=2]`.  
+C’est donc une manière très concise et moderne d’écrire une petite classe de données en Java sans avoir à écrire manuellement le constructeur et les autres méthodes.
+
+{{<inlineJava path="example.java" lang="java">}}
+
+record Compteur(int somme, int compte) {}
+
+void main() {
+    Compteur c = new Compteur(1, 2);
+    System.out.println("mon compteur " + c);
+}
+{{</inlineJava>}}
+
 ### Les blocs de texte
 
 
