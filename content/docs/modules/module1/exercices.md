@@ -5,6 +5,7 @@ weight: 11
 
 
 # Exercices sur les algorithmes et les ordinateurs
+
 La notion d'algorithme a été abordée implicitement dès les premiers cours de mathématiques, par exemple avec l'algorithme de la division longue. Ces exercices visent à vous faire décrire formellement un algorithme. La principale difficulté pour la plupart des étudiants réside dans la rigueur et la précision requises. Au-delà d’un certain point, il n’existe pas de lectures supplémentaires : la pratique est essentielle.
 
 {{% hint info %}}
