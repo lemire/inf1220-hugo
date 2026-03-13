@@ -25,7 +25,12 @@ Les travaux sont strictement individuels, et tout échange, notamment sur les r�
 
 ### Complexe ou simple?
 
-Un bon programmeur doit avoir du goût, du style.
+Un bon programmeur doit avoir du goût, du style. Dans ce cours, nous vous encourageons à 
+écrire du code élégant. Évitez d'avoir trop de variables inutiles. Évitez les embranchements
+complexes.
+Votre code doit être *lisible* et *compréhensible*. Prenez quelques minutes une fois que
+vous avez une solution correcte pour voir si vous ne pouvez pas la simplifier.
+En général, une solution trop longue sera plus difficile à comprendre.
 
 ### Mettre en forme votre code Java
 

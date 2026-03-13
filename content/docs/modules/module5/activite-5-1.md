@@ -1517,7 +1517,6 @@ La table ci-dessous recense les principales interfaces de la bibliothèque stand
 | BiConsumer | java.util.function | Accepte deux arguments pour effectuer une opération sans retourner de résultat. |
 | BiFunction | java.util.function | Transforme deux arguments en un résultat d'un type donné. |
 | BiPredicate | java.util.function | Teste une condition sur deux arguments et retourne un booléen. |
-| Optional | java.util | Encapsule un objet pouvant être null pour éviter les NullPointerException. |
 | Stream | java.util.stream | Permet le traitement fonctionnel de collections via des opérations comme map et filter. |
 | Deque | java.util | Définit une file à double extrémité, supportant l'ajout/retrait aux deux bouts. |
 | NavigableMap | java.util | Étend Map pour des opérations basées sur l'ordre des clés, comme les recherches par proximité. |

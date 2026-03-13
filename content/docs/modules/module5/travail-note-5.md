@@ -20,6 +20,15 @@ La date de fin de cours, fixée par l’Université, est non négociable par les
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Le fichier PDF doit contenir le code Java, intégré de manière à faciliter la correction, sans fichiers séparés. La préparation rigoureuse, incluant la maîtrise des concepts et la vérification du travail, est essentielle pour éviter les erreurs et répondre aux attentes du cours.
 
 
+### Complexe ou simple?
+
+Un bon programmeur doit avoir du goût, du style. Dans ce cours, nous vous encourageons à 
+écrire du code élégant. Évitez d'avoir trop de variables inutiles. Évitez les embranchements
+complexes.
+Votre code doit être *lisible* et *compréhensible*. Prenez quelques minutes une fois que
+vous avez une solution correcte pour voir si vous ne pouvez pas la simplifier.
+En général, une solution trop longue sera plus difficile à comprendre.
+
 
 ### Mettre en forme votre code Java
 
