@@ -16,6 +16,7 @@ Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d'un ex
 | Travail Noté #4      | Les flux d'entrée et de sortie           | 11                 |
 | Travail Noté #5      | Héritage et polymorphismes               | 14                 |
 | Examen               | L'ensemble du cours                      | 15                 |
+| Entretien de suivi               | L'ensemble du cours                      | 15                 |
 
 
 La semaine de remise des travaux est une suggestion. Néanmoins, vous devez compléter tous les travaux avant la date de fin de cours.
@@ -35,3 +36,5 @@ Dans tous les cas, vous devez expliquer vos solutions.
 
 Les travaux notés sont des travaux individuels. Vous devez les réaliser seul. L'utilisation de l'intelligence artificielle est permise, et même
 encouragée, mais vous devez l'utiliser de manière responsable. Un copier-coller de ChatGPT n'est pas acceptable.
+
+*Note*. L'entretien de suivi est obligatoire. Il est de votre responsabilité de prendre rendez-vous pour l'entretien de suivi après votre examen.

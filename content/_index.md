@@ -114,7 +114,9 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 Que ce soit dans les travaux notés ou à l'examen, vous devez produire vos propres réponses. Vous devez pleinement
 maîtriser ces réponses. Le cours se termine par un entretien de suivi obligatoire. Au cours de cet entretien, nous allons vérifier que vous êtes capable d'expliquer vos solutions de vive voix, sans aide. Un échec à l'entretien de suivi entraîne un échec au  cours. Il n'y a aucune possibilité  de reprise.
 
-
+Suite à votre examen, **vous devez** prendre rendez-vous avec la personne qui vous encadre.
+**Vous devez** vous identifier. Et **vous devrez** satisfaire la personne qui vous encadre
+que vos réponses à l'examen sont les vôtres et que vous maîtrisez la matière.
 
 
 {{% /hint  %}}

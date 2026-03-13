@@ -32,7 +32,7 @@ rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/"
 
 ## Entretien de suivi
 
-<p>L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen. Il nous permet de vérifier que vous êtes capable d'expliquer les solutions que vous avez soumises de vive voix.</p>
+<p>L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen. Il nous permet de vérifier que vous êtes capable d'expliquer les solutions que vous avez soumises de vive voix. Vous devez faire les démarches nécessaires pour passer l'entretien de suivi.</p>
 
 
 ### Microsoft Teams
@@ -68,6 +68,7 @@ Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en 
 pour les raisons suivantes.</p>
 
 <ul>
+<li>Vous n'avez pas pris rendez-vous pour l'entretien;</li>
 <li>Vous ne vous présentez pas à l'entretien;</li>
 <li>Vous ne présentez pas de pièce d'identité avec photo;</li>
 <li>Vous n'arrivez pas à répondre aux questions portant sur votre examen de manière satisfaisante;</li>
