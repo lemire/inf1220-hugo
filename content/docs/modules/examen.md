@@ -173,13 +173,13 @@ Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
 ## Résultat et rétroaction sur l'examen
 
-<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception). Quant à l'entretien de suivi&nbsp;: un échec à l'entretien de suivi est sans appel.</p>
+<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception). Quant à l'entretien de suivi&nbsp;: un échec à l'entretien de suivi est sans appel. Il est de votre responsabilité de vous assurer de passer l'entretien de suivi. Vous ne recevrez pas de rapport justificatif en cas d'échec à l'entretien de suivi&nbsp;: vous devez être capable de répondre aux questions de l'examinateur de manière satisfaisante.</p>
 
 {{% hint danger %}}
 
 
 Que ce soit pour l'examen ou pour l'entretien de suivi, il n'y a aucune possibilité de reprise.
-
+Par ailleurs, ce sont des activités obligatoires. Vous devez passer l'examen et l'entretien de suivi. Il est de votre responsabilité d'y voir.
 
 {{% /hint  %}}
 
