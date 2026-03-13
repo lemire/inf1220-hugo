@@ -272,8 +272,10 @@ record Compteur(int somme, int compte) {}
 void main() {
     Compteur c = new Compteur(1, 2);
     System.out.println("mon compteur " + c);
+    System.out.println("la somme " + c.somme());
 }
 {{</inlineJava>}}
+
 
 ### Les blocs de texte
 

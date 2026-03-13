@@ -783,6 +783,195 @@ public class FunctionPredicateExemples {
 
 
 
+
+## Exemple de simplification
+
+### Conventionel
+{{<inlineJava path="Main.java" lang="java" >}}
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> prenoms = Arrays.asList("Alice", "Bob", "Charlie", "David");
+        List<String> resultat = new ArrayList<>();
+        for (String prenom : prenoms) {
+            if (prenom.length() > 3) {
+                resultat.add(prenom.toUpperCase());
+            }
+        }
+        System.out.println(resultat);
+    }
+}
+{{</inlineJava>}}
+
+### Moderne
+{{<inlineJava path="Main.java" lang="java" >}}
+void main() {
+    var prenoms = List.of("Alice", "Bob", "Charlie", "David");
+    var resultat = prenoms.stream()
+    .filter(p -> p.length() > 3)
+    .map(String::toUpperCase)
+    .toList();
+    System.out.println(resultat);
+}
+{{</inlineJava>}}
+
+Voici la suite de ton article :
+
+---
+
+## Optional
+
+La clase `Optional` permet de traiter le cas où une méthode peut ne pas retourner une valeur. L'approche conventionnelle consiste à retourner la valeur par défaut (`null`), mais c'est une stratégie qui est parfois hasardeuse.
+
+Ainsi, au lieu d'écrire :
+
+```java {style=github}
+String nom = getNomUtilisateur();     // peut retourner null
+if (nom != null) {
+    System.out.println(nom.toUpperCase());
+}
+```
+
+On préfère souvent :
+
+```java {style=github}
+Optional<String> nom = getNomUtilisateurOptional();
+nom.ifPresent(n -> System.out.println(n.toUpperCase()));
+```
+Avec `Optional`, on peut définir une valeur par défaut facilement.
+```java {style=github}
+Optional<String> prenom = chercherPrenom(id);
+String resultat = prenom.orElse("Visiteur");
+```
+
+Il existe trois façons de construire un `Optional` :
+
+```java {style=github}
+Optional<String> vide    = Optional.empty();           // absence explicite de valeur
+Optional<String> present = Optional.of("Alice");       // valeur garantie non-null
+Optional<String> maybe   = Optional.ofNullable(valeur);// valeur potentiellement null
+```
+
+
+| Méthode | Comportement |
+|---|---|
+| `get()` | Retourne la valeur ou lève `NoSuchElementException` |
+| `isPresent()` | `true` si une valeur est présente |
+| `isEmpty()` | `true` si aucune valeur *(Java 11+)* |
+| `ifPresent(consumer)` | Exécute le bloc seulement si une valeur existe |
+
+```java {style=github}
+Optional<String> opt = Optional.of("Bonjour");
+
+if (opt.isPresent()) {
+    System.out.println(opt.get()); // "Bonjour"
+}
+
+// Version plus élégante
+opt.ifPresent(System.out::println);
+```
+
+
+Lorsqu'aucune valeur n'est présente, plusieurs alternatives s'offrent à nous :
+
+```java {style=github}
+Optional<String> opt = Optional.empty();
+
+// Valeur par défaut statique
+String s1 = opt.orElse("Inconnu");
+
+// Valeur calculée à la demande (lazy)
+String s2 = opt.orElseGet(() -> genererNomParDefaut());
+
+// Lancer une exception personnalisée
+String s3 = opt.orElseThrow(() -> new IllegalStateException("Aucun résultat"));
+```
+
+La différence entre `orElse` et `orElseGet` est importante en termes de performance : `orElse` évalue toujours l'expression passée en argument, même si une valeur est présente, tandis qu'`orElseGet` n'invoque le fournisseur que si nécessaire.
+
+
+`Optional` supporte des opérations fonctionnelles similaires aux streams :
+
+```java {style=github}
+Optional<String> nom = Optional.of("alice");
+
+// map : transforme la valeur si présente
+Optional<String> nomMaj = nom.map(String::toUpperCase); // Optional["ALICE"]
+
+// filter : conserve la valeur seulement si le prédicat est vrai
+Optional<String> long = nom.filter(n -> n.length() > 3); // Optional["alice"]
+
+// flatMap : évite les Optional<Optional<T>>
+Optional<String> ville = utilisateur.flatMap(u -> u.getVille());
+```
+
+Voici un exemple complet.
+
+{{<inlineJava path="GestionUtilisateur.java" lang="java">}}
+import java.util.Optional;
+
+public class GestionUtilisateur {
+
+    // Simule une base de données avec 3 utilisateurs
+    static String[] noms      = {"Alice", "Bob", null};
+    static String[] emails    = {"alice@mail.com", null, "carlos@mail.com"};
+    static String[] telephones = {"+33 6 12 34 56", null, null};
+
+    // Retourne un Optional selon l'index
+    static Optional<String> getNom(int id) {
+        if (id < 0 || id >= noms.length) return Optional.empty();
+        return Optional.ofNullable(noms[id]);
+    }
+
+    static Optional<String> getEmail(int id) {
+        if (id < 0 || id >= emails.length) return Optional.empty();
+        return Optional.ofNullable(emails[id]);
+    }
+
+    static Optional<String> getTelephone(int id) {
+        if (id < 0 || id >= telephones.length) return Optional.empty();
+        return Optional.ofNullable(telephones[id]);
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("=== Infos des utilisateurs ===\n");
+
+        for (int id = 0; id < 3; id++) {
+
+            System.out.println("Utilisateur #" + id);
+
+            // orElse : valeur par défaut si absent
+            String nom = getNom(id).orElse("Nom inconnu");
+            System.out.println("  Nom       : " + nom);
+
+            // map : transforme la valeur si présente
+            String email = getEmail(id)
+                    .map(String::toUpperCase)
+                    .orElse("Pas d'email");
+            System.out.println("  Email     : " + email);
+
+            // ifPresent : exécute le code seulement si la valeur existe
+            System.out.print("  Téléphone : ");
+            getTelephone(id).ifPresent(tel -> System.out.print(tel));
+            if (getTelephone(id).isEmpty()) System.out.print("Non renseigné");
+            System.out.println();
+
+            System.out.println();
+        }
+
+        // Cas : ID inexistant
+        System.out.println("Utilisateur #99");
+        String nom = getNom(99).orElse("Utilisateur introuvable");
+        System.out.println("  Nom : " + nom);
+    }
+}
+{{</inlineJava>}}
+
+
 ## Vidéo optionnelle 
 
 Nous vous invitons à regarder cette vidéo qui résume certaines des grandes idées de la programmation fonctionnelle en Java.

@@ -12,6 +12,15 @@ La date de fin de cours, fixée par l’Université, est non négociable par les
 En cas d’incapacité à résoudre complètement un problème, les étudiants sont encouragés à expliquer leur démarche et leurs difficultés, mais aucune solution ne sera fournie après la correction. Aucun indice supplémentaire ne sera donné au-delà de l’énoncé pour garantir l’équité. La planification rigoureuse du temps est cruciale, car le dépôt dans les délais est de la responsabilité de l’étudiant. Les consignes insistent sur la nécessité de relire attentivement son travail avant soumission, car aucune modification n’est possible une fois le fichier déposé.
 
 
+### Complexe ou simple?
+
+Un bon programmeur doit avoir du goût, du style. Dans ce cours, nous vous encourageons à 
+écrire du code élégant. Évitez d'avoir trop de variables inutiles. Évitez les embranchements
+complexes.
+Votre code doit être *lisible* et *compréhensible*. Prenez quelques minutes une fois que
+vous avez une solution correcte pour voir si vous ne pouvez pas la simplifier.
+En général, une solution trop longue sera plus difficile à comprendre.
+
 
 ### Mettre en forme votre code Java
 

@@ -1387,6 +1387,39 @@ public class ListeNiveauxImmuable {
 
 Dans cet exemple, `List.of` crée une liste immuable contenant trois niveaux de difficulté. Toute tentative de modification (via `add`, `remove` ou `set`) lève une `UnsupportedOperationException`, garantissant l’immuabilité. Avec `Collections.unmodifiableList`, une `ArrayList` modifiable est d’abord créée, puis enveloppée dans une vue immuable. Cependant, il est important de noter que la liste originale (`niveauxModifiables`) reste modifiable, et toute modification de celle-ci se reflète dans la vue immuable, ce qui peut être une source d’erreurs si la liste originale n’est pas protégée. Cet exemple montre l’avantage de `List.of` pour sa simplicité et sa sécurité accrue.
 
+
+
+##### Exemple
+
+###### Conventionel
+
+{{<inlineJava path="Main.java" lang="java" >}}
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Style 1: classic ArrayList + add
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        System.out.println(numbers);
+    }
+}
+{{</inlineJava>}}
+
+###### Moderne
+
+{{<inlineJava path="Main.java" lang="java" >}}
+void main() {
+  var numbers = List.of(1, 2, 3);
+  System.out.println(numbers);
+}
+{{</inlineJava>}}
+
+
 #### Création d’une Map immuable
 
 Une `Map` immuable est une structure associant des clés uniques à des valeurs, où ni les paires clé-valeur, ni les clés, ni les valeurs ne peuvent être modifiées après la création. Depuis Java 9, la méthode statique `Map.of` (et ses variantes comme `Map.ofEntries`) permet de créer des *mappings* immuables de manière concise. Comme pour `List.of`, ces *mappings* n’acceptent pas de clés ou de valeurs `null` (sauf si explicitement spécifié) et lèvent une `UnsupportedOperationException` en cas de tentative de modification. Pour les versions antérieures ou pour des cas où une `Map` existante doit être rendue immuable, `Collections.unmodifiableMap` offre une solution en enveloppant une `Map` existante.

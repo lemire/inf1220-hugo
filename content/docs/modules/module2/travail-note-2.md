@@ -23,6 +23,10 @@ Les travaux doivent être remis sous forme de fichier PDF via l’outil de dép�
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant mener à une note de zéro ou à une exclusion. La recherche sur le web est encouragée, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La présentation, l’analyse et la clarté des explications sont prioritaires lors de la correction, qui valorise le raisonnement et la qualité du texte en français, plus que le code seul.
 
 
+### Complexe ou simple?
+
+Un bon programmeur doit avoir du goût, du style.
+
 ### Mettre en forme votre code Java
 
 
