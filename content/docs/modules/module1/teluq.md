@@ -15,6 +15,8 @@ en ligne de ce type.
 
 ## Le modèle de l’Université TÉLUQ
 
+{{< figure src="/comics/modelteluq.jpg" alt="Le modèle de l'Université TÉLUQ" >}}
+
 Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.
 
 Mener à terme un cours à l’Université TÉLUQ exige de la persévérance et de la motivation, ainsi que de l’autonomie et de la discipline. En vous inscrivant à un cours à distance, vous adoptez un modèle différent de celui d’un cours sur campus. Vous devez organiser votre apprentissage de manière autonome, en utilisant les ressources didactiques et d’encadrement mises à votre disposition, à l’endroit et au moment de votre choix.
