@@ -200,106 +200,110 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Pong extends JPanel implements ActionListener, KeyListener {
-    private Timer timer;
-    private int ballX = 200, ballY = 200;
-    private int ballVelX = 3, ballVelY = 3;
-    private int paddle1Y = 150, paddle2Y = 150;
-    private int paddleSpeed = 5;
-    private int player1Score = 0, player2Score = 0;
-    private final int PADDLE_HEIGHT = 80;
-    private final int PADDLE_WIDTH = 15;
-    private final int BALL_SIZE = 15;
-    private final int AI_PADDLE_HEIGHT = 60;
-    private boolean upPressed = false, downPressed = false;
+public class Pong extends JPanel {
+
+    // --- Constantes ---
+    static final int W = 600, H = 400, BALL = 15;
+    static final int PW = 15, PH = 80, AIH = 60, SPEED = 5;
+
+    // --- État du jeu via records mutables simulés avec des tableaux ---
+    int ballX = W/2, ballY = H/2;
+    int velX = 3, velY = 3;
+    int p1Y = 150, p2Y = 150;
+    int score1 = 0, score2 = 0;
+    boolean up, down;
 
     public Pong() {
-        setPreferredSize(new Dimension(600, 400));
+        setPreferredSize(new Dimension(W, H));
         setBackground(Color.BLACK);
         setFocusable(true);
-        addKeyListener(this);
-        timer = new Timer(10, this);
-        timer.start();
+
+        // KeyListener en lambda (Java 21 : adapter anonyme simplifié)
+        addKeyListener(new KeyAdapter() {
+            @Override public void keyPressed(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_UP   -> up   = true;
+                    case KeyEvent.VK_DOWN -> down = true;
+                }
+            }
+            @Override public void keyReleased(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_UP   -> up   = false;
+                    case KeyEvent.VK_DOWN -> down = false;
+                }
+            }
+        });
+
+        // Timer avec lambda au lieu d'implémenter ActionListener
+        new Timer(10, e -> update()).start();
+    }
+
+    void update() {
+        // Joueur 1
+        if (up   && p1Y > 0)        p1Y -= SPEED;
+        if (down && p1Y < H - PH)   p1Y += SPEED;
+
+        // IA (joueur 2)
+        if (velX > 0) {
+            if (p2Y + AIH/2 < ballY && p2Y < H - AIH) p2Y += 3;
+            else if (p2Y + AIH/2 > ballY && p2Y > 0)  p2Y -= 3;
+        }
+
+        // Déplacement balle
+        ballX += velX;
+        ballY += velY;
+
+        // Rebond haut/bas
+        if (ballY <= 0 || ballY >= H - BALL) velY = -velY;
+
+        // Collision raquette 1
+        if (ballX <= 35 && ballX >= 20 && ballY >= p1Y - BALL && ballY <= p1Y + PH) {
+            if (velX < 0) velX = -velX;
+            velX++;
+        }
+
+        // Collision raquette 2
+        if (ballX >= 550 && ballX <= 565 && ballY >= p2Y - BALL && ballY <= p2Y + AIH) {
+            if (velX > 0) velX = -velX;
+            velX--;
+        }
+
+        // Points & reset
+        if (ballX < 0)      { score2++; reset(); }
+        if (ballX > W)      { score1++; reset(); }
+
+        repaint();
+    }
+
+    void reset() {
+        ballX = W/2 - BALL/2;
+        ballY = H/2 - BALL/2;
+        velX  = Math.random() > 0.5 ? 3 : -3;
+        velY  = Math.random() > 0.5 ? 3 : -3;
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+
         g.setColor(Color.WHITE);
-        g.fillRect(20, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT);
-        g.fillRect(565, paddle2Y, PADDLE_WIDTH, AI_PADDLE_HEIGHT);
-        g.fillOval(ballX, ballY, BALL_SIZE, BALL_SIZE);
+        g.fillRect(20,  p1Y, PW, PH);           // Raquette 1
+        g.fillRect(565, p2Y, PW, AIH);           // Raquette 2
+        g.fillOval(ballX, ballY, BALL, BALL);    // Balle
+
         g.setColor(Color.GRAY);
-        for (int i = 0; i < getHeight(); i += 20) {
-            g.fillRect(300, i, 2, 10);
-        }
+        for (int i = 0; i < H; i += 20)
+            g.fillRect(300, i, 2, 10);           // Ligne centrale
+
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.BOLD, 40));
-        g.drawString(String.valueOf(player1Score), 220, 50);
-        g.drawString(String.valueOf(player2Score), 360, 50);
+        g.drawString(String.valueOf(score1), 220, 50);
+        g.drawString(String.valueOf(score2), 360, 50);
     }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (upPressed && paddle1Y > 0) paddle1Y -= paddleSpeed;
-        if (downPressed && paddle1Y < getHeight() - PADDLE_HEIGHT) paddle1Y += paddleSpeed;
-        if (ballVelX > 0) {
-            if (paddle2Y + AI_PADDLE_HEIGHT / 2 < ballY && paddle2Y < getHeight() - AI_PADDLE_HEIGHT) paddle2Y += 3;
-            else if (paddle2Y + AI_PADDLE_HEIGHT / 2 > ballY && paddle2Y > 0) paddle2Y -= 3;
-        }
-        ballX += ballVelX;
-        ballY += ballVelY;
-        if (ballY <= 0 || ballY >= getHeight() - BALL_SIZE) {
-            ballVelY = -ballVelY;
-        }
-        if (ballX <= 35 && ballX >= 20 && ballY >= paddle1Y - BALL_SIZE && ballY <= paddle1Y + PADDLE_HEIGHT) {
-            if (ballVelX < 0) ballVelX = -ballVelX;
-            ballVelX++;
-        }
-        if (ballX >= 550 && ballX <= 565 && ballY >= paddle2Y - BALL_SIZE && ballY <= paddle2Y + AI_PADDLE_HEIGHT) {
-            if (ballVelX > 0) ballVelX = -ballVelX;
-            ballVelX--;
-        }
-        if (ballX < 0) {
-            player2Score++;
-            resetBall();
-        }
-        if (ballX > getWidth()) {
-            player1Score++;
-            resetBall();
-        }
-        repaint();
-    }
-
-    private void resetBall() {
-        ballX = getWidth() / 2 - BALL_SIZE / 2;
-        ballY = getHeight() / 2 - BALL_SIZE / 2;
-        ballVelX = (Math.random() > 0.5 ? 3 : -3);
-        ballVelY = (Math.random() > 0.5 ? 3 : -3);
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_UP -> upPressed = true;
-            case KeyEvent.VK_DOWN -> downPressed = true;
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_UP -> upPressed = false;
-            case KeyEvent.VK_DOWN -> downPressed = false;
-        }
-    }
-
-    @Override public void keyTyped(KeyEvent e) {}
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Pong");
-        Pong game = new Pong();
-        frame.add(game);
+        var frame = new JFrame("Pong");
+        frame.add(new Pong());
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
