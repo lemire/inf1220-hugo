@@ -7,6 +7,10 @@ weight: 50
 
 La conception de méthodes (ou fonctions) est un pilier de la programmation structurée et orientée objet. Une méthode permet d’isoler une opération ou un calcul précis, de lui donner un nom, et de la réutiliser à volonté dans différents contextes du programme. Cela favorise la clarté, la maintenance et la réutilisabilité du code. Lorsqu’on appelle une méthode, on peut lui transmettre des informations (paramètres) et récupérer un résultat (valeur de retour). En Java, chaque méthode appartient à une classe : elle définit le comportement que les objets de cette classe peuvent adopter ou les opérations qu’ils peuvent effectuer. Bien concevoir ses méthodes, c’est donc apprendre à découper un problème en sous-tâches logiques, à nommer clairement les opérations, et à limiter la duplication de code.
 
+
+{{< figure src="/comics/fonction.jpg" alt="Illustration d'une fonction" >}}
+
+
 ## Les variables d’instance et de classe
 
 En programmation orientée objet avec Java, les variables sont essentielles pour stocker les données associées à une classe ou à ses objets. On distingue les variables d’instance, propres à chaque objet créé à partir d’une classe, et les variables de classe, partagées par toutes les instances. Leur portée, c’est-à-dire la partie du programme où elles sont accessibles, dépend de leur déclaration et de leur nature.

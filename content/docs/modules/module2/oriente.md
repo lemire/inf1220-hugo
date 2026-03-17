@@ -175,7 +175,7 @@ Pour vérifier votre maîtrise de votre environnement, suivez les étapes suivan
 - Exécutez le code. Vous devriez voir apparaître un petit jeu de pong sur votre ordinateur.
 
 
-![Jeu Pong](/pong.png)
+{{< figure src="/pong.png" alt="Jeu Pong" >}}
 
 Dans une console, vous pouvez obtenir le résultat souhaité avec ces commandes:
 
