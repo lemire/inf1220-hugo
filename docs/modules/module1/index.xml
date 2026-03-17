@@ -10,6 +10,10 @@ en ligne de ce type.&lt;/p&gt;
  Le modèle de l’Université TÉLUQ
  &lt;a class="anchor" href="#le-mod%c3%a8le-de-luniversit%c3%a9-t%c3%a9luq"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;figure&gt;&lt;img src="https://lemire.github.io/inf1220-hugo/comics/modelteluq.jpg"
+ alt="Le modèle de l&amp;#39;Université TÉLUQ"&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;Plusieurs étudiants inscrits au cours INF 1220 en sont en leur premier cours à l’Université TÉLUQ. À l’Université TÉLUQ, nous offrons un enseignement personnalisé : vous débutez et terminez le cours à une date qui vous convient, vous faites les travaux au sein du cours à votre rythme. Le cours est conçu pour être autoportant : un travail pédagogique substantiel a été fait afin que l’étudiant autonome puisse compléter le cours par lui-même, sans aide. Un professeur ou une personne tutrice est là pour répondre à vos questions lorsque vous êtes devant une impasse après avoir fait les lectures et vos recherches, à tous les moments de votre parcours. Ce modèle diffère de celui des Universités traditionnelles où il y a de rencontres de groupes hebdomadaires et où tous les étudiants cheminent en même temps. Les deux modèles ont des forces et des faiblesses. L’Université TÉLUQ offre plus de flexibilité, mais son modèle exige plus d’autonomie intellectuelle de la part des étudiants.&lt;/p&gt;</description></item><item><title>Robot conversationnel et intelligence artificielle</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/robot/</guid><description>&lt;h1 id="robot-conversationnel-et-intelligence-artificielle"&gt;
  Robot conversationnel et intelligence artificielle
  &lt;a class="anchor" href="#robot-conversationnel-et-intelligence-artificielle"&gt;#&lt;/a&gt;
@@ -38,6 +42,10 @@ mémoire informatique.&lt;/p&gt;</description></item><item><title>Java pas à pa
  Court historique des langages de programmation
  &lt;a class="anchor" href="#court-historique-des-langages-de-programmation"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
+&lt;figure&gt;&lt;img src="https://lemire.github.io/inf1220-hugo/comics/langages.jpg"
+ alt="Les langages de programmation"&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;L’idée de programmer des machines remonte au 19e siècle, époque marquée par l’émergence des premières machines de calcul et d’automatisation. Dès 1801, les métiers à tisser Jacquard utilisaient des cartes perforées pour programmer des motifs textiles, préfigurant les concepts de codage. Cependant, c’est au milieu du 19e siècle qu’un jalon historique est posé avec les travaux d’Ada Lovelace (1815-1852) sur la machine analytique de Charles Babbage. Considérée comme la première programmeuse, elle rédigea des notes détaillées incluant un algorithme pour calculer les nombres de Bernoulli, démontrant qu’une machine pouvait exécuter des instructions complexes. Le langage Ada, créé dans les années 1980, rend hommage à cette contribution pionnière.&lt;/p&gt;</description></item><item><title>Les algorithmes</title><link>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf1220-hugo/docs/modules/module1/algorithmes/</guid><description>&lt;h1 id="les-algorithmes"&gt;
  Les algorithmes
  &lt;a class="anchor" href="#les-algorithmes"&gt;#&lt;/a&gt;
