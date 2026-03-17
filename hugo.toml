@@ -1,4 +1,5 @@
 baseURL = 'https://lemire.github.io/inf1220-hugo/'
+canonifyURLs = true
 languageCode = 'fr'
 defaultContentLanguage = 'fr'
 
