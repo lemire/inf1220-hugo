@@ -18,7 +18,7 @@ Les structures de contrôle permettent à l'algorithme de faire des choix de tra
 Le saut est une structure de contrôle fondamentale en informatique qui permet de modifier le flux d'exécution d’un algorithme en redirigeant l’exécution vers une autre partie du programme. Contrairement aux structures comme les embranchements (qui choisissent entre plusieurs chemins selon une condition) ou les boucles (qui répètent un bloc d’instructions), le saut est une instruction explicite qui transfère immédiatement le contrôle à une position spécifique dans le code, souvent marquée par une étiquette ou une adresse.
 Un saut peut être inconditionnel, où l’exécution est toujours redirigée vers une nouvelle position, ou conditionnel, où le saut dépend d’une condition booléenne.
 
-Un saut inconditionnel redirige l’exécution vers une étiquette ou une ligne spécifique sans vérifier de condition. En pseudo-code, cela peut être représenté ainsi :
+Un saut inconditionnel redirige l’exécution vers une étiquette ou une ligne spécifique sans vérifier de condition. En pseudocode, cela peut être représenté ainsi :
 
 ```
 ÉTIQUETTE debut
@@ -26,11 +26,11 @@ Un saut inconditionnel redirige l’exécution vers une étiquette ou une ligne 
 SAUTER À debut
 ```
 
-Dans cet exemple, l’algorithme affiche "Bonjour" et saute immédiatement à l’étiquette debut, créant une boucle infinie. Bien que rarement utilisé seul en pseudo-code, ce type de saut est courant dans les langages de bas niveau pour organiser le flux du programme
+Dans cet exemple, l’algorithme affiche "Bonjour" et saute immédiatement à l’étiquette debut, créant une boucle infinie. Bien que rarement utilisé seul en pseudocode, ce type de saut est courant dans les langages de bas niveau pour organiser le flux du programme
 
 ## L'embranchement comme structure de contrôle
 
-Un saut conditionnel (ou embranchement) dépend d’une condition booléenne. Si la condition est vraie, l’exécution saute à une étiquette donnée ; sinon, elle continue séquentiellement. Voici un exemple en pseudo-code :
+Un saut conditionnel (ou embranchement) dépend d’une condition booléenne. Si la condition est vraie, l’exécution saute à une étiquette donnée ; sinon, elle continue séquentiellement. Voici un exemple en pseudocode :
 
 ```
 lire nombre
@@ -46,10 +46,10 @@ SAUTER À fin
 
 En pratique, ces structures correspondent à poser des questions avec la syntaxe suivante : SI conditions ALORS opérations FIN SI. Il peut y avoir plusieurs conditions dans une structure de contrôle et la logique booléenne est utilisée pour les construire. Par exemple, SI a est égal 0 ET b est égal 1 ALORS faire c FIN SI. 
 
-Dans la notion de pseudo-code, il est également possible de faire une suite de structures de contrôle avec la syntaxe suivante : SI conditionA ALORS opérations SINON SI conditionB ALORS opérations SINON SI conditionC ALORS [et ainsi de suite] FIN SI. 
+Dans la notion de pseudocode, il est également possible de faire une suite de structures de contrôle avec la syntaxe suivante : SI conditionA ALORS opérations SINON SI conditionB ALORS opérations SINON SI conditionC ALORS [et ainsi de suite] FIN SI. 
 
 
-Voici un exemple en pseudo-code illustrant une suite de structures de contrôle avec plusieurs conditions pour classer un score obtenu à un examen :
+Voici un exemple en pseudocode illustrant une suite de structures de contrôle avec plusieurs conditions pour classer un score obtenu à un examen :
 
 ```
 lire score
@@ -157,7 +157,7 @@ Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur
 
 ## La fin d'un algorithme
 
-Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudo-code ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demande à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
+Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudocode ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demande à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
 
 ```plaintext
 x = 0
@@ -170,7 +170,7 @@ AFFICHE x
 
 La valeur x ne sera donc jamais affichée.
 
-Il arrive aussi qu'un pseudo-code doit retourner une valeur. Par convention, dès que la valeur attendue est retournée, l'algorithme prend fin. Ainsi donc, dans le cas suivant, la valeur 5 sera retournée.
+Il arrive aussi qu'un pseudocode doit retourner une valeur. Par convention, dès que la valeur attendue est retournée, l'algorithme prend fin. Ainsi donc, dans le cas suivant, la valeur 5 sera retournée.
 
 ```plaintext
 x = 0
@@ -181,9 +181,9 @@ FIN TANT QUE
 RETOURNE x
 ```
 
-## Exécution d'un pseudo-code
+## Exécution d'un pseudocode
 
-Pour comprendre un pseudo-code que vous venez de recevoir, ou pour tester un pseudo-code que vous venez de créer, il est essentiel de l'exécuter. Quand on exécute un pseudo-code, on se contente de lire les consignes logiques.
+Pour comprendre un pseudocode que vous venez de recevoir, ou pour tester un pseudocode que vous venez de créer, il est essentiel de l'exécuter. Quand on exécute un pseudocode, on se contente de lire les consignes logiques.
 
 Prenons un exemple:
 
@@ -209,7 +209,7 @@ graph TD
 {{< /mermaid >}}
 
 
-1. Je débute le pseudo-code avec la valeur 0 stockée dans la variable test.
+1. Je débute le pseudocode avec la valeur 0 stockée dans la variable test.
 2. J'entre dans la boucle TANT QUE.
 3. J'ajoute 22 à la variable test, le résultat est 22.
 4. J'entre dans la boucle TANT QUE.
@@ -223,7 +223,7 @@ graph TD
 12. Je quitte la boucle TANT QUE.
 13. Je retourne la valeur stockée dans la variable test, soit 110.
 
-Vous devez absolument être capable de faire de telles exécutions. Dans certains cas, votre pseudo-code va dépendre de paramètres: il faut alors exécuter le pseudo-code plus d'une fois, sur plusieurs cas de test. Dans certains cas, le pseudo-code peut prendre trop d'étapes pour qu'un humain puisse l'exécuter entièrement : vous devriez au moins en faire une partie.
+Vous devez absolument être capable de faire de telles exécutions. Dans certains cas, votre pseudocode va dépendre de paramètres: il faut alors exécuter le pseudocode plus d'une fois, sur plusieurs cas de test. Dans certains cas, le pseudocode peut prendre trop d'étapes pour qu'un humain puisse l'exécuter entièrement : vous devriez au moins en faire une partie.
 
 ## Vidéo suggérée
 

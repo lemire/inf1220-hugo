@@ -14,11 +14,11 @@ Pour réussir, les étudiants doivent présenter des solutions claires, précise
 ## Premier problème
 
 <p>
-Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l'algorithme doit accéder à aussi peu d'éléments du tableau que possible. Produisez un pseudo-code précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que  vous  souhaitez, tant que vos explications sont claires. Exécutez votre pseudo-code sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</p>
+Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l'algorithme doit accéder à aussi peu d'éléments du tableau que possible. Produisez un pseudocode précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que  vous  souhaitez, tant que vos explications sont claires. Exécutez votre pseudocode sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</p>
 
-<p>Vous devez exécuter votre pseudo-code ligne-par-ligne en indiquant à chaque ligne quelle est la valeur de toutes les variables. Votre exécution doit être rigoureuse. Si l'algorithme effectue 50 opérations, votre exécution devrait comprendre 50 lignes. </p>
+<p>Vous devez exécuter votre pseudocode ligne-par-ligne en indiquant à chaque ligne quelle est la valeur de toutes les variables. Votre exécution doit être rigoureuse. Si l'algorithme effectue 50 opérations, votre exécution devrait comprendre 50 lignes. </p>
 
-<p>Vous devez produire du pseudo-code: du code informatique (par ex. Java ou Python) n'est pas accepté. Votre pseudo-code doit être précis et lisible.</p>
+<p>Vous devez produire du pseudocode: du code informatique (par ex. Java ou Python) n'est pas accepté. Votre pseudocode doit être précis et lisible.</p>
 
 <p>Si vous produisez un algorithme logiquement incorrect, vous pourrez obtenir la note de zéro pour cette question. Si vous omettez d'inclure un compte-rendu détaillé de l'exécution, vous pouvez obtenir la note de zéro.</p>
 
@@ -28,12 +28,12 @@ Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tab
 
 Voici quelques indices concernant l'énoncé que vous pouvez prendre en compte pour vous aider. Un indice n'est jamais une question supplémentaire, un ajout à la question, ou une seconde partie. Un indice ne sert qu'à vous inspirer ou à vous aider.  Vous pouvez complètement ignorer les indices. Les indices ne visent qu'à vous aider si vous le souhaitez.
 <ol>
-<li><strong>Indice 1.</strong> Rendez-vous sur le site de votre intelligence artificielle préférée (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Nous souhaitons un algorithme qui détermine si la somme des éléments d’un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l’algorithme doit accéder à aussi peu d’éléments du tableau que possible. Produisez un pseudo-code précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que vous souhaitez, tant que vos explications sont claires. Exécutez votre pseudo-code sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</em>&nbsp;».</li>
+<li><strong>Indice 1.</strong> Rendez-vous sur le site de votre intelligence artificielle préférée (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Nous souhaitons un algorithme qui détermine si la somme des éléments d’un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l’algorithme doit accéder à aussi peu d’éléments du tableau que possible. Produisez un pseudocode précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que vous souhaitez, tant que vos explications sont claires. Exécutez votre pseudocode sur au moins 5 cas, incluant les deux cas suivants: le tableau [55,55,55,55] et le tableau [1,2,3,5,6].</em>&nbsp;».</li>
 <li><strong>Indice 2.</strong> Votre algorithme doit retourner soit vrai, soit faux.</li>
 <li><strong>Indice 3.</strong> Votre algorithme doit fonctionner même si le tableau a une longueur de zéro.</li>
 <li><strong>Indice 4.</strong> Votre algorithme doit fonctionner même si le tableau contient mille milliards d'éléments.</li>
 <li><strong>Indice 5.</strong> Imaginez qu'on vous donne ce problème. On vous donne un tableau de grande taille (contenant, disons, un million d'éléments) contenant des valeurs positives et on vous demande de déterminer, le plus rapidement possible, si la somme des valeurs du tableau excède 100. Que feriez-vous? Expliquez de façon précise ce que vous feriez dans cette situation. (Il s'agit d'un indice pour vous aider à répondre à l'énoncé, pas une nouvelle question. Le tableau qu'on vous invite à imaginer n'est pas un second tableau ou un tableau supplémentaire par rapport à l'énoncé.) </li>
-<li><strong>Indice 6.</strong> Commencez par le pseudo-code suivant qui calcule la somme des éléments d'un tableau. 
+<li><strong>Indice 6.</strong> Commencez par le pseudocode suivant qui calcule la somme des éléments d'un tableau. 
 
 ```text
 Entrées :
@@ -51,9 +51,9 @@ TANT QUE iterateur < la longueur de tableau FAIRE
 FIN TANT QUE
 ```
 
-(Vous n'êtes pas obligé de partir de ce pseudo-code. Il s'agit d'un indice, d'une suggestion. Ce bout de pseudo-code n'introduit pas une question supplémentaire. Le tableau qu'on y trouve n'est pas un second tableau en plus de celui de l'énoncé.)
+(Vous n'êtes pas obligé de partir de ce pseudocode. Il s'agit d'un indice, d'une suggestion. Ce bout de pseudocode n'introduit pas une question supplémentaire. Le tableau qu'on y trouve n'est pas un second tableau en plus de celui de l'énoncé.)
 </li>
-<li><strong>Indice 7.</strong> Ce n'est pas un problème de programmation Java, C#, C++ ou Python. Vous devez produire du pseudo-code qui est destiné à être lu et compris par un être humain. Il n'est pas nécessaire d'utiliser les constructions et types propres Java, C#, C++ ou Python. </li>
+<li><strong>Indice 7.</strong> Ce n'est pas un problème de programmation Java, C#, C++ ou Python. Vous devez produire du pseudocode qui est destiné à être lu et compris par un être humain. Il n'est pas nécessaire d'utiliser les constructions et types propres Java, C#, C++ ou Python. </li>
 <li><strong>Indice 8.</strong> Beaucoup trop d'étudiants essaient de faire ce travail sans avoir fait tous les exercices sérieusement. Si vous avez analysé et compris les exercices préparatoires pour ce problème, vous ne devriez avoir aucune difficulté. Il est pratiquement impossible de ne pas arriver à faire ce problème en ayant fait tous les exercices solutionnés et en ayant bien compris toutes les solutions. Il est de votre responsabilité de faire tous les exercices.</li>
 </ol>
 {{% /hint %}}
@@ -75,7 +75,7 @@ Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incl
 
 Un étudiant nous a offert la solution suivante. Elle est incorrecte. Pour les fins de ce travail, vous pouvez ignorer  la mise en page de la sortie (polices de caractères, espaces, etc.). L'erreur de l'étudiant est logique et non pas cosmétique.
 
-Expliquez l'erreur et offrez une version corrigée. Exécutez votre pseudo-code corrigé, ainsi que le pseudo-code original.  Expliquez les différences. <strong>Vous devez exécuter votre pseudo-code</strong>. Puisqu'il y a peut-être des dizaines d'itérations à calculer, vous pouvez résumer l'exécution sans aller dans chaque détail de chaque itération.
+Expliquez l'erreur et offrez une version corrigée. Exécutez votre pseudocode corrigé, ainsi que le pseudocode original.  Expliquez les différences. <strong>Vous devez exécuter votre pseudocode</strong>. Puisqu'il y a peut-être des dizaines d'itérations à calculer, vous pouvez résumer l'exécution sans aller dans chaque détail de chaque itération.
 
 Votre explication de l'erreur doit être claire et limpide. Si vous ne montrez pas que vous avez bien compris l'erreur et que vous êtes capable de l'expliquez clairement, vous pourrez recevoir une note de zéro pour cette question.
 

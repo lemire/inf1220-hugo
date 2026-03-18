@@ -12,14 +12,14 @@ weight: 30
 
 <p>Et c'est pire que vous pouvez peut-être l'imaginer. Même après avoir fait du Java pendant 30 années, on ne comprend pas tout. La grammaire, la syntaxe, est lourde, complexe, nuancée. C'est pire encore avec certains langages comme C++ que peu de gens au monde maîtrisent entièrement. Et même quand on comprend la syntaxe, comprendre ce que fait le code n'est pas toujours évident. Ce n'est pas parce qu'on connaît la grammaire française qu'on sait lire tous les textes en français.</p>
 
-<p>C'est là que l'intérêt du concept de pseudo-code prend tout son sens. Au coeur de la programmation, on trouve l'écriture d'algorithmes, et un algorithme existe indépendamment du langage de programmation. Le pseudo-code l'illustre parfaitement.</p>
+<p>C'est là que l'intérêt du concept de pseudocode prend tout son sens. Au coeur de la programmation, on trouve l'écriture d'algorithmes, et un algorithme existe indépendamment du langage de programmation. Le pseudocode l'illustre parfaitement.</p>
 <p>Il n'est donc pas nécessaire, pour programmer, de tout savoir et de tout comprendre. Vous ne terminerez pas le cours INF 1220 avec une maîtrise intégrale du Java. Plusieurs aspects resteront mystérieux à vos yeux. C'est normal.</p>
 
 Le cours ne couvre que les notions essentielles de la programmation Java. Malgré cela, vous ne maîtriserez pas toutes les notions vues dans le cours à la fin du cours. C'est normal.
 
 <p>Utilisez donc l'approche suivante. Quand vous rencontrez un nouveau code Java, ne le prenez pas dans son ensemble tout d'un coup. Faites comme vous le feriez en français : lisez une ligne à la fois. N'insistez pas pour tout comprendre. Développez une intuition pour les variables, les méthodes, etc. Allez-y par étape ! Prenez votre temps ! Prenez des notes. </p>
 
-<p>Il en va de même quand vous écrivez du code. Commencez par le plus simple, et progressez lentement, en prenant des notes, en vous laissant des commentaires. Souvent il est utile d'écrire le pseudo-code avant d'écrire le code en Java.</p>
+<p>Il en va de même quand vous écrivez du code. Commencez par le plus simple, et progressez lentement, en prenant des notes, en vous laissant des commentaires. Souvent il est utile d'écrire le pseudocode avant d'écrire le code en Java.</p>
 
 Le modèle pédagogique est donc fondé sur la répétition et pars du principe que la première fois que nous rencontrons une notion, celle-ci 
 nous échappe au moins partiellement. Ce n'est qu'en revenant plusieurs fois sur les mêmes idées que nous pouvons vraiment maîtriser une notion.

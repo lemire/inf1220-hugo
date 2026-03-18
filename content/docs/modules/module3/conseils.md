@@ -4,7 +4,7 @@ weight: 100
 ---
 # Recommandations
 
-Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudo-code ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.
+Pour aborder un problème algorithmique, adoptez une démarche structurée. Analysez d’abord le problème en le décomposant en étapes simples. Avant de coder, rédigez un pseudocode ou un plan pour clarifier la logique. Cette préparation limite les erreurs et facilite la maintenance.
 
 Privilégiez un code lisible avec des noms de variables explicites. Testez chaque étape avec des cas simples avant d’explorer des scénarios complexes. Cette validation progressive permet de repérer rapidement les anomalies et de garantir la robustesse de la solution.
 
@@ -129,7 +129,7 @@ Il est important de bien lire l’énoncé, de reformuler le problème avec ses 
 
 Décomposer un problème, c’est le diviser en étapes simples et logiques. Cela signifie :
 - Identifier les opérations de base à effectuer (par exemple, additionner des éléments, vérifier si un nombre est divisible par \( k \), parcourir un tableau).
-- Écrire ces étapes sous forme de liste ou de pseudo-code, sans se soucier tout de suite du langage de programmation.
+- Écrire ces étapes sous forme de liste ou de pseudocode, sans se soucier tout de suite du langage de programmation.
 
 Pour ce problème, une décomposition possible serait :
 1. Parcourir toutes les positions de début possibles pour un sous-tableau.

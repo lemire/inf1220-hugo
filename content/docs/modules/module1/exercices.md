@@ -19,9 +19,9 @@ Il est permis d’utiliser l'intelligence artificielle pour aider à comprendre 
 Comment procéder pour les exercices :
 
 1. Lisez attentivement la question.
-2. Cherchez une solution. Si vous ne trouvez pas immédiatement, consacrez 10 à 15 minutes à y réfléchir. Si le problème exact vous résiste, tentez une solution partielle. Pour cet exercice, vous devez produire du pseudo-code, et non du Java.
+2. Cherchez une solution. Si vous ne trouvez pas immédiatement, consacrez 10 à 15 minutes à y réfléchir. Si le problème exact vous résiste, tentez une solution partielle. Pour cet exercice, vous devez produire du pseudocode, et non du Java.
 3. Rédigez votre solution avec précision, comme une suite de consignes qu’un enfant pourrait suivre.
-4. Exécutez votre pseudo-code.
+4. Exécutez votre pseudocode.
 5. Consultez ensuite la ou les solutions proposées.
 6. Assurez-vous de comprendre toutes les solutions. Posez des questions si nécessaire, en fournissant votre propre solution pour appuyer vos interrogations. Comprendre les solutions proposées est impératif.
 
@@ -31,7 +31,7 @@ Pour lire les formules mathématiques sur le site du cours, utilisez un navigate
 
 Ces exercices sont conçus pour l’autoévaluation ; ils ne sont pas corrigés. Nous répondons cependant à vos questions sur la matière.
 
-Les solutions à ces exercices ne sont pas uniques. Il existe plusieurs syntaxes possibles pour décrire un algorithme en pseudo-code. Cela ne signifie pas que toutes les solutions sont correctes. Un pseudo-code peut être erroné s’il ne décrit pas une solution logiquement correcte ou s’il manque de précision pour être considéré comme un algorithme. Un pseudo-code doit pouvoir être exécuté littéralement par un humain sans jugement, comme un automate.
+Les solutions à ces exercices ne sont pas uniques. Il existe plusieurs syntaxes possibles pour décrire un algorithme en pseudocode. Cela ne signifie pas que toutes les solutions sont correctes. Un pseudocode peut être erroné s’il ne décrit pas une solution logiquement correcte ou s’il manque de précision pour être considéré comme un algorithme. Un pseudocode doit pouvoir être exécuté littéralement par un humain sans jugement, comme un automate.
 
 Rappel : les mathématiques du collégial sont un préalable obligatoire à ce cours. Une aisance en algèbre, fonctions et arithmétique est nécessaire. Sans ces prérequis, réussir ce cours peut être difficile.
 
@@ -46,7 +46,7 @@ Les exercices incluent une solution pour comparer votre approche à la nôtre. I
 ### Logiciels
 
 
-Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/) ou [PseudoFlow](https://online.pseudoflow.app). Cela n’est pas nécessaire, car le pseudo-code doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudo-code manuellement, sans outil. C’est l’essence du pseudo-code&nbsp;: il est indépendant des syntaxes et des outils.
+Certains étudiants utilisent des logiciels comme [AlgoBox](https://www.xm1math.net/algobox/) ou [PseudoFlow](https://online.pseudoflow.app). Cela n’est pas nécessaire, car le pseudocode doit être écrit dans vos propres mots. Si un logiciel vous aide, utilisez-le, mais vous devriez pouvoir écrire du pseudocode manuellement, sans outil. C’est l’essence du pseudocode&nbsp;: il est indépendant des syntaxes et des outils.
 
 
 ### Exercice 1 : La somme d’un tableau
@@ -55,11 +55,11 @@ Dans la plupart des langages informatiques, un tableau correspond à un vecteur 
 
 Pour manipuler le tableau, vous pouvez écrire «&nbsp;Récupérer le nombre à l’index i&nbsp;» (où i est une variable contenant l’index) ou utiliser une syntaxe proche des langages de programmation, par exemple : `Entier e = monTableau[i]`. Pour obtenir la longueur du tableau, utilisez «&nbsp;la taille de monTableau&nbsp;».
 
-Testez votre pseudo-code en l’appliquant ligne par ligne à un exemple, comme si vous étiez un robot. Prenez votre temps.
+Testez votre pseudocode en l’appliquant ligne par ligne à un exemple, comme si vous étiez un robot. Prenez votre temps.
 
 Si vous introduisez d’autres conventions de notation, soyez précis. Spécifiez le type de toutes vos variables et donnez explicitement des valeurs initiales, sauf si elles sont reçues en paramètre.
 
-Concevez cet algorithme en pseudo-code, en utilisant des termes concis, explicatifs et cohérents.
+Concevez cet algorithme en pseudocode, en utilisant des termes concis, explicatifs et cohérents.
 
 <details>
 <summary>Réponse</summary>
@@ -89,7 +89,7 @@ retourne somme
 
 ### Exercice 2 : La recherche d’un entier
 
-La recherche d’information dans une structure de données (tableau, graphe, arbre, etc.) est un domaine clé en informatique. Bien que les bases de données comme MySQL simplifient la recherche, il est souvent nécessaire de concevoir ses propres solutions. À partir de l’exercice 1, proposez un algorithme en pseudo-code pour vérifier si un entier (par exemple, un numéro de téléphone) est présent dans un tableau et retourner son index, ou -1 s’il est absent. Utilisez une structure itérative et une structure de contrôle (SI _ ALORS _ FIN SI).
+La recherche d’information dans une structure de données (tableau, graphe, arbre, etc.) est un domaine clé en informatique. Bien que les bases de données comme MySQL simplifient la recherche, il est souvent nécessaire de concevoir ses propres solutions. À partir de l’exercice 1, proposez un algorithme en pseudocode pour vérifier si un entier (par exemple, un numéro de téléphone) est présent dans un tableau et retourner son index, ou -1 s’il est absent. Utilisez une structure itérative et une structure de contrôle (SI _ ALORS _ FIN SI).
 
 <details>
 <summary>Réponse</summary>
@@ -212,9 +212,9 @@ Exemple : si x est 531, le quotient de 531 divisé par 10 est 53, reste 1. Le qu
 
 </details>
 
-### Exercice 6 : Erreur dans un pseudo-code
+### Exercice 6 : Erreur dans un pseudocode
 
-Trouvez l’erreur dans le pseudo-code suivant :
+Trouvez l’erreur dans le pseudocode suivant :
 
 ```
 Entrées :
@@ -989,4 +989,4 @@ Pour lisser les échanges lents et éviter les blocages du CPU.
 
 ### Vidéos suggérées
 
-Des vidéos sur l’algorithmique et le pseudo-code sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
+Des vidéos sur l’algorithmique et le pseudocode sont disponibles, comme [celles de Loïc & Julien](https://www.youtube.com/playlist?list=PLdi5YpL19uBDkRVGWMeZ0ZhtUQKOW-hUZ).
