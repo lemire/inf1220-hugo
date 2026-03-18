@@ -13,11 +13,11 @@ Pour concevoir un algorithme, il convient d’analyser minutieusement le problè
 
 Étape 1 : lire et comprendre l’énoncé du problème à résoudre.  
 Étape 2 : définir les sorties (résultats attendus), les entrées (données initiales) et le traitement (relations permettant de passer des entrées aux sorties).  
-Étape 3 : rédiger l’algorithme en pseudo-code, en respectant une structure claire et compréhensible.
+Étape 3 : rédiger l’algorithme en pseudocode, en respectant une structure claire et compréhensible.
 
 ## Syntaxe d’un algorithme
 
-La syntaxe d’un algorithme repose sur des conventions souples, contrairement aux langages de programmation qui imposent des règles strictes. Le pseudo-code privilégie la clarté et la précision des instructions, en s’appuyant sur des structures standardisées. Si une étape semble ambiguë ou trop complexe, il est souvent préférable de la décomposer en sous-étapes pour en faciliter la compréhension.
+La syntaxe d’un algorithme repose sur des conventions souples, contrairement aux langages de programmation qui imposent des règles strictes. Le pseudocode privilégie la clarté et la précision des instructions, en s’appuyant sur des structures standardisées. Si une étape semble ambiguë ou trop complexe, il est souvent préférable de la décomposer en sous-étapes pour en faciliter la compréhension.
 
 ### Les entrées, variables et sorties
 

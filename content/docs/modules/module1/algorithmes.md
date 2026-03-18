@@ -25,19 +25,19 @@ Nous supposons une familiarité avec ces notions. Vous êtes responsables de vou
 
 Le processus systématique de résolution d'un problème donné s'appelle algorithme. La notion d'algorithme formel est vue dans le cadre des cours de mathématiques du  secondaire, notamment dans le contexte de [la théorie des graphes](https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/la-chaine-de-poids-minimal-m1010) et des algorithmes d'optimisation. Comme point de départ dans le cours INF 1220, nous revisitons et approfondissons brièvement cette notion fondamentale.
 
-Un algorithme est donc une suite d'actions pour répondre à un problème de traitement de l'information. Ces actions peuvent être mathématiques (ex. somme = a + b), de contrôles (ex. SI a > b ALORS) ou d'itérations (ex. TANT QUE a > b FAIRE). Pour décrire ces algorithmes, il existe également plusieurs formalismes, certains utiliseront des formalismes mathématiques alors que d'autres utiliseront des pseudo-codes. Encore là dans plusieurs formats pour représenter un pseudo-code (ou *pseudocode*), il n'existe pas de normes uniques! 
+Un algorithme est donc une suite d'actions pour répondre à un problème de traitement de l'information. Ces actions peuvent être mathématiques (ex. somme = a + b), de contrôles (ex. SI a > b ALORS) ou d'itérations (ex. TANT QUE a > b FAIRE). Pour décrire ces algorithmes, il existe également plusieurs formalismes, certains utiliseront des formalismes mathématiques alors que d'autres utiliseront des pseudocodes. Encore là dans plusieurs formats pour représenter un pseudocode (ou *pseudo-code*), il n'existe pas de normes uniques! 
 
-En cuisine, une recette est un exemple d'algorithme si celle-ci comporte une séquence d'instructions précises. Pouvoir rédiger de manière précise une recette afin que d'autres cuisiniers puissent reproduire la même séquence d'opération est de facto de la programmation informatique. Si vous avez fait l'expérience du manuel de recette de quelqu'un d'autre (par ex., votre grand-mère), vous avez peut-être découvert qu'il peut être difficile de suivre des consignes de quelqu'un d'autre surtout quand celles-ci ne sont pas suffisamment précises. Une recette de cuisine est du pseudo-code.
+En cuisine, une recette est un exemple d'algorithme si celle-ci comporte une séquence d'instructions précises. Pouvoir rédiger de manière précise une recette afin que d'autres cuisiniers puissent reproduire la même séquence d'opération est de facto de la programmation informatique. Si vous avez fait l'expérience du manuel de recette de quelqu'un d'autre (par ex., votre grand-mère), vous avez peut-être découvert qu'il peut être difficile de suivre des consignes de quelqu'un d'autre surtout quand celles-ci ne sont pas suffisamment précises. Une recette de cuisine est du pseudocode.
 
-Avant l'invention du GPS, il était commun d'expliquer à des amis ou des parents comment se rendre à un lieu donné en suivant une série d'instructions. Il arrivait souvent, malheureusement, que ces instructions n'étaient pas assez précises et que les gens se perdent. Expliquer à quelqu'un comment se rendre à un lieu donné est un exemple de programmation informatique. Votre explication est du pseudo-code.
+Avant l'invention du GPS, il était commun d'expliquer à des amis ou des parents comment se rendre à un lieu donné en suivant une série d'instructions. Il arrivait souvent, malheureusement, que ces instructions n'étaient pas assez précises et que les gens se perdent. Expliquer à quelqu'un comment se rendre à un lieu donné est un exemple de programmation informatique. Votre explication est du pseudocode.
 
-Il est essentiel de comprendre ce qu'est le pseudo-code: il s'agit d'une façon de décrire un algorithme afin que d'autres êtres humains puissent vous comprendre. Il faut donc interpréter le pseudo-code en utilisant son jugement humain de la même façon que vous interprétez tout autre texte ou discours. Pouvoir lire un algorithme, décrit en pseudo-code, est une compétence essentielle en informatique. Il faut être capable de comprendre d'autres informaticiens sans nécessairement exiger que ceux-ci utilisent du code informatique dans un langage particulier (par ex., Java). Programmer et faire de l'informatique exige de pouvoir bien communiquer avec les autres informaticiens indépendamment de langages de programmation spécifiques.
+Il est essentiel de comprendre ce qu'est le pseudocode: il s'agit d'une façon de décrire un algorithme afin que d'autres êtres humains puissent vous comprendre. Il faut donc interpréter le pseudocode en utilisant son jugement humain de la même façon que vous interprétez tout autre texte ou discours. Pouvoir lire un algorithme, décrit en pseudocode, est une compétence essentielle en informatique. Il faut être capable de comprendre d'autres informaticiens sans nécessairement exiger que ceux-ci utilisent du code informatique dans un langage particulier (par ex., Java). Programmer et faire de l'informatique exige de pouvoir bien communiquer avec les autres informaticiens indépendamment de langages de programmation spécifiques.
 
-Pour un programmeur d'expérience, s'exprimer à l'aide d'un pseudo-code est chose aisée. Pour le commun des mortels, c'est un peu plus difficile. La blague suivante illustre le problème.
+Pour un programmeur d'expérience, s'exprimer à l'aide d'un pseudocode est chose aisée. Pour le commun des mortels, c'est un peu plus difficile. La blague suivante illustre le problème.
 
 > Une femme demande à son programmeur de mari : «&nbsp;Va au supermarché acheter une bouteille de lait. Et si ils ont des œufs, prends en 6&nbsp;». Le mari revient avec six bouteilles de lait. Sa femme lui demande pourquoi il a pris six bouteilles. «&nbsp;Parce qu'ils avaient des oeufs&nbsp;» répond-il.
 
-Quand on rédige un pseudo-code, il faut tout spécifier, comme si on s'adressait à quelqu'un qui prend tout littéralement, sans aucun jugement. Pour devenir un programmeur, pour penser comme un programmeur, il faut s'habituer à rédiger des séquences d'instructions précises. La lecture et la rédaction de pseudo-codes relativement simples peut être une bonne pratique.
+Quand on rédige un pseudocode, il faut tout spécifier, comme si on s'adressait à quelqu'un qui prend tout littéralement, sans aucun jugement. Pour devenir un programmeur, pour penser comme un programmeur, il faut s'habituer à rédiger des séquences d'instructions précises. La lecture et la rédaction de pseudocodes relativement simples peut être une bonne pratique.
 
 Le pseudocode est destiné à être lu par l'humain, et il peut être écrit de diverses manières tant que l'humain le comprend. Le cours ne vise pas à vous permettre de comprendre une syntaxe particulière de pseudocode,  mais bien le pseudocode en général.
 
@@ -53,15 +53,15 @@ Exemples d'algorithmes dans la vie quotidienne :
 
 En informatique, un algorithme peut, par exemple, trier une liste de nombres ou calculer le chemin le plus court entre deux points.
 
-### Qu'est-ce que le pseudo-code ?
-Le *pseudo-code* est une manière d'écrire un algorithme en utilisant un langage simplifié, proche du langage naturel, mais structuré comme un programme informatique. Il n'est pas destiné à être exécuté directement par un ordinateur, mais sert à décrire la logique d'un algorithme de manière claire et compréhensible, indépendamment d'un langage de programmation spécifique.
+### Qu'est-ce que le pseudocode ?
+Le *pseudocode* est une manière d'écrire un algorithme en utilisant un langage simplifié, proche du langage naturel, mais structuré comme un programme informatique. Il n'est pas destiné à être exécuté directement par un ordinateur, mais sert à décrire la logique d'un algorithme de manière claire et compréhensible, indépendamment d'un langage de programmation spécifique.
 
-Le pseudo-code utilise des conventions comme :
+Le pseudocode utilise des conventions comme :
 - `SI`, `ALORS`, `SINON` pour les conditions.
 - `POUR`, `TANT QUE` pour les boucles.
 - Des instructions comme `écrire` ou `lire` pour les entrées/sorties.
 
-Exemple de pseudo-code pour calculer la somme de deux nombres :
+Exemple de pseudocode pour calculer la somme de deux nombres :
 
 ```
 lire nombre1
@@ -70,9 +70,9 @@ somme ← nombre1 + nombre2
 écrire somme
 ```
 
-Le pseudo-code permet aux programmeurs de planifier la logique avant de la traduire dans un langage comme Python, C++ ou Java.
+Le pseudocode permet aux programmeurs de planifier la logique avant de la traduire dans un langage comme Python, C++ ou Java.
 
-En résumé, un algorithme est une méthode pour résoudre un problème, tandis que le pseudo-code est un outil pour exprimer cet algorithme de manière claire et universelle. Ces deux concepts sont essentiels pour concevoir des solutions informatiques efficaces.
+En résumé, un algorithme est une méthode pour résoudre un problème, tandis que le pseudocode est un outil pour exprimer cet algorithme de manière claire et universelle. Ces deux concepts sont essentiels pour concevoir des solutions informatiques efficaces.
 
 {{< youtube id="1ANpkDxJHo4" >}}
 
@@ -88,7 +88,7 @@ Les variables peuvent contenir différents types de données, selon leur nature 
 - **Booléen** : une valeur logique qui peut être soit vrai, soit faux.
 - **Chaîne de caractères** : une séquence de caractères, comme "bonjour" ou "INF1220".
 
-Dans le pseudo-code, le type de la variable est souvent implicite, mais il est essentiel de comprendre quel type de donnée une variable contient pour éviter des erreurs lors de la manipulation. Une variable doit être *nommée* de manière claire et descriptive (par exemple, `age`, `somme`, `notes`). On lui attribue une valeur à l'aide de l'opérateur d'affectation, souvent représenté par `←` ou `=`. Par exemple :
+Dans le pseudocode, le type de la variable est souvent implicite, mais il est essentiel de comprendre quel type de donnée une variable contient pour éviter des erreurs lors de la manipulation. Une variable doit être *nommée* de manière claire et descriptive (par exemple, `age`, `somme`, `notes`). On lui attribue une valeur à l'aide de l'opérateur d'affectation, souvent représenté par `←` ou `=`. Par exemple :
 
 ```
 age ← 18
@@ -114,7 +114,7 @@ Certaines variables ont une une portée et elles ne sont accessibles que dans la
 nous pouvons utiliser la valeur de la variable  `somme` avant de lui avoir assigné une valeur (`somme ← 0`).
 
 
-Les variables sont essentielles pour écrire des algorithmes flexibles et réutilisables. Elles permettent de travailler avec des données qui varient, comme des entrées utilisateur ou des résultats intermédiaires, et de suivre l’état d’un algorithme tout au long de son exécution. En pseudo-code, les variables servent à rendre les instructions claires et compréhensibles, tout en préparant la transition vers un langage de programmation réel.
+Les variables sont essentielles pour écrire des algorithmes flexibles et réutilisables. Elles permettent de travailler avec des données qui varient, comme des entrées utilisateur ou des résultats intermédiaires, et de suivre l’état d’un algorithme tout au long de son exécution. En pseudocode, les variables servent à rendre les instructions claires et compréhensibles, tout en préparant la transition vers un langage de programmation réel.
 
 Pour illustrer simplement la déclaration et l’affectation d’une variable, voici comment on déclare une variable nommée `age` et on lui assigne la valeur 18 dans différents langages.
 
@@ -148,7 +148,7 @@ En C++, le type doit aussi être indiqué explicitement :
 int age = 18;  // déclaration et affectation
 ```
 
-Ces lignes montrent la forme la plus basique de création et d’initialisation d’une variable, équivalente à l’instruction `age ← 18` du pseudo-code. La syntaxe varie légèrement selon le langage, mais le principe reste identique : nommer un espace mémoire et y placer une valeur.
+Ces lignes montrent la forme la plus basique de création et d’initialisation d’une variable, équivalente à l’instruction `age ← 18` du pseudocode. La syntaxe varie légèrement selon le langage, mais le principe reste identique : nommer un espace mémoire et y placer une valeur.
 
 ### Logique booléenne
 
@@ -195,7 +195,7 @@ Ce pseudocode décrit un algorithme simple de contrôle d’accès basé sur l�
 
 
 
-La logique booléenne est essentielle pour écrire des conditions dans les algorithmes. Par exemple, dans une structure conditionnelle ou une boucle, les opérateurs booléens permettent de combiner plusieurs critères. Voici un exemple en pseudo-code pour vérifier si une personne peut voter :
+La logique booléenne est essentielle pour écrire des conditions dans les algorithmes. Par exemple, dans une structure conditionnelle ou une boucle, les opérateurs booléens permettent de combiner plusieurs critères. Voici un exemple en pseudocode pour vérifier si une personne peut voter :
 
 ```
 lire age
@@ -377,8 +377,8 @@ Dans tous ces langages, l'expression `tableau[0]` fait référence au premier é
 
 ## Exemple : Calcul de la moyenne
 
-Pour illustrer la notion de pseudo-code, commençons par un exemple relativement simple.
-Supposons que nous avons un tableau de notes (par ex., les notes 10.4, 12.6, 18.7, 5.0) et que nous désirons calculer la moyenne. On utilise le convention que si le tableau se nomme 'notes', alors la première note (par ex., 10.4) est notes[0], la seconde note est notes[1]... et ainsi de suite jusqu'à notes[3]. Évidemment, dans ce cas, on sait qu'il y'a 4 notes, mais il plus pratique d'écrire le pseudo-code de manière générale. On fera donc référence à la longueur du tableau (au nombre d'éléments qu'il contient) comme étant un paramètre. Pour visiter tous les éléments, on peut initialiser une valeur entière à 0, et l'incrémenter de 1 tant qu'elle demeure plus petite que la longueur du tableau.
+Pour illustrer la notion de pseudocode, commençons par un exemple relativement simple.
+Supposons que nous avons un tableau de notes (par ex., les notes 10.4, 12.6, 18.7, 5.0) et que nous désirons calculer la moyenne. On utilise le convention que si le tableau se nomme 'notes', alors la première note (par ex., 10.4) est notes[0], la seconde note est notes[1]... et ainsi de suite jusqu'à notes[3]. Évidemment, dans ce cas, on sait qu'il y'a 4 notes, mais il plus pratique d'écrire le pseudocode de manière générale. On fera donc référence à la longueur du tableau (au nombre d'éléments qu'il contient) comme étant un paramètre. Pour visiter tous les éléments, on peut initialiser une valeur entière à 0, et l'incrémenter de 1 tant qu'elle demeure plus petite que la longueur du tableau.
 
 {{< mermaid >}}
 graph TD
@@ -404,7 +404,7 @@ L'expression "TANT QUE" est associée à une condition qui peut être vraie ou f
 
 
 
-Pour montrer comment ce pseudo-code se traduit dans des langages réels, considérons un tableau contenant les notes {10.4, 12.6, 18.7, 5.0} et calculons sa moyenne en utilisant une boucle qui parcourt les indices.
+Pour montrer comment ce pseudocode se traduit dans des langages réels, considérons un tableau contenant les notes {10.4, 12.6, 18.7, 5.0} et calculons sa moyenne en utilisant une boucle qui parcourt les indices.
 
 En Java, on utilise un tableau ou un ArrayList, mais ici avec un tableau fixe :
 
@@ -457,4 +457,4 @@ double moyenne = somme / notes.size();
 std::cout << moyenne << std::endl;
 ```
 
-Dans chaque cas, la structure reste fidèle au pseudo-code : initialisation d'une somme à zéro, parcours des indices de 0 à longueur-1 avec incrémentation, accumulation des valeurs, puis division finale par le nombre d'éléments. Cette approche rend l'algorithme indépendant de la taille exacte du tableau, exactement comme souhaité dans la version générale en pseudo-code.
+Dans chaque cas, la structure reste fidèle au pseudocode : initialisation d'une somme à zéro, parcours des indices de 0 à longueur-1 avec incrémentation, accumulation des valeurs, puis division finale par le nombre d'éléments. Cette approche rend l'algorithme indépendant de la taille exacte du tableau, exactement comme souhaité dans la version générale en pseudocode.

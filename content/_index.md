@@ -19,7 +19,7 @@ Il existe plusieurs langages de programmation. Au sein du cours INF 1220, nous u
 
 
 L'approche pédagogique du cours repose sur la pratique. Dans ce cours, vous écrirez beaucoup de code, que ce soit en
-pseudo-code ou en Java. Nous avons inclus un grand nombre d'exercices et d'exemples, à la fois dans le manuel Java pas à
+pseudocode ou en Java. Nous avons inclus un grand nombre d'exercices et d'exemples, à la fois dans le manuel Java pas à
 pas et sur le site web du cours.
 
 ## Présentation du cours
