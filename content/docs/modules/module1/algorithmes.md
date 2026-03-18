@@ -19,11 +19,13 @@ Nous supposons une familiarité avec ces notions. Vous êtes responsables de vou
 {{% /hint %}}
 
 
+
+
 ## Introduction
 
 Le processus systématique de résolution d'un problème donné s'appelle algorithme. La notion d'algorithme formel est vue dans le cadre des cours de mathématiques du  secondaire, notamment dans le contexte de [la théorie des graphes](https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/la-chaine-de-poids-minimal-m1010) et des algorithmes d'optimisation. Comme point de départ dans le cours INF 1220, nous revisitons et approfondissons brièvement cette notion fondamentale.
 
-Un algorithme est donc une suite d'actions pour répondre à un problème de traitement de l'information. Ces actions peuvent être mathématiques (ex. somme = a + b), de contrôles (ex. SI a > b ALORS) ou d'itérations (ex. TANT QUE a > b FAIRE). Pour décrire ces algorithmes, il existe également plusieurs formalismes, certains utiliseront des formalismes mathématiques alors que d'autres utiliseront des pseudo-codes. Encore là dans plusieurs formats pour représenter un pseudo-code, il n'existe pas de normes uniques! 
+Un algorithme est donc une suite d'actions pour répondre à un problème de traitement de l'information. Ces actions peuvent être mathématiques (ex. somme = a + b), de contrôles (ex. SI a > b ALORS) ou d'itérations (ex. TANT QUE a > b FAIRE). Pour décrire ces algorithmes, il existe également plusieurs formalismes, certains utiliseront des formalismes mathématiques alors que d'autres utiliseront des pseudo-codes. Encore là dans plusieurs formats pour représenter un pseudo-code (ou *pseudocode*), il n'existe pas de normes uniques! 
 
 En cuisine, une recette est un exemple d'algorithme si celle-ci comporte une séquence d'instructions précises. Pouvoir rédiger de manière précise une recette afin que d'autres cuisiniers puissent reproduire la même séquence d'opération est de facto de la programmation informatique. Si vous avez fait l'expérience du manuel de recette de quelqu'un d'autre (par ex., votre grand-mère), vous avez peut-être découvert qu'il peut être difficile de suivre des consignes de quelqu'un d'autre surtout quand celles-ci ne sont pas suffisamment précises. Une recette de cuisine est du pseudo-code.
 
@@ -38,6 +40,9 @@ Pour un programmeur d'expérience, s'exprimer à l'aide d'un pseudo-code est cho
 Quand on rédige un pseudo-code, il faut tout spécifier, comme si on s'adressait à quelqu'un qui prend tout littéralement, sans aucun jugement. Pour devenir un programmeur, pour penser comme un programmeur, il faut s'habituer à rédiger des séquences d'instructions précises. La lecture et la rédaction de pseudo-codes relativement simples peut être une bonne pratique.
 
 Le pseudocode est destiné à être lu par l'humain, et il peut être écrit de diverses manières tant que l'humain le comprend. Le cours ne vise pas à vous permettre de comprendre une syntaxe particulière de pseudocode,  mais bien le pseudocode en général.
+
+{{< figure src="/comics/pseudocode.jpg" alt="Pseudocode" >}}
+
 
 ### Qu'est-ce qu'un algorithme ?
 Un *algorithme* est une suite finie et ordonnée d'instructions permettant de résoudre un problème ou d'accomplir une tâche spécifique. Il s'agit d'une méthode systématique, exprimée de manière précise, qui garantit un résultat correct lorsqu'elle est exécutée. Les algorithmes sont au cœur de l'informatique, car ils décrivent comment un programme doit fonctionner pour atteindre un objectif.
