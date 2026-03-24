@@ -44,7 +44,7 @@ Il est de votre responsabilité de disposer de Microsoft Teams.
 
 ### Qu’est-ce que l’entretien de suivi?
 <p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
-Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses.</p>
+Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses. Il est possible que vous deviez faire un peu de programmation pendant l'entretien.</p>
 
 ### L’entretien de suivi est-il obligatoire?
 <p>Oui. L'entretien de suivi constitue une étape obligatoire.
@@ -177,7 +177,7 @@ Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
 ### Pour les personnes inscrites à compter du trimestre d’été 2026
 
-Accédez à votre examen directement dans l'environnement Moodle.
+[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628).
 
 ## Résultat et rétroaction sur l'examen
 
