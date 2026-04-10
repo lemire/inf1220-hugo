@@ -5,7 +5,7 @@ title: "Accueil"
 # Mot de bienvenue
 
 
-{{< youtube id="sCuxwhZWX0s" >}}
+{{< youtube id="VGHzQJDhGUY" >}}
 
 C’est avec plaisir que je vous accueille dans ce cours d’introduction à la programmation. J’ai conçu ce cours pour ceux qui souhaitent entamer des études universitaires en informatique. Au terme de ce cours, vous serez familier
 avec tous les concepts essentiels en programmation. Vous aurez aussi acquis une compétence en programmation Java. Si
