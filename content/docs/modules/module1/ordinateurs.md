@@ -1179,6 +1179,9 @@ Les ordinateurs effectuent des opérations logiques (ET, OU, NON, OU exclusif) d
 
 Les programmes ne se contentent pas d'effectuer des calculs en mémoire : ils doivent souvent lire ou écrire des données persistantes, communiquer avec d'autres machines ou interagir avec l'utilisateur. Ces échanges passent par trois mécanismes étroitement liés : les fichiers, les réseaux et les entrées-sorties.
 
+{{< figure src="/comics/fichiers.png" alt="Les fichiers" >}}
+
+
 ### Les fichiers et le système de fichiers
 
 Un fichier est une suite d'octets stockée de manière persistante sur un support de stockage (disque, clé USB, etc.). Contrairement à la RAM, dont le contenu disparaît à l'extinction de l'ordinateur, les fichiers survivent aux redémarrages. Un fichier peut contenir du texte, des images, du code source, des données binaires, ou n'importe quelle autre information numérique.
@@ -1190,7 +1193,7 @@ Les fichiers sont organisés par le système de fichiers, un composant du systè
 
 Les principaux systèmes de fichiers sont NTFS (Windows), ext4 (Linux) et APFS (macOS). Ils gèrent les métadonnées associées à chaque fichier : nom, taille, date de création, droits d'accès, etc.
 
-### Est-ce qu'on pourrait faire des programmes sans accès aux fichiers ?
+#### Est-ce qu'on pourrait faire des programmes sans accès aux fichiers ?
 
 Un programme purement en mémoire peut effectuer des calculs, afficher des résultats à l'écran ou interagir avec l'utilisateur en temps réel. Cependant, dès qu'il s'éteint, toutes ses données disparaissent : sans fichiers, impossible de sauvegarder un document, de conserver un score, d'enregistrer des préférences ou de traiter un jeu de données volumineux.
 
