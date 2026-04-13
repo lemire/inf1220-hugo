@@ -1175,3 +1175,69 @@ Le choix du binaire s’explique par la simplicité de la technologie électroni
 
 Les ordinateurs effectuent des opérations logiques (ET, OU, NON, OU exclusif) directement sur les bits. Ces opérations sont à la base de tous les calculs et traitements informatiques.
 
+## Fichiers, réseaux et entrées-sorties
+
+Les programmes ne se contentent pas d'effectuer des calculs en mémoire : ils doivent souvent lire ou écrire des données persistantes, communiquer avec d'autres machines ou interagir avec l'utilisateur. Ces échanges passent par trois mécanismes étroitement liés : les fichiers, les réseaux et les entrées-sorties.
+
+### Les fichiers et le système de fichiers
+
+Un fichier est une suite d'octets stockée de manière persistante sur un support de stockage (disque, clé USB, etc.). Contrairement à la RAM, dont le contenu disparaît à l'extinction de l'ordinateur, les fichiers survivent aux redémarrages. Un fichier peut contenir du texte, des images, du code source, des données binaires, ou n'importe quelle autre information numérique.
+
+Les fichiers sont organisés par le système de fichiers, un composant du système d'exploitation qui gère leur création, leur suppression, leur lecture et leur écriture. Le système de fichiers structure le stockage en une hiérarchie de répertoires (ou dossiers), formant une arborescence. Chaque fichier est identifié par son chemin, qui décrit sa position dans cette arborescence. Par exemple :
+
+- `/home/etudiant/documents/rapport.txt` sous Linux ou macOS
+- `C:\Utilisateurs\Etudiant\Documents\rapport.txt` sous Windows
+
+Les principaux systèmes de fichiers sont NTFS (Windows), ext4 (Linux) et APFS (macOS). Ils gèrent les métadonnées associées à chaque fichier : nom, taille, date de création, droits d'accès, etc.
+
+### Est-ce qu'on pourrait faire des programmes sans accès aux fichiers ?
+
+Un programme purement en mémoire peut effectuer des calculs, afficher des résultats à l'écran ou interagir avec l'utilisateur en temps réel. Cependant, dès qu'il s'éteint, toutes ses données disparaissent : sans fichiers, impossible de sauvegarder un document, de conserver un score, d'enregistrer des préférences ou de traiter un jeu de données volumineux.
+
+En pratique, la quasi-totalité des programmes utiles ont besoin de persistance : un traitement de texte enregistre vos documents, un système de gestion des notes conserve les résultats des étudiants, un jeu mémorise votre progression. Les fichiers sont le mécanisme le plus simple et le plus universel pour assurer cette persistance entre deux exécutions d'un programme.
+
+Il existe des solutions de rechange aux fichiers — les bases de données, la mémoire partagée entre processus ou le stockage en nuage — mais elles reposent elles-mêmes, en dernière instance, sur des fichiers ou des structures analogues stockées sur un support physique.
+
+#### Opérations fondamentales sur les fichiers
+
+Les programmes interagissent avec les fichiers via un ensemble d'opérations de base, fournies par le système d'exploitation et exposées dans les API des langages de programmation :
+
+- Ouvrir un fichier (en lecture, en écriture ou les deux)
+- Lire des données depuis un fichier
+- Écrire des données dans un fichier
+- Fermer un fichier (libère les ressources)
+- Supprimer ou renommer un fichier
+
+En Java, la bibliothèque standard offre plusieurs classes pour manipuler les fichiers, notamment `java.io.File`, `java.nio.file.Path` et les classes de flux (`InputStream`, `OutputStream`, `BufferedReader`, etc.). Par exemple, lire un fichier texte ligne par ligne se fait simplement à l'aide d'un `BufferedReader`.
+
+#### Fichiers texte et fichiers binaires
+
+On distingue deux grandes catégories de fichiers. Les fichiers texte contiennent des caractères encodés et sont lisibles directement dans un éditeur comme [Visual Studio Code](https://code.visualstudio.com/download), Bloc-notes (Windows), etc. Les pages web que votre navigateur chargent sont des fichiers texte. Le code informatique est un fichier texte.  Les fichiers binaires contiennent des données dans un format propre à une application (image JPEG, classe Java compilée `.class`, archive ZIP, etc.) et ne sont pas directement lisibles par un humain. En Java, on utilise des classes différentes selon la nature du fichier : des flux de caractères (`Reader`, `Writer`) pour les fichiers texte, et des flux d'octets (`InputStream`, `OutputStream`) pour les fichiers binaires.
+
+### Les réseaux
+
+Un réseau informatique est un ensemble d'appareils (ordinateurs, serveurs, téléphones, etc.) interconnectés qui peuvent échanger des données. L'Internet est le plus grand réseau mondial, reliant des milliards d'appareils à l'échelle planétaire.
+
+#### Adresses IP et protocoles
+
+Chaque appareil connecté à un réseau est identifié par une adresse IP (Internet Protocol). L'adresse IP est une suite de nombres qui permet de localiser un appareil sur le réseau, de la même façon qu'une adresse postale localise un bâtiment. Il existe deux versions : IPv4 (ex. : `192.168.1.10`, sur 32 bits) et IPv6 (ex. : `2001:db8::1`, sur 128 bits), introduite pour faire face à l'épuisement des adresses IPv4.
+
+Les données transitent sur le réseau en étant découpées en petits paquets. Ce découpage est géré par le protocole IP. Les protocoles de transport TCP (Transmission Control Protocol) et UDP (User Datagram Protocol) s'appuient sur IP :
+
+- TCP garantit que tous les paquets arrivent à destination, dans le bon ordre, sans perte. Il est utilisé pour les applications où la fiabilité est primordiale (navigation web, transfert de fichiers, messagerie).
+- UDP est plus rapide mais ne garantit pas la livraison ni l'ordre des paquets. Il est utilisé pour les applications où la rapidité prime sur la fiabilité (jeux en ligne, vidéoconférence, streaming).
+
+#### Ports et services
+
+Sur une même machine, plusieurs services réseau peuvent s'exécuter simultanément. Les ports permettent de distinguer ces services : chaque connexion est associée à un numéro de port (de 0 à 65 535). Par convention, certains ports sont réservés à des services standard :
+
+- Port 80 : HTTP (navigation web non chiffrée)
+- Port 443 : HTTPS (navigation web chiffrée)
+- Port 22 : SSH (accès distant sécurisé)
+- Port 25 : SMTP (envoi de courriels)
+
+#### Le protocole HTTP
+
+Le protocole HTTP (HyperText Transfer Protocol) est la base du Web. Lorsque vous saisissez une adresse dans un navigateur, celui-ci envoie une requête HTTP au serveur correspondant, qui renvoie une réponse contenant la page demandée. HTTP fonctionne selon un modèle client-serveur : le client (navigateur, application) initie la requête, le serveur répond. HTTPS est la version sécurisée d'HTTP : les données échangées sont chiffrées grâce au protocole TLS, protégeant leur confidentialité.
+
+En Java, il est possible d'effectuer des requêtes HTTP à l'aide de l'API `java.net.http.HttpClient`, ce qui permet à un programme de consommer des services web ou d'accéder à des données en ligne.

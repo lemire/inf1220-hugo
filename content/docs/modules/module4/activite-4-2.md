@@ -5,6 +5,10 @@ weight: 2
 
 # Les flux de données: lecture dans des fichiers et autres
 
+Presque tous les programmes que vous écrirez dans votre carrière devront lire ou écrire des données qui survivent à leur exécution : des fichiers de configuration, des résultats de calcul, des journaux d'événements, des listes d'étudiants, des images, etc. Sans cette capacité, chaque lancement du programme repart de zéro. Maîtriser la lecture et l'écriture de fichiers est donc une compétence fondamentale, au même titre que les boucles ou les méthodes.
+
+En Java, ces opérations passent toutes par le même mécanisme : les **flux de données** (*streams*). Comprendre ce mécanisme vous permettra non seulement de lire un fichier texte, mais aussi de communiquer avec un réseau, de compresser des données ou de traiter des entrées provenant d'une interface graphique — car tous ces cas utilisent la même abstraction. Investir le temps nécessaire pour bien comprendre les flux aujourd'hui vous simplifiera considérablement le travail dans tous les modules qui suivent.
+
 <p>Nous avons couvert la façon d'afficher des données à l'écran et de lire des données à partir du clavier en utilisant les flux de données (streams) dans les leçons précédentes. Quand nous avons utilisé les méthodes System.out.print ou System.out.println pour afficher des données à l'écran, ces dernières ont été envoyées sur un flux de sortie (output stream). Nous nous servirons des flux d'entrée et de sortie pour lire et écrire des données dans un fichier texte. Mais auparavant, il nous faut savoir comment créer le fichier dans lequel ces données seront archivées.</p>
 
 <p>Pour manipuler les flux d'entrée et de sortie, nous utilisons les classes du package java.io. Les données sont manipulées suivant deux principes : la lecture/écriture en flux binaire ou en flux texte. Le tableau ci-dessous représente les différents flux que nous pouvons manipuler ainsi que les classes abstraites de base, l'implémentation, les fichiers et les tampons d'entrée-sortie qui leur sont associés.</p>
