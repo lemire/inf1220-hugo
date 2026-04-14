@@ -36,8 +36,8 @@ professionnel.
 
 Un courriel destiné à un humain doit obligatoirement avoir un corps de texte. Un courriel doit être clair et fournir
 tous les détails nécessaires. Par exemple, si vous écrivez à quelqu'un pour lui faire part d'un problème ou d'une
-incompréhension, il faut fournir tous les détails, incluant les démarches que vous avez déjà entreprises. On peut être
-précis sans nécessairement utiliser beaucoup de mots. Préparer un courriel précis peut exiger plus d'effort et de temps,
+incompréhension, il faut fournir tous les détails, incluant les démarches que vous avez déjà entreprises. Si vous rencontrez un problème dans un cours, 
+commencez par préciser le cours. On peut être précis sans nécessairement utiliser beaucoup de mots. Préparer un courriel précis peut exiger plus d'effort et de temps,
 mais c'est un signe de respect envers le récipiendaire.
 
 Si vous écrivez un courriel pour faire rapport de problèmes techniques, soyez aussi précis que possible. Joignez des
