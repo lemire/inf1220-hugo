@@ -186,7 +186,7 @@ Mais l’astuce la plus importante ici, c’est d’utiliser le fait que deux so
 
 Pour exploiter cela, on parcourt le tableau une seule fois :
 - À chaque étape, on calcule la somme courante des éléments (somme préfixe).
-- On calcule le reste de cette somme modulo \( k \) (en gérant les cas négatifs pour que le reste soit toujours positif).
+- On calcule le reste de cette somme modulo \( k \) (en gérant les cas négatifs pour que le reste soit toujours non-négatif).
 - On utilise une table de hachage (HashMap) pour mémoriser le premier indice où chaque reste a été vu.
 - Si on retrouve le même reste plus tard, cela veut dire qu’il existe un sous-tableau entre ces deux indices dont la somme est divisible par \( k \). On calcule alors la longueur de ce sous-tableau et on garde la plus grande longueur trouvée.
 

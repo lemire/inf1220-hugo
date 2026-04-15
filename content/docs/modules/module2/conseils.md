@@ -127,7 +127,7 @@ Exemple de commentaire Javadoc pour une méthode :
  */
 public int somme(int a, int b) {
     if (a < 0 || b < 0) {
-        throw new IllegalArgumentException("Les paramètres doivent être positifs.");
+        throw new IllegalArgumentException("Les paramètres doivent être non-négatifs.");
     }
     return a + b;
 }

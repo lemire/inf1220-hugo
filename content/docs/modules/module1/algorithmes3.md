@@ -37,7 +37,7 @@ lire nombre
 SI nombre < 0 ALORS
     SAUTER À negatif
 FIN SI
-écrire "Le nombre est positif ou nul"
+écrire "Le nombre est positif ou zéro"
 SAUTER À fin
 ÉTIQUETTE negatif
 écrire "Le nombre est négatif"
@@ -153,7 +153,7 @@ TANT QUE x > 0 FAIRE
 FIN TANT QUE
 ```
 
-Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable x jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (TANT QUE x > 0 FAIRE) continue tant que x est strictement positif. À l'intérieur, la boucle interne (TANT QUE x > 10 FAIRE) s'exécute uniquement si x est supérieur à 10, et dans ce cas, elle décrémente x de 1 à chaque itération (x = x - 1). Une fois que x devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si x > 0. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier x lorsque x ≤ 10, le programme entre dans une boucle infinie si x est compris entre 1 et 10 inclus. Si x est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si x est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
+Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable x jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (TANT QUE x > 0 FAIRE) continue tant que x est positif. À l'intérieur, la boucle interne (TANT QUE x > 10 FAIRE) s'exécute uniquement si x est supérieur à 10, et dans ce cas, elle décrémente x de 1 à chaque itération (x = x - 1). Une fois que x devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si x > 0. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier x lorsque x ≤ 10, le programme entre dans une boucle infinie si x est compris entre 1 et 10 inclus. Si x est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si x est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
 
 ## La fin d'un algorithme
 
