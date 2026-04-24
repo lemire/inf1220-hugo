@@ -122,6 +122,8 @@ Suite à votre examen, **vous devez** prendre rendez-vous avec la personne qui v
 que vos réponses à l'examen sont les vôtres et que vous maîtrisez la matière.
 
 
+Vous pouvez utiliser l’IA dans le cadre des travaux notés. En revanche, pour réussir ce cours, vous devez être capable de résoudre de manière autonome un problème identique ou semblable à ceux proposés lors des travaux notés ou de l’examen. Résoudre un problème signifie essentiellement écrire un programme en Java qui répond aux contraintes posées. Lors de l’entretien de suivi, ce programme devra être produit sans recours à l’IA, en partageant votre écran avec la personne qui vous encadre. 
+
 {{% /hint  %}}
 
 ## Démarrage
