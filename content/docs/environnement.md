@@ -107,6 +107,9 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
   <script>
     let fileCount = 0;
+    const endpointUrl = new URL('{{<endpoint>}}', window.location.href);
+    const codeStoreBaseUrl = new URL('../code-store', endpointUrl).toString();
+    const javaVersionUrl = new URL('../java-version', endpointUrl).toString();
     function addFile(type, initialName = '', initialContent = '') {
       const filesDiv = document.getElementById('files');
       const block = document.createElement('div');
@@ -139,19 +142,18 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
       }
       fileCount++;
     }
-    document.getElementById('runForm').onsubmit = async function(e) {
-      e.preventDefault();
+    function getCurrentFilesData() {
       const java_files = [], txt_files = [];
-      const data = new FormData(this);
-      // Synchronise les contenus CodeMirror dans les textarea cachés
       document.querySelectorAll('.file-block').forEach(block => {
         const type = block.querySelector('.file-type b').textContent === 'Java' ? 'java' : 'txt';
         const nameInput = block.querySelector('input[type=text]');
         let content;
         if (type === 'java' && block._cm) {
           content = block._cm.getValue();
-          // Met à jour le textarea caché pour éviter l'erreur de validation
-          block.querySelector('textarea').value = content;
+          const textarea = block.querySelector('textarea');
+          if (textarea) {
+            textarea.value = content;
+          }
         } else {
           content = block.querySelector('textarea').value;
         }
@@ -161,6 +163,29 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
           txt_files.push({ name: nameInput.value, content });
         }
       });
+      return { java_files, txt_files };
+    }
+    function loadFilesFromStoredCode(code) {
+      clearFiles();
+      (code.java_files || []).forEach(file => {
+        addFile('java', file.name, file.content);
+      });
+      (code.txt_files || []).forEach(file => {
+        addFile('txt', file.name, file.content);
+      });
+    }
+    function loadFilesFromLegacyPayload(json) {
+      clearFiles();
+      json.files.forEach(file => {
+        addFile(file.type, file.name, file.content);
+      });
+    }
+    function addDefaultFile() {
+      addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
+    }
+    document.getElementById('runForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const { java_files, txt_files } = getCurrentFilesData();
       let resultDiv = document.getElementById('result');
       resultDiv.textContent = 'Exécution en cours';
       let dots = 0;
@@ -314,50 +339,146 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
         }
       }
     };
-    window.onload = () => {
+    window.onload = async () => {
       const urlParams = new URLSearchParams(window.location.search);
+      const shortjavacode = urlParams.get('shortjavacode');
       const javacode = urlParams.get('javacode');
+      if (shortjavacode) {
+        try {
+          const resp = await fetch(codeStoreBaseUrl + '/' + encodeURIComponent(shortjavacode));
+          if (!resp.ok) {
+            throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
+          }
+          const resultJson = await resp.json();
+          if (!resultJson.code) {
+            throw new Error('Réponse code-store invalide');
+          }
+          loadFilesFromStoredCode(resultJson.code);
+          return;
+        } catch (e) {
+          console.error('Impossible de charger shortjavacode', e);
+        }
+      }
       if (javacode) {
         try {
           const json = JSON.parse(decodeURIComponent(escape(atob(javacode))));
-          clearFiles();
-          json.files.forEach(file => {
-            addFile(file.type, file.name, file.content);
-          });
+          loadFilesFromLegacyPayload(json);
+          return;
         } catch (e) {
           console.error('Invalid javacode parameter', e);
-          addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
         }
-      } else {
-        addFile('java', 'Bonjour.java', 'void main() {\n    System.out.println("Bonjour le monde!");\n}');
       }
+      addDefaultFile();
     };
-    fetch('{{<endpoint>}}/../java-version').then(r => r.json()).then(data => {
+    fetch(javaVersionUrl).then(r => r.json()).then(data => {
       if (data.version) {
         document.getElementById('java-version').textContent = 'Java : ' + data.version;
       }
     });
-    document.getElementById('shareBtn').onclick = () => {
-      const files = [];
-      document.querySelectorAll('.file-block').forEach(block => {
-        const type = block.querySelector('.file-type b').textContent === 'Java' ? 'java' : 'txt';
-        const nameInput = block.querySelector('input[type=text]');
-        let content;
-        if (type === 'java' && block._cm) {
-          content = block._cm.getValue();
-        } else {
-          content = block.querySelector('textarea').value;
+    function showCopyUrlDialog(url) {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.background = 'rgba(0,0,0,0.35)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.zIndex = '9999';
+      const modal = document.createElement('div');
+      modal.style.background = '#fff';
+      modal.style.padding = '16px';
+      modal.style.borderRadius = '8px';
+      modal.style.maxWidth = '680px';
+      modal.style.width = '90%';
+      modal.style.boxShadow = '0 6px 24px rgba(0,0,0,0.2)';
+      const title = document.createElement('div');
+      title.textContent = 'Copier l\'URL de partage';
+      title.style.fontWeight = 'bold';
+      title.style.marginBottom = '8px';
+      const input = document.createElement('textarea');
+      input.value = url;
+      input.readOnly = true;
+      input.style.width = '100%';
+      input.style.height = '84px';
+      input.style.fontFamily = 'monospace';
+      input.style.marginBottom = '12px';
+      const actions = document.createElement('div');
+      actions.style.display = 'flex';
+      actions.style.justifyContent = 'flex-end';
+      actions.style.gap = '8px';
+      const cancelBtn = document.createElement('button');
+      cancelBtn.type = 'button';
+      cancelBtn.textContent = 'Annuler';
+      cancelBtn.style.background = '#9e9e9e';
+      const copyBtn = document.createElement('button');
+      copyBtn.type = 'button';
+      copyBtn.textContent = 'Copier';
+      const close = () => {
+        document.body.removeChild(overlay);
+      };
+      cancelBtn.onclick = close;
+      copyBtn.onclick = () => {
+        input.select();
+        input.setSelectionRange(0, 999999);
+        try {
+          const ok = document.execCommand('copy');
+          if (ok) {
+            close();
+            return;
+          }
+        } catch (e) {
         }
-        files.push({ name: nameInput.value, type, content });
+        navigator.clipboard.writeText(url).then(() => {
+          close();
+        }).catch(() => {
+        });
+      };
+      modal.appendChild(title);
+      modal.appendChild(input);
+      actions.appendChild(cancelBtn);
+      actions.appendChild(copyBtn);
+      modal.appendChild(actions);
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+      input.focus();
+      input.select();
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
       });
+    }
+    document.getElementById('shareBtn').onclick = async () => {
+      const { java_files, txt_files } = getCurrentFilesData();
+      const files = [
+        ...java_files.map(file => ({ ...file, type: 'java' })),
+        ...txt_files.map(file => ({ ...file, type: 'txt' }))
+      ];
       const json = { files };
       const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(json))));
-      const url = window.location.href.split('?')[0] + '?javacode=' + encodeURIComponent(encoded);
+      let url = window.location.href.split('?')[0] + '?javacode=' + encodeURIComponent(encoded);
+      try {
+        const resp = await fetch(codeStoreBaseUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ java_files, txt_files })
+        });
+        if (!resp.ok) {
+          throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
+        }
+        const resultJson = await resp.json();
+        if (!resultJson.id) {
+          throw new Error('Réponse code-store invalide');
+        }
+        url = window.location.href.split('?')[0] + '?shortjavacode=' + encodeURIComponent(resultJson.id);
+      } catch (err) {
+        console.error('Erreur lors du stockage court du code', err);
+      }
       navigator.clipboard.writeText(url).then(() => {
         alert('URL copiée dans le presse-papiers !');
       }).catch(err => {
         console.error('Erreur lors de la copie', err);
-        prompt('Copiez cette URL :', url);
+        showCopyUrlDialog(url);
       });
     };
     function clearFiles() {
