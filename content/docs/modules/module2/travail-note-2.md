@@ -42,6 +42,13 @@ approprié qui transforme les codes MarkDown en mise en page élégante et remet
 Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
 
 
+{{% hint warning %}}
+
+La mise en forme du code est obligatoire. Vous devez avoir une indentation cohérente.
+
+{{% /hint %}}
+
+
 ## Utilisation d'un environnement de programmation en ligne
 
 Si vous avez utilisé notre [environnement de développement Java en ligne]({{< ref "/docs/environnement" >}}),

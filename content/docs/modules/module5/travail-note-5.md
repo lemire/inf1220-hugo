@@ -38,6 +38,14 @@ rédigez votre travail en MarkDown, vous devez ensuite le convertir en PDF avec 
 approprié qui transforme les codes MarkDown en mise en page élégante et remettre le document PDF. Vous ne devez pas utiliser Microsoft Word ou Google Docs pour traiter le MarkDown. Vous ne devez pas remettre le document MarkDown lui-même. Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. Certains éditeurs vous permettent aussi de mettre en forme votre code automatiquement. Enfin, n'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
 
 
+{{% hint warning %}}
+
+La mise en forme du code Java est obligatoire. Vous devez avoir une indentation cohérente.
+Vous devez faire en sorte que votre code soit coloré pour tenir commpte de la syntaxe.
+Une note de zéro pourra être attribué si votre code n'est pas mis en forme correctement.
+
+{{% /hint %}}
+
 ## Utilisation d'un environnement de programmation en ligne
 
 
