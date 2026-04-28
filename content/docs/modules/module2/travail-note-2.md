@@ -44,7 +44,9 @@ Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pou
 
 {{% hint warning %}}
 
-La mise en forme du code est obligatoire. Vous devez avoir une indentation cohérente.
+La mise en forme du code Java est obligatoire. Vous devez avoir une indentation cohérente.
+Vous devez faire en sorte que votre code soit coloré pour tenir commpte de la syntaxe.
+Une note de zéro pourra être attribué si votre code n'est pas mis en forme correctement.
 
 {{% /hint %}}
 
