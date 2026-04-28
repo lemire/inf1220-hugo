@@ -34,8 +34,8 @@ approprié qui transforme les codes MarkDown en mise en page élégante et remet
 {{% hint warning %}}
 
 La mise en forme du code Java est obligatoire. Vous devez avoir une indentation cohérente.
-Vous devez faire en sorte que votre code soit coloré pour tenir commpte de la syntaxe.
-Une note de zéro pourra être attribué si votre code n'est pas mis en forme correctement.
+Vous devez faire en sorte que votre code soit coloré pour tenir compte de la syntaxe.
+Une note de zéro pourra être attribuée si votre code n'est pas mis en forme correctement.
 
 {{% /hint %}}
 
