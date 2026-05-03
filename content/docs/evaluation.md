@@ -23,6 +23,8 @@ La semaine de remise des travaux est une suggestion. Néanmoins, vous devez comp
 Votre date de fin de cours apparaît sur votre portail étudiant&nbsp;: elle est différente pour chaque étudiant.
 Planifiez bien votre temps&nbsp;!
 
+**Vous aurez à faire de la programmation sans aide pendant l'examen de suivi.**
+
 Avant de faire les travaux, il faut avoir fait les lectures et les exercices de préparation. Il faut prévoir environ 9 heures
 de travail par semaine.
 
