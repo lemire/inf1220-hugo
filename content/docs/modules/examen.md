@@ -32,7 +32,7 @@ rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/"
 
 ## Entretien de suivi
 
-<p>L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen. Il nous permet de vérifier que vous êtes capable d'expliquer les solutions que vous avez soumises de vive voix. Vous devez faire les démarches nécessaires pour passer l'entretien de suivi.</p>
+L'entretien de suivi sert à confirmer votre identité et à démontrer que vous êtes bien la personne ayant réalisé cet examen. Il nous permet de vérifier que vous êtes capable d'expliquer les solutions que vous avez soumises de vive voix. Vous devez faire les démarches nécessaires pour passer l'entretien de suivi.
 
 
 ### Microsoft Teams
@@ -43,24 +43,26 @@ rencontrez des difficultés, communiquez avec [support@teluq.ca](mailto:support@
 Il est de votre responsabilité de disposer de Microsoft Teams.
 
 ### Qu’est-ce que l’entretien de suivi?
-<p>L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final.
-Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses. Il est possible que vous deviez faire un peu de programmation pendant l'entretien sans l'aide de l'IA. Vous pouvez préparer un moyen d'écrire du code sans IA (tableau, éditeur de base, etc.).</p>
+
+L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final. Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses. Vous devrez faire de la programmation pendant l'entretien sans l'aide de l'IA. Vous pouvez préparer un moyen d'écrire du code sans IA (tableau, éditeur de base, etc.).
 
 ### L’entretien de suivi est-il obligatoire?
-<p>Oui. L'entretien de suivi constitue une étape obligatoire.
-Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en mesure de présenter de pièce d’identité avec photo, la note 0 sera attribuée à votre examen.</p>
+
+Oui. L'entretien de suivi constitue une étape obligatoire.
+Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en mesure de présenter de pièce d’identité avec photo, la note 0 sera attribuée à votre examen.
 
 ### À quel moment se tient-il?
 <p>Une fois votre examen corrigé, vous disposez de trois jours ouvrables pour prendre un rendez-vous. Vous pouvez écrire à la personne qui vous encadre ou vous pouvez le faire dans votre portail si cette personne affiche ses disponibilités.</p>
 
 ### Comment se déroule-t-il?
-<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran.</p>
+<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran. Vous aurez ensuite à répondre à des questions. Nous allons vérifier que vous pouvez programmer.</p>
 
 ### Dois-je me préparer à l'entretien de suivi?
-<p>Aucune préparation n’est nécessaire.</p>
+
+Aucune préparation n’est nécessaire.
 
 ### L’entretien de suivi est-il noté?
-<p>Oui. L’entretien de suivi fait l’objet d’une notation indiquant votre capacité d’expliquer vos réponses à l’examen de vive voix.<p>
+<p>Oui. L’entretien de suivi fait l’objet d’une notation indiquant votre capacité d’expliquer vos réponses à l’examen de vive voix et de programmer sans aide.<p>
 
 ### Dans quelles conditions est-ce que l’entretien de suivi peut mener à un échec dans le cours?
 
@@ -72,6 +74,7 @@ pour les raisons suivantes.</p>
 <li>Vous ne vous présentez pas à l'entretien;</li>
 <li>Vous ne présentez pas de pièce d'identité avec photo;</li>
 <li>Vous n'arrivez pas à répondre aux questions portant sur votre examen de manière satisfaisante;</li>
+<li>Vous n'arrivez pas à programmer sans aider devant la personne qui vous encadre;</li>
 <li>Il y a apparence d’infraction liée aux études.</li>
 </ul>
 
@@ -100,7 +103,9 @@ Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
 ## Gestion du temps à l'examen
 
-<p>L'examen peut comporter plusieurs questions de programmation. Vous devez donc pouvoir fournir en quelques minutes du code fonctionnel ainsi que des explications précises. Vous devez donc pouvoir écrire un programme Java correct et l'expliquer en une trentaine de minutes. Même quand vous avez le droit à de la documentation lors de l'examen, vous n'avez néanmoins pas le temps de faire de la lecture. Vous devez donc arriver bien entraîné et bien préparé.</p>
+L'examen peut comporter plusieurs questions de programmation. Vous devez donc pouvoir fournir en quelques minutes du code fonctionnel ainsi que des explications précises. Vous devez donc pouvoir écrire un programme Java correct et l'expliquer en une trentaine de minutes. Même quand vous avez le droit à de la documentation lors de l'examen, vous n'avez néanmoins pas le temps de faire de la lecture. Vous devez donc arriver bien entraîné et bien préparé.
+
+La durée de l'examen varie selon vos conditions. Par contre, une durée minimale de 3 heures est prévue. Vous devez joindre l'Université si vous avez des questions concernant la durée de votre examen. La personne qui vous encadre ne contrôle par la durée de l'examen.
 
 ## Examen factice 1
 
@@ -167,17 +172,17 @@ Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
 ## Déroulement et le jour de l'examen
 
-<p>L'enseignant ne peut changer la date, le lieu ou l'heure de votre examen. Il ne contrôle pas l'environnement technologique lors de l'examen. Un service distinct et indépendant au sein de l'Université gère les examens.</p>
+L'enseignant ne peut changer la date, la durée, le lieu ou l'heure de votre examen. Il ne contrôle pas l'environnement technologique lors de l'examen. Un service distinct et indépendant au sein de l'Université gère les examens.
 
 
 ### Pour les personnes inscrites aux trimestres d'automne 2025 et d'hiver 2026
 
-<p>Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire à l'enseignant pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.</p>
+Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire à l'enseignant pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.
 
 
 ### Pour les personnes inscrites à compter du trimestre d’été 2026
 
-[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628).
+[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.
 
 ## Résultat et rétroaction sur l'examen
 
