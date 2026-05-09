@@ -44,7 +44,7 @@ Il est de votre responsabilité de disposer de Microsoft Teams.
 
 ### Qu’est-ce que l’entretien de suivi?
 
-L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final. Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses. Vous devrez faire de la programmation pendant l'entretien sans l'aide de l'IA. Vous pouvez préparer un moyen d'écrire du code sans IA (tableau, éditeur de base, etc.).
+L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, par visioconférence, avec la personne qui a corrigé votre examen final. Durant cette discussion, vous avez à présenter une pièce d’identité. Ensuite, une discussion permet de s'assurer que vous êtes bien la personne qui a réalisé l’examen. Par exemple, on peut vous demander d’expliquer vos réponses. Vous devrez faire de la programmation pendant l'entretien sans l'aide de l'IA ou de vos notes. Après avoir fait plus d'une centaine de problèmes de programmation  Java pendant le cours, vous devez avoir une maîtrise innée de la syntaxe Java.
 
 ### L’entretien de suivi est-il obligatoire?
 
@@ -55,7 +55,10 @@ Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en 
 <p>Une fois votre examen corrigé, vous disposez de trois jours ouvrables pour prendre un rendez-vous. Vous pouvez écrire à la personne qui vous encadre ou vous pouvez le faire dans votre portail si cette personne affiche ses disponibilités.</p>
 
 ### Comment se déroule-t-il?
-<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran. Vous aurez ensuite à répondre à des questions. Nous allons vérifier que vous pouvez programmer.</p>
+<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran. Vous aurez ensuite à répondre à des questions. Nous allons vérifier que vous pouvez programmer sans aide.</p>
+
+
+Il est possible que l'on vous demande [d'utiliser la page de l'entretien sur le site]({{< relref "docs/modules/entretien" >}}).
 
 ### Dois-je me préparer à l'entretien de suivi?
 
