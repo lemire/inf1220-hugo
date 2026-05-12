@@ -14,6 +14,9 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 
 {{% /hint %}}
 
+{{< figure src="/comics/iaresp.jpg" alt="IA responsable" >}}
+
+
 
 
 Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.

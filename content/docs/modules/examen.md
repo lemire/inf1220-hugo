@@ -16,6 +16,7 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 
 {{% /hint %}}
 
+{{< figure src="/comics/iaresp.jpg" alt="IA responsable" >}}
 
 <p>Si vous ne maîtrisez pas la matière du cours, vous ne réussirez probablement pas l'examen. Prenez le temps d'étudier, de réviser et de poser des questions le cas échéant. Pratiquez-vous à programmer.</p>
 

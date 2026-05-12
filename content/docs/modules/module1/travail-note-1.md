@@ -13,6 +13,9 @@ Pour réussir, les étudiants doivent présenter des solutions claires, précise
 
 Vous devez toujours produire vos propres réponses. L'intelligence artificielle peut être utilisé comme compagnon d'étude, jamais comme outil vous remplaçant.
 
+{{< figure src="/comics/iaresp.jpg" alt="IA responsable" >}}
+
+
 ## Premier problème
 
 <p>

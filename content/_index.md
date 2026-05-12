@@ -107,7 +107,15 @@ En appui à ces activités, le livre de Claude Delannoy, *Programmer en Java* es
 
 <p>Vous devez toujours être capable d'expliquer pleinement vos solutions, sans aide.</p>
 
+
+Si vous utilisez l'intelligence artificielle pour produire des réponses que vous
+ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsable.
+
 {{% /hint  %}}
+
+
+{{< figure src="/comics/iaresp.jpg" alt="IA responsable" >}}
+
 
 {{% hint danger %}}
 

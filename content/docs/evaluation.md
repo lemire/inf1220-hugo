@@ -37,6 +37,6 @@ Dans tous les cas, vous devez expliquer vos solutions.
 {{% /hint %}}
 
 Les travaux notés sont des travaux individuels. Vous devez les réaliser seul. L'utilisation de l'intelligence artificielle est permise, et même
-encouragée, mais vous devez l'utiliser de manière responsable. Un copier-coller de ChatGPT n'est pas acceptable.
+encouragée, mais vous devez l'utiliser de manière responsable. Un copier-coller de ChatGPT n'est pas acceptable. Vous pouvez utiliser l'intelligence artificielle comme compagnon afin d'explorer la matière. Par contre, vous devez produire vos propres réponses.
 
 *Note*. L'entretien de suivi est obligatoire. Il est de votre responsabilité de prendre rendez-vous pour l'entretien de suivi après votre examen.
