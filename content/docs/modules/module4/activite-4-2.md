@@ -732,6 +732,89 @@ La méthode POST sert à envoyer des données au serveur pour créer ou modifier
 Avec l’API `HttpClient`, une requête POST est définie en utilisant 
 ```HttpRequest.newBuilder().POST(HttpRequest.BodyPublishers.ofString(jsonPayload)).uri(URI.create(url)).build(),``` 
 avec un en-tête comme `Content-Type: application/json` pour indiquer le format du corps. Le serveur traite les données envoyées et répond avec un code de statut (par exemple, 201 pour une création réussie) et parfois un corps décrivant la ressource créée. POST est essentiel pour les interactions dynamiques, comme l’envoi de données utilisateur ou la mise à jour de ressources, mais il nécessite une attention particulière à la sécurité, notamment avec HTTPS, pour protéger les données transmises.
+
+
+
+Google JSON, également connu sous le nom de Gson, est une bibliothèque Java développée par Google qui permet de convertir des objets Java en JSON et vice versa. Elle facilite le parsing et la génération de données JSON de manière simple et performante. Voic un exemple simple.
+
+{{<inlineJava path="WeatherForecast.java" lang="java">}}
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class WeatherForecast {
+
+    public static void main(String[] args) {
+        double latitude = 45.5017;   // Montréal
+        double longitude = -73.5673;
+
+        String url = "https://api.open-meteo.com/v1/forecast?" +
+                "latitude=" + latitude +
+                "&longitude=" + longitude +
+                "&hourly=temperature_2m,precipitation" +
+                "&timezone=auto";   // mieux que de forcer l'UTC
+
+        try (HttpClient client = HttpClient.newHttpClient()) {
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            String json = response.body();
+
+            // === Parsing avec Gson ===
+            Gson gson = new Gson();
+            JsonObject root = gson.fromJson(json, JsonObject.class);
+            JsonObject hourly = root.getAsJsonObject("hourly");
+
+            JsonArray times = hourly.getAsJsonArray("time");
+            JsonArray temperatures = hourly.getAsJsonArray("temperature_2m");
+            JsonArray precipitations = hourly.getAsJsonArray("precipitation");
+
+            DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+            DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
+            System.out.println("Prévisions météo pour Montréal (prochaines 12 heures) :\n");
+
+            LocalDateTime now = LocalDateTime.now();
+            int count = 0;
+
+            for (int i = 0; i < times.size() && count < 12; i++) {
+                String timeStr = times.get(i).getAsString();
+                LocalDateTime forecastTime = LocalDateTime.parse(timeStr, inputFormatter);
+
+                if (forecastTime.isAfter(now)) {
+                    double temp = temperatures.get(i).getAsDouble();
+                    double precip = precipitations.get(i).getAsDouble();
+
+                    System.out.printf("%s : %.1f°C, Précipitations : %.1f mm%n",
+                            forecastTime.format(outputFormatter),
+                            temp,
+                            precip);
+
+                    count++;
+                }
+            }
+
+        } catch (Exception e) {
+            System.err.println("Erreur lors de la récupération des données : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
+
+
+
 Considérons un autre exemple pour bien illustrer ces concepts.
 
 {{<inlineJava path="HttpClientExample.java" lang="java">}}

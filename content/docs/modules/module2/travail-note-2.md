@@ -127,8 +127,6 @@ Utilisez ensuite le bouton *partager* pour inclure un hyperlien vers votre solut
 
 
 
-<p><strong>Indice.</strong> Rendez-vous sur le site de votre intelligence artificielle préférée (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Veuillez créer une classe et ses méthodes permettant de calculer le périmètre d'un cercle et l'aire de la surface délimitée par le cercle. Vous devez avoir 3 méthodes : 1 constructeur recevant un rayon, la méthode de calcul de l'aire et la méthode de calcul du périmètre. La classe doit se nommer Cercle.</em>&nbsp;».</p>
-
 {{% /hint %}}
 
 

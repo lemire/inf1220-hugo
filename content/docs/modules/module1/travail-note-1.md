@@ -11,6 +11,8 @@ Les travaux doivent être soumis en format PDF via l’outil de dépôt officiel
 
 Pour réussir, les étudiants doivent présenter des solutions claires, précises et testées, accompagnées d’explications factuelles. La rigueur dans l’analyse et la vérification est cruciale, tout comme la réalisation préalable des exercices préparatoires. Les travaux notés évaluent la capacité à comprendre des énoncés logiques et à raisonner abstraitement, sans points attribués pour l’effort seul. Les étudiants sont encouragés à poser des questions sur la matière, à tester leurs solutions avec diverses données et à relire leur travail avant soumission, en évitant de commencer sans une maîtrise solide des concepts
 
+Vous devez toujours produire vos propres réponses. L'intelligence artificielle peut être utilisé comme compagnon d'étude, jamais comme outil vous remplaçant.
+
 ## Premier problème
 
 <p>
@@ -104,7 +106,7 @@ FIN TANT QUE
 {{% hint info %}}
 
 
-<p><strong>Indice.</strong> RRendez-vous sur le site de votre intelligence artificielle préférée (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) et saisissez l'énoncé dans la boîte de saisie: «&nbsp;<em>Nous souhaitons afficher les nombres entiers de 0 jusqu'à 100 à l'écran (incluant 0 mais excluant 100), en affichant "Fizz" quand le nombre est divisible par 3 et "Buzz" quand le nombre est divisible par 5. Expliquez l'erreur dans ce pseudocode: TANT QUE iterateur < 100 FAIRE affiche la valeur de iterateur à l'écran SI iterateur est divisible par 3 ALORS affiche " Fizz" à l'écran SINON SI iterateur est divisible par 5 ALORS affiche " Buzz" à l'écran FIN SI change de ligne à l'écran iterateur = iterateur + 1 FIN TANT QUE</em>&nbsp;».</p>
+<p><strong>Indice.</strong> Rendez-vous sur le site de votre intelligence artificielle préférée (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) et posez des questions sur la matière au besoin.</p>
 
 {{< youtube id="4jReEOCImds" >}}
 
