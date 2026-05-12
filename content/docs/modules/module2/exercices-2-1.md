@@ -18,7 +18,7 @@ vous pouvez faire référence à notre rappel sur [les principales notions math�
 
 N'allez pas trop vite. Il ne sert à rien de lire la question et d'immédiatement lire la réponse. Le but des exercices est de vous amener à travailler la matière. Si vous ne faites que regarder les solutions, vous n'apprenez pas grand chose. Oui, ça va plus vite, mais votre but ici n'est pas la rapidité.
 
-<p>Prenez note qu'il est permis d'utiliser une intelligence artificille lors des exercises (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.) pour approfondir la matière ou vous aidez à comprendre les solutions.
+<p>Prenez note qu'il est permis d'utiliser une intelligence artificielle lors des exercices (<a href="https://grok.com">Grok</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://gemini.google.com">Gemini</a>, etc.)
 Cependant vous devriez vous entraîner à produire vos propres réponses. Vous devez être capable de produire vos propres réponses et vous devez toujours pouvoir expliquer vos solutions.</p>
 
 

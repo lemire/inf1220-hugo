@@ -5,10 +5,8 @@ weight: 7
 
 # Entretien de suivi
 
-À la fin du cours, vous devez être capable de coder des programmes en Java comprenant des boucles, des fonctions, des variables, etc. sans aide, sans notes, sans intelligence artificielle. Vous devez être capable de produire ce code lorsque quelqu'un vous le demande de vive voix. Si vous ne maîtrisez pas la syntaxe du langage Java ou ses principaux concepts, vous devriez échouer le cours. Vous devez être capable d'être du code fonctionnel et mis en forme correctement. **L'IA est interdite pendant l'entretien de suivi.**
-
-
-L'environnement ci-dessous vous permet de répondre aux questions de l'enseignant pendant votre entretien. Vous pouvez ajouter des fichiers Java, écrire votre code, puis l'exécuter. Aucun exemple préexistant n'est fourni&nbsp;: vous devez écrire votre propre code à partir des consignes données de vive voix.
+Vous devez être capable de produire ce code lorsque quelqu’un vous le demande de vive voix. Si vous ne maîtrisez pas la syntaxe du langage Java ou ses principaux concepts, vous devriez échouer le cours. Vous devez être capable de produire du code fonctionnel et correctement mis en forme. L’IA est interdite pendant l’entretien de suivi à moins d'indication contraire de la part de la personne qui vous encadre.
+L’environnement ci-dessous vous permet de répondre aux questions de l’enseignant pendant votre entretien. Vous pouvez ajouter des fichiers Java, écrire votre code, puis l’exécuter. Aucun exemple préexistant n’est fourni : vous devez écrire votre propre code à partir des consignes données de vive voix.
 
 
   <style>
