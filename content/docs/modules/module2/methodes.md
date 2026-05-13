@@ -183,8 +183,26 @@ void main() {
 }
 {{</inlineJava>}}
 
-Par contre, cette nouvelle syntaxe ne s'applique que dans des cas simples. En pratique,
-il est quasiment toujours nécessaire de spécifier le nom de la classe.
+Vous pouvez définir des fonctions autre que la fonction main.
+
+{{<inlineJava path="ExempleMethode.java" lang="java" >}}
+int somme(int x, int y) {
+    return x + y;
+}
+
+void main() {
+    System.out.println("Bonjour, le monde !");
+    int x = 5;
+    int y = 10;
+    System.out.println("La somme de " + x + " et " 
+      + y + " est : " + somme(x,y));
+}
+{{</inlineJava>}}
+
+Les méthodes et variables sont automatiquement placées dans une classe anonyme.
+
+
+Par contre, cette nouvelle syntaxe ne s'applique que dans des cas simples où vous n'avez pas besoin de nommer la classe. En pratique, il est quasiment toujours nécessaire de spécifier le nom des classes dans un projet Java substantiel.
 
 ### La définition d'une méthode/fonction simple
 
