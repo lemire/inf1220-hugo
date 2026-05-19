@@ -10,21 +10,21 @@
 
 
 
- &lt;div id="java-runner-1778686852359652140"&gt;
+ &lt;div id="java-runner-1779221503895052188"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1778686852359652140 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1778686852359652140 .export-form { margin-bottom:0; }
- #java-runner-1778686852359652140 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1778686852359652140 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1778686852359652140 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1778686852359652140 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1778686852359652140 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1779221503895052188 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1779221503895052188 .export-form { margin-bottom:0; }
+ #java-runner-1779221503895052188 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1779221503895052188 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1779221503895052188 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1779221503895052188 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1779221503895052188 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1778686852359652140-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1779221503895052188-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesMath.java&lt;/div&gt;&lt;textarea&gt;
@@ -40,14 +40,14 @@ public class ExemplesMath {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1778686852359652140-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1779221503895052188-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1778686852359652140');
+ var root = document.getElementById('java-runner-1779221503895052188');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -146,7 +146,7 @@ public class ExemplesMath {
  .then(function(r){
  clearInterval(execAnim);
  clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
+ if (!r.ok &amp;&amp; r.status !== 400 &amp;&amp; r.status !== 500) {
  throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
  }
  return r.text();
@@ -159,8 +159,8 @@ public class ExemplesMath {
  resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
  resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
+ } else if(j.status==='runtime_error' || j.status==='error') {
+ resultDiv.innerHTML=(j.output?'&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output).replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;':'')+'&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.stderr||j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -223,6 +223,43 @@ public class ExemplesMath {
  }
  }
  });
+ } else if (j.status==='error' || j.status==='runtime_error') {
+ var rtText = j.stderr || j.error || '';
+ var rtCauses = rtText.split('\n').filter(function(l){ return /Caused by:/.test(l); });
+ var rtMsg = (rtCauses.length
+ ? rtCauses[rtCauses.length-1].replace(/^.*Caused by:\s*/, '')
+ : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function(){
+ block._cm.getAllMarks().forEach(function(m){ m.clear(); });
+ });
+ }
+ block._javaErrorLines = {};
+ var sb = block.querySelector('.java-error-status-bar');
+ if (sb) { sb.textContent = ''; sb.style.visibility = 'hidden'; }
+ });
+ var rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+ var rtSeen = {}, rtMatch;
+ while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+ var rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+ if (rtLine &lt; 0 || rtSeen[rtFile + ':' + rtLine]) { continue; }
+ rtSeen[rtFile + ':' + rtLine] = true;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameEl = block.querySelector('.export-file-name');
+ var nm = nameEl ? nameEl.textContent.trim() : '';
+ if (block._cm &amp;&amp; rtLine &lt; block._cm.lineCount() &amp;&amp;
+ (nm === rtFile || nm.endsWith('/'+rtFile) || nm.endsWith('\\'+rtFile))) {
+ block._cm.operation(function(){
+ block._cm.markText({line:rtLine, ch:0}, {line:rtLine+1, ch:0}, {
+ className: 'cm-java-error', title: rtMsg
+ });
+ });
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[rtLine] = rtMsg;
+ }
+ });
+ }
  } else {
  
  root.querySelectorAll('.export-file-block').forEach(function(block){
@@ -279,21 +316,21 @@ public class ExemplesMath {
 
 
 
- &lt;div id="java-runner-1778686852359745676"&gt;
+ &lt;div id="java-runner-1779221503895103565"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1778686852359745676 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1778686852359745676 .export-form { margin-bottom:0; }
- #java-runner-1778686852359745676 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1778686852359745676 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1778686852359745676 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1778686852359745676 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1778686852359745676 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1779221503895103565 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1779221503895103565 .export-form { margin-bottom:0; }
+ #java-runner-1779221503895103565 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1779221503895103565 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1779221503895103565 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1779221503895103565 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1779221503895103565 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1778686852359745676-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1779221503895103565-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExemplesString.java&lt;/div&gt;&lt;textarea&gt;
@@ -330,14 +367,14 @@ public class ExemplesString {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1778686852359745676-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1779221503895103565-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1778686852359745676');
+ var root = document.getElementById('java-runner-1779221503895103565');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -436,7 +473,7 @@ public class ExemplesString {
  .then(function(r){
  clearInterval(execAnim);
  clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
+ if (!r.ok &amp;&amp; r.status !== 400 &amp;&amp; r.status !== 500) {
  throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
  }
  return r.text();
@@ -449,8 +486,8 @@ public class ExemplesString {
  resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
  resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
+ } else if(j.status==='runtime_error' || j.status==='error') {
+ resultDiv.innerHTML=(j.output?'&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output).replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;':'')+'&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.stderr||j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -513,6 +550,43 @@ public class ExemplesString {
  }
  }
  });
+ } else if (j.status==='error' || j.status==='runtime_error') {
+ var rtText = j.stderr || j.error || '';
+ var rtCauses = rtText.split('\n').filter(function(l){ return /Caused by:/.test(l); });
+ var rtMsg = (rtCauses.length
+ ? rtCauses[rtCauses.length-1].replace(/^.*Caused by:\s*/, '')
+ : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function(){
+ block._cm.getAllMarks().forEach(function(m){ m.clear(); });
+ });
+ }
+ block._javaErrorLines = {};
+ var sb = block.querySelector('.java-error-status-bar');
+ if (sb) { sb.textContent = ''; sb.style.visibility = 'hidden'; }
+ });
+ var rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+ var rtSeen = {}, rtMatch;
+ while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+ var rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+ if (rtLine &lt; 0 || rtSeen[rtFile + ':' + rtLine]) { continue; }
+ rtSeen[rtFile + ':' + rtLine] = true;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameEl = block.querySelector('.export-file-name');
+ var nm = nameEl ? nameEl.textContent.trim() : '';
+ if (block._cm &amp;&amp; rtLine &lt; block._cm.lineCount() &amp;&amp;
+ (nm === rtFile || nm.endsWith('/'+rtFile) || nm.endsWith('\\'+rtFile))) {
+ block._cm.operation(function(){
+ block._cm.markText({line:rtLine, ch:0}, {line:rtLine+1, ch:0}, {
+ className: 'cm-java-error', title: rtMsg
+ });
+ });
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[rtLine] = rtMsg;
+ }
+ });
+ }
  } else {
  
  root.querySelectorAll('.export-file-block').forEach(function(block){
@@ -569,21 +643,21 @@ public class ExemplesString {
 
 
 
- &lt;div id="java-runner-1778686852359790750"&gt;
+ &lt;div id="java-runner-1779221503895155423"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1778686852359790750 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1778686852359790750 .export-form { margin-bottom:0; }
- #java-runner-1778686852359790750 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1778686852359790750 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1778686852359790750 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1778686852359790750 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1778686852359790750 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1779221503895155423 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1779221503895155423 .export-form { margin-bottom:0; }
+ #java-runner-1779221503895155423 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1779221503895155423 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1779221503895155423 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1779221503895155423 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1779221503895155423 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1778686852359790750-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1779221503895155423-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExempleZero.java&lt;/div&gt;&lt;textarea&gt;
@@ -602,14 +676,14 @@ public class ExempleZero {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1778686852359790750-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1779221503895155423-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1778686852359790750');
+ var root = document.getElementById('java-runner-1779221503895155423');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -708,7 +782,7 @@ public class ExempleZero {
  .then(function(r){
  clearInterval(execAnim);
  clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
+ if (!r.ok &amp;&amp; r.status !== 400 &amp;&amp; r.status !== 500) {
  throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
  }
  return r.text();
@@ -721,8 +795,8 @@ public class ExempleZero {
  resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
  resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
+ } else if(j.status==='runtime_error' || j.status==='error') {
+ resultDiv.innerHTML=(j.output?'&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output).replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;':'')+'&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.stderr||j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -785,6 +859,43 @@ public class ExempleZero {
  }
  }
  });
+ } else if (j.status==='error' || j.status==='runtime_error') {
+ var rtText = j.stderr || j.error || '';
+ var rtCauses = rtText.split('\n').filter(function(l){ return /Caused by:/.test(l); });
+ var rtMsg = (rtCauses.length
+ ? rtCauses[rtCauses.length-1].replace(/^.*Caused by:\s*/, '')
+ : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function(){
+ block._cm.getAllMarks().forEach(function(m){ m.clear(); });
+ });
+ }
+ block._javaErrorLines = {};
+ var sb = block.querySelector('.java-error-status-bar');
+ if (sb) { sb.textContent = ''; sb.style.visibility = 'hidden'; }
+ });
+ var rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+ var rtSeen = {}, rtMatch;
+ while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+ var rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+ if (rtLine &lt; 0 || rtSeen[rtFile + ':' + rtLine]) { continue; }
+ rtSeen[rtFile + ':' + rtLine] = true;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameEl = block.querySelector('.export-file-name');
+ var nm = nameEl ? nameEl.textContent.trim() : '';
+ if (block._cm &amp;&amp; rtLine &lt; block._cm.lineCount() &amp;&amp;
+ (nm === rtFile || nm.endsWith('/'+rtFile) || nm.endsWith('\\'+rtFile))) {
+ block._cm.operation(function(){
+ block._cm.markText({line:rtLine, ch:0}, {line:rtLine+1, ch:0}, {
+ className: 'cm-java-error', title: rtMsg
+ });
+ });
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[rtLine] = rtMsg;
+ }
+ });
+ }
  } else {
  
  root.querySelectorAll('.export-file-block').forEach(function(block){
@@ -841,21 +952,21 @@ public class ExempleZero {
 
 
 
- &lt;div id="java-runner-1778686852359828421"&gt;
+ &lt;div id="java-runner-1779221503895215136"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-runner-1778686852359828421 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1778686852359828421 .export-form { margin-bottom:0; }
- #java-runner-1778686852359828421 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1778686852359828421 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1778686852359828421 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1778686852359828421 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1778686852359828421 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-runner-1779221503895215136 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-runner-1779221503895215136 .export-form { margin-bottom:0; }
+ #java-runner-1779221503895215136 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-runner-1779221503895215136 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
+ #java-runner-1779221503895215136 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-runner-1779221503895215136 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-runner-1779221503895215136 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-runner-1778686852359828421-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-runner-1779221503895215136-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;ExerciceForFor.java&lt;/div&gt;&lt;textarea&gt;
@@ -870,14 +981,14 @@ public class ExerciceForFor {
 }
 &lt;/textarea&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1778686852359828421-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-runner-1779221503895215136-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
  &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
  &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1778686852359828421');
+ var root = document.getElementById('java-runner-1779221503895215136');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -976,7 +1087,7 @@ public class ExerciceForFor {
  .then(function(r){
  clearInterval(execAnim);
  clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
+ if (!r.ok &amp;&amp; r.status !== 400 &amp;&amp; r.status !== 500) {
  throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
  }
  return r.text();
@@ -989,8 +1100,8 @@ public class ExerciceForFor {
  resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
  } else if(j.status==='compiling') {
  resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.error||'').replace(/\n/g,'&lt;br&gt;')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
+ } else if(j.status==='runtime_error' || j.status==='error') {
+ resultDiv.innerHTML=(j.output?'&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.output).replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;':'')+'&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;'+escapeHtml(j.stderr||j.error||'').replace(/\n/g,'&lt;br&gt;')+'&lt;/pre&gt;';
  } else {
  resultDiv.textContent = t;
  }
@@ -1053,6 +1164,43 @@ public class ExerciceForFor {
  }
  }
  });
+ } else if (j.status==='error' || j.status==='runtime_error') {
+ var rtText = j.stderr || j.error || '';
+ var rtCauses = rtText.split('\n').filter(function(l){ return /Caused by:/.test(l); });
+ var rtMsg = (rtCauses.length
+ ? rtCauses[rtCauses.length-1].replace(/^.*Caused by:\s*/, '')
+ : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ if (block._cm) {
+ block._cm.operation(function(){
+ block._cm.getAllMarks().forEach(function(m){ m.clear(); });
+ });
+ }
+ block._javaErrorLines = {};
+ var sb = block.querySelector('.java-error-status-bar');
+ if (sb) { sb.textContent = ''; sb.style.visibility = 'hidden'; }
+ });
+ var rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+ var rtSeen = {}, rtMatch;
+ while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+ var rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+ if (rtLine &lt; 0 || rtSeen[rtFile + ':' + rtLine]) { continue; }
+ rtSeen[rtFile + ':' + rtLine] = true;
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var nameEl = block.querySelector('.export-file-name');
+ var nm = nameEl ? nameEl.textContent.trim() : '';
+ if (block._cm &amp;&amp; rtLine &lt; block._cm.lineCount() &amp;&amp;
+ (nm === rtFile || nm.endsWith('/'+rtFile) || nm.endsWith('\\'+rtFile))) {
+ block._cm.operation(function(){
+ block._cm.markText({line:rtLine, ch:0}, {line:rtLine+1, ch:0}, {
+ className: 'cm-java-error', title: rtMsg
+ });
+ });
+ if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+ block._javaErrorLines[rtLine] = rtMsg;
+ }
+ });
+ }
  } else {
  
  root.querySelectorAll('.export-file-block').forEach(function(block){
