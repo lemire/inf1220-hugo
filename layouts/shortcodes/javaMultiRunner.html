@@ -94,7 +94,7 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
     .then(r => {
       clearInterval(execAnim);
       clearTimeout(timeoutId);
-      if (!r.ok && r.status !== 400) {
+      if (!r.ok && r.status !== 400 && r.status !== 500) {
         throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
       }
       return r.json();
@@ -148,6 +148,49 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
                   }
                 });
               }
+            }
+          });
+        }
+      } else if (data.status === 'error') {
+        const rtText = data.stderr || data.error || '';
+        resultDiv.innerHTML =
+          (data.output ? '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
+            data.output.replace(/\n/g, '<br>') + '</pre>' : '') +
+          '<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">' +
+          rtText.replace(/\n/g, '<br>') + '</pre>';
+        const rtCauses = rtText.split('\n').filter(l => /Caused by:/.test(l));
+        const rtMsg = (rtCauses.length
+          ? rtCauses[rtCauses.length - 1].replace(/^.*Caused by:\s*/, '')
+          : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+        root.querySelectorAll('.export-file-block').forEach(block => {
+          if (block._cm) {
+            block._cm.operation(() => {
+              block._cm.getAllMarks().forEach(m => m.clear());
+              block._cm.eachLine(lineHandle => {
+                block._cm.removeLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+              });
+            });
+          }
+        });
+        const rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+        const rtSeen = {};
+        let rtMatch;
+        while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+          const rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+          if (rtLine < 0 || rtSeen[rtFile + ':' + rtLine]) continue;
+          rtSeen[rtFile + ':' + rtLine] = true;
+          root.querySelectorAll('.export-file-block').forEach(block => {
+            const nameEl = block.querySelector('.export-file-name');
+            const nm = nameEl ? nameEl.textContent.trim() : '';
+            if (block._cm && rtLine < block._cm.lineCount() &&
+                (nm === rtFile || nm.endsWith('/' + rtFile) || nm.endsWith('\\' + rtFile))) {
+              block._cm.operation(() => {
+                block._cm.markText({line: rtLine, ch: 0}, {line: rtLine + 1, ch: 0}, {
+                  className: 'cm-java-error', title: rtMsg
+                });
+                const lineHandle = block._cm.getLineHandle(rtLine);
+                if (lineHandle) block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+              });
             }
           });
         }

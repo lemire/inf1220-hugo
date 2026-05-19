@@ -163,7 +163,7 @@ L’environnement ci-dessous vous permet de répondre aux questions de l’ensei
           signal: controller.signal
         });
         clearTimeout(timeoutId);
-        if (!resp.ok && resp.status !== 400) {
+        if (!resp.ok && resp.status !== 400 && resp.status !== 500) {
           throw new Error(`Erreur HTTP ${resp.status} : ${resp.statusText}`);
         }
         let resultText = await resp.text();
@@ -261,6 +261,63 @@ L’environnement ci-dessous vous permet de répondre aux questions de l’ensei
                       }
                     });
                   }
+                }
+              });
+            }
+          } else if (resultJson.status === 'error') {
+            const errText = resultJson.stderr || resultJson.error || '';
+            document.querySelectorAll('.file-block').forEach(block => {
+              if (block._cm && block.querySelector('.file-type b').textContent === 'Java') {
+                block._cm.operation(() => {
+                  block._cm.getAllMarks().forEach(m => m.clear());
+                  block._cm.eachLine(lineHandle => {
+                    block._cm.removeLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+                  });
+                });
+                if (block._cm._javaErrorStatusListeners) {
+                  block._cm._javaErrorStatusListeners.forEach(({line, handler}) => {
+                    block._cm.off('cursorActivity', handler);
+                  });
+                  block._cm._javaErrorStatusListeners = [];
+                }
+                const statusBar = block.querySelector('.java-status-bar');
+                if (statusBar) {
+                  statusBar.textContent = '';
+                  statusBar.style.visibility = 'hidden';
+                }
+              }
+            });
+            displayDiv.innerHTML =
+              (resultJson.output
+                ? '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
+                  escapeHtml(resultJson.output).replace(/\n/g, '<br>') + '</pre>'
+                : '') +
+              '<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">' +
+              escapeHtml(errText).replace(/\n/g, '<br>') + '</pre>';
+            // Surligne dans l'éditeur les lignes citées par la trace d'exécution
+            const causeLines = errText.split('\n').filter(l => /Caused by:/.test(l));
+            const errMsg = (causeLines.length
+              ? causeLines[causeLines.length - 1].replace(/^.*Caused by:\s*/, '')
+              : (errText.split('\n')[0] || 'Erreur d’exécution')).trim();
+            const stackRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+            const seen = {};
+            let frame;
+            while ((frame = stackRegex.exec(errText)) !== null) {
+              const file = frame[1], line = parseInt(frame[2], 10) - 1;
+              if (line < 0 || seen[file + ':' + line]) continue;
+              seen[file + ':' + line] = true;
+              document.querySelectorAll('.file-block').forEach(block => {
+                const nameInput = block.querySelector('input[type=text]');
+                const nm = nameInput ? nameInput.value.trim() : '';
+                if (block._cm && line < block._cm.lineCount() &&
+                    (nm === file || nm.endsWith('/' + file) || nm.endsWith('\\' + file))) {
+                  block._cm.operation(() => {
+                    block._cm.markText({line: line, ch: 0}, {line: line + 1, ch: 0}, {
+                      className: 'cm-java-error', title: errMsg
+                    });
+                    const lineHandle = block._cm.getLineHandle(line);
+                    if (lineHandle) block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+                  });
                 }
               });
             }

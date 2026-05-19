@@ -130,7 +130,7 @@
         .then(function(r){
           clearInterval(execAnim);
           clearTimeout(timeoutId);
-          if (!r.ok && r.status !== 400) {
+          if (!r.ok && r.status !== 400 && r.status !== 500) {
             throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
           }
           return r.text();
@@ -143,8 +143,8 @@
               resultDiv.innerHTML='<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+escapeHtml(j.output||'').replace(/\n/g,'<br>')+escapeHtml(j.stderr||'')+'</pre>';
             } else if(j.status==='compiling') {
               resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+escapeHtml(j.error||'').replace(/\n/g,'<br>')+escapeHtml(j.stderr||'')+'</pre>';
-            } else if(j.status==='runtime_error') {
-              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+escapeHtml(j.error||'').replace(/\n/g,'<br>')+escapeHtml(j.stderr||'')+'</pre>';
+            } else if(j.status==='runtime_error' || j.status==='error') {
+              resultDiv.innerHTML=(j.output?'<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">'+escapeHtml(j.output).replace(/\n/g,'<br>')+'</pre>':'')+'<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;">'+escapeHtml(j.stderr||j.error||'').replace(/\n/g,'<br>')+'</pre>';
             } else {
               resultDiv.textContent = t;
             }
@@ -207,6 +207,43 @@
                   }
                 }
               });
+            } else if (j.status==='error' || j.status==='runtime_error') {
+              var rtText = j.stderr || j.error || '';
+              var rtCauses = rtText.split('\n').filter(function(l){ return /Caused by:/.test(l); });
+              var rtMsg = (rtCauses.length
+                ? rtCauses[rtCauses.length-1].replace(/^.*Caused by:\s*/, '')
+                : (rtText.split('\n')[0] || 'Erreur d’exécution')).trim();
+              root.querySelectorAll('.export-file-block').forEach(function(block){
+                if (block._cm) {
+                  block._cm.operation(function(){
+                    block._cm.getAllMarks().forEach(function(m){ m.clear(); });
+                  });
+                }
+                block._javaErrorLines = {};
+                var sb = block.querySelector('.java-error-status-bar');
+                if (sb) { sb.textContent = ''; sb.style.visibility = 'hidden'; }
+              });
+              var rtRegex = /\(([\w$-]+\.java):(\d+)\)/g;
+              var rtSeen = {}, rtMatch;
+              while ((rtMatch = rtRegex.exec(rtText)) !== null) {
+                var rtFile = rtMatch[1], rtLine = parseInt(rtMatch[2], 10) - 1;
+                if (rtLine < 0 || rtSeen[rtFile + ':' + rtLine]) { continue; }
+                rtSeen[rtFile + ':' + rtLine] = true;
+                root.querySelectorAll('.export-file-block').forEach(function(block){
+                  var nameEl = block.querySelector('.export-file-name');
+                  var nm = nameEl ? nameEl.textContent.trim() : '';
+                  if (block._cm && rtLine < block._cm.lineCount() &&
+                      (nm === rtFile || nm.endsWith('/'+rtFile) || nm.endsWith('\\'+rtFile))) {
+                    block._cm.operation(function(){
+                      block._cm.markText({line:rtLine, ch:0}, {line:rtLine+1, ch:0}, {
+                        className: 'cm-java-error', title: rtMsg
+                      });
+                    });
+                    if (!block._javaErrorLines) { block._javaErrorLines = {}; }
+                    block._javaErrorLines[rtLine] = rtMsg;
+                  }
+                });
+              }
             } else {
               // Si ce n'est pas une erreur de compilation, on nettoie le surlignage et la barre d'erreur contextuelle
               root.querySelectorAll('.export-file-block').forEach(function(block){
