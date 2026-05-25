@@ -20,13 +20,6 @@ Dans ce cours, vous n'avez pas à maîtriser la notation grand-O et la complexit
 {{% /hint %}}
 
 
-### Notation grand-O
-
-La notation \( O(f(n)) \) signifie que, pour des entrées de taille \( n \), l’algorithme effectue au plus un nombre d’opérations proportionnel à \( f(n) \) (à une constante près). On ne s’intéresse qu’au comportement pour de grandes valeurs de \( n \), et on ignore les détails d’implémentation ou les constantes cachées.
-
-On considère souvent que l'accès à un élément d'un tableau par son index a une complexité \( O(1) \) puisqu'il s'agit d'une seule opération. Les operations arithmétique (+, -, etc.) ont 
-aussi une complexité  \( O(1) \).
-
 
 ### Notation grand-O
 
