@@ -50,7 +50,7 @@ L’entretien de suivi est une rencontre individuelle d’environ 15 minutes, pa
 ### L’entretien de suivi est-il obligatoire?
 
 Oui. L'entretien de suivi constitue une étape obligatoire.
-Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en mesure de présenter de pièce d’identité avec photo, la note 0 sera attribuée à votre examen.
+Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en mesure de présenter de pièce d’identité avec photo, vous obtiendrez un échec.
 
 ### À quel moment se tient-il?
 <p>Une fois votre examen corrigé, vous disposez de trois jours ouvrables pour prendre un rendez-vous. Vous pouvez écrire à la personne qui vous encadre ou vous pouvez le faire dans votre portail si cette personne affiche ses disponibilités.</p>
