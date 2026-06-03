@@ -16,7 +16,7 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 
 
 
-Les étudiants doivent planifier leur temps rigoureusement, car la manipulation des entrées/sorties peut être complexe, et les travaux doivent être soumis avant la date de fin de cours, disponible sur le portail étudiant, sans possibilité de report sauf validation par l’Université pour des raisons exceptionnelles (maladie, deuil, etc.).
+Les étudiants doivent planifier leur temps rigoureusement, car la manipulation des entrées/sorties peut être complexe, et *les travaux doivent être soumis avant la date de fin de cours*, disponible sur le portail étudiant, sans possibilité de report sauf validation par l’Université pour des raisons exceptionnelles (maladie, deuil, etc.).
 
 Les travaux doivent être soumis sous forme de fichier PDF via l’outil de dépôt de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le PDF doit permettre le copier-coller du code, être exempt de saisies d’écran ou de contenu manuscrit, et inclure du code testé et fonctionnel, car un code non fonctionnel peut entraîner une note de zéro. Les recherches sur Internet sont encouragées, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La date de fin de cours, non négociable par les enseignants, marque la limite pour les soumissions, et tout travail remis tardivement risque une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.
 

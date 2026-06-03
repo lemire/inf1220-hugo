@@ -19,7 +19,7 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 
 
 
-Les travaux doivent être soumis avant la date de fin de cours, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.
+**Les travaux doivent être soumis avant la date de fin de cours**, inscrite dans le portail étudiant, sans possibilité de report, sauf en cas de situation exceptionnelle validée par l’Université. Toute soumission tardive peut entraîner une note de zéro ou un «&nbsp;incomplet&nbsp;», même si l’examen a lieu plus tard.
 
 Les travaux doivent être remis sous forme de fichier PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le document doit être clair, lisible, permettre le copier-coller du code, et inclure des explications détaillées en français sous forme de texte suivi, en évitant les saisies d’écran ou les travaux manuscrits. Les réponses doivent être précises, personnelles, et accompagnées d’analyses, sans se limiter à du code ou à des extraits recopiés. Une fois soumis, le travail ne peut être modifié, d’où l’importance de le relire attentivement.
 
