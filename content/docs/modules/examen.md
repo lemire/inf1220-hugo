@@ -193,7 +193,7 @@ Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Uni
 ~~[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.~~
 
 {{% hint info %}}
-Juin 2026 : cette nouvelle formule d'examen devait entrer en fonction à l'été 2026. Pour des raisons administratives, la nouvelle formule n'a pas été autorisée. Suivez les consignes de l'Université. En cas de doute, communiquez avec l'Université pour en savoir davantage.
+**Juin 2026** : L'ancienne plateforme d'examen de l'Université TÉLUQ est retirée. Une nouvelle formule d'examen devait entrer en fonction à l'été 2026. Pour des raisons administratives, la nouvelle formule n'a pas été autorisée. Nous n'avons pas plus d'information pour l'instant. Suivez les consignes de l'Université. En cas de doute, communiquez avec l'Université pour en savoir davantage.
 {{% /hint %}}
 
 ## Résultat et rétroaction sur l'examen
