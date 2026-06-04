@@ -23,6 +23,24 @@ Mener à terme un cours à l’Université TÉLUQ exige de la persévérance et 
 
 Le professeur est préoccupé par le fait que l’apprentissage s’effectue de façon autonome. Tout le cours est créé en fonction de cet objectif. Nous croyons que le résultat est une formation de qualité axée sur l’autonomie et l’indépendance d’esprit.
 
+## L'autonomie comme compétence universitaire
+
+À l'Université TÉLUQ, l'autonomie n'est pas seulement une condition pratique du cours à distance: c'est aussi une compétence que vous développez. Vous devez apprendre à lire attentivement, à interpréter des consignes, à chercher de l'information fiable et à vérifier vous-même votre compréhension. En programmation, cette autonomie est particulièrement importante, car une partie du travail consiste toujours à déboguer, à consulter de la documentation et à essayer plusieurs pistes avant d'arriver à une solution correcte.
+
+Cette réalité peut surprendre les étudiants qui ont surtout connu un modèle d'enseignement où l'on rappelle constamment quoi faire, quand le faire et comment le faire. Dans le modèle de la TÉLUQ, une partie de cette responsabilité vous revient. Cela ne signifie pas que vous êtes laissé à vous-même, mais plutôt que le cours est conçu pour vous amener à prendre en charge votre progression intellectuelle.
+
+## La flexibilité implique une responsabilité
+
+La grande souplesse offerte par la TÉLUQ est un avantage réel. Vous pouvez souvent étudier le soir, la fin de semaine ou selon un horaire atypique. Cette flexibilité permet à plusieurs personnes de concilier études, travail, famille et autres obligations. Toutefois, cette liberté n'est pas synonyme d'absence de contraintes.
+
+Plus vous disposez de liberté dans votre organisation, plus vous devez être capable d'établir un rythme de travail réaliste. Reporter constamment les lectures, les exercices ou les travaux crée rapidement un effet d'accumulation. Dans un cours comme INF 1220, où les apprentissages sont cumulatifs, quelques semaines de retard peuvent suffire à rendre la suite du cours beaucoup plus difficile. La flexibilité du modèle TÉLUQ fonctionne bien lorsque l'étudiant la transforme en routine stable.
+
+## Le rôle du soutien pédagogique
+
+Le modèle de la TÉLUQ ne repose pas sur des rencontres hebdomadaires obligatoires, mais cela ne veut pas dire que l'encadrement est absent. Le soutien pédagogique existe pour vous aider à franchir des blocages, à clarifier une consigne ou à mieux comprendre une notion après un effort personnel sérieux. Il s'agit donc d'un accompagnement ciblé, et non d'un remplacement des lectures, des exercices et de la pratique.
+
+Pour tirer profit de cet encadrement, il faut formuler des questions précises et montrer la démarche déjà entreprise. Une question bien posée explique le contexte, les essais effectués et l'endroit exact où la difficulté demeure. Cette manière de demander de l'aide est cohérente avec le modèle de la TÉLUQ: on valorise l'initiative, la clarté et la progression autonome, tout en maintenant une présence professorale lorsque cela devient utile.
+
 
 ## Apprentissage par vidéo
 
@@ -66,7 +84,9 @@ Vous ne devriez jamais avoir à nous demander jusqu’à quelle heure précise l
 
 À la TÉLUQ, chaque étudiant a sa propre date de fin de cours. Les professeurs ne peuvent pas modifier ces dates, quelle que soit votre situation. Les dates des examens sont fixées par l'Université. Les professeurs conçoivent les examens, mais leur déroulement est géré par l'Université. La période suivant la date de fin de cours, où votre dossier est fermé et où vous risquez de recevoir un incomplet, est également gérée par l'Université. Vous devez donc contacter l'Université si vous avez besoin de plus de temps. Il est inutile d'écrire aux professeurs à ce sujet.
 
-Il est de votre responsabilité de respecter les délais et de réaliser les travaux selon l'échéancier prévu dans le cours. En cas de difficultés (familiales, médicales, situation de handicap), vous devez en informer l'Université, et non le professeur. Sinon, une bonne organisation est essentielle.
+Il est de votre responsabilité de respecter les délais et de réaliser les travaux selon l'échéancier prévu dans le cours. En cas de difficultés (familiales, médicales, situation de handicap), vous devez en informer l'Université, et non le professeur. Une bonne organisation est essentielle.
+
+Vous devez remettre vos travaux avant la date de fin du cours. Il n'y pas de report possible concernant la remise des travaux.
 
 La gestion efficace de votre temps est une compétence clé pour réussir vos études universitaires. Le cours est conçu pour vous y aider en structurant les activités en modules avec des échéances suggérées. Toutefois, c'est à vous de vous organiser.
 
