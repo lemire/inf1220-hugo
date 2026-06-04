@@ -188,12 +188,12 @@ L'enseignant ne peut changer la date, la durée, le lieu ou l'heure de votre exa
 Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire à l'enseignant pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.
 
 
-### Pour les personnes inscrites à compter du trimestre d’été 2026
+### ~~Pour les personnes inscrites à compter du trimestre d’été 2026~~
 
-[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.
+~~[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.~~
 
 {{% hint info %}}
-Les modalités de l'examen peuvent dépendre de la version du cours à laquelle vous êtes inscrit et d'autres circonstances. Si les indications ci-dessus ne correspondent pas à ce qui vous a été communiqué, fiez-vous toujours aux directives transmises par l'Université et à votre portail étudiant, qui font foi de la plateforme et du déroulement exacts de votre examen. En cas de doute sur les modalités qui s'appliquent à vous, c'est l'Université qu'il faut joindre.
+Juin 2026 : cette nouvelle formule d'examen devait entrer en fonction à l'été 2026. Pour des raisons administratives, la nouvelle formule n'a pas été autorisée. Suivez les consignes de l'Université. En cas de doute, communiquez avec l'Université pour en savoir davantage.
 {{% /hint %}}
 
 ## Résultat et rétroaction sur l'examen
