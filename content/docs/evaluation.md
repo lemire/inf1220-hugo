@@ -39,4 +39,32 @@ Dans tous les cas, vous devez expliquer vos solutions.
 Les travaux notés sont des travaux individuels. Vous devez les réaliser seul. L'utilisation de l'intelligence artificielle est permise, et même
 encouragée, mais vous devez l'utiliser de manière responsable. Un copier-coller de ChatGPT n'est pas acceptable. Vous pouvez utiliser l'intelligence artificielle comme compagnon afin d'explorer la matière. Par contre, vous devez produire vos propres réponses.
 
+## Consignes pour tous les travaux notés
+
+Les consignes suivantes s'appliquent à l'ensemble des travaux notés du cours.
+
+### Dépôt des travaux
+
+Vous devez remettre chaque travail noté au moyen de l'outil officiel de dépôt de la TÉLUQ. Les remises par courriel ne sont pas acceptées. Si vous éprouvez un problème technique avec la plateforme de dépôt, vous devez communiquer avec l'Université. Il est de votre responsabilité de vérifier que le dépôt a bien été effectué avant l'échéance.
+
+### Date limite
+
+Les semaines de remise indiquées plus haut sont des repères utiles pour vous aider à progresser de manière régulière. Toutefois, la vraie contrainte administrative est votre date de fin de cours, qui apparaît dans votre portail étudiant. Tous les travaux notés doivent avoir été remis avant cette date. Les enseignants ne peuvent pas modifier cette date. Si vous vivez une situation exceptionnelle, vous devez vous adresser à l'Université, et non au professeur.
+
+### Format du document
+
+Chaque travail noté doit être remis sous la forme d'un unique fichier PDF. Le document doit être lisible, permettre le copier-coller du code et contenir clairement vos réponses. Les documents manuscrits, les captures d'écran et les remises qui rendent la correction difficile ne sont pas acceptables. Si vous incluez du code Java, il doit être intégré proprement dans le PDF.
+
+### Présentation des réponses
+
+Vous devez expliquer vos solutions. Il ne suffit pas de remettre du code ou des réponses brèves sans justification. Vos explications doivent être rédigées clairement, dans un français soigné, et permettre à la personne correctrice de suivre votre raisonnement. Avant de remettre un travail, relisez l'ensemble du document attentivement, car une fois le dépôt effectué, vous ne pourrez plus modifier votre remise.
+
+### Travail individuel et usage de l'IA
+
+Les travaux notés sont individuels. Vous devez produire vos propres réponses et ne pas collaborer avec d'autres étudiants. L'intelligence artificielle peut être utilisée comme outil d'accompagnement, mais elle ne doit jamais se substituer à votre propre compréhension. Un simple copier-coller d'une réponse générée automatiquement n'est pas acceptable.
+
+### Préparation attendue
+
+Avant de commencer un travail noté, vous devez avoir fait les lectures et les exercices préparatoires du module correspondant. Les travaux notés ne sont pas conçus pour être votre premier contact avec la matière. Vous devez aussi prévoir assez de temps pour tester votre code, vérifier vos réponses et corriger les erreurs avant la remise.
+
 *Note*. L'entretien de suivi est obligatoire. Il est de votre responsabilité de prendre rendez-vous pour l'entretien de suivi après votre examen.

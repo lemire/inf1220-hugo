@@ -21,7 +21,7 @@ Dans ce cours, vous n'avez pas à maîtriser la notation grand-O et la complexit
 
 
 
-### Notation grand-O
+## Notation grand-O
 
 La notation \( O(f(n)) \) signifie que, pour des entrées de taille \( n \), l’algorithme effectue au plus un nombre d’opérations proportionnel à \( f(n) \) (à une constante près). On ne s’intéresse qu’au comportement pour de grandes valeurs de \( n \), et on ignore les détails d’implémentation ou les constantes cachées.
 
@@ -43,17 +43,17 @@ Pour \( O(n \log n) \subseteq O(n^2) \) : pour \( g(n) = n \log_2 n \), notons q
 
 
 
-Utilisez l'application suivante pour comprendre la différence entre \(\log n\), \(\n\), \(\n log n\) et
+Utilisez l'application suivante pour comprendre la différence entre \(\log n\), \(n\), \(n \log n\) et
 \(n^2\). Assurez-vous d'avoir une bonne intuition concernant la forme de ces fonctions.
 
-<body style="font-family: sans-serif; font-size: 16px; display: flex; flex-direction: column; align-items: center; background: #f8f8f8; margin: 0; padding: 20px;">
+<div style="font-family: sans-serif; font-size: 16px; display: flex; flex-direction: column; align-items: center; background: #f8f8f8; margin: 0; padding: 20px; max-width: 100%; box-sizing: border-box;">
     <div style="margin-bottom: 20px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
         <label>
             Max n: <input type="range" id="nMaxSlider" min="3" max="20" value="5" step="1">
             <span id="nMaxValue">5</span>
         </label>
     </div>
-    <canvas id="graph" width="900" height="600" style="border: 1px solid #ccc; background: white;"></canvas>
+    <canvas id="graph" width="900" height="600" style="border: 1px solid #ccc; background: white; max-width: 100%; height: auto;"></canvas>
     <div style="margin-top: 20px; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
         <div style="display: flex; align-items: center; gap: 8px;">
             <span style="width:20px; height:3px; background:#2ca02c; display:inline-block;"></span>
@@ -187,8 +187,9 @@ Utilisez l'application suivante pour comprendre la différence entre \(\log n\),
         drawGraph();
     })();
     </script>
+</div>
 
-### Exemples d’algorithmes en \( O(n) \)
+## Exemples d’algorithmes en \( O(n) \)
 
 Un algorithme est en \( O(n) \) si le nombre d’opérations croît linéairement avec la taille de l’entrée. Par exemple, parcourir un tableau pour calculer la somme de ses éléments :
 
@@ -203,7 +204,7 @@ Une variable somme est initialisée à 0 pour accumuler le résultat. La boucle 
 
 Ici, chaque élément est visité une seule fois, donc le temps d’exécution est proportionnel à \( n \).
 
-### Exemples d’algorithmes en \( O(n^2) \)
+## Exemples d’algorithmes en \( O(n^2) \)
 
 Un algorithme est en \( O(n^2) \) si le nombre d’opérations croît comme le carré de la taille de l’entrée. C’est typique des algorithmes qui utilisent deux boucles imbriquées, comme la recherche de toutes les paires d’éléments dans un tableau :
 
@@ -222,7 +223,7 @@ Ici, pour chaque valeur de \( i \), on parcourt toutes les valeurs de \( j \), c
 Un algorithme \( O(n^2) \) est plus *lent* qu'un algorithme \( O(n) \)  quand \( n \) est très grand.
 
 
-### Recherche dans un tableau trié
+## Recherche dans un tableau trié
 
 Lorsqu’un tableau est trié, on peut utiliser la recherche dichotomique (ou recherche binaire) pour trouver rapidement un élément. Cette méthode consiste à comparer la valeur recherchée à l’élément du milieu du tableau : si la valeur est plus petite, on recommence la recherche dans la moitié gauche ; sinon, dans la moitié droite. On répète jusqu’à trouver l’élément ou à épuiser le tableau.
 
@@ -270,7 +271,7 @@ n = 2^k \implies k = \log_2 n
 
 Ainsi, le nombre maximal de comparaisons est proportionnel à \( \log_2 n \). C’est pourquoi on dit que la recherche binaire a une complexité en \( O(\log n) \).
 
-### Tri
+## Tri
 
 Le tri consiste à réorganiser les éléments d’un tableau ou d’une liste selon un ordre donné (par exemple, croissant). Un algorithme de tri naïf, comme le tri à bulles (bubble sort) ou le tri par insertion, compare chaque élément à tous les autres et échange leur position si nécessaire. Ces algorithmes effectuent environ \( n^2 \) comparaisons pour un tableau de taille \( n \), ce qui leur donne une complexité en \( O(n^2) \). Cela devient très lent dès que le nombre d’éléments augmente.
 
@@ -436,11 +437,11 @@ FIN FONCTION
 Le tri par niches (ou bucket sort) est un algorithme de tri non comparatif adapté aux données uniformément réparties dans une plage de valeurs connue (de min à max). Le pseudocode décrit un processus en deux étapes. D’abord, il calcule la taille de la plage (k ← max - min + 1) et crée un tableau niches de taille k, où chaque niche correspond à une valeur possible. Dans l’étape 1, chaque élément du tableau est placé dans la niche correspondante (index ← élément - min), ce qui regroupe les éléments de même valeur. Dans l’étape 2, le tableau est reconstruit en parcourant les niches dans l’ordre (de 0 à k-1) et en extrayant leurs éléments pour les placer séquentiellement dans le tableau (tableau[index]). L’indice index suit la position d’insertion.
 
 
-#### Vidéo suggérée
+### Vidéo suggérée
 
 {{< youtube id="GJRkOxG5RmM" >}}
 
-### Table de hachage
+## Table de hachage
 
 Une table de hachage (ou « hash table ») est une structure de données qui permet d’associer des clés à des valeurs et d’accéder très rapidement à une valeur à partir de sa clé. Le principe repose sur l’utilisation d’une fonction de hachage qui transforme la clé (par exemple, un texte ou un nombre) en un indice de tableau. Les opérations d’insertion, de recherche et de suppression se font en temps moyen \( O(1) \), c’est-à-dire en temps constant, quelle que soit la taille de la table (si la fonction de hachage est bonne et la table bien dimensionnée). La table de hachage est efficace pour retrouver rapidement une information à partir d’une clé.
 
@@ -488,11 +489,11 @@ Imaginons que l’on souhaite stocker un ensemble de chaînes de caractères de 
 
 Cependant, ce choix de fonction de hachage est très simple et peut provoquer des «&nbsp;collisions&nbsp;» : deux chaînes de même longueur, comme «&nbsp;lion&nbsp;» et «&nbsp;chat&nbsp;», auraient le même indice. Dans ce cas, il faut une méthode pour gérer ces collisions, par exemple en stockant les deux chaînes dans une liste à cet indice. En pratique, les tables de hachage utilisent des fonctions de hachage beaucoup plus sophistiquées, capables de transformer n’importe quelle clé (texte, nombre, etc.) en un indice réparti de façon plus uniforme dans le tableau. L’objectif reste toujours de minimiser les collisions, car tant qu’il y en a peu, la recherche, l’insertion et la suppression restent très rapides et efficaces, même avec de très grands ensembles de données.
 
-#### Vidéo suggérée
+### Vidéo suggérée
 
 {{< youtube id="9mxrYSJ3xgs" >}}
 
-### Un problème résoluble en \( O(n^2) \) ou en \( O(n) \)
+## Un problème résoluble en \( O(n^2) \) ou en \( O(n) \)
 
 Prenons le problème suivant : « Trouver s’il existe deux éléments dans un tableau qui, additionnés, donnent une valeur cible. »
 
@@ -537,7 +538,7 @@ une table de hachage.
 
 
 
-### Les arbres en informatique
+## Les arbres en informatique
 
 Les arbres sont des structures de données hiérarchiques non linéaires, composées de nœuds reliés par des arêtes. Un arbre possède une racine unique, à partir de laquelle descendent des sous-arbres. Chaque nœud peut avoir zéro ou plusieurs enfants, mais un seul parent (sauf la racine). 
 À partir du sommet, nous progressons vers les feuilles qui où se terminent la progression.
@@ -807,7 +808,7 @@ Dans ce cours, il n'est pas nécessaire de concevoir des structures en arbres.
 
 
 
-#### Vidéo suggérée
+### Vidéo suggérée
 
 {{< youtube id="YXNq_i4HTJ4" >}}
 
