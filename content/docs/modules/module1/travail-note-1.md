@@ -9,6 +9,10 @@ Ce cours d’introduction à la programmation exige une gestion rigoureuse du te
 
 Les travaux doivent être soumis en format PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Les consignes de présentation insistent sur la clarté, la lisibilité et l’usage d’un français correct, avec des explications détaillées en prose. Les corrections, disponibles sous cinq à dix jours ouvrables, sont accessibles uniquement via le portail étudiant, où les étudiants trouveront leur note et une rétroaction. Aucune solution n’est fournie, et les travaux sont strictement individuels, tout échange sur les réseaux sociaux pouvant entraîner des sanctions graves, y compris l’exclusion.
 
+{{% hint info %}}
+L'enseignant ne peut jamais modifier votre date de fin de cours. Si des circonstances vous empêchent de respecter l'échéance, vous pouvez toutefois vous adresser à l'Université afin de demander un report de votre date de fin de cours. La gestion des reports de votre date de fin de cours relève uniquement de l'Université. En aucun cas est-ce que vous pouvez reporter la remise des travaux après la date de fin de cours.
+{{% /hint %}}
+
 Pour réussir, les étudiants doivent présenter des solutions claires, précises et testées, accompagnées d’explications factuelles. La rigueur dans l’analyse et la vérification est cruciale, tout comme la réalisation préalable des exercices préparatoires. Les travaux notés évaluent la capacité à comprendre des énoncés logiques et à raisonner abstraitement, sans points attribués pour l’effort seul. Les étudiants sont encouragés à poser des questions sur la matière, à tester leurs solutions avec diverses données et à relire leur travail avant soumission, en évitant de commencer sans une maîtrise solide des concepts
 
 Vous devez toujours produire vos propres réponses. L'intelligence artificielle peut être utilisé comme compagnon d'étude, jamais comme outil vous remplaçant.

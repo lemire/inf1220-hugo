@@ -86,6 +86,10 @@ pour les raisons suivantes.</p>
 Qui puis-je contacter si j’ai des questions?
 <p>En cas de besoin, n’hésitez pas à communiquer avec la personne responsable de votre encadrement.</p>
 
+{{% hint warning %}}
+L'entretien de suivi fait l'objet d'un seuil distinct&nbsp;: un échec à l'entretien de suivi entraîne l'échec du cours, et ce, indépendamment de la note obtenue à l'examen. Il ne s'agit donc pas d'un simple échec à l'examen, mais bien d'un échec au cours.
+{{% /hint %}}
+
 </div>
 
 
@@ -187,6 +191,10 @@ Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Uni
 ### Pour les personnes inscrites à compter du trimestre d’été 2026
 
 [Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.
+
+{{% hint info %}}
+Les modalités de l'examen peuvent dépendre de la version du cours à laquelle vous êtes inscrit et d'autres circonstances. Si les indications ci-dessus ne correspondent pas à ce qui vous a été communiqué, fiez-vous toujours aux directives transmises par l'Université et à votre portail étudiant, qui font foi de la plateforme et du déroulement exacts de votre examen. En cas de doute sur les modalités qui s'appliquent à vous, c'est l'Université qu'il faut joindre.
+{{% /hint %}}
 
 ## Résultat et rétroaction sur l'examen
 

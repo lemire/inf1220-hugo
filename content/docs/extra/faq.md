@@ -67,6 +67,11 @@ Réponse: Oui, suivez les consignes fournies par l'Université. Vous devez passe
 
 Réponse: Non. Si la date de fin de cours est passée, il est normal que vous ne puissiez pas déposer votre travail. Vous obtiendrez la note de zéro.
 
+
+### Question: Ma date de fin de cours était hier, et je vais déposer mon travail noté, est-ce que c'est ok ?
+
+Réponse: Non. Si la date de fin de cours est passée, vous obtiendrez la note de zéro.
+
 ### Question: Il m'a fallu des heures pour compléter le module X et remettre le travail noté, est-ce normal ?
 
 Réponse: Absolument. Il faut prévoir des dizaines d'heures par module (et donc par travail noté). Prévoyez entre 5 et 15 heures par semaine pendant 15 semaines pour compléter le cours.

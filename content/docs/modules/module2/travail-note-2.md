@@ -23,6 +23,13 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 
 Les travaux doivent être remis sous forme de fichier PDF via l’outil de dépôt officiel de la TÉLUQ, sans envoi par courriel, sous peine de note zéro. Le document doit être clair, lisible, permettre le copier-coller du code, et inclure des explications détaillées en français sous forme de texte suivi, en évitant les saisies d’écran ou les travaux manuscrits. Les réponses doivent être précises, personnelles, et accompagnées d’analyses, sans se limiter à du code ou à des extraits recopiés. Une fois soumis, le travail ne peut être modifié, d’où l’importance de le relire attentivement.
 
+
+{{% hint info %}}
+L'enseignant ne peut jamais modifier votre date de fin de cours. Si des circonstances vous empêchent de respecter l'échéance, vous pouvez toutefois vous adresser à l'Université afin de demander un report de votre date de fin de cours. La gestion des reports de votre date de fin de cours relève uniquement de l'Université. En aucun cas est-ce que vous pouvez reporter la remise des travaux après la date de fin de cours.
+{{% /hint %}}
+
+P
+
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant mener à une note de zéro ou à une exclusion. La recherche sur le web est encouragée, mais aucun indice supplémentaire ne sera fourni au-delà de l’énoncé. La présentation, l’analyse et la clarté des explications sont prioritaires lors de la correction, qui valorise le raisonnement et la qualité du texte en français, plus que le code seul.
 
 
