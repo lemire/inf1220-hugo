@@ -189,7 +189,7 @@ Utilisez l'application suivante pour comprendre la différence entre \(\log n\),
     </script>
 </div>
 
-## Exemples d’algorithmes en \( O(n) \)
+## Exemples d’algorithmes linéaires
 
 Un algorithme est en \( O(n) \) si le nombre d’opérations croît linéairement avec la taille de l’entrée. Par exemple, parcourir un tableau pour calculer la somme de ses éléments :
 
@@ -204,7 +204,33 @@ Une variable somme est initialisée à 0 pour accumuler le résultat. La boucle 
 
 Ici, chaque élément est visité une seule fois, donc le temps d’exécution est proportionnel à \( n \).
 
-## Exemples d’algorithmes en \( O(n^2) \)
+Un autre exemple classique consiste à chercher la valeur maximale dans un tableau :
+
+```pseudo
+maximum = tableau[0]
+POUR i de 1 à n-1
+    SI tableau[i] > maximum
+        maximum = tableau[i]
+    FIN SI
+FIN POUR
+```
+
+On commence par supposer que le premier élément est le plus grand. Ensuite, on parcourt le reste du tableau une seule fois et on met à jour la variable maximum lorsqu'on trouve une valeur plus grande. Ici encore, chaque élément est examiné une seule fois, donc la complexité est en \( O(n) \).
+
+On peut aussi compter combien d'éléments satisfont une certaine condition, par exemple combien de notes sont supérieures ou égales à 60 :
+
+```pseudo
+compteur = 0
+POUR i de 0 à n-1
+    SI notes[i] ≥ 60
+        compteur = compteur + 1
+    FIN SI
+FIN POUR
+```
+
+Dans cet exemple, on ne fait qu'un seul parcours du tableau. Même s'il y a un test à chaque itération, le nombre total d'opérations reste proportionnel à \( n \).
+
+## Exemples d’algorithmes quadratiques
 
 Un algorithme est en \( O(n^2) \) si le nombre d’opérations croît comme le carré de la taille de l’entrée. C’est typique des algorithmes qui utilisent deux boucles imbriquées, comme la recherche de toutes les paires d’éléments dans un tableau :
 
@@ -219,6 +245,33 @@ FIN POUR
 Ce pseudocode décrit une double boucle imbriquée qui parcourt toutes les paires possibles d’éléments dans un tableau de taille n. La boucle externe (POUR i de 0 à n-1) itère sur chaque indice i du tableau, tandis que la boucle interne (POUR j de 0 à n-1) parcourt à nouveau tous les indices j du tableau, indépendamment de i. À chaque itération, une opération (désignée par «&nbsp;faire quelque chose&nbsp;») est effectuée en utilisant les éléments `tableau[i]` et `tableau[j]`. Cela inclut les cas où i et j désignent le même élément (quand i = j) ainsi que toutes les combinaisons de paires, y compris les permutations (par exemple, (i,j) et (j,i)).
 
 Ici, pour chaque valeur de \( i \), on parcourt toutes les valeurs de \( j \), ce qui donne \( n \times n = n^2 \) opérations.
+
+Un autre exemple quadratique consiste à vérifier s'il existe deux éléments égaux dans un tableau, sans utiliser de structure de données supplémentaire :
+
+```pseudo
+POUR i de 0 à n-1
+    POUR j de i+1 à n-1
+        SI tableau[i] == tableau[j]
+            retourner VRAI
+        FIN SI
+    FIN POUR
+FIN POUR
+retourner FAUX
+```
+
+Ici, chaque élément est comparé avec presque tous les éléments qui le suivent. Lorsque \( n \) est grand, le nombre total de comparaisons est proportionnel à \( n^2 \).
+
+On retrouve aussi une complexité quadratique lorsqu'on parcourt toutes les cases d'une grille carrée de taille \( n \times n \) :
+
+```pseudo
+POUR ligne de 0 à n-1
+    POUR colonne de 0 à n-1
+        traiter grille[ligne][colonne]
+    FIN POUR
+FIN POUR
+```
+
+La boucle externe s'exécute \( n \) fois, et pour chaque ligne, la boucle interne s'exécute aussi \( n \) fois. On traite donc \( n^2 \) cases au total.
 
 Un algorithme \( O(n^2) \) est plus *lent* qu'un algorithme \( O(n) \)  quand \( n \) est très grand.
 
@@ -437,6 +490,46 @@ FIN FONCTION
 Le tri par niches (ou bucket sort) est un algorithme de tri non comparatif adapté aux données uniformément réparties dans une plage de valeurs connue (de min à max). Le pseudocode décrit un processus en deux étapes. D’abord, il calcule la taille de la plage (k ← max - min + 1) et crée un tableau niches de taille k, où chaque niche correspond à une valeur possible. Dans l’étape 1, chaque élément du tableau est placé dans la niche correspondante (index ← élément - min), ce qui regroupe les éléments de même valeur. Dans l’étape 2, le tableau est reconstruit en parcourant les niches dans l’ordre (de 0 à k-1) et en extrayant leurs éléments pour les placer séquentiellement dans le tableau (tableau[index]). L’indice index suit la position d’insertion.
 
 
+
+
+
+## Exemple d’algorithme linearithmique
+
+Un algorithme est en \( O(n \log n) \) lorsque son temps d'exécution croît un peu plus vite qu'un algorithme linéaire, mais nettement moins vite qu'un algorithme quadratique. Cette complexité apparaît souvent dans les algorithmes qui divisent un problème en sous-problèmes de taille plus petite, puis combinent les résultats. Un exemple classique est le tri fusion. À chaque appel, le tableau est séparé en deux parties de taille à peu près égale. Si l'on part d'un tableau de taille \( n \), après une division on obtient des sous-tableaux de taille environ \( n/2 \), puis \( n/4 \), puis \( n/8 \), et ainsi de suite. Après \( k \) niveaux de division, la taille des sous-tableaux est donc d'environ \( n/2^k \). On s'arrête lorsque cette taille atteint 1, donc lorsque \( n/2^k = 1 \). Cela donne \( n = 2^k \), donc \( k = \log_2 n \). Voilà d'où vient le logarithme dans la complexité du tri fusion. Ensuite, à chaque niveau, l'étape de fusion parcourt l'ensemble des éléments à remettre en ordre, ce qui demande un travail linéaire en \( n \). On obtient donc intuitivement environ \( \log n \) niveaux de division, chacun demandant un travail total proportionnel à \( n \). C'est pourquoi le coût total est en \( O(n \log n) \).
+
+
+
+## Exemples de limite de l'analyse asymptotique
+
+La notation grand O est très utile pour comprendre le comportement d'un algorithme lorsque la taille de l'entrée devient très grande. Toutefois, elle ne suffit pas toujours pour déterminer quel algorithme sera le plus rapide dans une situation concrète. Voici quelques exemples.
+
+### Même grand O, vitesses différentes
+
+Supposons deux algorithmes linéaires. Le premier effectue environ \( n \) opérations, tandis que le second en effectue environ \( 100n \). Les deux sont en \( O(n) \), mais pour des tailles réalistes, le premier sera souvent beaucoup plus rapide.
+
+Par exemple, un parcours simple d'un tableau et un autre parcours qui effectue de nombreux calculs compliqués sur chaque élément sont tous deux linéaires. La notation grand O les place dans la même classe, mais elle ne permet pas de conclure lequel sera le plus rapide en pratique.
+
+### Petite taille d'entrée
+
+Un algorithme en \( O(n^2) \) peut être plus rapide qu'un algorithme en \( O(n \log n) \) lorsque \( n \) est petit. C'est une raison pour laquelle des algorithmes comme le tri par insertion sont encore utilisés dans de vraies bibliothèques logicielles pour de petits tableaux.
+
+Par exemple, pour trier 5 ou 10 éléments, un tri par insertion peut être plus rapide qu'un tri fusion, même si asymptotiquement le tri fusion est meilleur. Le coût des appels récursifs, des copies ou de la gestion de structures auxiliaires peut dominer lorsque l'entrée est petite.
+
+### Même grand O, mais cas moyens très différents
+
+Deux algorithmes peuvent partager la même notation \( O(n^2) \) dans le pire cas, tout en ayant des comportements très différents sur des données ordinaires. Par exemple, le tri à bulles et le tri par insertion sont souvent classés en \( O(n^2) \), mais le tri par insertion est souvent meilleur en pratique, surtout lorsque les données sont déjà presque triées.
+
+La notation grand O, prise seule, ne dit pas si l'on parle du pire cas, du cas moyen ou du meilleur cas. Si l'on ne précise pas ce point, elle ne suffit pas pour prédire la vitesse observée.
+
+### Effets de mémoire et d'implantation
+
+La rapidité réelle dépend aussi de facteurs que la notation asymptotique ignore : mémoire cache, allocations, copies, accès disque, langage de programmation, compilateur, machine utilisée, etc.
+
+Par exemple, le tri rapide et le tri fusion sont souvent décrits comme étant en \( O(n \log n) \). Pourtant, le tri rapide est souvent plus rapide en pratique parce qu'il travaille fréquemment directement dans le tableau et profite mieux de la mémoire cache. La notation grand O ne capture pas ce genre d'effet.
+
+
+
+
 ### Vidéo suggérée
 
 {{< youtube id="GJRkOxG5RmM" >}}
@@ -493,7 +586,7 @@ Cependant, ce choix de fonction de hachage est très simple et peut provoquer de
 
 {{< youtube id="9mxrYSJ3xgs" >}}
 
-## Un problème résoluble en \( O(n^2) \) ou en \( O(n) \)
+## Un problème résoluble en temps linéaire ou quadratique
 
 Prenons le problème suivant : « Trouver s’il existe deux éléments dans un tableau qui, additionnés, donnent une valeur cible. »
 
