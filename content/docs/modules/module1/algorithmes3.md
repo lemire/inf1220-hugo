@@ -153,11 +153,11 @@ TANT QUE x > 0 FAIRE
 FIN TANT QUE
 ```
 
-Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable x jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (TANT QUE x > 0 FAIRE) continue tant que x est positif. À l'intérieur, la boucle interne (TANT QUE x > 10 FAIRE) s'exécute uniquement si x est supérieur à 10, et dans ce cas, elle décrémente x de 1 à chaque itération (x = x - 1). Une fois que x devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si x > 0. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier x lorsque x ≤ 10, le programme entre dans une boucle infinie si x est compris entre 1 et 10 inclus. Si x est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si x est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
+Ce pseudocode décrit une structure de boucles imbriquées qui modifie la valeur de la variable `x` jusqu'à ce qu'elle devienne inférieure ou égale à 0. La boucle externe (`TANT QUE x > 0 FAIRE`) continue tant que `x` est positif. À l'intérieur, la boucle interne (`TANT QUE x > 10 FAIRE`) s'exécute uniquement si `x` est supérieur à 10, et dans ce cas, elle décrémente `x` de 1 à chaque itération (`x = x - 1`). Une fois que `x` devient inférieur ou égal à 10, la boucle interne s'arrête, mais la boucle externe ne se termine pas immédiatement, car elle vérifie seulement si `x > 0`. Cependant, comme il n'y a aucune instruction dans la boucle externe pour modifier `x` lorsque `x ≤ 10`, le programme entre dans une boucle infinie si `x` est compris entre 1 et 10 inclusivement. Si `x` est initialement supérieur à 10, il sera décrémenté jusqu'à atteindre 10, puis le programme se bloquera. Si `x` est initialement inférieur ou égal à 0, aucune des boucles ne s'exécute.
 
 ## La fin d'un algorithme
 
-Un algorithme continue à s'exécuter tant qu'il reste des operations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudocode ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demande à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
+Un algorithme continue à s'exécuter tant qu'il reste des opérations à faire. L'algorithme prend fin lorsque nous rencontrons la fin du pseudocode ou lorsque le programmeur invoque la fin spécifiquement. Dans l'exemple suivant, le programmeur demande à ce que l'on cesse l'exécution dès que la valeur 5 est rencontrée.
 
 ```plaintext
 x = 0
@@ -168,7 +168,7 @@ FIN TANT QUE
 AFFICHE x
 ```
 
-La valeur x ne sera donc jamais affichée.
+La valeur `x` ne sera donc jamais affichée.
 
 Il arrive aussi qu'un pseudocode doit retourner une valeur. Par convention, dès que la valeur attendue est retournée, l'algorithme prend fin. Ainsi donc, dans le cas suivant, la valeur 5 sera retournée.
 

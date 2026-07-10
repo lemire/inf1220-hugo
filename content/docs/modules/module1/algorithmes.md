@@ -348,7 +348,7 @@ Nous pouvons aussi initialiser un tableau avec les entiers `1,2,3` comme suit.
 
 
 ```java {style=github}
-int [] tableau = [1,2,3];
+int [] tableau = {1, 2, 3};
 ```
 
 En JavaScript, la syntaxe équivalente est celle-ci.
