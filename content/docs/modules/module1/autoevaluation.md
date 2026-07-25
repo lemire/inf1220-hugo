@@ -26,7 +26,7 @@ Les nombres se déclinent en catégories – entiers, réels, rationnels, irrati
 Les opérations algébriques, régies par un ordre de priorité, reflètent une logique de structuration des calculs. Les parenthèses redéfinissent cet ordre, comme dans \( (2 + 3) \times 5 = 25 \), où l’addition prime, contrairement à \( 2 + 3 \times 5 = 17 \), où la multiplication domine. Les exposants et les logarithmes sont un exemple de fonction inverse : nous avons que \( \log_3(81) = 4 \) car \( 3^4 = 81 \). 
 La propriété \( \frac{\log x}{\log b} = \log_b x \) est fort utile.
 La factorielle, comme \( 4! = 4 \times 3 \times 2 \times 1 = 24 \), quantifie les arrangements possibles. Pour la probabilité d’obtenir une somme de \( 7 \) avec deux dés, on recense les cas favorables \( (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) \), soit 6, sur 36 résultats, donnant \( \frac{6}{36} = \frac{1}{6} \). 
-On peut trier les objects selon différents ordres. L’ordre lexicographique, appliqué à des nombres comme \( 3, 30, 4 \), les trie comme des chaînes \( 3, 30, 4 \), illustrant une logique de classement importée du langage. La notion de nombre en base \( b \) désigne la manière dont un nombre est représenté dans un système de numération où \( b \) est le nombre d'unités distinctes utilisées, appelées chiffres. Nous utilisons normalement des nombres en base 10, mais d'autres bases sont utilisées en informatique.
+On peut trier les objets selon différents ordres. L’ordre lexicographique, appliqué à des nombres comme \( 3, 30, 4 \), les trie comme des chaînes \( 3, 30, 4 \), illustrant une logique de classement importée du langage. La notion de nombre en base \( b \) désigne la manière dont un nombre est représenté dans un système de numération où \( b \) est le nombre d'unités distinctes utilisées, appelées chiffres. Nous utilisons normalement des nombres en base 10, mais d'autres bases sont utilisées en informatique.
 
 
 <p><strong>Si vous n'avez pas fait les mathématiques du collégial ou pris un cours d'appoint équivalent, vous ne pouvez
@@ -129,7 +129,7 @@ Si vous n'avez pas les aptitudes requises, le cours peut vous paraître inaccess
     une terminologie propre à l'informatique. Nous n'évitons pas les mathématiques. Le contenu du cours, la charge de
     travail, l'ampleur de travaux et la composition de l'examen sont comparables à ce que vous trouvez au sein de cours
     d'introduction à la programmation dans les universités québécoises. Il s'agit tout de même d'un cours
-    d'introduction: si avez pris des cours de programmation auparavant, ou que vous avez une longue expérience avec la
+    d'introduction: si vous avez pris des cours de programmation auparavant, ou que vous avez une longue expérience avec la
     programmation informatique, ce cours n'est sans doute pas pour vous.</p>
 
 <p>La quasi-totalité des nos étudiants au sein du cours INF 1220 viennent de trois programmes: développement logiciel

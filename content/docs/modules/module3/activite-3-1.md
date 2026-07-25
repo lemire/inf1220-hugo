@@ -35,7 +35,7 @@ dehors de ce bloc.
 
 ## La structure de contrôle if-else
 
-<p>Le branchement conditionnel (<strong>if</strong>) peut apparaître sous deux formes : avec ou sans clause <strong>else</strong>. Dans les deux cas, il s'agit d'un branchement booléen, c'est à dire que selon le contrôle (qui est au final une valeur booléenne, ex. i != 0) ou la valeur vraie permettra d'aller dans la portée de la structure ou non. </p> 
+<p>Le branchement conditionnel (<strong>if</strong>) peut apparaître sous deux formes : avec ou sans clause <strong>else</strong>. Dans les deux cas, il s'agit d'un branchement booléen, c'est-à-dire que selon le contrôle (qui est finalement une valeur booléenne, ex. i != 0) ou la valeur vraie permettra d'aller dans la portée de la structure ou non. </p> 
 <p>La forme :</p>
 
 ```java  {style=github}

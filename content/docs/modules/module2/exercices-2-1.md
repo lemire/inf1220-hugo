@@ -485,7 +485,7 @@ int n = Integer.parseInt(s); // n vaut 123
 Expliquez la différence entre <code>int</code> et <code>Integer</code> en Java. Dans quel cas doit-on utiliser <code>Integer</code> ?
 
 <details><summary>Réponse</summary>
-<p><code>int</code> est un type primitif, alors que <code>Integer</code> est une classe objet qui encapsule un int. /p>
+<p><code>int</code> est un type primitif, alors que <code>Integer</code> est une classe objet qui encapsule un int.</p>
 </details>
 
 ## Question 34

@@ -40,16 +40,16 @@ public class Sudoku extends Jeu {
 }
 ```
 
-<p align="left">Dans l'exemple ci-dessus, la superclasse est la classe Jeu tandis que la sous-classe est la classe Sudoku. La sous-classe hérite automatiquement de tous les champs et de toutes méthodes de la superclasse. Voici quelques principes fondamentaux de l'héritage&nbsp;:</p> 
+<p align="left">Dans l'exemple ci-dessus, la superclasse est la classe Jeu tandis que la sous-classe est la classe Sudoku. La sous-classe hérite automatiquement de tous les champs et de toutes les méthodes de la superclasse. Voici quelques principes fondamentaux de l'héritage&nbsp;:</p> 
 <ul> 
   <li>une sous-classe hérite de tous les membres de la superclasse. Les constructeurs n'étant pas considérés comme étant membres d'une classe, la sous-classe ne peut donc pas hériter des constructeurs de la superclasse; </li> 
   <li>la visibilité (<em>public ou private</em>) de n'importe quels membres de la superclasse est la même dans la sous-classe. Cela voudra dire que si une méthode ou un champ est déclaré <em>private</em> dans la superclasse, la sous-classe ne peut y avoir accès; </li> 
-  <li>nous pouvons surcharger une méthode en réutilisant la même signature (nom de méthode et paramètres) et en utilisant l'annotation @override; </li> 
+  <li>nous pouvons redéfinir une méthode en réutilisant la même signature (nom de méthode et paramètres) et en utilisant l'annotation @Override; </li> 
   <li>un autre type, <em>protected,</em> permet de cacher les champs et les méthodes de la superclasse, mais ses membres sont accessibles à la sous-classe; </li> 
   <li>nous pouvons aussi ajouter des méthodes et des champs <em>private</em> et <em>protected</em> à une sous-classe. </li> 
 </ul> 
 
-En Java, l'annotation @Override est utilisée pour indiquer qu'une méthode dans une sous-classe redéfinit ou remplace une méthode déclarée dans une superclasse ou une interface. Elle aide le compilateur à vérifier que la méthode respecte les règles de surcharge, comme avoir la même signature (nom, paramètres, type de retour) que la méthode d'origine. Si la méthode annotée ne correspond pas à une méthode de la superclasse, le compilateur génère une erreur, ce qui améliore la sécurité et la lisibilité du code. Bien que facultative, son utilisation est recommandée pour éviter des erreurs accidentelles, notamment lors de la maintenance ou de la refactorisation.
+En Java, l'annotation @Override est utilisée pour indiquer qu'une méthode dans une sous-classe redéfinit ou remplace une méthode déclarée dans une superclasse ou une interface. Elle aide le compilateur à vérifier que la méthode respecte les règles de la redéfinition, comme avoir la même signature (nom, paramètres, type de retour) que la méthode d'origine. Si la méthode annotée ne correspond pas à une méthode de la superclasse, le compilateur génère une erreur, ce qui améliore la sécurité et la lisibilité du code. Bien que facultative, son utilisation est recommandée pour éviter des erreurs accidentelles, notamment lors de la maintenance ou de la refactorisation.
 
 Prenons un autre exemple. Imaginons une application bancaire avec différents types de comptes : CompteEpargne et CompteCourant. Tous les comptes partagent des propriétés comme le solde et des opérations comme déposer ou retirer de l'argent, mais chaque type de compte a des règles spécifiques.
 
@@ -256,8 +256,8 @@ public class Main {
 }
 {{</inlineJava>}}
 
-## Surcharge des méthodes
-<p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui est <em>public</em>, cette méthode sera dite <em>surchargée</em>. Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe.</p> 
+## Redéfinition des méthodes
+<p style="text-align: justify;">Si nous déclarons une méthode dans la sous-classe qui a la même signature que celle de la superclasse et qui n'est pas <em>private</em>, cette méthode sera dite <em>redéfinie</em> (override). Cette technique permet de modifier une méthode de la superclasse et de l'adapter au besoin de la sous-classe. Ne confondez pas avec la <em>surcharge</em> (overload), qui consiste à définir plusieurs méthodes de même nom avec des paramètres différents.</p> 
 <p style="text-align: justify;">Supposons que nous définissons notre classe Jeu, qui possède une méthode jouer. La superclasse qui représente tous les jeux possibles peut être définie de la manière suivante :</p> 
 
 ```java  {style=github}
@@ -285,10 +285,10 @@ public class Sudoku extends Jeu {
 <p style="text-align: justify;"><br />Il faut noter qu'il faut trois conditions avant de réaliser cette opération :</p> 
 <ul> 
   <li> 
-    <div style="text-align: justify;">La méthode à surcharger doit être définie dans la superclasse; </div> 
+    <div style="text-align: justify;">La méthode à redéfinir doit être définie dans la superclasse; </div> 
   </li> 
   <li> 
-    <div style="text-align: justify;">Cette méthode doit être définie <em>public</em>. Nous ne pouvons surcharger une méthode <em>private;</em> </div> 
+    <div style="text-align: justify;">Cette méthode ne doit pas être définie <em>private</em>&nbsp;: une méthode <em>public</em> ou <em>protected</em> peut être redéfinie, mais une méthode <em>private</em> n'est pas visible depuis la sous-classe; </div> 
   </li> 
   <li> 
     <div style="text-align: justify;">La méthode de la sous-classe doit avoir la même signature que celle de la superclasse, c'est-à-dire le même nom et les mêmes types de paramètres. </div> 

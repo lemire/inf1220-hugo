@@ -1215,7 +1215,7 @@ En Java, la bibliothèque standard offre plusieurs classes pour manipuler les fi
 
 #### Fichiers texte et fichiers binaires
 
-On distingue deux grandes catégories de fichiers. Les fichiers texte contiennent des caractères encodés et sont lisibles directement dans un éditeur comme [Visual Studio Code](https://code.visualstudio.com/download), Bloc-notes (Windows), etc. Les pages web que votre navigateur chargent sont des fichiers texte. Le code informatique est un fichier texte.  Les fichiers binaires contiennent des données dans un format propre à une application (image JPEG, classe Java compilée `.class`, archive ZIP, etc.) et ne sont pas directement lisibles par un humain. En Java, on utilise des classes différentes selon la nature du fichier : des flux de caractères (`Reader`, `Writer`) pour les fichiers texte, et des flux d'octets (`InputStream`, `OutputStream`) pour les fichiers binaires.
+On distingue deux grandes catégories de fichiers. Les fichiers texte contiennent des caractères encodés et sont lisibles directement dans un éditeur comme [Visual Studio Code](https://code.visualstudio.com/download), Bloc-notes (Windows), etc. Les pages web que votre navigateur charge sont des fichiers texte. Le code informatique est un fichier texte.  Les fichiers binaires contiennent des données dans un format propre à une application (image JPEG, classe Java compilée `.class`, archive ZIP, etc.) et ne sont pas directement lisibles par un humain. En Java, on utilise des classes différentes selon la nature du fichier : des flux de caractères (`Reader`, `Writer`) pour les fichiers texte, et des flux d'octets (`InputStream`, `OutputStream`) pour les fichiers binaires.
 
 ### Les réseaux
 

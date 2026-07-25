@@ -8,7 +8,7 @@ weight: 7
 Nous avons déjà présenté les notions d'embranchement et de boucle. C'est ce que nous appelons des structures de contrôle. Il est essentiel
 d'en comprendre la fonction.
 
-On peut concevoir un algorithme qui ne comprend qu'une liste d'opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous auront du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d'éléments, et on risque de devoir répéter beaucoup d'opérations.
+On peut concevoir un algorithme qui ne comprend qu'une liste d'opérations simples (addition, soustraction, etc.). Cependant sans structures de contrôle, nous aurons du mal à gérer les données dynamiques, par exemple un tableau qui peut contenir un nombre variable d'éléments, et on risque de devoir répéter beaucoup d'opérations.
 Les structures de contrôle permettent à l'algorithme de faire des choix de traitement en fonction de conditions. Une structure de contrôle correspond à l'action de tester des variables de contrôle et selon les résultats d'effectuer des opérations ou non.
 
 
@@ -76,9 +76,9 @@ Dans cet exemple, l’algorithme lit une variable score (un nombre entier repré
 
 Chaque condition est évaluée séquentiellement, et dès qu’une condition est vraie, l’algorithme exécute l’opération associée (afficher la note) et sort de la structure avec FIN SI. Si aucune condition n’est vraie, l’opération par défaut (afficher "Note : F") est exécutée.
 
-Considérons l'exemple suivant. Il s'agit d'un outil interactif qui t’aide à comprendre comment un algorithme utilise des conditions pour classer une personne selon son âge. Pour commencer, saisis un âge entier positif dans le champ prévu, par exemple «&nbsp;25&nbsp;». Ensuite, clique sur «&nbsp;Prochaine étape&nbsp;» pour exécuter l’algorithme étape par étape. À chaque clic, une ligne du pseudocode s’illumine, et un message explicatif apparaît dans la zone de journalisation en bas. Tu verras également l’état mis à jour : l’âge saisi et la catégorie déterminée (comme «&nbsp;Vous êtes un adulte&nbsp;»). Si tu veux recommencer, clique sur «&nbsp;Réinitialiser&nbsp;» pour effacer les résultats. Attention, l’âge doit être un nombre entier positif, sinon un message te demandera de corriger.
+Considérons l'exemple suivant. Il s'agit d'un outil interactif qui vous aide à comprendre comment un algorithme utilise des conditions pour classer une personne selon son âge. Pour commencer, saisissez un âge entier positif dans le champ prévu, par exemple «&nbsp;25&nbsp;». Ensuite, cliquez sur «&nbsp;Prochaine étape&nbsp;» pour exécuter l’algorithme étape par étape. À chaque clic, une ligne du pseudocode s’illumine, et un message explicatif apparaît dans la zone de journalisation en bas. Vous verrez également l’état mis à jour : l’âge saisi et la catégorie déterminée (comme «&nbsp;Vous êtes un adulte&nbsp;»). Si vous voulez recommencer, cliquez sur «&nbsp;Réinitialiser&nbsp;» pour effacer les résultats. Attention, l’âge doit être un nombre entier positif, sinon un message vous demandera de corriger.
 
-Cet outil vous permet de suivre le raisonnement de l’algorithme de manière claire. Le pseudocode, affiché à gauche, utilise une structure conditionnelle (SI, SINON SI, SINON) pour évaluer l’âge et assigner une catégorie : enfant (≤ 10 ans), adolescent (> 10 et < 18 ans), adulte (≥ 18 et < 65 ans) ou personne âgée (≥ 65 ans). En progressant dans les étapes, observe comment l’algorithme teste chaque condition et choisit la bonne catégorie. Lisez attentivement les messages du journal pour comprendre les décisions prises.
+Cet outil vous permet de suivre le raisonnement de l’algorithme de manière claire. Le pseudocode, affiché à gauche, utilise une structure conditionnelle (SI, SINON SI, SINON) pour évaluer l’âge et assigner une catégorie : enfant (≤ 10 ans), adolescent (> 10 et < 18 ans), adulte (≥ 18 et < 65 ans) ou personne âgée (≥ 65 ans). En progressant dans les étapes, observez comment l’algorithme teste chaque condition et choisit la bonne catégorie. Lisez attentivement les messages du journal pour comprendre les décisions prises.
 
 {{< webapp path="age.html" >}}
 

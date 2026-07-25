@@ -161,10 +161,10 @@ public class CerclePointille extends JPanel {
 }
 ```
 
-Notons l'utilisation de l'annotatio `@override` qui demande au compilateur Java de vérifier que nous avons bel et bien une forme de polymorphisme
+Notons l'utilisation de l'annotation `@Override` qui demande au compilateur Java de vérifier que nous avons bel et bien une forme de polymorphisme
 par héritage.
 
-Cette classe permet de tracer un cercle en pointillé dans une fenêtre appelée JFrame. Nous viendrons surcharger la méthode dessiner dans une sous-classe afin de permettre de tracer des ovales pointillés.
+Cette classe permet de tracer un cercle en pointillé dans une fenêtre appelée JFrame. Nous viendrons redéfinir la méthode dessiner dans une sous-classe afin de permettre de tracer des ovales pointillés.
 
 ```java  {style=github}
 import java.awt.Color;
@@ -249,7 +249,7 @@ public class OvalePointille extends CerclePointille {
 }
 ```
 
-Dans cette dernière classe, nous avons donc redéfini la méthode afin de spécialiser la méthode dessiner. Même si nous faisons un *cast* de la classe en `CerclePointille` (`CerclePointille cercle = new OvalePointille(10)`), ce sera tout de même la méthode surchargée qui sera appelée.
+Dans cette dernière classe, nous avons donc redéfini la méthode afin de spécialiser la méthode dessiner. Même si nous faisons un *cast* de la classe en `CerclePointille` (`CerclePointille cercle = new OvalePointille(10)`), ce sera tout de même la méthode redéfinie qui sera appelée.
 
 
 Pour illustrer davantage le polymorphisme par héritage, considérons une application simulant des instruments de musique. Une superclasse Instrument définit une méthode jouer, que des sous-classes comme Guitare et Piano redéfinissent pour produire des sons spécifiques. En manipulant ces objets via une référence de type Instrument, le comportement propre à chaque sous-classe est préservé.

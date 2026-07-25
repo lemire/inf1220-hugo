@@ -465,7 +465,7 @@ public class Main {
 ```
 
 <p>Lequel renvoie une erreur ? Pourquoi n&#x2019;y a-t-il pas d&#x2019;erreur
-dans celui qui s&#x2019;execute correctement ?</p>
+dans celui qui s&#x2019;exécute correctement ?</p>
 
 <details><summary>Réponse</summary>
 

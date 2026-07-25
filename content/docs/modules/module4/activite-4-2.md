@@ -37,7 +37,7 @@ File exempleFile1= new File ("fichier");
 File exempleFile2= new File ("c:\exemple\unFichier.txt");
 ```
 
-<p>Dans le premier cas, un objet <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a>, agissant comme référence vers le fichier dans l'arborescence du système de fichier, et ce pour un fichier du nom "fichier" dans le répertoire courant ("." dans Linux/Mac OS) sera crée. Dans le deuxième cas, une référence vers le fichier sur le disque "C:", dossier "/exemple", fichier "unFichier.txt" sera créée (exemple pour Windows ...). À ce stade, aucun fichier n'est crée ou ouvert, il ne s'agit que d'une référence vers l'emplacement possible d'un fichier. Pour savoir si le fichier existe ou non, il est possible d'utiliser la méthode exists() :</p>
+<p>Dans le premier cas, un objet <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a>, agissant comme référence vers le fichier dans l'arborescence du système de fichier, et ce pour un fichier du nom "fichier" dans le répertoire courant ("." dans Linux/Mac OS) sera créé. Dans le deuxième cas, une référence vers le fichier sur le disque "C:", dossier "/exemple", fichier "unFichier.txt" sera créée (exemple pour Windows ...). À ce stade, aucun fichier n'est créé ou ouvert, il ne s'agit que d'une référence vers l'emplacement possible d'un fichier. Pour savoir si le fichier existe ou non, il est possible d'utiliser la méthode exists() :</p>
 
 ```java  {style=github}
 File unFichier = new File("lefichier"); // création d'un objet fichier
@@ -62,7 +62,7 @@ if (unFichier.createNewFile()) {
 
 <h2>Lecture dans un fichier de bas niveau</h2>
 
-<p>En informatique, on fait référence à une approche de <em>bas niveau</em> quand celle-ci demande au programmeur de tenir compte de plus de détails techniques. Les approche de bas niveau demandent plus d'effort, mais peuvent offrir plus de flexibilité.</p>
+<p>En informatique, on fait référence à une approche de <em>bas niveau</em> quand celle-ci demande au programmeur de tenir compte de plus de détails techniques. Les approches de bas niveau demandent plus d'effort, mais peuvent offrir plus de flexibilité.</p>
 
 <p>Java possède deux classes, à savoir FileReader et File, qui nous permettent de lire un fichier texte de bas niveau. Pour cela, nous devons connaître le fichier que nous voulons lire. Pour cette leçon, nous avons choisi de lire le fichier unfichier.</p>
 
@@ -110,7 +110,7 @@ try {
 }
 ```
 
-<p>Pour terminer, il ne reste qu'à fermer le FileReader, en effet, lorsqu'un programme effectue une opération d'entrée-sortie, celui-ci doit demander de l'aide au système d'exploitation et ce dernier va mobiliser des ressources comme le disque dur. Une fois l'opération d'entrée-sortie terminée, vous devez le signaler pour que le système d'opération puisse libérer les ressources que vous n'utilisez plus. En Java, il suffit simplement de faire appel à la méthode close comme indiqué ci-dessous.</p>
+<p>Pour terminer, il ne reste qu'à fermer le FileReader, en effet, lorsqu'un programme effectue une opération d'entrée-sortie, celui-ci doit demander de l'aide au système d'exploitation et ce dernier va mobiliser des ressources comme le disque dur. Une fois l'opération d'entrée-sortie terminée, vous devez le signaler pour que le système d'exploitation puisse libérer les ressources que vous n'utilisez plus. En Java, il suffit simplement de faire appel à la méthode close comme indiqué ci-dessous.</p>
 
 ```java  {style=github}
 fichierALire.close();
@@ -218,7 +218,7 @@ try {
 
 <h2>Approche simplifiée</h2>
 
-<p>La gestion des cas d'exception et de la nécessité de fermer les fichiers avant de terminer la fonction est pénible. Heureusement, on peut faire mieux si on dispose d'une version récente de Java (Java 8 ou mieux). Toutes les classes nécessitant d'être fermée ("close") peuvent être déclarée dans le "try" comme ceci:</p>
+<p>La gestion des cas d'exception et de la nécessité de fermer les fichiers avant de terminer la fonction est pénible. Heureusement, on peut faire mieux si on dispose d'une version récente de Java (Java 8 ou mieux). Toutes les classes nécessitant d'être fermées ("close") peuvent être déclarées dans le "try" comme ceci:</p>
 
 ```java  {style=github}
 import java.io.*;

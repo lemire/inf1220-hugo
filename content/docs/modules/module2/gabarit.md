@@ -9,11 +9,11 @@ weight: 78
 Les travaux notés 3, 4 et 5 comprennent du code que vous devez expliquer. Nous vous demandons de remettre des 
 rapports comprenant du code  facile à consulter et bien expliqué. Pour vous aider, nous vous proposons le gabarit suivant.
 
-## MarkDown
+## Markdown
 
-Nous vous suggérons de rédiger vos travaux notés avec  MarkDown plutôt qu'avec 
+Nous vous suggérons de rédiger vos travaux notés avec  Markdown plutôt qu'avec 
 Microsoft Word. Vous
-pouvez [copier une version MarkDown de ce gabarit](https://gist.githubusercontent.com/lemire/7300657e883f0a3c14a0ab83dab56bd0/raw/891c011873da4d782c903ed7eb16299b11686388/gabarit.md) dans votre espace de travail. Si vous rédigez votre travail avec MarkDown, vous devez remettre un fichier PDF produit à partir de votre document MarkDown.
+pouvez [copier une version Markdown de ce gabarit](https://gist.githubusercontent.com/lemire/7300657e883f0a3c14a0ab83dab56bd0/raw/891c011873da4d782c903ed7eb16299b11686388/gabarit.md) dans votre espace de travail. Si vous rédigez votre travail avec Markdown, vous devez remettre un fichier PDF produit à partir de votre document Markdown.
 
 
 
@@ -43,7 +43,7 @@ Avant de remettre votre travail, testez votre URL.
 
 Votre code source doit être aussi simple que possible, et il doit apparaître de façon lisible dans votre document. N'utilisez pas plus de 100 caractères
 par ligne et optez pour une police de caractères à taille fixe suffisamment petite pour pouvoir afficher 100 caractères par ligne. La plupart des problèmes du cours peuvent être résolus avec un programme qui peut être présenté sur une seule page. Assurez-vous de bien formatter votre code. Vous pouvez utiliser 
-[notre outil de formattage]({{< relref "/docs/format/" >}}) pour mettre en forme votre code.
+[notre outil de formatage]({{< relref "/docs/format/" >}}) pour mettre en forme votre code.
 
 ```java
 public class MonProgramme {

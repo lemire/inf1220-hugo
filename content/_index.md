@@ -143,7 +143,7 @@ Il est possible que l'on vous demande [d'utiliser la page de l'entretien sur le 
 
 Commencez le cours dès que vous êtes prêt après avoir lu les consignes. Il n’y a pas de contact de démarrage dans ce cours. Vous devez suivre le cours en ligne, en suivant les instructions du site web. Au fur et à mesure que vous progressez, vous prendrez connaissance des consignes ayant trait aux lectures, aux exercices et aux travaux à remettre.
 
-Dans la documentation que vous avez reçu de l’Université, vous avez le nom de la personne qui vous encadre. Ce nom devrait aussi apparaître au sein du portail étudiant. Prenez bien en note le nom de cette personne et son adresse de courriel: vous pouvez lui écrire vos questions et commentaires.
+Dans la documentation que vous avez reçue de l’Université, vous avez le nom de la personne qui vous encadre. Ce nom devrait aussi apparaître au sein du portail étudiant. Prenez bien en note le nom de cette personne et son adresse de courriel: vous pouvez lui écrire vos questions et commentaires.
 
 Le cours INF 1220 est un cours en ligne. Vous devrez travailler sur un ordinateur connecté à Internet.
 

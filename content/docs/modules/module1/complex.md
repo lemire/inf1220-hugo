@@ -27,7 +27,7 @@ La notation \( O(f(n)) \) signifie que, pour des entrées de taille \( n \), l�
 
 On considère souvent que l'accès à un élément d'un tableau par son index a une complexité \( O(1) \) puisqu'il s'agit d'une seule opération. Les opérations arithmétiques (+, -, etc.) ont aussi une complexité \( O(1) \).
 
-Cette notation permet également de comparer différentes classes de complexité. Une hiérarchie courante observe que les algorithmes en complexité constante sont les plus efficaces pour de grandes entrées, suivis de ceux en complexité logarithmique (\(O(\log n)\)), puis linéaire (\(O(n)\)), linéarithmique (\(O(n\log n)\)), et enfin quadratique (\(O(n^2\)). Formellement, cela se traduit par des inclusions entre les classes : \( O(1) \subseteq O(\log n) \subseteq O(n) \subseteq O(n \log n) \subseteq O(n^2) \), où le logarithme est pris en base quelconque supérieure à 1 (la base n’affecte la définition qu’à une constante multiplicative près).
+Cette notation permet également de comparer différentes classes de complexité. Une hiérarchie courante observe que les algorithmes en complexité constante sont les plus efficaces pour de grandes entrées, suivis de ceux en complexité logarithmique (\(O(\log n)\)), puis linéaire (\(O(n)\)), linéarithmique (\(O(n\log n)\)), et enfin quadratique (\(O(n^2)\)). Formellement, cela se traduit par des inclusions entre les classes : \( O(1) \subseteq O(\log n) \subseteq O(n) \subseteq O(n \log n) \subseteq O(n^2) \), où le logarithme est pris en base quelconque supérieure à 1 (la base n’affecte la définition qu’à une constante multiplicative près).
 
 Pour établir ces inclusions, rappelons la définition : une fonction \( g(n) \) appartient à \( O(f(n)) \) s’il existe une constante positive \( c \) et un entier \( n_0 \) tels que, pour tout \( n \geq n_0 \), \( g(n) \leq c \cdot f(n) \) (en considérant des fonctions positives pour \( n \) grand).
 
@@ -324,6 +324,204 @@ n = 2^k \implies k = \log_2 n
 
 Ainsi, le nombre maximal de comparaisons est proportionnel à \( \log_2 n \). C’est pourquoi on dit que la recherche binaire a une complexité en \( O(\log n) \).
 
+## Recherche d’une chaîne de caractères
+
+Un autre problème très courant est la recherche d’une sous-chaîne : étant donné un texte \( t \) de longueur \( n \) et un motif \( x \) de longueur \( m \) (avec \( m \leq n \)), on veut savoir si le motif apparaît dans le texte, et à quelle position. C’est exactement ce que fait la méthode `indexOf` en Java :
+
+```java {style=github}
+String texte = "le chat dort";
+System.out.println(texte.indexOf("chat")); // Affiche 3
+```
+
+### Algorithme naïf
+
+L’idée la plus simple consiste à essayer chaque position de départ possible dans le texte, et à comparer les caractères un à un jusqu’à trouver une différence.
+
+```pseudo
+FONCTION rechercheNaive(t, x)
+    n ← longueur(t)
+    m ← longueur(x)
+    POUR pos de 0 à n - m
+        i ← 0
+        TANT QUE i < m ET x[i] == t[pos + i]
+            i ← i + 1
+        FIN TANT QUE
+        SI i == m ALORS
+            retourner pos
+        FIN SI
+    FIN POUR
+    retourner -1
+FIN FONCTION
+```
+
+La boucle externe (`pos` de 0 à n-m) choisit une position de départ dans le texte, c’est-à-dire l’endroit où l’on tente d’aligner le motif. La boucle interne compare le motif au texte, caractère par caractère, à partir de cette position : tant que les caractères coïncident (`x[i] == t[pos + i]`), on avance l’indice `i`. Si l’on parvient à comparer les \( m \) caractères du motif (`i == m`), c’est que le motif apparaît à la position `pos` et on la retourne. Sinon, on abandonne cet alignement et on recommence une position plus loin. Si aucune position ne fonctionne, la fonction retourne -1.
+
+Sur des textes ordinaires (par exemple, chercher un mot français dans un roman), cet algorithme est très rapide : la première ou la deuxième comparaison échoue presque toujours, et le coût est en pratique proche de \( O(n) \).
+
+### Un cas qui dégénère
+
+Le pire cas de l’algorithme naïf est en \( O(n \times m) \). Pour le voir, il suffit de prendre un texte et un motif composés presque uniquement du même caractère. Cherchons le motif
+
+\[
+x = \underbrace{aaa\cdots a}_{m-1}b
+\]
+
+dans le texte
+
+\[
+t = \underbrace{aaaaa\cdots aaaaa}_{n}.
+\]
+
+À chaque position de départ, l’algorithme naïf compare avec succès les \( m-1 \) premiers caractères (des `a`), puis échoue sur le dernier caractère (le `b` du motif contre un `a` du texte). Il a donc fait \( m \) comparaisons pour n’avancer que d’une seule position. Comme il y a \( n - m + 1 \) positions, le nombre total de comparaisons est d’environ \( (n-m+1) \times m \), donc de l’ordre de \( n \times m \).
+
+Prenons un exemple concret avec `t = "aaaaaaaa"` (\( n = 8 \)) et `x = "aaab"` (\( m = 4 \)) :
+
+| Position | Comparaisons effectuées | Résultat |
+|---|---|---|
+| 0 | `a=a`, `a=a`, `a=a`, `b≠a` | échec après 4 comparaisons |
+| 1 | `a=a`, `a=a`, `a=a`, `b≠a` | échec après 4 comparaisons |
+| 2 | `a=a`, `a=a`, `a=a`, `b≠a` | échec après 4 comparaisons |
+| 3 | `a=a`, `a=a`, `a=a`, `b≠a` | échec après 4 comparaisons |
+| 4 | `a=a`, `a=a`, `a=a`, `b≠a` | échec après 4 comparaisons |
+
+Soit 20 comparaisons pour un texte de 8 caractères. Avec un texte d’un million de `a` et un motif de mille caractères, on ferait environ un milliard de comparaisons alors que la réponse est simplement «&nbsp;absent&nbsp;». Le problème vient du fait que l’algorithme naïf oublie tout ce qu’il vient d’apprendre : après avoir constaté que les caractères aux positions 0 à \( m-2 \) sont des `a`, il recommence à zéro une position plus loin.
+
+### L’algorithme two-way
+
+L’algorithme *two-way* (ou algorithme de Crochemore-Perrin, 1991) résout ce problème. Il trouve le motif en temps \( O(n + m) \) dans le pire cas, en n’utilisant qu’une quantité constante de mémoire supplémentaire (\( O(1) \)), contrairement à d’autres algorithmes classiques comme Knuth-Morris-Pratt qui doivent construire une table de taille \( m \). C’est l’algorithme utilisé par les fonctions `strstr` et `memmem` de la bibliothèque C standard (glibc).
+
+#### La factorisation critique
+
+L’idée centrale est de couper le motif en deux parties, \( x = u\,v \), à un endroit bien choisi appelé *position critique*. On appelle cette découpe une **factorisation critique**. Sa propriété est que, à cet endroit, la plus petite répétition locale du motif est aussi grande que la période du motif entier : c’est le point du motif où il est «&nbsp;le plus difficile&nbsp;» de se répéter.
+
+Un théorème garantit qu’une telle position existe toujours, et qu’on peut la trouver ainsi : on calcule la position de départ du plus grand suffixe du motif dans l’ordre alphabétique usuel, puis celle du plus grand suffixe dans l’ordre alphabétique inversé, et on retient la plus grande des deux positions (c’est-à-dire le plus court des deux suffixes).
+
+Pour le motif `x = "aaab"`, les suffixes sont `"aaab"`, `"aab"`, `"ab"` et `"b"`.
+
+* Dans l’ordre usuel, le plus grand suffixe est `"b"`, qui commence à la position 3.
+* Dans l’ordre inversé (où `b` vient avant `a`), le plus grand suffixe est `"aaab"`, qui commence à la position 0.
+
+On retient donc la position critique \( \ell = 3 \), soit \( u = \texttt{"aaa"} \) et \( v = \texttt{"b"} \).
+
+Ce calcul se fait en temps \( O(m) \) et en mémoire constante :
+
+```pseudo
+FONCTION suffixeMaximal(x, ordreInverse)
+    m ← longueur(x)
+    i ← -1          // début (moins 1) du meilleur suffixe trouvé
+    j ← 0           // début du suffixe candidat
+    k ← 1           // décalage de comparaison
+    p ← 1           // période courante
+    TANT QUE j + k < m
+        a ← x[j + k]
+        b ← x[i + k]
+        SI ordreInverse ALORS échanger les rôles de a et b FIN SI
+        SI a < b ALORS              // le candidat est plus petit : on l'abandonne
+            j ← j + k
+            k ← 1
+            p ← j - i
+        SINON SI a == b ALORS       // on progresse dans une répétition
+            SI k == p ALORS
+                j ← j + p
+                k ← 1
+            SINON
+                k ← k + 1
+            FIN SI
+        SINON                       // le candidat est plus grand : il devient le meilleur
+            i ← j
+            j ← j + 1
+            k ← 1
+            p ← 1
+        FIN SI
+    FIN TANT QUE
+    retourner (i + 1, p)            // position du suffixe maximal et période
+FIN FONCTION
+
+FONCTION factorisationCritique(x)
+    (l1, p1) ← suffixeMaximal(x, FAUX)
+    (l2, p2) ← suffixeMaximal(x, VRAI)
+    SI l2 < l1 ALORS
+        retourner (l1, p1)
+    SINON
+        retourner (l2, p2)
+    FIN SI
+FIN FONCTION
+```
+
+#### La recherche
+
+Une fois le motif coupé en \( u\,v \), on compare d’abord la partie droite \( v \) de gauche à droite, puis, seulement si elle correspond entièrement, la partie gauche \( u \) de droite à gauche. C’est cet ordre de comparaison (d’où le nom «&nbsp;deux sens&nbsp;») qui permet de garantir que chaque caractère du texte n’est examiné qu’un nombre borné de fois.
+
+```pseudo
+FONCTION rechercheDeuxSens(t, x)
+    n ← longueur(t)
+    m ← longueur(x)
+    (l, p) ← factorisationCritique(x)
+
+    SI x[0 .. l-1] == x[p .. p+l-1] ALORS
+        // Cas périodique : le motif se répète, on garde une « mémoire »
+        decalage ← p
+        memoire ← m - p
+    SINON
+        // Cas apériodique : on peut sauter loin
+        decalage ← max(l, m - l) + 1
+        memoire ← 0
+    FIN SI
+
+    pos ← 0
+    dejaVu ← 0
+    TANT QUE pos + m ≤ n
+        // 1. On compare la partie droite v, de gauche à droite
+        i ← max(l, dejaVu)
+        TANT QUE i < m ET x[i] == t[pos + i]
+            i ← i + 1
+        FIN TANT QUE
+        SI i < m ALORS
+            pos ← pos + (i - l + 1)      // saut proportionnel à ce qui a été vérifié
+            dejaVu ← 0
+        SINON
+            // 2. On compare la partie gauche u, de droite à gauche
+            j ← l - 1
+            TANT QUE j ≥ dejaVu ET x[j] == t[pos + j]
+                j ← j - 1
+            FIN TANT QUE
+            SI j < dejaVu ALORS
+                retourner pos            // motif trouvé
+            FIN SI
+            pos ← pos + decalage
+            dejaVu ← memoire
+        FIN SI
+    FIN TANT QUE
+    retourner -1
+FIN FONCTION
+```
+
+Deux points méritent d’être soulignés. D’abord, lorsque la comparaison de la partie droite échoue à l’indice `i`, on décale le motif de `i - l + 1` positions : plus on a vérifié de caractères avec succès, plus le saut est grand. C’est le contraire de l’algorithme naïf, qui avance toujours d’une seule position. Ensuite, dans le cas périodique, la variable `dejaVu` mémorise la longueur du préfixe déjà validé lors de l’alignement précédent, ce qui évite de recomparer les mêmes caractères. Cette mémoire tient dans un seul entier, d’où l’usage de mémoire en \( O(1) \).
+
+#### Retour sur l’exemple qui dégénère
+
+Reprenons `t = "aaaaaaaa"` et `x = "aaab"`. On a vu que la position critique est \( \ell = 3 \), avec `u = "aaa"` et `v = "b"`. La période calculée est \( p = 1 \), mais `x[0..2] = "aaa"` diffère de `x[1..3] = "aab"` : on est donc dans le cas apériodique, avec un décalage de \( \max(3, 1) + 1 = 4 \).
+
+L’algorithme compare alors, à chaque alignement, le caractère `x[3] = 'b'` avec `t[pos + 3] = 'a'` :
+
+| Position | Comparaisons effectuées | Nouvelle position |
+|---|---|---|
+| 0 | `b≠a` (une seule comparaison, à l’indice 3) | 0 + (3 - 3 + 1) = 1 |
+| 1 | `b≠a` | 2 |
+| 2 | `b≠a` | 3 |
+| 3 | `b≠a` | 4 |
+| 4 | `b≠a` | 5 |
+
+Cinq comparaisons au lieu de vingt. Et surtout, le comportement ne se dégrade pas quand le motif s’allonge : la partie gauche `"aaa"` n’est jamais examinée, puisque la partie droite échoue immédiatement. Pour un texte d’un million de `a` et un motif de mille caractères, l’algorithme two-way fait environ un million de comparaisons, contre un milliard pour l’algorithme naïf.
+
+De façon générale, l’algorithme two-way effectue au plus \( 2n - m \) comparaisons de caractères durant la phase de recherche, quel que soit le texte et quel que soit le motif.
+
+{{% hint info %}}
+
+En pratique, la méthode `indexOf` de Java utilise un algorithme naïf, mais accéléré par des instructions spécialisées du processeur qui comparent plusieurs caractères à la fois. Pour des textes et des motifs ordinaires, c’est souvent le choix le plus rapide. Les algorithmes comme two-way deviennent intéressants lorsqu’on ne peut pas exclure les cas pathologiques, par exemple lorsque le motif est fourni par un utilisateur qui pourrait chercher à ralentir le système.
+
+{{% /hint %}}
+
 ## Tri
 
 Le tri consiste à réorganiser les éléments d’un tableau ou d’une liste selon un ordre donné (par exemple, croissant). Un algorithme de tri naïf, comme le tri à bulles (bubble sort) ou le tri par insertion, compare chaque élément à tous les autres et échange leur position si nécessaire. Ces algorithmes effectuent environ \( n^2 \) comparaisons pour un tableau de taille \( n \), ce qui leur donne une complexité en \( O(n^2) \). Cela devient très lent dès que le nombre d’éléments augmente.
@@ -456,10 +654,10 @@ en même temps. Constatez que certains algorithmes sont plus rapides que d'autre
 
 {{< webapp path="tricompare.html" >}}
 
-Le Java utilise généralement Timsort.
+Pour trier des objets, Java utilise généralement Timsort (par exemple via `Arrays.sort` sur des tableaux d’objets).
 Timsort est un algorithme de tri hybride, conçu par Tim Peters. Il combine le tri par insertion et le tri fusion pour optimiser les performances sur des données réelles, en exploitant les séquences déjà triées, appelées *runs*. L’algorithme commence par diviser le tableau en petits *runs*, soit naturels (séquences croissantes ou décroissantes), soit créés en triant des blocs de taille minimale (souvent 32 éléments) avec le tri par insertion. Ces *runs* sont ensuite fusionnés deux à deux à l’aide d’une version optimisée du tri fusion, qui minimise les comparaisons et les copies. Sa complexité est en \( O(n \log n) \) dans le pire cas, mais elle peut descendre à \( O(n) \) pour des données presque triées, rendant Timsort particulièrement efficace en pratique. De plus, Timsort est stable, préservant l’ordre relatif des éléments égaux, ce qui est crucial dans certaines applications. 
 
-Dans certains cas spécialisés, nous utilisons l’algorithme de tri par niches, également connu sous le nom de *pigeonhole sort*, est un algorithme de tri non comparatif adapté aux ensembles de données où les éléments appartiennent à un ensemble fini de valeurs entières, comme des nombres dans une plage limitée. Il repose sur le principe des "niches" (ou pigeonholes) : chaque valeur possible est associée à une niche, et les éléments sont placés dans la niche correspondant à leur valeur. Ensuite, les niches sont parcourues dans l’ordre pour reconstruire le tableau trié. Sa complexité est en \( O(n + k) \), où \( n \) est le nombre d’éléments et \( k \) la taille de la plage de valeurs. Cet algorithme est très efficace lorsque \( k \) est proche de \( n \), mais il nécessite un espace auxiliaire proportionnel à \( k \) et n’est pas adapté aux données non entières ou à des plages de valeurs très grandes.
+Dans certains cas spécialisés, nous utilisons l’algorithme de tri par niches, également connu sous le nom de *pigeonhole sort*, un algorithme de tri non comparatif adapté aux ensembles de données où les éléments appartiennent à un ensemble fini de valeurs entières, comme des nombres dans une plage limitée. Il repose sur le principe des "niches" (ou pigeonholes) : chaque valeur possible est associée à une niche, et les éléments sont placés dans la niche correspondant à leur valeur. Ensuite, les niches sont parcourues dans l’ordre pour reconstruire le tableau trié. Sa complexité est en \( O(n + k) \), où \( n \) est le nombre d’éléments et \( k \) la taille de la plage de valeurs. Cet algorithme est très efficace lorsque \( k \) est proche de \( n \), mais il nécessite un espace auxiliaire proportionnel à \( k \) et n’est pas adapté aux données non entières ou à des plages de valeurs très grandes.
 
 ```
 FONCTION triParNiches(tableau, min, max)

@@ -54,7 +54,7 @@ naviguer dans les fichiers? Pouvez-vous charger le code sur votre machine&nbsp;?
 
 Pour consolider vos connaissances, essayez cet exercice : créez un compte GitHub, configurez Git localement, puis créez un dépôt nommé «&nbsp;mon-premier-projet&nbsp;». Ajoutez un fichier README.md avec une brève description. Clonez le dépôt, créez une branche appelée «&nbsp;feature&nbsp;», ajoutez un fichier texte avec un court message, commitez et poussez la branche vers GitHub. Enfin, ouvrez une pull request pour fusionner vos changements dans la branche principale. Si vous rencontrez des difficultés, consultez la documentation officielle de GitHub ou les tutoriels disponibles sur leur site.
 
-Puis voyez voir si vous êtes capable, en utilisant `git` de [récupérer le répertoire du manuel](https://github.com/RobertGodin/JavaPasAPas).
+Puis allez voir si vous êtes capable, en utilisant `git` de [récupérer le répertoire du manuel](https://github.com/RobertGodin/JavaPasAPas).
 En ligne de commande, il suffit de faire `git clone https://github.com/RobertGodin/JavaPasAPas.git`.
 
 

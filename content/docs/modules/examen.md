@@ -27,7 +27,7 @@ ne pourriez pas produire par vous-même, il s'agit d'une utilisation irresponsab
 ## Mise en forme de votre examen
 
 Que ce soit pendant un examen ou lors d'un travail noté, nous vous demandons d'apporter une attention particulière à la mise en page de votre code Java. Veillez à aligner les accolades ouvrantes et fermantes, à espacer les opérateurs et les virgules de manière uniforme, et à limiter la longueur des lignes à environ 100 caractères pour éviter les retours à la ligne forcés. Nous vous suggérons de 
-rédiger votre examen en [MarkDown]({{< relref "/docs/modules/module2/markdown/" >}}) si vous l'avez fait pendant vos travaux notés (vous devrez alors remettre un document PDF). Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formattage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. N'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
+rédiger votre examen en [Markdown]({{< relref "/docs/modules/module2/markdown/" >}}) si vous l'avez fait pendant vos travaux notés (vous devrez alors remettre un document PDF). Si vous souhaitez utiliser un traitement de texte comme Microsoft Word, vous pouvez utiliser [notre outil de formatage]({{< relref "/docs/format/" >}}) pour améliorer l'apparence de votre code Java en générant une version colorée et syntaxiquement mise en évidence. N'oubliez pas d'ajouter des commentaires clairs et concis pour expliquer les parties complexes, en les plaçant au-dessus des blocs de code concernés plutôt qu'en fin de ligne. Choisissez une police de caractères à taille fixe et suffisamment petite pour afficher 100 caractères par ligne. Le code informatique est mis en forme avec un interligne simple.
 
 <div style=" border: 2px solid red; margin: 2em; padding:2em;">
 
@@ -103,7 +103,7 @@ Nous comprenons que la vie vous réserve des surprises. Parfois un logiciel plan
 
 Assurez-vous d'avoir des solutions de rechange&nbsp;:
 
-- Installez un environnement de développement Java sur votre ordinateur. [Vous pouvez faire l'examen avec l'environnement de développement du site du cours,]({{< ref "docs/environnement" >}}) mais une panne est toujours possible. Prenez le temps de le tester plusieurs différentes manières de compiler et d'exécuter votre code. Vous devez tester votre code.
+- Installez un environnement de développement Java sur votre ordinateur. [Vous pouvez faire l'examen avec l'environnement de développement du site du cours,]({{< ref "docs/environnement" >}}) mais une panne est toujours possible. Prenez le temps de tester de plusieurs manières différentes la compilation et l'exécution de votre code. Vous devez tester votre code.
 - Si vous prévoyez utiliser l'intelligence artificielle pour votre examen, assurez-vous d'avoir une page dans votre navigateur ouverte. Rappelez-vous que vous devez faire une utilisation responsable de l'intelligence artificielle (pas de copier-coller aléatoire).
 - Il est fortement conseillé d'avoir une copie du manuel du cours à votre disposition pendant l'examen. [Si vous avez acheté la version papier du manuel, gardez-la à proximité](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/).
 - Vous pouvez rédigez vos propres notes.
@@ -190,7 +190,7 @@ Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Uni
 
 ### ~~Pour les personnes inscrites à compter du trimestre d’été 2026~~
 
-~~[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.~~
+~~[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université. Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.~~
 
 {{% hint info %}}
 **Juin 2026** : L'ancienne plateforme d'examen de l'Université TÉLUQ est retirée. Une nouvelle formule d'examen devait entrer en fonction à l'été 2026. Pour des raisons administratives, la nouvelle formule n'a pas été autorisée. Nous n'avons pas plus d'information pour l'instant. Suivez les consignes de l'Université. En cas de doute, communiquez avec l'Université pour en savoir davantage.
@@ -198,7 +198,7 @@ Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Uni
 
 ## Résultat et rétroaction sur l'examen
 
-<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, il nous fera un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception). Quant à l'entretien de suivi&nbsp;: un échec à l'entretien de suivi est sans appel. Il est de votre responsabilité de vous assurer de passer l'entretien de suivi. Vous ne recevrez pas de rapport justificatif en cas d'échec à l'entretien de suivi&nbsp;: vous devez être capable de répondre aux questions de l'examinateur de manière satisfaisante.</p>
+<p>Une fois l'examen corrigé, vous trouverez votre note dans le portail étudiant. L'enseignant ne transmet jamais les examens (corrigés ou pas) par courriel. Si vous avez des questions suite à votre examen, nous nous ferons un plaisir d'en discuter avec vous. Nous ne transmettons toutefois jamais le corrigé de l'examen (à quiconque, et il n'y a pas d'exception). Quant à l'entretien de suivi&nbsp;: un échec à l'entretien de suivi est sans appel. Il est de votre responsabilité de vous assurer de passer l'entretien de suivi. Vous ne recevrez pas de rapport justificatif en cas d'échec à l'entretien de suivi&nbsp;: vous devez être capable de répondre aux questions de l'examinateur de manière satisfaisante.</p>
 
 {{% hint danger %}}
 
@@ -220,7 +220,7 @@ constructives, [remplissez le formulaire à cet effet]({{< relref "docs/erreurs.
 Si vous avez aimé le cours...
 
 - Parlez du cours autour de vous, laissez des remarques positives en ligne.
-- [Consultez la page professeur](https://www.teluq.ca/siteweb/univ/dlemire.html) et les autres cours qu'il a conçu.
+- [Consultez la page professeur](https://www.teluq.ca/siteweb/univ/dlemire.html) et les autres cours qu'il a conçus.
 - Si vous avez un compte sur GitHub, [suivez-y le professeur](https://github.com/lemire). (Bouton  *follow*.)
 - Si vous lisez l'anglais, [abonnez-vous au blog du professeur](https://lemire.me/blog/).
 - Vous pouvez suivre le professeur sur [X](https://x.com/lemire).
@@ -260,7 +260,7 @@ Je vous recommande les cours suivants.
 - Au sein du cours [INF 2007 Programmation avancée](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%202007/), vous approfondirez vos compétences en développement logiciel avec des concepts avancés comme les tests et l'optimisation des performances en utilisant le langage Go. Ce cours de programmation avancée est une suite naturelle au cours INF 1220. Plusieurs des mêmes notions y sont approfondies.
 - Au sein du cours [INF 2020 Programmation d'applications avec Python : des jeux au Web](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%202020/), vous apprendrez à créer des applications dynamiques, allant des jeux interactifs aux interfaces web, en maîtrisant Python et ses bibliothèques. Ce cours est aussi une suite naturelle au cours INF 1220.
 - Au sein du cours [INF 6450 Gestion de l'information avec XML](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%206450/), vous explorerez les techniques de structuration, de stockage et de transformation des données à l’aide du langage XML et de ses technologies associées. Ces techniques sont importantes pour développer des applications web.
-- Au sein du cours [INF 6460 Recherche et filtrage d'informations](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%206460/), vous développerez des compétences pour concevoir et utiliser des systèmes de recherche et de filtrage d'informations, en exploitant des techniques avancées d'indexation et d'analyse de données. Vous y apprendrez comment fonctionne les moteurs de recherche.
+- Au sein du cours [INF 6460 Recherche et filtrage d'informations](https://www.teluq.ca/site/etudes/offre/cours/TELUQ/INF%206460/), vous développerez des compétences pour concevoir et utiliser des systèmes de recherche et de filtrage d'informations, en exploitant des techniques avancées d'indexation et d'analyse de données. Vous y apprendrez comment fonctionnent les moteurs de recherche.
 - Au sein du cours [INF 9004 Informatique des entrepôts de données](https://www.teluq.ca/site/etudes/offre/cours/teluq/inf%209004), vous développerez des compétences en conception, gestion et analyse d’entrepôts de données pour soutenir la prise de décision stratégique. Vous y apprendrez à faire des requêtes sophistiquées au sein de bases de données avec des langages comme MDX et le SQL.
 
 

@@ -1,10 +1,10 @@
 ---
-title: "MarkDown"
+title: "Markdown"
 weight: 76
 ---
 
 
-# MarkDown
+# Markdown
 
 Les traitements de texte comme Microsoft Word ne sont pas destinés à l'écriture
 technique avec du code informatique. Il est préférable d'utiliser une approche
@@ -26,7 +26,7 @@ Les listes constituent un autre pilier de Markdown, permettant de présenter des
 
 <p>Les citations en bloc ajoutent une dimension narrative ou référentielle, en préfixant les lignes avec un chevron (> ) suivi d'un espace. Cela indente le texte et le distingue visuellement, idéal pour les extraits, les témoignages ou les références. Des citations imbriquées sont possibles en ajoutant des chevrons supplémentaires.</p>
 
-Pour insérer du code dans un document MarkDown, une convention
+Pour insérer du code dans un document Markdown, une convention
 répandue est de débuter un bloc de code par trois guillemets inversés
 (un accent grave) suivi du nom du langage de programmation (`java`).
 Le bloc se termine avec trois guillemets inversés. Considérez cet exemple.
@@ -49,7 +49,7 @@ Notez les différents éléments de la syntaxe.
 </pre>
 
 
-En résumé, voici la syntaxe MarkDown.
+En résumé, voici la syntaxe Markdown.
 - *Titres :* Utilisation du symbole `#` (un ou plusieurs) en début de ligne.
 - *Listes :* Listes à puces avec `-`, `*` ou `+`, listes numérotées avec des chiffres suivis d’un point.
 - *Liens :* `[texte du lien](URL)`
@@ -58,18 +58,18 @@ En résumé, voici la syntaxe MarkDown.
 - *Texte en italique :* `*italique*` ou `_italique_`
 - *Citations :* `> citation`
 
-Le MarkDown s'utilise à différentes fins. Vous pouvez créez un document MarkDown
+Le Markdown s'utilise à différentes fins. Vous pouvez créez un document Markdown
 avec l'extension `.md` comme dans `README.md`.
 
 
-Testez votre compréhension du MarkDown avec l'outil suivant.
+Testez votre compréhension du Markdown avec l'outil suivant.
 
 {{<webapp path="markdown.html">}}
 
 
-## MarkDown en Java
+## Markdown en Java
 
-Avec les versions récentes de Java, vous pouvez utiliser MarkDown pour les 
+Avec les versions récentes de Java, vous pouvez utiliser Markdown pour les 
 commentaires, comme dans cet exemple&nbsp;:
 
 ```java {style=github}
@@ -89,20 +89,20 @@ public class Example {
 ```
 
 
-## Conversion de MarkDown en PDF
+## Conversion de Markdown en PDF
 
-Vous pouvez convertir un fichier MarkDown en PDF à l'aide d'un plugin Visual Studio Code comme MarkDown PDF.
+Vous pouvez convertir un fichier Markdown en PDF à l'aide d'un plugin Visual Studio Code comme Markdown PDF.
 
 {{< youtube id="G3RuYho2zDA" >}}
 
-Vous pouvez aussi utiliser les éditeurs MarkDown suivants qui vous permettent d'exporter
-votre MarkDown en PDF.
+Vous pouvez aussi utiliser les éditeurs Markdown suivants qui vous permettent d'exporter
+votre Markdown en PDF.
 
 - [marktext](https://marktext.me)
 - [Typora](https://typora.io)
 - [iA Writer](https://ia.net/writer)
 
-Vous ne pouvez pas utiliser Microsoft Word pour écrire du MarkDown.
+Vous ne pouvez pas utiliser Microsoft Word pour écrire du Markdown.
 
 ## Activités
 

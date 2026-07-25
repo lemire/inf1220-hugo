@@ -14,7 +14,7 @@ Ce cours compte 5 travaux notés à remettre au cours des 15 semaines et d'un ex
 | Travail Noté #2      | Types, opérateurs et méthodes            | 6                  |
 | Travail Noté #3      | Structures de contrôle, itérations et données | 9             |
 | Travail Noté #4      | Les flux d'entrée et de sortie           | 11                 |
-| Travail Noté #5      | Héritage et polymorphismes               | 14                 |
+| Travail Noté #5      | Héritage et polymorphisme               | 14                 |
 | Examen               | L'ensemble du cours                      | 15                 |
 | Entretien de suivi               | L'ensemble du cours                      | 15                 |
 

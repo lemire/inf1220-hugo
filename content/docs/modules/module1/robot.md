@@ -191,7 +191,7 @@ Après avoir écouté la vidéo, je vous invite à réfléchir aux questions sui
 ## Robot
 
 
-Prenez note qu'il est permis d'utiliser une intelligence artificille lors des exercices ([Grok](https://grok.com), [ChatGPT](https://chatgpt.com), [Gemini](https://gemini.google.com), etc.)
+Prenez note qu'il est permis d'utiliser une intelligence artificielle lors des exercices ([Grok](https://grok.com), [ChatGPT](https://chatgpt.com), [Gemini](https://gemini.google.com), etc.)
 Cependant vous devriez vous entraîner à produire vos propres réponses. Vous devez être capable de produire vos propres réponses et vous devez toujours pouvoir expliquer vos solutions.
 
 

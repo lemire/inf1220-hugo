@@ -181,7 +181,7 @@ Question : existe-t-il un élément neutre pour la division \( \div \) sur l'ens
 
 <details>
   <summary>Réponse</summary>
-  Non, car malgré que pour tout \( n \) élément de \( \mathbb{N} \) on ait \( n \div 1 = n \), on n'a \( 1 \div n = n \) que si \( n \) vaut 1.
+  Non, car bien que pour tout \( n \) élément de \( \mathbb{N} \) on ait \( n \div 1 = n \), on n'a \( 1 \div n = n \) que si \( n \) vaut 1.
 </details>
 
 Soit \( (E, T) \) un ensemble \( E \) muni d’une loi interne \( T \).

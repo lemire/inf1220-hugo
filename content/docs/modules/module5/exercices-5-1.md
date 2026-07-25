@@ -31,7 +31,7 @@ vous pouvez faire référence à notre rappel sur [les principales notions math�
 
 
 ## Question 1
-<p>Pourquoi le code suivant entraîne t-il une erreur à la compilation?</p>
+<p>Pourquoi le code suivant entraîne-t-il une erreur à la compilation?</p>
 
 ```java  {style=github}
 public class Test extends JFrame, Thread {
@@ -54,7 +54,7 @@ public class Test extends JFrame, Thread {
 </details>
 
 ## Question 2
-<p>Voici ci dessous, une classe permettant de lire une image de type PNG et d'en extraire les occurrences de gradients de couleur :</p>
+<p>Voici ci-dessous, une classe permettant de lire une image de type PNG et d'en extraire les occurrences de gradients de couleur :</p>
 
 ```java  {style=github}
 public class PNGGradientExtractor {
@@ -81,7 +81,7 @@ public class PNGGradientExtractor {
 }
 ```
 
-<p>À l'aide de l'héritage et des classes abstraites, veuillez implémenter les classes qui permettront de : a. Créer une classe abstraite GradientExtractor; b. Créer une classe GIFGradientExtractor; c. modifier PNGGradientExtractor pour tenir compte des changements précédent. Pour simplifier l'exercice, ce qui diffère le GIF du PNG est le chargement de l'image dans la matrice gradientMatrix. VOUS DEVEZ FAIRE SEULEMENT LA STRUCTURE (CLASSES ET MÉTHODES) SANS IMPLÉMENTATION!</p>
+<p>À l'aide de l'héritage et des classes abstraites, veuillez implémenter les classes qui permettront de : a. Créer une classe abstraite GradientExtractor; b. Créer une classe GIFGradientExtractor; c. modifier PNGGradientExtractor pour tenir compte des changements précédents. Pour simplifier l'exercice, ce qui diffère le GIF du PNG est le chargement de l'image dans la matrice gradientMatrix. VOUS DEVEZ FAIRE SEULEMENT LA STRUCTURE (CLASSES ET MÉTHODES) SANS IMPLÉMENTATION!</p>
 
 <details><summary>Réponse</summary>
 
@@ -134,7 +134,7 @@ public class PNGGradientExtractor extends GradientExtractor {
 </details>
 
 ## Question 3
-<p>Voici une classe permettant de calculer la regression linéaire d'une série temporelle d'entier&nbsp;:</p>
+<p>Voici une classe permettant de calculer la régression linéaire d'une série temporelle d'entiers&nbsp;:</p>
 
 ```java  {style=github}
 public class SerieTemporelle {
@@ -509,7 +509,7 @@ Object o = new Object();
 o=a;
 ```
 
-<p>A l’issue de ces trois instructions, on a :</p>
+<p>À l’issue de ces trois instructions, on a :</p>
 <ol>
   <li>deux variables de même type et contenant les mêmes références ;</li>
   <li>deux variables de type différent contenant les mêmes références ;</li>
