@@ -386,9 +386,207 @@ Prenons un exemple concret avec `t = "aaaaaaaa"` (\( n = 8 \)) et `x = "aaab"` (
 
 Soit 20 comparaisons pour un texte de 8 caractères. Avec un texte d’un million de `a` et un motif de mille caractères, on ferait environ un milliard de comparaisons alors que la réponse est simplement «&nbsp;absent&nbsp;». Le problème vient du fait que l’algorithme naïf oublie tout ce qu’il vient d’apprendre : après avoir constaté que les caractères aux positions 0 à \( m-2 \) sont des `a`, il recommence à zéro une position plus loin.
 
+Les algorithmes qui suivent corrigent ce défaut de deux manières différentes. Les uns (Knuth-Morris-Pratt, two-way) exploitent la structure du motif pour ne jamais recomparer un caractère du texte inutilement, ce qui garantit un temps linéaire. Les autres (Boyer-Moore, Horspool) comparent le motif de droite à gauche, ce qui leur permet de sauter des portions entières du texte sans même les regarder. Dans ce qui suit, on note \( \Sigma \) l’alphabet utilisé (par exemple les 128 caractères ASCII) et \( |\Sigma| \) sa taille.
+
+### L’algorithme de Knuth-Morris-Pratt
+
+L’algorithme de Knuth-Morris-Pratt (1977), souvent abrégé en KMP, part de l’observation suivante : quand une comparaison échoue, on connaît déjà les caractères du texte qui viennent d’être vérifiés, puisqu’ils sont égaux à un préfixe du motif. Il est donc inutile de les relire.
+
+#### La table des bords
+
+Un **bord** d’une chaîne est un préfixe qui est aussi un suffixe, sans être la chaîne entière. Par exemple, `"abcab"` a pour bord `"ab"` (de longueur 2). L’algorithme calcule, pour chaque préfixe du motif, la longueur de son plus long bord.
+
+```pseudo
+FONCTION tableBords(x)
+    m ← longueur(x)
+    bord ← nouveau tableau de taille m + 1
+    bord[0] ← -1
+    i ← 0
+    j ← -1
+    TANT QUE i < m
+        TANT QUE j ≥ 0 ET x[i] ≠ x[j]
+            j ← bord[j]
+        FIN TANT QUE
+        i ← i + 1
+        j ← j + 1
+        bord[i] ← j
+    FIN TANT QUE
+    retourner bord
+FIN FONCTION
+```
+
+Pour le motif `x = "aaab"`, on obtient :
+
+| Préfixe | `""` | `"a"` | `"aa"` | `"aaa"` | `"aaab"` |
+|---|---|---|---|---|---|
+| Plus long bord | — | `""` | `"a"` | `"aa"` | `""` |
+| `bord[i]` | -1 | 0 | 1 | 2 | 0 |
+
+#### La recherche
+
+La recherche parcourt le texte une seule fois. L’indice `i` (position dans le texte) n’est jamais diminué : en cas d’échec, c’est l’indice `j` (position dans le motif) qui recule, grâce à la table des bords.
+
+```pseudo
+FONCTION rechercheKMP(t, x)
+    n ← longueur(t)
+    m ← longueur(x)
+    bord ← tableBords(x)
+    i ← 0          // position dans le texte
+    j ← 0          // position dans le motif
+    TANT QUE i < n
+        TANT QUE j ≥ 0 ET t[i] ≠ x[j]
+            j ← bord[j]        // on glisse le motif sans reculer dans le texte
+        FIN TANT QUE
+        i ← i + 1
+        j ← j + 1
+        SI j == m ALORS
+            retourner i - m    // motif trouvé
+        FIN SI
+    FIN TANT QUE
+    retourner -1
+FIN FONCTION
+```
+
+Reprenons `t = "aaaaaaaa"` et `x = "aaab"`. Après avoir aligné `"aaa"` sur les trois premiers caractères, la comparaison de `x[3] = 'b'` avec `t[3] = 'a'` échoue. Au lieu de tout recommencer, l’algorithme pose `j ← bord[3] = 2` : il sait déjà que `t[1..2] = "aa"` correspond au préfixe `"aa"` du motif. Il ne lui reste qu’à comparer `t[3]` avec `x[2] = 'a'`, ce qui réussit. Chaque caractère du texte est donc examiné au plus deux fois, et le total est d’environ \( 2n \) comparaisons au lieu de \( n \times m \).
+
+#### Complexité
+
+La construction de la table demande \( O(m) \) opérations, et la recherche \( O(n) \), soit \( O(n + m) \) au total, **dans le pire cas**. L’argument est le suivant : à chaque tour de la boucle principale, soit `i` augmente de 1 (au plus \( n \) fois), soit `j` diminue d’au moins 1. Or `j` n’augmente que lorsque `i` augmente, donc `j` ne peut pas diminuer plus de \( n \) fois. Le nombre total d’opérations est donc borné par \( 2n \).
+
+L’algorithme utilise \( O(m) \) mémoire supplémentaire pour la table des bords, et il ne dépend pas de la taille de l’alphabet. En revanche, il examine tous les caractères du texte : il n’est jamais plus rapide que \( n \) comparaisons, même dans le meilleur cas.
+
+### L’algorithme de Boyer-Moore
+
+L’algorithme de Boyer-Moore (1977) adopte une stratégie opposée : il aligne le motif sur le texte, puis compare **de droite à gauche**, en commençant par le dernier caractère du motif. L’intérêt est qu’un échec sur le dernier caractère permet souvent de faire un très grand saut, sans jamais regarder les caractères sautés.
+
+#### La règle du mauvais caractère
+
+Supposons que la comparaison échoue à la position `j` du motif, face au caractère `c = t[pos + j]` du texte. Deux cas se présentent :
+
+* si `c` n’apparaît nulle part dans le motif, aucun alignement chevauchant cette position ne peut réussir : on peut décaler le motif de `j + 1` positions d’un seul coup ;
+* si `c` apparaît dans le motif, on décale le motif juste assez pour aligner la dernière occurrence de `c` avec ce caractère du texte.
+
+On précalcule pour cela la position de la dernière occurrence de chaque caractère de l’alphabet dans le motif.
+
+```pseudo
+FONCTION tableDernier(x)
+    m ← longueur(x)
+    POUR chaque caractère c de l’alphabet
+        dernier[c] ← -1
+    FIN POUR
+    POUR i de 0 à m - 1
+        dernier[x[i]] ← i
+    FIN POUR
+    retourner dernier
+FIN FONCTION
+```
+
+Le décalage vaut alors `max(1, j - dernier[c])`. Le `max` avec 1 est indispensable : si la dernière occurrence de `c` se trouve à droite de la position `j`, la formule donnerait un décalage négatif, c’est-à-dire un recul.
+
+#### La règle du bon suffixe
+
+La deuxième règle exploite les caractères qui, eux, ont correspondu. Si le suffixe `x[j+1 .. m-1]` a été apparié avant l’échec, on cherche une autre occurrence de ce même suffixe ailleurs dans le motif, et on décale pour l’aligner. À défaut, on cherche le plus long préfixe du motif qui soit aussi un suffixe du bon suffixe.
+
+Prenons `x = "batabat"`. Supposons que le suffixe `"bat"` (positions 4 à 6) ait correspondu, mais que la comparaison échoue à la position 3. Comme `"bat"` apparaît aussi aux positions 0 à 2, on décale le motif de 4 positions pour aligner cette autre occurrence avec le `"bat"` du texte :
+
+```
+texte  : . . . . b a t . . .
+motif  : b a t a b a t          (échec à la position 3)
+motif  :         b a t a b a t  (après un décalage de 4)
+```
+
+Ces tables se calculent en \( O(m) \) opérations et occupent \( O(m) \) mémoire.
+
+#### La recherche
+
+À chaque échec, l’algorithme applique le plus grand des deux décalages.
+
+```pseudo
+FONCTION rechercheBoyerMoore(t, x)
+    n ← longueur(t)
+    m ← longueur(x)
+    dernier ← tableDernier(x)
+    suffixe ← tableBonSuffixe(x)
+    pos ← 0
+    TANT QUE pos + m ≤ n
+        j ← m - 1
+        TANT QUE j ≥ 0 ET x[j] == t[pos + j]
+            j ← j - 1            // comparaison de droite à gauche
+        FIN TANT QUE
+        SI j < 0 ALORS
+            retourner pos        // motif trouvé
+        FIN SI
+        pos ← pos + max(j - dernier[t[pos + j]], suffixe[j])
+    FIN TANT QUE
+    retourner -1
+FIN FONCTION
+```
+
+#### Complexité
+
+Le prétraitement est en \( O(m + |\Sigma|) \), et la mémoire supplémentaire en \( O(m + |\Sigma|) \).
+
+Dans le **meilleur cas**, l’algorithme est *sous-linéaire* : il ne lit qu’un caractère du texte sur \( m \). Par exemple, en cherchant `"abcdefgh"` dans un texte composé uniquement de `z`, chaque alignement échoue dès la première comparaison et le motif saute de \( m \) positions : environ \( n/m \) comparaisons suffisent. Aucun algorithme qui lirait tout le texte ne peut faire cela. C’est la raison pour laquelle Boyer-Moore et ses variantes sont si utilisés en pratique, notamment par les outils de recherche dans les fichiers.
+
+Dans le **pire cas**, la version complète (avec la règle du bon suffixe) trouve la première occurrence en \( O(n) \) : on peut montrer qu’elle effectue au plus \( 3n \) comparaisons. Si l’on n’utilise que la règle du mauvais caractère, en revanche, le pire cas retombe à \( O(n \times m) \), comme pour l’algorithme naïf.
+
+### L’algorithme de Horspool
+
+L’algorithme de Horspool (1980) est une simplification de Boyer-Moore. Il abandonne la règle du bon suffixe, plus délicate à programmer, et modifie légèrement la règle du mauvais caractère : quel que soit l’endroit où la comparaison a échoué, le décalage est déterminé par le caractère du texte aligné avec le **dernier** caractère du motif.
+
+La table de décalage se calcule à partir des \( m-1 \) premiers caractères du motif (on exclut le dernier, sinon le décalage serait toujours nul) :
+
+```pseudo
+FONCTION tableHorspool(x)
+    m ← longueur(x)
+    POUR chaque caractère c de l’alphabet
+        decalage[c] ← m
+    FIN POUR
+    POUR i de 0 à m - 2
+        decalage[x[i]] ← m - 1 - i
+    FIN POUR
+    retourner decalage
+FIN FONCTION
+
+FONCTION rechercheHorspool(t, x)
+    n ← longueur(t)
+    m ← longueur(x)
+    decalage ← tableHorspool(x)
+    pos ← 0
+    TANT QUE pos + m ≤ n
+        j ← m - 1
+        TANT QUE j ≥ 0 ET x[j] == t[pos + j]
+            j ← j - 1
+        FIN TANT QUE
+        SI j < 0 ALORS
+            retourner pos
+        FIN SI
+        pos ← pos + decalage[t[pos + m - 1]]
+    FIN TANT QUE
+    retourner -1
+FIN FONCTION
+```
+
+Cherchons `x = "chat"` dans `t = "le chat dort"`. La table vaut `decalage['c'] = 3`, `decalage['h'] = 2`, `decalage['a'] = 1`, et \( 4 \) pour tous les autres caractères.
+
+| Position | Comparaisons | Décalage appliqué |
+|---|---|---|
+| 0 (`"le c"`) | `t≠c` (une seule comparaison) | `decalage['c'] = 3` |
+| 3 (`"chat"`) | `t=t`, `a=a`, `h=h`, `c=c` | motif trouvé |
+
+Cinq comparaisons pour un texte de douze caractères, alors que l’algorithme naïf en aurait fait huit. L’écart grandit avec la taille du texte et du motif.
+
+#### Complexité
+
+Le prétraitement est en \( O(m + |\Sigma|) \) et la mémoire supplémentaire en \( O(|\Sigma|) \), c’est-à-dire une taille fixe indépendante du motif.
+
+En moyenne, sur un texte «&nbsp;ordinaire&nbsp;» écrit sur un grand alphabet, Horspool est proche du meilleur cas de Boyer-Moore et fait environ \( n/m \) comparaisons. Sa simplicité en fait souvent le plus rapide des algorithmes classiques en pratique.
+
+Mais son pire cas reste en \( O(n \times m) \), puisqu’il ne conserve aucune mémoire des comparaisons réussies. Il suffit de chercher `x = "baaa"` dans un texte composé uniquement de `a` : à chaque alignement, les trois `a` du motif correspondent, le `b` échoue, et le décalage vaut `decalage['a'] = 1`. On fait donc \( m \) comparaisons pour avancer d’une seule position, exactement comme l’algorithme naïf.
+
 ### L’algorithme two-way
 
-L’algorithme *two-way* (ou algorithme de Crochemore-Perrin, 1991) résout ce problème. Il trouve le motif en temps \( O(n + m) \) dans le pire cas, en n’utilisant qu’une quantité constante de mémoire supplémentaire (\( O(1) \)), contrairement à d’autres algorithmes classiques comme Knuth-Morris-Pratt qui doivent construire une table de taille \( m \). C’est l’algorithme utilisé par les fonctions `strstr` et `memmem` de la bibliothèque C standard (glibc).
+L’algorithme *two-way* (ou algorithme de Crochemore-Perrin, 1991) offre le meilleur des deux mondes. Comme Knuth-Morris-Pratt, il trouve le motif en temps \( O(n + m) \) dans le pire cas ; mais il n’utilise qu’une quantité constante de mémoire supplémentaire (\( O(1) \)), là où Knuth-Morris-Pratt construit une table de taille \( m \) et où Boyer-Moore et Horspool ont besoin d’une table indexée par l’alphabet. C’est l’algorithme utilisé par les fonctions `strstr` et `memmem` de la bibliothèque C standard (glibc).
 
 #### La factorisation critique
 
@@ -514,7 +712,21 @@ L’algorithme compare alors, à chaque alignement, le caractère `x[3] = 'b'` a
 
 Cinq comparaisons au lieu de vingt. Et surtout, le comportement ne se dégrade pas quand le motif s’allonge : la partie gauche `"aaa"` n’est jamais examinée, puisque la partie droite échoue immédiatement. Pour un texte d’un million de `a` et un motif de mille caractères, l’algorithme two-way fait environ un million de comparaisons, contre un milliard pour l’algorithme naïf.
 
-De façon générale, l’algorithme two-way effectue au plus \( 2n - m \) comparaisons de caractères durant la phase de recherche, quel que soit le texte et quel que soit le motif.
+De façon générale, l’algorithme two-way effectue au plus \( 2n - m \) comparaisons de caractères durant la phase de recherche, quel que soit le texte et quel que soit le motif. Notons toutefois qu’il examine, lui aussi, presque tous les caractères du texte : contrairement à Boyer-Moore et à Horspool, il n’est pas sous-linéaire. C’est pourquoi les implémentations réelles (comme celle de la glibc) lui ajoutent une table de mauvais caractère pour accélérer le cas courant, tout en conservant la garantie du pire cas.
+
+### Comparaison des algorithmes
+
+Rappelons que \( n \) est la longueur du texte, \( m \) celle du motif et \( |\Sigma| \) la taille de l’alphabet.
+
+| Algorithme | Prétraitement | Mémoire supp. | Recherche, pire cas | Recherche, meilleur cas |
+|---|---|---|---|---|
+| Naïf | aucun | \( O(1) \) | \( O(n \times m) \) | \( O(n) \) |
+| Knuth-Morris-Pratt | \( O(m) \) | \( O(m) \) | \( O(n) \), au plus \( 2n \) comparaisons | \( O(n) \) |
+| Boyer-Moore | \( O(m + \lvert\Sigma\rvert) \) | \( O(m + \lvert\Sigma\rvert) \) | \( O(n) \), au plus \( 3n \) comparaisons | \( O(n/m) \) |
+| Horspool | \( O(m + \lvert\Sigma\rvert) \) | \( O(\lvert\Sigma\rvert) \) | \( O(n \times m) \) | \( O(n/m) \) |
+| Two-way | \( O(m) \) | \( O(1) \) | \( O(n) \), au plus \( 2n - m \) comparaisons | \( O(n) \) |
+
+Trois enseignements se dégagent de ce tableau. D’abord, aucun de ces algorithmes n’est meilleur que les autres sous tous les angles : Horspool a le pire des pires cas, mais c’est souvent le plus rapide en pratique&nbsp;; two-way a la meilleure garantie, mais il ne saute jamais de caractères. Ensuite, un algorithme peut être sous-linéaire, c’est-à-dire lire moins de caractères qu’il n’y en a dans le texte&nbsp;: c’est possible parce qu’on n’a pas besoin de connaître tout le texte pour affirmer que le motif en est absent. Enfin, la complexité en mémoire compte autant que celle en temps&nbsp;: une table de taille \( |\Sigma| \) est un obstacle réel si l’alphabet est celui d’Unicode plutôt que celui de l’ASCII.
 
 {{% hint info %}}
 

@@ -56,7 +56,7 @@ Si vous ne vous présentez pas à l’entretien de suivi ou si n’êtes pas en 
 <p>Une fois votre examen corrigé, vous disposez de trois jours ouvrables pour prendre un rendez-vous. Vous pouvez écrire à la personne qui vous encadre ou vous pouvez le faire dans votre portail si cette personne affiche ses disponibilités.</p>
 
 ### Comment se déroule-t-il?
-<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran. Vous aurez ensuite à répondre à des questions. Nous allons vérifier que vous pouvez programmer sans aide.</p>
+<p>Vous validez d’abord votre identité à l’aide d’une pièce d’identité avec photo. Ensuite, quelques questions vous sont posées dans le seul but de s’assurer que vous êtes bien la personne qui a réalisé l’examen. Il est probable que nous vous demandions de partager votre écran. Vous aurez ensuite à répondre à des questions. Nous allons vérifier que vous pouvez programmer sans aide. Par exemple, nous pouvons vous demander de résoudre des problèmes similaires à ceux des travaux ou de l'examen.</p>
 
 
 Il est possible que l'on vous demande [d'utiliser la page de l'entretien sur le site]({{< relref "docs/modules/entretien" >}}).
@@ -82,12 +82,20 @@ pour les raisons suivantes.</p>
 <li>Il y a apparence d’infraction liée aux études.</li>
 </ul>
 
-<p>En cas d’irrégularité, un dossier de dénonciation pour infraction à l’intégrité intellectuelle pourrait être déposé.<p>
-Qui puis-je contacter si j’ai des questions?
+<p>En cas d’irrégularité, un dossier de dénonciation pour infraction à l’intégrité intellectuelle pourrait être déposé.
+
+### Si j'échoue l'entretien, est-ce que je peux demander une révision ou une reprise?
+
+<p>Non. La note obtenue à l'entretien est définitive. Elle ne sera pas révisée. Vous ne pouvez pas reprendre
+l'entretien de suivi.</p>
+
+
+### Qui puis-je contacter si j’ai des questions?
+
 <p>En cas de besoin, n’hésitez pas à communiquer avec la personne responsable de votre encadrement.</p>
 
 {{% hint warning %}}
-L'entretien de suivi fait l'objet d'un seuil distinct&nbsp;: un échec à l'entretien de suivi entraîne l'échec du cours, et ce, indépendamment de la note obtenue à l'examen. Il ne s'agit donc pas d'un simple échec à l'examen, mais bien d'un échec au cours.
+L'entretien de suivi fait l'objet d'un seuil distinct&nbsp;: un échec à l'entretien de suivi entraîne l'échec du cours, et ce, indépendamment de la note obtenue à l'examen. Il ne s'agit donc pas d'un simple échec à l'examen, mais bien d'un échec au cours. Il n'est pas possible de demander une révision de note concernant l'entretien.
 {{% /hint %}}
 
 </div>
@@ -188,13 +196,9 @@ L'enseignant ne peut changer la date, la durée, le lieu ou l'heure de votre exa
 Le déroulement de l'examen, incluant sa date et son heure, est géré par l'Université. Il est inutile d'écrire à l'enseignant pour savoir quand votre examen aura lieu ou pour en changer la date. Si vous avez des questions au sujet de la plateforme technologique ou au sujet de l'heure de l'examen, il faut voir avec l'Université et au sein du portail étudiant. Par exemple, dans le portail étudiant, sous Dossier administratif, il est possible que vous trouviez une option pour modifier une date d’examen.
 
 
-### ~~Pour les personnes inscrites à compter du trimestre d’été 2026~~
+### Nouvelle plate-forme d'examen
 
-~~[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université. Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.~~
-
-{{% hint info %}}
-**Juin 2026** : L'ancienne plateforme d'examen de l'Université TÉLUQ est retirée. Une nouvelle formule d'examen devait entrer en fonction à l'été 2026. Pour des raisons administratives, la nouvelle formule n'a pas été autorisée. Nous n'avons pas plus d'information pour l'instant. Suivez les consignes de l'Université. En cas de doute, communiquez avec l'Université pour en savoir davantage.
-{{% /hint %}}
+-[Accédez à votre examen directement dans l'environnement Moodle](https://m2.teluq.ca/mod/quiz/view.php?id=172628). Vous y trouverez davantage d'information. Les examens sont gérés par l'Université. Il est inutile de joindre la personne qui vous encadre à ce sujet avec vos questions, il faut joindre l'Université.
 
 ## Résultat et rétroaction sur l'examen
 
