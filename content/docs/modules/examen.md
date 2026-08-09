@@ -63,7 +63,8 @@ Il est possible que l'on vous demande [d'utiliser la page de l'entretien sur le 
 
 ### Dois-je me préparer à l'entretien de suivi?
 
-Aucune préparation n’est nécessaire.
+Aucune préparation n’est nécessaire. À la fin du cours, vous avez fait des centaines de problèmes en Java sans
+assistance de l'IA ou d'un ami, vous avez fait un examen sans vous en remettre à l'IA ou à un ami. À ce point-ci du cours, vous pouvez facilement produire vos solutions sans aide.
 
 ### L’entretien de suivi est-il noté?
 <p>Oui. L’entretien de suivi fait l’objet d’une notation indiquant votre capacité d’expliquer vos réponses à l’examen de vive voix et de programmer sans aide.<p>
