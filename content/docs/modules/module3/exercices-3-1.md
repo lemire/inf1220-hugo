@@ -956,7 +956,272 @@ class Main {
 
 
 
-## Question 34 (pour les experts !)
+## Question 34
+
+<p>Que va afficher le programme suivant ? La chaîne contient un émoji.</p>
+
+```java  {style=github}
+public class Main {
+    public static void main(String[] args) {
+        String s = "héllo 😀";
+        System.out.println(s.length());
+        System.out.println((int) s.charAt(6));
+        System.out.println(s.codePointAt(6));
+        System.out.println(s.codePointCount(0, s.length()));
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+<p>Le programme affiche <code>8</code>, <code>55357</code>, <code>128512</code> puis <code>7</code>.</p>
+
+<p>En Java, une <code>String</code> est une suite d'unités de code UTF-16, c'est-à-dire de valeurs de type <code>char</code> sur 16 bits. Les six premiers caractères (<code>h</code>, <code>é</code>, <code>l</code>, <code>l</code>, <code>o</code> et l'espace) occupent chacun un seul <code>char</code>, mais l'émoji 😀 (point de code U+1F600) n'entre pas dans 16 bits : il est représenté par une <strong>paire de substitution</strong>, soit deux <code>char</code>. La longueur est donc 6 + 2 = 8, alors que la chaîne ne contient que 7 caractères au sens de l'utilisateur.</p>
+
+<p><code>charAt(6)</code> retourne le premier élément de la paire (55357, soit U+D83D) : ce n'est pas un caractère utilisable seul. Pour obtenir le vrai point de code, il faut <code>codePointAt(6)</code>, qui retourne 128512 (soit U+1F600). Enfin, <code>codePointCount(0, s.length())</code> compte les points de code plutôt que les <code>char</code> et retourne 7.</p>
+
+<p>Retenez que <code>length()</code> ne donne pas toujours le nombre de caractères perçus, et qu'une boucle <code>for (int i = 0; i &lt; s.length(); i++) s.charAt(i)</code> peut couper un émoji en deux.</p>
+</details>
+
+## Question 35
+
+<p>Soit <code>String s = "Bonjour";</code>. Que retournent les appels suivants ? L'un d'eux pose problème : lequel et pourquoi ?</p>
+
+```java  {style=github}
+s.substring(3)
+s.substring(2, 5)
+s.substring(7)
+s.substring(8)
+```
+
+<details><summary>Réponse</summary>
+<ul>
+  <li><code>s.substring(3)</code> retourne <code>"jour"</code> : tout ce qui suit l'indice 3, celui-ci compris.</li>
+  <li><code>s.substring(2, 5)</code> retourne <code>"njo"</code> : les indices 2, 3 et 4. La borne de gauche est <strong>incluse</strong>, celle de droite est <strong>exclue</strong>. La longueur du résultat est donc simplement 5 - 2 = 3.</li>
+  <li><code>s.substring(7)</code> retourne la chaîne vide <code>""</code>. Ce n'est pas une erreur : demander la sous-chaîne qui commence juste après le dernier caractère est permis.</li>
+  <li><code>s.substring(8)</code> lève une exception <code>StringIndexOutOfBoundsException</code>, car 8 dépasse la longueur de la chaîne (7).</li>
+</ul>
+<p>Notez que <code>substring</code> <strong>copie</strong> les caractères depuis Java 7 : son coût est proportionnel à la longueur de la sous-chaîne extraite, et non constant.</p>
+</details>
+
+## Question 36
+
+<p>Écrivez une méthode qui compte le nombre d'occurrences d'une sous-chaîne dans un texte, en utilisant <code>indexOf</code>. Combien d'occurrences de <code>"aa"</code> votre méthode trouve-t-elle dans <code>"aaaa"</code> ?</p>
+
+<details><summary>Réponse</summary>
+<p>L'idée est de relancer la recherche à partir de la position qui suit l'occurrence trouvée, grâce à la variante <code>indexOf(String, int depart)</code>.</p>
+
+```java  {style=github}
+static int compter(String texte, String motif) {
+    int compte = 0;
+    int position = texte.indexOf(motif);
+    while (position != -1) {
+        compte++;
+        position = texte.indexOf(motif, position + motif.length());
+    }
+    return compte;
+}
+```
+
+<p>Avec <code>compter("aaaa", "aa")</code>, cette version retourne <strong>2</strong> : elle trouve l'occurrence en 0, puis repart de l'indice 2 et trouve celle en 2. Elle compte donc les occurrences <em>sans chevauchement</em>.</p>
+
+<p>Si l'on souhaite plutôt compter les occurrences qui peuvent se chevaucher, il suffit de repartir de <code>position + 1</code> :</p>
+
+```java  {style=github}
+position = texte.indexOf(motif, position + 1);
+```
+
+<p>Cette seconde version retourne <strong>3</strong> pour <code>"aaaa"</code> : les occurrences commencent aux indices 0, 1 et 2. Il n'y a pas de bonne réponse dans l'absolu : il faut savoir laquelle des deux on veut. Attention aussi au cas où <code>motif</code> est la chaîne vide : la première version boucle indéfiniment, puisque <code>motif.length()</code> vaut alors 0.</p>
+</details>
+
+## Question 37
+
+<p>Que retournent les expressions suivantes ? Il n'est pas demandé de donner la valeur exacte pour chacune, mais bien son signe et sa signification.</p>
+
+```java  {style=github}
+"pomme".compareTo("poire")
+"Zèbre".compareTo("abeille")
+"abc".compareTo("abcd")
+```
+
+<p>Ensuite, qu'affiche ce programme ?</p>
+
+```java  {style=github}
+String[] mots = {"banane", "Ananas", "cerise", "Abricot"};
+java.util.Arrays.sort(mots);
+System.out.println(java.util.Arrays.toString(mots));
+```
+
+<details><summary>Réponse</summary>
+<ul>
+  <li><code>"pomme".compareTo("poire")</code> retourne <strong>4</strong>, une valeur positive : les deux chaînes commencent par <code>po</code>, puis on compare <code>'m'</code> (109) et <code>'i'</code> (105), d'où 109 - 105 = 4. La chaîne <code>"pomme"</code> vient donc <em>après</em> <code>"poire"</code>.</li>
+  <li><code>"Zèbre".compareTo("abeille")</code> retourne <strong>-7</strong>, une valeur négative : on compare <code>'Z'</code> (90) et <code>'a'</code> (97). Les majuscules ont un code inférieur à celui des minuscules, donc <code>"Zèbre"</code> vient <em>avant</em> <code>"abeille"</code>.</li>
+  <li><code>"abc".compareTo("abcd")</code> retourne <strong>-1</strong> : quand une chaîne est le préfixe de l'autre, la méthode retourne la différence des longueurs, ici 3 - 4.</li>
+</ul>
+<p>Le programme affiche <code>[Abricot, Ananas, banane, cerise]</code>. Ce n'est pas l'ordre du dictionnaire : <code>compareTo</code> compare les valeurs Unicode des caractères, si bien que <strong>toutes</strong> les majuscules précèdent <strong>toutes</strong> les minuscules. Les accents posent le même genre de problème. Pour un tri réellement alphabétique en français, il faut utiliser un <code>Collator</code> ou, plus simplement, trier avec <code>String.CASE_INSENSITIVE_ORDER</code> :</p>
+
+```java  {style=github}
+java.util.Arrays.sort(mots, String.CASE_INSENSITIVE_ORDER);
+```
+</details>
+
+## Question 38
+
+<p>Que va afficher le programme suivant ?</p>
+
+```java  {style=github}
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        String[] t = "a,b,,c,,".split(",");
+        System.out.println(t.length);
+        System.out.println(Arrays.toString(t));
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+<p>Le programme affiche <code>4</code> puis <code>[a, b, , c]</code>.</p>
+<p>On pourrait s'attendre à six éléments, puisque la chaîne contient cinq virgules. Mais <code>split</code> <strong>supprime les chaînes vides en fin de tableau</strong>. La chaîne vide entre <code>b</code> et <code>c</code> est conservée, car elle n'est pas en fin de tableau, mais les deux dernières disparaissent.</p>
+<p>Pour conserver tous les champs, il faut passer une limite négative :</p>
+
+```java  {style=github}
+String[] t = "a,b,,c,,".split(",", -1);
+System.out.println(t.length);              // 6
+System.out.println(Arrays.toString(t));    // [a, b, , c, , ]
+```
+
+<p>C'est un piège classique lorsqu'on lit un fichier au format CSV : les colonnes vides de la fin d'une ligne disparaissent silencieusement.</p>
+</details>
+
+## Question 39
+
+<p>Que va afficher le programme suivant ?</p>
+
+```java  {style=github}
+public class Main {
+    public static void main(String[] args) {
+        String s = "3.14.15";
+        System.out.println(s.replace(".", "-"));
+        System.out.println(s.replaceAll(".", "-"));
+        System.out.println(s.replaceAll("\\.", "-"));
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+<p>Le programme affiche :</p>
+
+```
+3-14-15
+-------
+3-14-15
+```
+
+<p>La différence est essentielle : <code>replace</code> travaille sur du texte <strong>littéral</strong>, alors que <code>replaceAll</code> attend une <strong>expression régulière</strong>. Or, dans une expression régulière, le point signifie « n'importe quel caractère ». Le deuxième appel remplace donc chacun des sept caractères de la chaîne par un tiret.</p>
+<p>Pour désigner un vrai point dans une expression régulière, il faut le protéger avec une barre oblique inverse, qui doit elle-même être doublée dans une chaîne Java : on écrit <code>"\\."</code>.</p>
+<p>En pratique, si vous n'avez pas besoin d'une expression régulière, préférez <code>replace</code> : c'est plus simple, plus rapide, et cela évite ce genre de surprise.</p>
+</details>
+
+## Question 40
+
+<p>Que va afficher le programme suivant ? La séquence d'échappement <code>\u2003</code> désigne un « cadratin », une espace typographique large.</p>
+
+```java  {style=github}
+public class Main {
+    public static void main(String[] args) {
+        String a = "  bonjour  ";
+        String b = "\u2003bonjour\u2003";
+        System.out.println("[" + a.trim() + "]");
+        System.out.println(b.trim().equals(b));
+        System.out.println(b.strip().length());
+        System.out.println("   ".isEmpty());
+        System.out.println("   ".isBlank());
+    }
+}
+```
+
+<details><summary>Réponse</summary>
+<p>Le programme affiche <code>[bonjour]</code>, <code>true</code>, <code>7</code>, <code>false</code> puis <code>true</code>.</p>
+<ul>
+  <li><code>trim()</code> ne retire que les caractères dont le code est inférieur ou égal à celui de l'espace ordinaire (32). Il nettoie donc <code>a</code>, mais laisse <code>b</code> intact : <code>b.trim().equals(b)</code> vaut <code>true</code>.</li>
+  <li><code>strip()</code>, ajouté en Java 11, reconnaît les espaces au sens d'Unicode. Il retire les cadratins et <code>b.strip()</code> vaut <code>"bonjour"</code>, de longueur 7.</li>
+  <li><code>isEmpty()</code> ne teste que la longueur : une chaîne de trois espaces n'est pas vide, donc <code>false</code>.</li>
+  <li><code>isBlank()</code>, également ajouté en Java 11, teste si la chaîne est vide ou ne contient que des espaces : il retourne <code>true</code>.</li>
+</ul>
+<p>Il faut donc préférer <code>strip()</code> à <code>trim()</code> dès que le texte peut provenir de l'extérieur (page web, fichier, saisie de l'utilisateur).</p>
+</details>
+
+## Question 41
+
+<p>Écrivez une méthode <code>estPalindrome(String s)</code> qui indique si une phrase se lit de la même façon dans les deux sens, en ignorant la casse, les espaces et la ponctuation. Testez-la sur « Engage le jeu que je le gagne ».</p>
+
+<details><summary>Réponse</summary>
+<p>On commence par nettoyer la chaîne, puis on la parcourt avec deux indices qui se rapprochent l'un de l'autre.</p>
+
+{{<inlineJava path="Palindrome.java" lang="java">}}
+public class Palindrome {
+
+    static boolean estPalindrome(String s) {
+        // On ne garde que les lettres et les chiffres, en minuscules.
+        String propre = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int i = 0;
+        int j = propre.length() - 1;
+        while (i < j) {
+            if (propre.charAt(i) != propre.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(estPalindrome("Engage le jeu que je le gagne"));
+        System.out.println(estPalindrome("Bonjour"));
+        System.out.println(estPalindrome("Ésope reste ici et se repose"));
+    }
+}
+{{</inlineJava>}}
+
+<p>Le programme affiche <code>true</code>, <code>false</code> puis... <code>false</code>, ce qui est surprenant, car « Ésope reste ici et se repose » est un palindrome célèbre. L'explication tient à l'accent : notre filtre <code>[^a-zA-Z0-9]</code> supprime le <code>É</code>, qui n'est pas dans l'intervalle <code>a-z</code>. La chaîne nettoyée devient <code>"soperesteicietserepose"</code>, qui n'est effectivement plus un palindrome.</p>
+<p>Une solution consiste à conserver toutes les lettres au sens d'Unicode, avec <code>Character.isLetterOrDigit</code>, et à retirer les accents. C'est un bon rappel : dès qu'on traite du texte en français, les intervalles comme <code>a-z</code> sont insuffisants.</p>
+<p>Notez enfin qu'il aurait été plus court d'écrire <code>propre.equals(new StringBuilder(propre).reverse().toString())</code>, mais cette version alloue une chaîne supplémentaire, alors que la boucle ci-dessus n'en alloue aucune et s'arrête dès le premier désaccord.</p>
+</details>
+
+## Question 42
+
+<p>On dispose d'un tableau de noms de villes et d'un tableau de populations. Produisez, en une seule chaîne, un tableau aligné où chaque ville occupe une ligne. Utilisez <code>String.format</code> et <code>String.join</code>.</p>
+
+```java  {style=github}
+String[] noms = {"Montréal", "Québec", "Trois-Rivières"};
+int[] population = {1762949, 549459, 139163};
+```
+
+<details><summary>Réponse</summary>
+
+```java  {style=github}
+String[] lignes = new String[noms.length];
+for (int i = 0; i < noms.length; i++) {
+    lignes[i] = String.format("%-16s %8d", noms[i], population[i]);
+}
+System.out.println(String.join("\n", lignes));
+```
+
+<p>Le résultat est :</p>
+
+```
+Montréal          1762949
+Québec             549459
+Trois-Rivières     139163
+```
+
+<p>Dans <code>String.format</code>, <code>%-16s</code> insère une chaîne sur 16 colonnes, alignée à <strong>gauche</strong> à cause du signe moins ; <code>%8d</code> insère un entier sur 8 colonnes, aligné à droite par défaut. La méthode <code>String.join</code> assemble ensuite les lignes en insérant un saut de ligne entre elles, en une seule allocation.</p>
+<p>On aurait pu concaténer les lignes avec <code>+</code> dans la boucle, mais cela crée une nouvelle chaîne à chaque tour. Avec <code>String.join</code> — ou avec un <code>StringBuilder</code> — on ne construit la chaîne finale qu'une seule fois.</p>
+</details>
+
+## Question 43 (pour les experts !)
 
 Considérons la décroissance radioactive d’un isotope. Supposons que nous ayons une quantité initiale de matière radioactive, et nous voulons modéliser comment sa masse diminue avec le temps en raison de la désintégration. Ce phénomène est courant en physique nucléaire, en médecine (pour les traitements par radiothérapie) et en datation au carbone.
 
@@ -1050,7 +1315,7 @@ public class DecroissanceRadioactive {
 </details>
 
 
-## Question 35  (pour les experts !)
+## Question 44  (pour les experts !)
 
 Décrivez le fonctionnement de l’algorithme de tri par insertion. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
 
@@ -1094,7 +1359,7 @@ public class InsertionSort {
 
 </details>
 
-## Question 36  (pour les experts !)
+## Question 45  (pour les experts !)
 
 Décrivez le fonctionnement de l’algorithme de tri à bulle. Implémentez cet algorithme en Java pour trier un tableau d’entiers en ordre croissant. Votre programme doit afficher le tableau avant et après le tri.
 
@@ -1141,7 +1406,7 @@ public class BubbleSort {
 
 </details>
 
-## Question 37  (pour les experts !)
+## Question 46  (pour les experts !)
 
 Décrivez le principe de la recherche binaire dans un tableau trié. Implémentez cet algorithme en Java pour trouver l’indice d’un élément dans un tableau d’entiers trié en ordre croissant. Votre programme doit retourner l’indice de l’élément s’il est trouvé, ou -1 sinon, et afficher un message indiquant le résultat.
 
