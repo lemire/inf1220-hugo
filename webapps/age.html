@@ -1,8 +1,10 @@
 <div class="age-app" style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
-    <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Catégorie d'âge</h1>
+    <h2 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Catégorie d'âge</h2>
     <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez un âge et exécutez le pseudocode pour déterminer la catégorie d'âge.</p>
     <div style="margin-bottom: 16px;">
+        <label style="display:block; margin-bottom:4px; font-size:16px; color:#374151;">Âge à évaluer
         <input type="number" class="ageAgeInput" value="25" min="0" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
+        </label>
     </div>
     <div style="display: flex; gap: 16px;">
         <div style="flex: 1; background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
@@ -19,8 +21,8 @@
         </div>
     </div>
     <div style="margin-top: 16px;">
-        <button class="ageStepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
-        <button class="ageResetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+        <button class="ageStepButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+        <button class="ageResetButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
     </div>
 </div>
 <script>(function(){
@@ -47,11 +49,11 @@
         root.querySelector('.ageOutput').textContent = ageOutput;
         const pseudocode = root.querySelector('.agePseudocode');
         pseudocode.innerHTML = agePseudocodeLines.map((line, i) =>
-            `<span style="display: block; ${i === ageStep ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
+            `<span style="display: block; ${i === ageStep ? 'background: #e6f4ea; color: #146c31;' : ''}">${line}</span>`
         ).join('');
         root.querySelector('.ageStepButton').style.cssText = ageIsRunning || ageStep >= agePseudocodeLines.length ?
-            'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
-            'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+            'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+            'background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
     }
     function ageLog(message) {
         const logDiv = root.querySelector('.ageLog');
@@ -80,7 +82,7 @@
     async function ageRunStep() {
         if (ageIsRunning || ageStep >= agePseudocodeLines.length) return;
         ageIsRunning = true;
-        root.querySelector('.ageStepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+        root.querySelector('.ageStepButton').style.cssText = 'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
         if (ageStep === 0) {
             ageAge = Number(root.querySelector('.ageAgeInput').value);
             ageLog(`Vérification : age = ${ageAge} <= 10`);

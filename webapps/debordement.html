@@ -16,15 +16,15 @@
         <div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: Arial, sans-serif;">
           <h2 style="text-align: center; margin-bottom: 20px;">Addition d'entiers 32 bits</h2>
           <div style="margin-bottom: 15px;">
-            <label for="num1" style="display: block; margin-bottom: 5px;">Nombre 1 :</label>
+            <label for="debordenum1" style="display: block; margin-bottom: 5px;">Nombre 1 :</label>
             <input type="number" value="2147483647" id="debordenum1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
           </div>
           <div style="margin-bottom: 15px;">
-            <label for="num2" style="display: block; margin-bottom: 5px;">Nombre 2 :</label>
+            <label for="debordenum2" style="display: block; margin-bottom: 5px;">Nombre 2 :</label>
             <input type="number" value="2147483647" id="debordenum2" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
           </div>
-          <button id="debordecalculate" style="width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Calculer</button>
-          <div id="deborderesult" style="margin-top: 20px; padding: 10px; border: 1px solid #eee; border-radius: 4px; min-height: 60px;"></div>
+          <button id="debordecalculate" style="width: 100%; padding: 10px; background: #0056b3; color: white; border: none; border-radius: 4px; cursor: pointer;">Calculer</button>
+          <div id="deborderesult" role="status" aria-live="polite" style="margin-top: 20px; padding: 10px; border: 1px solid #eee; border-radius: 4px; min-height: 60px;"></div>
         </div>
       `;
 

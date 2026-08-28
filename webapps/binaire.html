@@ -1,8 +1,9 @@
     <div id="arrayContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 10px 0; gap: 5px;"></div>
     
     <div style="margin: 20px 0; text-align: center;">
+        <label for="searchInput" style="display:block; margin-bottom:4px; font-size:16px; color:#374151;">Nombre à rechercher</label>
         <input type="number" id="searchInput" placeholder="Entrez un nombre à rechercher" style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 200px;">
-        <button onclick="performBinarySearch()" style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">Rechercher</button>
+        <button onclick="performBinarySearch()" style="padding: 10px 20px; font-size: 16px; background-color: #1e7e34; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">Rechercher</button>
     </div>
     
     <div id="stepsContainer" style="margin-top: 20px; padding: 15px; background-color: white; border: 1px solid #ddd; border-radius: 4px; min-height: 100px;">
@@ -97,7 +98,7 @@
             await new Promise(resolve => setTimeout(resolve, 500));
             if (found) {
                 resultContainer.innerHTML = `Valeur ${searchValue} trouvée à l'index ${resultIndex}.`;
-                resultContainer.style.color = '#28a745';
+                resultContainer.style.color = '#1e7e34';
             } else {
                 if (closestSmaller !== -1) {
                     resultContainer.innerHTML = `Valeur ${searchValue} non trouvée. La plus grande valeur inférieure est ${sortedArray[closestSmaller]} à l'index ${closestSmaller}.`;

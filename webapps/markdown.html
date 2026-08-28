@@ -2,6 +2,7 @@
   <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
 
   <div id="markdown-app" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <label for="markdown-input" style="display:block; margin-bottom:4px; font-size:16px; color:#374151;">Texte Markdown à convertir</label>
     <textarea id="markdown-input" placeholder="Entrez votre texte Markdown ici..." style="width: 100%; min-height: 200px; padding: 10px; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; resize: vertical; box-sizing: border-box;"></textarea>
     <div id="markdown-output" style="width: 100%; min-height: 200px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #f9f9f9; overflow: auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6;"></div>
   </div>
@@ -40,7 +41,7 @@
         output.querySelectorAll('p').forEach(el => { el.style.marginBottom = '1em'; });
         output.querySelectorAll('ul, ol').forEach(el => { el.style.paddingLeft = '20px'; el.style.marginBottom = '1em'; });
         output.querySelectorAll('li').forEach(el => { el.style.marginBottom = '0.5em'; });
-        output.querySelectorAll('a').forEach(el => { el.style.color = '#007bff'; el.style.textDecoration = 'underline'; });
+        output.querySelectorAll('a').forEach(el => { el.style.color = '#0056b3'; el.style.textDecoration = 'underline'; });
         output.querySelectorAll('code').forEach(el => { el.style.background = '#f0f0f0'; el.style.padding = '2px 4px'; el.style.borderRadius = '3px'; });
         output.querySelectorAll('pre').forEach(el => { el.style.background = '#f0f0f0'; el.style.padding = '10px'; el.style.borderRadius = '4px'; el.style.overflowX = 'auto'; });
       }

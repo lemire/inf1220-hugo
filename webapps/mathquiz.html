@@ -1,14 +1,14 @@
 <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%; text-align: center;">
-        <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Quiz de mathématiques</h1>
+        <h2 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Quiz de mathématiques</h2>
         <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Répondez à chaque question pour tester vos connaissances. Un retour vous sera fourni après chaque réponse.</p>
         <div style="font-size: 16px; margin-bottom: 16px; color: #1f2937;">Score : <span id="score">0</span> / <span id="total">0</span></div>
         <div id="quiz" style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; opacity: 0; transition: opacity 0.5s ease;">
             <p id="question" style="font-size: 16px; color: #374151; margin-bottom: 16px;"></p>
             <div id="options" style="margin-bottom: 16px; text-align: left;"></div>
-            <button id="submit" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Soumettre</button>
-            <div id="feedback" style="margin-top: 16px; font-size: 14px; color: #374151; opacity: 0; transition: opacity 0.5s ease;"></div>
+            <button id="submit" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Soumettre</button>
+            <div id="feedback" role="status" aria-live="polite" style="margin-top: 16px; font-size: 14px; color: #374151; opacity: 0; transition: opacity 0.5s ease;"></div>
         </div>
-        <button id="reset" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 16px; display: none;">Recommencer</button>
+        <button id="reset" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 16px; display: none;">Recommencer</button>
     </div>
     <script>
         const questions = [
@@ -176,10 +176,13 @@
                 document.getElementById('question').textContent = `${currentQuestion + 1}. ${q.question}`;
                 const optionsDiv = document.getElementById('options');
                 optionsDiv.innerHTML = '';
+                optionsDiv.setAttribute('role', 'group');
+                optionsDiv.setAttribute('aria-labelledby', 'question');
                 if (q.type === 'input') {
                     const input = document.createElement('input');
                     input.type = 'text';
                     input.id = 'answer';
+                    input.setAttribute('aria-labelledby', 'question');
                     input.style.cssText = 'padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: 100%;';
                     optionsDiv.appendChild(input);
                 } else {
@@ -198,7 +201,7 @@
                 }
                 document.getElementById('feedback').style.opacity = '0';
                 document.getElementById('feedback').textContent = '';
-                document.getElementById('submit').style.cssText = 'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+                document.getElementById('submit').style.cssText = 'background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
                 document.getElementById('submit').disabled = false;
                 quizDiv.style.opacity = '1';
             }, 500);
@@ -218,7 +221,7 @@
                 const selected = document.querySelector('input[name="answer"]:checked');
                 if (!selected) {
                     document.getElementById('feedback').textContent = 'Veuillez sélectionner une réponse.';
-                    document.getElementById('feedback').style.color = '#e74c3c';
+                    document.getElementById('feedback').style.color = '#b03024';
                     document.getElementById('feedback').style.opacity = '1';
                     return;
                 }
@@ -226,7 +229,7 @@
             }
             if (!userAnswer) {
                 document.getElementById('feedback').textContent = 'Veuillez entrer une réponse.';
-                document.getElementById('feedback').style.color = '#e74c3c';
+                document.getElementById('feedback').style.color = '#b03024';
                 document.getElementById('feedback').style.opacity = '1';
                 return;
             }
@@ -237,13 +240,13 @@
             if (isCorrect) {
                 score++;
                 document.getElementById('feedback').textContent = `Correct ! ${q.explanation}`;
-                document.getElementById('feedback').style.color = '#15803d';
+                document.getElementById('feedback').style.color = '#146c31';
             } else {
                 document.getElementById('feedback').textContent = `Incorrect. La réponse correcte est : ${q.answer}. ${q.explanation}`;
-                document.getElementById('feedback').style.color = '#e74c3c';
+                document.getElementById('feedback').style.color = '#b03024';
             }
             document.getElementById('feedback').style.opacity = '1';
-            document.getElementById('submit').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+            document.getElementById('submit').style.cssText = 'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
             document.getElementById('submit').disabled = true;
             updateScore();
             currentQuestion++;

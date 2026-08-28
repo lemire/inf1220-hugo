@@ -1,3 +1,4 @@
+<label for="utf16HexApp_inputText" style="display:block; margin-bottom:4px; font-size:16px; color:#374151;">Texte à encoder en UTF-16</label>
 <textarea id="utf16HexApp_inputText" rows="4" style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 10px;">Allo la 🌍!</textarea>
   <div id="utf16HexApp_hexDisplay" style="font-family: monospace; font-size: 14px; line-height: 1.5;"></div>
   <script>
@@ -13,7 +14,7 @@
         for (let i = 0; i < text.length; ) {
           const char = text[i];
           const codePoint = char.codePointAt(0);
-          const color = colorCounter % 2 === 0 ? 'blue' : 'red';
+          const color = colorCounter % 2 === 0 ? '#0000ff' : '#cc0000';
 
           if (text.charCodeAt(i) >= 0xD800 && text.charCodeAt(i) <= 0xDFFF && i + 1 < text.length) {
             const highSurrogate = text.charCodeAt(i).toString(16).padStart(4, '0').toUpperCase();
