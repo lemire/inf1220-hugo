@@ -1,13 +1,13 @@
 <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; max-width: 600px; width: 100%;">
-        <h1 style="font-size: 24px; margin-bottom: 20px; color: #2c3e50;">Simulation de l'algorithme de lecture</h1>
-        <div style="margin: 20px 0; font-size: 18px;">
-            Étape : <span id="step" style="font-weight: bold; color: #e74c3c;">Initialisation</span><br>
-            Calepin : <span id="notepad" style="font-weight: bold; color: #e74c3c;">0</span><br>
-            Pages lues : <span id="pagesRead" style="font-weight: bold; color: #e74c3c;">Aucune</span>
+        <h2 style="font-size: 24px; margin-bottom: 20px; color: #2c3e50;">Simulation de l'algorithme de lecture</h2>
+        <div style="margin: 20px 0; font-size: 18px;" role="status" aria-live="polite">
+            Étape : <span id="step" style="font-weight: bold; color: #b03024;">Initialisation</span><br>
+            Calepin : <span id="notepad" style="font-weight: bold; color: #b03024;">0</span><br>
+            Pages lues : <span id="pagesRead" style="font-weight: bold; color: #b03024;">Aucune</span>
         </div>
         <div id="pages" style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;"></div>
-        <button id="stepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
-        <button id="resetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+        <button id="stepButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+        <button id="resetButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
         <div id="log" style="margin-top: 20px; text-align: left; max-height: 150px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background: #f9f9f9; font-size: 14px;"></div>
     </div>
     <script>
@@ -44,22 +44,22 @@
             const pageElements = document.querySelectorAll('#pages > div');
             pageElements.forEach((page, index) => {
                 if (lecturePagesRead.has(index + 1)) {
-                    page.style.cssText = 'width: 50px; height: 70px; background: #2ecc71; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white;';
+                    page.style.cssText = 'width: 50px; height: 70px; background: #177245; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white;';
                 } else {
                     page.style.cssText = 'width: 50px; height: 70px; background: #ecf0f1; border: 1px solid #bdc3c7; display: flex; align-items: center; justify-content: center; font-size: 16px;';
                 }
             });
             const stepButton = document.getElementById('stepButton');
             stepButton.style.cssText = lectureStep === 'end' || lectureIsRunning || lectureHasCrashed ?
-                'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
-                'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+                'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+                'background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
         }
 
         function log(message, isError = false) {
             const logDiv = document.getElementById('log');
             const messageDiv = document.createElement('div');
             messageDiv.textContent = message;
-            if (isError) messageDiv.style.color = '#e74c3c';
+            if (isError) messageDiv.style.color = '#b03024';
             if (isError) messageDiv.style.fontWeight = 'bold';
             logDiv.appendChild(messageDiv);
             logDiv.scrollTop = logDiv.scrollHeight;
@@ -68,7 +68,7 @@
         async function runStep() {
             if (lectureIsRunning || lectureStep === 'end' || lectureHasCrashed) return;
             lectureIsRunning = true;
-            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+            document.getElementById('stepButton').style.cssText = 'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
 
             if (lectureStep === 'init') {
                 lectureNotepad = 0;

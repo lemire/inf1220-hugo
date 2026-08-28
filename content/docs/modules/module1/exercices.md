@@ -37,7 +37,7 @@ Rappel : les mathématiques du collégial sont un préalable obligatoire à ce c
 
 {{% hint info %}}
 
-### Réponses uniques ?
+## Réponses uniques ?
 
 Les exercices incluent une solution pour comparer votre approche à la nôtre. Il n’existe pas de solution unique ; votre solution peut être meilleure ou moins bonne que celle proposée.
 {{% /hint %}}
@@ -287,8 +287,8 @@ Exécutez l'algorithme de l'exercice 7 pour \(P(x) = x^2 - 5x + 6\), en présent
 <details>
 <summary>Réponse</summary>
 
-|           |       | Initialisation | Étape 1 | Étape 2 | Étape 3 | Fin |
-|-----------|-------|----------------|---------|---------|---------|-----|
+| Catégorie | Variable | Initialisation | Étape 1 | Étape 2 | Étape 3 | Fin |
+|-----------|----------|----------------|---------|---------|---------|-----|
 | Entrée    | a     | 1              | 1       | 1       | 1       | 1   |
 |           | b     | -5             | -5      | -5      | -5      | -5  |
 |           | c     | 6              | 6       | 6       | 6       | 6   |

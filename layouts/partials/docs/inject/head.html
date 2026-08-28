@@ -2,3 +2,87 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+{{/* --- Améliorations d'accessibilité (aucune modification du thème) --- */}}
+<style>
+  /* Lien d'évitement : masqué jusqu'à ce qu'il reçoive le focus (WCAG 2.4.1). */
+  .a11y-skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 20px;
+    background: #fff;
+    color: #1c1c1c;
+    border: 2px solid #1c1c1c;
+    border-radius: 0 0 4px 0;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .a11y-skip-link:focus {
+    left: 0;
+  }
+
+  /* Texte réservé aux lecteurs d'écran. */
+  .a11y-sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Le conteneur principal reçoit le focus via le lien d'évitement, sans
+     afficher de contour permanent. */
+  .book-page:focus,
+  .book-article:focus {
+    outline: none;
+  }
+
+  /* Cible tactile d'au moins 24 x 24 px pour les liens de navigation
+     et du sommaire (WCAG 2.5.8). Interligne de base ~16 px. */
+  .book-menu-content nav a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .book-toc-content nav a {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* Numéros de ligne de CodeMirror (thème eclipse) : 2,65:1 -> 4,97:1. */
+  .CodeMirror-linenumber {
+    color: #6b6b6b !important;
+  }
+
+  /* Jeton « meta » du thème eclipse de CodeMirror (annotations Java) :
+     3,89:1 -> 5,73:1. */
+  .cm-s-eclipse span.cm-meta {
+    color: #cc0000 !important;
+  }
+
+  /* Coloration Prism : trois jetons passaient sous 4,5:1 sur fond blanc.
+     Les teintes restent dans la même famille de couleurs. */
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #5c6670 !important;   /* 4,05:1 -> 5,85:1 */
+  }
+  .token.function,
+  .token.class-name {
+    color: #b3204a !important;   /* 3,99:1 -> 6,52:1 */
+  }
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted,
+  .token.selector,
+  .token.attr-value {
+    color: #456800 !important;   /* 3,43:1 -> 5,84:1 */
+  }
+</style>

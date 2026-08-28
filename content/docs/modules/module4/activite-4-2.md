@@ -13,7 +13,7 @@ En Java, ces opérations passent toutes par le même mécanisme : les **flux de 
 
 <p>Pour manipuler les flux d'entrée et de sortie, nous utilisons les classes du package java.io. Les données sont manipulées suivant deux principes : la lecture/écriture en flux binaire ou en flux texte. Le tableau ci-dessous représente les différents flux que nous pouvons manipuler ainsi que les classes abstraites de base, l'implémentation, les fichiers et les tampons d'entrée-sortie qui leur sont associés.</p>
 
-|                      | Flux texte (lecture) | Flux texte (écriture) | Flux binaire (lecture) | Flux binaire (écriture) |
+| Élément              | Flux texte (lecture) | Flux texte (écriture) | Flux binaire (lecture) | Flux binaire (écriture) |
 |----------------------|----------------------|-----------------------|------------------------|-------------------------|
 | Classe abstraite de base | Reader               | Writer                | InputStream            | OutputStream            |
 | Implémentation       | InputStreamReader    | PrintWriter           | DataInputStream        | DataOutputStream        |

@@ -12,6 +12,9 @@
       #{{ $uniqueID }} .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
       #{{ $uniqueID }} .export-form { margin-bottom:0; }
       #{{ $uniqueID }} .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+      #{{ $uniqueID }} .export-result.is-running::after { content:''; animation: exportRunningDots 2s steps(1, end) infinite; }
+      @keyframes exportRunningDots { 0% { content:''; } 25% { content:'.'; } 50% { content:'..'; } 75% { content:'...'; } }
+      @media (prefers-reduced-motion: reduce) { #{{ $uniqueID }} .export-result.is-running::after { animation:none; content:'…'; } }
       #{{ $uniqueID }} .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
       #{{ $uniqueID }} .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
       #{{ $uniqueID }} .export-file-block { flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
@@ -19,14 +22,14 @@
       .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
       .cm-java-error-line { background: #fff0f0 !important; }
     </style>
-    <form class="export-form {{ $uniqueID }}-form" style="margin-bottom:0;">
+    <form class="export-form {{ $uniqueID }}-form" style="margin-bottom:0;" aria-label="Exécuter le programme Java {{ $path }}">
       <input type="hidden" class="export-endpoint-var" value="{{ $endpoint }}">
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <div class='export-file-block'><div class='export-file-name'>{{ $path }}</div><textarea>{{ $code }}</textarea></div>
+        <div class='export-file-block'><div class='export-file-name' id='{{ $uniqueID }}-name'>{{ $path }}</div><textarea aria-labelledby='{{ $uniqueID }}-name'>{{ $code }}</textarea></div>
       </div>
       <button type="submit" class="export-btn {{ $uniqueID }}-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;">Exécuter</button>
     </form>
-    <div class="export-result"></div>
+    <div class="export-result" role="status" aria-live="polite" aria-atomic="true" aria-label="Résultat de l'exécution"></div>
     <div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
@@ -47,8 +50,29 @@
             theme: "eclipse",
             lineNumbers: true,
             indentUnit: 4,
-            tabSize: 4
+            tabSize: 4,
+            // La touche Tab doit déplacer le focus plutôt qu'indenter, sinon
+            // l'éditeur devient un piège au clavier (WCAG 2.1.2).
+            extraKeys: {
+              Tab: false,
+              "Shift-Tab": false,
+              Esc: function(c) { c.display.input.blur(); }
+            }
           });
+          (function(editor, fileName) {
+            var label = "Éditeur de code Java : " + fileName;
+            var wrapper = editor.getWrapperElement();
+            wrapper.setAttribute('role', 'group');
+            wrapper.setAttribute('aria-label', label);
+            var field = editor.getInputField();
+            if (field) { field.setAttribute('aria-label', label); }
+            var scroll = wrapper.querySelector('.CodeMirror-scroll');
+            if (scroll && !scroll.hasAttribute('tabindex') && !scroll.contains(field)) {
+              scroll.setAttribute('tabindex', '0');
+              scroll.setAttribute('role', 'region');
+              scroll.setAttribute('aria-label', label);
+            }
+          })(cm, name);
           block._cm = cm;
           // Ajout d'une structure pour stocker les erreurs par ligne
           block._javaErrorLines = {};
@@ -72,6 +96,8 @@
           if (!block.querySelector('.java-error-status-bar')) {
             var statusBar = document.createElement('div');
             statusBar.className = 'java-error-status-bar';
+            statusBar.setAttribute('role', 'status');
+            statusBar.setAttribute('aria-live', 'polite');
             statusBar.style.marginTop = '4px';
             statusBar.style.fontSize = '0.95em';
             statusBar.style.color = '#c00';
@@ -102,11 +128,8 @@
           else txt_files.push({name: name, content: content});
         });
         resultDiv.textContent = 'Exécution en cours';
-        var dots = 0;
-        var execAnim = setInterval(function() {
-          dots = (dots + 1) % 4;
-          resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
-        }, 500);
+        resultDiv.classList.add('is-running');
+        var execAnim = null;
         // Ajout d'un timeout de 30 secondes à la requête fetch
         var controller = new AbortController();
         var timeoutId = setTimeout(function() { controller.abort(); }, 30000); // 30 000 ms = 30 s
@@ -118,6 +141,7 @@
         })
         .then(function(r){
           clearInterval(execAnim);
+          resultDiv.classList.remove('is-running');
           clearTimeout(timeoutId);
           if (!r.ok && r.status !== 400 && r.status !== 500) {
             throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
@@ -256,6 +280,7 @@
         })
         .catch(function(error){
           clearInterval(execAnim);
+          resultDiv.classList.remove('is-running');
           clearTimeout(timeoutId);
           if (error.name === 'AbortError') {
             resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';

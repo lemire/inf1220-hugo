@@ -31,16 +31,16 @@ Il a conçu le format Roaring bitmap comme format d’index bitmap efficace. Ce 
 
 ### Java pas à pas
 
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" alt="" width="250px" /></a></div>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" alt="Couverture du livre « Java pas à pas »" width="250px" /></a></div>
 
 
 ### Programmation avec Python: des jeux au Web
 
-<div><a href="https://www.amazon.ca/-/fr/dp/B0CVX9296P/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/616mRhVUW9L._SL1499_.jpg" alt="" width="250px" /></a></div>
+<div><a href="https://www.amazon.ca/-/fr/dp/B0CVX9296P/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/616mRhVUW9L._SL1499_.jpg" alt="Couverture du livre « Programmation avec Python : des jeux au Web »" width="250px" /></a></div>
 
 
 ### La science des données: Théorie et applications avec R et Python
-<div><a href="https://www.amazon.ca/-/fr/dp/B0D53QXGKM/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/61EzWFtI0GL._SL1499_.jpg" alt="" width="250px" /></a></div>
+<div><a href="https://www.amazon.ca/-/fr/dp/B0D53QXGKM/"><img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/61EzWFtI0GL._SL1499_.jpg" alt="Couverture du livre « La science des données : Théorie et applications avec R et Python »" width="250px" /></a></div>
 
 
 

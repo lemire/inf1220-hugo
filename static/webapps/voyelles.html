@@ -1,7 +1,8 @@
 <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
-    <h1 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Compteur de voyelles</h1>
+    <h2 style="font-size: 24px; margin-bottom: 16px; color: #1f2937;">Compteur de voyelles</h2>
     <p style="font-size: 16px; margin-bottom: 16px; color: #4b5563;">Entrez une chaîne de caractères et exécutez le pseudocode pour compter les voyelles.</p>
     <div style="margin-bottom: 16px;">
+        <label for="voyelStringInput" style="display:block; margin-bottom:4px; font-size:16px; color:#374151;">Chaîne de caractères à analyser</label>
         <input id="voyelStringInput" type="text" value="bonjour" style="padding: 8px; font-size: 16px; border: 1px solid #e5e7eb; border-radius: 4px; width: calc(100% - 18px);">
     </div>
     <div style="display: flex; gap: 16px; margin-bottom: 16px;">
@@ -23,8 +24,8 @@ FIN POUR
         </div>
     </div>
     <div style="margin-top: 16px;">
-        <button id="voyelStepButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
-        <button id="voyelResetButton" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
+        <button id="voyelStepButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Prochaine étape</button>
+        <button id="voyelResetButton" style="background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Réinitialiser</button>
     </div>
     <div style="margin-top: 16px;">
         <p style="font-size: 16px; color: #374151; margin-bottom: 8px;">État</p>
@@ -64,11 +65,11 @@ FIN POUR
         document.getElementById('voyelVowelCount').textContent = voyelNbVoyelle;
         const pseudocode = document.getElementById('voyelPseudocode');
         pseudocode.innerHTML = voyelPseudocodeLines.map((line, i) => 
-            `<span style="display: block; ${i === voyelStep ? 'background: #e6f4ea; color: #15803d;' : ''}">${line}</span>`
+            `<span style="display: block; ${i === voyelStep ? 'background: #e6f4ea; color: #146c31;' : ''}">${line}</span>`
         ).join('');
         document.getElementById('voyelStepButton').style.cssText = voyelIsRunning || voyelStep >= voyelPseudocodeLines.length ?
-            'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
-            'background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
+            'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;' :
+            'background: #2471a3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;';
     }
 
     function voyelLog(message) {
@@ -100,7 +101,7 @@ FIN POUR
     async function voyelRunStep() {
         if (voyelIsRunning || voyelStep >= voyelPseudocodeLines.length) return;
         voyelIsRunning = true;
-        document.getElementById('voyelStepButton').style.cssText = 'background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
+        document.getElementById('voyelStepButton').style.cssText = 'background: #95a5a6; color: #1c2626; border: none; padding: 10px 20px; border-radius: 5px; cursor: not-allowed; font-size: 16px;';
 
         if (voyelStep === 1) {
             voyelChaine = "";

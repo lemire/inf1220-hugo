@@ -99,9 +99,9 @@ dans la section précédente : [Les chaînes de caractères (String)]({{< ref "/
 
 <p>Un tableau est donc une liste de valeurs. Chacune d'entre elles est stockée dans le tableau à une position bien précise, appelée indice. Le tableau ci-dessous, nommé salaires, contient des nombres entiers. En Java, la première position dans le tableau est celle de l'indice 0. Le tableau des salaires possède 11 valeurs dont les indices vont de 0 à 10.</p>
 
-| 12 | 74 | 88 | 22 | 8 | 78 | 28 | 44 | 47 | 78 | 81 |   | Valeurs |
-|----|----|----|----|---|----|----|----|----|----|----|---|---------|
-| 0  | 1  | 2  | 3  | 4 | 5  | 6  | 7  | 8  | 9  | 10 |   | Indices |
+| Valeurs | 12 | 74 | 88 | 22 | 8 | 78 | 28 | 44 | 47 | 78 | 81 |
+|---------|----|----|----|----|---|----|----|----|----|----|----|
+| Indices | 0  | 1  | 2  | 3  | 4 | 5  | 6  | 7  | 8  | 9  | 10 |
 
 <p>Pour accéder à une valeur du tableau, nous utilisons le nom du tableau suivi de l'indice entre crochets. Par exemple, pour accéder au cinquième salaire du tableau, il suffit d'écrire : salaire [4]. La valeur sera donc 8. L'expression salaire [4] a donc comme valeur 8. L'indice d'un tableau est un simple entier, il est donc possible d'utiliser des variables ou constantes entre crochets comme dans l'exemple ci-dessous :</p>
 
@@ -429,7 +429,7 @@ public class ExempleLongueur {
 <p>Un tableau à deux dimensions est un tableau avec des lignes et des colonnes. Contrairement à un tableau à une dimension, il faut utiliser deux indices pour accéder aux éléments des tableaux à deux dimensions. Le premier indice représente la ligne et le second, la colonne. La figure ci-dessous, nommée Tableau à deux dimensions, représente un tableau à deux dimensions.</p>
 <p style="text-align: left;"> Tableau 1. Tableau à deux dimensions</p>
 
-|        | Colonne 0 | Colonne 1 | Colonne 2 | Colonne 3 |
+| Ligne  | Colonne 0 | Colonne 1 | Colonne 2 | Colonne 3 |
 |--------|-----------|-----------|-----------|-----------|
 | Ligne 0| 11        | 12        | 12        | 4         |
 | Ligne 1| 87        | 45        | 32        | 6         |
@@ -447,7 +447,7 @@ public class ExempleLongueur {
 
 <p>La première dimension spécifie que le tableau contient cinq éléments et représente les cinq lignes achats.  La seconde dimension spécifie que chacun de ces cinq éléments est formé d'un tableau de type double de quatre éléments qui représente les colonnes d'achats.</p>
 
-|       | semaine 1 | semaine 2 | semaine 3 | semaine 4 |
+| Année | semaine 1 | semaine 2 | semaine 3 | semaine 4 |
 |-------|-----------|-----------|-----------|-----------|
 | 2010  | 11        | 123       | 455       | 4         |
 | 2009  | 87        | 45        | 32        | 6         |
@@ -475,7 +475,7 @@ achats = new double [5][4];
 
 
 
-|       | Semaine 1 | Semaine 2 | Semaine 3 | Semaine 4 |
+| Année | Semaine 1 | Semaine 2 | Semaine 3 | Semaine 4 |
 |-------|-----------|-----------|-----------|-----------|
 | 2010  | 11        | 123       | 455       | 4         |
 | 2009  | 87        | 45        | 32        | 6         |

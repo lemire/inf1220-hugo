@@ -46,7 +46,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
       position: absolute;
       top: 8px;
       right: 10px;
-      color: #888;
+      color: #6b6b6b;
       background: none;
       border: none;
       font-size: 1.2em;
@@ -74,7 +74,7 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css">
   <div class="java-runner-container">
-    <h1>Java en ligne</h1>
+    <h2>Java en ligne</h2>
     <form id="runForm">
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:18px;">
         <label for="example-select" style="font-weight:normal; color:#444;">Exemples :</label>
@@ -100,8 +100,8 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
       </div>
     </form>
     <div id="result"></div>
-    <div style="text-align:center; margin-top:32px; color:#888;">(c) Daniel Lemire</div>
-    <div id="java-version" style="text-align:center; margin-top:8px; color:#888;"></div>
+    <div style="text-align:center; margin-top:32px; color:#6b6b6b;">(c) Daniel Lemire</div>
+    <div id="java-version" style="text-align:center; margin-top:8px; color:#6b6b6b;"></div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
@@ -119,12 +119,12 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
       block.innerHTML = `
         <button type="button" class="remove-x" title="Retirer" onclick="this.parentElement.remove()">×</button>
         <div class="file-type">Type : <b>${isJava ? 'Java' : 'Texte'}</b></div>
-        <label>Nom du fichier</label>
-        <input type="text" name="${type}_name_${fileCount}" placeholder="${isJava ? 'Main.java' : 'fichier.txt'}" required value="${initialName}">
-        <label>Contenu</label>
+        <label for="name_${fileCount}">Nom du fichier</label>
+        <input type="text" id="name_${fileCount}" name="${type}_name_${fileCount}" placeholder="${isJava ? 'Main.java' : 'fichier.txt'}" required value="${initialName}">
+        <label for="${codeId}">Contenu</label>
         ${isJava
           ? `<textarea id="${codeId}" name="${type}_content_${fileCount}" rows="6"></textarea>`
-          : `<textarea name="${type}_content_${fileCount}" rows="6" required>${initialContent}</textarea>`}
+          : `<textarea id="${codeId}" name="${type}_content_${fileCount}" rows="6" required>${initialContent}</textarea>`}
         ${isJava ? '<div class="java-status-bar" style="margin-top:4px;font-size:0.95em;color:#c00;min-height:1.2em;"></div>' : ''}
       `;
       filesDiv.appendChild(block);
@@ -135,9 +135,19 @@ encoourageons à le tester sur votre propre machine en le collant dans la barre 
           lineNumbers: true,
           indentUnit: 4,
           tabSize: 4,
-          autofocus: fileCount === 0
+          autofocus: fileCount === 0,
+          // Tab doit déplacer le focus plutôt qu'indenter (WCAG 2.1.2).
+          extraKeys: {
+            Tab: false,
+            "Shift-Tab": false,
+            Esc: function(c) { c.display.input.blur(); }
+          }
         });
         editor.setValue(initialContent);
+        const cmLabel = 'Éditeur de code Java';
+        editor.getWrapperElement().setAttribute('role', 'group');
+        editor.getWrapperElement().setAttribute('aria-label', cmLabel);
+        if (editor.getInputField()) { editor.getInputField().setAttribute('aria-label', cmLabel); }
         block._cm = editor;
       }
       fileCount++;

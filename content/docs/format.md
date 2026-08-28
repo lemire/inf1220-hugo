@@ -19,11 +19,11 @@ et copier ensuite le résultat dans votre logiciel de traitement de texte. Vous 
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
-<div id="warning" style="display: none; background: #ffcccc; color: #cc0000; padding: 10px; text-align: center; font-weight: bold;">Attention : Une ou plusieurs lignes dépassent 80 caractères !</div>
+<div id="warning" style="display: none; background: #ffcccc; color: #8f0000; padding: 10px; text-align: center; font-weight: bold;">Attention : Une ou plusieurs lignes dépassent 80 caractères !</div>
 
 <div style="display: flex; flex-direction: column;">
-  <div style="padding: 12px 20px; background: #007acc; color: white; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;">Écrivez ou collez du code Java ici</div>
-  <textarea id="input" spellcheck="false" autofocus style="resize: none; font-family: 'Fira Code', 'Consolas', monospace; font-size: 15px; padding: 20px; border: none; outline: none; background: #ffffff; color: #000000; line-height: 1.5; height: 10cm;">// Exemple: Hello World
+  <div style="padding: 12px 20px; background: #007acc; color: white; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;" id="editor-label">Écrivez ou collez du code Java ici</div>
+  <textarea id="input" aria-labelledby="editor-label" spellcheck="false" autofocus style="resize: none; font-family: 'Fira Code', 'Consolas', monospace; font-size: 15px; padding: 20px; border: none; outline: none; background: #ffffff; color: #000000; line-height: 1.5; height: 10cm;">// Exemple: Hello World
 void main() {
     var nom = "Alice";
     System.out.println("Bonjour, " + nom + " ! 😊");

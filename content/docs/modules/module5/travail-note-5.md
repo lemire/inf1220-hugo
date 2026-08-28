@@ -20,7 +20,7 @@ La date de fin de cours, fixée par l’Université, est non négociable par les
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, est considéré comme une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Le fichier PDF doit contenir le code Java, intégré de manière à faciliter la correction, sans fichiers séparés. La préparation rigoureuse, incluant la maîtrise des concepts et la vérification du travail, est essentielle pour éviter les erreurs et répondre aux attentes du cours.
 
 
-### Complexe ou simple?
+## Complexe ou simple?
 
 Un bon programmeur doit avoir du goût, du style. Dans ce cours, nous vous encourageons à 
 écrire du code élégant. Évitez d'avoir trop de variables inutiles. Évitez les embranchements
@@ -58,7 +58,7 @@ que votre code compile et s'exécute. L'URL peut être un peu long, assurez-vous
 de remettre votre travail noté.  En Markdown, un hyperlien peut être créé avec la syntaxe `[sujet](http://...)`.
 
 
-# Question #1
+## Question #1
 
 Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes lors de l'utilisation de ces classes dans la classe `TestAnimaux.java`.
 
@@ -66,14 +66,14 @@ Veuillez expliquer en quelques phrases les résultats ou les erreurs suivantes l
 {{< javaMultiRunner files="TestAnimaux.java;Animaux.java;Chat.java;Chien.java;GrosChien.java" >}}
 
 
-# Question #2
+## Question #2
 
 En tant que programmeur, vous recevez le code suivant. Vous devez appliquer l'héritage afin que Cercle et Carré héritent à la fois de Forme et Resizable. Vous pouvez bien entendu modifier le code reçu. Utilisez votre bon jugement. Votre solution doit comprendre au moins une classe abstraite. Vous devez expliquer vos choix de manière détaillée: un travail remis avec des explications insuffisantes pourra se voir attribué la note de zéro, sans droit de reprise.
 
 
 {{< javaMultiRunner files="TestCercle.java;Cercle.java;Carre.java;Resizable.java;Forme.java" >}}
 
-# Question #3
+## Question #3
 
 À quoi servent les interfaces en Java ? Utilisez la question précédente (2) comme base de discussion. Maximum 5 phrases.
 

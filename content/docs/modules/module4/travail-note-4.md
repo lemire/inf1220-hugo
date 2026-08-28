@@ -23,7 +23,7 @@ Les travaux doivent être soumis sous forme de fichier PDF via l’outil de dép
 Les travaux sont strictement individuels, et tout échange, notamment sur les réseaux sociaux, constitue une faute académique pouvant entraîner une note de zéro ou une exclusion du programme. Les étudiants doivent répartir leur code sur plusieurs pages si nécessaire pour en faciliter la lecture et accompagner celui-ci d’explications claires. La responsabilité du dépôt dans les délais et de la résolution des problèmes techniques avec l’outil de dépôt incombe à l’étudiant, qui doit contacter l’Université en cas de difficulté. Une préparation sérieuse et une vérification rigoureuse du travail avant soumission sont essentielles pour éviter les erreurs et maximiser la réussite.
 
 
-### Complexe ou simple?
+## Complexe ou simple?
 
 Un bon programmeur doit avoir du goût, du style. Dans ce cours, nous vous encourageons à 
 écrire du code élégant. Évitez d'avoir trop de variables inutiles. Évitez les embranchements

@@ -68,7 +68,7 @@ On peut trier les objets selon différents ordres. L’ordre lexicographique, ap
 Pour se préparer au cours INF 1220, il est crucial de développer une rigueur intellectuelle et une capacité à raisonner de manière abstraite, deux qualités indispensables à la programmation. Programmer ne se limite pas à écrire des lignes de code : c’est un exercice de pensée structurée qui exige de décomposer un problème en étapes logiques, de les traduire en instructions précises et de vérifier méticuleusement leur exactitude. Un programme fonctionne ou échoue sans demi-mesure, ce qui impose une discipline constante : écrire, tester, corriger, puis tester à nouveau. La patience et l’attention aux détails sont essentielles, car une simple erreur, comme une virgule mal placée, peut compromettre un programme entier. S’entraîner à résoudre des problèmes logiques, comme déterminer qui de Jean ou Pierre arrive en premier au travail dans un énoncé où Jean est immédiatement suivi par Pierre, aide à affûter cette précision. Si de tels énoncés semblent opaques ou exigent un effort disproportionné, il peut être utile de renforcer ses bases en logique avant d’aborder le cours.
 
 
-# Question 1
+## Question 1
 
 *Jean et Pierre travaillent ensemble. Jean s'assure d'être toujours immédiatement suivi par Pierre quand ils arrivent au travail. Qui arrive le premier au travail ?*
 
@@ -78,7 +78,7 @@ Pour se préparer au cours INF 1220, il est crucial de développer une rigueur i
 
 Si cet énoncé ne vous semble pas clair et que vous ne trouvez pas immédiatement la bonne réponse, il est probable que vous ne devriez pas suivre le cours INF 1220.
 
-# Question 2
+## Question 2
 
 Supposons que vous disposiez d'un livre ayant des pages numérotées (1, 2, 3, ...). Vous souhaitez lire toutes les pages. Vous appliquez la recette suivante.
 

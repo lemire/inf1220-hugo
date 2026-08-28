@@ -839,7 +839,7 @@ C'est une des raisons pour préférer la programmation dans un langage comme Jav
 Java ne dépend pas de l'architecture de votre processeur.
 
 <div class="input-n" style="margin-bottom: 1.5rem; font-size: 1.1rem;">
-  <label>Entrez N : </label>
+  <label for="userN">Entrez N : </label>
   <input type="number" id="userN" min="1" max="1000" value="10" style="padding: .5rem; font-size: 1.1rem; width: 100px;">
 </div>
 <ul class="instructions" id="program" style="list-style: none; padding: 0; margin: 2rem 0;">
@@ -1000,12 +1000,12 @@ Les transistors sont très petits. Cliquez sur le bouton *Zoomer* pour vous fair
   </div>
   <div id="labels" style="width:10cm; margin-top:20px; text-align:left;">
     <ol style="font-size:32px;">
-      <li style="color:#888;">Processeur Intel (45 mm × 37,5 mm)</li>
-      <li style="color:#ccc;">Grain de sel (~1 mm)</li>
-      <li style="color:#8cf;">Cellule de peau (~35 µm)</li>
-      <li style="color:#f44;">Globule rouge (~7,5 µm)</li>
-      <li style="color:#F6BE00;">Mitochondrie (~2 µm)</li>
-      <li style="color:#0f0;">Transistor moderne (~2,5 nm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#888; border:1px solid #1c1c1c; border-radius:2px;"></span>Processeur Intel (45 mm × 37,5 mm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#ccc; border:1px solid #1c1c1c; border-radius:2px;"></span>Grain de sel (~1 mm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#8cf; border:1px solid #1c1c1c; border-radius:2px;"></span>Cellule de peau (~35 µm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#f44; border:1px solid #1c1c1c; border-radius:2px;"></span>Globule rouge (~7,5 µm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#F6BE00; border:1px solid #1c1c1c; border-radius:2px;"></span>Mitochondrie (~2 µm)</li>
+      <li><span aria-hidden="true" style="display:inline-block; width:0.7em; height:0.7em; margin-right:0.4em; background:#0f0; border:1px solid #1c1c1c; border-radius:2px;"></span>Transistor moderne (~2,5 nm)</li>
     </ol>
   </div>
 </div>
@@ -1169,7 +1169,7 @@ Utilisez l'application suivante pour explorer la représentation binaire.  Obser
 {{< webapp path="eightbits.html" >}}
 
 
-#### Pourquoi le binaire ?
+### Pourquoi le binaire ?
 
 Le choix du binaire s’explique par la simplicité de la technologie électronique : il est facile de concevoir des circuits qui distinguent deux états (tension présente ou absente, aimantation positive ou négative, etc.). Cela rend les ordinateurs plus fiables et moins sensibles au bruit que s’ils utilisaient plus de deux états.
 

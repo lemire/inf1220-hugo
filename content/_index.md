@@ -73,7 +73,7 @@ Nous utilisons un manuel d'introduction à la programmation Java intitulé *Java
 
 [Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/) pour une somme modeste&nbsp;:
 
-<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
+<div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img alt="Couverture du livre « Java pas à pas »" src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
 Amazon expédie normalement le manuel en environ trois jours.
 

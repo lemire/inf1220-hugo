@@ -56,7 +56,7 @@ public class Bienvenue {
 {{< youtube id="1ttHH5MlNug" >}}
 
 
-#### Compilation
+### Compilation
 
 <p>Le compilateur Java est le programme javac.exe (ou simplement javac sous OSX et Linux) contenu dans le dossier bin du JDK. Pour compiler Bienvenue.java, il faut :</p>
 

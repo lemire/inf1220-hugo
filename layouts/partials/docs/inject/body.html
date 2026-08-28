@@ -1,0 +1,158 @@
+{{/*
+  Améliorations d'accessibilité appliquées au balisage du thème.
+  Passe par le point d'injection « docs/inject/body » afin de ne modifier
+  aucun fichier du thème (themes/hugo-book-teluq est un sous-module Git).
+*/}}
+<script>
+(function () {
+  'use strict';
+
+  var doc = document;
+
+  /* --- 1. Lien d'évitement (WCAG 2.4.1) ------------------------------- */
+  var main = doc.querySelector('article.book-article') || doc.querySelector('.book-page');
+  if (main) {
+    if (!main.id) { main.id = 'main-content'; }
+    main.setAttribute('tabindex', '-1');
+
+    var skip = doc.createElement('a');
+    skip.className = 'a11y-skip-link';
+    skip.href = '#' + main.id;
+    skip.textContent = 'Aller au contenu principal';
+    skip.addEventListener('click', function (e) {
+      e.preventDefault();
+      main.focus();
+      main.scrollIntoView();
+      if (history.replaceState) { history.replaceState(null, '', '#' + main.id); }
+    });
+    doc.body.insertBefore(skip, doc.body.firstChild);
+  }
+
+  /* --- 2. Nommer les points de repère en double (WCAG 1.3.1) ---------- */
+  function label(sel, text, role) {
+    var el = doc.querySelector(sel);
+    if (!el) { return null; }
+    if (!el.getAttribute('aria-label')) { el.setAttribute('aria-label', text); }
+    if (role && !el.getAttribute('role')) { el.setAttribute('role', role); }
+    return el;
+  }
+
+  var menuAside = label('.book-menu', 'Navigation du cours');
+  if (menuAside) {
+    var menuNav = menuAside.querySelector('nav');
+    if (menuNav) { menuNav.setAttribute('aria-label', 'Navigation du cours'); }
+  }
+
+  var tocAside = label('.book-toc', 'Sommaire de la page');
+  if (tocAside) {
+    var tocNav = tocAside.querySelector('nav');
+    if (tocNav) { tocNav.setAttribute('aria-label', 'Sommaire de la page'); }
+  }
+
+  // Le thème duplique le sommaire dans l'en-tête pour l'affichage mobile :
+  // il lui faut un nom distinct de celui de la colonne de droite.
+  var headerToc = doc.querySelector('.book-header aside');
+  if (headerToc) {
+    headerToc.setAttribute('aria-label', 'Sommaire de la page (menu mobile)');
+    var headerTocNav = headerToc.querySelector('nav');
+    if (headerTocNav) { headerTocNav.setAttribute('aria-label', 'Sommaire de la page (menu mobile)'); }
+  }
+
+  /* --- 3. Bascules menu / sommaire : exposer l'état plié-déplié ------- */
+  [
+    { id: 'menu-control', text: 'Afficher la navigation du cours' },
+    { id: 'toc-control', text: 'Afficher le sommaire de la page' }
+  ].forEach(function (item) {
+    var box = doc.getElementById(item.id);
+    if (!box) { return; }
+    box.setAttribute('aria-label', item.text);
+    var sync = function () {
+      box.setAttribute('aria-expanded', box.checked ? 'true' : 'false');
+    };
+    box.addEventListener('change', sync);
+    sync();
+  });
+
+  /* --- 4. Annoncer le nombre de résultats de recherche (WCAG 4.1.3) --- */
+  var searchInput = doc.getElementById('book-search-input');
+  var searchResults = doc.getElementById('book-search-results');
+  if (searchInput && searchResults && window.MutationObserver) {
+    searchResults.setAttribute('aria-label', 'Résultats de la recherche');
+
+    var announcer = doc.createElement('div');
+    announcer.className = 'a11y-sr-only';
+    announcer.setAttribute('role', 'status');
+    announcer.setAttribute('aria-live', 'polite');
+    searchResults.parentNode.insertBefore(announcer, searchResults.nextSibling);
+
+    var lastCount = -1;
+    new MutationObserver(function () {
+      var n = searchResults.querySelectorAll('li').length;
+      if (n === lastCount) { return; }
+      lastCount = n;
+      if (!searchInput.value) {
+        announcer.textContent = '';
+      } else if (n === 0) {
+        announcer.textContent = 'Aucun résultat.';
+      } else {
+        announcer.textContent = n === 1 ? '1 résultat.' : n + ' résultats.';
+      }
+    }).observe(searchResults, { childList: true });
+  }
+  /* --- 5. Boutons rendus inactifs par le style seulement (WCAG 4.1.2)
+     Plusieurs composants signalent l'indisponibilité d'un bouton uniquement
+     par « cursor: not-allowed » et une couleur atténuée : le gestionnaire de
+     clic sort alors immédiatement. Rien n'expose cet état aux technologies
+     d'assistance. On synchronise aria-disabled avec l'apparence, sans toucher
+     au comportement (le bouton reste focalisable, donc découvrable). --- */
+  var article = doc.querySelector('.book-article');
+  if (article && window.MutationObserver) {
+    var syncDisabled = function () {
+      var btns = article.querySelectorAll('button');
+      for (var i = 0; i < btns.length; i++) {
+        var inactive = getComputedStyle(btns[i]).cursor === 'not-allowed';
+        if (String(btns[i].getAttribute('aria-disabled') === 'true') !== String(inactive)) {
+          btns[i].setAttribute('aria-disabled', inactive ? 'true' : 'false');
+        }
+      }
+    };
+    syncDisabled();
+    var pending = false;
+    new MutationObserver(function () {
+      if (pending) { return; }
+      pending = true;
+      requestAnimationFrame(function () { pending = false; syncDisabled(); });
+    }).observe(article, { subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+  }
+
+  /* --- 6. Tableaux larges : les rendre défilables au clavier (WCAG 2.1.1)
+     Le thème applique overflow-x:auto sur <table>. Une zone défilante doit
+     pouvoir recevoir le focus, sinon son contenu est hors d'atteinte au
+     clavier. Même traitement pour les diagrammes Mermaid, qui débordent
+     aussi sur petit écran. On n'ajoute tabindex que lorsque l'élément
+     déborde vraiment, pour ne pas multiplier les arrêts de tabulation.
+     Pas de role="region" ici : cela écraserait la sémantique de tableau. --- */
+  var tables = doc.querySelectorAll('.book-article table, .book-article .mermaid, .book-article pre');
+  function syncScrollableTables() {
+    for (var i = 0; i < tables.length; i++) {
+      var t = tables[i];
+      var overflows = t.scrollWidth > t.clientWidth + 1;
+      if (overflows && t.getAttribute('data-a11y-scroll') !== 'on') {
+        t.setAttribute('tabindex', '0');
+        t.setAttribute('data-a11y-scroll', 'on');
+      } else if (!overflows && t.getAttribute('data-a11y-scroll') === 'on') {
+        t.removeAttribute('tabindex');
+        t.removeAttribute('data-a11y-scroll');
+      }
+    }
+  }
+  if (tables.length) {
+    syncScrollableTables();
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(syncScrollableTables, 150);
+    });
+  }
+})();
+</script>
