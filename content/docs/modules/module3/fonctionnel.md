@@ -818,10 +818,6 @@ void main() {
 }
 {{</inlineJava>}}
 
-Voici la suite de ton article :
-
----
-
 ## Optional
 
 La clase `Optional` permet de traiter le cas où une méthode peut ne pas retourner une valeur. L'approche conventionnelle consiste à retourner la valeur par défaut (`null`), mais c'est une stratégie qui est parfois hasardeuse.
