@@ -1,5 +1,6 @@
 ---
 title: "Module 1: Algorithme et pseudocode"
+bookIcon: organigramme
 weight: 1
 bookCollapseSection: true
 ---

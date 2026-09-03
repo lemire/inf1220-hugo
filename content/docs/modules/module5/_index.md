@@ -1,5 +1,6 @@
 ---
 title: "Module 5. La programmation orientée objet: héritage et le polymorphisme"
+bookIcon: heritage
 weight: 5
 bookCollapseSection: true
 ---

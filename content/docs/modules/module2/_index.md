@@ -1,5 +1,6 @@
 ---
 title: "Module 2: Introduction au langage Java"
+bookIcon: cafe
 weight: 2
 bookCollapseSection: true
 ---

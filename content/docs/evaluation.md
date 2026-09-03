@@ -1,5 +1,6 @@
 ---
 title: "Évaluation"
+bookIcon: evaluation
 weight: 8
 ---
 

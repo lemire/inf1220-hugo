@@ -1,6 +1,7 @@
 
 ---
 title: "Vous avez trouvé une erreur?"
+bookIcon: bogue
 weight: 3
 ---
 

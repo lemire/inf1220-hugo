@@ -1,5 +1,6 @@
 ---
 title: "Entretien de suivi"
+bookIcon: entretien
 weight: 7
 ---
 

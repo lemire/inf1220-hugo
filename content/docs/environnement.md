@@ -1,5 +1,6 @@
 ---
 title: "Programmation Java en ligne"
+bookIcon: terminal
 weight: 2
 ---
 

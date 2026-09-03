@@ -1,5 +1,6 @@
 ---
 title: "Examen"
+bookIcon: examen
 weight: 6
 ---
 

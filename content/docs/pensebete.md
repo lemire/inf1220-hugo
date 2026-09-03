@@ -1,5 +1,6 @@
 ---
 title: "Pense-bête java"
+bookIcon: pensebete
 weight: 8
 ---
 

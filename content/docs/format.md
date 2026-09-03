@@ -1,5 +1,6 @@
 ---
 title: "Formattage du code Java"
+bookIcon: format
 weight: 3
 ---
 
