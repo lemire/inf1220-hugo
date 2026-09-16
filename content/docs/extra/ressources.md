@@ -43,8 +43,6 @@ YouTube propose des séries en français pour apprendre Java de manière visuell
   [https://www.youtube.com/playlist?list=PLMS9Cy4Enq5LKYxJmD1ZIu3C7f3vA00hM](https://www.youtube.com/playlist?list=PLMS9Cy4Enq5LKYxJmD1ZIu3C7f3vA00hM)  
 - *Tuto Java* : des explications simples pour progresser rapidement.  
   [https://www.youtube.com/playlist?list=PLBNheBxhHLQxfJhoz193-dRwvc2rl8AOW](https://www.youtube.com/playlist?list=PLBNheBxhHLQxfJhoz193-dRwvc2rl8AOW)  
-- *Java apprendre à coder* : une approche pratique pour les débutants.  
-  [https://www.youtube.com/playlist?list=PLvWq8NyUnHacq2hJ7S4FKhaQGN3xotKb7](https://www.youtube.com/playlist?list=PLvWq8NyUnHacq2hJ7S4FKhaQGN3xotKb7)  
 - *Programmer en Java* : des vidéos détaillées pour approfondir ses compétences.  
   [https://www.youtube.com/playlist?list=PLlxQJeQRaKDRnvgIvfHTV6ZY8M2eurH95](https://www.youtube.com/playlist?list=PLlxQJeQRaKDRnvgIvfHTV6ZY8M2eurH95)
 
